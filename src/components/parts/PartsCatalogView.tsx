@@ -38,6 +38,7 @@ import {
 import { 
   MOCK_PARTS_MODELS, 
   MOCK_HAYABUSA_DIAGRAMS, 
+  MOCK_VSTROM800_DIAGRAMS,
   INITIAL_MOCK_PARTS_ORDERS 
 } from '../../data/mockPartsData';
 import { PartsExplodedDiagram } from './PartsExplodedDiagram';
@@ -73,7 +74,14 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
   const [selectedModel, setSelectedModel] = useState<PartsModelSummary | null>(MOCK_PARTS_MODELS[0]); // Default to Hayabusa
 
   // EPC Diagram & Selection State
-  const [selectedDiagram, setSelectedDiagram] = useState<PartsDiagramGroup>(MOCK_HAYABUSA_DIAGRAMS[0]); // Default to 103-080 Carcaça
+  const activeDiagrams = useMemo(() => {
+    if (selectedModel?.id === 'suzuki-vstrom-800-m5') {
+      return MOCK_VSTROM800_DIAGRAMS;
+    }
+    return MOCK_HAYABUSA_DIAGRAMS;
+  }, [selectedModel]);
+
+  const [selectedDiagram, setSelectedDiagram] = useState<PartsDiagramGroup>(MOCK_HAYABUSA_DIAGRAMS[0]);
   const [selectedRef, setSelectedRef] = useState<number | null>(null);
   const [hoveredRef, setHoveredRef] = useState<number | null>(null);
 
@@ -430,8 +438,8 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                     key={model.id}
                     onClick={() => {
                       setSelectedModel(model);
-                      // Reset to first diagram of the model
-                      setSelectedDiagram(MOCK_HAYABUSA_DIAGRAMS[0]);
+                      const diags = model.id === 'suzuki-vstrom-800-m5' ? MOCK_VSTROM800_DIAGRAMS : MOCK_HAYABUSA_DIAGRAMS;
+                      setSelectedDiagram(diags[0]);
                       setSelectedRef(null);
                     }}
                     className={`
@@ -522,7 +530,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   <select
                     value={selectedDiagram.id}
                     onChange={(e) => {
-                      const found = MOCK_HAYABUSA_DIAGRAMS.find(d => d.id === e.target.value);
+                      const found = activeDiagrams.find(d => d.id === e.target.value);
                       if (found) {
                         setSelectedDiagram(found);
                         setSelectedRef(null);
@@ -530,7 +538,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                     }}
                     className="bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-1.5 text-xs text-white font-bold focus:outline-none focus:border-amber-400"
                   >
-                    {MOCK_HAYABUSA_DIAGRAMS.map(diag => (
+                    {activeDiagrams.map(diag => (
                       <option key={diag.id} value={diag.id}>
                         {diag.illustrationCode} - {diag.title}
                       </option>
@@ -550,6 +558,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                     onSelectRef={(ref) => setSelectedRef(ref)}
                     hoveredRef={hoveredRef}
                     onHoverRef={(ref) => setHoveredRef(ref)}
+                    modelName={selectedModel.name}
                   />
                 </div>
 
@@ -568,7 +577,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
 
               {/* Bottom Filmstrip Carousel (Matching bottom of User's Screenshot) */}
               <PartsDiagramCarousel
-                diagrams={MOCK_HAYABUSA_DIAGRAMS}
+                diagrams={activeDiagrams}
                 selectedDiagramId={selectedDiagram.id}
                 onSelectDiagram={(diag) => {
                   setSelectedDiagram(diag);
