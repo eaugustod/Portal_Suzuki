@@ -1,4 +1,14 @@
-export type NavTab = 'dashboard' | 'commitments' | 'purchase' | 'inventory' | 'sales' | 'service_order' | 'dealers_network' | 'settings' | 'support';
+export type NavTab = 
+  | 'dashboard' 
+  | 'commitments' 
+  | 'purchase' 
+  | 'parts_catalog' 
+  | 'inventory' 
+  | 'sales' 
+  | 'service_order' 
+  | 'dealers_network' 
+  | 'settings' 
+  | 'support';
 
 export type DealershipScope = 
   | 'jtoledo' 
@@ -559,3 +569,140 @@ export interface TransitOrder {
   unitsCount?: number;
   value?: number;
 }
+
+// ==========================================
+// ELECTRONIC PARTS CATALOG (EPC) & SPARE PARTS
+// ==========================================
+
+export type PartsBrand = 'Suzuki' | 'Haojue' | 'Zontes' | 'Quadriciclos';
+
+export interface PartsModelSummary {
+  id: string;
+  brand: PartsBrand;
+  name: string;
+  commercialName: string;
+  years: string;
+  displacement: string;
+  category: string;
+  image: string;
+  engineType: string;
+  diagramsCount: number;
+  totalPartsCount: number;
+  chassisPrefix: string;
+}
+
+export interface PartsPinHotspot {
+  ref: number;
+  x: number; // percentage 0 - 100
+  y: number; // percentage 0 - 100
+  label?: string;
+}
+
+export interface PartsItem {
+  id: string;
+  ref: number;
+  partNumber: string;
+  description: string;
+  subDescription?: string;
+  assemblyTime?: string; // e.g. "01/06", "0.4h"
+  observation?: string; // e.g. "M12X1,75X40", "NBR O-RING", "32X45X8"
+  unitQuantity: number; // Qtd por conjunto / UN
+  factoryPrice: number; // Preço de Fábrica Concessionária
+  msrpPrice: number; // Preço Público Sugerido
+  stockManaus: number;
+  stockJundiai: number;
+  inStock: boolean;
+  categoryGroup: string;
+  isEssentialMaintenance?: boolean;
+}
+
+export interface PartsDiagramGroup {
+  id: string;
+  groupCode: string; // e.g. "1", "2", "3"
+  groupName: string; // e.g. "MOTOR & CÂMBIO", "CHASSI & SUSPENSÃO"
+  subgroupCode: string; // e.g. "03", "05"
+  illustrationCode: string; // e.g. "103-080", "100-030"
+  title: string;
+  subTitle?: string;
+  diagramType: 'engine_block' | 'crankcase' | 'cylinder_head' | 'crankshaft_piston' | 'clutch' | 'injection_system' | 'transmission' | 'front_brake' | 'chassis_frame' | 'electrical_ecu';
+  thumbnailUrl: string;
+  hotspots: PartsPinHotspot[];
+  parts: PartsItem[];
+}
+
+export interface PartsCartItem {
+  id: string;
+  modelId: string;
+  modelName: string;
+  brand: PartsBrand;
+  illustrationCode: string;
+  diagramTitle: string;
+  part: PartsItem;
+  quantity: number;
+  unitPrice: number;
+  totalPrice: number;
+}
+
+export type PartsOrderType = 'reposicao' | 'urgente_vor' | 'garantia_pos_venda';
+export type PartsOrderStatus = 
+  | 'aguardando_analise' 
+  | 'em_analise_credito' 
+  | 'verificando_estoque' 
+  | 'aprovado_fabrica' 
+  | 'integrado_protheus' 
+  | 'em_separacao_cd' 
+  | 'faturado_despachado' 
+  | 'cancelado';
+
+export interface PartsOrder {
+  id: string;
+  orderNumber: string; // e.g. "PED-PEC-2024-0891"
+  dealershipId: string;
+  dealershipName: string;
+  dealershipCnpj: string;
+  dealershipCity: string;
+  dealershipState: string;
+  dealershipRegion: string;
+  dealershipTier?: string;
+  orderType: PartsOrderType;
+  status: PartsOrderStatus;
+  createdAt: string;
+  items: PartsCartItem[];
+  totalPartsCount: number;
+  totalUniqueItems: number;
+  subtotalAmount: number;
+  discountPercentage?: number;
+  freightAmount: number;
+  freightMode: 'CIF' | 'FOB';
+  totalAmount: number;
+  paymentMethod: string;
+  notes?: string;
+  vinApplication?: string;
+  
+  // Stock Check & Warehouses
+  allocatedWarehouse?: 'CD Jundiaí (SP)' | 'CD Manaus (AM)' | 'Misto (Manaus + Jundiaí)';
+  stockVerified?: boolean;
+  stockVerifiedAt?: string;
+  stockAnalyst?: string;
+
+  // Credit Review
+  creditApproved: boolean;
+  creditApprovedAt?: string;
+  creditAnalyst?: string;
+  creditNotes?: string;
+
+  // Commercial Approval
+  commercialApproved: boolean;
+  commercialApprovedAt?: string;
+  commercialManager?: string;
+  commercialNotes?: string;
+
+  // TOTVS Protheus ERP Integration
+  protheusIntegrated: boolean;
+  protheusOrderNumber?: string; // SC5 ERP
+  protheusIntegratedAt?: string;
+  protheusNFeNumber?: string;
+  protheusTrackingCode?: string;
+  protheusCarrierName?: string;
+}
+

@@ -47,6 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
         case 'dashboard': return 'Cockpit Geral da Montadora';
         case 'commitments': return 'Gestão Nacional de Compromissos de Compra';
         case 'purchase': return 'Catálogo Nacional & Pedidos de Fábrica';
+        case 'parts_catalog': return 'Catálogo de Peças Genuínas (EPC) & ERP';
         case 'inventory': return 'Estoque Consolidado da Rede';
         case 'sales': return 'Consolidado Comercial & CRM Rede';
         case 'service_order': return 'Garantias & Pós-Venda Nacional';
@@ -60,7 +61,8 @@ export const Header: React.FC<HeaderProps> = ({
     switch (tab) {
       case 'dashboard': return 'Dashboard Executivo';
       case 'commitments': return 'Compromisso de Compra Mensal & Estoque';
-      case 'purchase': return 'Pedido de Fábrica J. Toledo';
+      case 'purchase': return 'Pedido de Fábrica (Motos 0km)';
+      case 'parts_catalog': return 'Catálogo Eletrônico de Peças (EPC)';
       case 'inventory': return 'Gestão de Estoque do Pátio';
       case 'sales': return 'Gestão de Vendas & CRM';
       case 'service_order': return 'Ordem de Serviço (Oficina)';

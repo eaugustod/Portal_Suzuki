@@ -15,7 +15,8 @@ import {
   OrderApprovalDocument,
   MonthlyCommitmentPlan,
   StockScheduleItem,
-  ProposalPricingItem
+  ProposalPricingItem,
+  PartsOrder
 } from './types';
 import { 
   INITIAL_PURCHASE_MODELS, 
@@ -31,6 +32,7 @@ import {
 } from './data/mockData';
 import { INITIAL_ORDER_APPROVAL_PROPOSALS } from './data/orderApprovalData';
 import { INITIAL_MONTHLY_COMMITMENTS } from './data/monthlyCommitmentsData';
+import { INITIAL_MOCK_PARTS_ORDERS } from './data/mockPartsData';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { DashboardView } from './components/DashboardView';
@@ -38,6 +40,7 @@ import { MontadoraDashboardView } from './components/MontadoraDashboardView';
 import { DealershipManagementView } from './components/DealershipManagementView';
 import { MonthlyCommitmentView } from './components/MonthlyCommitmentView';
 import { PurchasePortalView } from './components/PurchasePortalView';
+import { PartsCatalogView } from './components/parts/PartsCatalogView';
 import { InventoryView } from './components/InventoryView';
 import { SalesCrmView } from './components/SalesCrmView';
 import { ServiceOrderView } from './components/ServiceOrderView';
@@ -66,6 +69,16 @@ export default function App() {
   const [dealerships, setDealerships] = useState<DealershipFullProfile[]>(INITIAL_DEALERSHIPS_LIST);
   const [orderProposals, setOrderProposals] = useState<OrderApprovalDocument[]>(INITIAL_ORDER_APPROVAL_PROPOSALS);
   const [monthlyCommitments, setMonthlyCommitments] = useState<MonthlyCommitmentPlan[]>(INITIAL_MONTHLY_COMMITMENTS);
+  const [partsOrders, setPartsOrders] = useState<PartsOrder[]>(INITIAL_MOCK_PARTS_ORDERS);
+
+  // Spare Parts Orders handlers
+  const handlePlacePartsOrder = (newOrder: PartsOrder) => {
+    setPartsOrders(prev => [newOrder, ...prev]);
+  };
+
+  const handleUpdatePartsOrder = (updatedOrder: PartsOrder) => {
+    setPartsOrders(prev => prev.map(o => o.id === updatedOrder.id ? updatedOrder : o));
+  };
 
   // Dealerships CRUD handlers
   const handleUpdateDealership = (updated: DealershipFullProfile) => {
@@ -596,6 +609,16 @@ export default function App() {
               onPlaceOrder={handlePlaceOrder}
               onUpdateFactoryOrder={handleUpdateFactoryOrder}
               onNavigateToCommitments={() => setCurrentTab('commitments')}
+            />
+          )}
+
+          {currentTab === 'parts_catalog' && (
+            <PartsCatalogView
+              currentScope={currentScope}
+              dealerships={dealerships}
+              partsOrders={partsOrders}
+              onPlacePartsOrder={handlePlacePartsOrder}
+              onUpdatePartsOrder={handleUpdatePartsOrder}
             />
           )}
 
