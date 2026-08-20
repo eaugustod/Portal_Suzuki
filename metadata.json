@@ -1,0 +1,6 @@
+{
+  "name": "MotoSul Suzuki Dealer Portal",
+  "description": "Cockpit executivo da Montadora Grupo J. Toledo e rede nacional de concessionárias com compromisso de compra mensal exclusivo por loja, geração automatizada da ficha oficial de aprovação JTA/JTZ, estoque trimestral, crédito rotativo e integração ERP TOTVS Protheus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
