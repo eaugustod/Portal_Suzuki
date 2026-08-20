@@ -57,6 +57,7 @@ import { INITIAL_ORDER_APPROVAL_PROPOSALS } from '../data/orderApprovalData';
 import { OrderApprovalDocumentView } from './OrderApprovalDocumentView';
 import { ModelTechnicalSpecsModal } from './ModelTechnicalSpecsModal';
 import { ModelCatalogManagementModal } from './ModelCatalogManagementModal';
+import { DealershipOrderDetailModal } from './DealershipOrderDetailModal';
 
 interface PurchasePortalViewProps {
   currentScope: DealershipScope;
@@ -112,6 +113,11 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
   const [selectedSpecModal, setSelectedSpecModal] = useState<PurchaseModel | null>(null);
   const [modelToEditModal, setModelToEditModal] = useState<PurchaseModel | null>(null);
   const [isModelFormOpen, setIsModelFormOpen] = useState(false);
+
+  // Viewing Order Details Modal (Dealership View)
+  const [viewingDealerOrder, setViewingDealerOrder] = useState<FactoryOrder | null>(null);
+  const [dealerOrdersFilter, setDealerOrdersFilter] = useState<'todos' | 'analise' | 'aprovados' | 'integrados'>('todos');
+  const [dealerOrdersSearch, setDealerOrdersSearch] = useState('');
 
   // Order Management Modal for Montadora (Audit, Color/Model Edit, Credit & Commercial Approval, Protheus Integration)
   const [managedOrder, setManagedOrder] = useState<FactoryOrder | null>(null);
@@ -224,6 +230,30 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
       return matchesSearch && matchesStatus && matchesDealer;
     });
   }, [factoryOrders, isMontadora, currentScope, orderSearchQuery, selectedStatusFilter, selectedDealerFilter]);
+
+  // Filtered orders for Dealership View "Meus Pedidos de Fábrica"
+  const filteredDealerOrders = useMemo(() => {
+    return filteredOrders.filter(ord => {
+      if (dealerOrdersFilter === 'analise') {
+        if (ord.status !== 'aguardando_analise' && ord.status !== 'em_analise_credito' && ord.status !== 'em_analise_comercial') return false;
+      } else if (dealerOrdersFilter === 'aprovados') {
+        if (!ord.creditApproved || !ord.commercialApproved || ord.protheusIntegrated) return false;
+      } else if (dealerOrdersFilter === 'integrados') {
+        if (!ord.protheusIntegrated) return false;
+      }
+
+      if (dealerOrdersSearch.trim()) {
+        const q = dealerOrdersSearch.toLowerCase();
+        const matchesQuery = 
+          ord.orderNumber.toLowerCase().includes(q) ||
+          (ord.protheusOrderNumber && ord.protheusOrderNumber.toLowerCase().includes(q)) ||
+          ord.paymentMethod.toLowerCase().includes(q) ||
+          ord.items.some(i => i.modelName.toLowerCase().includes(q) || i.colorName.toLowerCase().includes(q));
+        if (!matchesQuery) return false;
+      }
+      return true;
+    });
+  }, [filteredOrders, dealerOrdersFilter, dealerOrdersSearch]);
 
   // Statistics for Montadora KPI Bar
   const statsPendingAnalysis = factoryOrders.filter(o => o.status === 'aguardando_analise').length;
@@ -777,66 +807,175 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
         <div className="space-y-6">
           {/* Concessionária Active Orders Tracker Banner (When in Dealer Scope) */}
           {!isMontadora && (
-            <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 md:p-6 shadow-sm">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <Truck className="w-5 h-5 text-blue-400" />
-                  <h3 className="text-[16px] font-bold text-white">
-                    Meus Pedidos de Fábrica em Andamento ({filteredOrders.length})
-                  </h3>
+            <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 md:p-6 shadow-sm space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-800/80 pb-4">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Truck className="w-5 h-5 text-blue-400" />
+                    <h3 className="text-base sm:text-lg font-bold text-white">
+                      Meus Pedidos de Fábrica ({filteredOrders.length})
+                    </h3>
+                  </div>
+                  <p className="text-xs text-neutral-400 mt-0.5">
+                    Acompanhamento de aprovação de crédito, comercial e status ERP Manaus
+                  </p>
                 </div>
-                <span className="text-[11px] text-neutral-400">
-                  Acompanhamento de aprovação e status ERP Manaus
-                </span>
+
+                {/* Filter tabs & Search */}
+                <div className="flex flex-wrap items-center gap-2">
+                  <div className="flex items-center bg-neutral-900 border border-neutral-800 rounded-xl p-1 text-xs">
+                    <button
+                      onClick={() => setDealerOrdersFilter('todos')}
+                      className={`px-3 py-1 rounded-lg font-bold transition-colors ${
+                        dealerOrdersFilter === 'todos' ? 'bg-blue-600 text-white' : 'text-neutral-400 hover:text-white'
+                      }`}
+                    >
+                      Todos ({filteredOrders.length})
+                    </button>
+                    <button
+                      onClick={() => setDealerOrdersFilter('analise')}
+                      className={`px-3 py-1 rounded-lg font-bold transition-colors ${
+                        dealerOrdersFilter === 'analise' ? 'bg-amber-600 text-white' : 'text-neutral-400 hover:text-white'
+                      }`}
+                    >
+                      Em Análise ({filteredOrders.filter(o => !o.creditApproved || !o.commercialApproved).length})
+                    </button>
+                    <button
+                      onClick={() => setDealerOrdersFilter('aprovados')}
+                      className={`px-3 py-1 rounded-lg font-bold transition-colors ${
+                        dealerOrdersFilter === 'aprovados' ? 'bg-purple-600 text-white' : 'text-neutral-400 hover:text-white'
+                      }`}
+                    >
+                      Aprovados ({filteredOrders.filter(o => o.creditApproved && o.commercialApproved && !o.protheusIntegrated).length})
+                    </button>
+                    <button
+                      onClick={() => setDealerOrdersFilter('integrados')}
+                      className={`px-3 py-1 rounded-lg font-bold transition-colors ${
+                        dealerOrdersFilter === 'integrados' ? 'bg-emerald-600 text-white' : 'text-neutral-400 hover:text-white'
+                      }`}
+                    >
+                      ERP ({filteredOrders.filter(o => o.protheusIntegrated).length})
+                    </button>
+                  </div>
+                </div>
               </div>
 
+              {/* Search bar if multiple orders */}
+              {filteredOrders.length > 0 && (
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={dealerOrdersSearch}
+                    onChange={(e) => setDealerOrdersSearch(e.target.value)}
+                    placeholder="Filtrar meus pedidos por número (ex: PED-2024), modelo (ex: Hayabusa) ou cor..."
+                    className="w-full bg-neutral-900/90 border border-neutral-800 rounded-xl px-4 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-blue-500"
+                  />
+                  {dealerOrdersSearch && (
+                    <button
+                      onClick={() => setDealerOrdersSearch('')}
+                      className="absolute right-3 top-2.5 text-xs text-neutral-400 hover:text-white"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              )}
+
               {filteredOrders.length === 0 ? (
-                <p className="text-[12px] text-neutral-500 py-3">
-                  Nenhum pedido de fábrica aberto no momento. Selecione as motocicletas abaixo para transmitir um novo lote.
+                <div className="text-center py-6 bg-neutral-900/40 rounded-2xl border border-dashed border-neutral-800">
+                  <Truck className="w-8 h-8 text-neutral-600 mx-auto mb-2" />
+                  <p className="text-xs text-neutral-400 font-bold">
+                    Nenhum pedido de fábrica transmitido até o momento.
+                  </p>
+                  <p className="text-[11px] text-neutral-500 mt-1">
+                    Selecione as motocicletas no catálogo abaixo para montar e enviar um novo lote para a montadora.
+                  </p>
+                </div>
+              ) : filteredDealerOrders.length === 0 ? (
+                <p className="text-xs text-neutral-500 text-center py-4">
+                  Nenhum pedido encontrado com os filtros e busca selecionados.
                 </p>
               ) : (
-                <div className="space-y-2.5">
-                  {filteredOrders.map(ord => (
+                <div className="space-y-3">
+                  {filteredDealerOrders.map(ord => (
                     <div 
                       key={ord.id}
-                      className="p-3.5 bg-neutral-900/80 border border-neutral-800 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-3"
+                      onClick={() => setViewingDealerOrder(ord)}
+                      className="p-4 bg-neutral-900/80 hover:bg-neutral-900 border border-neutral-800 hover:border-blue-500/50 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer transition-all duration-200 group shadow-sm hover:shadow-md"
                     >
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <span className="font-bold text-white text-[13px]">{ord.orderNumber}</span>
-                          <span className="text-[10px] text-neutral-400">{ord.createdAt}</span>
-                          <span className="text-[10px] bg-neutral-800 text-neutral-300 px-1.5 py-0.2 rounded font-bold">
-                            {ord.freightMode}
+                      <div className="space-y-2 flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="font-mono font-bold text-white text-sm group-hover:text-blue-400 transition-colors">
+                            {ord.orderNumber}
+                          </span>
+                          <span className="text-[11px] text-neutral-400 font-mono flex items-center gap-1">
+                            <Clock className="w-3 h-3 text-neutral-500" />
+                            {ord.createdAt}
+                          </span>
+                          <span className="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-0.5 rounded font-bold border border-neutral-700">
+                            {ord.freightMode === 'CIF' ? 'Frete CIF (Incluso)' : 'Frete FOB'}
+                          </span>
+                          <span className="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-0.5 rounded font-bold border border-neutral-700">
+                            {ord.paymentMethod}
                           </span>
                         </div>
-                        <p className="text-[11px] text-neutral-300 mt-1">
-                          {ord.items.map(i => `${i.quantity}x ${i.modelName} (${i.colorName})`).join(' • ')}
-                        </p>
+
+                        {/* Items list with color indicators */}
+                        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-neutral-300">
+                          {ord.items.map((item, iIdx) => (
+                            <div key={item.id || iIdx} className="flex items-center gap-1.5 bg-neutral-950/60 px-2.5 py-1 rounded-lg border border-neutral-800">
+                              <span 
+                                className="w-2.5 h-2.5 rounded-full border border-white/20 shrink-0" 
+                                style={{ backgroundColor: item.colorHex || '#3b82f6' }}
+                              />
+                              <span className="font-bold text-white">{item.quantity}x</span>
+                              <span>{item.modelName}</span>
+                              <span className="text-neutral-500 text-[10px]">({item.colorName})</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
 
-                      <div className="flex items-center gap-4 text-[12px] font-tabular">
-                        <div className="text-right">
-                          <span className="text-white font-bold">R$ {ord.totalAmount.toLocaleString('pt-BR')}</span>
-                          <span className="text-[10px] text-neutral-500 block">{ord.totalUnits} motos</span>
+                      {/* Right side: Amount and Status + Action Button */}
+                      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between sm:justify-end gap-3 text-xs shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-neutral-800">
+                        <div className="text-left sm:text-right font-tabular">
+                          <span className="text-white font-black text-sm block">
+                            R$ {ord.totalAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                          </span>
+                          <span className="text-[11px] text-neutral-400">
+                            {ord.totalUnits} {ord.totalUnits === 1 ? 'motocicleta' : 'motocicletas'}
+                          </span>
                         </div>
 
-                        <div>
+                        <div className="flex items-center gap-2">
                           {ord.protheusIntegrated ? (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-300 bg-emerald-950 border border-emerald-800 px-2.5 py-1 rounded-xl">
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-800/80 px-3 py-1.5 rounded-xl">
                               <CheckCircle2 className="w-3.5 h-3.5" />
-                              Integrado Protheus: {ord.protheusOrderNumber}
+                              ERP: {ord.protheusOrderNumber}
                             </span>
                           ) : ord.creditApproved && ord.commercialApproved ? (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-purple-300 bg-purple-950 border border-purple-800 px-2.5 py-1 rounded-xl">
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-purple-300 bg-purple-950/80 border border-purple-800/80 px-3 py-1.5 rounded-xl">
                               <Database className="w-3.5 h-3.5" />
-                              Aprovado Fábrica (Aguardando ERP)
+                              Aprovado Fábrica
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-300 bg-amber-950 border border-amber-800 px-2.5 py-1 rounded-xl">
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-300 bg-amber-950/80 border border-amber-800/80 px-3 py-1.5 rounded-xl">
                               <Clock className="w-3.5 h-3.5" />
-                              Em Análise de Fábrica J. Toledo
+                              Em Análise Fábrica
                             </span>
                           )}
+
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setViewingDealerOrder(ord);
+                            }}
+                            className="px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded-xl text-xs font-bold border border-blue-500/30 hover:border-blue-600 flex items-center gap-1.5 transition-all shadow-sm"
+                            title="Visualizar espelho completo do pedido"
+                          >
+                            <Eye className="w-3.5 h-3.5" />
+                            <span className="hidden sm:inline">Visualizar Pedido</span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1738,6 +1877,17 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
             setIsModelFormOpen(false);
             setModelToEditModal(null);
           }}
+        />
+      )}
+
+      {/* Dealership Full Order View & Printable Mirror Modal */}
+      {viewingDealerOrder && (
+        <DealershipOrderDetailModal
+          isOpen={!!viewingDealerOrder}
+          onClose={() => setViewingDealerOrder(null)}
+          order={viewingDealerOrder}
+          dealershipProfile={dealerships.find(d => d.id === currentScope)}
+          onNavigateToTransit={onNavigateToCommitments}
         />
       )}
     </div>
