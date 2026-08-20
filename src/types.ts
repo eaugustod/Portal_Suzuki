@@ -592,6 +592,7 @@ export interface PartsModelSummary {
 }
 
 export interface PartsPinHotspot {
+  id?: string;
   ref: number;
   x: number; // percentage 0 - 100
   y: number; // percentage 0 - 100
@@ -648,6 +649,7 @@ export interface PartsDiagramGroup {
     | 'chassis_frame' 
     | 'electrical_ecu';
   thumbnailUrl: string;
+  customImageUrl?: string;
   hotspots: PartsPinHotspot[];
   parts: PartsItem[];
 }

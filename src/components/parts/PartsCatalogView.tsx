@@ -559,6 +559,12 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                     hoveredRef={hoveredRef}
                     onHoverRef={(ref) => setHoveredRef(ref)}
                     modelName={selectedModel.name}
+                    onAddToCart={(partId, qty = 1) => {
+                      const found = selectedDiagram.parts.find(p => p.id === partId);
+                      if (found) {
+                        handleAddToCart(found, qty);
+                      }
+                    }}
                   />
                 </div>
 

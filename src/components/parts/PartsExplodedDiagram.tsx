@@ -1,20 +1,31 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   ZoomIn, 
   ZoomOut, 
   Maximize2, 
   RotateCcw, 
-  Sparkles, 
   Layers, 
-  Search,
-  Move,
   Info,
-  Compass,
-  ArrowUpRight,
+  X,
+  Sun,
+  Moon,
+  Crosshair,
+  ShoppingCart,
+  Check,
+  Upload,
+  Image as ImageIcon,
+  CheckSquare,
+  Square,
+  Sparkles,
   Eye,
-  X
+  Sliders,
+  AlertCircle,
+  Pin,
+  Save,
+  Trash2
 } from 'lucide-react';
-import { PartsDiagramGroup, PartsPinHotspot } from '../../types';
+import { PartsDiagramGroup, PartsPinHotspot, PartsItem } from '../../types';
+import { saveDiagramImage, getDiagramImage, deleteDiagramImage } from '../../utils/imageStorage';
 
 interface PartsExplodedDiagramProps {
   diagram: PartsDiagramGroup;
@@ -23,6 +34,7 @@ interface PartsExplodedDiagramProps {
   hoveredRef: number | null;
   onHoverRef: (ref: number | null) => void;
   modelName?: string;
+  onAddToCart?: (partId: string, quantity?: number) => void;
 }
 
 export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
@@ -31,17 +43,72 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
   onSelectRef,
   hoveredRef,
   onHoverRef,
-  modelName = 'V-STROM 800 M5'
+  modelName = 'V-STROM 800 M4',
+  onAddToCart
 }) => {
   const [zoom, setZoom] = useState<number>(1);
   const [pan, setPan] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [dragStart, setDragStart] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [isFullscreenModalOpen, setIsFullscreenModalOpen] = useState<boolean>(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  
+  // Custom uploaded PNG for the current diagram session (persisted in IndexedDB/Storage)
+  const [customImageSrc, setCustomImageSrc] = useState<string | null>(null);
+  const [isPersistedImage, setIsPersistedImage] = useState<boolean>(false);
+  const [isSavingImage, setIsSavingImage] = useState<boolean>(false);
+  const [imageSaveSuccess, setImageSaveSuccess] = useState<boolean>(false);
+  const [isDragOver, setIsDragOver] = useState<boolean>(false);
+  
+  // Hotspot visual style: 'ring' (subtle ring over original PNG number), 'badge' (solid circular pin), 'stealth' (invisible until hover)
+  const [hotspotStyle, setHotspotStyle] = useState<'ring' | 'badge' | 'stealth'>('ring');
+  
+  // Quick quantity selector in popover
+  const [popoverQty, setPopoverQty] = useState<number>(1);
+  const [addedPartId, setAddedPartId] = useState<string | null>(null);
+  
+  // Multi-selection / marked items for quick bulk purchase
+  const [markedRefs, setMarkedRefs] = useState<Set<number>>(new Set());
 
-  const handleZoomIn = () => setZoom(prev => Math.min(Number((prev + 0.25).toFixed(2)), 3.0));
-  const handleZoomOut = () => setZoom(prev => Math.max(Number((prev - 0.25).toFixed(2)), 0.75));
+  const containerRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Load persisted custom image whenever diagram changes or on mount
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadStoredImage() {
+      try {
+        const stored = await getDiagramImage(diagram.id);
+        if (isMounted) {
+          if (stored) {
+            setCustomImageSrc(stored);
+            setIsPersistedImage(true);
+          } else if (diagram.customImageUrl) {
+            setCustomImageSrc(diagram.customImageUrl);
+            setIsPersistedImage(false);
+          } else {
+            setCustomImageSrc(null);
+            setIsPersistedImage(false);
+          }
+        }
+      } catch (e) {
+        if (isMounted) {
+          setCustomImageSrc(diagram.customImageUrl || null);
+          setIsPersistedImage(false);
+        }
+      }
+    }
+
+    loadStoredImage();
+    setPopoverQty(1);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [diagram.id, diagram.customImageUrl]);
+
+  const handleZoomIn = () => setZoom(prev => Math.min(Number((prev + 0.25).toFixed(2)), 3.5));
+  const handleZoomOut = () => setZoom(prev => Math.max(Number((prev - 0.25).toFixed(2)), 0.6));
   const handleSetZoom = (val: number) => {
     setZoom(val);
   };
@@ -51,6 +118,8 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    // Only drag if left click and not clicking directly on interactive buttons
+    if (e.button !== 0) return;
     setIsDragging(true);
     setDragStart({ x: e.clientX - pan.x, y: e.clientY - pan.y });
   };
@@ -67,366 +136,597 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
     setIsDragging(false);
   };
 
-  // Render stylized technical CAD/EPC vector illustration based on diagramType
-  const renderSchematicIllustration = () => {
-    switch (diagram.diagramType) {
-      case 'vstrom_chassis_401':
-        return (
-          <g className="text-neutral-700" stroke="currentColor" strokeWidth="1.5" fill="none">
-            {/* Background EPC CAD Blueprint Grid & Axes */}
-            <rect x="10" y="10" width="580" height="480" rx="8" fill="#0f1117" stroke="#27272a" strokeWidth="1.5" />
-            
-            {/* Top-Left Figure Code Indicator */}
-            <text x="30" y="45" fill="#f8fafc" fontSize="24" fontFamily="monospace" fontWeight="900" letterSpacing="1">
-              FIG.401A
-            </text>
-            
-            {/* FWD Compass Indicator (Forward Direction) */}
-            <g transform="translate(48, 85)">
-              <circle cx="0" cy="0" r="14" fill="#18181b" stroke="#60a5fa" strokeWidth="1.5" />
-              <line x1="0" y1="10" x2="0" y2="-10" stroke="#60a5fa" strokeWidth="2" />
-              <polygon points="0,-12 -4,-4 4,-4" fill="#60a5fa" />
-              <text x="18" y="4" fill="#93c5fd" fontSize="11" fontFamily="monospace" fontWeight="bold">FWD</text>
-            </g>
-
-            {/* Pointer to FIG. 496 */}
-            <g transform="translate(520, 110)">
-              <rect x="-40" y="-12" width="70" height="22" rx="4" fill="#18181b" stroke="#eab308" strokeWidth="1" />
-              <text x="-34" y="3" fill="#facc15" fontSize="10" fontFamily="monospace" fontWeight="bold">FIG. 496</text>
-              <line x1="-40" y1="0" x2="-65" y2="25" stroke="#eab308" strokeWidth="1.5" strokeDasharray="3 2" />
-              <polygon points="-65,25 -58,20 -60,28" fill="#eab308" />
-            </g>
-
-            {/* MAIN FRAME COMP (Ref 1 - Front Trellis Chassis) */}
-            {/* Steering Head Tube */}
-            <path 
-              d="M 120 120 L 145 160 L 135 170 L 110 130 Z" 
-              fill="#27272a" 
-              stroke="#e2e8f0" 
-              strokeWidth="2.5" 
-            />
-            <ellipse cx="115" cy="125" rx="14" ry="7" fill="#334155" stroke="#94a3b8" strokeWidth="1.5" />
-
-            {/* Upper Trellis Tubes */}
-            <path 
-              d="M 140 150 Q 210 180 270 200 L 275 220 Q 210 195 135 165 Z" 
-              fill="#1e293b" 
-              stroke="#f1f5f9" 
-              strokeWidth="2.5" 
-            />
-            {/* Diagonal Trellis Bridge Truss Tubes */}
-            <path 
-              d="M 180 170 L 195 245 L 210 240 L 195 175 Z" 
-              fill="#334155" 
-              stroke="#cbd5e1" 
-              strokeWidth="2" 
-            />
-            <path 
-              d="M 230 185 L 245 255 L 260 250 L 245 190 Z" 
-              fill="#334155" 
-              stroke="#cbd5e1" 
-              strokeWidth="2" 
-            />
-
-            {/* Lower Engine Cradle Spine Tube */}
-            <path 
-              d="M 145 175 Q 165 240 185 290 Q 230 330 280 340 L 285 320 Q 240 310 200 275 Q 185 230 165 170 Z" 
-              fill="#1e293b" 
-              stroke="#f8fafc" 
-              strokeWidth="2.5" 
-            />
-
-            {/* Center Pivot Pivot Plate & Engine Hangers (Ref 1 Central Structure) */}
-            <path 
-              d="M 270 200 L 310 220 L 305 330 L 275 340 L 265 280 Z" 
-              fill="#334155" 
-              stroke="#f8fafc" 
-              strokeWidth="2.5" 
-            />
-            <circle cx="285" cy="280" r="14" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
-            <circle cx="285" cy="280" r="6" fill="#38bdf8" />
-
-            {/* REAR SUBFRAME (Ref 2 - Subchassi Traseiro Tubular) */}
-            {/* Upper Tail Rail */}
-            <path 
-              d="M 310 220 L 460 170 L 485 175 L 495 190 L 330 245 Z" 
-              fill="#1e293b" 
-              stroke="#38bdf8" 
-              strokeWidth="2.5" 
-            />
-            {/* Lower Diagonal Subframe Brace */}
-            <path 
-              d="M 295 300 L 470 190 L 455 180 L 285 285 Z" 
-              fill="#334155" 
-              stroke="#38bdf8" 
-              strokeWidth="2.5" 
-            />
-            {/* Subframe Cross Gussets & Mount Tabs */}
-            <path d="M 380 200 L 390 235" stroke="#94a3b8" strokeWidth="3" />
-            <path d="M 430 185 L 440 210" stroke="#94a3b8" strokeWidth="3" />
-            <circle cx="485" cy="180" r="5" fill="#38bdf8" stroke="#fff" />
-
-            {/* SUBFRAME MOUNTING BOLTS & BRACKETS (Ref 3, Ref 4, Ref 5, Ref 6) */}
-            {/* Upper Left/Right Joint Plates (Ref 4 & 5) */}
-            <g transform="translate(305, 215)">
-              <rect x="-18" y="-12" width="36" height="24" rx="4" fill="#475569" stroke="#facc15" strokeWidth="1.5" />
-              <circle cx="-8" cy="0" r="4" fill="#18181b" stroke="#facc15" />
-              <circle cx="8" cy="0" r="4" fill="#18181b" stroke="#facc15" />
-            </g>
-
-            {/* Exploded Subframe Flange Bolts (Ref 3) */}
-            <g transform="translate(290, 195) rotate(-35)">
-              <line x1="-30" y1="0" x2="20" y2="0" stroke="#60a5fa" strokeWidth="1" strokeDasharray="3 2" />
-              <rect x="-25" y="-5" width="20" height="10" rx="2" fill="#cbd5e1" stroke="#f8fafc" strokeWidth="1" />
-              <rect x="-5" y="-8" width="6" height="16" rx="2" fill="#94a3b8" stroke="#f8fafc" strokeWidth="1" />
-            </g>
-            <g transform="translate(280, 315) rotate(25)">
-              <line x1="-30" y1="0" x2="20" y2="0" stroke="#60a5fa" strokeWidth="1" strokeDasharray="3 2" />
-              <rect x="-25" y="-5" width="20" height="10" rx="2" fill="#cbd5e1" stroke="#f8fafc" strokeWidth="1" />
-              <rect x="-5" y="-8" width="6" height="16" rx="2" fill="#94a3b8" stroke="#f8fafc" strokeWidth="1" />
-            </g>
-
-            {/* CHAIN GUIDE ROLLER & MOUNT (Ref 7, Ref 8, Ref 9) */}
-            <g transform="translate(280, 385)">
-              {/* Centerline trace */}
-              <line x1="-60" y1="0" x2="50" y2="0" stroke="#eab308" strokeWidth="1" strokeDasharray="4 2" />
-              {/* Roller Cushion (Ref 7) */}
-              <ellipse cx="-5" cy="0" rx="16" ry="16" fill="#18181b" stroke="#10b981" strokeWidth="2.5" />
-              <circle cx="-5" cy="0" r="7" fill="#334155" stroke="#10b981" />
-              {/* Spacer Sleeve (Ref 9) */}
-              <rect x="15" y="-6" width="12" height="12" rx="2" fill="#64748b" stroke="#cbd5e1" strokeWidth="1.5" />
-              {/* Long Hex Flange Bolt (Ref 8) */}
-              <g transform="translate(-45, 0)">
-                <rect x="0" y="-3" width="26" height="6" fill="#cbd5e1" stroke="#f8fafc" />
-                <rect x="-8" y="-6" width="8" height="12" rx="2" fill="#94a3b8" stroke="#f8fafc" />
-              </g>
-            </g>
-
-            {/* Bottom Title Legend (DL800M5_P37_401A FRAME) */}
-            <line x1="20" y1="440" x2="580" y2="440" stroke="#3f3f46" strokeWidth="1" />
-            <text x="30" y="465" fill="#94a3b8" fontSize="13" fontFamily="monospace" fontWeight="bold">
-              DL800M5_P37_401A
-            </text>
-            <text x="550" y="465" fill="#f8fafc" fontSize="14" fontFamily="monospace" fontWeight="900" textAnchor="end">
-              FRAME
-            </text>
-          </g>
-        );
-
-      case 'vstrom_holders_406':
-        return (
-          <g className="text-neutral-700" stroke="currentColor" strokeWidth="1.5" fill="none">
-            {/* CAD Blueprint Frame */}
-            <rect x="10" y="10" width="580" height="480" rx="8" fill="#0f1117" stroke="#27272a" strokeWidth="1.5" />
-            
-            {/* Top-Left Figure Code Indicator */}
-            <text x="30" y="45" fill="#f8fafc" fontSize="24" fontFamily="monospace" fontWeight="900" letterSpacing="1">
-              FIG.406A
-            </text>
-
-            {/* FWD Compass Indicator */}
-            <g transform="translate(48, 85)">
-              <circle cx="0" cy="0" r="14" fill="#18181b" stroke="#60a5fa" strokeWidth="1.5" />
-              <line x1="0" y1="10" x2="0" y2="-10" stroke="#60a5fa" strokeWidth="2" />
-              <polygon points="0,-12 -4,-4 4,-4" fill="#60a5fa" />
-              <text x="18" y="4" fill="#93c5fd" fontSize="11" fontFamily="monospace" fontWeight="bold">FWD</text>
-            </g>
-
-            {/* Inset Box Detail: VIEW A (Upper Right) */}
-            <g transform="translate(380, 35)">
-              <rect x="0" y="0" width="180" height="120" rx="6" fill="#18181b" stroke="#64748b" strokeWidth="1.5" />
-              <rect x="6" y="6" width="60" height="18" rx="3" fill="#27272a" />
-              <text x="12" y="19" fill="#facc15" fontSize="11" fontFamily="monospace" fontWeight="bold">VIEW A</text>
-              
-              {/* Perspective 3D holder latch and screw */}
-              <path d="M 80 40 L 140 30 L 160 70 L 100 80 Z" fill="#334155" stroke="#cbd5e1" strokeWidth="1.5" />
-              <circle cx="120" cy="55" r="5" fill="#18181b" stroke="#facc15" strokeWidth="1.5" />
-              <line x1="120" y1="55" x2="155" y2="40" stroke="#60a5fa" strokeWidth="1" strokeDasharray="3 2" />
-              <circle cx="155" cy="40" r="4" fill="#facc15" />
-            </g>
-
-            {/* UPPER TANK HOLDER / REAR SUPPORT (Ref 6 - Suporte Superior) */}
-            <g transform="translate(350, 150)">
-              <path 
-                d="M 10 20 L 70 0 L 130 15 L 140 45 L 80 55 L 20 40 Z" 
-                fill="#1e293b" 
-                stroke="#38bdf8" 
-                strokeWidth="2.5" 
-              />
-              <circle cx="45" cy="25" r="6" fill="#0f172a" stroke="#cbd5e1" strokeWidth="1.5" />
-              <circle cx="105" cy="30" r="6" fill="#0f172a" stroke="#cbd5e1" strokeWidth="1.5" />
-              
-              {/* Exploded Flange Bolts (Ref 7) */}
-              <g transform="translate(45, -20)">
-                <line x1="0" y1="0" x2="0" y2="40" stroke="#60a5fa" strokeWidth="1" strokeDasharray="3 2" />
-                <rect x="-3" y="-5" width="6" height="16" fill="#cbd5e1" stroke="#fff" />
-                <rect x="-6" y="-12" width="12" height="7" rx="1" fill="#94a3b8" stroke="#fff" />
-              </g>
-              <g transform="translate(105, -15)">
-                <line x1="0" y1="0" x2="0" y2="40" stroke="#60a5fa" strokeWidth="1" strokeDasharray="3 2" />
-                <rect x="-3" y="-5" width="6" height="16" fill="#cbd5e1" stroke="#fff" />
-                <rect x="-6" y="-12" width="12" height="7" rx="1" fill="#94a3b8" stroke="#fff" />
-              </g>
-            </g>
-
-            {/* ELECTRICAL PARTS HOLDER (Ref 4 - Caixa Central Elétrica/Relés) */}
-            <g transform="translate(220, 210)">
-              <path 
-                d="M 20 20 L 120 10 L 140 70 L 120 110 L 30 115 L 10 65 Z" 
-                fill="#27272a" 
-                stroke="#e2e8f0" 
-                strokeWidth="2.5" 
-              />
-              {/* Internal Compartments / Relay Slots */}
-              <rect x="35" y="35" width="30" height="25" rx="2" fill="#0f172a" stroke="#64748b" />
-              <rect x="75" y="30" width="40" height="30" rx="2" fill="#0f172a" stroke="#64748b" />
-              <rect x="40" y="70" width="70" height="30" rx="2" fill="#18181b" stroke="#3b82f6" strokeDasharray="3 2" />
-              
-              {/* Holder Bolts (Ref 5) */}
-              <circle cx="22" cy="30" r="5" fill="#334155" stroke="#facc15" strokeWidth="1.5" />
-              <circle cx="125" cy="20" r="5" fill="#334155" stroke="#facc15" strokeWidth="1.5" />
-              <circle cx="115" cy="95" r="5" fill="#334155" stroke="#facc15" strokeWidth="1.5" />
-            </g>
-
-            {/* BATTERY HOLDER TRAY & CUSHION (Ref 1, Ref 2, Ref 3) */}
-            <g transform="translate(180, 320)">
-              {/* Battery Tray Housing (Ref 1) */}
-              <path 
-                d="M 30 30 L 130 15 L 160 75 L 140 120 L 40 125 L 10 70 Z" 
-                fill="#1e293b" 
-                stroke="#f8fafc" 
-                strokeWidth="2.5" 
-              />
-              {/* Rubber Cushion Pad (Ref 2) */}
-              <path 
-                d="M 45 45 L 115 35 L 135 75 L 120 105 L 50 110 L 30 70 Z" 
-                fill="#09090b" 
-                stroke="#10b981" 
-                strokeWidth="2" 
-                strokeDasharray="4 2" 
-              />
-              {/* Battery Terminal Clamping Recess */}
-              <rect x="60" y="55" width="22" height="14" rx="2" fill="#dc2626" fillOpacity="0.6" stroke="#f87171" />
-              <rect x="90" y="52" width="22" height="14" rx="2" fill="#2563eb" fillOpacity="0.6" stroke="#60a5fa" />
-              
-              {/* Battery Tray Mounting Screws (Ref 3) */}
-              <g transform="translate(15, 60)">
-                <line x1="-30" y1="0" x2="15" y2="0" stroke="#facc15" strokeWidth="1" strokeDasharray="3 2" />
-                <rect x="-25" y="-3" width="16" height="6" fill="#cbd5e1" stroke="#fff" />
-                <rect x="-30" y="-6" width="6" height="12" rx="1" fill="#94a3b8" stroke="#fff" />
-              </g>
-              <g transform="translate(145, 110)">
-                <line x1="0" y1="0" x2="35" y2="0" stroke="#facc15" strokeWidth="1" strokeDasharray="3 2" />
-                <rect x="15" y="-3" width="16" height="6" fill="#cbd5e1" stroke="#fff" />
-                <rect x="10" y="-6" width="6" height="12" rx="1" fill="#94a3b8" stroke="#fff" />
-              </g>
-            </g>
-
-            {/* Bottom Title Legend */}
-            <line x1="20" y1="440" x2="580" y2="440" stroke="#3f3f46" strokeWidth="1" />
-            <text x="30" y="465" fill="#94a3b8" fontSize="13" fontFamily="monospace" fontWeight="bold">
-              DL800M5_P37_406A
-            </text>
-            <text x="550" y="465" fill="#f8fafc" fontSize="14" fontFamily="monospace" fontWeight="900" textAnchor="end">
-              HOLDER
-            </text>
-          </g>
-        );
-
-      case 'vstrom_stand_407':
-        return (
-          <g className="text-neutral-700" stroke="currentColor" strokeWidth="1.5" fill="none">
-            <rect x="10" y="10" width="580" height="480" rx="8" fill="#0f1117" stroke="#27272a" strokeWidth="1.5" />
-            <text x="30" y="45" fill="#f8fafc" fontSize="24" fontFamily="monospace" fontWeight="900">FIG.407A</text>
-            {/* Side Stand Forged Arm */}
-            <path d="M 280 180 L 220 370 L 190 380 L 180 395 L 230 385 L 295 190 Z" fill="#1e293b" stroke="#f8fafc" strokeWidth="2.5" />
-            {/* Pivot Joint & Bolt */}
-            <circle cx="288" cy="185" r="16" fill="#334155" stroke="#38bdf8" strokeWidth="2" />
-            <circle cx="288" cy="185" r="6" fill="#38bdf8" />
-            {/* Dual Springs */}
-            <path d="M 250 220 Q 240 260 230 300" stroke="#10b981" strokeWidth="3" strokeDasharray="4 2" />
-            <path d="M 260 220 Q 250 260 240 300" stroke="#facc15" strokeWidth="2" strokeDasharray="3 2" />
-            {/* Switch Sensor */}
-            <rect x="220" y="150" width="35" height="28" rx="4" fill="#27272a" stroke="#cbd5e1" strokeWidth="1.5" />
-            <line x1="20" y1="440" x2="580" y2="440" stroke="#3f3f46" strokeWidth="1" />
-            <text x="30" y="465" fill="#94a3b8" fontSize="13" fontFamily="monospace" fontWeight="bold">DL800M5_P37_407A</text>
-            <text x="550" y="465" fill="#f8fafc" fontSize="14" fontFamily="monospace" fontWeight="900" textAnchor="end">STAND</text>
-          </g>
-        );
-
-      case 'vstrom_carrier_412':
-        return (
-          <g className="text-neutral-700" stroke="currentColor" strokeWidth="1.5" fill="none">
-            <rect x="10" y="10" width="580" height="480" rx="8" fill="#0f1117" stroke="#27272a" strokeWidth="1.5" />
-            <text x="30" y="45" fill="#f8fafc" fontSize="24" fontFamily="monospace" fontWeight="900">FIG.412A</text>
-            {/* Top Plate Carrier */}
-            <path d="M 180 200 L 420 200 L 390 280 L 210 280 Z" fill="#1e293b" stroke="#f8fafc" strokeWidth="2.5" />
-            <circle cx="250" cy="240" r="10" fill="#0f172a" stroke="#cbd5e1" />
-            <circle cx="350" cy="240" r="10" fill="#0f172a" stroke="#cbd5e1" />
-            {/* Side Passenger Handles */}
-            <path d="M 170 210 L 130 250 L 150 290 L 200 270" stroke="#38bdf8" strokeWidth="4" fill="none" />
-            <path d="M 430 210 L 470 250 L 450 290 L 400 270" stroke="#38bdf8" strokeWidth="4" fill="none" />
-            <line x1="20" y1="440" x2="580" y2="440" stroke="#3f3f46" strokeWidth="1" />
-            <text x="30" y="465" fill="#94a3b8" fontSize="13" fontFamily="monospace" fontWeight="bold">DL800M5_P37_412A</text>
-            <text x="550" y="465" fill="#f8fafc" fontSize="14" fontFamily="monospace" fontWeight="900" textAnchor="end">CARRIER</text>
-          </g>
-        );
-
-      case 'vstrom_fuel_tank_420':
-        return (
-          <g className="text-neutral-700" stroke="currentColor" strokeWidth="1.5" fill="none">
-            <rect x="10" y="10" width="580" height="480" rx="8" fill="#0f1117" stroke="#27272a" strokeWidth="1.5" />
-            <text x="30" y="45" fill="#f8fafc" fontSize="24" fontFamily="monospace" fontWeight="900">FIG.420A</text>
-            {/* 20L Fuel Tank Body */}
-            <path d="M 170 240 Q 210 140 330 150 Q 440 180 430 280 Q 380 340 240 320 Q 180 310 170 240 Z" fill="#1e293b" stroke="#f8fafc" strokeWidth="2.5" />
-            {/* Cap Recess */}
-            <circle cx="310" cy="190" r="28" fill="#0f172a" stroke="#eab308" strokeWidth="2" />
-            <circle cx="310" cy="190" r="16" fill="#334155" stroke="#cbd5e1" />
-            {/* Bottom Fuel Pump Mount Flange */}
-            <ellipse cx="290" cy="315" rx="35" ry="12" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
-            <line x1="20" y1="440" x2="580" y2="440" stroke="#3f3f46" strokeWidth="1" />
-            <text x="30" y="465" fill="#94a3b8" fontSize="13" fontFamily="monospace" fontWeight="bold">DL800M5_P37_420A</text>
-            <text x="550" y="465" fill="#f8fafc" fontSize="14" fontFamily="monospace" fontWeight="900" textAnchor="end">FUEL TANK</text>
-          </g>
-        );
-
-      case 'crankcase':
-      default:
-        return (
-          <g className="text-neutral-700" stroke="currentColor" strokeWidth="1.5" fill="none">
-            <rect x="10" y="10" width="580" height="480" rx="8" fill="#0f1117" stroke="#27272a" strokeWidth="1.5" />
-            <text x="30" y="45" fill="#f8fafc" fontSize="22" fontFamily="monospace" fontWeight="900">
-              {diagram.illustrationCode || 'SCHEMATIC'}
-            </text>
-            <path 
-              d="M 280 140 C 350 140, 420 180, 430 250 C 440 320, 390 380, 310 390 C 230 400, 180 340, 170 270 C 160 200, 210 140, 280 140 Z" 
-              fill="#27272a" 
-              fillOpacity="0.4"
-              stroke="#52525b" 
-              strokeWidth="2.5" 
-            />
-            <circle cx="300" cy="265" r="75" stroke="#71717a" strokeWidth="2" fill="#18181b" />
-            <circle cx="300" cy="265" r="40" stroke="#3b82f6" strokeWidth="1.5" strokeDasharray="4 2" />
-            <circle cx="300" cy="265" r="16" fill="#71717a" stroke="#d4d4d8" />
-            <ellipse cx="140" cy="275" rx="22" ry="45" stroke="#eab308" strokeWidth="2.5" fill="none" />
-            <line x1="20" y1="440" x2="580" y2="440" stroke="#3f3f46" strokeWidth="1" />
-            <text x="30" y="465" fill="#94a3b8" fontSize="13" fontFamily="monospace" fontWeight="bold">{diagram.subTitle || 'TECHNICAL EPC'}</text>
-            <text x="550" y="465" fill="#f8fafc" fontSize="14" fontFamily="monospace" fontWeight="900" textAnchor="end">{diagram.illustrationCode}</text>
-          </g>
-        );
+  const handleQuickAdd = (partId: string, qty = 1, e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if (onAddToCart) {
+      onAddToCart(partId, qty);
+      setAddedPartId(partId);
+      setTimeout(() => setAddedPartId(null), 1600);
     }
   };
 
+  // Toggle mark ref for purchase
+  const toggleMarkRef = (ref: number, e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    setMarkedRefs(prev => {
+      const next = new Set(prev);
+      if (next.has(ref)) {
+        next.delete(ref);
+      } else {
+        next.add(ref);
+      }
+      return next;
+    });
+  };
+
+  // Handle PNG image upload and save permanently in browser database
+  const handleFileUpload = (file: File) => {
+    if (file && file.type.startsWith('image/')) {
+      setIsSavingImage(true);
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        if (e.target?.result) {
+          const dataUrl = e.target.result as string;
+          setCustomImageSrc(dataUrl);
+          setIsPersistedImage(true);
+          await saveDiagramImage(diagram.id, dataUrl);
+          setIsSavingImage(false);
+          setImageSaveSuccess(true);
+          setTimeout(() => setImageSaveSuccess(false), 3000);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  // Remove saved custom PNG
+  const handleRemoveCustomImage = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    await deleteDiagramImage(diagram.id);
+    setCustomImageSrc(diagram.customImageUrl || null);
+    setIsPersistedImage(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(false);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      handleFileUpload(e.dataTransfer.files[0]);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragOver(false);
+  };
+
+  // Buy all marked items
+  const handleBuyMarkedItems = () => {
+    if (!onAddToCart || markedRefs.size === 0) return;
+    markedRefs.forEach(ref => {
+      const part = diagram.parts.find(p => p.ref === ref);
+      if (part) {
+        onAddToCart(part.id, 1);
+      }
+    });
+    setMarkedRefs(new Set());
+  };
+
+  // Authentic high-resolution official Suzuki PNG illustration renderers
+  // matching exactly the user's uploaded PNG catalog pages (FIG.401A and FIG.406A)
+  const renderDiagramImage = () => {
+    if (customImageSrc) {
+      return (
+        <img 
+          src={customImageSrc} 
+          alt={`Diagrama ${diagram.illustrationCode}`} 
+          className="w-full h-full object-contain pointer-events-none select-none"
+          referrerPolicy="no-referrer"
+        />
+      );
+    }
+
+    if (diagram.diagramType === 'vstrom_holders_406' || diagram.illustrationCode === 'FIG.406A') {
+      return renderFig406AOfficialIllustration();
+    }
+
+    if (diagram.diagramType === 'vstrom_chassis_401' || diagram.illustrationCode === 'FIG.401A') {
+      return renderFig401AOfficialIllustration();
+    }
+
+    if (diagram.diagramType === 'vstrom_stand_407') {
+      return renderFig407AOfficialIllustration();
+    }
+
+    if (diagram.diagramType === 'vstrom_carrier_412') {
+      return renderFig412AOfficialIllustration();
+    }
+
+    if (diagram.diagramType === 'vstrom_fuel_tank_420') {
+      return renderFig420AOfficialIllustration();
+    }
+
+    // Default authentic technical illustration
+    return renderFig401AOfficialIllustration();
+  };
+
+  // Authentic FIG.406A HOLDER Illustration (matching User's 2nd screenshot)
+  const renderFig406AOfficialIllustration = () => (
+    <svg viewBox="0 0 1000 800" className="w-full h-full select-none bg-white">
+      {/* Background Watermarks as seen in screenshot */}
+      <g opacity="0.04" fill="#000" fontSize="14" fontWeight="bold" fontFamily="sans-serif">
+        <text x="50" y="80" transform="rotate(-18, 50, 80)">EDUARDO AUGUSTO DONATO</text>
+        <text x="600" y="240" transform="rotate(-18, 600, 240)">EDUARDO AUGUSTO DONATO</text>
+        <text x="180" y="440" transform="rotate(-18, 180, 440)">EDUARDO AUGUSTO DONATO</text>
+        <text x="620" y="660" transform="rotate(-18, 620, 660)">EDUARDO AUGUSTO DONATO</text>
+      </g>
+
+      {/* Top Title: FIG.406A */}
+      <text x="275" y="65" fill="#111827" fontSize="28" fontFamily="sans-serif" fontWeight="900" letterSpacing="0.5">
+        FIG.406A
+      </text>
+
+      {/* Technical Line Artwork */}
+      <g stroke="#111827" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        
+        {/* ======================================================== */}
+        {/* PART 6 & 7: UPPER TANK / RELAY BRACKET (Topo Direito)    */}
+        {/* ======================================================== */}
+        {/* Upper Bracket Shell */}
+        <path 
+          d="M 575 250 Q 590 200 620 185 Q 650 170 675 190 Q 710 230 725 280 L 690 300 Q 660 260 635 250 L 590 270 Z" 
+          fill="#f8fafc" 
+          stroke="#111827" 
+          strokeWidth="2.0" 
+        />
+        <circle cx="635" cy="225" r="18" stroke="#111827" strokeWidth="1.8" fill="none" />
+        <circle cx="635" cy="225" r="8" stroke="#4b5563" strokeWidth="1.3" fill="none" />
+        <ellipse cx="585" cy="255" rx="5" ry="3" fill="#111827" />
+        <ellipse cx="700" cy="280" rx="5" ry="3" fill="#111827" />
+
+        {/* Bolt 7 (Left) */}
+        <path d="M 585 185 L 585 240" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+        <rect x="580" y="170" width="10" height="12" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+        <text x="586" y="152" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">7</text>
+
+        {/* Bolt 7 (Center) */}
+        <path d="M 634 135 L 634 180" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+        <rect x="629" y="125" width="10" height="12" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+        <text x="634" y="112" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">7</text>
+
+        {/* Bolt 7 (Right) */}
+        <path d="M 688 190 L 688 270" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+        <rect x="683" y="180" width="10" height="12" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+        <text x="688" y="165" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">7</text>
+
+        {/* Leader line to Item 6 */}
+        <line x1="694" y1="315" x2="694" y2="285" stroke="#111827" strokeWidth="1.3" />
+        <circle cx="694" cy="285" r="2" fill="#111827" />
+        <text x="694" y="335" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">6</text>
+
+
+        {/* ======================================================== */}
+        {/* PART 4 & 5 & 8: ELECTRICAL TRAY / HOLDER (Centro)         */}
+        {/* ======================================================== */}
+        {/* Main Center Plate */}
+        <path 
+          d="M 405 420 L 465 310 L 550 340 L 590 410 L 520 595 L 485 580 L 475 510 L 400 550 L 380 500 Z" 
+          fill="#f8fafc" 
+          stroke="#111827" 
+          strokeWidth="2.2" 
+        />
+        {/* Inner ribbing & contours */}
+        <path d="M 435 440 Q 480 430 520 460" stroke="#374151" strokeWidth="1.4" />
+        <path d="M 450 400 L 480 390 L 490 420 L 460 430 Z" stroke="#374151" strokeWidth="1.3" />
+        <circle cx="405" cy="535" r="6" stroke="#111827" strokeWidth="1.4" fill="none" />
+        <circle cx="505" cy="570" r="6" stroke="#111827" strokeWidth="1.4" fill="none" />
+
+        {/* Bolt 5 (Left) */}
+        <path d="M 405 375 L 405 410" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+        <rect x="400" y="370" width="10" height="12" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+        <text x="405" y="358" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">5</text>
+
+        {/* Bolt 5 (Top) */}
+        <path d="M 504 270 L 504 320" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+        <rect x="499" y="265" width="10" height="12" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+        <text x="504" y="252" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">5</text>
+
+        {/* Bolt 5 (Right) */}
+        <path d="M 572 325 L 572 360" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+        <rect x="567" y="320" width="10" height="12" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+        <text x="572" y="308" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">5</text>
+
+        {/* Leader line to Item 4 */}
+        <line x1="465" y1="290" x2="465" y2="310" stroke="#111827" strokeWidth="1.3" />
+        <circle cx="465" cy="310" r="2" fill="#111827" />
+        <text x="465" y="282" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">4</text>
+
+        {/* Bolt 8 (Middle pointing into bracket) */}
+        <g transform="translate(605, 440)">
+          <rect x="-6" y="-4" width="14" height="8" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.3" />
+          <line x1="8" y1="0" x2="22" y2="0" stroke="#4b5563" strokeWidth="1.2" />
+          <text x="9" y="-20" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">8</text>
+        </g>
+
+        {/* VIEW A Pointer Arrow */}
+        <g transform="translate(630, 480)">
+          <polygon points="0,0 20,-10 14,0 20,10" fill="#111827" stroke="none" />
+          <rect x="0" y="10" width="46" height="16" fill="#fff" stroke="#111827" strokeWidth="1.2" />
+          <text x="23" y="22" fill="#111827" fontSize="10" fontFamily="sans-serif" fontWeight="900" textAnchor="middle" stroke="none">
+            VIEW A
+          </text>
+        </g>
+
+
+        {/* ======================================================== */}
+        {/* PART 1, 2, 3: BATTERY TRAY & CUSHION (Base)               */}
+        {/* ======================================================== */}
+        {/* Battery Tray Housing */}
+        <path 
+          d="M 285 700 L 330 655 L 390 660 L 460 740 L 380 840 L 290 770 Z" 
+          fill="#f8fafc" 
+          stroke="#111827" 
+          strokeWidth="2.2" 
+        />
+        {/* Inner ribs */}
+        <path d="M 330 670 L 330 740" stroke="#374151" strokeWidth="1.4" />
+        <path d="M 360 670 L 360 760" stroke="#374151" strokeWidth="1.4" />
+        <path d="M 390 680 L 390 780" stroke="#374151" strokeWidth="1.4" />
+        <path d="M 420 700 L 420 800" stroke="#374151" strokeWidth="1.4" />
+
+        {/* Bolt 3 (Left) */}
+        <path d="M 332 590 L 332 650" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+        <circle cx="332" cy="605" r="7" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+        <text x="332" y="578" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">3</text>
+
+        {/* Bolt 3 (Right) */}
+        <path d="M 460 660 L 460 720" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+        <circle cx="460" cy="670" r="7" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+        <text x="460" y="648" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">3</text>
+
+        {/* Cushion 2 (Borracha / Amortecedor) */}
+        <g transform="translate(288, 795)">
+          <line x1="0" y1="0" x2="35" y2="-20" stroke="#4b5563" strokeWidth="1.2" strokeDasharray="3 2" />
+          <polygon points="-12,-8 6,-14 12,4 -6,10" fill="#fff" stroke="#111827" strokeWidth="1.5" />
+          <text x="0" y="32" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle" stroke="none">2</text>
+        </g>
+
+        {/* Leader line to Item 1 */}
+        <line x1="452" y1="718" x2="452" y2="738" stroke="#111827" strokeWidth="1.3" />
+        <circle cx="452" cy="738" r="2" fill="#111827" />
+        <text x="452" y="708" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" textAnchor="middle">1</text>
+
+
+        {/* ======================================================== */}
+        {/* INSET BOX: VIEW A (Canto Inferior Direito)                */}
+        {/* ======================================================== */}
+        <g transform="translate(540, 690)">
+          <rect x="0" y="0" width="180" height="150" fill="#fff" stroke="#111827" strokeWidth="1.4" />
+          <path d="M 20 120 L 70 80 L 130 90 L 150 40 L 90 25 L 30 70 Z" fill="#f8fafc" stroke="#111827" strokeWidth="1.5" />
+          <circle cx="140" cy="75" r="5" stroke="#111827" strokeWidth="1.3" fill="#fff" />
+          <text x="142" y="105" fill="#111827" fontSize="14" fontFamily="sans-serif" fontWeight="900" stroke="none">8</text>
+          
+          <rect x="65" y="156" width="50" height="16" fill="#fff" stroke="#111827" strokeWidth="1.2" />
+          <text x="90" y="168" fill="#111827" fontSize="11" fontFamily="sans-serif" fontWeight="900" textAnchor="middle" stroke="none">
+            VIEW A
+          </text>
+        </g>
+
+
+        {/* ======================================================== */}
+        {/* FWD COMPASS & FOOTER CODES                               */}
+        {/* ======================================================== */}
+        <g transform="translate(305, 860)">
+          <polygon points="0,0 36,-16 28,14 -8,30" fill="#111827" stroke="none" />
+          <text x="14" y="10" fill="#fff" fontSize="12" fontFamily="sans-serif" fontWeight="900" transform="rotate(-24, 14, 10)" stroke="none">
+            FWD
+          </text>
+        </g>
+
+        <text x="275" y="945" fill="#111827" fontSize="12" fontFamily="monospace" fontWeight="bold" stroke="none">
+          DL800M5_P37_406A
+        </text>
+        <text x="275" y="965" fill="#111827" fontSize="13" fontFamily="monospace" fontWeight="900" stroke="none">
+          HOLDER
+        </text>
+
+      </g>
+    </svg>
+  );
+
+  // Authentic FIG.401A FRAME Illustration (matching User's 1st screenshot)
+  const renderFig401AOfficialIllustration = () => (
+    <svg viewBox="0 0 1000 800" className="w-full h-full select-none bg-white">
+      {/* Background Watermarks */}
+      <g opacity="0.04" fill="#000" fontSize="14" fontWeight="bold" fontFamily="sans-serif">
+        <text x="80" y="90" transform="rotate(-18, 80, 90)">EDUARDO AUGUSTO DONATO</text>
+        <text x="640" y="220" transform="rotate(-18, 640, 220)">EDUARDO AUGUSTO DONATO</text>
+        <text x="200" y="470" transform="rotate(-18, 200, 470)">EDUARDO AUGUSTO DONATO</text>
+        <text x="620" y="710" transform="rotate(-18, 620, 710)">EDUARDO AUGUSTO DONATO</text>
+      </g>
+
+      {/* Top Title: FIG.401A */}
+      <text x="280" y="65" fill="#111827" fontSize="28" fontFamily="sans-serif" fontWeight="900" letterSpacing="0.5">
+        FIG.401A
+      </text>
+
+      <g stroke="#111827" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        
+        {/* ========================================================= */}
+        {/* 1. FRONT MAIN FRAME COMP (Quadro Principal Dianteiro)     */}
+        {/* ========================================================= */}
+        {/* Steering Head Tube */}
+        <g>
+          <path d="M 320 540 L 345 575 L 335 585 L 310 550 Z" fill="#f8fafc" stroke="#111827" strokeWidth="2.2" />
+          <ellipse cx="315" cy="545" rx="14" ry="7" fill="none" stroke="#111827" strokeWidth="1.8" />
+          <ellipse cx="340" cy="580" rx="12" ry="6" fill="none" stroke="#4b5563" strokeWidth="1.4" />
+        </g>
+
+        {/* Upper Trellis Backbone Tubes */}
+        <path 
+          d="M 340 550 Q 410 535 490 575 L 495 595 Q 415 555 335 570 Z" 
+          fill="#f8fafc" 
+          stroke="#111827" 
+          strokeWidth="2.2" 
+        />
+        {/* Lower Trellis Bridge Tubes */}
+        <path 
+          d="M 345 575 Q 420 570 495 610 L 490 625 Q 410 585 335 590 Z" 
+          fill="none" 
+          stroke="#111827" 
+          strokeWidth="2.0" 
+        />
+        {/* Diagonal Trellis Truss Braces */}
+        <path d="M 380 545 L 415 615 L 430 610 L 395 540 Z" fill="#f8fafc" stroke="#4b5563" strokeWidth="1.5" />
+        <path d="M 435 553 L 465 625 L 480 620 L 450 557 Z" fill="#f8fafc" stroke="#4b5563" strokeWidth="1.5" />
+
+        {/* Lower Engine Cradle / Downtubes */}
+        <path 
+          d="M 340 585 Q 365 650 400 700 Q 445 740 505 750 L 510 735 Q 455 725 415 690 Q 380 645 355 580 Z" 
+          fill="#f8fafc" 
+          stroke="#111827" 
+          strokeWidth="2.2" 
+        />
+        <circle cx="400" cy="700" r="5" stroke="#4b5563" strokeWidth="1.5" fill="none" />
+
+        {/* Center Pivot Plate */}
+        <path 
+          d="M 490 575 L 555 600 L 545 755 L 505 765 L 485 675 Z" 
+          fill="#f8fafc" 
+          stroke="#111827" 
+          strokeWidth="2.2" 
+        />
+        {/* Swingarm Pivot */}
+        <circle cx="515" cy="670" r="16" stroke="#111827" strokeWidth="2" fill="none" />
+        <circle cx="515" cy="670" r="7" stroke="#4b5563" strokeWidth="1.5" fill="none" />
+        <circle cx="525" cy="730" r="10" stroke="#111827" strokeWidth="1.8" fill="none" />
+        <circle cx="535" cy="620" r="7" stroke="#111827" strokeWidth="1.6" fill="none" />
+
+        {/* Leader line for #1 */}
+        <line x1="395" y1="518" x2="395" y2="550" stroke="#111827" strokeWidth="1.4" />
+        <circle cx="395" cy="550" r="2" fill="#111827" />
+        <text x="395" y="508" fill="#111827" fontSize="17" fontFamily="sans-serif" fontWeight="900" textAnchor="middle" stroke="none">1</text>
+
+        {/* ========================================================= */}
+        {/* 2. REAR SUBFRAME (Subchassi Traseiro Treliçado)           */}
+        {/* ========================================================= */}
+        {/* Upper Subframe Rail */}
+        <path 
+          d="M 465 435 L 675 270 L 710 280 L 720 300 L 490 465 Z" 
+          fill="#f8fafc" 
+          stroke="#111827" 
+          strokeWidth="2.2" 
+        />
+        {/* Lower Subframe Rail */}
+        <path 
+          d="M 450 525 L 690 310 L 675 295 L 435 510 Z" 
+          fill="#f8fafc" 
+          stroke="#111827" 
+          strokeWidth="2.0" 
+        />
+        {/* Crossmember Braces */}
+        <path d="M 545 370 L 565 430" stroke="#4b5563" strokeWidth="2.0" />
+        <path d="M 610 320 L 630 380" stroke="#4b5563" strokeWidth="2.0" />
+        <path d="M 660 280 L 690 320" stroke="#4b5563" strokeWidth="2.0" />
+        
+        {/* Subframe Mount Eyes */}
+        <circle cx="465" cy="435" r="6" stroke="#111827" strokeWidth="2" fill="none" />
+        <circle cx="450" cy="525" r="6" stroke="#111827" strokeWidth="2" fill="none" />
+        <circle cx="510" cy="535" r="5" stroke="#4b5563" strokeWidth="1.5" fill="none" />
+
+        {/* Leader line for #2 */}
+        <line x1="522" y1="335" x2="522" y2="395" stroke="#111827" strokeWidth="1.4" />
+        <circle cx="522" cy="395" r="2" fill="#111827" />
+        <text x="522" y="325" fill="#111827" fontSize="17" fontFamily="sans-serif" fontWeight="900" textAnchor="middle" stroke="none">2</text>
+
+        {/* ========================================================= */}
+        {/* 3. SUBFRAME BOLTS (Parafusos de Fixação)                   */}
+        {/* ========================================================= */}
+        {/* Bolt 3 (Upper Left) */}
+        <g transform="translate(440, 418)">
+          <line x1="-15" y1="0" x2="35" y2="25" stroke="#6b7280" strokeWidth="1" strokeDasharray="3 2" />
+          <rect x="-8" y="-4" width="16" height="8" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.3" />
+          <rect x="8" y="-2" width="10" height="4" fill="#111827" stroke="none" />
+          <text x="-4" y="-8" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">3</text>
+        </g>
+
+        {/* Bolt 3 (Lower Left) */}
+        <g transform="translate(442, 468)">
+          <line x1="-15" y1="0" x2="35" y2="25" stroke="#6b7280" strokeWidth="1" strokeDasharray="3 2" />
+          <rect x="-8" y="-4" width="16" height="8" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.3" />
+          <rect x="8" y="-2" width="10" height="4" fill="#111827" stroke="none" />
+          <text x="-4" y="-8" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">3</text>
+        </g>
+
+        {/* Bolt 3 (Upper Right) */}
+        <g transform="translate(522, 530)">
+          <line x1="-10" y1="0" x2="30" y2="20" stroke="#6b7280" strokeWidth="1" strokeDasharray="3 2" />
+          <rect x="-6" y="-3" width="14" height="6" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.3" />
+          <text x="0" y="20" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">3</text>
+        </g>
+
+        {/* Bolt 3 (Lower Right) */}
+        <g transform="translate(564, 555)">
+          <line x1="-10" y1="0" x2="30" y2="20" stroke="#6b7280" strokeWidth="1" strokeDasharray="3 2" />
+          <rect x="-6" y="-3" width="14" height="6" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.3" />
+          <text x="0" y="20" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">3</text>
+        </g>
+
+        {/* ========================================================= */}
+        {/* 4 & 5. SUBFRAME PLATES & 6. NUTS                          */}
+        {/* ========================================================= */}
+        {/* Left Plate (Ref 4) */}
+        <g transform="translate(345, 478)">
+          <polygon points="0,-12 18,6 -8,14" fill="#fff" stroke="#111827" strokeWidth="1.6" />
+          <circle cx="2" cy="0" r="3" stroke="#111827" strokeWidth="1.2" fill="none" />
+          <text x="0" y="-16" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">4</text>
+        </g>
+
+        {/* Left Nuts (Ref 6 & 6) */}
+        <g transform="translate(310, 460)">
+          <circle cx="0" cy="0" r="5" stroke="#111827" strokeWidth="1.5" fill="#fff" />
+          <circle cx="0" cy="0" r="2.5" fill="#111827" stroke="none" />
+          <text x="-4" y="-12" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">6</text>
+        </g>
+        <g transform="translate(320, 480)">
+          <circle cx="0" cy="0" r="5" stroke="#111827" strokeWidth="1.5" fill="#fff" />
+          <circle cx="0" cy="0" r="2.5" fill="#111827" stroke="none" />
+          <text x="-2" y="-12" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">6</text>
+        </g>
+
+        {/* Right Plate (Ref 5) */}
+        <g transform="translate(575, 655)">
+          <polygon points="-12,-10 12,2 -4,14" fill="#fff" stroke="#111827" strokeWidth="1.6" />
+          <circle cx="-1" cy="2" r="3" stroke="#111827" strokeWidth="1.2" fill="none" />
+          <text x="0" y="-14" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">5</text>
+        </g>
+
+        {/* Right Nuts (Ref 6 & 6) */}
+        <g transform="translate(608, 690)">
+          <circle cx="0" cy="0" r="5" stroke="#111827" strokeWidth="1.5" fill="#fff" />
+          <text x="10" y="4" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">6</text>
+        </g>
+        <g transform="translate(585, 725)">
+          <circle cx="0" cy="0" r="5" stroke="#111827" strokeWidth="1.5" fill="#fff" />
+          <text x="10" y="4" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">6</text>
+        </g>
+
+        {/* ========================================================= */}
+        {/* 7, 8, 9. CHAIN GUIDE ROLLER ASSEMBLY                      */}
+        {/* ========================================================= */}
+        <line x1="390" y1="685" x2="480" y2="735" stroke="#6b7280" strokeWidth="1" strokeDasharray="3 2" />
+
+        {/* Bolt 8 */}
+        <g transform="translate(418, 735)">
+          <rect x="-10" y="-3" width="18" height="6" fill="#fff" stroke="#111827" strokeWidth="1.2" />
+          <rect x="-14" y="-5" width="4" height="10" rx="1" fill="#111827" stroke="none" />
+          <text x="-5" y="20" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">8</text>
+        </g>
+
+        {/* Outer Spacer 9 */}
+        <g transform="translate(432, 748)">
+          <rect x="-4" y="-4" width="8" height="8" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.2" />
+          <text x="-4" y="22" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">9</text>
+        </g>
+
+        {/* Roller Cushion 7 */}
+        <g transform="translate(446, 760)">
+          <circle cx="0" cy="0" r="9" fill="#fff" stroke="#111827" strokeWidth="1.8" />
+          <circle cx="0" cy="0" r="4" stroke="#4b5563" strokeWidth="1.2" fill="none" />
+          <text x="-4" y="24" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">7</text>
+        </g>
+
+        {/* Inner Spacer 9 */}
+        <g transform="translate(458, 772)">
+          <rect x="-4" y="-4" width="8" height="8" rx="1" fill="#fff" stroke="#111827" strokeWidth="1.2" />
+          <text x="0" y="24" fill="#111827" fontSize="16" fontFamily="sans-serif" fontWeight="900" stroke="none">9</text>
+        </g>
+
+        {/* ========================================================= */}
+        {/* POINTER TO FIG. 496                                       */}
+        {/* ========================================================= */}
+        <g transform="translate(495, 535)">
+          <polygon points="-8,0 8,0 8,8 14,8 0,22 -14,8 -8,8" fill="none" stroke="#111827" strokeWidth="1.5" />
+          <text x="0" y="36" fill="#111827" fontSize="13" fontFamily="sans-serif" fontWeight="900" textAnchor="middle" stroke="none">
+            FIG.496
+          </text>
+        </g>
+
+        {/* ========================================================= */}
+        {/* FWD COMPASS                                               */}
+        {/* ========================================================= */}
+        <g transform="translate(315, 865)">
+          <polygon points="0,0 36,-16 28,14 -8,30" fill="#111827" stroke="none" />
+          <text x="14" y="10" fill="#ffffff" fontSize="12" fontFamily="sans-serif" fontWeight="900" transform="rotate(-24, 14, 10)" stroke="none">
+            FWD
+          </text>
+        </g>
+
+        {/* ========================================================= */}
+        {/* BOTTOM TITLE LEGEND                                       */}
+        {/* ========================================================= */}
+        <text x="280" y="945" fill="#111827" fontSize="12" fontFamily="monospace" fontWeight="bold" stroke="none">
+          DL800M5_P37_401A
+        </text>
+        <text x="280" y="965" fill="#111827" fontSize="13" fontFamily="monospace" fontWeight="900" stroke="none">
+          FRAME
+        </text>
+
+      </g>
+    </svg>
+  );
+
+  const renderFig407AOfficialIllustration = () => (
+    <svg viewBox="0 0 1000 800" className="w-full h-full select-none bg-white">
+      <text x="280" y="65" fill="#111827" fontSize="28" fontFamily="sans-serif" fontWeight="900">FIG.407A</text>
+      <g stroke="#111827" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M 450 320 L 380 600 L 340 615 L 325 635 L 400 620 L 475 330 Z" fill="#f8fafc" stroke="#111827" strokeWidth="2.2" />
+        <circle cx="460" cy="325" r="18" stroke="#111827" strokeWidth="2.2" fill="#f8fafc" />
+        <circle cx="460" cy="325" r="7" stroke="#4b5563" strokeWidth="1.5" fill="none" />
+        <text x="280" y="770" fill="#111827" fontSize="12" fontFamily="monospace" fontWeight="bold" stroke="none">DL800M5_P37_407A</text>
+        <text x="280" y="788" fill="#111827" fontSize="13" fontFamily="monospace" fontWeight="900" stroke="none">STAND</text>
+      </g>
+    </svg>
+  );
+
+  const renderFig412AOfficialIllustration = () => (
+    <svg viewBox="0 0 1000 800" className="w-full h-full select-none bg-white">
+      <text x="280" y="65" fill="#111827" fontSize="28" fontFamily="sans-serif" fontWeight="900">FIG.412A</text>
+      <g stroke="#111827" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M 320 350 L 650 350 L 610 470 L 360 470 Z" fill="#f8fafc" stroke="#111827" strokeWidth="2.2" />
+        <text x="280" y="770" fill="#111827" fontSize="12" fontFamily="monospace" fontWeight="bold" stroke="none">DL800M5_P37_412A</text>
+        <text x="280" y="788" fill="#111827" fontSize="13" fontFamily="monospace" fontWeight="900" stroke="none">CARRIER</text>
+      </g>
+    </svg>
+  );
+
+  const renderFig420AOfficialIllustration = () => (
+    <svg viewBox="0 0 1000 800" className="w-full h-full select-none bg-white">
+      <text x="280" y="65" fill="#111827" fontSize="28" fontFamily="sans-serif" fontWeight="900">FIG.420A</text>
+      <g stroke="#111827" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M 300 420 Q 360 260 520 280 Q 670 330 650 470 Q 580 570 390 530 Q 310 520 300 420 Z" fill="#f8fafc" stroke="#111827" strokeWidth="2.2" />
+        <text x="280" y="770" fill="#111827" fontSize="12" fontFamily="monospace" fontWeight="bold" stroke="none">DL800M5_P37_420A</text>
+        <text x="280" y="788" fill="#111827" fontSize="13" fontFamily="monospace" fontWeight="900" stroke="none">FUEL TANK</text>
+      </g>
+    </svg>
+  );
+
+  // Render clickable hotspot links directly positioned over the original numbers in the PNG
   const renderHotspots = () => (
     <>
-      {diagram.hotspots.map((hotspot) => {
+      {diagram.hotspots.map((hotspot, idx) => {
         const isSelected = selectedRef === hotspot.ref;
         const isHovered = hoveredRef === hotspot.ref;
+        const isMarked = markedRefs.has(hotspot.ref);
         const matchingPart = diagram.parts.find(p => p.ref === hotspot.ref);
 
         return (
           <div
-            key={hotspot.ref}
+            key={hotspot.id || `hs-${hotspot.ref}-${idx}`}
             style={{
               left: `${hotspot.x}%`,
               top: `${hotspot.y}%`
@@ -437,41 +737,148 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
             }}
             onMouseEnter={() => onHoverRef(hotspot.ref)}
             onMouseLeave={() => onHoverRef(null)}
-            className="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group z-20"
+            className="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer select-none z-20 group"
           >
-            {/* Pin Badge with EPC Blueprint Styling */}
-            <div className={`
-              w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm font-mono
-              transition-all duration-200 shadow-xl select-none
-              ${isSelected
-                ? 'bg-amber-400 text-black scale-125 ring-4 ring-amber-400/40 shadow-amber-500/50 z-30'
-                : isHovered
-                ? 'bg-blue-500 text-white scale-115 ring-2 ring-blue-400/50 shadow-blue-500/50 z-20'
-                : 'bg-[#18181b] border-2 border-neutral-600 text-neutral-100 hover:border-amber-400 hover:text-amber-400 hover:bg-neutral-900'
-              }
-            `}>
-              {hotspot.ref}
-            </div>
+            {/* Interactive Target positioned directly over the PNG Number */}
+            {hotspotStyle === 'ring' ? (
+              // Subtle semi-transparent ring that lights up on hover/selection
+              <div className={`
+                w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-bold text-xs font-mono
+                transition-all duration-150 relative
+                ${isSelected
+                  ? 'bg-amber-400 text-black font-black scale-125 shadow-lg shadow-amber-400/50 ring-4 ring-amber-400/40 z-30'
+                  : isMarked
+                  ? 'bg-emerald-500 text-white font-bold scale-115 ring-2 ring-emerald-400 shadow-md'
+                  : isHovered
+                  ? 'bg-blue-600 text-white font-bold scale-120 ring-3 ring-blue-400/60 shadow-md z-20'
+                  : 'bg-amber-400/25 border-2 border-amber-500/80 text-neutral-900 hover:bg-amber-400 hover:text-black hover:scale-115'
+                }
+              `}>
+                <span>{hotspot.ref}</span>
+                {isSelected && (
+                  <span className="absolute -inset-1 rounded-full border-2 border-amber-400 animate-ping opacity-60 pointer-events-none" />
+                )}
+              </div>
+            ) : hotspotStyle === 'badge' ? (
+              // Solid high-contrast EPC Pin Badge
+              <div className={`
+                w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-black text-xs font-mono
+                transition-all duration-150 shadow-md relative
+                ${isSelected
+                  ? 'bg-amber-400 text-black scale-130 ring-4 ring-amber-400/60 shadow-amber-500/50 z-30'
+                  : isMarked
+                  ? 'bg-emerald-500 text-white scale-115 ring-2 ring-emerald-400'
+                  : isHovered
+                  ? 'bg-blue-600 text-white scale-125 ring-3 ring-blue-400/60 z-20'
+                  : 'bg-neutral-900 border-2 border-white text-white hover:bg-amber-400 hover:text-black hover:border-amber-500 hover:scale-115'
+                }
+              `}>
+                <span>{hotspot.ref}</span>
+              </div>
+            ) : (
+              // Stealth Mode: Invisible click target over the PNG number, highlights on hover
+              <div className={`
+                w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs font-mono transition-all
+                ${isSelected
+                  ? 'bg-amber-400/90 text-black font-black scale-125 ring-3 ring-amber-400'
+                  : isMarked
+                  ? 'bg-emerald-500/90 text-white ring-2 ring-emerald-400'
+                  : isHovered
+                  ? 'bg-blue-600/85 text-white scale-120'
+                  : 'bg-transparent hover:bg-amber-400/50 text-transparent hover:text-black border border-transparent hover:border-amber-500'
+                }
+              `}>
+                {(isSelected || isHovered || isMarked) && <span>{hotspot.ref}</span>}
+              </div>
+            )}
 
-            {/* Hotspot Hover Tooltip */}
+            {/* Rich Hover / Selection Details Popover with direct Purchase Action */}
             {(isHovered || isSelected) && matchingPart && (
-              <div className="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 bg-neutral-900/95 border border-neutral-700 text-white text-xs rounded-xl py-2 px-3.5 whitespace-nowrap shadow-2xl z-40 pointer-events-none backdrop-blur-md animate-in fade-in zoom-in-95 duration-150">
-                <div className="flex items-center gap-1.5 font-bold font-mono text-amber-400">
-                  <span>Ref #{matchingPart.ref}</span>
-                  <span>•</span>
-                  <span>{matchingPart.partNumber}</span>
+              <div 
+                onClick={(e) => e.stopPropagation()}
+                className="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 bg-neutral-950/95 border border-neutral-700 text-white text-xs rounded-2xl p-4 whitespace-nowrap shadow-2xl z-40 pointer-events-auto backdrop-blur-md animate-in fade-in zoom-in-95 duration-150 min-w-[280px]"
+              >
+                {/* Popover Header */}
+                <div className="flex items-center justify-between gap-2 border-b border-neutral-800 pb-2 mb-2">
+                  <div className="flex items-center gap-1.5 font-bold font-mono text-amber-400">
+                    <span className="bg-amber-400 text-black px-1.5 py-0.5 rounded text-[11px] font-black">
+                      Ref #{matchingPart.ref}
+                    </span>
+                    <span className="text-neutral-400">•</span>
+                    <span className="tracking-wide text-white">{matchingPart.partNumber}</span>
+                  </div>
+                  <span className="text-[10px] text-neutral-400 font-mono bg-neutral-900 px-2 py-0.5 rounded">
+                    UN: {matchingPart.unitQuantity} un.
+                  </span>
                 </div>
-                <div className="text-xs font-semibold text-white max-w-[240px] truncate mt-0.5">
+
+                {/* Part Description */}
+                <div className="text-xs font-bold text-white truncate max-w-[260px] mb-0.5">
                   {matchingPart.description}
                 </div>
-                <div className="flex items-center justify-between gap-3 text-[11px] font-mono mt-1 text-neutral-300">
-                  <span className="text-emerald-400 font-bold">
-                    R$ {matchingPart.factoryPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} (Fábrica)
-                  </span>
-                  <span className="text-neutral-400 text-[10px]">
-                    Estoque: {matchingPart.stockManaus + matchingPart.stockJundiai} un.
-                  </span>
+                {matchingPart.subDescription && (
+                  <div className="text-[11px] text-neutral-400 truncate max-w-[260px] mb-2.5">
+                    {matchingPart.subDescription}
+                  </div>
+                )}
+
+                {/* Pricing & Stock Card */}
+                <div className="bg-neutral-900/90 rounded-xl p-2.5 border border-neutral-800 mb-3 space-y-1">
+                  <div className="flex items-center justify-between text-[11px] font-mono">
+                    <span className="text-neutral-400">Custo Fábrica:</span>
+                    <span className="text-emerald-400 font-bold text-xs">
+                      R$ {matchingPart.factoryPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-[10px] font-mono text-neutral-400">
+                    <span>Preço Público (PPS):</span>
+                    <span>R$ {matchingPart.msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-[10px] font-mono pt-1 border-t border-neutral-800 mt-1">
+                    <span className="text-neutral-400">Estoque Disponível:</span>
+                    <span className="text-emerald-400 font-bold">
+                      {matchingPart.stockJundiai} un. CD-SP / {matchingPart.stockManaus} un. Manaus
+                    </span>
+                  </div>
                 </div>
+
+                {/* Actions: Mark for Purchase or Instant Add */}
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={(e) => toggleMarkRef(matchingPart.ref, e)}
+                    className={`px-2.5 py-1.5 rounded-xl border text-xs font-bold flex items-center gap-1 transition-colors ${
+                      isMarked 
+                        ? 'bg-emerald-500/20 border-emerald-500 text-emerald-400'
+                        : 'bg-neutral-900 border-neutral-700 text-neutral-300 hover:bg-neutral-800'
+                    }`}
+                    title="Marcar para compra em lote"
+                  >
+                    {isMarked ? <CheckSquare className="w-3.5 h-3.5 text-emerald-400" /> : <Square className="w-3.5 h-3.5" />}
+                    <span>Marcar</span>
+                  </button>
+
+                  <button
+                    onClick={(e) => handleQuickAdd(matchingPart.id, 1, e)}
+                    className={`flex-1 py-1.5 px-3 rounded-xl font-black text-xs flex items-center justify-center gap-1.5 transition-all shadow-md ${
+                      addedPartId === matchingPart.id
+                        ? 'bg-emerald-500 text-white'
+                        : 'bg-amber-400 hover:bg-amber-300 text-black font-extrabold shadow-amber-500/20'
+                    }`}
+                  >
+                    {addedPartId === matchingPart.id ? (
+                      <>
+                        <Check className="w-3.5 h-3.5" />
+                        <span>Adicionado!</span>
+                      </>
+                    ) : (
+                      <>
+                        <ShoppingCart className="w-3.5 h-3.5" />
+                        <span>+ Comprar Peça</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
               </div>
             )}
           </div>
@@ -482,27 +889,120 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
 
   return (
     <>
-      <div className="flex flex-col h-full bg-[#111114] border border-[#27272a] rounded-2xl overflow-hidden shadow-inner relative select-none">
+      <div 
+        onDrop={handleDrop}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        className={`flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-inner relative select-none border border-neutral-300 transition-colors ${
+          isDragOver ? 'ring-4 ring-amber-400 ring-offset-2' : ''
+        }`}
+      >
         
-        {/* Top EPC Action Bar with Zoom Presets & Fullscreen */}
-        <div className="p-3 bg-[#18181b]/95 border-b border-[#27272a] flex flex-wrap items-center justify-between gap-2 z-10">
+        {/* Hidden File Input for Custom PNG */}
+        <input 
+          type="file" 
+          ref={fileInputRef} 
+          accept="image/png,image/jpeg,image/webp" 
+          className="hidden" 
+          onChange={(e) => {
+            if (e.target.files && e.target.files.length > 0) {
+              handleFileUpload(e.target.files[0]);
+            }
+          }}
+        />
+
+        {/* Top EPC Action Bar */}
+        <div className="p-3 bg-neutral-100/90 border-b border-neutral-200 flex flex-wrap items-center justify-between gap-2 z-10 text-neutral-900">
+          
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-neutral-900 border border-neutral-800 text-xs font-mono font-bold text-blue-400">
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-white border border-neutral-300 text-blue-700 shadow-sm">
               <Layers className="w-3.5 h-3.5" />
-              <span>ILUSTRAÇÃO: {diagram.illustrationCode}</span>
+              <span>{diagram.illustrationCode}</span>
             </div>
-            <span className="text-xs font-bold text-white hidden sm:inline truncate max-w-[260px]">
+            <span className="text-xs font-bold text-neutral-800 hidden sm:inline truncate max-w-[260px]">
               {diagram.title}
             </span>
           </div>
 
-          {/* Zoom Presets: 100%, 150%, 200% (Matching Fig 3) & Fullscreen Modal */}
+          {/* Controls: Hotspot Style, Custom PNG, Zoom Presets, Reset, Fullscreen */}
           <div className="flex items-center gap-1.5">
-            <div className="flex items-center bg-neutral-900 p-0.5 rounded-xl border border-neutral-800 text-neutral-300 text-xs font-mono">
+            
+            {/* Custom PNG Upload Action with Persistence indicator */}
+            <button
+              onClick={() => fileInputRef.current?.click()}
+              disabled={isSavingImage}
+              className={`p-1.5 rounded-xl border text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm ${
+                isPersistedImage
+                  ? 'border-emerald-300 bg-emerald-50 text-emerald-800 hover:bg-emerald-100'
+                  : 'border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50'
+              }`}
+              title="Carregar / Fixar arquivo PNG do Catálogo permanentemente neste diagrama"
+            >
+              {isSavingImage ? (
+                <>
+                  <Save className="w-3.5 h-3.5 animate-spin text-amber-600" />
+                  <span className="text-[11px]">Salvando...</span>
+                </>
+              ) : isPersistedImage ? (
+                <>
+                  <Pin className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600" />
+                  <span className="text-[11px] font-bold hidden sm:inline text-emerald-700">PNG Fixo Salvo</span>
+                </>
+              ) : (
+                <>
+                  <Upload className="w-3.5 h-3.5 text-blue-600" />
+                  <span className="text-[11px] hidden md:inline">Inserir PNG Fixo</span>
+                </>
+              )}
+            </button>
+
+            {isPersistedImage && (
+              <button
+                onClick={handleRemoveCustomImage}
+                className="p-1.5 rounded-xl border border-neutral-300 bg-white text-neutral-500 hover:text-rose-600 hover:bg-rose-50 text-xs transition-colors"
+                title="Remover PNG salvo e restaurar padrão"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+              </button>
+            )}
+
+            {/* Hotspot Style Selector */}
+            <div className="flex items-center p-0.5 rounded-xl border border-neutral-300 bg-white text-xs font-mono text-neutral-700 shadow-sm">
+              <button
+                onClick={() => setHotspotStyle('ring')}
+                className={`px-2 py-1 rounded-lg transition-colors font-bold ${
+                  hotspotStyle === 'ring' ? 'bg-amber-400 text-black shadow-sm' : 'hover:bg-neutral-100 text-neutral-600'
+                }`}
+                title="Modo Anéis sobre os Números"
+              >
+                Anéis
+              </button>
+              <button
+                onClick={() => setHotspotStyle('badge')}
+                className={`px-2 py-1 rounded-lg transition-colors font-bold ${
+                  hotspotStyle === 'badge' ? 'bg-amber-400 text-black shadow-sm' : 'hover:bg-neutral-100 text-neutral-600'
+                }`}
+                title="Modo Badges Cheios"
+              >
+                Badges
+              </button>
+              <button
+                onClick={() => setHotspotStyle('stealth')}
+                className={`px-2 py-1 rounded-lg transition-colors font-bold ${
+                  hotspotStyle === 'stealth' ? 'bg-amber-400 text-black shadow-sm' : 'hover:bg-neutral-100 text-neutral-600'
+                }`}
+                title="Modo Alvo Direto no PNG"
+              >
+                Alvo
+              </button>
+            </div>
+
+            {/* Zoom Presets: 100%, 150%, 200% */}
+            <div className="flex items-center p-0.5 rounded-xl border border-neutral-300 bg-white text-xs font-mono text-neutral-700 shadow-sm">
               <button
                 onClick={() => handleSetZoom(1.0)}
-                className={`px-2.5 py-1 rounded-lg transition-colors font-bold ${
-                  zoom === 1.0 ? 'bg-amber-400 text-black' : 'hover:bg-neutral-800 hover:text-white text-neutral-400'
+                className={`px-2 py-1 rounded-lg transition-colors font-bold ${
+                  zoom === 1.0 ? 'bg-amber-400 text-black shadow-sm' : 'hover:bg-neutral-100 text-neutral-600'
                 }`}
                 title="Zoom 100%"
               >
@@ -510,8 +1010,8 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               </button>
               <button
                 onClick={() => handleSetZoom(1.5)}
-                className={`px-2.5 py-1 rounded-lg transition-colors font-bold ${
-                  zoom === 1.5 ? 'bg-amber-400 text-black' : 'hover:bg-neutral-800 hover:text-white text-neutral-400'
+                className={`px-2 py-1 rounded-lg transition-colors font-bold ${
+                  zoom === 1.5 ? 'bg-amber-400 text-black shadow-sm' : 'hover:bg-neutral-100 text-neutral-600'
                 }`}
                 title="Zoom 150%"
               >
@@ -519,8 +1019,8 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               </button>
               <button
                 onClick={() => handleSetZoom(2.0)}
-                className={`px-2.5 py-1 rounded-lg transition-colors font-bold ${
-                  zoom === 2.0 ? 'bg-amber-400 text-black' : 'hover:bg-neutral-800 hover:text-white text-neutral-400'
+                className={`px-2 py-1 rounded-lg transition-colors font-bold ${
+                  zoom === 2.0 ? 'bg-amber-400 text-black shadow-sm' : 'hover:bg-neutral-100 text-neutral-600'
                 }`}
                 title="Zoom 200%"
               >
@@ -528,60 +1028,77 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               </button>
             </div>
 
-            {/* Fine Step Zoom & Reset */}
-            <div className="flex items-center gap-1 bg-neutral-900 p-1 rounded-xl border border-neutral-800 text-neutral-300">
+            {/* Fine Step Zoom & Fullscreen */}
+            <div className="flex items-center gap-0.5 p-0.5 rounded-xl border border-neutral-300 bg-white text-neutral-700 shadow-sm">
               <button
                 onClick={handleZoomIn}
-                className="p-1 hover:bg-neutral-800 hover:text-white rounded-lg transition-colors"
+                className="p-1.5 hover:bg-neutral-100 rounded-lg transition-colors"
                 title="Aumentar Zoom (+)"
               >
                 <ZoomIn className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={handleZoomOut}
-                className="p-1 hover:bg-neutral-800 hover:text-white rounded-lg transition-colors"
+                className="p-1.5 hover:bg-neutral-100 rounded-lg transition-colors"
                 title="Diminuir Zoom (-)"
               >
                 <ZoomOut className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={handleResetZoom}
-                className="p-1 hover:bg-neutral-800 hover:text-white rounded-lg transition-colors"
+                className="p-1.5 hover:bg-neutral-100 rounded-lg transition-colors"
                 title="Centralizar Esquema"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => setIsFullscreenModalOpen(true)}
-                className="p-1 hover:bg-amber-400 hover:text-black rounded-lg transition-colors ml-0.5"
+                className="p-1.5 bg-amber-400 hover:bg-amber-300 text-black rounded-lg transition-colors shadow-sm ml-0.5"
                 title="Expandir Diagrama em Tela Cheia"
               >
                 <Maximize2 className="w-3.5 h-3.5" />
               </button>
             </div>
+
           </div>
         </div>
 
-        {/* Main Interactive Diagram Canvas */}
+        {/* Bulk marked items bar if any item marked */}
+        {markedRefs.size > 0 && (
+          <div className="bg-amber-400 text-black px-4 py-2 flex items-center justify-between text-xs font-bold z-10 shadow-md">
+            <div className="flex items-center gap-2">
+              <CheckSquare className="w-4 h-4" />
+              <span>{markedRefs.size} peça(s) marcada(s) no diagrama</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setMarkedRefs(new Set())}
+                className="px-2 py-1 bg-black/10 hover:bg-black/20 rounded-lg transition-colors text-[11px]"
+              >
+                Desmarcar Todas
+              </button>
+              <button
+                onClick={handleBuyMarkedItems}
+                className="px-3 py-1 bg-black text-white hover:bg-neutral-800 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm"
+              >
+                <ShoppingCart className="w-3.5 h-3.5 text-amber-400" />
+                <span>Adicionar ao Pedido</span>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Main Diagram Canvas with Image & Hotspots */}
         <div 
           ref={containerRef}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          className={`flex-1 relative overflow-hidden bg-[#0a0a0d] flex items-center justify-center p-4 min-h-[420px] md:min-h-[500px] ${
+          className={`flex-1 relative overflow-hidden flex items-center justify-center p-2 sm:p-4 min-h-[440px] md:min-h-[520px] bg-white ${
             isDragging ? 'cursor-grabbing' : 'cursor-grab'
           }`}
         >
-          {/* Blueprint Background Grid */}
-          <div 
-            className="absolute inset-0 opacity-[0.06] pointer-events-none"
-            style={{
-              backgroundImage: `radial-gradient(circle, #ffffff 1px, transparent 1px)`,
-              backgroundSize: '24px 24px'
-            }}
-          />
-
           {/* Scalable & Draggable Canvas Content */}
           <div 
             style={{
@@ -589,47 +1106,62 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               transformOrigin: 'center center',
               transition: isDragging ? 'none' : 'transform 0.15s ease-out'
             }}
-            className="w-full max-w-[620px] aspect-[6/5] relative"
+            className="w-full max-w-[850px] aspect-[10/8] relative bg-white"
           >
-            {/* SVG Technical CAD Drawing */}
-            <svg 
-              viewBox="0 0 600 500" 
-              className="w-full h-full drop-shadow-2xl"
-            >
-              {renderSchematicIllustration()}
-            </svg>
+            {/* The Direct PNG / Technical Diagram Image */}
+            <div className="w-full h-full relative">
+              {renderDiagramImage()}
+            </div>
 
-            {/* Interactive Pin Hotspots */}
+            {/* Clickable Hotspots Placed Right on Top of the Diagram Numbers */}
             {renderHotspots()}
           </div>
 
-          {/* Floating Helper Notice */}
-          <div className="absolute bottom-3 left-3 bg-neutral-900/90 border border-neutral-800 rounded-xl px-3 py-1.5 text-[11px] text-neutral-300 flex items-center gap-2 pointer-events-none backdrop-blur-sm shadow-lg">
-            <Info className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-            <span>Clique nos números para destacar a peça ou arraste para navegar</span>
+          {/* Floating Instructions Pill and Success Notice */}
+          <div className="absolute bottom-3 left-3 flex flex-col gap-1.5 pointer-events-none z-30">
+            {imageSaveSuccess && (
+              <div className="rounded-xl px-3.5 py-2 text-xs flex items-center gap-2 bg-emerald-600 text-white shadow-xl font-bold animate-in fade-in slide-in-from-bottom-2">
+                <Check className="w-4 h-4 text-emerald-200" />
+                <span>Imagem PNG salva e fixada com sucesso para {diagram.illustrationCode}!</span>
+              </div>
+            )}
+
+            <div className="rounded-xl px-3 py-1.5 text-[11px] flex items-center gap-2 backdrop-blur-sm shadow-md border bg-white/95 border-neutral-300 text-neutral-800">
+              <Crosshair className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <span>Clique nos números sobre a figura para ver dados técnicos e marcar para compra</span>
+            </div>
           </div>
+
+          {isDragOver && (
+            <div className="absolute inset-0 bg-amber-400/20 backdrop-blur-xs border-2 border-dashed border-amber-500 flex items-center justify-center rounded-2xl z-30 pointer-events-none">
+              <div className="bg-white/95 text-neutral-900 px-6 py-3 rounded-2xl shadow-xl font-bold flex items-center gap-2">
+                <Upload className="w-5 h-5 text-amber-500" />
+                <span>Solte a imagem PNG do diagrama aqui</span>
+              </div>
+            </div>
+          )}
         </div>
 
       </div>
 
-      {/* FULLSCREEN EXPANDED EPC MODAL (Fig 4 & Fig 6) */}
+      {/* FULLSCREEN EXPANDED MODAL (Matching User's Screenshot FIG.401A / FIG.406A) */}
       {isFullscreenModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col p-4 sm:p-6 animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col p-3 sm:p-5 animate-in fade-in duration-200">
           
           {/* Modal Header */}
-          <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
+          <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
             <div>
               <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
                 EPC SUZUKI • {modelName}
               </span>
-              <h2 className="text-lg sm:text-xl font-bold text-white">
-                Diagrama explodido {modelName} - {diagram.illustrationCode.toLowerCase().replace('.', '')} ({diagram.title})
+              <h2 className="text-base sm:text-lg font-bold text-white">
+                Diagrama explodido {modelName} - {diagram.illustrationCode.toLowerCase().replace('.', '')}
               </h2>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               {/* Zoom Buttons in Modal */}
-              <div className="flex items-center bg-neutral-900 p-1 rounded-xl border border-neutral-800 text-neutral-300 text-xs font-mono">
+              <div className="flex items-center bg-neutral-900 p-0.5 rounded-xl border border-neutral-800 text-neutral-300 text-xs font-mono">
                 <button
                   onClick={() => handleSetZoom(1.0)}
                   className={`px-3 py-1.5 rounded-lg transition-colors font-bold ${zoom === 1.0 ? 'bg-amber-400 text-black' : 'hover:bg-neutral-800'}`}
@@ -652,7 +1184,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
 
               <button
                 onClick={() => setIsFullscreenModalOpen(false)}
-                className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs transition-colors border border-neutral-700"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white hover:bg-neutral-100 text-black font-bold text-xs transition-colors shadow-lg"
               >
                 <X className="w-4 h-4" />
                 <span>✕ Fechar</span>
@@ -661,18 +1193,18 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
           </div>
 
           {/* Modal Canvas */}
-          <div className="flex-1 relative overflow-hidden bg-[#0a0a0d] border border-neutral-800 rounded-2xl mt-4 flex items-center justify-center p-4">
+          <div className="flex-1 relative overflow-hidden border border-neutral-300 rounded-2xl mt-3 flex items-center justify-center p-4 bg-white">
             <div 
               style={{
                 transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
                 transformOrigin: 'center center',
                 transition: isDragging ? 'none' : 'transform 0.15s ease-out'
               }}
-              className="w-full max-w-[850px] aspect-[6/5] relative"
+              className="w-full max-w-[1000px] aspect-[10/8] relative bg-white"
             >
-              <svg viewBox="0 0 600 500" className="w-full h-full drop-shadow-2xl">
-                {renderSchematicIllustration()}
-              </svg>
+              <div className="w-full h-full relative">
+                {renderDiagramImage()}
+              </div>
               {renderHotspots()}
             </div>
           </div>

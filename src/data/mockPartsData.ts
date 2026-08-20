@@ -169,15 +169,22 @@ export const MOCK_VSTROM800_DIAGRAMS: PartsDiagramGroup[] = [
     diagramType: 'vstrom_chassis_401',
     thumbnailUrl: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=300&q=80',
     hotspots: [
-      { ref: 1, x: 38, y: 55, label: 'FRAME COMP' },
-      { ref: 2, x: 62, y: 35, label: 'FRAME, REAR' },
-      { ref: 3, x: 48, y: 44, label: 'BOLT, REAR FRAME (10X35)' },
-      { ref: 4, x: 32, y: 48, label: 'PLATE, REAR FRAME L' },
-      { ref: 5, x: 64, y: 68, label: 'PLATE, REAR FRAME R' },
-      { ref: 6, x: 28, y: 46, label: 'BOLT (8X20)' },
-      { ref: 7, x: 47, y: 76, label: 'ROLLER, CHAIN GUIDE' },
-      { ref: 8, x: 42, y: 74, label: 'BOLT (8X45)' },
-      { ref: 9, x: 50, y: 78, label: 'SPACER' }
+      { id: 'hs-401-1', ref: 1, x: 39.5, y: 50.8, label: '1 - FRAME COMP' },
+      { id: 'hs-401-2', ref: 2, x: 52.2, y: 32.5, label: '2 - FRAME, REAR' },
+      { id: 'hs-401-3a', ref: 3, x: 44.0, y: 41.8, label: '3 - BOLT, REAR FRAME (Sup. Esq.)' },
+      { id: 'hs-401-3b', ref: 3, x: 44.2, y: 46.8, label: '3 - BOLT, REAR FRAME (Inf. Esq.)' },
+      { id: 'hs-401-3c', ref: 3, x: 52.2, y: 53.0, label: '3 - BOLT, REAR FRAME (Sup. Dir.)' },
+      { id: 'hs-401-3d', ref: 3, x: 56.4, y: 55.5, label: '3 - BOLT, REAR FRAME (Inf. Dir.)' },
+      { id: 'hs-401-4', ref: 4, x: 34.5, y: 47.8, label: '4 - PLATE, REAR FRAME L' },
+      { id: 'hs-401-5', ref: 5, x: 57.5, y: 65.5, label: '5 - PLATE, REAR FRAME R' },
+      { id: 'hs-401-6a', ref: 6, x: 31.0, y: 46.0, label: '6 - NUT (Esq. 1)' },
+      { id: 'hs-401-6b', ref: 6, x: 32.0, y: 48.0, label: '6 - NUT (Esq. 2)' },
+      { id: 'hs-401-6c', ref: 6, x: 60.8, y: 69.0, label: '6 - NUT (Dir. 1)' },
+      { id: 'hs-401-6d', ref: 6, x: 58.5, y: 72.5, label: '6 - NUT (Dir. 2)' },
+      { id: 'hs-401-7', ref: 7, x: 44.6, y: 76.0, label: '7 - ROLLER, CHAIN GUIDE' },
+      { id: 'hs-401-8', ref: 8, x: 41.8, y: 73.5, label: '8 - BOLT (8X45)' },
+      { id: 'hs-401-9a', ref: 9, x: 43.2, y: 74.8, label: '9 - SPACER (Ext)' },
+      { id: 'hs-401-9b', ref: 9, x: 45.8, y: 77.2, label: '9 - SPACER (Int)' }
     ],
     parts: [
       {
@@ -338,14 +345,20 @@ export const MOCK_VSTROM800_DIAGRAMS: PartsDiagramGroup[] = [
     diagramType: 'vstrom_holders_406',
     thumbnailUrl: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=300&q=80',
     hotspots: [
-      { ref: 1, x: 42, y: 72, label: 'HOLDER, BATTERY' },
-      { ref: 2, x: 28, y: 80, label: 'CUSHION, BATTERY' },
-      { ref: 3, x: 38, y: 64, label: 'BOLT (6X16)' },
-      { ref: 4, x: 46, y: 44, label: 'HOLDER, ELEC PARTS' },
-      { ref: 5, x: 44, y: 36, label: 'BOLT (6X12)' },
-      { ref: 6, x: 68, y: 28, label: 'HOLDER, UPPER / TANK' },
-      { ref: 7, x: 62, y: 20, label: 'BOLT (6X20)' },
-      { ref: 8, x: 60, y: 44, label: 'BOLT (VIEW A)' }
+      { id: 'hs-406-1', ref: 1, x: 45.2, y: 70.8, label: '1 - HOLDER, BATTERY' },
+      { id: 'hs-406-2', ref: 2, x: 28.8, y: 83.5, label: '2 - CUSHION, BATTERY' },
+      { id: 'hs-406-3a', ref: 3, x: 33.2, y: 57.8, label: '3 - BOLT, BATTERY (Esq)' },
+      { id: 'hs-406-3b', ref: 3, x: 46.0, y: 64.8, label: '3 - BOLT, BATTERY (Dir)' },
+      { id: 'hs-406-4', ref: 4, x: 46.5, y: 28.2, label: '4 - HOLDER, ELEC PARTS' },
+      { id: 'hs-406-5a', ref: 5, x: 40.5, y: 35.8, label: '5 - BOLT (Esq)' },
+      { id: 'hs-406-5b', ref: 5, x: 50.4, y: 25.2, label: '5 - BOLT (Top)' },
+      { id: 'hs-406-5c', ref: 5, x: 57.2, y: 30.8, label: '5 - BOLT (Dir)' },
+      { id: 'hs-406-6', ref: 6, x: 69.4, y: 33.5, label: '6 - HOLDER, UPPER / TANK' },
+      { id: 'hs-406-7a', ref: 7, x: 58.6, y: 14.8, label: '7 - BOLT (Esq)' },
+      { id: 'hs-406-7b', ref: 7, x: 63.4, y: 11.2, label: '7 - BOLT (Centro)' },
+      { id: 'hs-406-7c', ref: 7, x: 68.8, y: 16.5, label: '7 - BOLT (Dir)' },
+      { id: 'hs-406-8a', ref: 8, x: 61.4, y: 41.8, label: '8 - BOLT (VIEW A)' },
+      { id: 'hs-406-8b', ref: 8, x: 68.2, y: 81.2, label: '8 - BOLT (In Box VIEW A)' }
     ],
     parts: [
       {
