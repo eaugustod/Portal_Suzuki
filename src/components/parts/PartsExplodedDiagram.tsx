@@ -78,7 +78,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
 
     async function loadStoredImage() {
       try {
-        const stored = await getDiagramImage(diagram.id);
+        const stored = await getDiagramImage(diagram.id, diagram.illustrationCode);
         if (isMounted) {
           if (stored) {
             setCustomImageSrc(stored);
@@ -105,7 +105,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
     return () => {
       isMounted = false;
     };
-  }, [diagram.id, diagram.customImageUrl]);
+  }, [diagram.id, diagram.illustrationCode, diagram.customImageUrl]);
 
   const handleZoomIn = () => setZoom(prev => Math.min(Number((prev + 0.25).toFixed(2)), 3.5));
   const handleZoomOut = () => setZoom(prev => Math.max(Number((prev - 0.25).toFixed(2)), 0.6));
@@ -169,7 +169,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
           const dataUrl = e.target.result as string;
           setCustomImageSrc(dataUrl);
           setIsPersistedImage(true);
-          await saveDiagramImage(diagram.id, dataUrl);
+          await saveDiagramImage(diagram.id, dataUrl, diagram.illustrationCode);
           setIsSavingImage(false);
           setImageSaveSuccess(true);
           setTimeout(() => setImageSaveSuccess(false), 3000);
@@ -182,7 +182,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
   // Remove saved custom PNG
   const handleRemoveCustomImage = async (e: React.MouseEvent) => {
     e.stopPropagation();
-    await deleteDiagramImage(diagram.id);
+    await deleteDiagramImage(diagram.id, diagram.illustrationCode);
     setCustomImageSrc(diagram.customImageUrl || null);
     setIsPersistedImage(false);
   };

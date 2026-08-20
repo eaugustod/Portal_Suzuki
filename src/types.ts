@@ -602,6 +602,8 @@ export interface PartsPinHotspot {
   label?: string;
 }
 
+export type PartsHotspot = PartsPinHotspot;
+
 export interface PartsItem {
   id: string;
   ref: number;
@@ -628,29 +630,7 @@ export interface PartsDiagramGroup {
   illustrationCode: string; // e.g. "103-080", "100-030"
   title: string;
   subTitle?: string;
-  diagramType: 
-    | 'vstrom_chassis_401' 
-    | 'vstrom_holders_406' 
-    | 'vstrom_stand_407' 
-    | 'vstrom_carrier_412' 
-    | 'vstrom_footrest_415' 
-    | 'vstrom_footrest_bracket_417' 
-    | 'vstrom_fuel_tank_420' 
-    | 'vstrom_tank_cover_423' 
-    | 'vstrom_canister_427' 
-    | 'vstrom_side_cowling_433' 
-    | 'vstrom_front_bracket_444' 
-    | 'vstrom_side_cover_445'
-    | 'engine_block' 
-    | 'crankcase' 
-    | 'cylinder_head' 
-    | 'crankshaft_piston' 
-    | 'clutch' 
-    | 'injection_system' 
-    | 'transmission' 
-    | 'front_brake' 
-    | 'chassis_frame' 
-    | 'electrical_ecu';
+  diagramType: string;
   thumbnailUrl: string;
   customImageUrl?: string;
   hotspots: PartsPinHotspot[];

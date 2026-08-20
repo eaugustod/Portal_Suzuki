@@ -29,35 +29,40 @@ function openDB(): Promise<IDBDatabase> {
   });
 }
 
-export async function saveDiagramImage(diagramId: string, dataUrl: string): Promise<void> {
+export async function saveDiagramImage(diagramId: string, dataUrl: string, illustrationCode?: string): Promise<void> {
   try {
     const db = await openDB();
-    return new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       const transaction = db.transaction([STORE_NAME], 'readwrite');
       const store = transaction.objectStore(STORE_NAME);
-      const request = store.put({ diagramId, dataUrl, updatedAt: Date.now() });
+      
+      store.put({ diagramId, dataUrl, updatedAt: Date.now() });
+      if (illustrationCode && illustrationCode !== diagramId) {
+        store.put({ diagramId: illustrationCode, dataUrl, updatedAt: Date.now() });
+      }
 
-      request.onsuccess = () => {
-        resolve();
-      };
-      request.onerror = (e: any) => {
-        reject(e.target.error);
-      };
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = (e: any) => reject(e.target.error);
     });
   } catch (err) {
-    // Fallback to localStorage
-    try {
-      localStorage.setItem(`epc_img_${diagramId}`, dataUrl);
-    } catch (localErr) {
-      console.warn('Could not save to localStorage fallback:', localErr);
+    console.warn('IndexedDB write failed, continuing with localStorage fallback', err);
+  }
+
+  // Always keep localStorage synchronized as instant fallback
+  try {
+    localStorage.setItem(`epc_img_${diagramId}`, dataUrl);
+    if (illustrationCode) {
+      localStorage.setItem(`epc_img_${illustrationCode}`, dataUrl);
     }
+  } catch (localErr) {
+    console.warn('Could not save to localStorage fallback:', localErr);
   }
 }
 
-export async function getDiagramImage(diagramId: string): Promise<string | null> {
+export async function getDiagramImage(diagramId: string, illustrationCode?: string): Promise<string | null> {
   try {
     const db = await openDB();
-    return new Promise((resolve) => {
+    const idbResult = await new Promise<string | null>((resolve) => {
       const transaction = db.transaction([STORE_NAME], 'readonly');
       const store = transaction.objectStore(STORE_NAME);
       const request = store.get(diagramId);
@@ -66,36 +71,49 @@ export async function getDiagramImage(diagramId: string): Promise<string | null>
         const result = e.target.result;
         if (result && result.dataUrl) {
           resolve(result.dataUrl);
+        } else if (illustrationCode) {
+          const req2 = store.get(illustrationCode);
+          req2.onsuccess = (e2: any) => {
+            const res2 = e2.target.result;
+            resolve(res2?.dataUrl || null);
+          };
+          req2.onerror = () => resolve(null);
         } else {
-          // Check localStorage fallback
-          const fallback = localStorage.getItem(`epc_img_${diagramId}`);
-          resolve(fallback);
+          resolve(null);
         }
       };
 
-      request.onerror = () => {
-        const fallback = localStorage.getItem(`epc_img_${diagramId}`);
-        resolve(fallback);
-      };
+      request.onerror = () => resolve(null);
     });
+
+    if (idbResult) return idbResult;
   } catch {
-    const fallback = localStorage.getItem(`epc_img_${diagramId}`);
-    return fallback;
+    // Continue to localStorage fallback
   }
+
+  const fallback = localStorage.getItem(`epc_img_${diagramId}`) || 
+    (illustrationCode ? localStorage.getItem(`epc_img_${illustrationCode}`) : null);
+  return fallback;
 }
 
-export async function deleteDiagramImage(diagramId: string): Promise<void> {
+export async function deleteDiagramImage(diagramId: string, illustrationCode?: string): Promise<void> {
   try {
     const db = await openDB();
     await new Promise<void>((resolve, reject) => {
       const transaction = db.transaction([STORE_NAME], 'readwrite');
       const store = transaction.objectStore(STORE_NAME);
-      const request = store.delete(diagramId);
-      request.onsuccess = () => resolve();
-      request.onerror = (e: any) => reject(e.target.error);
+      store.delete(diagramId);
+      if (illustrationCode) {
+        store.delete(illustrationCode);
+      }
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = (e: any) => reject(e.target.error);
     });
   } catch {
     // Ignore error
   }
   localStorage.removeItem(`epc_img_${diagramId}`);
+  if (illustrationCode) {
+    localStorage.removeItem(`epc_img_${illustrationCode}`);
+  }
 }
