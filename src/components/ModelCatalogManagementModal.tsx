@@ -291,7 +291,9 @@ export const ModelCatalogManagementModal: React.FC<ModelCatalogManagementModalPr
                     <option value="Suzuki">Suzuki</option>
                     <option value="Haojue">Haojue</option>
                     <option value="Zontes">Zontes</option>
-                    <option value="Quadriciclos">Quadriciclos</option>
+                    <option value="Hisun">Hisun (Quadriciclos / ATV)</option>
+                    <option value="Kymco">Kymco</option>
+                    <option value="Quadriciclos">Quadriciclos Gerais</option>
                   </select>
                 </div>
 

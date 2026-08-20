@@ -139,9 +139,10 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
 
   const brands: { id: BrandType; name: string }[] = [
     { id: 'Suzuki', name: 'Suzuki Motos' },
-    { id: 'Zontes', name: 'Zontes' },
-    { id: 'Haojue', name: 'Haojue' },
-    { id: 'Quadriciclos', name: 'Quadriciclos' }
+    { id: 'Haojue', name: 'Haojue Motos' },
+    { id: 'Zontes', name: 'Zontes Motos' },
+    { id: 'Hisun', name: 'Hisun (ATVs)' },
+    { id: 'Kymco', name: 'Kymco Scooters' }
   ];
 
   const filteredCatalogModels = purchaseModels.filter(m => m.brand === selectedBrand);
@@ -1072,8 +1073,9 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                   >
                     <span className={`w-2 h-2 rounded-full ${
                       b.id === 'Suzuki' ? 'bg-red-500' :
-                      b.id === 'Zontes' ? 'bg-amber-500' :
-                      b.id === 'Haojue' ? 'bg-blue-400' : 'bg-emerald-400'
+                      b.id === 'Haojue' ? 'bg-sky-400' :
+                      b.id === 'Zontes' ? 'bg-amber-400' :
+                      b.id === 'Hisun' ? 'bg-emerald-500' : 'bg-purple-400'
                     }`} />
                     <span>{b.name}</span>
                   </button>

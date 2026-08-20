@@ -411,86 +411,178 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
               </div>
             </div>
 
-            {/* Brand Filter Tabs (Suzuki, Haojue, Zontes, Quadriciclos) */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-1">
-              {(['ALL', 'Suzuki', 'Haojue', 'Zontes', 'Quadriciclos'] as const).map((brand) => (
+            {/* Brand Filter Tabs matching official Suzuki & JTZ Motors layout */}
+            <div className="flex flex-col lg:flex-row gap-6">
+              
+              {/* Left Brand Selector Bar (Matching the 5 uploaded images) */}
+              <div className="w-full lg:w-52 shrink-0 bg-neutral-900/90 border border-neutral-800 rounded-2xl p-3 flex lg:flex-col gap-1 overflow-x-auto">
                 <button
-                  key={brand}
-                  onClick={() => setSelectedBrand(brand)}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all border ${
-                    selectedBrand === brand
-                      ? 'bg-amber-400 text-black border-amber-400 shadow-md shadow-amber-500/20 font-extrabold'
-                      : 'bg-neutral-900 text-neutral-400 border-neutral-800 hover:text-white hover:border-neutral-700'
+                  onClick={() => setSelectedBrand('Suzuki')}
+                  className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
+                    selectedBrand === 'Suzuki'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
+                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
                   }`}
                 >
-                  {brand === 'ALL' ? 'Todas as Marcas' : brand}
+                  <span>SUZUKI</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">11</span>
                 </button>
-              ))}
-            </div>
 
-            {/* Models Cards Grid (E-commerce Style) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 pt-1">
-              {filteredModels.map((model) => {
-                const isSelected = selectedModel?.id === model.id;
+                <div className="hidden lg:block pt-3 pb-1 px-3">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-neutral-500 underline decoration-neutral-700">
+                    + MARCAS DO GRUPO
+                  </span>
+                </div>
 
-                return (
-                  <div
-                    key={model.id}
-                    onClick={() => {
-                      setSelectedModel(model);
-                      const diags = model.id === 'suzuki-vstrom-800-m5' ? MOCK_VSTROM800_DIAGRAMS : MOCK_HAYABUSA_DIAGRAMS;
-                      setSelectedDiagram(diags[0]);
-                      setSelectedRef(null);
-                    }}
-                    className={`
-                      rounded-2xl border p-3 cursor-pointer transition-all duration-200 group flex flex-col justify-between
-                      ${isSelected
-                        ? 'bg-gradient-to-b from-amber-500/15 via-neutral-900 to-[#18181b] border-amber-400 ring-2 ring-amber-400/30 shadow-xl shadow-amber-950/30'
-                        : 'bg-[#18181b] border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900'
-                      }
-                    `}
-                  >
-                    <div>
-                      {/* Photo Banner with Brand Tag */}
-                      <div className="aspect-[16/10] rounded-xl overflow-hidden bg-neutral-950 relative mb-2.5 border border-neutral-800 group-hover:border-neutral-700">
-                        <img
-                          src={model.image}
-                          alt={model.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          referrerPolicy="no-referrer"
-                        />
-                        <span className="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-sm text-[10px] font-bold text-amber-400 border border-amber-400/30">
-                          {model.brand}
-                        </span>
-                        <span className="absolute bottom-1.5 right-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-neutral-300">
-                          {model.displacement}
-                        </span>
+                <button
+                  onClick={() => setSelectedBrand('Haojue')}
+                  className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
+                    selectedBrand === 'Haojue'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
+                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                  }`}
+                >
+                  <span>HAOJUE</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">6</span>
+                </button>
+
+                <button
+                  onClick={() => setSelectedBrand('Zontes')}
+                  className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
+                    selectedBrand === 'Zontes'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
+                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                  }`}
+                >
+                  <span>ZONTES</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">8</span>
+                </button>
+
+                <button
+                  onClick={() => setSelectedBrand('Hisun')}
+                  className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
+                    selectedBrand === 'Hisun'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
+                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                  }`}
+                >
+                  <span>HISUN</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">6</span>
+                </button>
+
+                <button
+                  onClick={() => setSelectedBrand('Kymco')}
+                  className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
+                    selectedBrand === 'Kymco'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
+                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                  }`}
+                >
+                  <span>KYMCO</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">2</span>
+                </button>
+
+                <div className="hidden lg:block my-2 border-t border-neutral-800" />
+
+                <button
+                  onClick={() => setSelectedBrand('ALL')}
+                  className={`px-4 py-2 rounded-xl text-[11px] font-bold transition-all text-left flex items-center justify-between ${
+                    selectedBrand === 'ALL'
+                      ? 'bg-amber-400 text-black font-extrabold shadow-md'
+                      : 'text-neutral-400 hover:bg-neutral-800 hover:text-white'
+                  }`}
+                >
+                  <span>Todas as Marcas</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-300">33</span>
+                </button>
+              </div>
+
+              {/* Models Cards Grid (E-commerce Style matching the 5 uploaded images) */}
+              <div className="flex-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-4">
+                  {filteredModels.map((model) => {
+                    const isSelected = selectedModel?.id === model.id;
+
+                    return (
+                      <div
+                        key={model.id}
+                        onClick={() => {
+                          setSelectedModel(model);
+                          const diags = model.id === 'suzuki-vstrom-800-m5' ? MOCK_VSTROM800_DIAGRAMS : MOCK_HAYABUSA_DIAGRAMS;
+                          setSelectedDiagram(diags[0]);
+                          setSelectedRef(null);
+                        }}
+                        className={`
+                          rounded-2xl border p-4 cursor-pointer transition-all duration-200 group flex flex-col justify-between relative
+                          ${isSelected
+                            ? 'bg-gradient-to-b from-amber-500/10 via-neutral-900 to-[#18181b] border-amber-400 ring-2 ring-amber-400/40 shadow-xl shadow-amber-950/30'
+                            : 'bg-[#18181b] border-neutral-800 hover:border-neutral-600 hover:bg-neutral-900/90 shadow-md'
+                          }
+                        `}
+                      >
+                        <div>
+                          {/* Model Header Title (Uppercase, prominent) */}
+                          <div className="min-h-[2.5rem] flex items-center justify-center text-center mb-1">
+                            <h4 className="font-black text-white text-xs sm:text-sm tracking-tight group-hover:text-amber-400 transition-colors line-clamp-2">
+                              {model.name}
+                            </h4>
+                          </div>
+
+                          {/* "NOVAS CORES!" Badge or Brand Tag */}
+                          <div className="h-5 flex items-center justify-center mb-2">
+                            {model.badge ? (
+                              <span className="px-2 py-0.5 rounded-md bg-[#002f6c] text-white text-[10px] font-black tracking-wider uppercase shadow-sm">
+                                {model.badge}
+                              </span>
+                            ) : (
+                              <span className="text-[10px] text-neutral-500 font-semibold uppercase tracking-wider">
+                                {model.brand} • {model.displacement}
+                              </span>
+                            )}
+                          </div>
+
+                          {/* Photo Banner with Studio look */}
+                          <div className="aspect-[16/11] rounded-xl overflow-hidden bg-gradient-to-b from-neutral-900 to-neutral-950 relative mb-3 border border-neutral-800 group-hover:border-neutral-700 flex items-center justify-center p-2">
+                            <img
+                              src={model.image}
+                              alt={model.name}
+                              className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                              referrerPolicy="no-referrer"
+                            />
+                            {isSelected && (
+                              <span className="absolute top-1.5 right-1.5 px-2 py-0.5 rounded-full bg-amber-400 text-black text-[9px] font-black shadow-md flex items-center gap-1">
+                                <CheckCircle2 className="w-3 h-3" />
+                                Selecionado
+                              </span>
+                            )}
+                          </div>
+
+                          {/* Price Display Section (Exact format from uploaded images: "A PARTIR DE: R$ xx.xxx,00") */}
+                          <div className="text-center space-y-0.5 mb-2">
+                            <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block">
+                              A PARTIR DE:
+                            </span>
+                            <div className="text-sm sm:text-base font-black text-white tracking-tight">
+                              {model.startingPrice
+                                ? `R$ ${model.startingPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+                                : 'Consulte Valor'}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Bottom Action: "SAIBA MAIS / VER CATÁLOGO" Link in blue */}
+                        <div className="pt-2 border-t border-neutral-800/80 flex items-center justify-center">
+                          <span className={`text-[11px] font-black underline tracking-wide uppercase transition-colors ${
+                            isSelected ? 'text-amber-400' : 'text-blue-400 hover:text-blue-300'
+                          }`}>
+                            {isSelected ? 'Diagramas Ativos ↓' : 'Saiba Mais / Peças'}
+                          </span>
+                        </div>
                       </div>
-
-                      {/* Title & Specs */}
-                      <h4 className="font-bold text-white text-xs sm:text-sm group-hover:text-amber-300 transition-colors truncate">
-                        {model.name}
-                      </h4>
-                      <p className="text-[11px] text-neutral-400 truncate">
-                        {model.category} • {model.years}
-                      </p>
-                    </div>
-
-                    {/* Bottom EPC Catalog Badge */}
-                    <div className="pt-2 mt-2 border-t border-neutral-800/80 flex items-center justify-between">
-                      <span className="text-[10px] text-neutral-400 font-mono">
-                        {model.diagramsCount} Catálogos EPC
-                      </span>
-                      <span className={`text-[10px] font-bold flex items-center gap-1 ${
-                        isSelected ? 'text-amber-400' : 'text-neutral-400 group-hover:text-white'
-                      }`}>
-                        <span>{isSelected ? 'Ativo' : 'Ver Peças'}</span>
-                        <ChevronRight className="w-3 h-3" />
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
 

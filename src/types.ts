@@ -181,7 +181,7 @@ export type DealershipFullProfile = Required<Pick<DealershipProfile,
   | 'financialContactPhone'
 >> & DealershipProfile;
 
-export type BrandType = 'Suzuki' | 'Zontes' | 'Haojue' | 'Quadriciclos';
+export type BrandType = 'Suzuki' | 'Haojue' | 'Zontes' | 'Hisun' | 'Kymco' | 'Quadriciclos';
 
 export interface VehicleVariant {
   id: string;
@@ -574,7 +574,7 @@ export interface TransitOrder {
 // ELECTRONIC PARTS CATALOG (EPC) & SPARE PARTS
 // ==========================================
 
-export type PartsBrand = 'Suzuki' | 'Haojue' | 'Zontes' | 'Quadriciclos';
+export type PartsBrand = 'Suzuki' | 'Haojue' | 'Zontes' | 'Hisun' | 'Kymco' | 'Quadriciclos';
 
 export interface PartsModelSummary {
   id: string;
@@ -589,6 +589,9 @@ export interface PartsModelSummary {
   diagramsCount: number;
   totalPartsCount: number;
   chassisPrefix: string;
+  startingPrice?: number;
+  badge?: string; // e.g. 'NOVAS CORES!'
+  codeName?: string;
 }
 
 export interface PartsPinHotspot {
