@@ -13,7 +13,9 @@ import {
   Factory,
   ChevronDown,
   Globe2,
-  Check
+  Check,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -24,6 +26,8 @@ interface HeaderProps {
   onOpenNewOrder: () => void;
   searchQuery: string;
   setSearchQuery: (q: string) => void;
+  theme?: 'dark' | 'light';
+  onToggleTheme?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -33,7 +37,9 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenMobileNav,
   onOpenNewOrder,
   searchQuery,
-  setSearchQuery
+  setSearchQuery,
+  theme = 'dark',
+  onToggleTheme
 }) => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -100,12 +106,12 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className="flex justify-between items-center w-full px-4 md:px-6 h-16 bg-[#09090b]/90 backdrop-blur-md border-b border-[#27272a] sticky top-0 z-20 shrink-0">
+    <header className="flex justify-between items-center w-full px-4 md:px-6 h-16 bg-white/90 dark:bg-[#09090b]/90 backdrop-blur-md border-b border-neutral-200 dark:border-[#27272a] sticky top-0 z-20 shrink-0 transition-colors">
       {/* Left: Mobile Menu & Tab Title */}
       <div className="flex items-center gap-3">
         <button 
           onClick={onOpenMobileNav}
-          className="lg:hidden text-neutral-400 hover:text-white hover:bg-neutral-800 p-2 rounded-xl transition-colors"
+          className="lg:hidden text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 p-2 rounded-xl transition-colors"
           aria-label="Abrir Menu"
         >
           <Menu className="w-5 h-5" />
@@ -113,12 +119,12 @@ export const Header: React.FC<HeaderProps> = ({
 
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
-            <h1 className="text-[16px] md:text-[18px] font-bold text-[#fafafa] tracking-tight">
+            <h1 className="text-[16px] md:text-[18px] font-bold text-neutral-900 dark:text-[#fafafa] tracking-tight">
               {getTabTitle(currentTab)}
             </h1>
           </div>
-          <span className="text-[11px] text-neutral-400 hidden sm:flex items-center gap-1.5">
-            <span className={`w-1.5 h-1.5 rounded-full ${currentScope === 'jtoledo' ? 'bg-blue-400' : 'bg-emerald-400'}`} />
+          <span className="text-[11px] text-neutral-500 dark:text-neutral-400 hidden sm:flex items-center gap-1.5">
+            <span className={`w-1.5 h-1.5 rounded-full ${currentScope === 'jtoledo' ? 'bg-blue-500' : 'bg-emerald-500'}`} />
             {activeProfile?.name} • {activeProfile?.city} ({activeProfile?.state})
           </span>
         </div>
@@ -287,6 +293,21 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Plus className="w-3.5 h-3.5 stroke-[3]" />
             <span>Novo Pedido</span>
+          </button>
+        )}
+
+        {/* Theme Toggle Button (Light/Dark Mode) */}
+        {onToggleTheme && (
+          <button
+            onClick={onToggleTheme}
+            className="text-neutral-400 hover:text-white dark:hover:text-amber-300 hover:bg-neutral-200 dark:hover:bg-neutral-800/80 p-2 rounded-xl transition-colors border border-neutral-300 dark:border-[#27272a] flex items-center justify-center shadow-sm"
+            title={theme === 'dark' ? 'Alternar para Tema Claro (Light)' : 'Alternar para Tema Escuro (Dark)'}
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-4 h-4 text-amber-400" />
+            ) : (
+              <Moon className="w-4 h-4 text-blue-600" />
+            )}
           </button>
         )}
 

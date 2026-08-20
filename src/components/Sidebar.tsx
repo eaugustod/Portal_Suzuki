@@ -19,7 +19,9 @@ import {
   Truck,
   Globe2,
   CalendarCheck,
-  Package
+  Package,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -32,6 +34,8 @@ interface SidebarProps {
   onOpenNewOrder: () => void;
   pendingOrdersCount?: number;
   activeOSCount?: number;
+  theme?: 'dark' | 'light';
+  onToggleTheme?: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -42,7 +46,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
   mobileOpen,
   setMobileOpen,
   onOpenNewOrder,
-  activeOSCount = 3
+  pendingOrdersCount = 0,
+  activeOSCount = 0,
+  theme = 'dark',
+  onToggleTheme
 }) => {
   const activeProfile = DEALERSHIP_PROFILES[currentScope];
   const isMontadora = currentScope === 'jtoledo';
@@ -77,15 +84,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
       )}
 
       <aside className={`
-        fixed top-0 bottom-0 left-0 z-40 w-[270px] bg-[#121215] border-r border-[#27272a]
-        flex flex-col py-5 transition-transform duration-300 ease-in-out
+        fixed top-0 bottom-0 left-0 z-40 w-[270px] bg-white dark:bg-[#121215] border-r border-neutral-200 dark:border-[#27272a]
+        flex flex-col py-5 transition-all duration-300 ease-in-out
         ${mobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
         {/* Logo & Header */}
         <div className="px-5 mb-5 flex flex-col gap-2 relative">
           <button 
             onClick={() => setMobileOpen(false)} 
-            className="lg:hidden absolute right-4 top-0 p-1 text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-lg"
+            className="lg:hidden absolute right-4 top-0 p-1 text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg"
           >
             <X className="w-5 h-5" />
           </button>
@@ -110,7 +117,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               )}
             </div>
             <div className="overflow-hidden">
-              <h1 className="text-[15px] font-bold text-[#fafafa] leading-tight tracking-tight truncate">
+              <h1 className="text-[15px] font-bold text-neutral-900 dark:text-[#fafafa] leading-tight tracking-tight truncate">
                 {activeProfile?.name}
               </h1>
               <div className="flex items-center gap-1.5 mt-0.5">
@@ -169,8 +176,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 className={`
                   flex items-center justify-between w-full px-3 py-2.5 text-left transition-all rounded-xl text-[12.5px] font-medium
                   ${isActive 
-                    ? 'bg-[#3b82f6]/15 text-[#60a5fa] border border-[#3b82f6]/40 font-semibold shadow-inner' 
-                    : 'text-neutral-400 hover:text-[#fafafa] hover:bg-neutral-800/60'
+                    ? 'bg-[#3b82f6]/15 text-[#2563eb] dark:text-[#60a5fa] border border-[#3b82f6]/40 font-semibold shadow-inner' 
+                    : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-[#fafafa] hover:bg-neutral-100 dark:hover:bg-neutral-800/60'
                   }
                 `}
               >
@@ -266,6 +273,25 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Suporte</span>
           </button>
+
+          {onToggleTheme && (
+            <button
+              onClick={onToggleTheme}
+              className="flex items-center gap-3 px-3 py-1.5 rounded-xl text-left transition-colors text-[12px] text-neutral-400 hover:text-[#fafafa] hover:bg-neutral-800/60 w-full"
+            >
+              {theme === 'dark' ? (
+                <>
+                  <Sun className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Tema Claro (Light)</span>
+                </>
+              ) : (
+                <>
+                  <Moon className="w-3.5 h-3.5 text-blue-500" />
+                  <span>Tema Escuro (Dark)</span>
+                </>
+              )}
+            </button>
+          )}
 
           {/* Dealership Info Badge */}
           <div className="mt-1 p-2.5 bg-[#18181b] rounded-2xl border border-[#27272a] text-[11px] text-neutral-400">

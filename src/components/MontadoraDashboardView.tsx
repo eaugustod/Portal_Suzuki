@@ -264,7 +264,7 @@ export const MontadoraDashboardView: React.FC<MontadoraDashboardViewProps> = ({
               Cockpit Geral da Montadora
             </h2>
             <p className="text-[13px] text-neutral-300 max-w-2xl mt-1">
-              Visão macro-executiva escalável para gestão de rede nacional autorizada <strong>Suzuki</strong>, <strong>Zontes</strong>, <strong>Haojue</strong> e <strong>Kymco</strong> no Brasil com controle de faturamento, cotas, risco de crédito e pós-venda.
+              Visão macro-executiva escalável para gestão de rede nacional autorizada <strong>Suzuki</strong>, <strong>Haojue</strong>, <strong>Zontes</strong>, <strong>Hisun</strong> e <strong>Kymco</strong> no Brasil com controle de faturamento, cotas, risco de crédito e pós-venda.
             </p>
           </div>
 

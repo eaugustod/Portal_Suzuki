@@ -49,6 +49,27 @@ import { SupportView } from './components/SupportView';
 import { OrderConfirmationModal } from './components/OrderConfirmationModal';
 
 export default function App() {
+  // Theme State ('dark' | 'light')
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    return (localStorage.getItem('portal_theme') as 'dark' | 'light') || 'dark';
+  });
+
+  React.useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+      root.classList.remove('light');
+    } else {
+      root.classList.add('light');
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('portal_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
   // Dealership / Montadora Scope ('jtoledo' = Montadora, 'motosul' = MotoSul RS, 'novamotor' = Nova Motor SP)
   const [currentScope, setCurrentScope] = useState<DealershipScope>('jtoledo');
 
@@ -512,6 +533,8 @@ export default function App() {
           setCurrentTab('purchase');
         }}
         activeOSCount={scopedServiceOrders.filter(o => o.status !== 'finalizado').length}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       {/* Main Content Area */}
@@ -529,6 +552,8 @@ export default function App() {
           }}
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
+          theme={theme}
+          onToggleTheme={toggleTheme}
         />
 
         {/* Dynamic View Body */}

@@ -1,10 +1,25 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --bg-app: #f4f5f7;
+    --text-app: #0f172a;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+  }
+
+  html.dark {
+    --bg-app: #09090b;
+    --text-app: #fafafa;
+    --card-bg: #18181b;
+    --card-border: #27272a;
+  }
+
   body {
     font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #09090b;
-    color: #fafafa;
+    background-color: var(--bg-app);
+    color: var(--text-app);
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 }
 
@@ -13,18 +28,205 @@
   font-feature-settings: "tnum";
 }
 
-/* Bento Custom Dark scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
+/* Custom scrollbars */
+html.dark ::-webkit-scrollbar-track {
   background: #121215;
 }
-::-webkit-scrollbar-thumb {
+html.dark ::-webkit-scrollbar-thumb {
   background: #27272a;
   border-radius: 9999px;
 }
-::-webkit-scrollbar-thumb:hover {
+html.dark ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Dark Mode explicit overrides */
+html.dark body {
+  background-color: #09090b !important;
+  color: #fafafa !important;
+}
+
+html.dark header {
+  background-color: rgba(12, 12, 14, 0.95) !important;
+  border-color: #27272a !important;
+}
+
+html.dark aside {
+  background-color: #0c0c0e !important;
+  border-color: #27272a !important;
+}
+
+/* Global Light Mode Overrides for Hardcoded Dark Classes */
+html.light {
+  body {
+    background-color: #f4f5f7 !important;
+    color: #0f172a !important;
+  }
+
+  header {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  aside {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  /* Hardcoded Dark Card Backgrounds -> Light Cards */
+  .bg-\[\#09090b\], 
+  .bg-\[\#0c0c0e\], 
+  .bg-\[\#121215\], 
+  .bg-\[\#18181b\] {
+    background-color: #ffffff !important;
+    color: #0f172a;
+  }
+
+  /* Secondary dark containers & subcards -> Soft gray cards */
+  .bg-neutral-900,
+  .bg-neutral-950,
+  .bg-\[\#1f1f23\],
+  .bg-\[\#27272a\],
+  [class*="bg-neutral-900/"] {
+    background-color: #f1f5f9 !important;
+    color: #0f172a;
+  }
+
+  /* Borders -> Soft borders */
+  .border-\[\#27272a\],
+  .border-\[\#1f1f23\],
+  .border-\[\#3f3f46\],
+  .border-neutral-800,
+  .border-neutral-900,
+  .border-neutral-700,
+  [class*="border-neutral-800/"] {
+    border-color: #e2e8f0 !important;
+  }
+
+  /* Text color overrides for normal light cards */
+  .text-\[\#fafafa\],
+  .text-neutral-100,
+  .text-neutral-200 {
+    color: #0f172a !important;
+  }
+
+  .text-neutral-300,
+  .text-neutral-400 {
+    color: #475569 !important;
+  }
+
+  .text-neutral-500 {
+    color: #64748b !important;
+  }
+
+  /* Inputs, Selects, Search Bars in Light Mode */
+  input, select, textarea {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #94a3b8 !important;
+  }
+
+  select option {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  /* Table styling in Light mode */
+  table th {
+    color: #475569 !important;
+    background-color: #f8fafc !important;
+  }
+
+  table td {
+    color: #0f172a !important;
+  }
+
+  table td .text-white,
+  table td .text-neutral-200,
+  table td .text-neutral-300,
+  table td p,
+  table td span {
+    color: #0f172a;
+  }
+
+  table td .text-neutral-500,
+  table td .text-neutral-400 {
+    color: #64748b !important;
+  }
+
+  table td .text-emerald-400,
+  table td .text-emerald-500 {
+    color: #059669 !important;
+  }
+
+  table td .text-amber-400,
+  table td .text-amber-500 {
+    color: #d97706 !important;
+  }
+
+  table td .text-blue-400,
+  table td .text-blue-500 {
+    color: #2563eb !important;
+  }
+
+  table tr:hover {
+    background-color: #f1f5f9 !important;
+  }
+
+  /* PRESERVE LIGHT TEXT inside dark banners & hero elements even in light mode */
+  .bg-gradient-to-r,
+  .bg-gradient-to-l,
+  .bg-gradient-to-b,
+  .bg-gradient-to-br,
+  .bg-blue-950,
+  .bg-indigo-950,
+  .bg-slate-950,
+  [class*="from-blue-"],
+  [class*="from-indigo-"] {
+    color: #ffffff !important;
+  }
+
+  .bg-gradient-to-r .text-white,
+  .bg-gradient-to-r .text-neutral-200,
+  .bg-gradient-to-r .text-neutral-300,
+  .bg-gradient-to-r .text-\[\#fafafa\],
+  .bg-gradient-to-r h2,
+  .bg-gradient-to-r p,
+  .bg-blue-600 *,
+  .bg-indigo-600 *,
+  .bg-emerald-600 * {
+    color: #ffffff !important;
+  }
+
+  .bg-gradient-to-r .text-blue-400 {
+    color: #60a5fa !important;
+  }
+  .bg-gradient-to-r .text-emerald-400 {
+    color: #34d399 !important;
+  }
+  .bg-gradient-to-r .text-neutral-400 {
+    color: #d1d5db !important;
+  }
+
+  /* Preserve white text for primary blue/colored buttons & badges */
+  .bg-blue-600, .bg-blue-700, .bg-blue-800, .bg-blue-900,
+  .bg-emerald-600, .bg-emerald-700, .bg-red-600, .bg-red-700, .bg-amber-500, .bg-amber-600,
+  .bg-indigo-600, .bg-indigo-700 {
+    color: #ffffff !important;
+  }
 }
