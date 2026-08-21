@@ -1,0 +1,207 @@
+{
+  "metadata.json": {
+    "mtime": 1787226015.2320118,
+    "ast_hash": "5c10c61efa0c0fe2d1637a404b99b467",
+    "semantic_hash": "5c10c61efa0c0fe2d1637a404b99b467"
+  },
+  "package.json": {
+    "mtime": 1787226015.232043,
+    "ast_hash": "649e18e0e07d63099e2c7f9a547e7375",
+    "semantic_hash": "649e18e0e07d63099e2c7f9a547e7375"
+  },
+  "src/App.tsx": {
+    "mtime": 1787258660.720407,
+    "ast_hash": "9430b6ca54d079fba1942a9a84da4462",
+    "semantic_hash": "9430b6ca54d079fba1942a9a84da4462"
+  },
+  "src/components/DashboardView.tsx": {
+    "mtime": 1787226015.2369413,
+    "ast_hash": "b13945f54ad9ee0fa5d430fd62586482",
+    "semantic_hash": "b13945f54ad9ee0fa5d430fd62586482"
+  },
+  "src/components/DealershipManagementView.tsx": {
+    "mtime": 1787226015.2378008,
+    "ast_hash": "1a464ce9622de6dfb3bbd4b2c111a948",
+    "semantic_hash": "1a464ce9622de6dfb3bbd4b2c111a948"
+  },
+  "src/components/DealershipOrderDetailModal.tsx": {
+    "mtime": 1787230473.444187,
+    "ast_hash": "f6a0a1e2cb32123e87ad160ffd60c119",
+    "semantic_hash": "f6a0a1e2cb32123e87ad160ffd60c119"
+  },
+  "src/components/Header.tsx": {
+    "mtime": 1787258765.1051657,
+    "ast_hash": "671d08f1744fc99ae234c81bc1cf0892",
+    "semantic_hash": "671d08f1744fc99ae234c81bc1cf0892"
+  },
+  "src/components/InventoryView.tsx": {
+    "mtime": 1787226015.2388008,
+    "ast_hash": "2d8d08db49b3bebf814c7bef56680a4c",
+    "semantic_hash": "2d8d08db49b3bebf814c7bef56680a4c"
+  },
+  "src/components/ModelCatalogManagementModal.tsx": {
+    "mtime": 1787239416.6476622,
+    "ast_hash": "daa4e7dd33ddab0e955609d96e75d4a1",
+    "semantic_hash": "daa4e7dd33ddab0e955609d96e75d4a1"
+  },
+  "src/components/ModelTechnicalSpecsModal.tsx": {
+    "mtime": 1787226015.2412393,
+    "ast_hash": "9aa4691ef72c3fc072508e26aef39f59",
+    "semantic_hash": "9aa4691ef72c3fc072508e26aef39f59"
+  },
+  "src/components/MontadoraDashboardView.tsx": {
+    "mtime": 1787251957.0981097,
+    "ast_hash": "ad3231c7eae87b6817f7541471cc051a",
+    "semantic_hash": "ad3231c7eae87b6817f7541471cc051a"
+  },
+  "src/components/MonthlyCommitmentView.tsx": {
+    "mtime": 1787226015.2426069,
+    "ast_hash": "e641cae8543408f9bdbe1f38ff4efb78",
+    "semantic_hash": "e641cae8543408f9bdbe1f38ff4efb78"
+  },
+  "src/components/OrderApprovalDocumentView.tsx": {
+    "mtime": 1787226015.2426069,
+    "ast_hash": "fee18f79d69dd4a7ff129437441d59c6",
+    "semantic_hash": "fee18f79d69dd4a7ff129437441d59c6"
+  },
+  "src/components/OrderConfirmationModal.tsx": {
+    "mtime": 1787226015.2426069,
+    "ast_hash": "185c1310dcf866aaefdae541d67ecdd4",
+    "semantic_hash": "185c1310dcf866aaefdae541d67ecdd4"
+  },
+  "src/components/PurchasePortalView.tsx": {
+    "mtime": 1787239416.650333,
+    "ast_hash": "e1b34c45fbb85ff6c8474aac45534ed0",
+    "semantic_hash": "e1b34c45fbb85ff6c8474aac45534ed0"
+  },
+  "src/components/SalesCrmView.tsx": {
+    "mtime": 1787226015.2442563,
+    "ast_hash": "048a352aac8f5b68d1a4eebe020c88d3",
+    "semantic_hash": "048a352aac8f5b68d1a4eebe020c88d3"
+  },
+  "src/components/ServiceOrderView.tsx": {
+    "mtime": 1787226015.244654,
+    "ast_hash": "570c7a98d574832c1f66a1266c40fb77",
+    "semantic_hash": "570c7a98d574832c1f66a1266c40fb77"
+  },
+  "src/components/SettingsView.tsx": {
+    "mtime": 1787226015.244654,
+    "ast_hash": "de61da54fa82e5bfd5fc0743e2abdd16",
+    "semantic_hash": "de61da54fa82e5bfd5fc0743e2abdd16"
+  },
+  "src/components/Sidebar.tsx": {
+    "mtime": 1787258799.4157434,
+    "ast_hash": "31aa6984f7668f7eee50bd17b3d61bf5",
+    "semantic_hash": "31aa6984f7668f7eee50bd17b3d61bf5"
+  },
+  "src/components/SupportView.tsx": {
+    "mtime": 1787226015.244654,
+    "ast_hash": "fbabe900bc8a211e1a2c4507111787a1",
+    "semantic_hash": "fbabe900bc8a211e1a2c4507111787a1"
+  },
+  "src/components/parts/PartsCartDrawer.tsx": {
+    "mtime": 1787234361.0048344,
+    "ast_hash": "46a028016f7ee148d4d987d3f02f3573",
+    "semantic_hash": "46a028016f7ee148d4d987d3f02f3573"
+  },
+  "src/components/parts/PartsCatalogView.tsx": {
+    "mtime": 1787239416.6512284,
+    "ast_hash": "f57d9bbfc2f0f1ab0912ea0f9889b005",
+    "semantic_hash": "f57d9bbfc2f0f1ab0912ea0f9889b005"
+  },
+  "src/components/parts/PartsDiagramCarousel.tsx": {
+    "mtime": 1787234361.0069222,
+    "ast_hash": "6ae4904e223c8f1c6f8faef08b0d8478",
+    "semantic_hash": "6ae4904e223c8f1c6f8faef08b0d8478"
+  },
+  "src/components/parts/PartsExplodedDiagram.tsx": {
+    "mtime": 1787311816.3583612,
+    "ast_hash": "409f899761b53519c725508aa013a90b",
+    "semantic_hash": "409f899761b53519c725508aa013a90b"
+  },
+  "src/components/parts/PartsOrderMirrorModal.tsx": {
+    "mtime": 1787234361.0083606,
+    "ast_hash": "05c155c934100c7197bbb174d6cd21cc",
+    "semantic_hash": "05c155c934100c7197bbb174d6cd21cc"
+  },
+  "src/components/parts/PartsTable.tsx": {
+    "mtime": 1787234361.0088344,
+    "ast_hash": "9bb182c6f68b98a356b68d04734b35b1",
+    "semantic_hash": "9bb182c6f68b98a356b68d04734b35b1"
+  },
+  "src/data/dealershipsData.ts": {
+    "mtime": 1787226015.2448008,
+    "ast_hash": "26440805e271297d03acbfbf53bda9b9",
+    "semantic_hash": "26440805e271297d03acbfbf53bda9b9"
+  },
+  "src/data/hayabusaDetailedDiagrams.ts": {
+    "mtime": 1787242249.2826948,
+    "ast_hash": "d850cf2d8514007462864cc6d4d42176",
+    "semantic_hash": "d850cf2d8514007462864cc6d4d42176"
+  },
+  "src/data/hayabusaDiagramsList.ts": {
+    "mtime": 1787242249.2830963,
+    "ast_hash": "bcfd70213698073fb34b1d083ffc6c0b",
+    "semantic_hash": "bcfd70213698073fb34b1d083ffc6c0b"
+  },
+  "src/data/mockData.ts": {
+    "mtime": 1787226015.2459915,
+    "ast_hash": "9a573a0e2dd035507570a442fc39df1d",
+    "semantic_hash": "9a573a0e2dd035507570a442fc39df1d"
+  },
+  "src/data/mockPartsData.ts": {
+    "mtime": 1787242249.2830963,
+    "ast_hash": "defabf057aa640eebb16d0f970c788c9",
+    "semantic_hash": "defabf057aa640eebb16d0f970c788c9"
+  },
+  "src/data/mockPartsModels.ts": {
+    "mtime": 1787311308.533426,
+    "ast_hash": "7a4c49403e72bf6abeccae517f03f5d4",
+    "semantic_hash": "7a4c49403e72bf6abeccae517f03f5d4"
+  },
+  "src/data/mockPartsOrders.ts": {
+    "mtime": 1787242249.2830963,
+    "ast_hash": "1429c0d2d9c0dbadb4dafa208173a611",
+    "semantic_hash": "1429c0d2d9c0dbadb4dafa208173a611"
+  },
+  "src/data/modelsCatalogData.ts": {
+    "mtime": 1787239416.6549766,
+    "ast_hash": "a91dcb4460b76e7e6e92d9433fc62652",
+    "semantic_hash": "a91dcb4460b76e7e6e92d9433fc62652"
+  },
+  "src/data/monthlyCommitmentsData.ts": {
+    "mtime": 1787226015.24681,
+    "ast_hash": "660e3b38f6d95089ebc59a12de60207b",
+    "semantic_hash": "660e3b38f6d95089ebc59a12de60207b"
+  },
+  "src/data/orderApprovalData.ts": {
+    "mtime": 1787226015.2469563,
+    "ast_hash": "863c9daa11c4fefd229199236f3773f6",
+    "semantic_hash": "863c9daa11c4fefd229199236f3773f6"
+  },
+  "src/main.tsx": {
+    "mtime": 1787226015.2469563,
+    "ast_hash": "2b36426d5ad7e08ef79746aa524f4fb7",
+    "semantic_hash": "2b36426d5ad7e08ef79746aa524f4fb7"
+  },
+  "src/types.ts": {
+    "mtime": 1787242249.285071,
+    "ast_hash": "fc3f0dcda6aa2f50471f9ae1f111182b",
+    "semantic_hash": "fc3f0dcda6aa2f50471f9ae1f111182b"
+  },
+  "src/utils/imageStorage.ts": {
+    "mtime": 1787242249.285071,
+    "ast_hash": "8f4c1ca3972d0a2c936971d57889ed0c",
+    "semantic_hash": "8f4c1ca3972d0a2c936971d57889ed0c"
+  },
+  "tsconfig.json": {
+    "mtime": 1787226015.2469563,
+    "ast_hash": "8827451c4e35790dd3f3538c265e7d15",
+    "semantic_hash": "8827451c4e35790dd3f3538c265e7d15"
+  },
+  "vite.config.ts": {
+    "mtime": 1787226015.2469563,
+    "ast_hash": "9c319043c25764dfe83b687f74637c6c",
+    "semantic_hash": "9c319043c25764dfe83b687f74637c6c"
+  }
+}
