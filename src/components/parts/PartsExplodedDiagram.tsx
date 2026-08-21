@@ -69,6 +69,10 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
   // Multi-selection / marked items for quick bulk purchase
   const [markedRefs, setMarkedRefs] = useState<Set<number>>(new Set());
 
+  // Track the EXACT hotspot id being hovered to avoid rendering multiple popovers
+  // when the same ref appears in multiple hotspot positions on the diagram
+  const [hoveredHotspotId, setHoveredHotspotId] = useState<string | null>(null);
+
   const containerRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -716,17 +720,32 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
   );
 
   // Render clickable hotspot links directly positioned over the original numbers in the PNG
-  const renderHotspots = () => (
+  const renderHotspots = () => {
+    // Track which refs have already rendered a popover in selected state
+    // so we only show 1 popover per ref even if multiple hotspots share the same ref
+    const selectedPopoverRendered = new Set<number>();
+
+    return (
     <>
       {diagram.hotspots.map((hotspot, idx) => {
+        const hotspotKey = hotspot.id || `hs-${hotspot.ref}-${idx}`;
         const isSelected = selectedRef === hotspot.ref;
         const isHovered = hoveredRef === hotspot.ref;
+        // Only THIS specific hotspot is considered actively hovered for the popover
+        const isThisHotspotHovered = hoveredHotspotId === hotspotKey;
         const isMarked = markedRefs.has(hotspot.ref);
         const matchingPart = diagram.parts.find(p => p.ref === hotspot.ref);
 
+        // For selection, only render popover on the FIRST hotspot with this ref
+        const canShowSelectedPopover = isSelected && !selectedPopoverRendered.has(hotspot.ref);
+        if (canShowSelectedPopover) selectedPopoverRendered.add(hotspot.ref);
+
+        // Popover shows ONLY when THIS exact hotspot is hovered, or for the first occurrence of a selected ref
+        const shouldShowPopover = (isThisHotspotHovered || canShowSelectedPopover) && !!matchingPart;
+
         return (
           <div
-            key={hotspot.id || `hs-${hotspot.ref}-${idx}`}
+            key={hotspotKey}
             style={{
               left: `${hotspot.x}%`,
               top: `${hotspot.y}%`
@@ -735,8 +754,14 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               e.stopPropagation();
               onSelectRef(hotspot.ref);
             }}
-            onMouseEnter={() => onHoverRef(hotspot.ref)}
-            onMouseLeave={() => onHoverRef(null)}
+            onMouseEnter={() => {
+              onHoverRef(hotspot.ref);
+              setHoveredHotspotId(hotspotKey);
+            }}
+            onMouseLeave={() => {
+              onHoverRef(null);
+              setHoveredHotspotId(null);
+            }}
             className="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer select-none z-20 group"
           >
             {/* Interactive Target positioned directly over the PNG Number */}
@@ -793,7 +818,8 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
             )}
 
             {/* Rich Hover / Selection Details Popover with direct Purchase Action */}
-            {(isHovered || isSelected) && matchingPart && (
+            {/* shouldShowPopover ensures only 1 card appears per ref, even with multiple hotspot positions */}
+            {shouldShowPopover && (
               <div 
                 onClick={(e) => e.stopPropagation()}
                 className="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 bg-neutral-950/95 border border-neutral-700 text-white text-xs rounded-2xl p-4 whitespace-nowrap shadow-2xl z-40 pointer-events-auto backdrop-blur-md animate-in fade-in zoom-in-95 duration-150 min-w-[280px]"
@@ -885,7 +911,8 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
         );
       })}
     </>
-  );
+    );
+  };
 
   return (
     <>
