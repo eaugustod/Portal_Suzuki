@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { PartsDiagramGroup, PartsPinHotspot, PartsItem } from '../../types';
 import { saveDiagramImage, getDiagramImage, deleteDiagramImage } from '../../utils/imageStorage';
+import { autoDetectHotspotsFromImage } from '../../utils/autoNumberDetector';
 
 interface PartsExplodedDiagramProps {
   diagram: PartsDiagramGroup;
@@ -46,7 +47,8 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
   modelName = 'V-STROM 800 M4',
   onAddToCart
 }) => {
-  const [zoom, setZoom] = useState<number>(1);
+  // Diagram Interactive Zoom & Drag State (Default 50% zoom to fit standard container box without scroll)
+  const [zoom, setZoom] = useState<number>(0.5);
   const [pan, setPan] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [dragStart, setDragStart] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -73,8 +75,131 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
   // when the same ref appears in multiple hotspot positions on the diagram
   const [hoveredHotspotId, setHoveredHotspotId] = useState<string | null>(null);
 
+  // Hotspot Pin Calibration System
+  const [isCalibratingPins, setIsCalibratingPins] = useState<boolean>(false);
+  const [activeHotspots, setActiveHotspots] = useState<PartsPinHotspot[]>(diagram.hotspots);
+  const [selectedHotspotIdForCalibration, setSelectedHotspotIdForCalibration] = useState<string | null>(null);
+  const [copiedFeedback, setCopiedFeedback] = useState<boolean>(false);
+  const [savedFeedback, setSavedFeedback] = useState<boolean>(false);
+
   const containerRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Sync active hotspots with localStorage or default diagram hotspots
+  useEffect(() => {
+    const key = `epc_hotspots_${diagram.id}`;
+    const saved = localStorage.getItem(key);
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setActiveHotspots(parsed);
+          return;
+        }
+      } catch (e) {}
+    }
+    setActiveHotspots(diagram.hotspots);
+  }, [diagram.id, diagram.hotspots]);
+
+  // Keep selectedHotspotIdForCalibration valid when hotspots change
+  useEffect(() => {
+    if (isCalibratingPins && activeHotspots.length > 0) {
+      const exists = activeHotspots.some((h, i) => (h.id || `hs-${h.ref}-${i}`) === selectedHotspotIdForCalibration);
+      if (!exists) {
+        setSelectedHotspotIdForCalibration(activeHotspots[0].id || `hs-${activeHotspots[0].ref}-0`);
+      }
+    }
+  }, [isCalibratingPins, activeHotspots, selectedHotspotIdForCalibration]);
+
+  // Click on diagram to position the currently selected hotspot pin
+  const handleDiagramClickForCalibration = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isCalibratingPins || !containerRef.current || activeHotspots.length === 0) return;
+
+    const rect = containerRef.current.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const clickY = e.clientY - rect.top;
+    const pctX = Number(((clickX / rect.width) * 100).toFixed(1));
+    const pctY = Number(((clickY / rect.height) * 100).toFixed(1));
+
+    setActiveHotspots(prev => {
+      if (prev.length === 0) return prev;
+      const targetId = selectedHotspotIdForCalibration || (prev[0].id || `hs-${prev[0].ref}-0`);
+      const idx = prev.findIndex((h, i) => (h.id || `hs-${h.ref}-${i}`) === targetId);
+
+      if (idx >= 0) {
+        const updated = [...prev];
+        updated[idx] = { ...updated[idx], x: pctX, y: pctY };
+        return updated;
+      }
+      return prev;
+    });
+  };
+
+  // Add an extra hotspot pin for the current Ref
+  const handleAddDuplicatePin = () => {
+    if (!selectedHotspotIdForCalibration && activeHotspots.length > 0) {
+      setSelectedHotspotIdForCalibration(activeHotspots[0].id || `hs-${activeHotspots[0].ref}-0`);
+    }
+    const currentHs = activeHotspots.find((h, i) => (h.id || `hs-${h.ref}-${i}`) === selectedHotspotIdForCalibration) || activeHotspots[0];
+    if (!currentHs) return;
+
+    const ref = currentHs.ref;
+    const sameRefHotspots = activeHotspots.filter(h => h.ref === ref);
+    const instNum = sameRefHotspots.length + 1;
+    const newId = `hs-${diagram.id}-${ref}-${Date.now()}`;
+    const matchingPart = diagram.parts.find(p => p.ref === ref);
+
+    const newHs: PartsPinHotspot = {
+      id: newId,
+      ref: ref,
+      x: Math.min(90, (currentHs.x || 30) + 3),
+      y: Math.min(90, (currentHs.y || 30) + 3),
+      label: `${ref} - ${matchingPart?.description || ''} (Pino ${instNum})`
+    };
+
+    setActiveHotspots(prev => [...prev, newHs]);
+    setSelectedHotspotIdForCalibration(newId);
+  };
+
+  // Delete current selected hotspot pin
+  const handleDeleteHotspotPin = () => {
+    if (!selectedHotspotIdForCalibration || activeHotspots.length <= 1) return;
+    setActiveHotspots(prev => {
+      const next = prev.filter((h, i) => (h.id || `hs-${h.ref}-${i}`) !== selectedHotspotIdForCalibration);
+      if (next.length > 0) {
+        setSelectedHotspotIdForCalibration(next[0].id || `hs-${next[0].ref}-0`);
+      }
+      return next;
+    });
+  };
+
+  const handleSaveHotspots = () => {
+    localStorage.setItem(`epc_hotspots_${diagram.id}`, JSON.stringify(activeHotspots));
+    setSavedFeedback(true);
+    setTimeout(() => setSavedFeedback(false), 2000);
+  };
+
+  const handleCopyHotspotsJSON = () => {
+    navigator.clipboard.writeText(JSON.stringify(activeHotspots, null, 2));
+    setCopiedFeedback(true);
+    setTimeout(() => setCopiedFeedback(false), 2000);
+  };
+
+  const handleResetHotspots = () => {
+    localStorage.removeItem(`epc_hotspots_${diagram.id}`);
+    setActiveHotspots(diagram.hotspots);
+  };
+
+  const [isDetecting, setIsDetecting] = useState<boolean>(false);
+
+  const handleAutoDetectHotspots = async () => {
+    setIsDetecting(true);
+    const imageSrc = customImageSrc || diagram.customImageUrl || diagram.thumbnailUrl;
+    const detected = await autoDetectHotspotsFromImage(imageSrc, diagram.parts);
+    setActiveHotspots(detected);
+    localStorage.setItem(`epc_hotspots_${diagram.id}`, JSON.stringify(detected));
+    setIsDetecting(false);
+  };
 
   // Load persisted custom image whenever diagram changes or on mount
   useEffect(() => {
@@ -727,10 +852,11 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
 
     return (
     <>
-      {diagram.hotspots.map((hotspot, idx) => {
+      {activeHotspots.map((hotspot, idx) => {
         const hotspotKey = hotspot.id || `hs-${hotspot.ref}-${idx}`;
         const isSelected = selectedRef === hotspot.ref;
         const isHovered = hoveredRef === hotspot.ref;
+        const isCalibrationTarget = isCalibratingPins && selectedHotspotIdForCalibration === hotspotKey;
         // Only THIS specific hotspot is considered actively hovered for the popover
         const isThisHotspotHovered = hoveredHotspotId === hotspotKey;
         const isMarked = markedRefs.has(hotspot.ref);
@@ -741,7 +867,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
         if (canShowSelectedPopover) selectedPopoverRendered.add(hotspot.ref);
 
         // Popover shows ONLY when THIS exact hotspot is hovered, or for the first occurrence of a selected ref
-        const shouldShowPopover = (isThisHotspotHovered || canShowSelectedPopover) && !!matchingPart;
+        const shouldShowPopover = !isCalibratingPins && (isThisHotspotHovered || canShowSelectedPopover) && !!matchingPart;
 
         return (
           <div
@@ -752,7 +878,15 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
             }}
             onClick={(e) => {
               e.stopPropagation();
-              onSelectRef(hotspot.ref);
+              if (isCalibratingPins) {
+                setSelectedHotspotIdForCalibration(hotspotKey);
+              } else {
+                if (selectedRef === hotspot.ref) {
+                  onSelectRef(null);
+                } else {
+                  onSelectRef(hotspot.ref);
+                }
+              }
             }}
             onMouseEnter={() => {
               onHoverRef(hotspot.ref);
@@ -762,7 +896,9 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               onHoverRef(null);
               setHoveredHotspotId(null);
             }}
-            className="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer select-none z-20 group"
+            className={`absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer select-none group ${
+              isCalibrationTarget ? 'z-40' : 'z-20'
+            }`}
           >
             {/* Interactive Target positioned directly over the PNG Number */}
             {hotspotStyle === 'ring' ? (
@@ -770,7 +906,9 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               <div className={`
                 w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-bold text-xs font-mono
                 transition-all duration-150 relative
-                ${isSelected
+                ${isCalibrationTarget
+                  ? 'bg-red-600 text-white font-black scale-135 ring-4 ring-amber-300 shadow-xl shadow-red-600/60 animate-pulse'
+                  : isSelected
                   ? 'bg-amber-400 text-black font-black scale-125 shadow-lg shadow-amber-400/50 ring-4 ring-amber-400/40 z-30'
                   : isMarked
                   ? 'bg-emerald-500 text-white font-bold scale-115 ring-2 ring-emerald-400 shadow-md'
@@ -789,7 +927,9 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               <div className={`
                 w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-black text-xs font-mono
                 transition-all duration-150 shadow-md relative
-                ${isSelected
+                ${isCalibrationTarget
+                  ? 'bg-red-600 text-white font-black scale-135 ring-4 ring-amber-300 shadow-xl shadow-red-600/60 animate-pulse'
+                  : isSelected
                   ? 'bg-amber-400 text-black scale-130 ring-4 ring-amber-400/60 shadow-amber-500/50 z-30'
                   : isMarked
                   ? 'bg-emerald-500 text-white scale-115 ring-2 ring-emerald-400'
@@ -804,7 +944,9 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               // Stealth Mode: Invisible click target over the PNG number, highlights on hover
               <div className={`
                 w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs font-mono transition-all
-                ${isSelected
+                ${isCalibrationTarget
+                  ? 'bg-red-600 text-white font-black scale-135 ring-4 ring-amber-300 shadow-xl shadow-red-600/60 animate-pulse'
+                  : isSelected
                   ? 'bg-amber-400/90 text-black font-black scale-125 ring-3 ring-amber-400'
                   : isMarked
                   ? 'bg-emerald-500/90 text-white ring-2 ring-emerald-400'
@@ -813,7 +955,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
                   : 'bg-transparent hover:bg-amber-400/50 text-transparent hover:text-black border border-transparent hover:border-amber-500'
                 }
               `}>
-                {(isSelected || isHovered || isMarked) && <span>{hotspot.ref}</span>}
+                {(isCalibrationTarget || isSelected || isHovered || isMarked) && <span>{hotspot.ref}</span>}
               </div>
             )}
 
@@ -1024,8 +1166,17 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               </button>
             </div>
 
-            {/* Zoom Presets: 100%, 150%, 200% */}
+            {/* Zoom Presets: 50%, 100%, 150%, 200% */}
             <div className="flex items-center p-0.5 rounded-xl border border-neutral-300 bg-white text-xs font-mono text-neutral-700 shadow-sm">
+              <button
+                onClick={() => handleSetZoom(0.5)}
+                className={`px-2 py-1 rounded-lg transition-colors font-bold ${
+                  zoom === 0.5 ? 'bg-amber-400 text-black shadow-sm' : 'hover:bg-neutral-100 text-neutral-600'
+                }`}
+                title="Zoom 50% (Ajustar à Caixa)"
+              >
+                50%
+              </button>
               <button
                 onClick={() => handleSetZoom(1.0)}
                 className={`px-2 py-1 rounded-lg transition-colors font-bold ${
@@ -1085,10 +1236,108 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               >
                 <Maximize2 className="w-3.5 h-3.5" />
               </button>
+
+              {/* Pin Calibrator Action Button */}
+              <button
+                onClick={() => setIsCalibratingPins(!isCalibratingPins)}
+                className={`p-1.5 rounded-xl border text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm ${
+                  isCalibratingPins
+                    ? 'border-red-500 bg-red-600 text-white font-bold shadow-red-600/30'
+                    : 'border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-50'
+                }`}
+                title="Ajustar e posicionar pinos de numeração sobre os números originais da figura"
+              >
+                <Crosshair className="w-3.5 h-3.5" />
+                <span className="text-[11px] hidden lg:inline">Ajustar Pinos</span>
+              </button>
             </div>
 
           </div>
         </div>
+
+        {/* Hotspot Pin Calibration Bar */}
+        {isCalibratingPins && (
+          <div className="p-3 bg-red-600 text-white border-b border-red-700 flex flex-wrap items-center justify-between gap-3 text-xs z-10 shadow-md">
+            <div className="flex items-center gap-2">
+              <Crosshair className="w-4 h-4 animate-pulse shrink-0 text-amber-300" />
+              <span className="font-bold">Modo Ajuste de Pinos Ativo:</span>
+              <span className="hidden sm:inline">Clique no local da imagem para posicionar a Ref:</span>
+              <select
+                value={selectedHotspotIdForCalibration || (activeHotspots[0]?.id || '')}
+                onChange={(e) => setSelectedHotspotIdForCalibration(e.target.value)}
+                className="bg-neutral-900 text-amber-400 font-bold font-mono px-2.5 py-1 rounded-lg border border-neutral-700 outline-none cursor-pointer text-xs"
+              >
+                {activeHotspots.map((h, i) => {
+                  const hKey = h.id || `hs-${h.ref}-${i}`;
+                  const sameRefHotspots = activeHotspots.filter(item => item.ref === h.ref);
+                  const instIndex = sameRefHotspots.findIndex((item, idx) => (item.id || `hs-${item.ref}-${idx}`) === hKey) + 1;
+                  const multiTag = sameRefHotspots.length > 1 ? ` (Pino ${instIndex}/${sameRefHotspots.length})` : '';
+                  const partDesc = diagram.parts.find(p => p.ref === h.ref)?.description || '';
+
+                  return (
+                    <option key={hKey} value={hKey}>
+                      Ref #{h.ref}{multiTag} - {partDesc.substring(0, 24)} [{h.x}%, {h.y}%]
+                    </option>
+                  );
+                })}
+              </select>
+
+              <button
+                onClick={handleAddDuplicatePin}
+                className="px-2.5 py-1 bg-neutral-900 hover:bg-neutral-800 text-amber-400 font-bold rounded-lg transition border border-neutral-700 text-xs flex items-center gap-1"
+                title="Adicionar outro pino para o mesmo número nesta figura"
+              >
+                <Pin className="w-3.5 h-3.5" />
+                <span>+ Duplicar Pino</span>
+              </button>
+
+              <button
+                onClick={handleDeleteHotspotPin}
+                className="px-2 py-1 bg-red-900 hover:bg-red-950 text-white rounded-lg transition text-xs flex items-center gap-1 border border-red-700"
+                title="Excluir este pino selecionado"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+                <span>Excluir</span>
+              </button>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handleAutoDetectHotspots}
+                disabled={isDetecting}
+                className="px-3 py-1 bg-amber-400 hover:bg-amber-300 text-black font-bold rounded-lg transition shadow flex items-center gap-1.5 disabled:opacity-50"
+                title="Analisar pixels da figura e posicionar pinos sobre as numerações automaticamente"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>{isDetecting ? 'Analisando Imagem...' : 'Auto-Detectar (Visão)'}</span>
+              </button>
+
+              <button
+                onClick={handleSaveHotspots}
+                className="px-3 py-1 bg-emerald-500 hover:bg-emerald-400 text-black font-bold rounded-lg transition shadow flex items-center gap-1"
+              >
+                <Save className="w-3.5 h-3.5" />
+                {savedFeedback ? 'Salvo!' : 'Salvar Posições'}
+              </button>
+
+              <button
+                onClick={handleCopyHotspotsJSON}
+                className="px-3 py-1 bg-neutral-900 hover:bg-neutral-800 text-white font-bold rounded-lg transition shadow flex items-center gap-1"
+              >
+                <Eye className="w-3.5 h-3.5 text-amber-400" />
+                {copiedFeedback ? 'Copiado!' : 'Copiar JSON'}
+              </button>
+
+              <button
+                onClick={handleResetHotspots}
+                className="px-2.5 py-1 bg-red-800 hover:bg-red-900 text-white rounded-lg transition text-[11px]"
+                title="Restaurar posições originais"
+              >
+                Restaurar Padrão
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Bulk marked items bar if any item marked */}
         {markedRefs.size > 0 && (
@@ -1118,12 +1367,13 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
         {/* Main Diagram Canvas with Image & Hotspots */}
         <div 
           ref={containerRef}
+          onClick={handleDiagramClickForCalibration}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          className={`flex-1 relative overflow-hidden flex items-center justify-center p-2 sm:p-4 min-h-[440px] md:min-h-[520px] bg-white ${
-            isDragging ? 'cursor-grabbing' : 'cursor-grab'
+          className={`flex-1 relative overflow-hidden flex items-center justify-center p-2 max-h-[68vh] min-h-[420px] bg-white ${
+            isCalibratingPins ? 'cursor-crosshair ring-2 ring-red-500 ring-inset' : isDragging ? 'cursor-grabbing' : 'cursor-grab'
           }`}
         >
           {/* Scalable & Draggable Canvas Content */}
@@ -1133,7 +1383,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               transformOrigin: 'center center',
               transition: isDragging ? 'none' : 'transform 0.15s ease-out'
             }}
-            className="w-full max-w-[850px] aspect-[10/8] relative bg-white"
+            className="w-full max-w-[850px] aspect-[480/797] relative bg-white"
           >
             {/* The Direct PNG / Technical Diagram Image */}
             <div className="w-full h-full relative">
@@ -1227,7 +1477,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
                 transformOrigin: 'center center',
                 transition: isDragging ? 'none' : 'transform 0.15s ease-out'
               }}
-              className="w-full max-w-[1000px] aspect-[10/8] relative bg-white"
+              className="w-full max-w-[900px] aspect-[480/797] relative bg-white rounded-xl overflow-hidden shadow-2xl"
             >
               <div className="w-full h-full relative">
                 {renderDiagramImage()}

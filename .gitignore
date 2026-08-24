@@ -6,3 +6,11 @@ coverage/
 *.log
 .env*
 !.env.example
+# Desconsiderar temporários de desenvolvimento e imagens em scratch
+scratch/
+*.jpg.bak
+
+# Ignorar pastas pesadas de catalogos de imagens e arquivos locais de entrada
+public/catalogos/
+Catalogos/
+pin_locator/

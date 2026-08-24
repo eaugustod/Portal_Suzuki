@@ -105,8 +105,8 @@
     "semantic_hash": "46a028016f7ee148d4d987d3f02f3573"
   },
   "src/components/parts/PartsCatalogView.tsx": {
-    "mtime": 1787588395.3070672,
-    "ast_hash": "dabe979d2eb154ae6c034b8b24dbed47",
+    "mtime": 1787343420.716485,
+    "ast_hash": "b6c0f272986be2b7c785ccb0cbc8dc84",
     "semantic_hash": ""
   },
   "src/components/parts/PartsDiagramCarousel.tsx": {
@@ -115,8 +115,8 @@
     "semantic_hash": ""
   },
   "src/components/parts/PartsExplodedDiagram.tsx": {
-    "mtime": 1787588361.9374824,
-    "ast_hash": "f77ef49a2513be137abec132e9725a04",
+    "mtime": 1787586891.953233,
+    "ast_hash": "cdb721d5e4eecb9e24fb8ad6f235927f",
     "semantic_hash": ""
   },
   "src/components/parts/PartsOrderMirrorModal.tsx": {

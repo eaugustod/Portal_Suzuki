@@ -1,0 +1,382 @@
+[
+  {
+    "target": {
+      "folder": "Hayabusa M5",
+      "id": "suzuki-hayabusa-gsx1300r",
+      "brand": "Suzuki",
+      "name": "Hayabusa GSX1300R",
+      "commercial": "Suzuki Hayabusa GSX1300R M5",
+      "years": "2024 - 2026",
+      "cc": "1.340 cc",
+      "cat": "Hypersport",
+      "slug": "hayabusa_m5",
+      "xlsx_pattern": "GSX1300RRQM5_P37.*\\.xlsx$",
+      "eps_pattern": "GSX1300RRQM5_P37\\.eps"
+    },
+    "diagrams_count": 78,
+    "parts_count": 1520,
+    "pins_count": 2475,
+    "var_name": "HAYABUSA_M5_CONVERTED_DIAGRAMS",
+    "file_name": "hayabusa_m5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "GSX-S1000GX M5",
+      "id": "suzuki-gsx-s1000gx",
+      "brand": "Suzuki",
+      "name": "GSX-S1000GX",
+      "commercial": "Suzuki GSX-S1000GX Grand Crossover",
+      "years": "2024 - 2027",
+      "cc": "999 cc",
+      "cat": "Grand Crossover",
+      "slug": "gsx_s1000gx_m5",
+      "xlsx_pattern": "GSX-S1000XM5_P37.*\\.xlsx$|GSX-S1000GX M5\\.xlsx$",
+      "eps_pattern": "GSX-S1000XM5_P37\\.eps"
+    },
+    "diagrams_count": 81,
+    "parts_count": 1361,
+    "pins_count": 2289,
+    "var_name": "GSX_S1000GX_M5_CONVERTED_DIAGRAMS",
+    "file_name": "gsx_s1000gx_m5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "GSX-S1000GT M5",
+      "id": "suzuki-gsx-s1000gt",
+      "brand": "Suzuki",
+      "name": "GSX-S1000 GT",
+      "commercial": "Suzuki GSX-S1000GT Grand Tourer",
+      "years": "2023 - 2027",
+      "cc": "999 cc",
+      "cat": "Grand Tourer",
+      "slug": "gsx_s1000gt_m5",
+      "xlsx_pattern": "GSX-S1000TM5.*\\.xlsx$",
+      "eps_pattern": "GSX-S1000TM5_P37\\.eps"
+    },
+    "diagrams_count": 72,
+    "parts_count": 1316,
+    "pins_count": 2232,
+    "var_name": "GSX_S1000GT_M5_CONVERTED_DIAGRAMS",
+    "file_name": "gsx_s1000gt_m5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "GSX-8S M5",
+      "id": "suzuki-gsx-8s-m5",
+      "brand": "Suzuki",
+      "name": "GSX-8S",
+      "commercial": "Suzuki GSX-8S M5 Parallel-Twin",
+      "years": "2024 - 2026",
+      "cc": "776 cc",
+      "cat": "Naked",
+      "slug": "gsx_8s_m5",
+      "xlsx_pattern": "GSX800M5_P37.*\\.xlsx$|GSX-8S M5\\.xlsx$",
+      "eps_pattern": "GSX800M5_P37\\.eps"
+    },
+    "diagrams_count": 77,
+    "parts_count": 1170,
+    "pins_count": 1801,
+    "var_name": "GSX_8S_M5_CONVERTED_DIAGRAMS",
+    "file_name": "gsx_8s_m5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "GSX-8S M6",
+      "id": "suzuki-gsx-8s-m6",
+      "brand": "Suzuki",
+      "name": "GSX-8S M6",
+      "commercial": "Suzuki GSX-8S M6",
+      "years": "2025 - 2027",
+      "cc": "776 cc",
+      "cat": "Naked",
+      "slug": "gsx_8s_m6",
+      "xlsx_pattern": "GSX800M6_P37\\.xlsx$",
+      "eps_pattern": "GSX800M6_P37\\.eps"
+    },
+    "diagrams_count": 77,
+    "parts_count": 1196,
+    "pins_count": 1781,
+    "var_name": "GSX_8S_M6_CONVERTED_DIAGRAMS",
+    "file_name": "gsx_8s_m6CatalogData"
+  },
+  {
+    "target": {
+      "folder": "GSX 8R M6",
+      "id": "suzuki-gsx-8r-m6",
+      "brand": "Suzuki",
+      "name": "GSX-8R",
+      "commercial": "Suzuki GSX-8R M6 Sport",
+      "years": "2025 - 2027",
+      "cc": "776 cc",
+      "cat": "Sport",
+      "slug": "gsx_8r_m6",
+      "xlsx_pattern": "GSX800FM6_P37\\.xlsx$",
+      "eps_pattern": "GSX800FM6_P37\\.eps"
+    },
+    "diagrams_count": 79,
+    "parts_count": 1251,
+    "pins_count": 1891,
+    "var_name": "GSX_8R_M6_CONVERTED_DIAGRAMS",
+    "file_name": "gsx_8r_m6CatalogData"
+  },
+  {
+    "target": {
+      "folder": "V-Strom800 M5",
+      "id": "suzuki-vstrom-800-m5",
+      "brand": "Suzuki",
+      "name": "V-Strom 800",
+      "commercial": "Suzuki V-Strom 800 M5",
+      "years": "2024 - 2027",
+      "cc": "776 cc",
+      "cat": "Adventure / Trail",
+      "slug": "vstrom_800_m5",
+      "xlsx_pattern": "DL800M5_P37\\.xlsx$",
+      "eps_pattern": "DL800M5_P37\\.eps"
+    },
+    "diagrams_count": 79,
+    "parts_count": 1211,
+    "pins_count": 1836,
+    "var_name": "VSTROM_800_M5_CONVERTED_DIAGRAMS",
+    "file_name": "vstrom_800_m5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "V-Strom800DE M6",
+      "id": "suzuki-vstrom-800de-m6",
+      "brand": "Suzuki",
+      "name": "V-Strom 800DE",
+      "commercial": "Suzuki V-Strom 800DE M6 Dual Explorer",
+      "years": "2025 - 2027",
+      "cc": "776 cc",
+      "cat": "Adventure / Trail",
+      "slug": "vstrom_800de_m6",
+      "xlsx_pattern": "DL800DEM6_P37\\.xlsx$",
+      "eps_pattern": "DL800DEM6_P37\\.eps"
+    },
+    "diagrams_count": 81,
+    "parts_count": 1333,
+    "pins_count": 2015,
+    "var_name": "VSTROM_800DE_M6_CONVERTED_DIAGRAMS",
+    "file_name": "vstrom_800de_m6CatalogData"
+  },
+  {
+    "target": {
+      "folder": "V-STROM 1050 M5",
+      "id": "suzuki-vstrom-1050-m5",
+      "brand": "Suzuki",
+      "name": "V-Strom 1050",
+      "commercial": "Suzuki V-Strom 1050 M5",
+      "years": "2024 - 2027",
+      "cc": "1.037 cc",
+      "cat": "Adventure / Trail",
+      "slug": "vstrom_1050_m5",
+      "xlsx_pattern": "DL1050M5_P37\\.xlsx$",
+      "eps_pattern": "DL1050M5_P37\\.eps"
+    },
+    "diagrams_count": 107,
+    "parts_count": 2205,
+    "pins_count": 3396,
+    "var_name": "VSTROM_1050_M5_CONVERTED_DIAGRAMS",
+    "file_name": "vstrom_1050_m5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "V-STROM 1050 E 1050XT M6",
+      "id": "suzuki-vstrom-1050-m6",
+      "brand": "Suzuki",
+      "name": "V-Strom 1050 / XT",
+      "commercial": "Suzuki V-Strom 1050 / 1050XT M6",
+      "years": "2025 - 2027",
+      "cc": "1.037 cc",
+      "cat": "Adventure / Trail",
+      "slug": "vstrom_1050_m6",
+      "xlsx_pattern": "DL1050M6_P37\\.xlsx$",
+      "eps_pattern": "DL1050M6_P37\\.eps"
+    },
+    "diagrams_count": 109,
+    "parts_count": 2241,
+    "pins_count": 3437,
+    "var_name": "VSTROM_1050_M6_CONVERTED_DIAGRAMS",
+    "file_name": "vstrom_1050_m6CatalogData"
+  },
+  {
+    "target": {
+      "folder": "V-Strom 650XT M5",
+      "id": "suzuki-vstrom-650xt-m5",
+      "brand": "Suzuki",
+      "name": "V-Strom 650XT",
+      "commercial": "Suzuki V-Strom 650XT M5",
+      "years": "2023 - 2025",
+      "cc": "645 cc",
+      "cat": "Adventure / Trail",
+      "slug": "vstrom_650xt_m5",
+      "xlsx_pattern": "DL650M5_P37\\.xlsx$|V-STROM 650XT M5\\.xlsx$",
+      "eps_pattern": "DL650M5_P37\\.eps"
+    },
+    "diagrams_count": 65,
+    "parts_count": 1211,
+    "pins_count": 2014,
+    "var_name": "VSTROM_650XT_M5_CONVERTED_DIAGRAMS",
+    "file_name": "vstrom_650xt_m5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "V-Strom 650XT M6",
+      "id": "suzuki-vstrom-650xt-m6",
+      "brand": "Suzuki",
+      "name": "V-Strom 650XT M6",
+      "commercial": "Suzuki V-Strom 650XT M6",
+      "years": "2025 - 2027",
+      "cc": "645 cc",
+      "cat": "Adventure / Trail",
+      "slug": "vstrom_650xt_m6",
+      "xlsx_pattern": "DL650M6_P37\\.xlsx$",
+      "eps_pattern": "DL650M6_P37\\.eps"
+    },
+    "diagrams_count": 65,
+    "parts_count": 1256,
+    "pins_count": 1927,
+    "var_name": "VSTROM_650XT_M6_CONVERTED_DIAGRAMS",
+    "file_name": "vstrom_650xt_m6CatalogData"
+  },
+  {
+    "target": {
+      "folder": "GSX-S1000 M5",
+      "id": "suzuki-gsx-s1000-m5",
+      "brand": "Suzuki",
+      "name": "GSX-S1000 M5",
+      "commercial": "Suzuki GSX-S1000 Naked M5",
+      "years": "2023 - 2026",
+      "cc": "999 cc",
+      "cat": "Naked",
+      "slug": "gsx_s1000_m5",
+      "xlsx_pattern": "Cat\u00e1logo GSXS1000M5\\.xlsx$",
+      "eps_pattern": "GSXS1000M5.*\\.eps"
+    },
+    "diagrams_count": 71,
+    "parts_count": 1267,
+    "pins_count": 2081,
+    "var_name": "GSX_S1000_M5_CONVERTED_DIAGRAMS",
+    "file_name": "gsx_s1000_m5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "GSX-S1000 M6",
+      "id": "suzuki-gsx-s1000-m6",
+      "brand": "Suzuki",
+      "name": "GSX-S1000 M6",
+      "commercial": "Suzuki GSX-S1000 Naked M6",
+      "years": "2025 - 2027",
+      "cc": "999 cc",
+      "cat": "Naked",
+      "slug": "gsx_s1000_m6",
+      "xlsx_pattern": "GSX-S1000M6_P37.*\\.xlsx$",
+      "eps_pattern": "GSX-S1000M6_P37\\.eps"
+    },
+    "diagrams_count": 71,
+    "parts_count": 1315,
+    "pins_count": 2080,
+    "var_name": "GSX_S1000_M6_CONVERTED_DIAGRAMS",
+    "file_name": "gsx_s1000_m6CatalogData"
+  },
+  {
+    "target": {
+      "folder": "GSX1300RRQM6_P37.eps",
+      "id": "suzuki-hayabusa-m6",
+      "brand": "Suzuki",
+      "name": "Hayabusa M6",
+      "commercial": "Suzuki Hayabusa GSX1300R M6",
+      "years": "2025 - 2027",
+      "cc": "1.340 cc",
+      "cat": "Hypersport",
+      "slug": "hayabusa_m6",
+      "xlsx_pattern": "GSX1300RRQM6_P37\\.xlsx$",
+      "eps_pattern": "GSX1300RRQM6_P37\\.eps"
+    },
+    "diagrams_count": 94,
+    "parts_count": 1819,
+    "pins_count": 3023,
+    "var_name": "HAYABUSA_M6_CONVERTED_DIAGRAMS",
+    "file_name": "hayabusa_m6CatalogData"
+  },
+  {
+    "target": {
+      "folder": "Master Ride P5",
+      "id": "haojue-master-ride-150",
+      "brand": "Haojue",
+      "name": "Master Ride 150",
+      "commercial": "Haojue Master Ride 150 P5",
+      "years": "2023 - 2026",
+      "cc": "149 cc",
+      "cat": "Custom / Cruiser",
+      "slug": "master_ride_p5",
+      "xlsx_pattern": "Master Ride P5\\.xlsx$",
+      "eps_pattern": "MasterRide.*\\.eps"
+    },
+    "diagrams_count": 52,
+    "parts_count": 930,
+    "pins_count": 1202,
+    "var_name": "MASTER_RIDE_P5_CONVERTED_DIAGRAMS",
+    "file_name": "master_ride_p5CatalogData"
+  },
+  {
+    "target": {
+      "folder": "DL160 Nova",
+      "id": "haojue-dl160",
+      "brand": "Haojue",
+      "name": "DL 160",
+      "commercial": "Haojue DL 160 Trail",
+      "years": "2024 - 2027",
+      "cc": "160 cc",
+      "cat": "Adventure / Trail",
+      "slug": "haojue_dl160",
+      "xlsx_pattern": "DL 160 F\\.xlsx$",
+      "eps_pattern": "DL160.*\\.eps"
+    },
+    "diagrams_count": 53,
+    "parts_count": 909,
+    "pins_count": 1322,
+    "var_name": "HAOJUE_DL160_CONVERTED_DIAGRAMS",
+    "file_name": "haojue_dl160CatalogData"
+  },
+  {
+    "target": {
+      "folder": "368G",
+      "id": "zontes-368g",
+      "brand": "Zontes",
+      "name": "368G",
+      "commercial": "Zontes 368G Crossover Scooter",
+      "years": "2025 - 2027",
+      "cc": "368 cc",
+      "cat": "Scooter",
+      "slug": "zontes_368g",
+      "xlsx_pattern": "26 Models 368G.*\\.xlsx$|Carenagens\\.xlsx$",
+      "eps_pattern": "368G.*\\.eps"
+    },
+    "diagrams_count": 0,
+    "parts_count": 0,
+    "pins_count": 0,
+    "var_name": "ZONTES_368G_CONVERTED_DIAGRAMS",
+    "file_name": "zontes_368gCatalogData"
+  },
+  {
+    "target": {
+      "folder": "T501",
+      "id": "zontes-t501",
+      "brand": "Zontes",
+      "name": "T 501",
+      "commercial": "Zontes T 501 Adventure",
+      "years": "2025 - 2027",
+      "cc": "493 cc",
+      "cat": "Adventure / Trail",
+      "slug": "zontes_t501",
+      "xlsx_pattern": "ZT500-T.*\\.xlsx$",
+      "eps_pattern": "T501.*\\.eps"
+    },
+    "diagrams_count": 0,
+    "parts_count": 0,
+    "pins_count": 0,
+    "var_name": "ZONTES_T501_CONVERTED_DIAGRAMS",
+    "file_name": "zontes_t501CatalogData"
+  }
+]

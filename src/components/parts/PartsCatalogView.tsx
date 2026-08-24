@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
   Bike, 
   ShoppingCart, 
@@ -22,7 +22,9 @@ import {
   Plus,
   RefreshCw,
   SlidersHorizontal,
-  ChevronDown
+  ChevronDown,
+  ChevronUp,
+  Upload
 } from 'lucide-react';
 import { 
   PartsBrand, 
@@ -37,8 +39,8 @@ import {
 } from '../../types';
 import { 
   MOCK_PARTS_MODELS, 
-  MOCK_HAYABUSA_DIAGRAMS, 
-  MOCK_VSTROM800_DIAGRAMS,
+  MOCK_HAYABUSA_DIAGRAMS,
+  ALL_CATALOG_DIAGRAMS_MAP,
   INITIAL_MOCK_PARTS_ORDERS 
 } from '../../data/mockPartsData';
 import { PartsExplodedDiagram } from './PartsExplodedDiagram';
@@ -46,6 +48,7 @@ import { PartsTable } from './PartsTable';
 import { PartsDiagramCarousel } from './PartsDiagramCarousel';
 import { PartsCartDrawer } from './PartsCartDrawer';
 import { PartsOrderMirrorModal } from './PartsOrderMirrorModal';
+import { PartsCatalogUploadModal } from './PartsCatalogUploadModal';
 
 interface PartsCatalogViewProps {
   currentScope: DealershipScope;
@@ -68,22 +71,52 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
   // Main Navigation Tabs within the module
   const [activeModuleTab, setActiveModuleTab] = useState<'catalog' | 'orders'>('catalog');
 
+  // Custom Catalogs & Upload Modal State
+  const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
+  const [customModels, setCustomModels] = useState<PartsModelSummary[]>([]);
+  const [customDiagramsMap, setCustomDiagramsMap] = useState<{ [modelId: string]: PartsDiagramGroup[] }>({});
+
+  const allModels = useMemo(() => {
+    return [...customModels, ...MOCK_PARTS_MODELS];
+  }, [customModels]);
+
   // E-commerce Brand & Model Selection State
   const [selectedBrand, setSelectedBrand] = useState<PartsBrand | 'ALL'>('ALL');
   const [modelSearchQuery, setModelSearchQuery] = useState('');
   const [selectedModel, setSelectedModel] = useState<PartsModelSummary | null>(MOCK_PARTS_MODELS[0]); // Default to Hayabusa
+  const [isModelsSectionExpanded, setIsModelsSectionExpanded] = useState<boolean>(true);
 
   // EPC Diagram & Selection State
   const activeDiagrams = useMemo(() => {
-    if (selectedModel?.id === 'suzuki-vstrom-800-m5') {
-      return MOCK_VSTROM800_DIAGRAMS;
+    if (!selectedModel) return MOCK_HAYABUSA_DIAGRAMS;
+    if (customDiagramsMap[selectedModel.id]) {
+      return customDiagramsMap[selectedModel.id];
+    }
+    if (ALL_CATALOG_DIAGRAMS_MAP[selectedModel.id]) {
+      return ALL_CATALOG_DIAGRAMS_MAP[selectedModel.id];
     }
     return MOCK_HAYABUSA_DIAGRAMS;
-  }, [selectedModel]);
+  }, [selectedModel, customDiagramsMap]);
 
   const [selectedDiagram, setSelectedDiagram] = useState<PartsDiagramGroup>(MOCK_HAYABUSA_DIAGRAMS[0]);
+
+  useEffect(() => {
+    if (activeDiagrams && activeDiagrams.length > 0) {
+      setSelectedDiagram(activeDiagrams[0]);
+    }
+  }, [selectedModel, activeDiagrams]);
+
   const [selectedRef, setSelectedRef] = useState<number | null>(null);
   const [hoveredRef, setHoveredRef] = useState<number | null>(null);
+
+  const handleCatalogImportSuccess = (newModel: PartsModelSummary, diagrams: PartsDiagramGroup[]) => {
+    setCustomModels(prev => [newModel, ...prev]);
+    setCustomDiagramsMap(prev => ({ ...prev, [newModel.id]: diagrams }));
+    setSelectedModel(newModel);
+    if (diagrams.length > 0) {
+      setSelectedDiagram(diagrams[0]);
+    }
+  };
 
   // Cart State
   const [cartItems, setCartItems] = useState<PartsCartItem[]>([]);
@@ -268,7 +301,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
 
   // Filtered Models for E-Commerce Catalog
   const filteredModels = useMemo(() => {
-    return MOCK_PARTS_MODELS.filter(model => {
+    return allModels.filter(model => {
       const matchBrand = selectedBrand === 'ALL' || model.brand === selectedBrand;
       const matchSearch = !modelSearchQuery.trim() || 
         model.name.toLowerCase().includes(modelSearchQuery.toLowerCase()) ||
@@ -277,7 +310,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
         model.category.toLowerCase().includes(modelSearchQuery.toLowerCase());
       return matchBrand && matchSearch;
     });
-  }, [selectedBrand, modelSearchQuery]);
+  }, [allModels, selectedBrand, modelSearchQuery]);
 
   // Filtered Orders for the Orders Tab
   const scopedOrders = useMemo(() => {
@@ -354,6 +387,15 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
               </button>
             </div>
 
+            {/* Upload New Catalog Modal Trigger */}
+            <button
+              onClick={() => setIsUploadModalOpen(true)}
+              className="px-3.5 py-2.5 bg-neutral-900 border border-neutral-700 hover:border-red-500 hover:bg-neutral-800 text-white font-bold text-xs rounded-2xl flex items-center gap-2 transition-all shadow-md"
+            >
+              <Upload className="w-4 h-4 text-red-500" />
+              <span>Subir Novo Catálogo</span>
+            </button>
+
             {/* Shopping Cart Floating Drawer Trigger */}
             <button
               onClick={() => setIsCartOpen(true)}
@@ -380,39 +422,63 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
           {/* STEP 1: BRAND SELECTOR & MOTORCYCLE MODELS GALLERY */}
           <div className="bg-[#121215] border border-[#27272a] rounded-3xl p-5 sm:p-6 shadow-xl space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div>
-                <h3 className="text-base sm:text-lg font-bold text-white tracking-tight flex items-center gap-2">
-                  <Bike className="w-5 h-5 text-amber-400" />
-                  1. Escolha a Marca & Modelo da Motocicleta
-                </h3>
-                <p className="text-xs text-neutral-400">
-                  Clique na moto para carregar os diagramas técnicos e vistas explodidas oficiais (EPC).
-                </p>
+              <div className="flex items-center justify-between w-full sm:w-auto">
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight flex items-center gap-2">
+                    <Bike className="w-5 h-5 text-amber-400" />
+                    1. Escolha a Marca & Modelo da Motocicleta
+                  </h3>
+                  <p className="text-xs text-neutral-400">
+                    Clique na moto para carregar os diagramas técnicos e vistas explodidas oficiais (EPC).
+                  </p>
+                </div>
               </div>
 
-              {/* Search by Model Name or Chassis VIN */}
-              <div className="relative min-w-[240px] sm:min-w-[280px]">
-                <Search className="w-4 h-4 absolute left-3.5 top-3 text-neutral-400" />
-                <input
-                  type="text"
-                  value={modelSearchQuery}
-                  onChange={(e) => setModelSearchQuery(e.target.value)}
-                  placeholder="Buscar modelo ou prefixo de chassi..."
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded-2xl pl-10 pr-4 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
-                />
-                {modelSearchQuery && (
-                  <button 
-                    onClick={() => setModelSearchQuery('')}
-                    className="absolute right-3 top-2.5 text-neutral-400 hover:text-white text-xs"
-                  >
-                    ✕
-                  </button>
-                )}
+              <div className="flex items-center gap-3">
+                {/* Expand / Collapse Section Button */}
+                <button
+                  onClick={() => setIsModelsSectionExpanded(!isModelsSectionExpanded)}
+                  className="px-3 py-1.5 bg-neutral-900 border border-neutral-700 hover:border-amber-400 text-amber-400 font-bold text-xs rounded-xl flex items-center gap-1.5 transition-all shadow-sm shrink-0"
+                  title={isModelsSectionExpanded ? "Comprimir galeria de modelos" : "Expandir galeria de modelos"}
+                >
+                  {isModelsSectionExpanded ? (
+                    <>
+                      <ChevronUp className="w-4 h-4" />
+                      <span className="hidden md:inline">Recolher Modelos</span>
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown className="w-4 h-4" />
+                      <span className="hidden md:inline">Expandir Modelos</span>
+                    </>
+                  )}
+                </button>
+
+                {/* Search by Model Name or Chassis VIN */}
+                <div className="relative min-w-[200px] sm:min-w-[260px]">
+                  <Search className="w-4 h-4 absolute left-3.5 top-3 text-neutral-400" />
+                  <input
+                    type="text"
+                    value={modelSearchQuery}
+                    onChange={(e) => setModelSearchQuery(e.target.value)}
+                    placeholder="Buscar modelo ou prefixo de chassi..."
+                    className="w-full bg-neutral-900 border border-neutral-800 rounded-2xl pl-10 pr-4 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
+                  />
+                  {modelSearchQuery && (
+                    <button 
+                      onClick={() => setModelSearchQuery('')}
+                      className="absolute right-3 top-2.5 text-neutral-400 hover:text-white text-xs"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
 
             {/* Brand Filter Tabs matching official Suzuki & JTZ Motors layout */}
-            <div className="flex flex-col lg:flex-row gap-6">
+            {isModelsSectionExpanded && (
+              <div className="flex flex-col lg:flex-row gap-6 animate-in fade-in duration-200">
               
               {/* Left Brand Selector Bar (Matching the 5 uploaded images) */}
               <div className="w-full lg:w-52 shrink-0 bg-neutral-900/90 border border-neutral-800 rounded-2xl p-3 flex lg:flex-col gap-1 overflow-x-auto">
@@ -482,7 +548,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">2</span>
                 </button>
 
-                <div className="hidden lg:block my-2 border-t border-neutral-800" />
+                <div className="lg:pt-2 pt-0">
+                  <div className="h-px bg-neutral-800 my-1 hidden lg:block" />
+                </div>
 
                 <button
                   onClick={() => setSelectedBrand('ALL')}
@@ -508,9 +576,10 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                         key={model.id}
                         onClick={() => {
                           setSelectedModel(model);
-                          const diags = model.id === 'suzuki-vstrom-800-m5' ? MOCK_VSTROM800_DIAGRAMS : MOCK_HAYABUSA_DIAGRAMS;
+                          const diags = ALL_CATALOG_DIAGRAMS_MAP[model.id] || MOCK_HAYABUSA_DIAGRAMS;
                           setSelectedDiagram(diags[0]);
                           setSelectedRef(null);
+                          setIsModelsSectionExpanded(false);
                         }}
                         className={`
                           rounded-2xl border p-4 cursor-pointer transition-all duration-200 group flex flex-col justify-between relative
@@ -584,6 +653,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 </div>
               </div>
             </div>
+            )}
           </div>
 
           {/* STEP 2: INTERACTIVE EPC EXPLODED PARTS CATALOG VIEW (MATCHING USER SCREENSHOT) */}
@@ -940,6 +1010,13 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
           onDispatchOrder={handleDispatchOrder}
         />
       )}
+
+      {/* EPC Catalog Excel & Images Upload Modal */}
+      <PartsCatalogUploadModal
+        isOpen={isUploadModalOpen}
+        onClose={() => setIsUploadModalOpen(false)}
+        onImportSuccess={handleCatalogImportSuccess}
+      />
 
     </div>
   );

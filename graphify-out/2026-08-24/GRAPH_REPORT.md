@@ -1,7 +1,7 @@
 # Graph Report - Portal Suzuki  (2026-08-24)
 
 ## Corpus Check
-- 104 files · ~118,680,181 words
+- 104 files · ~118,680,036 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e1d41e25`
+- Built from commit: `47f5444c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
