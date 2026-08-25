@@ -14,6 +14,8 @@
   "12": "mockPartsData.ts",
   "13": "scripts",
   "14": "package.json",
+  "15": "react",
+  "16": "vite",
   "17": "MOCK_GSX_8R_M6_DIAGRAMS",
   "18": "MOCK_GSX_8S_M5_DIAGRAMS",
   "19": "MOCK_GSX_8S_M6_DIAGRAMS",
@@ -33,5 +35,13 @@
   "33": "MOCK_VSTROM_800_M5_DIAGRAMS",
   "34": "MOCK_VSTROM_800DE_M6_DIAGRAMS",
   "35": "MOCK_ZONTES_368G_DIAGRAMS",
-  "36": "MOCK_ZONTES_T501_DIAGRAMS"
+  "36": "MOCK_ZONTES_T501_DIAGRAMS",
+  "37": "pin_locator.py",
+  "38": "Pin Locator — EPS / PDF / PNG",
+  "39": "batch_all_catalogs.py",
+  "40": "merge_pin_locator.py",
+  "41": "merge_direct_eps_pins.py",
+  "42": "node_detect_vision.js",
+  "43": "apply_vision_all_catalogs.py",
+  "45": "py_vision_detector.py"
 }

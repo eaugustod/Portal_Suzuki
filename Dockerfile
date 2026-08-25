@@ -18,7 +18,7 @@ ENV NODE_ENV=production
 ENV PORT=3000
 
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 
 # Copia o build estático do React e o backend Node.js
 COPY --from=builder /app/dist ./dist
