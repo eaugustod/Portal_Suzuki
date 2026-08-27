@@ -52,15 +52,15 @@ export const PartsTable: React.FC<PartsTableProps> = ({
   };
 
   // Filter parts by search query (Ref, Part Number or Denominação)
-  const filteredParts = diagram.parts.filter(part => {
+  const filteredParts = (diagram?.parts || []).filter(part => {
+    if (!part) return false;
     if (!searchQuery.trim()) return true;
     const q = searchQuery.toLowerCase();
-    return (
-      part.ref.toString().includes(q) ||
-      part.partNumber.toLowerCase().includes(q) ||
-      part.description.toLowerCase().includes(q) ||
-      (part.observation && part.observation.toLowerCase().includes(q))
-    );
+    const refStr = (part.ref ?? '').toString().toLowerCase();
+    const partNum = (part.partNumber || (part as any).code || '').toLowerCase();
+    const desc = (part.description || (part as any).name || '').toLowerCase();
+    const obs = (part.observation || '').toLowerCase();
+    return refStr.includes(q) || partNum.includes(q) || desc.includes(q) || obs.includes(q);
   });
 
   return (
@@ -128,15 +128,40 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                 </td>
               </tr>
             ) : (
-              filteredParts.map((part) => {
+              filteredParts.map((part, index) => {
+                const partId = part.id || `part-${diagram.id}-${part.ref || index}`;
+                const partNumber = part.partNumber || (part as any).code || 'N/A';
+                const description = part.description || (part as any).name || 'Peça Genuína';
+                const factoryPrice = part.factoryPrice ?? (part as any).price ?? 0;
+                const msrpPrice = part.msrpPrice ?? (factoryPrice * 1.5);
+                const stockJundiai = part.stockJundiai ?? (part as any).stock ?? 10;
+                const stockManaus = part.stockManaus ?? 5;
+                const unitQuantity = part.unitQuantity ?? (part as any).qty ?? 1;
+
                 const isSelected = selectedRef === part.ref;
                 const isHovered = hoveredRef === part.ref;
-                const isAdded = addedItemIds[part.id];
-                const qty = quantities[part.id] || 1;
+                const isAdded = addedItemIds[partId];
+                const qty = quantities[partId] || 1;
+
+                // Standardized safe part object to pass to handleAdd
+                const safePart: PartsItem = {
+                  ...part,
+                  id: partId,
+                  ref: part.ref ?? 0,
+                  partNumber,
+                  description,
+                  factoryPrice,
+                  msrpPrice,
+                  stockJundiai,
+                  stockManaus,
+                  unitQuantity: Number(unitQuantity) || 1,
+                  inStock: stockJundiai > 0 || stockManaus > 0,
+                  categoryGroup: part.categoryGroup || 'Genuíno'
+                };
 
                 return (
                   <tr
-                    key={part.id}
+                    key={partId}
                     onClick={() => onSelectRef(part.ref)}
                     onMouseEnter={() => onHoverRef(part.ref)}
                     onMouseLeave={() => onHoverRef(null)}
@@ -159,7 +184,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                           : 'bg-neutral-800 text-neutral-300 group-hover:bg-neutral-700'
                         }
                       `}>
-                        {part.ref}
+                        {part.ref ?? '—'}
                       </span>
                     </td>
 
@@ -167,7 +192,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                     <td className="p-3 font-mono font-bold text-white text-xs whitespace-nowrap">
                       <div className="flex items-center gap-1.5">
                         <span className="group-hover:text-amber-300 transition-colors">
-                          {part.partNumber}
+                          {partNumber}
                         </span>
                         {part.isEssentialMaintenance && (
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" title="Item de Giro Essencial" />
@@ -178,7 +203,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                     {/* Denominação / Descrição */}
                     <td className="p-3">
                       <div className="font-bold text-neutral-200 group-hover:text-white line-clamp-1">
-                        {part.description}
+                        {description}
                       </div>
                       {part.subDescription && (
                         <span className="text-[10px] text-neutral-400 block line-clamp-1">
@@ -199,35 +224,35 @@ export const PartsTable: React.FC<PartsTableProps> = ({
 
                     {/* UN (Qtd no conjunto) */}
                     <td className="p-3 text-center text-neutral-300 font-bold">
-                      {part.unitQuantity}
+                      {unitQuantity}
                     </td>
 
                     {/* CD Estoque */}
                     <td className="p-3 text-center">
                       <div className="flex flex-col items-center gap-0.5">
                         <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
-                          part.stockJundiai > 20
+                          stockJundiai > 20
                             ? 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30'
-                            : part.stockJundiai > 0
+                            : stockJundiai > 0
                             ? 'bg-amber-500/15 text-amber-400 border-amber-500/30'
                             : 'bg-red-500/15 text-red-400 border-red-500/30'
                         }`}>
-                          {part.stockJundiai > 0 ? `${part.stockJundiai} un. CD-SP` : 'Sob Pedido'}
+                          {stockJundiai > 0 ? `${stockJundiai} un. CD-SP` : 'Sob Pedido'}
                         </span>
                         <span className="text-[9px] text-neutral-400 font-mono">
-                          +{part.stockManaus} Manaus
+                          +{stockManaus} Manaus
                         </span>
                       </div>
                     </td>
 
                     {/* Custo de Fábrica Concessionária */}
                     <td className="p-3 text-right font-mono font-bold text-white">
-                      R$ {part.factoryPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                      R$ {factoryPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                     </td>
 
                     {/* PPS Varejo */}
                     <td className="p-3 text-right hidden sm:table-cell font-mono text-neutral-400 text-[11px]">
-                      R$ {part.msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                      R$ {msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                     </td>
 
                     {/* Ação Comprar / Quantidade */}
@@ -236,7 +261,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                         {/* Qtd Controls */}
                         <div className="flex items-center bg-neutral-900 border border-neutral-700 rounded-lg p-0.5">
                           <button
-                            onClick={() => handleQuantityChange(part.id, -1)}
+                            onClick={() => handleQuantityChange(partId, -1)}
                             className="w-5 h-5 flex items-center justify-center text-neutral-400 hover:text-white rounded hover:bg-neutral-800"
                           >
                             <Minus className="w-3 h-3" />
@@ -245,7 +270,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                             {qty}
                           </span>
                           <button
-                            onClick={() => handleQuantityChange(part.id, 1)}
+                            onClick={() => handleQuantityChange(partId, 1)}
                             className="w-5 h-5 flex items-center justify-center text-neutral-400 hover:text-white rounded hover:bg-neutral-800"
                           >
                             <Plus className="w-3 h-3" />
@@ -254,7 +279,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
 
                         {/* Add to Cart Button */}
                         <button
-                          onClick={() => handleAdd(part)}
+                          onClick={() => handleAdd(safePart)}
                           className={`
                             px-2.5 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all duration-200 shadow-sm
                             ${isAdded

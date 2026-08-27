@@ -173,9 +173,9 @@ export const PartsCartDrawer: React.FC<PartsCartDrawerProps> = ({
                           {item.part.observation && <span className="ml-2 font-mono">({item.part.observation})</span>}
                         </div>
                         <div className="text-[11px] font-mono text-neutral-400">
-                          Unit: R$ {item.unitPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                          Unit: R$ {(item.unitPrice ?? 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                           <span className="text-emerald-400 ml-2">
-                            (PPS: R$ {item.part.msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })})
+                            (PPS: R$ {(item.part.msrpPrice ?? (item.unitPrice * 1.5) ?? 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })})
                           </span>
                         </div>
                       </div>

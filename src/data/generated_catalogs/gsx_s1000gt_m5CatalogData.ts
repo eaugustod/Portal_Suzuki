@@ -106,19 +106,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "OPT,NOT ILLUSTRATED"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig101a-7",
-        "ref": 0,
-        "partNumber": "SUZ-FIG101A-7",
-        "description": "5.5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 214.4,
-        "msrpPrice": 310.88,
-        "stockManaus": 36,
-        "stockJundiai": 41,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig101a-8",
         "ref": 7,
         "partNumber": "11482-40F10-000",
@@ -464,19 +451,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig102a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG102A-6",
-        "description": ".5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 214.4,
-        "msrpPrice": 310.88,
-        "stockManaus": 36,
-        "stockJundiai": 41,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -4809,19 +4783,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "stockJundiai": 39,
         "inStock": true,
         "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig120a-27",
-        "ref": 0,
-        "partNumber": "SUZ-FIG120A-27",
-        "description": "7)",
-        "unitQuantity": 1,
-        "factoryPrice": 112.4,
-        "msrpPrice": 162.98,
-        "stockManaus": 11,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Motor"
       }
     ]
   },
@@ -4937,19 +4898,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig122a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG122A-2",
-        "description": "75)",
-        "unitQuantity": 1,
-        "factoryPrice": 198.4,
-        "msrpPrice": 287.68,
-        "stockManaus": 34,
-        "stockJundiai": 35,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig122a-3",
         "ref": 2,
         "partNumber": "09206-12006-000",
@@ -5011,19 +4959,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig122a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG122A-8",
-        "description": "17)",
-        "unitQuantity": 1,
-        "factoryPrice": 246.4,
-        "msrpPrice": 357.28,
-        "stockManaus": 40,
-        "stockJundiai": 53,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -10489,19 +10424,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig201a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-8",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 230.4,
-        "msrpPrice": 334.08,
-        "stockManaus": 38,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig201a-9",
         "ref": 8,
         "partNumber": "21442-41G20-000",
@@ -10515,19 +10437,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig201a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-10",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 558.4,
-        "msrpPrice": 809.68,
-        "stockManaus": 41,
-        "stockJundiai": 23,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig201a-11",
         "ref": 9,
         "partNumber": "21452-48K00-000",
@@ -10537,19 +10446,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 937.28,
         "stockManaus": 13,
         "stockJundiai": 54,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig201a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-12",
-        "description": "3)",
-        "unitQuantity": 1,
-        "factoryPrice": 574.4,
-        "msrpPrice": 832.88,
-        "stockManaus": 43,
-        "stockJundiai": 29,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -10576,19 +10472,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 844.48,
         "stockManaus": 43,
         "stockJundiai": 30,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig201a-15",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-15",
-        "description": "3)",
-        "unitQuantity": 1,
-        "factoryPrice": 88.4,
-        "msrpPrice": 128.18,
-        "stockManaus": 8,
-        "stockJundiai": 38,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -11301,19 +11184,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig206a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG206A-4",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -13456,19 +13326,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Elétrica"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig310a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG310A-2",
-        "description": "H)",
-        "unitQuantity": 1,
-        "factoryPrice": 190.4,
-        "msrpPrice": 276.08,
-        "stockManaus": 33,
-        "stockJundiai": 32,
-        "inStock": true,
-        "categoryGroup": "Elétrica"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig310a-3",
         "ref": 2,
         "partNumber": "33652-38A11-000",
@@ -14071,19 +13928,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 1018.48,
         "stockManaus": 20,
         "stockJundiai": 26,
-        "inStock": true,
-        "categoryGroup": "Elétrica"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig312a-18",
-        "ref": 0,
-        "partNumber": "SUZ-FIG312A-18",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 136.4,
-        "msrpPrice": 197.78,
-        "stockManaus": 14,
-        "stockJundiai": 7,
         "inStock": true,
         "categoryGroup": "Elétrica"
       },
@@ -23532,19 +23376,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YYG"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig483a-5",
-        "ref": 0,
-        "partNumber": "SUZ-FIG483A-5",
-        "description": "K,SILVER,RED)",
-        "unitQuantity": 1,
-        "factoryPrice": 302.4,
-        "msrpPrice": 438.48,
-        "stockManaus": 9,
-        "stockJundiai": 25,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig483a-6",
         "ref": 2,
         "partNumber": "68131-48K10-C47",
@@ -23559,19 +23390,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:QEB"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig483a-7",
-        "ref": 0,
-        "partNumber": "SUZ-FIG483A-7",
-        "description": "ACK,GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 318.4,
-        "msrpPrice": 461.68,
-        "stockManaus": 11,
-        "stockJundiai": 31,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig483a-8",
         "ref": 2,
         "partNumber": "68131-48K10-C46",
@@ -23584,19 +23402,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YKY"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig483a-9",
-        "ref": 0,
-        "partNumber": "SUZ-FIG483A-9",
-        "description": "LVER,GRAY,BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 334.4,
-        "msrpPrice": 484.88,
-        "stockManaus": 13,
-        "stockJundiai": 37,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_s1000gt_m5-fig483a-10",
@@ -23655,19 +23460,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YYG"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig483a-14",
-        "ref": 0,
-        "partNumber": "SUZ-FIG483A-14",
-        "description": "K,SILVER,RED)",
-        "unitQuantity": 1,
-        "factoryPrice": 176.4,
-        "msrpPrice": 255.78,
-        "stockManaus": 19,
-        "stockJundiai": 22,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig483a-15",
         "ref": 4,
         "partNumber": "68131-48K10-C47",
@@ -23682,19 +23474,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:QEB"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig483a-16",
-        "ref": 0,
-        "partNumber": "SUZ-FIG483A-16",
-        "description": "ACK,GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 192.4,
-        "msrpPrice": 278.98,
-        "stockManaus": 21,
-        "stockJundiai": 28,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig483a-17",
         "ref": 4,
         "partNumber": "68131-48K10-C46",
@@ -23707,19 +23486,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YKY"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig483a-18",
-        "ref": 0,
-        "partNumber": "SUZ-FIG483A-18",
-        "description": "LVER,GRAY,BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 208.4,
-        "msrpPrice": 302.18,
-        "stockManaus": 23,
-        "stockJundiai": 34,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_s1000gt_m5-fig483a-19",
@@ -26727,19 +26493,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YYG,QEB"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig530a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-2",
-        "description": "ER)",
-        "unitQuantity": 1,
-        "factoryPrice": 222.4,
-        "msrpPrice": 322.48,
-        "stockManaus": 37,
-        "stockJundiai": 44,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig530a-3",
         "ref": 1,
         "partNumber": "54111-04K30-YLY",
@@ -26752,19 +26505,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YKY"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig530a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-4",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_s1000gt_m5-fig530a-5",
@@ -26909,19 +26649,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "SPORTMAX ROADSPORT2 T,DUNLOP"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig530a-16",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-16",
-        "description": "))",
-        "unitQuantity": 1,
-        "factoryPrice": 136.4,
-        "msrpPrice": 197.78,
-        "stockManaus": 14,
-        "stockJundiai": 7,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_s1000gt_m5-fig530a-17",
@@ -28777,19 +28504,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig543a-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-3",
-        "description": "X20X34)",
-        "unitQuantity": 1,
-        "factoryPrice": 262.4,
-        "msrpPrice": 380.48,
-        "stockManaus": 42,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig543a-4",
         "ref": 3,
         "partNumber": "62668-42A02-000",
@@ -28955,19 +28669,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 684.98,
         "stockManaus": 17,
         "stockJundiai": 33,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig543a-17",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-17",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 176.4,
-        "msrpPrice": 255.78,
-        "stockManaus": 19,
-        "stockJundiai": 22,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -29283,19 +28984,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YYG,QEB"
       },
       {
-        "id": "p-gsx_s1000gt_m5-fig550a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550A-2",
-        "description": "R)",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_s1000gt_m5-fig550a-3",
         "ref": 1,
         "partNumber": "64111-04K30-YLY",
@@ -29569,19 +29257,6 @@ export const GSX_S1000GT_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "SPORTMAX ROADSPORT2 T,DUNLOP"
-      },
-      {
-        "id": "p-gsx_s1000gt_m5-fig550a-24",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550A-24",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_s1000gt_m5-fig550a-25",

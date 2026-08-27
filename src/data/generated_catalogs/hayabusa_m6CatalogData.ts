@@ -240,19 +240,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "OPT,NOT ILLUSTRATED"
       },
       {
-        "id": "p-hayabusa_m6-fig101a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG101A-6",
-        "description": "(10.6X25.5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 206.4,
-        "msrpPrice": 299.28,
-        "stockManaus": 35,
-        "stockJundiai": 38,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-hayabusa_m6-fig101a-7",
         "ref": 6,
         "partNumber": "11241-10L00-000",
@@ -561,19 +548,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-hayabusa_m6-fig102a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG102A-6",
-        "description": "(10.6X25.5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 214.4,
-        "msrpPrice": 310.88,
-        "stockManaus": 36,
-        "stockJundiai": 41,
         "inStock": true,
         "categoryGroup": "Motor"
       }
@@ -3679,19 +3653,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-hayabusa_m6-fig109a-39",
-        "ref": 0,
-        "partNumber": "SUZ-FIG109A-39",
-        "description": "PROTECTER",
-        "unitQuantity": 1,
-        "factoryPrice": 192.4,
-        "msrpPrice": 278.98,
-        "stockManaus": 21,
-        "stockJundiai": 28,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-hayabusa_m6-fig109a-40",
         "ref": 39,
         "partNumber": "09108-05007-000",
@@ -6352,19 +6313,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-hayabusa_m6-fig122a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG122A-4",
-        "description": "(NT:16/14)",
-        "unitQuantity": 1,
-        "factoryPrice": 214.4,
-        "msrpPrice": 310.88,
-        "stockManaus": 36,
-        "stockJundiai": 41,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-hayabusa_m6-fig122a-5",
         "ref": 4,
         "partNumber": "12151-05200-000",
@@ -7958,19 +7906,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 844.48,
         "stockManaus": 43,
         "stockJundiai": 30,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-hayabusa_m6-fig127a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG127A-2",
-        "description": "(DID SCA-0412A SV X 136LE)",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -14065,19 +14000,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-hayabusa_m6-fig187a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG187A-6",
-        "description": "INLET",
-        "unitQuantity": 1,
-        "factoryPrice": 318.4,
-        "msrpPrice": 461.68,
-        "stockManaus": 11,
-        "stockJundiai": 31,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-hayabusa_m6-fig187a-7",
         "ref": 6,
         "partNumber": "09180-06261-000",
@@ -15176,19 +15098,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-hayabusa_m6-fig201a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-10",
-        "description": "(T:2.0)",
-        "unitQuantity": 1,
-        "factoryPrice": 558.4,
-        "msrpPrice": 809.68,
-        "stockManaus": 41,
-        "stockJundiai": 23,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-hayabusa_m6-fig201a-11",
         "ref": 10,
         "partNumber": "21442-31J00-000",
@@ -15198,19 +15107,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-hayabusa_m6-fig201a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-12",
-        "description": "(T:3.8)",
-        "unitQuantity": 1,
-        "factoryPrice": 574.4,
-        "msrpPrice": 832.88,
-        "stockManaus": 43,
-        "stockJundiai": 29,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -15237,19 +15133,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 832.88,
         "stockManaus": 42,
         "stockJundiai": 27,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-hayabusa_m6-fig201a-15",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-15",
-        "description": "(T:2.0)",
-        "unitQuantity": 1,
-        "factoryPrice": 88.4,
-        "msrpPrice": 128.18,
-        "stockManaus": 8,
-        "stockJundiai": 38,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -15919,19 +15802,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-hayabusa_m6-fig206a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG206A-4",
-        "description": "(NT:19/21)",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-hayabusa_m6-fig206a-5",
         "ref": 4,
         "partNumber": "24251-15H01-000",
@@ -16478,19 +16348,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-hayabusa_m6-fig206a-47",
-        "ref": 0,
-        "partNumber": "SUZ-FIG206A-47",
-        "description": "(27.2X42X6.5)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-hayabusa_m6-fig206a-48",
         "ref": 46,
         "partNumber": "27600-24F70-114",
@@ -16504,19 +16361,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-hayabusa_m6-fig206a-49",
-        "ref": 0,
-        "partNumber": "SUZ-FIG206A-49",
-        "description": "(RK GB50GSVZ5)",
-        "unitQuantity": 1,
-        "factoryPrice": 184.4,
-        "msrpPrice": 267.38,
-        "stockManaus": 20,
-        "stockJundiai": 25,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-hayabusa_m6-fig206a-50",
         "ref": 47,
         "partNumber": "27620-24F70-000",
@@ -16526,19 +16370,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 925.68,
         "stockManaus": 12,
         "stockJundiai": 51,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-hayabusa_m6-fig206a-51",
-        "ref": 0,
-        "partNumber": "SUZ-FIG206A-51",
-        "description": "(RK GB50GSVZ5)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -18225,19 +18056,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Elétrica"
-      },
-      {
-        "id": "p-hayabusa_m6-fig310a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG310A-2",
-        "description": "(58X58X10)",
-        "unitQuantity": 1,
-        "factoryPrice": 190.4,
-        "msrpPrice": 276.08,
-        "stockManaus": 33,
-        "stockJundiai": 32,
         "inStock": true,
         "categoryGroup": "Elétrica"
       },
@@ -23282,19 +23100,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig420b-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG420B-3",
-        "description": "(BLUE/WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 222.4,
-        "msrpPrice": 322.48,
-        "stockManaus": 37,
-        "stockJundiai": 44,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig420b-4",
         "ref": 3,
         "partNumber": "44121-28K01-000",
@@ -24667,19 +24472,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 650.18,
         "stockManaus": 14,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig422b-9",
-        "ref": 0,
-        "partNumber": "SUZ-FIG422B-9",
-        "description": "(BLUE/WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 286.4,
-        "msrpPrice": 415.28,
-        "stockManaus": 7,
-        "stockJundiai": 19,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -28592,19 +28384,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR AV4"
       },
       {
-        "id": "p-hayabusa_m6-fig445a-19",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445A-19",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 200.4,
-        "msrpPrice": 290.58,
-        "stockManaus": 22,
-        "stockJundiai": 31,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig445a-20",
         "ref": 12,
         "partNumber": "68131-10L01-B5N",
@@ -28619,19 +28398,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR JWN"
       },
       {
-        "id": "p-hayabusa_m6-fig445a-21",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445A-21",
-        "description": "(WHITE/BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig445a-22",
         "ref": 12,
         "partNumber": "68131-10L01-DB2",
@@ -28644,19 +28410,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "FOR C81"
-      },
-      {
-        "id": "p-hayabusa_m6-fig445a-23",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445A-23",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig445a-24",
@@ -28728,19 +28481,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR AV4"
       },
       {
-        "id": "p-hayabusa_m6-fig445a-29",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445A-29",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 208.4,
-        "msrpPrice": 302.18,
-        "stockManaus": 23,
-        "stockJundiai": 34,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig445a-30",
         "ref": 15,
         "partNumber": "68141-10L01-B5N",
@@ -28755,19 +28495,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR JWN"
       },
       {
-        "id": "p-hayabusa_m6-fig445a-31",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445A-31",
-        "description": "(WHITE/BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 152.4,
-        "msrpPrice": 220.98,
-        "stockManaus": 16,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig445a-32",
         "ref": 15,
         "partNumber": "68141-10L01-DB2",
@@ -28780,19 +28507,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "FOR C81"
-      },
-      {
-        "id": "p-hayabusa_m6-fig445a-33",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445A-33",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig445a-34",
@@ -29408,19 +29122,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig445b-13",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445B-13",
-        "description": "(BLUE/WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig445b-14",
         "ref": 13,
         "partNumber": "68135-10L10-DC6",
@@ -29469,19 +29170,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 670.48,
         "stockManaus": 29,
         "stockJundiai": 36,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig445b-18",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445B-18",
-        "description": "(BLUE/WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 200.4,
-        "msrpPrice": 290.58,
-        "stockManaus": 22,
-        "stockJundiai": 31,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -36971,19 +36659,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR AV4"
       },
       {
-        "id": "p-hayabusa_m6-fig485a-16",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-16",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 208.4,
-        "msrpPrice": 302.18,
-        "stockManaus": 23,
-        "stockJundiai": 34,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig485a-17",
         "ref": 13,
         "partNumber": "68181-10L01-B5N",
@@ -36998,19 +36673,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR JWN"
       },
       {
-        "id": "p-hayabusa_m6-fig485a-18",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-18",
-        "description": "(WHITE/BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 224.4,
-        "msrpPrice": 325.38,
-        "stockManaus": 25,
-        "stockJundiai": 40,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig485a-19",
         "ref": 13,
         "partNumber": "68181-10L01-DB2",
@@ -37023,19 +36685,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "FOR C81"
-      },
-      {
-        "id": "p-hayabusa_m6-fig485a-20",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-20",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig485a-21",
@@ -37094,19 +36743,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR AV4"
       },
       {
-        "id": "p-hayabusa_m6-fig485a-25",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-25",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 208.4,
-        "msrpPrice": 302.18,
-        "stockManaus": 23,
-        "stockJundiai": 34,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig485a-26",
         "ref": 15,
         "partNumber": "68191-10L01-B5N",
@@ -37119,19 +36755,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "FOR JWN"
-      },
-      {
-        "id": "p-hayabusa_m6-fig485a-27",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-27",
-        "description": "(WHITE/BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 224.4,
-        "msrpPrice": 325.38,
-        "stockManaus": 25,
-        "stockJundiai": 40,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig485a-28",
@@ -37148,19 +36771,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR C81"
       },
       {
-        "id": "p-hayabusa_m6-fig485a-29",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-29",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 240.4,
-        "msrpPrice": 348.58,
-        "stockManaus": 27,
-        "stockJundiai": 46,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig485a-30",
         "ref": 16,
         "partNumber": "44277-18K00-000",
@@ -37170,19 +36780,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 1018.48,
         "stockManaus": 20,
         "stockJundiai": 26,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig485a-31",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-31",
-        "description": "(10X30X8)",
-        "unitQuantity": 1,
-        "factoryPrice": 184.4,
-        "msrpPrice": 267.38,
-        "stockManaus": 20,
-        "stockJundiai": 25,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -37775,19 +37372,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig485b-14",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485B-14",
-        "description": "(BLUE/WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 200.4,
-        "msrpPrice": 290.58,
-        "stockManaus": 22,
-        "stockJundiai": 31,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig485b-15",
         "ref": 14,
         "partNumber": "94480-10L01-YKY",
@@ -37814,19 +37398,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig485b-17",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485B-17",
-        "description": "(BLUE/WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 224.4,
-        "msrpPrice": 325.38,
-        "stockManaus": 25,
-        "stockJundiai": 40,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig485b-18",
         "ref": 16,
         "partNumber": "44277-18K00-000",
@@ -37836,19 +37407,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 1018.48,
         "stockManaus": 20,
         "stockJundiai": 26,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig485b-19",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485B-19",
-        "description": "(10X30X8)",
-        "unitQuantity": 1,
-        "factoryPrice": 240.4,
-        "msrpPrice": 348.58,
-        "stockManaus": 27,
-        "stockJundiai": 46,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -38561,19 +38119,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR JWN"
       },
       {
-        "id": "p-hayabusa_m6-fig507a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG507A-2",
-        "description": "(WHITE/BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 254.4,
-        "msrpPrice": 368.88,
-        "stockManaus": 41,
-        "stockJundiai": 7,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig507a-3",
         "ref": 1,
         "partNumber": "45550-10L00-BD7",
@@ -38588,19 +38133,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR AV4"
       },
       {
-        "id": "p-hayabusa_m6-fig507a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG507A-4",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 270.4,
-        "msrpPrice": 392.08,
-        "stockManaus": 43,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig507a-5",
         "ref": 1,
         "partNumber": "45550-10L00-DB2",
@@ -38613,19 +38145,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "FOR C81"
-      },
-      {
-        "id": "p-hayabusa_m6-fig507a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG507A-6",
-        "description": "(GRAY/BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 286.4,
-        "msrpPrice": 415.28,
-        "stockManaus": 7,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig507a-7",
@@ -39858,19 +39377,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig524a-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG524A-3",
-        "description": "(30.1X56X4)",
-        "unitQuantity": 1,
-        "factoryPrice": 254.4,
-        "msrpPrice": 368.88,
-        "stockManaus": 41,
-        "stockJundiai": 7,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig524a-4",
         "ref": 3,
         "partNumber": "09267-30010-000",
@@ -40283,19 +39789,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig530a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-2",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 222.4,
-        "msrpPrice": 322.48,
-        "stockManaus": 37,
-        "stockJundiai": 44,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig530a-3",
         "ref": 2,
         "partNumber": "54731-33E20-000",
@@ -40425,19 +39918,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BATTLAX HYPERSPORT S22F L,BS"
-      },
-      {
-        "id": "p-hayabusa_m6-fig530a-13",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-13",
-        "description": "(58W))",
-        "unitQuantity": 1,
-        "factoryPrice": 112.4,
-        "msrpPrice": 162.98,
-        "stockManaus": 11,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig530a-14",
@@ -40696,19 +40176,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig530b-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530B-2",
-        "description": "(BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 230.4,
-        "msrpPrice": 334.08,
-        "stockManaus": 38,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig530b-3",
         "ref": 2,
         "partNumber": "54731-33E20-000",
@@ -40838,19 +40305,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BATTLAX HYPERSPORT S22F L,BS"
-      },
-      {
-        "id": "p-hayabusa_m6-fig530b-13",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530B-13",
-        "description": "(58W))",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig530b-14",
@@ -42032,19 +41486,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 844.48,
         "stockManaus": 43,
         "stockJundiai": 30,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig536a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG536A-2",
-        "description": "UNIT",
-        "unitQuantity": 1,
-        "factoryPrice": 270.4,
-        "msrpPrice": 392.08,
-        "stockManaus": 43,
-        "stockJundiai": 13,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -43272,19 +42713,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig541a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG541A-8",
-        "description": "BEARING",
-        "unitQuantity": 1,
-        "factoryPrice": 286.4,
-        "msrpPrice": 415.28,
-        "stockManaus": 7,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig541a-9",
         "ref": 8,
         "partNumber": "08211-25481-000",
@@ -43742,19 +43170,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig543a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-6",
-        "description": "(12X20X32)",
-        "unitQuantity": 1,
-        "factoryPrice": 286.4,
-        "msrpPrice": 415.28,
-        "stockManaus": 7,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig543a-7",
         "ref": 6,
         "partNumber": "08211-12301-000",
@@ -43781,19 +43196,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig543a-9",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-9",
-        "description": "(12X78)",
-        "unitQuantity": 1,
-        "factoryPrice": 310.4,
-        "msrpPrice": 450.08,
-        "stockManaus": 10,
-        "stockJundiai": 28,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig543a-10",
         "ref": 8,
         "partNumber": "09159-12056-000",
@@ -43816,19 +43218,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 879.28,
         "stockManaus": 8,
         "stockJundiai": 39,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig543a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-12",
-        "description": "(12X17X94)",
-        "unitQuantity": 1,
-        "factoryPrice": 136.4,
-        "msrpPrice": 197.78,
-        "stockManaus": 14,
-        "stockJundiai": 7,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -43872,19 +43261,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig543a-16",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-16",
-        "description": "(10X17X30)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig543a-17",
         "ref": 13,
         "partNumber": "62641-24F00-000",
@@ -43907,19 +43283,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 879.28,
         "stockManaus": 8,
         "stockJundiai": 39,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig543a-19",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-19",
-        "description": "(12X17X94)",
-        "unitQuantity": 1,
-        "factoryPrice": 192.4,
-        "msrpPrice": 278.98,
-        "stockManaus": 21,
-        "stockJundiai": 28,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -43959,19 +43322,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 879.28,
         "stockManaus": 8,
         "stockJundiai": 39,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig543a-23",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-23",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 152.4,
-        "msrpPrice": 220.98,
-        "stockManaus": 16,
-        "stockJundiai": 13,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -44324,19 +43674,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig550a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550A-2",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig550a-3",
         "ref": 2,
         "partNumber": "64731-40F10-000",
@@ -44596,19 +43933,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BATTLAX HYPERSPORT S22R L,BS"
-      },
-      {
-        "id": "p-hayabusa_m6-fig550a-23",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550A-23",
-        "description": "(73W))",
-        "unitQuantity": 1,
-        "factoryPrice": 136.4,
-        "msrpPrice": 197.78,
-        "stockManaus": 14,
-        "stockJundiai": 7,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig550a-24",
@@ -44972,19 +44296,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-hayabusa_m6-fig550b-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550B-2",
-        "description": "(BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 246.4,
-        "msrpPrice": 357.28,
-        "stockManaus": 40,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-hayabusa_m6-fig550b-3",
         "ref": 2,
         "partNumber": "64731-40F10-000",
@@ -45244,19 +44555,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BATTLAX HYPERSPORT S22R L,BS"
-      },
-      {
-        "id": "p-hayabusa_m6-fig550b-23",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550B-23",
-        "description": "(73W))",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-hayabusa_m6-fig550b-24",
@@ -46294,19 +45592,6 @@ export const HAYABUSA_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 856.08,
         "stockManaus": 6,
         "stockJundiai": 33,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-hayabusa_m6-fig558a-23",
-        "ref": 0,
-        "partNumber": "SUZ-FIG558A-23",
-        "description": "UNIT",
-        "unitQuantity": 1,
-        "factoryPrice": 200.4,
-        "msrpPrice": 290.58,
-        "stockManaus": 22,
-        "stockJundiai": 31,
         "inStock": true,
         "categoryGroup": "Chassi"
       },

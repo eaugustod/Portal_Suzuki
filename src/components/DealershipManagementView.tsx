@@ -1176,43 +1176,50 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       </div>
                     </div>
 
-                    {/* Brands Authorized */}
+                    {/* Brands Authorized & Regional Selection (Requirement 20) */}
                     <div>
                       <label className="text-[11px] font-bold uppercase text-neutral-400 block mb-2">
-                        Marcas Homologadas para Comercialização
+                        Marcas Homologadas & Regionais da Montadora
                       </label>
-                      <div className="flex flex-wrap gap-4">
-                        {(['Suzuki', 'Zontes', 'Haojue', 'Quadriciclos'] as BrandType[]).map((brand) => {
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {(['Suzuki', 'Zontes', 'Haojue', 'Kymco'] as BrandType[]).map((brand) => {
                           const isAuthorized = editForm.brandsAuthorized?.includes(brand);
                           return (
-                            <label
-                              key={brand}
-                              className={`px-3.5 py-2 rounded-xl border text-xs font-bold flex items-center gap-2 cursor-pointer transition-all ${
-                                isAuthorized
-                                  ? 'bg-blue-600/20 border-blue-500 text-blue-300'
-                                  : 'bg-neutral-900 border-neutral-800 text-neutral-500'
-                              }`}
-                            >
-                              <input
-                                type="checkbox"
-                                checked={isAuthorized}
-                                onChange={(e) => {
-                                  const current = editForm.brandsAuthorized || [];
-                                  if (e.target.checked) {
-                                    setEditForm({ ...editForm, brandsAuthorized: [...current, brand] });
-                                  } else {
-                                    setEditForm({ ...editForm, brandsAuthorized: current.filter(b => b !== brand) });
-                                  }
-                                }}
-                                className="sr-only"
-                              />
-                              <div className={`w-3.5 h-3.5 rounded border flex items-center justify-center ${
-                                isAuthorized ? 'bg-blue-600 border-blue-500' : 'border-neutral-700'
-                              }`}>
-                                {isAuthorized && <CheckCircle2 className="w-3 h-3 text-white" />}
-                              </div>
-                              <span>{brand} Motos</span>
-                            </label>
+                            <div key={brand} className="p-3 bg-neutral-900 border border-neutral-800 rounded-xl space-y-2">
+                              <label className="flex items-center gap-2 cursor-pointer font-bold text-xs text-white">
+                                <input
+                                  type="checkbox"
+                                  checked={isAuthorized}
+                                  onChange={(e) => {
+                                    const current = editForm.brandsAuthorized || [];
+                                    if (e.target.checked) {
+                                      setEditForm({ ...editForm, brandsAuthorized: [...current, brand] });
+                                    } else {
+                                      setEditForm({ ...editForm, brandsAuthorized: current.filter(b => b !== brand) });
+                                    }
+                                  }}
+                                  className="rounded border-neutral-700 text-blue-500"
+                                />
+                                <span>{brand} Motos</span>
+                              </label>
+
+                              {isAuthorized && (
+                                <div>
+                                  <label className="text-[9px] uppercase font-bold text-neutral-400 block mb-1">
+                                    Regional {brand} Vinculada
+                                  </label>
+                                  <select
+                                    value={(editForm as any)[`regional_${brand.toLowerCase()}`] || `Regional ${brand} Padrão`}
+                                    onChange={(e) => setEditForm({ ...editForm, [`regional_${brand.toLowerCase()}`]: e.target.value } as any)}
+                                    className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-2 py-1 text-[11px] text-neutral-200 focus:outline-none focus:border-blue-500"
+                                  >
+                                    <option value={`Regional ${brand} Sul/Sudeste`}>Regional {brand} - Sul/Sudeste</option>
+                                    <option value={`Regional ${brand} Norte/Nordeste`}>Regional {brand} - Norte/Nordeste</option>
+                                    <option value={`Regional ${brand} Centro-Oeste`}>Regional {brand} - Centro-Oeste</option>
+                                  </select>
+                                </div>
+                              )}
+                            </div>
                           );
                         })}
                       </div>
@@ -1352,6 +1359,39 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           <option value="sim">Sim (Possui Pátio Próprio)</option>
                           <option value="nao">Não (Descarga em Via Pública)</option>
                         </select>
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-[#18181b] border border-amber-500/30 rounded-2xl space-y-3">
+                      <h5 className="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                        <Truck className="w-4 h-4" />
+                        <span>Origem Logística & Tabela de Fretes de Compra de Motos (Regra ERP)</span>
+                      </h5>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-[11px] font-bold uppercase text-neutral-400 block mb-1">
+                            Armazém / Local de Estoque Faturamento
+                          </label>
+                          <select
+                            value={(editForm as any).originWarehouse || (['Sul', 'Sudeste'].includes(editForm.region) && editForm.state !== 'ES' ? 'empresa_13_armazem' : 'manaus_le_16')}
+                            onChange={(e) => setEditForm({ ...editForm, originWarehouse: e.target.value as any })}
+                            className="w-full bg-neutral-900 border border-amber-500/50 rounded-xl px-3 py-2 text-xs text-white font-bold focus:outline-none"
+                          >
+                            <option value="empresa_13_armazem">Empresa 13 - Armazém SP (Sul e Sudeste exceto ES)</option>
+                            <option value="manaus_le_16">Manaus Local de Estoque 16 - Empresa 01/10 (Norte, Nordeste, Centro-Oeste e ES)</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold uppercase text-neutral-400 block mb-1">
+                            Regra de Roteamento de Frete Ativa
+                          </label>
+                          <div className="bg-neutral-900 border border-neutral-700 rounded-xl p-2.5 text-xs text-neutral-300">
+                            UF <strong className="text-white">{editForm.state}</strong> ({editForm.region}): Roteamento via{' '}
+                            <span className="text-amber-400 font-bold">
+                              {['Sul', 'Sudeste'].includes(editForm.region) && editForm.state !== 'ES' ? 'Empresa 13 (SP)' : 'Manaus LE 16 (Emp. 01/10)'}
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
 

@@ -80,6 +80,22 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
     return [...customModels, ...MOCK_PARTS_MODELS];
   }, [customModels]);
 
+  // Dynamic brand counts calculation
+  const brandCounts = useMemo(() => {
+    const counts: Record<string, number> = {
+      Suzuki: 0,
+      Haojue: 0,
+      Zontes: 0,
+      Hisun: 0,
+      Kymco: 0,
+      ALL: allModels.length,
+    };
+    allModels.forEach((m) => {
+      counts[m.brand] = (counts[m.brand] || 0) + 1;
+    });
+    return counts;
+  }, [allModels]);
+
   // E-commerce Brand & Model Selection State
   const [selectedBrand, setSelectedBrand] = useState<PartsBrand | 'ALL'>('ALL');
   const [modelSearchQuery, setModelSearchQuery] = useState('');
@@ -491,7 +507,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   }`}
                 >
                   <span>SUZUKI</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">11</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">
+                    {brandCounts['Suzuki'] || 0}
+                  </span>
                 </button>
 
                 <div className="hidden lg:block pt-3 pb-1 px-3">
@@ -509,7 +527,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   }`}
                 >
                   <span>HAOJUE</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">6</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">
+                    {brandCounts['Haojue'] || 0}
+                  </span>
                 </button>
 
                 <button
@@ -521,7 +541,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   }`}
                 >
                   <span>ZONTES</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">8</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">
+                    {brandCounts['Zontes'] || 0}
+                  </span>
                 </button>
 
                 <button
@@ -533,7 +555,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   }`}
                 >
                   <span>HISUN</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">6</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">
+                    {brandCounts['Hisun'] || 0}
+                  </span>
                 </button>
 
                 <button
@@ -545,7 +569,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   }`}
                 >
                   <span>KYMCO</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">2</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/30 text-blue-200">
+                    {brandCounts['Kymco'] || 0}
+                  </span>
                 </button>
 
                 <div className="lg:pt-2 pt-0">
@@ -561,7 +587,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   }`}
                 >
                   <span>Todas as Marcas</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-300">33</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-300">
+                    {brandCounts['ALL'] || 0}
+                  </span>
                 </button>
               </div>
 

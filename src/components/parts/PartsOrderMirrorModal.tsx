@@ -310,7 +310,7 @@ export const PartsOrderMirrorModal: React.FC<PartsOrderMirrorModalProps> = ({
                         R$ {item.unitPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                       </td>
                       <td className="p-3 text-right font-mono text-neutral-400">
-                        R$ {item.part.msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                        R$ {(item.part?.msrpPrice ?? (item.unitPrice * 1.5) ?? 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                       </td>
                       <td className="p-3 pr-4 text-right font-mono font-bold text-white">
                         R$ {item.totalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}

@@ -653,19 +653,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-vstrom_1050_m5-fig104a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG104A-10",
-        "description": "5)",
-        "unitQuantity": 1,
-        "factoryPrice": 574.4,
-        "msrpPrice": 832.88,
-        "stockManaus": 43,
-        "stockJundiai": 29,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig104a-11",
         "ref": 10,
         "partNumber": "09108-06096-000",
@@ -857,19 +844,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig104a-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG104A-26",
-        "description": ".5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -1386,19 +1360,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-vstrom_1050_m5-fig104b-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG104B-10",
-        "description": "5)",
-        "unitQuantity": 1,
-        "factoryPrice": 582.4,
-        "msrpPrice": 844.48,
-        "stockManaus": 6,
-        "stockJundiai": 32,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig104b-11",
         "ref": 10,
         "partNumber": "09108-06096-000",
@@ -1590,19 +1551,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig104b-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG104B-26",
-        "description": ".5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -2077,19 +2025,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-vstrom_1050_m5-fig105a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG105A-10",
-        "description": "5)",
-        "unitQuantity": 1,
-        "factoryPrice": 582.4,
-        "msrpPrice": 844.48,
-        "stockManaus": 6,
-        "stockJundiai": 32,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig105a-11",
         "ref": 10,
         "partNumber": "09103-06220-000",
@@ -2281,19 +2216,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig105a-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG105A-26",
-        "description": ".5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -5118,19 +5040,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-vstrom_1050_m5-fig120a-22",
-        "ref": 0,
-        "partNumber": "SUZ-FIG120A-22",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 582.4,
-        "msrpPrice": 844.48,
-        "stockManaus": 6,
-        "stockJundiai": 32,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig120a-23",
         "ref": 15,
         "partNumber": "21114-02F00-000",
@@ -5389,19 +5298,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 774.88,
         "stockManaus": 37,
         "stockJundiai": 12,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig122a-7",
-        "ref": 0,
-        "partNumber": "SUZ-FIG122A-7",
-        "description": "(NT:44)",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -6609,19 +6505,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 856.08,
         "stockManaus": 6,
         "stockJundiai": 33,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig127a-17",
-        "ref": 0,
-        "partNumber": "SUZ-FIG127A-17",
-        "description": "31/41)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -8433,19 +8316,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 751.68,
         "stockManaus": 35,
         "stockJundiai": 55,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig170a-11",
-        "ref": 0,
-        "partNumber": "SUZ-FIG170A-11",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 96.4,
-        "msrpPrice": 139.78,
-        "stockManaus": 9,
-        "stockJundiai": 41,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -10876,19 +10746,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-vstrom_1050_m5-fig201a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-10",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 558.4,
-        "msrpPrice": 809.68,
-        "stockManaus": 41,
-        "stockJundiai": 23,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig201a-11",
         "ref": 10,
         "partNumber": "21451-24F00-000",
@@ -10902,19 +10759,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-vstrom_1050_m5-fig201a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-12",
-        "description": "0)",
-        "unitQuantity": 1,
-        "factoryPrice": 574.4,
-        "msrpPrice": 832.88,
-        "stockManaus": 43,
-        "stockJundiai": 29,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig201a-13",
         "ref": 11,
         "partNumber": "21452-31J00-000",
@@ -10924,19 +10768,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 832.88,
         "stockManaus": 42,
         "stockJundiai": 27,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig201a-14",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-14",
-        "description": "0)",
-        "unitQuantity": 1,
-        "factoryPrice": 80.4,
-        "msrpPrice": 116.58,
-        "stockManaus": 7,
-        "stockJundiai": 35,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -15324,19 +15155,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Elétrica"
       },
       {
-        "id": "p-vstrom_1050_m5-fig310a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG310A-2",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 190.4,
-        "msrpPrice": 276.08,
-        "stockManaus": 33,
-        "stockJundiai": 32,
-        "inStock": true,
-        "categoryGroup": "Elétrica"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig310a-3",
         "ref": 2,
         "partNumber": "33652-16G00-000",
@@ -15590,19 +15408,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 902.48,
         "stockManaus": 10,
         "stockJundiai": 45,
-        "inStock": true,
-        "categoryGroup": "Elétrica"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig310b-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG310B-2",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 198.4,
-        "msrpPrice": 287.68,
-        "stockManaus": 34,
-        "stockJundiai": 35,
         "inStock": true,
         "categoryGroup": "Elétrica"
       },
@@ -23037,19 +22842,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_1050_m5-fig415a-24",
-        "ref": 0,
-        "partNumber": "SUZ-FIG415A-24",
-        "description": "K)",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig415a-25",
         "ref": 24,
         "partNumber": "43821-31J00-YAP",
@@ -23059,19 +22851,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 589.28,
         "stockManaus": 22,
         "stockJundiai": 15,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig415a-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG415A-26",
-        "description": "K)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -23732,19 +23511,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_1050_m5-fig415b-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG415B-26",
-        "description": "K)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig415b-27",
         "ref": 26,
         "partNumber": "43821-31J00-YAP",
@@ -23754,19 +23520,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 589.28,
         "stockManaus": 22,
         "stockJundiai": 15,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig415b-28",
-        "ref": 0,
-        "partNumber": "SUZ-FIG415B-28",
-        "description": "K)",
-        "unitQuantity": 1,
-        "factoryPrice": 184.4,
-        "msrpPrice": 267.38,
-        "stockManaus": 20,
-        "stockJundiai": 25,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -26289,19 +26042,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig433a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433A-6",
-        "description": "CK)",
-        "unitQuantity": 1,
-        "factoryPrice": 270.4,
-        "msrpPrice": 392.08,
-        "stockManaus": 43,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig433a-7",
         "ref": 3,
         "partNumber": "68271-06L10-BNS",
@@ -26314,19 +26054,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BN8"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433A-8",
-        "description": "CK)",
-        "unitQuantity": 1,
-        "factoryPrice": 286.4,
-        "msrpPrice": 415.28,
-        "stockManaus": 7,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433a-9",
@@ -26369,19 +26096,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BN8"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433A-12",
-        "description": "GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433a-13",
@@ -26480,19 +26194,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig433a-20",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433A-20",
-        "description": "CK)",
-        "unitQuantity": 1,
-        "factoryPrice": 112.4,
-        "msrpPrice": 162.98,
-        "stockManaus": 11,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig433a-21",
         "ref": 8,
         "partNumber": "68281-06L10-BNS",
@@ -26505,19 +26206,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BN8"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433a-22",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433A-22",
-        "description": "CK)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433a-23",
@@ -26560,19 +26248,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BN8"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433a-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433A-26",
-        "description": "AY)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433a-27",
@@ -27107,19 +26782,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:BT1"
       },
       {
-        "id": "p-vstrom_1050_m5-fig433b-7",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-7",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 286.4,
-        "msrpPrice": 415.28,
-        "stockManaus": 7,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig433b-8",
         "ref": 3,
         "partNumber": "68181-06L00-C1Q",
@@ -27148,19 +26810,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig433b-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-10",
-        "description": "K,GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 112.4,
-        "msrpPrice": 162.98,
-        "stockManaus": 11,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig433b-11",
         "ref": 4,
         "partNumber": "68271-06L20-CL8",
@@ -27173,19 +26822,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BT1"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433b-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-12",
-        "description": "LUE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433b-13",
@@ -27216,19 +26852,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig433b-15",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-15",
-        "description": "ACK,GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 152.4,
-        "msrpPrice": 220.98,
-        "stockManaus": 16,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig433b-16",
         "ref": 5,
         "partNumber": "68270-06L00-CL8",
@@ -27241,19 +26864,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BT1"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433b-17",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-17",
-        "description": ",BLUE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433b-18",
@@ -27352,19 +26962,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig433b-25",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-25",
-        "description": "K)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig433b-26",
         "ref": 9,
         "partNumber": "68191-06L00-GY8",
@@ -27377,19 +26974,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BT1"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433b-27",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-27",
-        "description": "CK)",
-        "unitQuantity": 1,
-        "factoryPrice": 176.4,
-        "msrpPrice": 255.78,
-        "stockManaus": 19,
-        "stockJundiai": 22,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433b-28",
@@ -27420,19 +27004,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig433b-30",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-30",
-        "description": "K,GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig433b-31",
         "ref": 10,
         "partNumber": "68281-06L20-CL8",
@@ -27445,19 +27016,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BT1"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433b-32",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-32",
-        "description": "LUE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433b-33",
@@ -27488,19 +27046,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig433b-35",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-35",
-        "description": "ACK,GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig433b-36",
         "ref": 11,
         "partNumber": "68280-06L00-CL8",
@@ -27513,19 +27058,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BT1"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig433b-37",
-        "ref": 0,
-        "partNumber": "SUZ-FIG433B-37",
-        "description": ",BLUE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 184.4,
-        "msrpPrice": 267.38,
-        "stockManaus": 20,
-        "stockJundiai": 25,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig433b-38",
@@ -28566,19 +28098,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:BN8"
       },
       {
-        "id": "p-vstrom_1050_m5-fig445a-13",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445A-13",
-        "description": ",GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 152.4,
-        "msrpPrice": 220.98,
-        "stockManaus": 16,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig445a-14",
         "ref": 9,
         "partNumber": "68135-06L20-C1R",
@@ -28674,19 +28193,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BN8"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig445a-21",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445A-21",
-        "description": ",GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig445a-22",
@@ -29443,19 +28949,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig445b-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445B-12",
-        "description": ",GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 152.4,
-        "msrpPrice": 220.98,
-        "stockManaus": 16,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig445b-13",
         "ref": 9,
         "partNumber": "68135-06L30-CL8",
@@ -29468,19 +28961,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BT1"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig445b-14",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445B-14",
-        "description": "UE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig445b-15",
@@ -29566,19 +29046,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:C4X"
       },
       {
-        "id": "p-vstrom_1050_m5-fig445b-21",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445B-21",
-        "description": ",GRAY)",
-        "unitQuantity": 1,
-        "factoryPrice": 152.4,
-        "msrpPrice": 220.98,
-        "stockManaus": 16,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig445b-22",
         "ref": 12,
         "partNumber": "68145-06L30-CL8",
@@ -29591,19 +29058,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BT1"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig445b-23",
-        "ref": 0,
-        "partNumber": "SUZ-FIG445B-23",
-        "description": "UE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig445b-24",
@@ -31693,19 +31147,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:BT1"
       },
       {
-        "id": "p-vstrom_1050_m5-fig460a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG460A-6",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 270.4,
-        "msrpPrice": 392.08,
-        "stockManaus": 43,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig460a-7",
         "ref": 4,
         "partNumber": "53120-06L00-5UX",
@@ -31748,19 +31189,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:BT1"
       },
       {
-        "id": "p-vstrom_1050_m5-fig460a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG460A-10",
-        "description": "LUE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 104.4,
-        "msrpPrice": 151.38,
-        "stockManaus": 10,
-        "stockJundiai": 44,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig460a-11",
         "ref": 5,
         "partNumber": "68151-06L00-8WN",
@@ -31773,19 +31201,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:CK6"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig460a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG460A-12",
-        "description": "E,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig460a-13",
@@ -31814,19 +31229,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:BT1"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig460a-15",
-        "ref": 0,
-        "partNumber": "SUZ-FIG460A-15",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig460a-16",
@@ -31871,19 +31273,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:BT1"
       },
       {
-        "id": "p-vstrom_1050_m5-fig460a-19",
-        "ref": 0,
-        "partNumber": "SUZ-FIG460A-19",
-        "description": "LUE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 176.4,
-        "msrpPrice": 255.78,
-        "stockManaus": 19,
-        "stockJundiai": 22,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig460a-20",
         "ref": 7,
         "partNumber": "68161-06L00-8WN",
@@ -31896,19 +31285,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:CK6"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig460a-21",
-        "ref": 0,
-        "partNumber": "SUZ-FIG460A-21",
-        "description": "E,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_1050_m5-fig460a-22",
@@ -33315,19 +32691,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_1050_m5-fig474a-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG474A-3",
-        "description": "5X0.13)",
-        "unitQuantity": 1,
-        "factoryPrice": 286.4,
-        "msrpPrice": 415.28,
-        "stockManaus": 7,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig474a-4",
         "ref": 3,
         "partNumber": "44281-18K01-000",
@@ -33797,19 +33160,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 948.88,
         "stockManaus": 14,
         "stockJundiai": 8,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig474b-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG474B-3",
-        "description": "5X0.13)",
-        "unitQuantity": 1,
-        "factoryPrice": 294.4,
-        "msrpPrice": 426.88,
-        "stockManaus": 8,
-        "stockJundiai": 22,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -41152,20 +40502,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BLACK"
       },
       {
-        "id": "p-vstrom_1050_m5-fig530b-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530B-6",
-        "description": "",
-        "unitQuantity": 1,
-        "factoryPrice": 262.4,
-        "msrpPrice": 380.48,
-        "stockManaus": 42,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi",
-        "observation": "BODY COLOR:C4X"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig530b-7",
         "ref": 5,
         "partNumber": "55311-06L20-000",
@@ -41178,20 +40514,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BLUE"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig530b-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530B-8",
-        "description": "",
-        "unitQuantity": 1,
-        "factoryPrice": 278.4,
-        "msrpPrice": 403.68,
-        "stockManaus": 6,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi",
-        "observation": "BODY COLOR:BT1,CK6"
       },
       {
         "id": "p-vstrom_1050_m5-fig530b-9",
@@ -44641,19 +43963,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_1050_m5-fig541a-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG541A-3",
-        "description": "0.8X27.2X196.7)",
-        "unitQuantity": 1,
-        "factoryPrice": 246.4,
-        "msrpPrice": 357.28,
-        "stockManaus": 40,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig541a-4",
         "ref": 3,
         "partNumber": "09263-20122-000",
@@ -45057,19 +44366,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 879.28,
         "stockManaus": 8,
         "stockJundiai": 39,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig541b-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG541B-3",
-        "description": "0.8X27.2X196.7)",
-        "unitQuantity": 1,
-        "factoryPrice": 254.4,
-        "msrpPrice": 368.88,
-        "stockManaus": 41,
-        "stockJundiai": 7,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -45492,19 +44788,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_1050_m5-fig543a-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-3",
-        "description": "X20X34)",
-        "unitQuantity": 1,
-        "factoryPrice": 262.4,
-        "msrpPrice": 380.48,
-        "stockManaus": 42,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig543a-4",
         "ref": 3,
         "partNumber": "62668-42A02-000",
@@ -45657,19 +44940,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 626.98,
         "stockManaus": 12,
         "stockJundiai": 18,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig543a-16",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-16",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -45962,19 +45232,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_1050_m5-fig543b-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543B-3",
-        "description": "X20X34)",
-        "unitQuantity": 1,
-        "factoryPrice": 270.4,
-        "msrpPrice": 392.08,
-        "stockManaus": 43,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig543b-4",
         "ref": 3,
         "partNumber": "62668-42A02-000",
@@ -46127,19 +45384,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 800.98,
         "stockManaus": 27,
         "stockJundiai": 14,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig543b-16",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543B-16",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 176.4,
-        "msrpPrice": 255.78,
-        "stockManaus": 19,
-        "stockJundiai": 22,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -46485,19 +45729,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 983.68,
         "stockManaus": 17,
         "stockJundiai": 17,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig550a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550A-4",
-        "description": "27.2X124)",
-        "unitQuantity": 1,
-        "factoryPrice": 254.4,
-        "msrpPrice": 368.88,
-        "stockManaus": 41,
-        "stockJundiai": 7,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -47108,20 +46339,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BLACK"
       },
       {
-        "id": "p-vstrom_1050_m5-fig550b-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550B-3",
-        "description": "",
-        "unitQuantity": 1,
-        "factoryPrice": 254.4,
-        "msrpPrice": 368.88,
-        "stockManaus": 41,
-        "stockJundiai": 7,
-        "inStock": true,
-        "categoryGroup": "Chassi",
-        "observation": "BODY COLOR:C4X"
-      },
-      {
         "id": "p-vstrom_1050_m5-fig550b-4",
         "ref": 2,
         "partNumber": "65311-06L20-000",
@@ -47134,20 +46351,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "GOLD"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig550b-5",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550B-5",
-        "description": "",
-        "unitQuantity": 1,
-        "factoryPrice": 270.4,
-        "msrpPrice": 392.08,
-        "stockManaus": 43,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi",
-        "observation": "BODY COLOR:BT1,CK6"
       },
       {
         "id": "p-vstrom_1050_m5-fig550b-6",
@@ -47250,19 +46453,6 @@ export const VSTROM_1050_M5_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 983.68,
         "stockManaus": 17,
         "stockJundiai": 17,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_1050_m5-fig550b-14",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550B-14",
-        "description": "27.2X124)",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
         "inStock": true,
         "categoryGroup": "Chassi"
       },

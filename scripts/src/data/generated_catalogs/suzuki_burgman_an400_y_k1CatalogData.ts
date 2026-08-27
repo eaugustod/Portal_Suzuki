@@ -1,0 +1,28530 @@
+import { PartsDiagramGroup } from '../../types';
+
+export const SUZUKI_BURGMAN_AN400_Y_K1_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig1",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "01",
+    "illustrationCode": "FIG1",
+    "title": "GASKET SET",
+    "subTitle": "BURGMAN AN400 Y K1 - GASKET SET",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig1.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig1.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - GASKET SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - GASKET, CYLINDER HEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - GASKET, CYL HEAD COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - GASKET, CYLINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - GASKET, MAGNETO COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - GASKET, CLUTCH COVER OUTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - GASKET, TENSIONER ADJUSTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - GASKET, EXHAUST PIPE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - O RING, OIL STRAINER CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - O RING, OIL STRAINER CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - O RING (D:1.9, ID:13)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - O RING (D:2.4, ID:39.7)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig1-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - O RING (D:2.4, ID:52.6)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "11400-15871",
+        "description": "GASKET SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "11141-15F00",
+        "description": "GASKET, CYLINDER HEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "11173-14F00",
+        "description": "GASKET, CYL HEAD COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "11241-14F00",
+        "description": "GASKET, CYLINDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "11483-14F00",
+        "description": "GASKET, MAGNETO COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "11484-14F00",
+        "description": "GASKET, CLUTCH COVER OUTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "12837-19B10",
+        "description": "GASKET, TENSIONER ADJUSTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "14181-18C00",
+        "description": "GASKET, EXHAUST PIPE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "16528-14F00",
+        "description": "O RING, OIL STRAINER CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09161-11008",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09280-00035",
+        "description": "O RING, OIL STRAINER CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09280-13004",
+        "description": "O RING (D:1.9, ID:13)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09280-40010",
+        "description": "O RING (D:2.4, ID:39.7)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09280-54001",
+        "description": "O RING (D:2.4, ID:52.6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig2",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "02",
+    "illustrationCode": "FIG2",
+    "title": "CYLINDER HEAD COVER",
+    "subTitle": "BURGMAN AN400 Y K1 - CYLINDER HEAD COVER",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig2.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig2.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig2-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, CYLINDER HEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig2-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, CYLINDER HEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig2-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - GASKET, CYLINDER HEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig2-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT (7X18.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig2-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig2-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT (7X31)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "11171-14F00",
+        "description": "COVER, CYLINDER HEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "11171-14F10",
+        "description": "COVER, CYLINDER HEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "11173-14F00",
+        "description": "GASKET, CYLINDER HEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09106-07015",
+        "description": "BOLT (7X18.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09161-11008",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09106-07017",
+        "description": "BOLT (7X31)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig3",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "03",
+    "illustrationCode": "FIG3",
+    "title": "CYLINDER HEAD (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - CYLINDER HEAD (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig3.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig3.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HEAD ASSY, CYLINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - GUIDE, VALVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT (6X39)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT (6X45)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT (6X60)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - PIN (6.2X8X11)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - GASKET, CYLINDER HEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - STUD BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - STUD BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - GASKET ( 10.5X22X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - PIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BOLT (10X180)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BOLT (10X155)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (NGK, CR7E)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (DENSO, U22ESR-N)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (NGK, CR8E)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (DENSO, U24ESR-N)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (NGK, CR9E)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (DENSO, U27ESR-N)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - PIPE, INTAKE NO.1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - PIPE, INTAKE NO.2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - O RING (D:2.4, ID:39.7)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOLT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - COVER, THERMOSTAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - THERMOSTAT, WATER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - UNION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - BOLT, THERMOSTATS COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - GASKET (6.2X11X1.2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - GASKET (6.4X11.5X0.8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig3-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - GAUGE ASSY, WATER TEMPERATURE"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "11100-15F20",
+        "description": "HEAD ASSY, CYLINDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "11115-14D71",
+        "description": "GUIDE, VALVE",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09103-06026",
+        "description": "BOLT (6X39)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09103-06165",
+        "description": "BOLT (6X45)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09103-06064",
+        "description": "BOLT (6X60)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09206-08001",
+        "description": "PIN (6.2X8X11)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "11141-15F00",
+        "description": "GASKET, CYLINDER HEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "01421-08503",
+        "description": "STUD BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08316-10083",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "01421-06253",
+        "description": "STUD BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "08316-10063",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09168-10017",
+        "description": "GASKET ( 10.5X22X2)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "04211-13189",
+        "description": "PIN",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09103-10178",
+        "description": "BOLT (10X180)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "09103-10223",
+        "description": "BOLT (10X155)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00516",
+        "description": "SPARK PLUG (NGK, CR7E)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00515",
+        "description": "SPARK PLUG (DENSO, U22ESR-N)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00456",
+        "description": "SPARK PLUG (NGK, CR8E)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00457",
+        "description": "SPARK PLUG (DENSO, U24ESR-N)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00458",
+        "description": "SPARK PLUG (NGK, CR9E)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00459",
+        "description": "SPARK PLUG (DENSO, U27ESR-N)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "13111-15F00",
+        "description": "PIPE, INTAKE NO.1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "13121-15F00",
+        "description": "PIPE, INTAKE NO.2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09280-40010",
+        "description": "O RING (D:2.4, ID:39.7)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "09119-06092",
+        "description": "BOLT (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "09402-54208",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "13170-15F00",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "09402-50208",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "13170-14F10",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "17661-14F00",
+        "description": "COVER, THERMOSTAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "17670-08D10",
+        "description": "THERMOSTAT, WATER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "07130-06203",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "09360-06007",
+        "description": "UNION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "17568-50F00",
+        "description": "BOLT, THERMOSTATS COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "09168-06004",
+        "description": "GASKET (6.2X11X1.2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "09168-06026",
+        "description": "GASKET (6.4X11.5X0.8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "34850-14F00",
+        "description": "GAUGE ASSY, WATER TEMPERATURE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig4",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "04",
+    "illustrationCode": "FIG4",
+    "title": "CYLINDER HEAD  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - CYLINDER HEAD  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig4.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig4.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HEAD ASSY, CYLINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - GUIDE, VALVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT (6X39)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT (6X45)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT (6X60)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - PIN (6.2X8X11)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - GASKET, CYLINDER HEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - STUD BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - STUD BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - GASKET (10.5X22X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - PIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BOLT (10X180)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BOLT (10X155)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (NGK, CR7E)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (DENSO, U22ESR-N)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (NGK, CR8E)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (DENSO, U24ESR-N)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (NGK, CR9E)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPARK PLUG (DENSO, U27ESR-N)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - PIPE, INTAKE NO.1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - O RING (D:2.4, ID:39.7)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BOLT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - COVER, THERMOSTAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - THERMOSTAT, WATER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - BOLT, THERMOSTAT COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - GASKET (6.4X11.5X0.8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig4-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - GUAGE ASSY, WATER TEMPERATURE"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "11100-15F40",
+        "description": "HEAD ASSY, CYLINDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "11115-14D71",
+        "description": "GUIDE, VALVE",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09103-06026",
+        "description": "BOLT (6X39)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09103-06219",
+        "description": "BOLT (6X45)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09103-06220",
+        "description": "BOLT (6X60)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09206-08001",
+        "description": "PIN (6.2X8X11)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "11141-15F00",
+        "description": "GASKET, CYLINDER HEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "01421-08503",
+        "description": "STUD BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08316-10083",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "01421-06253",
+        "description": "STUD BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "08316-10063",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09168-10017",
+        "description": "GASKET (10.5X22X2)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "04211-13189",
+        "description": "PIN",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09103-10178",
+        "description": "BOLT (10X180)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "09103-10223",
+        "description": "BOLT (10X155)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00516",
+        "description": "SPARK PLUG (NGK, CR7E)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00515",
+        "description": "SPARK PLUG (DENSO, U22ESR-N)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00456",
+        "description": "SPARK PLUG (NGK, CR8E)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00457",
+        "description": "SPARK PLUG (DENSO, U24ESR-N)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00458",
+        "description": "SPARK PLUG (NGK, CR9E)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09482-00459",
+        "description": "SPARK PLUG (DENSO, U27ESR-N)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "13110-15F00",
+        "description": "PIPE, INTAKE NO.1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "09280-40010",
+        "description": "O RING (D:2.4, ID:39.7)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09119-06092",
+        "description": "BOLT (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "13170-15F10",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "17661-14F00",
+        "description": "COVER, THERMOSTAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "17670-08D10",
+        "description": "THERMOSTAT, WATER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "07130-06203",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "17568-50F00",
+        "description": "BOLT, THERMOSTAT COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "09168-06026",
+        "description": "GASKET (6.4X11.5X0.8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "34850-14F00",
+        "description": "GUAGE ASSY, WATER TEMPERATURE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig5",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "05",
+    "illustrationCode": "FIG5",
+    "title": "CYLINDER",
+    "subTitle": "BURGMAN AN400 Y K1 - CYLINDER",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig5.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig5.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig5-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CYLINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig5-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - GASKET, CYLINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig5-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - STUD BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig5-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig5-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - PIN"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "11210-15F00-0F0",
+        "description": "CYLINDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "11241-14F00",
+        "description": "GASKET, CYLINDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "01421-06253",
+        "description": "STUD BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "08316-10063",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "04211-13189",
+        "description": "PIN",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig6",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "06",
+    "illustrationCode": "FIG6",
+    "title": "CRANKCASE",
+    "subTitle": "BURGMAN AN400 Y K1 - CRANKCASE",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig6.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig6.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CRANKCASE SET, RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BUSHING (10X23X30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - CRANKCASE SET, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - CRANKCASE SET, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BUSHING (10X23X30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - GASKET (8.2X14X1)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - PIN, CRANKCASE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - HOSE, TRANSMISSION BREATHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - PLUG, DRAIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - GASKET (13.8X18.8X0.4)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - GASKET (8.2X14X1)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - PLUG (16X8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - GASKET (16X22X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - PLUG, OIL RETURN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - GASKET (13.8X18.8X0.4)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - PLUG (L:12)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - GASKET (12.1X16.2X3.7)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - PLUG (16X8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - GASKET (16X22X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - O RING (D:1.9, ID:12.6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - JET, PISTON COOLING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - O RING (D:1.2, ID:4.0)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-29",
+        "ref": 29,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "29 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-30",
+        "ref": 30,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "30 - COVER, GEAR BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-30",
+        "ref": 30,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "30 - COVER, GEAR BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-31",
+        "ref": 31,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "31 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-32",
+        "ref": 32,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "32 - PIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-33",
+        "ref": 33,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "33 - O RING (D:2.4, ID:172)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-34",
+        "ref": 34,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "34 - MAGNETO, GEAR BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-35",
+        "ref": 35,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "35 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-36",
+        "ref": 36,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "36 - BOLT (12X295)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-37",
+        "ref": 37,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "37 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-38",
+        "ref": 38,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "38 - SEPARATOR, OIL NO.2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig6-39",
+        "ref": 39,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "39 - JET, BREATHER OIL"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "11310-15830",
+        "description": "CRANKCASE SET, RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09319-10043",
+        "description": "BUSHING (10X23X30)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "11320-15830",
+        "description": "CRANKCASE SET, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "11320-15831",
+        "description": "CRANKCASE SET, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09319-10043",
+        "description": "BUSHING (10X23X30)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "01547-06603",
+        "description": "BOLT",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "07130-08653",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "07120-08903",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "07120-08603",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "07120-08703",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09168-08016",
+        "description": "GASKET (8.2X14X1)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "11319-33E50",
+        "description": "PIN, CRANKCASE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "11329-14F00",
+        "description": "HOSE, TRANSMISSION BREATHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09401-11403",
+        "description": "CLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09247-14026",
+        "description": "PLUG, DRAIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09168-14002",
+        "description": "GASKET (13.8X18.8X0.4)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "01550-08123",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09168-08008",
+        "description": "GASKET (8.2X14X1)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "01550-08123",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "09248-16012",
+        "description": "PLUG (16X8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09168-16002",
+        "description": "GASKET (16X22X2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "09248-14005",
+        "description": "PLUG, OIL RETURN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "09168-14002",
+        "description": "GASKET (13.8X18.8X0.4)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "09248-12004",
+        "description": "PLUG (L:12)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "09168-12002",
+        "description": "GASKET (12.1X16.2X3.7)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "09248-16012",
+        "description": "PLUG (16X8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "09168-16002",
+        "description": "GASKET (16X22X2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "09280-12009",
+        "description": "O RING (D:1.9, ID:12.6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "11390-14F00",
+        "description": "JET, PISTON COOLING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "09280-04004",
+        "description": "O RING (D:1.2, ID:4.0)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 29,
+        "partNumber": "07130-06123",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 30,
+        "partNumber": "11431-15F00",
+        "description": "COVER, GEAR BOX",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 30,
+        "partNumber": "11431-15F10",
+        "description": "COVER, GEAR BOX",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 31,
+        "partNumber": "01550-08353",
+        "description": "BOLT",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 32,
+        "partNumber": "04211-11169",
+        "description": "PIN",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 33,
+        "partNumber": "09280-00035",
+        "description": "O RING (D:2.4, ID:172)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 34,
+        "partNumber": "11393-20E00",
+        "description": "MAGNETO, GEAR BOX",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 35,
+        "partNumber": "01570-06123",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 36,
+        "partNumber": "09103-12053",
+        "description": "BOLT (12X295)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 37,
+        "partNumber": "08319-31123",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 38,
+        "partNumber": "11186-14F01",
+        "description": "SEPARATOR, OIL NO.2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 39,
+        "partNumber": "11323-15F00",
+        "description": "JET, BREATHER OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig7",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "07",
+    "illustrationCode": "FIG7",
+    "title": "CRANKCASE COVER",
+    "subTitle": "BURGMAN AN400 Y K1 - CRANKCASE COVER",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig7.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig7.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, CLUTCH INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, CLUTCH OUTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CUSHION, CLUTCH OUTER COVER NO.1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CUSHION, CLUTCH OUTER COVER NO.2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - GASKET, CLUTCH COVER OUTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - WASHER (6.5X18X1)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - WASHER (6.5X24X1.6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SPACER (8.6X12X9.3)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CUSHION (11.8X25X7.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - PIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - DUCT, CLUTCH OUTER COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - DUCT, BELT COOLING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - DUCT, BELT COOLING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - FILTER, BELT COOLING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - FILTER, BELT COOLING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - HOLDER, BELT COOLING FILTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - CUSHION, BELT COOLING DUCT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - COVER, MAGNETO"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - GASKET, MAGNETO COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-29",
+        "ref": 29,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "29 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-30",
+        "ref": 30,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "30 - GASKET (5.8X13X1.2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-31",
+        "ref": 31,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "31 - PIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-32",
+        "ref": 32,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "32 - GAUGE, OIL LEVEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-33",
+        "ref": 33,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "33 - O RING (D:3.1, ID:16.8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-34",
+        "ref": 34,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "34 - PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-35",
+        "ref": 35,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "35 - GASKET (10X14X3.6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-36",
+        "ref": 36,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "36 - PLUG (16X8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-37",
+        "ref": 37,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "37 - GASKET (16X22X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-38",
+        "ref": 38,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "38 - SEPARATOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-39",
+        "ref": 39,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "39 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig7-40",
+        "ref": 40,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "40 - COVER, FRAME INNER"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "11341-15F00",
+        "description": "COVER, CLUTCH INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "11370-15F01",
+        "description": "COVER, CLUTCH OUTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "11486-15F00",
+        "description": "CUSHION, CLUTCH OUTER COVER NO.1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "11487-15F00",
+        "description": "CUSHION, CLUTCH OUTER COVER NO.2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "11484-14F00",
+        "description": "GASKET, CLUTCH COVER OUTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "01547-06303",
+        "description": "BOLT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "01547-06457",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "01547-06257",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "01547-06757",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09160-06028",
+        "description": "WASHER (6.5X18X1)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09169-06062",
+        "description": "WASHER",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09320-09016",
+        "description": "CUSHION",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09160-06134",
+        "description": "WASHER (6.5X24X1.6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09180-08181",
+        "description": "SPACER (8.6X12X9.3)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09320-12011",
+        "description": "CUSHION (11.8X25X7.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "04211-11169",
+        "description": "PIN",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "11372-15F00",
+        "description": "DUCT, CLUTCH OUTER COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "03242-05103",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "11381-15F00",
+        "description": "DUCT, BELT COOLING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "11381-15F10",
+        "description": "DUCT, BELT COOLING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "11388-15F00",
+        "description": "FILTER, BELT COOLING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "11388-15F10",
+        "description": "FILTER, BELT COOLING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "11389-15F00",
+        "description": "HOLDER, BELT COOLING FILTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "02142-06163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "01547-06203",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "01547-06653",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "08322-01063",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "11485-14F00",
+        "description": "CUSHION, BELT COOLING DUCT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "11351-14F01",
+        "description": "COVER, MAGNETO",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "11483-14F00",
+        "description": "GASKET, MAGNETO COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "01547-06307",
+        "description": "BOLT",
+        "qty": "9",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 29,
+        "partNumber": "01547-06257",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 30,
+        "partNumber": "09168-06023",
+        "description": "GASKET (5.8X13X1.2)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 31,
+        "partNumber": "04211-09149",
+        "description": "PIN",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 32,
+        "partNumber": "11971-14F00",
+        "description": "GAUGE, OIL LEVEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 33,
+        "partNumber": "09280-17003",
+        "description": "O RING (D:3.1, ID:16.8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 34,
+        "partNumber": "09248-10010",
+        "description": "PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 35,
+        "partNumber": "09168-10002",
+        "description": "GASKET (10X14X3.6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 36,
+        "partNumber": "09248-16012",
+        "description": "PLUG (16X8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 37,
+        "partNumber": "09168-10002",
+        "description": "GASKET (16X22X2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 38,
+        "partNumber": "11352-15F00",
+        "description": "SEPARATOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 39,
+        "partNumber": "02112-06123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 40,
+        "partNumber": "11411-15F00",
+        "description": "COVER, FRAME INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig8",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "08",
+    "illustrationCode": "FIG8",
+    "title": "CRANKSHAFT",
+    "subTitle": "BURGMAN AN400 Y K1 - CRANKSHAFT",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig8.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig8.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CRANKSHAFT ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CONNECTING ROD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - PIN, CRANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BEARING (35X45X22)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CRANKSHAFT, RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CRANKSHAFT, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CRANKSHAFT, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - WASHER ( 35X55X1)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BEARING (12X32X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BEARING (35X72X17)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - OIL SEAL (12X29X6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - OIL SEAL (34X52X6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - GEAR, CRANK BALANCER DRIVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - PIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - NUT, FLYWHEEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CIRCLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - RING SET, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - PIN, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SNAP RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - PISTON SET (OS:0.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig8-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - PISTON SET (OS:1.0)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "12200-15F00",
+        "description": "CRANKSHAFT ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "12161-15F00",
+        "description": "CONNECTING ROD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "12210-15F00",
+        "description": "PIN, CRANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09263-35034",
+        "description": "BEARING (35X45X22)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "12221-15F00",
+        "description": "CRANKSHAFT, RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "12260-15F00",
+        "description": "CRANKSHAFT, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "12260-15F01",
+        "description": "CRANKSHAFT, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09160-35005",
+        "description": "WASHER ( 35X55X1)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09262-12016",
+        "description": "BEARING (12X32X10)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09262-35039",
+        "description": "BEARING (35X72X17)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09282-12011",
+        "description": "OIL SEAL (12X29X6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09283-34011",
+        "description": "OIL SEAL (34X52X6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "12661-14F00",
+        "description": "GEAR, CRANK BALANCER DRIVE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09261-05005",
+        "description": "PIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "12664-24B01",
+        "description": "NUT, FLYWHEEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "09164-35002",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "08331-41326",
+        "description": "CIRCLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "12111-15F00-0F0",
+        "description": "PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "12140-15F00",
+        "description": "RING SET, PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "12151-05A00",
+        "description": "PIN, PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09381-20004",
+        "description": "SNAP RING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "12100-15F00-050",
+        "description": "PISTON SET (OS:0.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "12100-15F00-100",
+        "description": "PISTON SET (OS:1.0)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig9",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "09",
+    "illustrationCode": "FIG9",
+    "title": "STARTER CLUTCH",
+    "subTitle": "BURGMAN AN400 Y K1 - STARTER CLUTCH",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig9.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig9.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig9-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - GEAR, STARTER IDLE NO.1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig9-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PIN (7X12X50.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig9-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - CLUTCH SET, STARTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig9-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT (8X16)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "12611-14F01",
+        "description": "GEAR, STARTER IDLE NO.1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09206-12002",
+        "description": "PIN (7X12X50.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "12600-15820",
+        "description": "CLUTCH SET, STARTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09106-08095",
+        "description": "BOLT (8X16)",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig10",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "10",
+    "illustrationCode": "FIG10",
+    "title": "CRANK BALANCER",
+    "subTitle": "BURGMAN AN400 Y K1 - CRANK BALANCER",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig10.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig10.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BALANCER, CRANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BEARING (20X47X14)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - GEAR, CRANK BALANCER DRIVEN NO.1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - GEAR, CRANK BALANCER DRIVEN NO.2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - KEY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - WASHER (28.5X47.8X2.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CIRCLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - THRUST WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig10-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - NUT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "12651-15F00",
+        "description": "BALANCER, CRANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09262-20121",
+        "description": "BEARING (20X47X14)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "12666-14F00",
+        "description": "GEAR, CRANK BALANCER DRIVEN NO.1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "12667-14F00",
+        "description": "GEAR, CRANK BALANCER DRIVEN NO.2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09440-07064",
+        "description": "SPRING",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09420-04008",
+        "description": "KEY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09164-28002",
+        "description": "WASHER (28.5X47.8X2.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "08221-28365",
+        "description": "SHIM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "08331-31286",
+        "description": "CIRCLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08211-28482",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "08211-12283",
+        "description": "THRUST WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "08316-10123",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig11",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "11",
+    "illustrationCode": "FIG11",
+    "title": "CAMSHAFT/VALVE",
+    "subTitle": "BURGMAN AN400 Y K1 - CAMSHAFT/VALVE",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig11.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig11.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SSHAFT, CAM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SPROCKET, CAM SHAFT (NT:34)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - PIN, SPROCKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WASHER, SPROCKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT (6X10.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - C RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - ARM, VALVE ROCKER INTAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SCREW, TAPPET ADJUSTING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT, TAPPET ADJUSTING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - ARM, VALVE ROCKER EXHAUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SCREW, TAPPET ADJUSTING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - NUT, TAPPET ADJUSTING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SHAFT, VALVE ROCKER ARM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - VALVE, INTAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - VALVE, EXHAUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPRING SET, VALVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - RETAINER, VALVE SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - COTTER, VALVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SEAT, VALVE SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig11-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - OIL SEAL"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "12710-15F01",
+        "description": "SSHAFT, CAM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "12741-14D50",
+        "description": "SPROCKET, CAM SHAFT (NT:34)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09261-05005",
+        "description": "PIN, SPROCKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "12747-44B00",
+        "description": "WASHER, SPROCKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09111-06032",
+        "description": "BOLT (6X10.5)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09390-22002",
+        "description": "C RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "12840-15F00",
+        "description": "ARM, VALVE ROCKER INTAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "12842-17C50",
+        "description": "SCREW, TAPPET ADJUSTING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "12843-27A00",
+        "description": "NUT, TAPPET ADJUSTING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "12850-15F00",
+        "description": "ARM, VALVE ROCKER EXHAUST",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "12842-17C50",
+        "description": "SCREW, TAPPET ADJUSTING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "12843-27A00",
+        "description": "NUT, TAPPET ADJUSTING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "12861-14F00",
+        "description": "SHAFT, VALVE ROCKER ARM",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "12911-14D01",
+        "description": "VALVE, INTAKE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "12912-14D01",
+        "description": "VALVE, EXHAUST",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "12920-06B00",
+        "description": "SPRING SET, VALVE",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "12931-27A01",
+        "description": "RETAINER, VALVE SPRING",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "12932-27A00",
+        "description": "COTTER, VALVE",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "12933-81400",
+        "description": "SEAT, VALVE SPRING",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "09289-05011",
+        "description": "OIL SEAL",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig12",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "12",
+    "illustrationCode": "FIG12",
+    "title": "CAM CHAIN",
+    "subTitle": "BURGMAN AN400 Y K1 - CAM CHAIN",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig12.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig12.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CHAIN, CAM SHAFT DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - GUIDE, CAM CHAIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - TENSIONER, CAM CHAIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT, CAM CHAIN TENSIONER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - GASKET (8.2X14X1)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - ADJUSTER ASSY, TENSIONER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PLUG, ADJUSTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - GASKET, TENSIONER ADJUSTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig12-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "12760-19B71",
+        "description": "CHAIN, CAM SHAFT DRIVEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "12771-14F00",
+        "description": "GUIDE, CAM CHAIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "12811-14F00",
+        "description": "TENSIONER, CAM CHAIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "12812-32410",
+        "description": "BOLT, CAM CHAIN TENSIONER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09168-08008",
+        "description": "GASKET (8.2X14X1)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "12830-29B11",
+        "description": "ADJUSTER ASSY, TENSIONER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "12832-02A00",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "12833-29B00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "12834-26B00",
+        "description": "PLUG, ADJUSTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "12837-19B10",
+        "description": "GASKET, TENSIONER ADJUSTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "07130-06203",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig13",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "13",
+    "illustrationCode": "FIG13",
+    "title": "CARBURETOR  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - CARBURETOR  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig13.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig13.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - CARBURETOR ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - TOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NEEDLE, JET (N8CC)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - PISTON, VACUUM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - JET, NEEDLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - HOLDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - JET, MAIN (108)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - JET, SLOW (38)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - VALVE ASSY, NEEDLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - FLOAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - PIN, FLOAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - PACKING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - DRAIN, PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - U RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - DIAPHRAGM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - SCREW, ADJUST (1, 3/4)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-29",
+        "ref": 29,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "29 - ELEMENT ASSY, THERMO"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-30",
+        "ref": 30,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "30 - COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-31",
+        "ref": 31,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "31 - PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-32",
+        "ref": 32,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "32 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-33",
+        "ref": 33,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "33 - SCREW, STOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-34",
+        "ref": 34,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "34 - HOLDER, ADJUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-35",
+        "ref": 35,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "35 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-36",
+        "ref": 36,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "36 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-37",
+        "ref": 37,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "37 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-38",
+        "ref": 38,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "38 - COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-39",
+        "ref": 39,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "39 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-40",
+        "ref": 40,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "40 - DIAPHRAGM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-41",
+        "ref": 41,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "41 - U RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-42",
+        "ref": 42,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "42 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-43",
+        "ref": 43,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "43 - SENSOR ASSY, THROTTLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-44",
+        "ref": 44,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "44 - HOSE, AIR VENT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-45",
+        "ref": 45,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "45 - WASHER, THROTTLE SENSOR SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-46",
+        "ref": 46,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "46 - COLLAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-47",
+        "ref": 47,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "47 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-48",
+        "ref": 48,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "48 - SCREW, THROTTLE SENSOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-51",
+        "ref": 51,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "51 - HEATER ASSY, CARBURETOR (25W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig13-52",
+        "ref": 52,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "52 - THERMO SWITCH, CARBURETOR HEATER"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "13200-15F50",
+        "description": "CARBURETOR ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "13502-15F00",
+        "description": "TOP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "13503-15F00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "13504-15F00",
+        "description": "SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "13383-15F50",
+        "description": "NEEDLE, JET (N8CC)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "13501-15F00",
+        "description": "PISTON, VACUUM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "13341-15F00",
+        "description": "JET, NEEDLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "13342-15F00",
+        "description": "HOLDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09491-12032",
+        "description": "JET, MAIN (108)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09492-38005",
+        "description": "JET, SLOW (38)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "13370-26E00",
+        "description": "VALVE ASSY, NEEDLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "13375-26E00",
+        "description": "CLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "13250-26E00",
+        "description": "FLOAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "13254-26E00",
+        "description": "PIN, FLOAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "02112-04163",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "13251-15F00",
+        "description": "PACKING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "13602-26E10",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "13247-26E00",
+        "description": "DRAIN, PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "13488-15F00",
+        "description": "COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "13601-15F20",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "13497-14F00",
+        "description": "U RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "13494-15F00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "13491-15F00",
+        "description": "DIAPHRAGM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "13693-15F00",
+        "description": "BINDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "13601-15F00",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "13269-15F00",
+        "description": "SCREW, ADJUST (1, 3/4)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "13268-26E00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "13291-26E00",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "13295-26E00",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 29,
+        "partNumber": "13400-15F00",
+        "description": "ELEMENT ASSY, THERMO",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 30,
+        "partNumber": "13431-15F00",
+        "description": "COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 31,
+        "partNumber": "13428-06F30",
+        "description": "PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 32,
+        "partNumber": "02112-14087",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 33,
+        "partNumber": "13267-14F00",
+        "description": "SCREW, STOP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 34,
+        "partNumber": "13264-14F00",
+        "description": "HOLDER, ADJUST",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 35,
+        "partNumber": "13572-14F00",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 36,
+        "partNumber": "13271-26E10",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 37,
+        "partNumber": "13508-26E00",
+        "description": "CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 38,
+        "partNumber": "13484-15F00",
+        "description": "COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 39,
+        "partNumber": "13481-15F00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 40,
+        "partNumber": "13480-15F00",
+        "description": "DIAPHRAGM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 41,
+        "partNumber": "13486-15F00",
+        "description": "U RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 42,
+        "partNumber": "13601-15F10",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 43,
+        "partNumber": "13580-15F00",
+        "description": "SENSOR ASSY, THROTTLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 44,
+        "partNumber": "13686-15F00",
+        "description": "HOSE, AIR VENT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 45,
+        "partNumber": "13615-15F00",
+        "description": "WASHER, THROTTLE SENSOR SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 46,
+        "partNumber": "13574-03F00",
+        "description": "COLLAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 47,
+        "partNumber": "13575-03F00",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 48,
+        "partNumber": "13605-15F00",
+        "description": "SCREW, THROTTLE SENSOR",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 51,
+        "partNumber": "13650-20E00",
+        "description": "HEATER ASSY, CARBURETOR (25W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 52,
+        "partNumber": "13655-25E00",
+        "description": "THERMO SWITCH, CARBURETOR HEATER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig14",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "14",
+    "illustrationCode": "FIG14",
+    "title": "CARBURETOR  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - CARBURETOR  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig14.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig14.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - CARBURETOR ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - TOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NEEDLE, JET (N8CC)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - PISTON, VACUUM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - JET, NEEDLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - HOLDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - JET, MAIN (115)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - JET, SLOW (42)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - VALVE ASSY, NEEDLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - FLOAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - PIN, FLOAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - PACKING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - DRAIN, PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - U RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - DIAPHRAGM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - SCREW, ADJUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-29",
+        "ref": 29,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "29 - ELEMENT ASSY, THERMO"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-30",
+        "ref": 30,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "30 - COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-31",
+        "ref": 31,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "31 - PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-32",
+        "ref": 32,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "32 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SCREW, STOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HOLDER, ADJUSTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-34",
+        "ref": 34,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "34 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-35",
+        "ref": 35,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "35 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-36",
+        "ref": 36,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "36 - COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-37",
+        "ref": 37,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "37 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-38",
+        "ref": 38,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "38 - DIAPHRAGM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-39",
+        "ref": 39,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "39 - U RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-40",
+        "ref": 40,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "40 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-41",
+        "ref": 41,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "41 - SENSOR ASSY, THROTTLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-42",
+        "ref": 42,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "42 - HOSE, AIR VENT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-43",
+        "ref": 43,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "43 - WASHER, THROTTLE SENSOR SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-44",
+        "ref": 44,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "44 - COLLAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-45",
+        "ref": 45,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "45 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-46",
+        "ref": 46,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "46 - SCREW, THROTTLE SENSOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-47",
+        "ref": 47,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "47 - PIPE, RUBBER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-48",
+        "ref": 48,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "48 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-49",
+        "ref": 49,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "49 - HEATER ASSY, CARBURETOR (25W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-49",
+        "ref": 49,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "49 - HEATER ASSY, CARBURETOR (35W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig14-50",
+        "ref": 50,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "50 - THERMO SWITCH, CARBURETOR HEATER"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "13200-15F90",
+        "description": "CARBURETOR ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "13502-15F00",
+        "description": "TOP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "13503-15F00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "13504-15F00",
+        "description": "SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "13383-15F50",
+        "description": "NEEDLE, JET (N8CC)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "13501-15F00",
+        "description": "PISTON, VACUUM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "13341-15F00",
+        "description": "JET, NEEDLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "13342-15F10",
+        "description": "HOLDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09491-23025",
+        "description": "JET, MAIN (115)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09492-42022",
+        "description": "JET, SLOW (42)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "13370-26E00",
+        "description": "VALVE ASSY, NEEDLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "13375-26E00",
+        "description": "CLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "13250-26E00",
+        "description": "FLOAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "13254-26E00",
+        "description": "PIN, FLOAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "02112-04163",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "13251-15F00",
+        "description": "PACKING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "13602-26E10",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "13247-26E00",
+        "description": "DRAIN, PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "13488-15F00",
+        "description": "COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "13601-15F20",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "13497-14F00",
+        "description": "U RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "13494-15F00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "13491-15F00",
+        "description": "DIAPHRAGM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "13693-15F00",
+        "description": "BINDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "13601-15F00",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "13269-15F00",
+        "description": "SCREW, ADJUST",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "13268-26E00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "13291-26E00",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "13295-26E00",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 29,
+        "partNumber": "13430-15F50",
+        "description": "ELEMENT ASSY, THERMO",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 30,
+        "partNumber": "13431-15F00",
+        "description": "COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 31,
+        "partNumber": "13428-06F30",
+        "description": "PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 32,
+        "partNumber": "02112-14087",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "13267-14F00",
+        "description": "SCREW, STOP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "13572-14F00",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "13264-14F00",
+        "description": "HOLDER, ADJUSTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 34,
+        "partNumber": "13271-26E10",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 35,
+        "partNumber": "13508-26E00",
+        "description": "CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 36,
+        "partNumber": "13484-15F00",
+        "description": "COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 37,
+        "partNumber": "13481-15F00",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 38,
+        "partNumber": "13480-15F00",
+        "description": "DIAPHRAGM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 39,
+        "partNumber": "13486-15F00",
+        "description": "U RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 40,
+        "partNumber": "13601-15F10",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 41,
+        "partNumber": "13580-15F00",
+        "description": "SENSOR ASSY, THROTTLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 42,
+        "partNumber": "13686-15F00",
+        "description": "HOSE, AIR VENT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 43,
+        "partNumber": "13615-15F00",
+        "description": "WASHER, THROTTLE SENSOR SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 44,
+        "partNumber": "13574-03F00",
+        "description": "COLLAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 45,
+        "partNumber": "13575-03F00",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 46,
+        "partNumber": "13605-15F00",
+        "description": "SCREW, THROTTLE SENSOR",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 47,
+        "partNumber": "13684-15F00",
+        "description": "PIPE, RUBBER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 48,
+        "partNumber": "09401-07101",
+        "description": "CLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 49,
+        "partNumber": "13650-20E00",
+        "description": "HEATER ASSY, CARBURETOR (25W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 49,
+        "partNumber": "13650-41F00",
+        "description": "HEATER ASSY, CARBURETOR (35W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 50,
+        "partNumber": "13655-25E00",
+        "description": "THERMO SWITCH, CARBURETOR HEATER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig15",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "15",
+    "illustrationCode": "FIG15",
+    "title": "AIR CLEANER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - AIR CLEANER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig15.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig15.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CLEANER ASSY, AIR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CAP, AIR CLEANER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - GASKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - TUBE, INLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - FILTER, AIR CLEANER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOLDER, FILTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - TUBE, OUTLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - TUBE, BREATHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - JET, BREATHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - TUBE, DRAIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - SPACER (6.5X10X9.4)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BRACKET, AIR CLEANER REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BRACKET ASSY, AIR CLEANER REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - CUSHION (8X26X7)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - BOLT (6X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - BRACKET, AIR CLEANER FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - BOLT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig15-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - CUSHION, AIR CLEANER BRACKET"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "13700-15F00",
+        "description": "CLEANER ASSY, AIR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "13740-15F00",
+        "description": "CAP, AIR CLEANER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "13746-14F00",
+        "description": "GASKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "13891-15F00",
+        "description": "TUBE, INLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "13780-14F01",
+        "description": "FILTER, AIR CLEANER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "13791-15F00",
+        "description": "HOLDER, FILTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "13881-15F00",
+        "description": "TUBE, OUTLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09402-72203",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09402-62203",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "13859-41B10",
+        "description": "PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09401-14301",
+        "description": "CLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "02112-75163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "13850-14F00",
+        "description": "TUBE, BREATHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09401-14301",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "13859-14D40",
+        "description": "JET, BREATHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "13870-14F00",
+        "description": "PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09401-16401",
+        "description": "CLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "13870-14F10",
+        "description": "TUBE, DRAIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09401-14301",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "09180-06286",
+        "description": "SPACER (6.5X10X9.4)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "09320-10501",
+        "description": "CUSHION",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "01550-06123",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "13770-15F00",
+        "description": "BRACKET, AIR CLEANER REAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "13760-15F00",
+        "description": "BRACKET ASSY, AIR CLEANER REAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "09320-09043",
+        "description": "CUSHION (8X26X7)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "09116-06093",
+        "description": "BOLT (6X25)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "13760-14F00",
+        "description": "BRACKET, AIR CLEANER FRONT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "09116-06168",
+        "description": "BOLT (6X16)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "13779-15F00",
+        "description": "CUSHION, AIR CLEANER BRACKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig16",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "16",
+    "illustrationCode": "FIG16",
+    "title": "AIR CLEANER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - AIR CLEANER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig16.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig16.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CLEANER ASSY, AIR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CAP, AIR CLEANER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - GASKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - TUBE, INLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - FILTER, AIR CLEANER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOLDER, FILTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - TUBE, OUTLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - TUBE, BREATHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - JET, BREATHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - TUBE, DRAIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SPACER (6.5X10X9.4)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - BRACKET ASSY, AIR CLEANER REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BOLT (6X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - BRACKET, AIR CLEANER FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - BOLT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig16-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - CUSHION, AIR CLEANER BRACKET"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "13700-15F00",
+        "description": "CLEANER ASSY, AIR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "13740-15F00",
+        "description": "CAP, AIR CLEANER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "13746-14F00",
+        "description": "GASKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "13891-15F00",
+        "description": "TUBE, INLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "13780-14F01",
+        "description": "FILTER, AIR CLEANER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "13791-15F00",
+        "description": "HOLDER, FILTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "13881-15F00",
+        "description": "TUBE, OUTLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09402-72203",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09402-62203",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "13859-41B10",
+        "description": "PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09401-14301",
+        "description": "CLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "02112-75163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "13850-14F00",
+        "description": "TUBE, BREATHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09401-14301",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "13859-14D40",
+        "description": "JET, BREATHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "13870-14F10",
+        "description": "TUBE, DRAIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09401-14301",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "13878-15F00",
+        "description": "CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09180-06286",
+        "description": "SPACER (6.5X10X9.4)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "09320-10501",
+        "description": "CUSHION",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "01550-06123",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "13760-15F00",
+        "description": "BRACKET ASSY, AIR CLEANER REAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "09116-06093",
+        "description": "BOLT (6X25)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "13760-14F00",
+        "description": "BRACKET, AIR CLEANER FRONT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "09116-06168",
+        "description": "BOLT (6X16)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "13779-15F00",
+        "description": "CUSHION, AIR CLEANER BRACKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig17",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "17",
+    "illustrationCode": "FIG17",
+    "title": "MUFFLER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - MUFFLER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig17.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig17.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - GASKET, EXHAUST PIPE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PIPE, EXHAUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - MUFFLER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BRACKET, MUFFLER SUPPORT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig17-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "14181-18C00",
+        "description": "GASKET, EXHAUST PIPE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "14150-15F00",
+        "description": "PIPE, EXHAUST",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09106-08120",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "14305-15F12",
+        "description": "MUFFLER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "07120-08353",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "01550-08603",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "07120-08353",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "08322-01083",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "08319-31083",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "14410-15F00",
+        "description": "BRACKET, MUFFLER SUPPORT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "01550-10603",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig18",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "18",
+    "illustrationCode": "FIG18",
+    "title": "MUFFLER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - MUFFLER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig18.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig18.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - GASKET, EXHAUST PIPE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PIPE, EXHAUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - GASKET, MUF CONN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - MUFFLER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BRACKET, MUFFLER SUPPORT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig18-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BOLT, MUF SPRT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "14181-18C00",
+        "description": "GASKET, EXHAUST PIPE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "14150-15F10",
+        "description": "PIPE, EXHAUST",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "14181-18C00",
+        "description": "GASKET, MUF CONN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09106-08120",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "14305-15F11",
+        "description": "MUFFLER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09159-08118",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "01550-08603",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "07120-08353",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08322-01083",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "08319-31083",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "14410-15F01",
+        "description": "BRACKET, MUFFLER SUPPORT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09103-10326",
+        "description": "BOLT, MUF SPRT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig19",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "19",
+    "illustrationCode": "FIG19",
+    "title": "OIL PUMP",
+    "subTitle": "BURGMAN AN400 Y K1 - OIL PUMP",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig19.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig19.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PUMP ASSY, ENGINE OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPROCKET, OIL PUMP DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SHIM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CIRCLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - PIN (4X15.8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CHAIN ASSY, OIL PUMP DRIVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - STRAINER, ENGINE OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - O RING, OIL STRAINER CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CAP, OIL STRAINER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CAP, OIL FILTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - O RING (D:2.4, ID:52.6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - FILTER, ENGINE OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - O RING (D:1.9, ID:13)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig19-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "16400-14F00",
+        "description": "PUMP ASSY, ENGINE OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "01547-06253",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "16331-14F00",
+        "description": "SPROCKET, OIL PUMP DRIVEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09181-10158",
+        "description": "SHIM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "08331-31106",
+        "description": "CIRCLIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09261-04009",
+        "description": "PIN (4X15.8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "16310-14F00",
+        "description": "CHAIN ASSY, OIL PUMP DRIVE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "16520-30A00",
+        "description": "STRAINER, ENGINE OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "16528-14F00",
+        "description": "O RING, OIL STRAINER CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "16523-14F02",
+        "description": "CAP, OIL STRAINER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "01547-06203",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "16512-49E00",
+        "description": "CAP, OIL FILTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09280-54001",
+        "description": "O RING (D:2.4, ID:52.6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09440-18002",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "16510-25C00",
+        "description": "FILTER, ENGINE OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09280-13004",
+        "description": "O RING (D:1.9, ID:13)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "01547-06167",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "01547-06807",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig20",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "20",
+    "illustrationCode": "FIG20",
+    "title": "FUEL PUMP",
+    "subTitle": "BURGMAN AN400 Y K1 - FUEL PUMP",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig20.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig20.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PUMP ASSY, FUEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - WASHER (6.5X20X1.2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER (6.5X9X9)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BOLT (6X20)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOSE (7X12X600)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig20-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SPRING"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "15100-10F00",
+        "description": "PUMP ASSY, FUEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09160-06077",
+        "description": "WASHER (6.5X20X1.2)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09180-06263",
+        "description": "SPACER (6.5X9X9)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09320-09009",
+        "description": "CUSHION",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "01500-06207",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "09116-06011",
+        "description": "BOLT (6X20)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09355-70129-600",
+        "description": "HOSE (7X12X600)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09401-11407",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09440-14047",
+        "description": "SPRING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig21",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "21",
+    "illustrationCode": "FIG21",
+    "title": "WATER PUMP",
+    "subTitle": "BURGMAN AN400 Y K1 - WATER PUMP",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig21.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig21.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PUMP ASSY, WATER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - INPELLER, WATER PUMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SHAFT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SEAL MECHANICAL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - OIL SEAL (10X21X5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BEARING (10X26X8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - E RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - GASKET (6X15X2.2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - LOCK WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BOLT (6X13)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - O RING (D:1.4, ID:21.8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig21-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "17400-14F10",
+        "description": "PUMP ASSY, WATER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "17491-12C00",
+        "description": "INPELLER, WATER PUMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "17511-14F00",
+        "description": "SHAFT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "17418-14F00",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "17470-46A01",
+        "description": "SEAL MECHANICAL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09283-10004",
+        "description": "OIL SEAL (10X21X5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09262-10014",
+        "description": "BEARING (10X26X8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "08332-11086",
+        "description": "E RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "17435-33400",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09168-06025",
+        "description": "GASKET (6X15X2.2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09164-06006",
+        "description": "LOCK WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09100-06099",
+        "description": "BOLT (6X13)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "02112-06163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09280-22001",
+        "description": "O RING (D:1.4, ID:21.8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "01547-06353",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "01547-06603",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig22",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "22",
+    "illustrationCode": "FIG22",
+    "title": "RADIATOR",
+    "subTitle": "BURGMAN AN400 Y K1 - RADIATOR",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig22.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig22.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - RADIATOR ASSY, WATER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT (6X30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER (6.5X10X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SPACER (6.5X10X11.6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SWITCH, RADIATOR FAN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - FAN ASSY, RADIATOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT, RADIATOR FAN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig22-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "17710-14F01",
+        "description": "RADIATOR ASSY, WATER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09116-06129",
+        "description": "BOLT (6X30)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09116-06171",
+        "description": "BOLT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09180-06310",
+        "description": "SPACER (6.5X10X10)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09180-06319",
+        "description": "SPACER (6.5X10X11.6)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09320-10501",
+        "description": "CUSHION",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "17680-50F10",
+        "description": "SWITCH, RADIATOR FAN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "17689-50F00",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "17800-14F01",
+        "description": "FAN ASSY, RADIATOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "17802-14F00",
+        "description": "NUT, RADIATOR FAN",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "01547-06107",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig23",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "23",
+    "illustrationCode": "FIG23",
+    "title": "RADIATOR HOSE",
+    "subTitle": "BURGMAN AN400 Y K1 - RADIATOR HOSE",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig23.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig23.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CAP, RADIATOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - HOSE, RADIATOR INLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - HOSE, RADIATOR OUTLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - HOSE, WATER PUMP INLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PROTECTOR HOSE HEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - HOSE, THERMOSTAT COVER OUTLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOSE, CONDUCTION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - HOSE, WATER BYPASS"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - PIPE, WATER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CONDUCTION, RADIATOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - TANK ASSY, RESERVOIR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CAP, RESERVOIR TANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CLAMP (L:125)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - HOSE, RESERVOIR TANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BRACE, RESERVOIR TANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - HOSE, RESERVOIR TANK IN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig23-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - CLIP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "17730-12C20",
+        "description": "CAP, RADIATOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "17851-14F00",
+        "description": "HOSE, RADIATOR INLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "17852-14F00",
+        "description": "HOSE, RADIATOR OUTLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "17853-14F00",
+        "description": "HOSE, WATER PUMP INLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "17859-14F00",
+        "description": "PROTECTOR HOSE HEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "17854-14F00",
+        "description": "HOSE, THERMOSTAT COVER OUTLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "17855-14F00",
+        "description": "HOSE, CONDUCTION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "17856-14F00",
+        "description": "HOSE, WATER BYPASS",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09401-21404",
+        "description": "CLIP",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09401-12409",
+        "description": "CLAMP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "17880-14F00",
+        "description": "PIPE, WATER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "01550-06123",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "17791-24D00",
+        "description": "CONDUCTION, RADIATOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "02142-06123",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "17910-14F00",
+        "description": "TANK ASSY, RESERVOIR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "17932-12C00",
+        "description": "CAP, RESERVOIR TANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09136-06017",
+        "description": "SCREW (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09402-28511",
+        "description": "CLAMP",
+        "qty": "7",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "09407-14403",
+        "description": "CLAMP (L:125)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "17981-21810",
+        "description": "HOSE, RESERVOIR TANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "17793-14F00",
+        "description": "BRACE, RESERVOIR TANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "01550-06123",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "17981-48E00",
+        "description": "HOSE, RESERVOIR TANK IN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "09401-08411",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig24",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "24",
+    "illustrationCode": "FIG24",
+    "title": "2ND AIR  (AN400K1/K2)",
+    "subTitle": "BURGMAN AN400 Y K1 - 2ND AIR  (AN400K1/K2)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig24.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig24.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - VALVE ASSY, 2ND AIR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BRACKET, 2ND AIR VALVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - HOSE, 2ND AIR VALVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - PIPE, 2ND AIR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - GASKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT, STUD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - HOSE, 2ND AIR CLEANER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - HOSE, 2ND AIR VACUUM (4X7X600)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig24-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CLIP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "18450-14F20",
+        "description": "VALVE ASSY, 2ND AIR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "18610-14F02",
+        "description": "BRACKET, 2ND AIR VALVE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "01550-06163",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "18461-10F01",
+        "description": "HOSE, 2ND AIR VALVE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09401-13409",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "18410-14F00",
+        "description": "PIPE, 2ND AIR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "18441-45C00",
+        "description": "GASKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "01421-06163",
+        "description": "BOLT, STUD",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08316-10063",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "18712-02F00",
+        "description": "HOSE, 2ND AIR CLEANER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09401-144044",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09352-40703-600",
+        "description": "HOSE, 2ND AIR VACUUM (4X7X600)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09401-06101",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig25",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "25",
+    "illustrationCode": "FIG25",
+    "title": "TRANSMISSION  (1)",
+    "subTitle": "BURGMAN AN400 Y K1 - TRANSMISSION  (1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig25.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig25.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FACE, FIXED DRFVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - FACE, MOVABLE DRIVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - COVER, MOVALVE DRIVE FACE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - COVER, MOVALVE DRIVE FACE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SEAL, MOVABLE DRIVE FACE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SPACER, MOVABLE DRIVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SPACER, MOVABLE DRIVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - PLATE, MOVABLE DRIVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - DAMPER, MOVABLE DRIVE PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - ROLLER, MOVABLE DRIVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SCREW, MOVABLE DRIVE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - FACE, FIXED DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BEARING, FIXED DRIVEN RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - FACE, MOVABLE DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SPRING, MOVABLE DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - O RING, MOVABLE DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - SEAL, MOVABLE DRIVEN SSL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - PIN, MOVABLE DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SPACER, MOVABLE DRIVEN PIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - SHEET, MOVABLE DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BEARING, FIXED DRIVE LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - CIRCLIP, FIXED DRIVEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - V BELT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - NUT, FIXED DRIVE FACE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig25-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - WASHER, FIXED DRIVE FACE"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "21110-15F01",
+        "description": "FACE, FIXED DRFVEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "21120-15F01",
+        "description": "FACE, MOVABLE DRIVE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "21122-15F00",
+        "description": "COVER, MOVALVE DRIVE FACE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "21122-15F10",
+        "description": "COVER, MOVALVE DRIVE FACE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "21124-15F00",
+        "description": "SEAL, MOVABLE DRIVE FACE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "21125-15F00",
+        "description": "SPACER, MOVABLE DRIVE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "21125-15F10",
+        "description": "SPACER, MOVABLE DRIVE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "21431-15F00",
+        "description": "PLATE, MOVABLE DRIVE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "21481-14F00",
+        "description": "DAMPER, MOVABLE DRIVE PLATE",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "21650-15F10",
+        "description": "ROLLER, MOVABLE DRIVE",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "02142-04103",
+        "description": "SCREW, MOVABLE DRIVE",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "21210-15F00",
+        "description": "FACE, FIXED DRIVEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "21214-15F00",
+        "description": "BEARING, FIXED DRIVEN RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "21240-15F00",
+        "description": "FACE, MOVABLE DRIVEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "21243-15F00",
+        "description": "SPRING, MOVABLE DRIVEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "21245-15F00",
+        "description": "O RING, MOVABLE DRIVEN",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "21247-15F00",
+        "description": "SEAL, MOVABLE DRIVEN SSL",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "21248-15F01",
+        "description": "PIN, MOVABLE DRIVEN",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "21249-15F00",
+        "description": "SPACER, MOVABLE DRIVEN PIN",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "21471-15F00",
+        "description": "SHEET, MOVABLE DRIVEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "08123-69047",
+        "description": "BEARING, FIXED DRIVE LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "08331-41376",
+        "description": "CIRCLIP, FIXED DRIVEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "27601-15F03",
+        "description": "V BELT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "09140-18501",
+        "description": "NUT, FIXED DRIVE FACE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "09164-18007",
+        "description": "WASHER, FIXED DRIVE FACE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig26",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "26",
+    "illustrationCode": "FIG26",
+    "title": "TRANSMISSION  (2)  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - TRANSMISSION  (2)  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig26.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig26.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HOUSING, CLUTCH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CLUTCH ASSY, SHOE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - NUT, SHOE CLUTCH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT, CLUTCH HOUSING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - WASHER, CLUTCH HOUSING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BEARING, CLUTCH HOUSING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SHAFT, DRIVE (NT:15)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SHAFT, IDLE (NT:14)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - GEAR, IDLER DRIVEN (NT:30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SHIM, IDLE SHAFT (20X50X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIM, IDLE SHAFT (20X50X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - WASHER, DRIVE SHAFT RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BEARING, DRIVE SHAFT RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - BEARING, IDLE SHAFT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SEAL, DRIVE SHAFT OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CIRCLIP, IDLE DRIVEN GEAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - BEARING, DRIVE SHAFT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SHAFT, REAR AXLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - GEAR, FINAL DRIVEN (NT:39)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - WASHER, FINAL DRIVEN GEAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIM, FINAL DRIVEN GEAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SEAL, AXLE SHAFT OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BEARING, AXLE SHAFT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - BEARING, AXLE SHAFT RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - WASHER, AXLE SHAFT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - CIRCLIP, FINAL DRIVEN GEAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - RETAINER, AXLE SHAFT BEARING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - SCREW, BEARING RETAINER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - RETAINER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig26-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - CIRCLIP, IDLE SHAFT RH"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "21220-15F00",
+        "description": "HOUSING, CLUTCH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "21501-15F02",
+        "description": "CLUTCH ASSY, SHOE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "21518-15F00",
+        "description": "NUT, SHOE CLUTCH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09140-16002",
+        "description": "NUT, CLUTCH HOUSING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09164--16002",
+        "description": "WASHER, CLUTCH HOUSING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09262-35064",
+        "description": "BEARING, CLUTCH HOUSING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "24131-15F01",
+        "description": "SHAFT, DRIVE (NT:15)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "24151-15F01",
+        "description": "SHAFT, IDLE (NT:14)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "24381-15F01",
+        "description": "GEAR, IDLER DRIVEN (NT:30)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09160-20051",
+        "description": "SHIM, IDLE SHAFT (20X50X2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "09160-20077",
+        "description": "SHIM, IDLE SHAFT (20X50X2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09181-20184",
+        "description": "WASHER, DRIVE SHAFT RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09262-20073",
+        "description": "BEARING, DRIVE SHAFT RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09263-20062",
+        "description": "BEARING, IDLE SHAFT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09283-25097",
+        "description": "SEAL, DRIVE SHAFT OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "09380-27001",
+        "description": "CIRCLIP, IDLE DRIVEN GEAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "08113-52050",
+        "description": "BEARING, DRIVE SHAFT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "24141-14F00",
+        "description": "SHAFT, REAR AXLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "24371-15F01",
+        "description": "GEAR, FINAL DRIVEN (NT:39)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "09164-30004",
+        "description": "WASHER, FINAL DRIVEN GEAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "09181-30167",
+        "description": "SHIM, FINAL DRIVEN GEAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09283-38019",
+        "description": "SEAL, AXLE SHAFT OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "09262-25084",
+        "description": "BEARING, AXLE SHAFT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "08133-63067",
+        "description": "BEARING, AXLE SHAFT RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "09181-25184",
+        "description": "WASHER, AXLE SHAFT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "08331-31306",
+        "description": "CIRCLIP, FINAL DRIVEN GEAR",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "24751-14F00",
+        "description": "RETAINER, AXLE SHAFT BEARING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "02122-06163",
+        "description": "SCREW, BEARING RETAINER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "24742-44B00",
+        "description": "RETAINER",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "02122-06163",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "08331-41349",
+        "description": "CIRCLIP, IDLE SHAFT RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig27",
+    "groupCode": "1",
+    "groupName": "Motor",
+    "subgroupCode": "27",
+    "illustrationCode": "FIG27",
+    "title": "TRANSMISSION  (2)  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - TRANSMISSION  (2)  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig27.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig27.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HOUSING, CLUTCH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CLUTCH ASSY, SHOE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - NUT, SHOE CLUTCH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT, CLUTCH HOUSING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - WASHER, CLUTCH HOUSING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BEARING, CLUTCH HOUSING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SHAFT, DRIVE (NT:14)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SHAFT, IDLE (NT:14)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SHIM, IDLE SHAFT (20X50X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SHIM, IDLE SHAFT (20X50X2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - WASHER, DRIVE SHAFT RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BEARING, DRIVE SHAFT RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - BEARING, IDLE SHAFT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SEAL, DRIVE SHAFT OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BEARING, DRIVE SHAFT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SHAFT, REAR AXLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SEAL, AXLE SHAFT OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - BEARING, AXLE SHAFT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BEARING, AXLE SHAFT RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - WASHER, AXLE SHAFT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - RETAINER, AXLE SHAFT BEARING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - SCREW, BEARING RETAINER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - RETAINER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig27-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - CIRCLIP, IDLE SHAFT RH"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "21220-15F00",
+        "description": "HOUSING, CLUTCH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "21501-15F01",
+        "description": "CLUTCH ASSY, SHOE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "21518-15F00",
+        "description": "NUT, SHOE CLUTCH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09140-16002",
+        "description": "NUT, CLUTCH HOUSING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09164-16002",
+        "description": "WASHER, CLUTCH HOUSING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09262-35064",
+        "description": "BEARING, CLUTCH HOUSING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "24131-15F10",
+        "description": "SHAFT, DRIVE (NT:14)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "24150-15F10",
+        "description": "SHAFT, IDLE (NT:14)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09160-20051",
+        "description": "SHIM, IDLE SHAFT (20X50X2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09160-20077",
+        "description": "SHIM, IDLE SHAFT (20X50X2)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09181-20184",
+        "description": "WASHER, DRIVE SHAFT RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09262-20073",
+        "description": "BEARING, DRIVE SHAFT RH",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09263-20062",
+        "description": "BEARING, IDLE SHAFT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09283-25097",
+        "description": "SEAL, DRIVE SHAFT OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "08113-52050",
+        "description": "BEARING, DRIVE SHAFT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "24140-15F10",
+        "description": "SHAFT, REAR AXLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09283-38019",
+        "description": "SEAL, AXLE SHAFT OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "09262-25084",
+        "description": "BEARING, AXLE SHAFT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "08133-63067",
+        "description": "BEARING, AXLE SHAFT RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "09181-25184",
+        "description": "WASHER, AXLE SHAFT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "24751-14F00",
+        "description": "RETAINER, AXLE SHAFT BEARING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "02122-06163",
+        "description": "SCREW, BEARING RETAINER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "24742-44B00",
+        "description": "RETAINER",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "02122-06163",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "08331-41349",
+        "description": "CIRCLIP, IDLE SHAFT RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig28",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "28",
+    "illustrationCode": "FIG28",
+    "title": "STARTING MOTOR",
+    "subTitle": "BURGMAN AN400 Y K1 - STARTING MOTOR",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig28.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig28.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - MOTOR ASSY, STARTING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BRACKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - FRAME ASSY, COMMUTATOR END"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - PLATE, LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SHIM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - O RING (D:3, ID:24.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig28-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW (5X8)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "31100-14F01",
+        "description": "MOTOR ASSY, STARTING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "31150-08F00",
+        "description": "BRACKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "31153-49210",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "31175-14F00",
+        "description": "FRAME ASSY, COMMUTATOR END",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "31264-32C10",
+        "description": "O RING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "31281-08F00",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "31156-38300",
+        "description": "O RING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "31361-32C10",
+        "description": "PLATE, LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "31361-38300",
+        "description": "SHIM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09280-24003",
+        "description": "O RING (D:3, ID:24.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "01550-06203",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09137-05004",
+        "description": "SCREW (5X8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig29",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "29",
+    "illustrationCode": "FIG29",
+    "title": "MAGNETO",
+    "subTitle": "BURGMAN AN400 Y K1 - MAGNETO",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig29.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig29.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - NUT, MAGNETO ROTOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - STATOR ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - ROTOR ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - ROTOR ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CLAMP, MAGNETO STATOR LEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT, SENSOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT, STATOR LEAD CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT, MAGNETO STATOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig29-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - KEY, MAGNETO"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "31792-18A00",
+        "description": "NUT, MAGNETO ROTOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "32101-14F20",
+        "description": "STATOR ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "32102-14F10",
+        "description": "ROTOR ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "32102-15F00",
+        "description": "ROTOR ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "32371-33E00",
+        "description": "CLAMP, MAGNETO STATOR LEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "07120-05123",
+        "description": "BOLT, SENSOR",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "07120-06103",
+        "description": "BOLT, STATOR LEAD CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "07130-06303",
+        "description": "BOLT, MAGNETO STATOR",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09420-04008",
+        "description": "KEY, MAGNETO",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig30",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "30",
+    "illustrationCode": "FIG30",
+    "title": "BATTERY  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - BATTERY  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig30.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig30.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig30-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BATTERY ASSY (FTX9-BS, 12V8AH)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig30-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PROTECTOR (170X95X3)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig30-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - WIRE, STARTER MOTOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig30-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WIRE, BATTERY PLUS"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig30-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - WIRE, BATTERY MINUS"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "33610-33E20",
+        "description": "BATTERY ASSY (FTX9-BS, 12V8AH)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "33651-37000",
+        "description": "PROTECTOR (170X95X3)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "33810-14F00",
+        "description": "WIRE, STARTER MOTOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "33820-14F00",
+        "description": "WIRE, BATTERY PLUS",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "33860-14FV0",
+        "description": "WIRE, BATTERY MINUS",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig31",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "31",
+    "illustrationCode": "FIG31",
+    "title": "BATTERY   (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - BATTERY   (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig31.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig31.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig31-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BATTERY ASSY (FTX9-BS, 12V8AH)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig31-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PROTECTOR (170X95X3)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig31-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - WIRE, STARTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig31-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WIRE, BATTERY PLUS"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig31-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - WIRE, BATTERY MINUS"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "33610-33E20",
+        "description": "BATTERY ASSY (FTX9-BS, 12V8AH)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "33651-37000",
+        "description": "PROTECTOR (170X95X3)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "33810-14F11",
+        "description": "WIRE, STARTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "33820-14F10",
+        "description": "WIRE, BATTERY PLUS",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "33860-14F10",
+        "description": "WIRE, BATTERY MINUS",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig32",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "32",
+    "illustrationCode": "FIG32",
+    "title": "ELECTRICAL (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - ELECTRICAL (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig32.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig32.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - RELAY ASSY, STARTING MOTOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, RELAY ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - FUSE (30A)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT, STARTING MOTOR (6X8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - RECTIFIER ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BRACKET, RECTIFIER FITTING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT, RECTIFIER (6X8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT, RECTIFIER FITTING BRKT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - IGNITER ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CUSHION, IGN NO.1 (170X95X3)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - COIL ASSY, IGNITION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CAP ASSY, SPARK PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SEAL, SPARK PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - SEAL, HIGH TENSION CORD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig32-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - CLAMP (L:80)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "31800-21E20",
+        "description": "RELAY ASSY, STARTING MOTOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "31861-21E20",
+        "description": "COVER, RELAY ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09481-30101",
+        "description": "FUSE (30A)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09128-06013",
+        "description": "BOLT, STARTING MOTOR (6X8)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "32800-14F01",
+        "description": "RECTIFIER ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "32831-14F10",
+        "description": "BRACKET, RECTIFIER FITTING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09128-06057",
+        "description": "BOLT, RECTIFIER (6X8)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "01550-06123",
+        "description": "BOLT, RECTIFIER FITTING BRKT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "32900-14F50",
+        "description": "IGNITER ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "33651-37000",
+        "description": "CUSHION, IGN NO.1 (170X95X3)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "33410-14F00",
+        "description": "COIL ASSY, IGNITION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "07130-05203",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "33510-45010",
+        "description": "CAP ASSY, SPARK PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "33541-44D00",
+        "description": "SEAL, SPARK PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "33542-38B00",
+        "description": "SEAL, HIGH TENSION CORD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09404-06432",
+        "description": "CLAMP (L:80)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig33",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "33",
+    "illustrationCode": "FIG33",
+    "title": "ELECTRICAL  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - ELECTRICAL  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig33.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig33.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - RELAY ASSY, STARTING MOTOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, RELAY ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - FUSE (30A)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT, STARTING MOTOR (6X8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - RECTIFIER  ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT, RECTIFIER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BARCKET, RECTIFIER FITTING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT, RECTIFIER FITTING BRKT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - INGITER ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CUSHION, IGN NO.1 (170X95X3)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - COIL ASSY, IGNITION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CAP ASSY, SPARK PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SEAL, SPARK PLUG"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - SEAL, HIGH TENSION CORD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig33-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - CLAMP (L:80)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "31800-21E20",
+        "description": "RELAY ASSY, STARTING MOTOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "31861-21E20",
+        "description": "COVER, RELAY ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09481-30101",
+        "description": "FUSE (30A)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09128-06013",
+        "description": "BOLT, STARTING MOTOR (6X8)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "32800-14F00",
+        "description": "RECTIFIER  ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "02162-06203",
+        "description": "BOLT, RECTIFIER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "32831-14F10",
+        "description": "BARCKET, RECTIFIER FITTING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "01550-06123",
+        "description": "BOLT, RECTIFIER FITTING BRKT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "32900-15F10",
+        "description": "INGITER ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "33651-37000",
+        "description": "CUSHION, IGN NO.1 (170X95X3)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "33410-14F00",
+        "description": "COIL ASSY, IGNITION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "07130-05203",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "33510-45010",
+        "description": "CAP ASSY, SPARK PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "33541-44D00",
+        "description": "SEAL, SPARK PLUG",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "33542-38B00",
+        "description": "SEAL, HIGH TENSION CORD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09404-06431",
+        "description": "CLAMP (L:80)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig34",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "34",
+    "illustrationCode": "FIG34",
+    "title": "SPEEDOMETER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - SPEEDOMETER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig34.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig34.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CASE, LWR WINDOW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PLATE, WINDOW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - GLASS, FR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CASE, LWR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SPEEDOMETER (KILO)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BODY ASSY, FUEL METER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BODY ASSY, WATER TEMP METER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - PLATE, PRINTED CIRCUIT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - LENS (GREEN)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - LENS (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SWITCH ASSY, CLOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - ATTACHING PARTS SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - KNOB, TRIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - KNOB, CLOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BULB, T6.5, 14V, 1.7W"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SOCKET, T6.5"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - SCREW (3X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - SCREW (3X24)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - LENS (RED)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - SCREW, SPEEDOMETER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - GUIDE, SENSOR LEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - SENSOR, SPEED"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - SEAL, SENSOR OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - ROTOR, SPEEDOMETER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - CLAMP, SENSOR LEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - CLAMP, SENSOR (L:145)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - BOLT, SENSOR LEAD GUIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig34-29",
+        "ref": 29,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "29 - CLAMP, SENSOR (L:80)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "34111-14F00",
+        "description": "CASE, LWR WINDOW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "34113-14F00",
+        "description": "PLATE, WINDOW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "34112-14F00",
+        "description": "GLASS, FR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "34152-14F01",
+        "description": "CASE, LWR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "34110-14FB0",
+        "description": "SPEEDOMETER (KILO)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "34320-14FB0",
+        "description": "BODY ASSY, FUEL METER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "34420-14FB0",
+        "description": "BODY ASSY, WATER TEMP METER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "34177-14F00",
+        "description": "PLATE, PRINTED CIRCUIT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "36341-14F00",
+        "description": "LENS (GREEN)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "36331-14F00",
+        "description": "LENS (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "34630-14F00",
+        "description": "SWITCH ASSY, CLOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "34680-14F00",
+        "description": "ATTACHING PARTS SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "34124-14F00",
+        "description": "KNOB, TRIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "34661-14F00",
+        "description": "KNOB, CLOCK",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "34171-14F00",
+        "description": "BULB, T6.5, 14V, 1.7W",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "34173-14F00",
+        "description": "SOCKET, T6.5",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "03112-04163",
+        "description": "SCREW",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "34183-14F00",
+        "description": "SCREW (3X10)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "02112-73207",
+        "description": "SCREW",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "34383-21D30",
+        "description": "SCREW (3X24)",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "36371-14F00",
+        "description": "LENS (RED)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "03541-05163",
+        "description": "SCREW, SPEEDOMETER",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "34938-04F00",
+        "description": "GUIDE, SENSOR LEAD",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "34990-14F00",
+        "description": "SENSOR, SPEED",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "09283-43002",
+        "description": "SEAL, SENSOR OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "34983-04F00",
+        "description": "ROTOR, SPEEDOMETER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "09407-03401",
+        "description": "CLAMP, SENSOR LEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "09407-14407",
+        "description": "CLAMP, SENSOR (L:145)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "01550-06123",
+        "description": "BOLT, SENSOR LEAD GUIDE",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 29,
+        "partNumber": "09404-06432",
+        "description": "CLAMP, SENSOR (L:80)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig35",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "35",
+    "illustrationCode": "FIG35",
+    "title": "SPEEDOMETER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - SPEEDOMETER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig35.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig35.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - CASE, LWR WINDOW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PLATE, WINDOW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - GLASS, FR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CASE, LWR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SPEEDOMETER (KILO)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BODY ASSY, FUEL METER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BODY ASSY, WATER TEMP METER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - PLATE, PRINTED CIRCUIT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - LENS (GREEN)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - LENS (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SWITCH ASSY, CLOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - ATTACHING PARTS SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - KNOB, TRIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - KNOB, CLOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BULB, T6.5, (14V, 1.7W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SOCKET, T6.5"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - SCREW (3X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - SCREW (3X24)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - LENS (RED)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - SCREW, SPEEDOMETER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - GUIDE, SENSOR LEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - SENSOR, SPEED"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - SEAL, SENSOR OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - ROTOR, SPEEDOMETER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - CLAMP, SENSOR LEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - CLAMP, SENSOR (L:145)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - BOLT, SENSOR LEAD GUIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig35-29",
+        "ref": 29,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "29 - CLAMP, SENSOR (L:80)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "34111-14F00",
+        "description": "CASE, LWR WINDOW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "34113-14F00",
+        "description": "PLATE, WINDOW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "34112-14F00",
+        "description": "GLASS, FR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "34152-14F01",
+        "description": "CASE, LWR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "34110-14FB0",
+        "description": "SPEEDOMETER (KILO)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "34320-14FB0",
+        "description": "BODY ASSY, FUEL METER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "34420-14FB0",
+        "description": "BODY ASSY, WATER TEMP METER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "34177-14F00",
+        "description": "PLATE, PRINTED CIRCUIT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "36341-14F00",
+        "description": "LENS (GREEN)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "36331-14F00",
+        "description": "LENS (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "34630-14F00",
+        "description": "SWITCH ASSY, CLOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "34680-14F00",
+        "description": "ATTACHING PARTS SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "34124-14F00",
+        "description": "KNOB, TRIP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "34661-14F00",
+        "description": "KNOB, CLOCK",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "34171-14F00",
+        "description": "BULB, T6.5, (14V, 1.7W)",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "34173-14F00",
+        "description": "SOCKET, T6.5",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "03112-04163",
+        "description": "SCREW",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "34183-14F00",
+        "description": "SCREW (3X10)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "02112-73207",
+        "description": "SCREW",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "34383-21D30",
+        "description": "SCREW (3X24)",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "36371-14F00",
+        "description": "LENS (RED)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "03541-05163",
+        "description": "SCREW, SPEEDOMETER",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "34938-14F00",
+        "description": "GUIDE, SENSOR LEAD",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "34990-14F03",
+        "description": "SENSOR, SPEED",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "09283-43002",
+        "description": "SEAL, SENSOR OIL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "34983-04F00",
+        "description": "ROTOR, SPEEDOMETER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "09407-03401",
+        "description": "CLAMP, SENSOR LEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "09407-14407",
+        "description": "CLAMP, SENSOR (L:145)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "01550-06123",
+        "description": "BOLT, SENSOR LEAD GUIDE",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 29,
+        "partNumber": "09404-06432",
+        "description": "CLAMP, SENSOR (L:80)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig36",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "36",
+    "illustrationCode": "FIG36",
+    "title": "FRONT COMBINATION LAMP  (MODEL Y )",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT COMBINATION LAMP  (MODEL Y )",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig36.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig36.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - LAMP ASSY, FRONT COMBINATION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - HEADLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BULB (12V, 65/55W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BRACKET, RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BRACKET, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - LOCK WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - TURNSIGNAL, RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - TURNSIGNAL, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BULB (12V, 21W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SOCKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BULB (12V, 5W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - SCREW, FR COMBINATION SIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig36-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - RELAY ASSY, TURNSIGNAL LAMP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "35100-14F10-999",
+        "description": "LAMP ASSY, FRONT COMBINATION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "35101-14F10-999",
+        "description": "HEADLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09471-12185",
+        "description": "BULB (12V, 65/55W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "35125-75F00",
+        "description": "COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "35619-14F00",
+        "description": "BRACKET, RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "35639-14F00",
+        "description": "BRACKET, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "03511-05203",
+        "description": "SCREW",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "08321-01053",
+        "description": "LOCK WASHER",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08322-01053",
+        "description": "WASHER",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "35605-14F00-999",
+        "description": "TURNSIGNAL, RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "35606-14F00-999",
+        "description": "TURNSIGNAL, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09471-12045",
+        "description": "BULB (12V, 21W)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "35171-14F10",
+        "description": "SOCKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09471-12081",
+        "description": "BULB (12V, 5W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "03541-05163",
+        "description": "SCREW, FR COMBINATION SIDE",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "38610-03F00",
+        "description": "RELAY ASSY, TURNSIGNAL LAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig37",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "37",
+    "illustrationCode": "FIG37",
+    "title": "FRONT COMBINATION LAMP  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT COMBINATION LAMP  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig37.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig37.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - LAMP ASSY, FRONT COMBNATION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - HEADLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BULB (12V, 65/55W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BRACKET, RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BRACKET, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - LOCK WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - TURNSIGNAL LAMP, RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - TURNSIGNAL LAMP, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BULB (12V, 21W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SOCKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BULB (12V, 5W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - SCREW, FR COMBINATION SIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig37-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - RELAY ASSY, TURNSIGNAL LAMP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "35100-14F50-999",
+        "description": "LAMP ASSY, FRONT COMBNATION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "35101-14F50-999",
+        "description": "HEADLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09471-12060",
+        "description": "BULB (12V, 65/55W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "35125-75F00",
+        "description": "COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "35619-14F00",
+        "description": "BRACKET, RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "35639-14F00",
+        "description": "BRACKET, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "03511-05203",
+        "description": "SCREW",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "08321-01053",
+        "description": "LOCK WASHER",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08322-01053",
+        "description": "WASHER",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "35605-14F40-999",
+        "description": "TURNSIGNAL LAMP, RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "35606-14F40-999",
+        "description": "TURNSIGNAL LAMP, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09471-12045",
+        "description": "BULB (12V, 21W)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "35171-14F10",
+        "description": "SOCKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09471-12081",
+        "description": "BULB (12V, 5W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "03541-05163",
+        "description": "SCREW, FR COMBINATION SIDE",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "38610-03F00",
+        "description": "RELAY ASSY, TURNSIGNAL LAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig38",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "38",
+    "illustrationCode": "FIG38",
+    "title": "REAR COMBINATION LAMP  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR COMBINATION LAMP  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig38.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig38.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - LAMP ASSY, REAR COMBINATION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - LENS, TURNSIGNAL RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - LENS, TURNSIGNAL LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - LENS, TAIL & STOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - PLATE NO.1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SOCKET & CORD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - PLATE NO.2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - LENS, LICENSE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BULB (12V, 21W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BULB (12V, 21/5W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - GASKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SCREW, REAR COMBINATION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CUSHION, LICENSE PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - REFLEX REFLECTOR ASSY, REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - NUT, REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig38-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CUSHION, REAR COMB HOUSING"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "35710-14F01",
+        "description": "LAMP ASSY, REAR COMBINATION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "35652-14F00",
+        "description": "LENS, TURNSIGNAL RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "35672-14F00",
+        "description": "LENS, TURNSIGNAL LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "35712-14F00",
+        "description": "LENS, TAIL & STOP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "35716-48B21",
+        "description": "PLATE NO.1",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "35718-14F00",
+        "description": "SOCKET & CORD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "35736-48B21",
+        "description": "PLATE NO.2",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "35765-48B21",
+        "description": "CUSHION",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "35912-14F00",
+        "description": "LENS, LICENSE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09471-12045",
+        "description": "BULB (12V, 21W)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09471-12083",
+        "description": "BULB (12V, 21/5W)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "03211-04123",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "03211-04163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "35713-14F10",
+        "description": "GASKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "03512-05163",
+        "description": "SCREW, REAR COMBINATION",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "09321-06028",
+        "description": "CUSHION, LICENSE PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "35970-07F00",
+        "description": "REFLEX REFLECTOR ASSY, REAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "08316-10053",
+        "description": "NUT, REAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "35713-14F00",
+        "description": "CUSHION, REAR COMB HOUSING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig39",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "39",
+    "illustrationCode": "FIG39",
+    "title": "REAR COMBINATION LAMP  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR COMBINATION LAMP  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig39.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig39.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - LAMP ASSY, REAR COMBINATION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PLATE NO.1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SOCKET & CORD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - PLATE NO.2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BULB (12V, 21W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BULB (12V, 21/5W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - UNIT, LAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT, REAR COMB"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SCREW, REAR COMB"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - LAMP ASSY, LICENSE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BULB (12V, 5W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - LENS"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig39-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - CUSHION, LICENSE PLATE"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "35710-14F10",
+        "description": "LAMP ASSY, REAR COMBINATION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "35716-48B21",
+        "description": "PLATE NO.1",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "35718-14F10",
+        "description": "SOCKET & CORD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "35736-48B21",
+        "description": "PLATE NO.2",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "35765-48B21",
+        "description": "CUSHION",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09471-12186",
+        "description": "BULB (12V, 21W)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09471-12083",
+        "description": "BULB (12V, 21/5W)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "03211-04123",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "35720-14F10",
+        "description": "UNIT, LAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09148-05020",
+        "description": "NUT, REAR COMB",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "03541-05163",
+        "description": "SCREW, REAR COMB",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "35910-14F00",
+        "description": "LAMP ASSY, LICENSE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09471-12081",
+        "description": "BULB (12V, 5W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "35912-14F10",
+        "description": "LENS",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09321-06031",
+        "description": "CUSHION, LICENSE PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig40",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "40",
+    "illustrationCode": "FIG40",
+    "title": "WIRING HARNESS  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - WIRING HARNESS  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig40.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig40.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HARNESS, WIRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOOT MEER COUPLER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - FUSE (10A)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - FUSE (15A)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CLAMP (L:95)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CLAMP (L:145)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLAMP (L:125)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLAMP (L:165)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CLAMP (L:190)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - LOCK SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - LOCK ASSY, STEERING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SHUTTER, STEERING LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - TORK BOLT (5X8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BOLT, STEERING LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - BOLT, STEERING LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - NUT, STEERING LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - KEY, BLANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SWITCH ASSY, SIDE STAND"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SCREW, SIDE STAND"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - RELAY ASSY, SAFETY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - HORN ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOLT, HORN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - LAMP ASSY, TRUNK BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - LENS"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BULB (13.5V, 2W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - SCREW, TRUNK BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - WIRE, IGNITION COIL LEAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig40-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - RESISTOR ASSY, PTC"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "36610-15F30",
+        "description": "HARNESS, WIRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "36618-14F00",
+        "description": "BOOT MEER COUPLER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09481-10501",
+        "description": "FUSE (10A)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09481-15501",
+        "description": "FUSE (15A)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09404-06434",
+        "description": "CLAMP (L:95)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09407-14407",
+        "description": "CLAMP (L:145)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09407-14403",
+        "description": "CLAMP (L:125)",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09407-18402",
+        "description": "CLAMP (L:165)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09407-19401",
+        "description": "CLAMP (L:190)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "37000-15820",
+        "description": "LOCK SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "37100-15F00",
+        "description": "LOCK ASSY, STEERING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "37155-15F00",
+        "description": "SHUTTER, STEERING LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "37159-43E00",
+        "description": "TORK BOLT (5X8)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09139-06048",
+        "description": "BOLT, STEERING LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "01550-06163",
+        "description": "BOLT, STEERING LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "08316-10063",
+        "description": "NUT, STEERING LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "37146-14F00",
+        "description": "KEY, BLANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "37840-20E00",
+        "description": "SWITCH ASSY, SIDE STAND",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "02142-06203",
+        "description": "SCREW, SIDE STAND",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "38740-26E00",
+        "description": "RELAY ASSY, SAFETY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "38500-14F00",
+        "description": "HORN ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "01550-08123",
+        "description": "BOLT, HORN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "36210-14F01",
+        "description": "LAMP ASSY, TRUNK BOX",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "36212-39C00",
+        "description": "LENS",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "09471-12118",
+        "description": "BULB (13.5V, 2W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "03541-04123",
+        "description": "SCREW, TRUNK BOX",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "36852-14F00",
+        "description": "WIRE, IGNITION COIL LEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "36510-43E00",
+        "description": "RESISTOR ASSY, PTC",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig41",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "41",
+    "illustrationCode": "FIG41",
+    "title": "WIRING HARNESS  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - WIRING HARNESS  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig41.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig41.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HARNESS, WIRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOOT METER COUPLER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - FUSE (10A)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - FUSE (15A)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CLAMP (L:95)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CLAMP (L:145)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLAMP (L:125)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLAMP (L:165)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLAMP (L:235)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CLAMP (L:190)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - LOCK SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - LOCK SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SHUTTER, STEERING LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BOLT, STEERING LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - BOLT, STEERING LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - NUT, STEERING LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - KEY, BLANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SWITCH ASSY , SIDE STAND"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SCREW, SIDE STAND"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - RELAY ASSY, SAFETY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - HORN ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOLT, HORN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - LAMP ASSY, TRUNK BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - LENS"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BULB (13.5V, 2W)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - SCREW, TRUNK BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - RESISTER ASSY, PTC"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - SWITCH ASSY, TRUNK BOX LAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - BOLT, TRUNK BOX SWITCH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - SPACER (5.5X9.5X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig41-29",
+        "ref": 29,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "29 - WIRE, CARB HEATER LEAD"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "36610-15F50",
+        "description": "HARNESS, WIRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "36618-14F00",
+        "description": "BOOT METER COUPLER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09481-10501",
+        "description": "FUSE (10A)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09481-15501",
+        "description": "FUSE (15A)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09404-06434",
+        "description": "CLAMP (L:95)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09407-14407",
+        "description": "CLAMP (L:145)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09407-14403",
+        "description": "CLAMP (L:125)",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09407-18402",
+        "description": "CLAMP (L:165)",
+        "qty": "7",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09407-25401",
+        "description": "CLAMP (L:235)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09407-19401",
+        "description": "CLAMP (L:190)",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "37000-15831",
+        "description": "LOCK SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "37100-15F00",
+        "description": "LOCK SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "37155-15F00",
+        "description": "SHUTTER, STEERING LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "02112-35083",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09139-06048",
+        "description": "BOLT, STEERING LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "01550-06163",
+        "description": "BOLT, STEERING LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "08316-10063",
+        "description": "NUT, STEERING LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "37146-14F00",
+        "description": "KEY, BLANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "37840-20E00",
+        "description": "SWITCH ASSY , SIDE STAND",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "01550-06203",
+        "description": "SCREW, SIDE STAND",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "38740-26E00",
+        "description": "RELAY ASSY, SAFETY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "38500-14F00",
+        "description": "HORN ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "01550-08123",
+        "description": "BOLT, HORN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "36210-14F10",
+        "description": "LAMP ASSY, TRUNK BOX",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "36212-79001",
+        "description": "LENS",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "09471-12118",
+        "description": "BULB (13.5V, 2W)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "03541-04123",
+        "description": "SCREW, TRUNK BOX",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "36510-43E00",
+        "description": "RESISTER ASSY, PTC",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "37980-14F00",
+        "description": "SWITCH ASSY, TRUNK BOX LAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "07130-05253",
+        "description": "BOLT, TRUNK BOX SWITCH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "09180-05301",
+        "description": "SPACER (5.5X9.5X10)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 29,
+        "partNumber": "36852-14F20",
+        "description": "WIRE, CARB HEATER LEAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig42",
+    "groupCode": "1",
+    "groupName": "Elétrica",
+    "subgroupCode": "42",
+    "illustrationCode": "FIG42",
+    "title": "HANDLE SWITCH",
+    "subTitle": "BURGMAN AN400 Y K1 - HANDLE SWITCH",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig42.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig42.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig42-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SWITCH ASSY, HANDLE RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig42-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig42-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig42-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SCREW, THROTTLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig42-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SWITCH ASSY, HANDLE LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig42-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig42-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SCREW"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "37200-15F10",
+        "description": "SWITCH ASSY, HANDLE RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "02112-05303",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "02112-05503",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "02112-05103",
+        "description": "SCREW, THROTTLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "37400-14F60",
+        "description": "SWITCH ASSY, HANDLE LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "02112-05253",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "02112-05453",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig43",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "43",
+    "illustrationCode": "FIG43",
+    "title": "FRAME  (MODLE Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRAME  (MODLE Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig43.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig43.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FRAME"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BRACKET SET, CRANKCASE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER, CENTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SPACER, BEARING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BEARING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BUSH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SPACER, LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BEARING, LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT, BRACKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CUSHION, SWING STOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CARRIER, SPORT (CHROME)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CARRIER, SPORT (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - GROMMET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SPACER, LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - BOLT, LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig43-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BOLT, UPPER"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "41100-15F30",
+        "description": "FRAME",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "41180-14820",
+        "description": "BRACKET SET, CRANKCASE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "41210-14F00",
+        "description": "SPACER, CENTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "41213-14F00",
+        "description": "SPACER, BEARING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09263-25024",
+        "description": "BEARING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09319-12054",
+        "description": "BUSH",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "41214-14F00",
+        "description": "SPACER, LOWER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09263-20064",
+        "description": "BEARING, LOWER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "41191-14F00",
+        "description": "BOLT, BRACKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09160-12044",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "08319-31128",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "41185-14F00",
+        "description": "CUSHION, SWING STOP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09100-12046",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "08322-01123",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "46300-14830",
+        "description": "CARRIER, SPORT (CHROME)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "46300-14840",
+        "description": "CARRIER, SPORT (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "46363-14F00",
+        "description": "GROMMET",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "46356-14F00",
+        "description": "SPACER, LOWER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "09103-08016",
+        "description": "BOLT, LOWER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09103-08354",
+        "description": "BOLT, UPPER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig44",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "44",
+    "illustrationCode": "FIG44",
+    "title": "FRAME  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRAME  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig44.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig44.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FRAME"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BRACKET SET, CRANKCASE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER, BRACKET CENTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BEARING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BEARING (20X27X26)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BUSH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SPACER, BRACKET ENGINE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SPACER, BRACKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - WASHER (125X35X3.2)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BOLT, CRANKCASE BRACKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CUSHION, SWING STOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - BOLT (12X58)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig44-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - WASHER"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "41100-15FA0",
+        "description": "FRAME",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "41180-15831",
+        "description": "BRACKET SET, CRANKCASE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "41210-14F00",
+        "description": "SPACER, BRACKET CENTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09263-25024",
+        "description": "BEARING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09263-20064",
+        "description": "BEARING (20X27X26)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09319-12054",
+        "description": "BUSH",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "41214-14F00",
+        "description": "SPACER, BRACKET ENGINE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "41213-14F00",
+        "description": "SPACER, BRACKET",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09160-12044",
+        "description": "WASHER (125X35X3.2)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "41191-14F00",
+        "description": "BOLT, CRANKCASE BRACKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "08319-31128",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "41185-14F00",
+        "description": "CUSHION, SWING STOP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09100-12046",
+        "description": "BOLT (12X58)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "08322-01123",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig45",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "45",
+    "illustrationCode": "FIG45",
+    "title": "BATTERY HOLDER",
+    "subTitle": "BURGMAN AN400 Y K1 - BATTERY HOLDER",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig45.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig45.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HOLDER, BATTERY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PROTECTOR, BATTERY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CAP, BATTERY HOLDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SPACER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig45-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CUSHION"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "41541-14F00",
+        "description": "HOLDER, BATTERY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "33652-24D00",
+        "description": "PROTECTOR, BATTERY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "41542-14F00",
+        "description": "CAP, BATTERY HOLDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "03541-05203",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09118-06109",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09112-06009",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09180-06120",
+        "description": "SPACER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09320-11008",
+        "description": "CUSHION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig46",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "46",
+    "illustrationCode": "FIG46",
+    "title": "STAND",
+    "subTitle": "BURGMAN AN400 Y K1 - STAND",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig46.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig46.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - STAND, CENTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - STAND, CENTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - RIVET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SPRING, INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SPRING, OUTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - STAND, PROP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - STAND, PROP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SPRING, INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SPRING, INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SPRING, OUTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig46-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - NUT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "42100-15F10",
+        "description": "STAND, CENTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "42100-15F20",
+        "description": "STAND, CENTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09103-10218",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "42211-15F00",
+        "description": "SPACER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "08319-31103",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "42191-15F00",
+        "description": "CUSHION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09229-03019",
+        "description": "RIVET",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09160-03008",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09443-15041",
+        "description": "SPRING, INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09443-22015",
+        "description": "SPRING, OUTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09321-10001",
+        "description": "CUSHION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "42310-15F00",
+        "description": "STAND, PROP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "42310-14FA0",
+        "description": "STAND, PROP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09443-14066",
+        "description": "SPRING, INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09443-14069",
+        "description": "SPRING, INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09443-19012",
+        "description": "SPRING, OUTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09111-10047",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "09159-10097",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig47",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "47",
+    "illustrationCode": "FIG47",
+    "title": "FUEL TANK  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - FUEL TANK  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig47.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig47.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - TANK, FUEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CAP ASSY, FUEL TANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - MOLDING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - MOLDING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - VALVE, FUEL CUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT (5X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CUSHION, FUEL TANK SIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SPACER (65X9X12.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT (6X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BOLT, REAR RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CUSHION, FUEL TANK SIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CLAMP (L:248)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - CUSHION, FUEL TANK LOWER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - TRAY, FUEL TANK INLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - HOSE (L:600-500)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - JOINT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - BODY, HEAT SHIELD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - COVER, FUEL TANK LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - GAUGE ASSY, FUEL LEVEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - GASKET, FUEL GAUGE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig47-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - BOLT (5X10)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "44110-14F01",
+        "description": "TANK, FUEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "44200-10F00",
+        "description": "CAP ASSY, FUEL TANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "68241-04X50-300",
+        "description": "MOLDING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "68241-04X50-00B",
+        "description": "MOLDING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "89485-65D00",
+        "description": "VALVE, FUEL CUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09117-05003",
+        "description": "BOLT (5X10)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "44512-04F00",
+        "description": "CUSHION, FUEL TANK SIDE",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09180-06267",
+        "description": "SPACER (65X9X12.5)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09116-06147",
+        "description": "BOLT (6X25)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "01550-06253",
+        "description": "BOLT, REAR RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09160-06501",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "44541-03F00",
+        "description": "CUSHION, FUEL TANK SIDE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09407-25402",
+        "description": "CLAMP (L:248)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "44541-14F00",
+        "description": "CUSHION, FUEL TANK LOWER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "44261-14F00",
+        "description": "TRAY, FUEL TANK INLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09352-70103-600",
+        "description": "HOSE (L:600-500)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09367-08001",
+        "description": "JOINT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "44191-14F10",
+        "description": "BODY, HEAT SHIELD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09407-18402",
+        "description": "CLAMP",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "44271-14F00",
+        "description": "COVER, FUEL TANK LOWER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "63161-43E00",
+        "description": "BOLT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "34810-14F00",
+        "description": "GAUGE ASSY, FUEL LEVEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "34825-45100",
+        "description": "GASKET, FUEL GAUGE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "09117-05003",
+        "description": "BOLT (5X10)",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig48",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "48",
+    "illustrationCode": "FIG48",
+    "title": "FUEL TANK  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FUEL TANK  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig48.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig48.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - TANK, FUEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CAP ASSY, FUEL TANK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - MOLDING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - VALVE, FUEL CUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT (5X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CUSHION, FUEL TANK SIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SPACER (6.5X9X12.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT  (6X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - WASHER (6.5X24X1.6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - CLAMP (L:248)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CUSHION, TANK LOWER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CUSHION, FUEL TANK LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - TRAY, FUEL INLET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - HOSE (L:600-500)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - JOINT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SEAT, HEAT SHIELD RUBBER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CLAMP (L:165)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - COVER, TANK LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - CUSHION, TOOL HOLDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - GAUGE ASSY, FUEL LEVEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - GASKET, FUEL GAUGE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig48-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - BOLT (5X10)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "44110-14F10",
+        "description": "TANK, FUEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "44200-10F00",
+        "description": "CAP ASSY, FUEL TANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "68241-04X50-00B",
+        "description": "MOLDING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "89485-65D00",
+        "description": "VALVE, FUEL CUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09117-05003",
+        "description": "BOLT (5X10)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "44512-04F00",
+        "description": "CUSHION, FUEL TANK SIDE",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09180-06267",
+        "description": "SPACER (6.5X9X12.5)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09116-06147",
+        "description": "BOLT  (6X25)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "01550-06253",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09160-06501",
+        "description": "WASHER (6.5X24X1.6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09407-25402",
+        "description": "CLAMP (L:248)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "44541-14F00",
+        "description": "CUSHION, TANK LOWER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "44541-14F10",
+        "description": "CUSHION, FUEL TANK LOWER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "44261-14F00",
+        "description": "TRAY, FUEL INLET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "09352-70103-600",
+        "description": "HOSE (L:600-500)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09367-08001",
+        "description": "JOINT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "44191-14F10",
+        "description": "SEAT, HEAT SHIELD RUBBER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "09407-18402",
+        "description": "CLAMP (L:165)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "44271-14F20",
+        "description": "COVER, TANK LOWER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "47451-38A01",
+        "description": "CUSHION, TOOL HOLDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "09409-08333",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "34810-14F00",
+        "description": "GAUGE ASSY, FUEL LEVEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "34825-45100",
+        "description": "GASKET, FUEL GAUGE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "09117-05003",
+        "description": "BOLT (5X10)",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig49",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "49",
+    "illustrationCode": "FIG49",
+    "title": "FUEL FILTER",
+    "subTitle": "BURGMAN AN400 Y K1 - FUEL FILTER",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig49.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig49.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FILTER, FUEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CLAMP, FUEL FILTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - JOSE (L:600-270)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - VALVE, CHECK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLIP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CLAMP (L:125)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - HOSE, FUEL TANK & FILTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - HOSE, FUEL TANK & PUMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig49-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CLIP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "44330-10F00",
+        "description": "FILTER, FUEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "44339-10F00",
+        "description": "CLAMP, FUEL FILTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "07120-06123",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09355-54115-600",
+        "description": "JOSE (L:600-270)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "85451-75100",
+        "description": "VALVE, CHECK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09401-11413",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09407-144003",
+        "description": "CLAMP (L:125)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "44421-14F00",
+        "description": "HOSE, FUEL TANK & FILTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09440-14047",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "44422-14F00",
+        "description": "HOSE, FUEL TANK & PUMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09440-14048",
+        "description": "SPRING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09401-11407",
+        "description": "CLIP",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig50",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "50",
+    "illustrationCode": "FIG50",
+    "title": "FRAME COVER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRAME COVER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig50.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig50.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRAME RH (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRAME RH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRAME RH (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, FRAME LH (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, FRAME LH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, FRAME LH (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - MOLDING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - PROTECTOR (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - EMBLEM, RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - EMBLEM, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - EMBLEM \"400\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CUSHION, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT, FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CUSHION, CENTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BOLT, REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - NUT, REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SPACER, REAR LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SCREW, REAR LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - COVER, FRAME CENTER (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - COVER, FRAME CENTER (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - COVER, FRAME CENTER (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - EMBLEM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - EMBLEM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - EMBLEM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - COVER, FRAME FRONT  (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig50-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SCREW, SIDE"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "47111-14F00-Y7L",
+        "description": "COVER, FRAME RH (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "47111-14F00-YD8",
+        "description": "COVER, FRAME RH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "47111-14F00-YE2",
+        "description": "COVER, FRAME RH (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "47211-14F00-Y7L",
+        "description": "COVER, FRAME LH (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "47211-14F00-YD8",
+        "description": "COVER, FRAME LH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "47211-14F00-YE2",
+        "description": "COVER, FRAME LH (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "47161-14F00",
+        "description": "MOLDING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "47261-15F00-YB7",
+        "description": "PROTECTOR (GRAY)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "68131-15F10",
+        "description": "EMBLEM, RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "68141-15F10",
+        "description": "EMBLEM, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "68135-15F00",
+        "description": "EMBLEM \"400\"",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "46271-14F00",
+        "description": "CUSHION, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09148-05038",
+        "description": "NUT, FRONT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09320-08018",
+        "description": "CUSHION, CENTER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09113-06001",
+        "description": "BOLT, REAR",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09148-05004",
+        "description": "NUT, REAR",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09180-05046",
+        "description": "SPACER, REAR LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "02112-05163",
+        "description": "SCREW, REAR LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "47311-14F00-Y7L",
+        "description": "COVER, FRAME CENTER (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "47311-14F00-YD8",
+        "description": "COVER, FRAME CENTER (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "47311-14F00-YE2",
+        "description": "COVER, FRAME CENTER (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "68165-14F00-M7P",
+        "description": "EMBLEM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "68165-14F00-CD5",
+        "description": "EMBLEM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "68165-14F00-CD7",
+        "description": "EMBLEM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "47351-14F00-Y0J",
+        "description": "COVER, FRAME FRONT  (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "7",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09122-66004",
+        "description": "SCREW, SIDE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig51",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "51",
+    "illustrationCode": "FIG51",
+    "title": "FRAME COVER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRAME COVER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig51.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig51.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRAME RH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRAME RH (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRAME RH (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, FRAME LH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, FRAME LH (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, FRAME LH (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - EMBLEM, FRAME COVER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - EMBLEM, FRAME COVER LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - EMBLEM \"400\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - COVER, FRAME CENTER (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - COVER, FRAME CENTER (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - COVER, FRAME CENTER (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - EMBLEM, \"SUZUKI\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - EMBLEM, \"SUZUKI\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - EMBLEM, \"SUZUKI\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - COVER, FRAME LOWER (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - COVER, FRAME LOWER (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - COVER, FRAME LOWER (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - COVER, FRAME FRONT (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BOLT (6X18)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SCREW (6X14)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig51-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - NUT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "47111-14FA0-YD8",
+        "description": "COVER, FRAME RH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "47111-14FA0-YM2",
+        "description": "COVER, FRAME RH (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "47111-14FA0-Y7H",
+        "description": "COVER, FRAME RH (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "47211-14FA0-YD8",
+        "description": "COVER, FRAME LH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "47211-14FA0-YM2",
+        "description": "COVER, FRAME LH (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "47211-14FA0-Y7H",
+        "description": "COVER, FRAME LH (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "68131-15F10",
+        "description": "EMBLEM, FRAME COVER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "68141-15F10",
+        "description": "EMBLEM, FRAME COVER LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "68135-15F20",
+        "description": "EMBLEM \"400\"",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "53145-40A00",
+        "description": "CUSHION",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "47311-14FA1-YD8",
+        "description": "COVER, FRAME CENTER (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "47311-14FA1-YM2",
+        "description": "COVER, FRAME CENTER (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "47311-14FA1-Y7H",
+        "description": "COVER, FRAME CENTER (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "68165-14F00-CD5",
+        "description": "EMBLEM, \"SUZUKI\"",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "68165-14F00-FC9",
+        "description": "EMBLEM, \"SUZUKI\"",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "68165-14F00-BG3",
+        "description": "EMBLEM, \"SUZUKI\"",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "47411-14FA0-YD8",
+        "description": "COVER, FRAME LOWER (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "47411-14FA0-YM2",
+        "description": "COVER, FRAME LOWER (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "47411-14FA0-YH7",
+        "description": "COVER, FRAME LOWER (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "47351-14FA0-Y0J",
+        "description": "COVER, FRAME FRONT (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09113-06001",
+        "description": "BOLT (6X18)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09122-66004",
+        "description": "SCREW (6X14)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "12",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "10",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig52",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "52",
+    "illustrationCode": "FIG52",
+    "title": "FRONT LEG SHIELD (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT LEG SHIELD (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig52.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig52.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRONT LEG SHIELD (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - EMBLEM, \"S\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - EMBLEM, \"SUZUKI\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SHIELD, LEG FRONT (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SHIELD, LEG FRONT (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SHIELD, LEG FRONT (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BRACE, LEG SHIELD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SHIELD, LEG LOWER (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SHIELD, LEG LOWER (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SHIELD, LEG LOWER (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig52-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CLIP (BLACK)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "48130-14F10-35W",
+        "description": "COVER, FRONT LEG SHIELD (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "68641-14F20",
+        "description": "EMBLEM, \"S\"",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "68641-14F30-L6Y",
+        "description": "EMBLEM, \"SUZUKI\"",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "02142-05123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "48111-14F00-Y7L",
+        "description": "SHIELD, LEG FRONT (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "48111-14F00-YD8",
+        "description": "SHIELD, LEG FRONT (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "48111-14F00-YE2",
+        "description": "SHIELD, LEG FRONT (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09136-06056",
+        "description": "SCREW (6X16)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "48150-14F00",
+        "description": "BRACE, LEG SHIELD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "01570-08353",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "08313-20083",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "48137-14F00-Y7L",
+        "description": "SHIELD, LEG LOWER (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "48137-14F00-YD8",
+        "description": "SHIELD, LEG LOWER (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "48137-14F00-YE2",
+        "description": "SHIELD, LEG LOWER (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig53",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "53",
+    "illustrationCode": "FIG53",
+    "title": "FRONT LEG SHIELD (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT LEG SHIELD (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig53.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig53.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRONT LEG (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRONT LEG (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - COVER, FRONT LEG (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - EMBLEM, \"SUZUKI\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - EMBLEM, \"SUZUKI\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - EMBLEM, \"SUZUKI\""
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SHIELD, LEG FRONT (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SHIELD, LEG FRONT (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SHIELD, LEG FRONT (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BRACE, LEG SHIELD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SHIELD, LEG LOWER (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SHIELD, LEG LOWER (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SHIELD, LEG LOWER (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig53-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - CLIP (BLACK)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "48130-14FA0-YD8",
+        "description": "COVER, FRONT LEG (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "48130-14FA0-YM2",
+        "description": "COVER, FRONT LEG (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "48130-14FA0-Y7H",
+        "description": "COVER, FRONT LEG (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "68641-14F30-CD5",
+        "description": "EMBLEM, \"SUZUKI\"",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "68641-14F30-FC9",
+        "description": "EMBLEM, \"SUZUKI\"",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "68641-14F30-BG3",
+        "description": "EMBLEM, \"SUZUKI\"",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "02142-05123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "48111-14F00-YD8",
+        "description": "SHIELD, LEG FRONT (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "48111-14F00-YM2",
+        "description": "SHIELD, LEG FRONT (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "48111-14F00-Y7H",
+        "description": "SHIELD, LEG FRONT (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09136-06056",
+        "description": "SCREW (6X16)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "48150-14FA0",
+        "description": "BRACE, LEG SHIELD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "01570-08353",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08313-20083",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "48137-14F00-YD8",
+        "description": "SHIELD, LEG LOWER (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "48137-14F00-YM2",
+        "description": "SHIELD, LEG LOWER (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "48137-14F00-Y7H",
+        "description": "SHIELD, LEG LOWER (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig54",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "54",
+    "illustrationCode": "FIG54",
+    "title": "WINDOW SCREEN  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - WINDOW SCREEN  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig54.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig54.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PANEL, METER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - PANEL, METER LOWER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - WINDOW SCREEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - MOLDING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CAP, END"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig54-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - NUT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "94421-14F00-Y0J",
+        "description": "PANEL, METER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "02142-05123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "94422-14F00-Y0J",
+        "description": "PANEL, METER LOWER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "02142-05123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "03541-05123",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "94611-14F00",
+        "description": "WINDOW SCREEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "94631-14F30",
+        "description": "MOLDING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "94637-19C00",
+        "description": "CAP, END",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "02142-15163",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09159-05019",
+        "description": "NUT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig55",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "55",
+    "illustrationCode": "FIG55",
+    "title": "WINDOW SCREEN  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - WINDOW SCREEN  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig55.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig55.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PANEL, METER LOWER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PANEL, METER LOWER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SLIDER, METER PANEL (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOLDER, METER PANEL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - KNOB, METER PANEL (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SPIRNG, PANEL KNOB"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - PIPE, AIR INTAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - WINDOW SCREEN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - MOLDING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig55-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - NUT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "94421-14FA0-Y0J",
+        "description": "PANEL, METER LOWER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "94422-14FA0-Y0J",
+        "description": "PANEL, METER LOWER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "02142-05123",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "94423-14FA0-Y0J",
+        "description": "SLIDER, METER PANEL (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "94424-14FA0",
+        "description": "HOLDER, METER PANEL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "03541-05103",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "94425-14FA0-Y0J",
+        "description": "KNOB, METER PANEL (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "94426-14FA0",
+        "description": "SPIRNG, PANEL KNOB",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "03541-05123",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "94431-14FA0",
+        "description": "PIPE, AIR INTAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "02142-05103",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "94611-14FA0",
+        "description": "WINDOW SCREEN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "94631-14FA0",
+        "description": "MOLDING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "94637-19C00",
+        "description": "CAP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "02142-15163",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09159-05019",
+        "description": "NUT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig56",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "56",
+    "illustrationCode": "FIG56",
+    "title": "REAR LEG SHIELD  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR LEG SHIELD  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig56.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig56.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIELD, LEG REAR (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT (6X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - LID, FUEL (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - DAMPER, FUEL LID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SPRING, FUEL LID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CUSHION, LID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - LOCK SET, FUEL LID (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - MAT, FLOOR FRONT RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - MAT, FLOOR FRONT LH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BOARD, PILLION FOOTREST RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BOARD, PILLION FOOTREST LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - BRACE, PILLION BOARD RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - BRACE, PILLION BOARD LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - SPACER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - MAT, PILLION FOOT BOARD RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig56-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - MAT, PILLION FOOT BOARD LH"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "48121-14F01-Y0J",
+        "description": "SHIELD, LEG REAR (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09116-06131",
+        "description": "BOLT (6X25)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09180-08189",
+        "description": "SPACER",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09320-11015",
+        "description": "CUSHION",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "03541-05123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09148-05020",
+        "description": "NUT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "48125-14F00-Y0J",
+        "description": "LID, FUEL (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "48126-14F00",
+        "description": "DAMPER, FUEL LID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "48127-14F00",
+        "description": "SPRING, FUEL LID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "48128-14F00",
+        "description": "CUSHION, LID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "92100-14830-Y0J",
+        "description": "LOCK SET, FUEL LID (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "48211-14F00-Y0J",
+        "description": "MAT, FLOOR FRONT RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "48221-14F00-Y0J",
+        "description": "MAT, FLOOR FRONT LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "43611-15F00",
+        "description": "BOARD, PILLION FOOTREST RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "43711-15F00",
+        "description": "BOARD, PILLION FOOTREST LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "43620-15F00",
+        "description": "BRACE, PILLION BOARD RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "43720-15F00",
+        "description": "BRACE, PILLION BOARD LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "01550-08403",
+        "description": "BOLT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09160-08124",
+        "description": "WASHER",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "09180-08189",
+        "description": "SPACER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "03541-05123",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "43612-15F00",
+        "description": "MAT, PILLION FOOT BOARD RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "43712-15F00",
+        "description": "MAT, PILLION FOOT BOARD LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig57",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "57",
+    "illustrationCode": "FIG57",
+    "title": "REAR LEG SHIELD  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR LEG SHIELD  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig57.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig57.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FOOTBOARD, FRONT (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT (6X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER (85X12X11)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - FOOTBOARD, REAR RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - FOOTBOARD, REAR LH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CUSHION, FOOT BOARD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - LID, FUEL LID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - DAMPER, FUEL LID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SPRING, FUEL LID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - LOCK SET, FUEL LID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - CUSHION, FUEL LID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - MAT, FLOOR FRONT RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - MAT, FLOOR FRONT LH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - BRACKET, PILLION RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BRACKET, PILLION LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - MAT, FLOOR REAR RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig57-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - MAT, FLOOR REAR LH (GRAY)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "48121-14FA0-Y0J",
+        "description": "FOOTBOARD, FRONT (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09116-06131",
+        "description": "BOLT (6X25)",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09180-08189",
+        "description": "SPACER (85X12X11)",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09320-11015",
+        "description": "CUSHION",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09148-05020",
+        "description": "NUT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "48122-14FA0-Y0J",
+        "description": "FOOTBOARD, REAR RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "48123-14FA0-Y0J",
+        "description": "FOOTBOARD, REAR LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "48128-14FA0",
+        "description": "CUSHION, FOOT BOARD",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "48125-14F00-Y0J",
+        "description": "LID, FUEL LID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "48126-14F00",
+        "description": "DAMPER, FUEL LID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "48127-14F00",
+        "description": "SPRING, FUEL LID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "92100-14830",
+        "description": "LOCK SET, FUEL LID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "48128-14F00",
+        "description": "CUSHION, FUEL LID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "48211-14FA0-Y0J",
+        "description": "MAT, FLOOR FRONT RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "48221-14FA0-Y0J",
+        "description": "MAT, FLOOR FRONT LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "43650-14FA0",
+        "description": "BRACKET, PILLION RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "43750-14FA0",
+        "description": "BRACKET, PILLION LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "01550-06163",
+        "description": "BOLT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "48231-14FA0-Y0J",
+        "description": "MAT, FLOOR REAR RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "48241-14FA0-Y0J",
+        "description": "MAT, FLOOR REAR LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig58",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "58",
+    "illustrationCode": "FIG58",
+    "title": "SIDE LEG SHIELD  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - SIDE LEG SHIELD  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig58.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig58.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIELD, LEG SIDE RH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIELD, LEG SIDE RH (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIELD, LEG SIDE RH (GREEN)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - LEG, SIDE LOWER RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - LEG, SIDE LOWER RH (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SHIELD, LEG SIDE LH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SHIELD, LEG SIDE LH (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - LEG, SIDE LOWER LH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig58-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CLIP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "48171-14F00-Y7L",
+        "description": "SHIELD, LEG SIDE RH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "48171-14F00-YD8",
+        "description": "SHIELD, LEG SIDE RH (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "48171-14F00-YE2",
+        "description": "SHIELD, LEG SIDE RH (GREEN)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "48172-14F20-35W",
+        "description": "LEG, SIDE LOWER RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "48181-14F10-Y7L",
+        "description": "LEG, SIDE LOWER RH (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "48181-14F10-YD8",
+        "description": "SHIELD, LEG SIDE LH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "48181-14F10-YE2",
+        "description": "SHIELD, LEG SIDE LH (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "48182-14F30-35W",
+        "description": "LEG, SIDE LOWER LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "03541-05123",
+        "description": "SCREW",
+        "qty": "8",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "10",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09409-07332",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig59",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "59",
+    "illustrationCode": "FIG59",
+    "title": "SIDE LEG SHIELD  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - SIDE LEG SHIELD  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig59.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig59.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIELD, LEG SIDE RH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIELD, LEG SIDE RH (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SHIELD, LEG SIDE RH (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SHIELD, LEG SIDE LH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SHIELD, LEG SIDE LH (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SHIELD, LEG SIDE LH (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig59-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLIP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "48171-14FA0-YD8",
+        "description": "SHIELD, LEG SIDE RH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "48171-14FA0-YM2",
+        "description": "SHIELD, LEG SIDE RH (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "48171-14FA0-Y7H",
+        "description": "SHIELD, LEG SIDE RH (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "48181-14FA0-YD8",
+        "description": "SHIELD, LEG SIDE LH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "48181-14FA0-YM2",
+        "description": "SHIELD, LEG SIDE LH (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "48181-14FA0-Y7H",
+        "description": "SHIELD, LEG SIDE LH (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "02142-05123",
+        "description": "SCREW",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09148-05038",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09409-07332",
+        "description": "CLIP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig60",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "60",
+    "illustrationCode": "FIG60",
+    "title": "FRONT BOX  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT BOX  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig60.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig60.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BOX, FRONT (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SCREW, UPPER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - PLATE, FRONT BOX HINGE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CUSHION, FRONT BOX NO1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CUSHION, FRONT BOX NO2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - COVER, FRONT BOX INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - LID, FRONT BOX NO1 (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - LID, FRONT BOX NO2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - DAMPER, FRONT BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig60-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - LOCK SET, FRONT BOX (GRAY)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "9211-14F01-Y0J",
+        "description": "BOX, FRONT (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "09139-05038",
+        "description": "SCREW, UPPER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09139-06083",
+        "description": "SCREW (6X16)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "14",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "92113-14F00",
+        "description": "PLATE, FRONT BOX HINGE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "03242-05163",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "92114-14F00",
+        "description": "CUSHION, FRONT BOX NO1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "92115-14F00",
+        "description": "CUSHION, FRONT BOX NO2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "92119-14F01",
+        "description": "COVER, FRONT BOX INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "92121-14F00-Y0J",
+        "description": "LID, FRONT BOX NO1 (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "92122-14F01-Y0J",
+        "description": "LID, FRONT BOX NO2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "92160-14F00",
+        "description": "DAMPER, FRONT BOX",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "03541-04123",
+        "description": "SCREW",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "92100-14820-Y0J",
+        "description": "LOCK SET, FRONT BOX (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig61",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "61",
+    "illustrationCode": "FIG61",
+    "title": "FRONT BOX  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT BOX  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig61.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig61.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BOX, FRONT (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - PLATE, FRONT BOX HINGE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - DAMPER, FRONT BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CUSHION, FRONT BOX NO1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - COVER, FRONT BOX INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - LID, FRONT BOX NO1 (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - LID, FRONT BOX NO2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig61-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - LOCK SET, FRONT BOX"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "92111-14F01-Y0J",
+        "description": "BOX, FRONT (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09139-05038",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09139-06083",
+        "description": "SCREW (6X16)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "14",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "92113-14F00",
+        "description": "PLATE, FRONT BOX HINGE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "03242-05163",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "92160-14F00",
+        "description": "DAMPER, FRONT BOX",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "92114-14F01",
+        "description": "CUSHION, FRONT BOX NO1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "92119-14F01",
+        "description": "COVER, FRONT BOX INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "92121-14F00-Y0J",
+        "description": "LID, FRONT BOX NO1 (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "92122-14F01",
+        "description": "LID, FRONT BOX NO2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "03541-04123",
+        "description": "SCREW",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "92100-14840",
+        "description": "LOCK SET, FRONT BOX",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig62",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "62",
+    "illustrationCode": "FIG62",
+    "title": "UPPER BOX  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - UPPER BOX  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig62.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig62.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig62-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BODY, FRONT BOX UPPER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig62-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PLATE, UPPER INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig62-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - DAMPER, FRONT BOX UPPER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig62-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig62-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - LID, FRONT BOX UPPER RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig62-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - LATCH, BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig62-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - LID, FRONT BOX UPPER LH (GRAY)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "92141-14F02",
+        "description": "BODY, FRONT BOX UPPER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "92143-14F01",
+        "description": "PLATE, UPPER INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "92150-14F00",
+        "description": "DAMPER, FRONT BOX UPPER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "03541-04123",
+        "description": "SCREW",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "92142-14F00-Y0J",
+        "description": "LID, FRONT BOX UPPER RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "35627-89G00",
+        "description": "LATCH, BOX",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "92112-14F00-Y0J",
+        "description": "LID, FRONT BOX UPPER LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig63",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "63",
+    "illustrationCode": "FIG63",
+    "title": "UPPER BOX  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - UPPER BOX  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig63.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig63.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig63-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BODY, FRONT BOX UPPER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig63-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - PLATE, FRONT BOX UPPER INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig63-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - DAMPER, BOX UPPER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig63-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig63-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - LID, BOX UPPER RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig63-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - LATCH, BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig63-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - LID, BOX UPPER LH (GRAY)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "92141-14F02",
+        "description": "BODY, FRONT BOX UPPER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "92143-14F02",
+        "description": "PLATE, FRONT BOX UPPER INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "92150-14F00",
+        "description": "DAMPER, BOX UPPER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "03541-04123",
+        "description": "SCREW",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "92142-14F00-Y0J",
+        "description": "LID, BOX UPPER RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "35627-89G00",
+        "description": "LATCH, BOX",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "92112-14F00-Y0J",
+        "description": "LID, BOX UPPER LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig64",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "64",
+    "illustrationCode": "FIG64",
+    "title": "HELMET BOX (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - HELMET BOX (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig64.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig64.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BOX, HELMET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SCREW, RH (6X12)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CAP (OD:20)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - COVER, HELMET BOX FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - HOLDER, HELMET RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - HOLDER, TOOL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BAND, TOOL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig64-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - TOOL ASSY"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "92211-14F01",
+        "description": "BOX, HELMET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09139-06108",
+        "description": "SCREW, RH (6X12)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09139-06067",
+        "description": "SCREW (6X16)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09169-06010",
+        "description": "WASHER",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09250-12006",
+        "description": "CAP (OD:20)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "92212-14F10",
+        "description": "COVER, HELMET BOX FRONT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "02142-06163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "95721-14F02",
+        "description": "HOLDER, HELMET RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "01550-06163",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "41551-14F02",
+        "description": "HOLDER, TOOL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09462-00093",
+        "description": "BAND, TOOL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09800-21038",
+        "description": "TOOL ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig65",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "65",
+    "illustrationCode": "FIG65",
+    "title": "HELMET BOX  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - HELMET BOX  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig65.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig65.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BOX, HELMET NO1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOX, HELMET NO2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WASHER, BOX INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT (6X18)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CLIP, INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CLAMP, HELMET BOX"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - COVER, HELMET BOX FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - HOLDE, HELMET RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - HOLDER, TOOL (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - BAND, TOOL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - TOOL ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig65-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - SCREW"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "92211-14FA0",
+        "description": "BOX, HELMET NO1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "92221-14FA0",
+        "description": "BOX, HELMET NO2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "92222-14FA0",
+        "description": "WASHER, BOX INNER",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09106-06057",
+        "description": "BOLT (6X18)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09169-06028",
+        "description": "WASHER",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09250-08008",
+        "description": "CUSHION",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "74133-82000",
+        "description": "CLAMP",
+        "qty": "12",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "92230-14FA0",
+        "description": "CLIP, INNER",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "92290-14FA0",
+        "description": "CLAMP, HELMET BOX",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "92212-14FA0",
+        "description": "COVER, HELMET BOX FRONT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "02142-06163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "95721-14FA0",
+        "description": "HOLDE, HELMET RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "01550-06163",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "41551-14FA0-Y0J",
+        "description": "HOLDER, TOOL (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "47435-02F01",
+        "description": "BAND, TOOL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09800-21038",
+        "description": "TOOL ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "09409-08308-5ES",
+        "description": "CLIP (BLACK)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "03541-05123",
+        "description": "SCREW",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig66",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "66",
+    "illustrationCode": "FIG66",
+    "title": "FRONT FENDER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT FENDER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig66.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig66.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FENDER, FRONT (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FENDER, FRONT (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FENDER, FRONT (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT (6X16.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - FENDER, FIXED FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - PAD, BALANCER LOWER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig66-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT (6X16)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "53111-14F01-Y7L",
+        "description": "FENDER, FRONT (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "53111-14F01-YD8",
+        "description": "FENDER, FRONT (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "53111-14F01-YE2",
+        "description": "FENDER, FRONT (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09139-06030",
+        "description": "SCREW (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09161-06021",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09111-06061",
+        "description": "BOLT (6X16.5)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "53182-14F00",
+        "description": "FENDER, FIXED FRONT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "93675-80020",
+        "description": "PAD, BALANCER LOWER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09116-06165",
+        "description": "BOLT (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig67",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "67",
+    "illustrationCode": "FIG67",
+    "title": "FRONT FENDER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT FENDER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig67.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig67.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FENDER, FRONT (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FENDER, FRONT (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FENDER, FRONT (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT (6X16.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - FENDER, FIXED FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - PAD, BALANCER LOWER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig67-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT (6X16)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "53111-14F01-YD8",
+        "description": "FENDER, FRONT (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "53111-14F01-YM2",
+        "description": "FENDER, FRONT (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "53111-14F01-Y7H",
+        "description": "FENDER, FRONT (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09139-06030",
+        "description": "SCREW (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09161-06021",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09111-06061",
+        "description": "BOLT (6X16.5)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "53182-14F00",
+        "description": "FENDER, FIXED FRONT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "93675-80020",
+        "description": "PAD, BALANCER LOWER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09116-06165",
+        "description": "BOLT (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig68",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "68",
+    "illustrationCode": "FIG68",
+    "title": "HANDLEBAR  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - HANDLEBAR  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig68.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig68.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE BAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, HANDLE UPPER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - EMBLEM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - HOLDER, EMBLEM (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - COVER, HANDLE LOWER RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - COVER, HANDLE LOWER LH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BALANCER ASSY, HANDLE RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SPACER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SPACER, INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BALANCER ASSY, HANDLE LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - SPACER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - SPACER, INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - EXPANDER, HANDLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - MIRROR ASSY, REAR VIEW RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - MIRROR ASSY, REAR VIEW LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - CABLE ASSY, THROTTLE NO1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - CABLE ASSY, THROTTLE NO2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - CLAMP (L:165)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig68-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - CLAMP (L:235)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "56110-14F00",
+        "description": "HANDLE BAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "56311-14F20-Y0J",
+        "description": "COVER, HANDLE UPPER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "68281-15F10",
+        "description": "EMBLEM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "56316-15F00-Y0J",
+        "description": "HOLDER, EMBLEM (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "03541-05123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "56321-14F20-Y0J",
+        "description": "COVER, HANDLE LOWER RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "56331-14F20-Y0J",
+        "description": "COVER, HANDLE LOWER LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "03541-04163",
+        "description": "SCREW",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09148-04024",
+        "description": "NUT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "02142-05123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "57210-14F00",
+        "description": "BALANCER ASSY, HANDLE RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "02122-06407",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09180-12141",
+        "description": "SPACER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "56275-34401",
+        "description": "SPACER, INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "57220-14F00",
+        "description": "BALANCER ASSY, HANDLE LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "02122-06657",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09180-12141",
+        "description": "SPACER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "56275-34401",
+        "description": "SPACER, INNER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "08316-10083",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "56275-44500",
+        "description": "EXPANDER, HANDLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "09159-06024",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "56500-03F00",
+        "description": "MIRROR ASSY, REAR VIEW RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "56600-03F00",
+        "description": "MIRROR ASSY, REAR VIEW LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "58300-14F20",
+        "description": "CABLE ASSY, THROTTLE NO1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "58300-14F30",
+        "description": "CABLE ASSY, THROTTLE NO2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "09403-14204",
+        "description": "CLAMP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "01550-06123",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "09407-18402",
+        "description": "CLAMP (L:165)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "09407-25401",
+        "description": "CLAMP (L:235)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig69",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "69",
+    "illustrationCode": "FIG69",
+    "title": "HANDLEBAR  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - HANDLEBAR  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig69.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig69.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLEBAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, HANDLEBAR UPPER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - EMBLEM, HANDLE COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - COVER, HANDLE LOWER RH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - COVER, HANDLE LOWER LH (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CAP ASSY, GRIP END RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SPACER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SPACER, BALANCER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CAP ASSY, GRIP END LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - SPACER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPACER, BALANCER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - EXPANDER, HANDLE BALANCER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - MIRROR ASSY, RR VIEW RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - MIRROR ASSY, RR VIEW LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - CABLE ASSY, THROTTLE NO1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - CABLE ASSY, THROTTLE NO2"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - CLAMP (L:165)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig69-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - CLAMP (L:235)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "59110-14F00",
+        "description": "HANDLEBAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "56311-14F21-Y0J",
+        "description": "COVER, HANDLEBAR UPPER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "68281-15F50",
+        "description": "EMBLEM, HANDLE COVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "56321-14F20-Y0J",
+        "description": "COVER, HANDLE LOWER RH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "56331-14F20-Y0J",
+        "description": "COVER, HANDLE LOWER LH (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09148-04024",
+        "description": "NUT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "02142-05123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "56200-02821-CRM",
+        "description": "CAP ASSY, GRIP END RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "02122-06657",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09180-12141",
+        "description": "SPACER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "56275-34401",
+        "description": "SPACER, BALANCER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "56200-02821-CRM",
+        "description": "CAP ASSY, GRIP END LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "02122-06657",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "09180-12141",
+        "description": "SPACER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "56275-34401",
+        "description": "SPACER, BALANCER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "08316-10083",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "56272-44500",
+        "description": "EXPANDER, HANDLE BALANCER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09159-06024",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "56500-03F00",
+        "description": "MIRROR ASSY, RR VIEW RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "56600-03F00",
+        "description": "MIRROR ASSY, RR VIEW LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "58300-14F20",
+        "description": "CABLE ASSY, THROTTLE NO1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "58300-14F30",
+        "description": "CABLE ASSY, THROTTLE NO2",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "09403-14204",
+        "description": "CLAMP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "01550-06123",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "09407-18402",
+        "description": "CLAMP (L:165)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "09407-25401",
+        "description": "CLAMP (L:235)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig70",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "70",
+    "illustrationCode": "FIG70",
+    "title": "HANDLE LEVER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - HANDLE LEVER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig70.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig70.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - GRIP, THROTTLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - LEVER, BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SWITCH ASSY, STOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - GRIP, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - LEVER ASSY, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SWITCH ASSY, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - LEVER ASSY, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SWITCH ASSY, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SCREW, SWITCH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - SCREW, KNOB"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - BUTTON, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - CAP, TUTTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CABLE, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - LABEL, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - PLATE, LEVER SEAL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig70-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - SCREW"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "57110-46E01",
+        "description": "GRIP, THROTTLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "57421-14F00",
+        "description": "LEVER, BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "57431-04F00",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "57433-09F00",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "57460-17C00",
+        "description": "SWITCH ASSY, STOP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "57465-17C00",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "57211-22D01",
+        "description": "GRIP, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "57500-14F00",
+        "description": "LEVER ASSY, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "57431-04F00",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "08319-21063",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "57560-14F00",
+        "description": "SWITCH ASSY, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "57800-14F01",
+        "description": "LEVER ASSY, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "57870-14F01",
+        "description": "SWITCH ASSY, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "57852-14F00",
+        "description": "SCREW, SWITCH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "57851-14F00",
+        "description": "SCREW, KNOB",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "57831-14F00",
+        "description": "BUTTON, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "57832-14F00",
+        "description": "CAP, TUTTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "58810-14F00",
+        "description": "CABLE, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "57891-14F00",
+        "description": "LABEL, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "02162-06123",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "57950-14F00",
+        "description": "PLATE, LEVER SEAL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "03511-04103",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig71",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "71",
+    "illustrationCode": "FIG71",
+    "title": "HANDLE LEVER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - HANDLE LEVER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig71.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig71.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - GRIP, THROTTLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - LEVER, FRONT BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT, BRAKE LEVER PIVOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT, LEVER PIVOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SWITCH ASSY, STOP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - GRIP, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - LEVER ASSY, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT, BRAKE LEVER PIVOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SWITCH ASSY, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - LEVER ASSY, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SWITCH ASSY, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SCREW, SWITCH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - LEVR, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SCREW, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - KNOB SET, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CABLE, BRAKE LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - PLATE, LEVER SEAL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig71-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - LABEL, BRAKE LOCK"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "57110-46E01",
+        "description": "GRIP, THROTTLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "57421-14F00",
+        "description": "LEVER, FRONT BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "57431-04F00",
+        "description": "BOLT, BRAKE LEVER PIVOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "57433-09F00",
+        "description": "NUT, LEVER PIVOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "57460-17C00",
+        "description": "SWITCH ASSY, STOP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "57465-17C00",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "57211-22D01",
+        "description": "GRIP, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "57500-14F00",
+        "description": "LEVER ASSY, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "57431-04F00",
+        "description": "BOLT, BRAKE LEVER PIVOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "08319-21063",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "57560-14F00",
+        "description": "SWITCH ASSY, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "57800-14FA0",
+        "description": "LEVER ASSY, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "57870-14F01",
+        "description": "SWITCH ASSY, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "57852-14F00",
+        "description": "SCREW, SWITCH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "57810-14FA1",
+        "description": "LEVR, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "57851-14F00",
+        "description": "SCREW, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "57820-14820",
+        "description": "KNOB SET, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "58810-14FA0",
+        "description": "CABLE, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "02162-06123",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "57950-14F00",
+        "description": "PLATE, LEVER SEAL",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "03511-04103",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "57891-14F00",
+        "description": "LABEL, BRAKE LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig72",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "72",
+    "illustrationCode": "FIG72",
+    "title": "REAR FENDER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR FENDER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig72.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig72.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FENDER, REAR (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WASHER (61X17.0X4.80)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - EXTENSION, REAR FENDER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - PLATE, FRAME COVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig72-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - MUNDGUARD, REAR FENDER"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "63111-14F02-Y0J",
+        "description": "FENDER, REAR (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09116-06168",
+        "description": "BOLT (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "01550-06163",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09169-06073",
+        "description": "WASHER (61X17.0X4.80)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "63311-14F00-Y0J",
+        "description": "EXTENSION, REAR FENDER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09113-06001",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "47153-19C01",
+        "description": "PLATE, FRAME COVER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "08322-01063",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "63411-14F00",
+        "description": "MUNDGUARD, REAR FENDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig73",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "73",
+    "illustrationCode": "FIG73",
+    "title": "REAR FENDER (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR FENDER (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig73.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig73.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig73-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - FENDER, REAR (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig73-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig73-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BOLT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig73-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - MUDGUARD, REAR FENDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig73-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - NUT, FENDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig73-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig73-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CUSHION, REAR FENDER"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "63111-14FA0-Y0J",
+        "description": "FENDER, REAR (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09116-06168",
+        "description": "BOLT (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09113-06001",
+        "description": "BOLT (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "63411-14FA0",
+        "description": "MUDGUARD, REAR FENDE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "53141-19A00",
+        "description": "NUT, FENDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "08322-01063",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "63191-14FA0",
+        "description": "CUSHION, REAR FENDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig74",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "74",
+    "illustrationCode": "FIG74",
+    "title": "LABEL  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - LABEL  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig74.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig74.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig74-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - LABEL, WARNING (PORTUGUESE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig74-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - LABEL, SCREEN (PORTUGUESE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig74-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - LABEL, ENGINE STARTING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig74-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - LABEL, TIRE INFORMATION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig74-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - MANUAL, OWNER'S"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "68319-30F80",
+        "description": "LABEL, WARNING (PORTUGUESE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "68922-14F80",
+        "description": "LABEL, SCREEN (PORTUGUESE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "68915-30F18",
+        "description": "LABEL, ENGINE STARTING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "68332-14F30",
+        "description": "LABEL, TIRE INFORMATION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "99011-15F51-057",
+        "description": "MANUAL, OWNER'S",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig75",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "75",
+    "illustrationCode": "FIG75",
+    "title": "LABEL  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - LABEL  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig75.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig75.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig75-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - LABEL, WARNING (PORTUGUESE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig75-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - LABEL, SCREEN (PORTUGUESE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig75-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - LABEL, CAPACITY (PARTUGUESE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig75-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - LABEL, STARTING (PORTUGUESE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig75-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - LABEL, TIRE INFORMATION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig75-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - MANUAL, OWNER'S"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "68319-29F80",
+        "description": "LABEL, WARNING (PORTUGUESE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "68922-29F80",
+        "description": "LABEL, SCREEN (PORTUGUESE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "68911-15F80",
+        "description": "LABEL, CAPACITY (PARTUGUESE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "68915-29F80",
+        "description": "LABEL, STARTING (PORTUGUESE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "68332-14F30",
+        "description": "LABEL, TIRE INFORMATION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "99011-15F52-057",
+        "description": "MANUAL, OWNER'S",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig76",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "76",
+    "illustrationCode": "FIG76",
+    "title": "SEAT  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - SEAT  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig76.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig76.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SEAT ASSY, (BLACK/BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BACK REST, SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - CUSHION, SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SPACER (6.5X10.5X6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - MOLDING, SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - DAMPER ASSY, SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BOLT, DAMPER, LOWER (6X20.6)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - CRIP, DAMPER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig76-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - BACK REST, SEAT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "45100-15F01-M8E",
+        "description": "SEAT ASSY, (BLACK/BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "45300-14F01-M8E",
+        "description": "BACK REST, SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "45149-14F00",
+        "description": "CUSHION, SEAT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "45112-33E00",
+        "description": "SPACER (6.5X10.5X6)",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09160-06088",
+        "description": "WASHER",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "08313-20063",
+        "description": "NUT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09321-10001",
+        "description": "CUSHION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "45211-14F00",
+        "description": "MOLDING, SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "45270-14F10",
+        "description": "DAMPER ASSY, SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "45276-14F00",
+        "description": "BOLT, DAMPER, LOWER (6X20.6)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "08322-01083",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09385-08003",
+        "description": "CRIP, DAMPER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "45300-14F51-M8E",
+        "description": "BACK REST, SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig77",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "77",
+    "illustrationCode": "FIG77",
+    "title": "SEAT  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - SEAT  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig77.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig77.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - SEAT ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - STRIKER, SEAT LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - MOLDING, SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - DAMPER ASSY, SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT, SEAT DAMPER LOWER (6X20)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig77-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - PIN"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "45100-14FA0-FC8",
+        "description": "SEAT ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09321-12001",
+        "description": "CUSHION",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "45210-14FB0",
+        "description": "STRIKER, SEAT LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "08313-20063",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "45211-14FA0",
+        "description": "MOLDING, SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "45270-14FA0",
+        "description": "DAMPER ASSY, SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "45276-14F00",
+        "description": "BOLT, SEAT DAMPER LOWER (6X20)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "08322-01083",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09385-08003",
+        "description": "PIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig78",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "78",
+    "illustrationCode": "FIG78",
+    "title": "SEAT SUPPORT BRACKET  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - SEAT SUPPORT BRACKET  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig78.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig78.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BRACKET ASSY, SEAT SUPPORT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT (6X12)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BARCKET ASSY, SUPPORT CENTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT (6X12)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BRACKET, SEAT FRONT RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BRACKET, SEAT FRONT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - LOCK SET, SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - PLATE, SEAT LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CABLE, SEAT LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - GUIDE, CABLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BOLT, FRONT (6X18.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - CLAMP, CABLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - GUIDE, SEAT LOCK RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - GUIDE, SEAT LOCK LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig78-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - BOLT (8X16)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "45200-14F00",
+        "description": "BRACKET ASSY, SEAT SUPPORT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "01550-06123",
+        "description": "BOLT (6X12)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "45200-15F10",
+        "description": "BARCKET ASSY, SUPPORT CENTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "01550-06123",
+        "description": "BOLT (6X12)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "45240-15F10",
+        "description": "BRACKET, SEAT FRONT RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "45240-15F20",
+        "description": "BRACKET, SEAT FRONT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "08316-10063",
+        "description": "NUT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "95700-14810",
+        "description": "LOCK SET, SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "45289-11F00",
+        "description": "PLATE, SEAT LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "45280-15F00",
+        "description": "CABLE, SEAT LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "45288-14F00",
+        "description": "GUIDE, CABLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09111-06068",
+        "description": "BOLT, FRONT (6X18.5)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09407-18402",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09403-07308",
+        "description": "CLAMP, CABLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "46281-14F00",
+        "description": "GUIDE, SEAT LOCK RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "46291-14F01",
+        "description": "GUIDE, SEAT LOCK LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09103-08351",
+        "description": "BOLT (8X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig79",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "79",
+    "illustrationCode": "FIG79",
+    "title": "SEAT SUPPORT BARCKET  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - SEAT SUPPORT BARCKET  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig79.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig79.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BRACKET, SEAT HINGE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - LOCK SET, SEAT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - PLATE, SEAT LOCK ASSY"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CABLE, SEAT LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - GUIDE, SEAT LOCK CABLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT (6X18.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - LOCK ASSY, SEAT NO.1"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig79-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "45240-14FA0",
+        "description": "BRACKET, SEAT HINGE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "08316-10063",
+        "description": "NUT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "95700-14810",
+        "description": "LOCK SET, SEAT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "45289-11F00",
+        "description": "PLATE, SEAT LOCK ASSY",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "45280-14FA0",
+        "description": "CABLE, SEAT LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "45288-14F00",
+        "description": "GUIDE, SEAT LOCK CABLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09111-06068",
+        "description": "BOLT (6X18.5)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "45700-14FA0",
+        "description": "LOCK ASSY, SEAT NO.1",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "07130-06123",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig80",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "80",
+    "illustrationCode": "FIG80",
+    "title": "PILLION RIDER HANDLE  (SIDE ) (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - PILLION RIDER HANDLE  (SIDE ) (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig80.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig80.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE SET, RIDER RH (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE SET, RIDER RH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE SET, RIDER RH (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - CUSHION (24X24)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - CUSHION (8X5X60)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - CUSHION (8X5X370)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - CUSHION (6X8X320)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CUSHION (6X8X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CUSHION (6X8X490)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CUSHION (8X8X140)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - CUSHION (8X5X60)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - WASHER (6.5X18X1)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SPACER, FRONT (6.5X9X18)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SPACER, REAR (6.5X10.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - HANDLE SET, RIDER LH (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - HANDLE SET, RIDER LH (SLVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - HANDLE SET, RIDER LH (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - CUSHION (24X24)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - CUSHION (8X5X60)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CUSHION (8X5X370)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - CUSHION (6X8X320)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - CUSHION (6X8X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - CUSHION (6X8X490)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - CUSHION (8X8X140)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - CUSHION (8X5X60)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - CLAMP, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-25",
+        "ref": 25,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "25 - CUSHION, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-26",
+        "ref": 26,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "26 - SPACER (5.5X8X4)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-27",
+        "ref": 27,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "27 - SCREW (5X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-28",
+        "ref": 28,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "28 - REINFORCEMENT, LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-29",
+        "ref": 29,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "29 - BOLT (6X12)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-30",
+        "ref": 30,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "30 - SPACER (6.5X9X3.8)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-31",
+        "ref": 31,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "31 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-32",
+        "ref": 32,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "32 - WASHER (6.5X18X1)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-33",
+        "ref": 33,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "33 - SPACER, FRONT (6.5X9X18)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-34",
+        "ref": 34,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "34 - SPACER, REAR (6.5X9X10.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig80-35",
+        "ref": 35,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "35 - SCREW"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "46210-14812-Y7L",
+        "description": "HANDLE SET, RIDER RH (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "46210-14812-YD8",
+        "description": "HANDLE SET, RIDER RH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "46210-14812-YE2",
+        "description": "HANDLE SET, RIDER RH (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "46215-14F00",
+        "description": "CUSHION (24X24)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "46216-14F00",
+        "description": "CUSHION (8X5X60)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "46217-14F00",
+        "description": "CUSHION (8X5X370)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "46218-14F00",
+        "description": "CUSHION (6X8X320)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "56219-14F00",
+        "description": "CUSHION (6X8X10)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "46235-14F00",
+        "description": "CUSHION (6X8X490)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "46236-14F00",
+        "description": "CUSHION (8X8X140)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "46216-14F00",
+        "description": "CUSHION (8X5X60)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "08316-10063",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "09160-06056",
+        "description": "WASHER (6.5X18X1)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09180-06271",
+        "description": "SPACER, FRONT (6.5X9X18)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09180-06264",
+        "description": "SPACER, REAR (6.5X10.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "02142-06163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "46230-14813-Y7L",
+        "description": "HANDLE SET, RIDER LH (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "46230-14813-YD8",
+        "description": "HANDLE SET, RIDER LH (SLVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "46230-14813-YE2",
+        "description": "HANDLE SET, RIDER LH (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "46215-14F00",
+        "description": "CUSHION (24X24)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "46216-14F00",
+        "description": "CUSHION (8X5X60)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "46217-14F00",
+        "description": "CUSHION (8X5X370)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "46218-14F00",
+        "description": "CUSHION (6X8X320)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "46219-14F00",
+        "description": "CUSHION (6X8X10)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "46235-14F00",
+        "description": "CUSHION (6X8X490)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "46236-14F00",
+        "description": "CUSHION (8X8X140)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "46216-14F00",
+        "description": "CUSHION (8X5X60)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "46251-14F00",
+        "description": "CLAMP, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 25,
+        "partNumber": "46271-14F00",
+        "description": "CUSHION, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 26,
+        "partNumber": "09180-05046",
+        "description": "SPACER (5.5X8X4)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 27,
+        "partNumber": "02112-05163",
+        "description": "SCREW (5X16)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 28,
+        "partNumber": "46261-14F00",
+        "description": "REINFORCEMENT, LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 29,
+        "partNumber": "01550-06123",
+        "description": "BOLT (6X12)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 30,
+        "partNumber": "09180-06255",
+        "description": "SPACER (6.5X9X3.8)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 31,
+        "partNumber": "08316-10063",
+        "description": "NUT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 32,
+        "partNumber": "09160-06056",
+        "description": "WASHER (6.5X18X1)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 33,
+        "partNumber": "09180-06271",
+        "description": "SPACER, FRONT (6.5X9X18)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 34,
+        "partNumber": "09180-06264",
+        "description": "SPACER, REAR (6.5X9X10.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 35,
+        "partNumber": "02142-06163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig81",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "81",
+    "illustrationCode": "FIG81",
+    "title": "PILLION RIDER HANDLE (SIDE) (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - PILLION RIDER HANDLE (SIDE) (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig81.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig81.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE, PILLION RIDER RH (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE, PILLION RIDER RH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE, PILLION RIDER RH (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SPACER (8.4X12X13)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER (9.2X13.8X9.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - HANDLE, PILLION RIDER LH (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - HANDLE, PILLION RIDER LH (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - HANDLE, PILLION RIDER LH (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SPACER (8.4X12X13)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SPACER (9.2X12.8X9.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT (6X18)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig81-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SPACER (6.5X10X10)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "46210-14FB0-YM2",
+        "description": "HANDLE, PILLION RIDER RH (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "46210-14FB0-YD8",
+        "description": "HANDLE, PILLION RIDER RH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "46210-14FB0-Y7H",
+        "description": "HANDLE, PILLION RIDER RH (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09180-08138",
+        "description": "SPACER (8.4X12X13)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09180-09016",
+        "description": "SPACER (9.2X13.8X9.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "46230-14FB0-YM2",
+        "description": "HANDLE, PILLION RIDER LH (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "46230-14FB0-YD8",
+        "description": "HANDLE, PILLION RIDER LH (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "46230-14FB0-Y7H",
+        "description": "HANDLE, PILLION RIDER LH (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "09180-08138",
+        "description": "SPACER (8.4X12X13)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09180-09016",
+        "description": "SPACER (9.2X12.8X9.5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09106-08151",
+        "description": "BOLT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09250-06002",
+        "description": "CAP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09106-06064",
+        "description": "BOLT (6X18)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09180-06310",
+        "description": "SPACER (6.5X10X10)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig82",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "82",
+    "illustrationCode": "FIG82",
+    "title": "PILLION RIDER HANDLE  (CENTER) (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - PILLION RIDER HANDLE  (CENTER) (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig82.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig82.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE, RIDER CENTER (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE, RIDER CENTER (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE, RIDER CENTER (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, HANDLE FRONT (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, HANDLE FRONT (MAROON)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, HANDLE FRONT (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - COVER, HANDLE REAR (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - COVER, HANDLE LOWER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BACK REST ASSY (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SCREW, FRONT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SCREW, REAR (5X12)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - SCREW, BACK REST (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SCREW LOWER (4X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BOLT, SIDE (8X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig82-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BOLT, CENTER (8X30)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "46211-14F51-YD8",
+        "description": "HANDLE, RIDER CENTER (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "46211-14F51-YE2",
+        "description": "HANDLE, RIDER CENTER (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "46211-14F51-Y7L",
+        "description": "HANDLE, RIDER CENTER (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "46215-14F52-YD8",
+        "description": "COVER, HANDLE FRONT (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "46215-14F52-YE2",
+        "description": "COVER, HANDLE FRONT (MAROON)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "46215-14F52-Y7L",
+        "description": "COVER, HANDLE FRONT (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "46216-14F51-Y0J",
+        "description": "COVER, HANDLE REAR (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "46217-14F50-Y0J",
+        "description": "COVER, HANDLE LOWER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "46220-14F51-W37",
+        "description": "BACK REST ASSY (BLACK)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09139-06083",
+        "description": "SCREW, FRONT (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "02142-05123",
+        "description": "SCREW, REAR (5X12)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "02142-06167",
+        "description": "SCREW, BACK REST (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "03541-04103",
+        "description": "SCREW LOWER (4X10)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "01550-08253",
+        "description": "BOLT, SIDE (8X25)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "01550-08303",
+        "description": "BOLT, CENTER (8X30)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig83",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "83",
+    "illustrationCode": "FIG83",
+    "title": "PILLION RIDER HANDLE (CENTER) (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - PILLION RIDER HANDLE (CENTER) (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig83.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig83.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE PILLION CENTER (WHITE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE PILLION CENTER (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HANDLE PILLION CENTER (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, PILLION HANDLE FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, PILLION HANDLE FRONT (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - COVER, PILLION HANDLE FRONT (BLUE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - COVER, PILLION HANDLE REAR (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - COVER, PILLION HANDLE LOWER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - COVER, PILLION HANDLE CENTER (GRAY)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLIP (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BACK REST, RIDER HANDLE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - SCREW (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig83-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "46211-14FA0-YM2",
+        "description": "HANDLE PILLION CENTER (WHITE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "46211-14FA0-YD8",
+        "description": "HANDLE PILLION CENTER (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "46211-14FA0-Y7H",
+        "description": "HANDLE PILLION CENTER (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "46215-14FA0-YM2",
+        "description": "COVER, PILLION HANDLE FRONT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "46215-14FA0-YD8",
+        "description": "COVER, PILLION HANDLE FRONT (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "46215-14FA0-Y7H",
+        "description": "COVER, PILLION HANDLE FRONT (BLUE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "46216-14FA0-Y0J",
+        "description": "COVER, PILLION HANDLE REAR (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "46217-14FA0-Y0J",
+        "description": "COVER, PILLION HANDLE LOWER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "46218-14FA0-Y0J",
+        "description": "COVER, PILLION HANDLE CENTER (GRAY)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "09409-06314-5PK",
+        "description": "CLIP (BLACK)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "46220-14FA0-FC8",
+        "description": "BACK REST, RIDER HANDLE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09320-09045",
+        "description": "CUSHION",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09139-06083",
+        "description": "SCREW (6X16)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "03541-04123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "02142-06163",
+        "description": "SCREW",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "03541-04123",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "03541-05163",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "01550-10253",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig84",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "84",
+    "illustrationCode": "FIG84",
+    "title": "FRONT FORK DAMPER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT FORK DAMPER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig84.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig84.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - DAMPER ASSY, FRONT FORK RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - DAMPER ASSY, FRONT FORK LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - TUBE, OUTER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - TUBE, OUTER LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - METAL, SLIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SEAL, OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - RING, SNAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SEAL, DUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - PIECE, OIL LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - GASKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - TUBE, INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CYLINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SPRING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - RING, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPRING, FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig84-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOLT, RH"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "51103-14FA1",
+        "description": "DAMPER ASSY, FRONT FORK RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 0,
+        "partNumber": "51104-14F61",
+        "description": "DAMPER ASSY, FRONT FORK LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "51130-14F00",
+        "description": "TUBE, OUTER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "51140-14F00",
+        "description": "TUBE, OUTER LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "51167-26E10",
+        "description": "METAL, SLIDE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "51158-05A00",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "51153-14F00",
+        "description": "SEAL, OIL",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "51156-49440",
+        "description": "RING, SNAP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "51173-14F00",
+        "description": "SEAL, DUST",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "51195-33D10",
+        "description": "PIECE, OIL LOCK",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "51147-16510",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "51148-41310",
+        "description": "GASKET",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "51110-14F51",
+        "description": "TUBE, INNER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "51121-33D10",
+        "description": "PISTON",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "51146-14F51",
+        "description": "CYLINDER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "51177-06C00",
+        "description": "SPRING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "51196-14F51",
+        "description": "RING, PISTON",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "51171-14F50",
+        "description": "SPRING, FRONT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "51356-27C00",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "51351-14F20",
+        "description": "CAP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09280-32001",
+        "description": "O RING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "51166-14FA0",
+        "description": "BOLT, RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig85",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "85",
+    "illustrationCode": "FIG85",
+    "title": "FRONT FORK DAMPER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT FORK DAMPER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig85.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig85.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - DAMPER ASSY, FRONT FORK RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - DAMPER ASSY, FRONT FORK LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - TUBE, OUTER RH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - TUBE, OUTER LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - METAL, SLIDE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SEAL, OIL"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - RING, SNAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SEAL, DUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - PIECE, OIL LOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - GASKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - TUBE, INNER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - CYLINDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - SPRING, REBOUND"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - RING, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPRING, FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig85-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOLT, RH (8X25)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "51103-14FB0",
+        "description": "DAMPER ASSY, FRONT FORK RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 0,
+        "partNumber": "51104-14F80",
+        "description": "DAMPER ASSY, FRONT FORK LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "51130-14F00",
+        "description": "TUBE, OUTER RH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "51140-14F00",
+        "description": "TUBE, OUTER LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "51167-26E10",
+        "description": "METAL, SLIDE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "51158-05A00",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "51153-14F00",
+        "description": "SEAL, OIL",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "51156-49440",
+        "description": "RING, SNAP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "51173-14F00",
+        "description": "SEAL, DUST",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "51195-33D10",
+        "description": "PIECE, OIL LOCK",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "51147-16510",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "51148-41310",
+        "description": "GASKET",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "51110-14F51",
+        "description": "TUBE, INNER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "51121-33D10",
+        "description": "PISTON",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "51146-14F80",
+        "description": "CYLINDER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "51177-14F70",
+        "description": "SPRING, REBOUND",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "51196-14F51",
+        "description": "RING, PISTON",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "51171-14F50",
+        "description": "SPRING, FRONT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "51356-27C00",
+        "description": "WASHER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "51351-14F20",
+        "description": "CAP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09280-32001",
+        "description": "O RING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "51166-14FA0",
+        "description": "BOLT, RH (8X25)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig86",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "86",
+    "illustrationCode": "FIG86",
+    "title": "STEERING STEM  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - STEERING STEM  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig86.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig86.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - STEM, STEERING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SEAL, LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BEARING  (30X55X17)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW, FORK UPPER (8X20)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HEAD, STEERING STEM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT (10X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - HOLDER, HANDLEBAR (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT (8X40)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BEARING (25X47X15)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SEAL, DUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - NUT, STEM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig86-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - NUT, STEM LOCK"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "51410-14F50",
+        "description": "STEM, STEERING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "51644-12C00",
+        "description": "SEAL, LOWER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09267-30010",
+        "description": "BEARING  (30X55X17)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "51451-14FA0",
+        "description": "BOLT",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "56123-14F10",
+        "description": "SCREW, FORK UPPER (8X20)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "51311-14F10",
+        "description": "HEAD, STEERING STEM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09106-10067",
+        "description": "BOLT (10X25)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "56211-27200-291",
+        "description": "HOLDER, HANDLEBAR (BLACK)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09106-08122",
+        "description": "BOLT (8X40)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09267-25009",
+        "description": "BEARING (25X47X15)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "51643-40502",
+        "description": "SEAL, DUST",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "51631-28000",
+        "description": "NUT, STEM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09166-26001",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "51632-02400",
+        "description": "NUT, STEM LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig87",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "87",
+    "illustrationCode": "FIG87",
+    "title": "STEERING STEM  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - STEERING STEM  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig87.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig87.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - STEM, STEERING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SEAL, LOWER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BEARING  (30X55X17)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT (8X40)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW, FORK UPPER (8X20)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HEAD, STEERING STEM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT (10X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - HOLDER, HANDLEBAR (BLACK)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT (8X40)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - BEARING (25X47X15)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - SEAL, DUST"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - NUT, STEM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig87-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - NUT, STEM LOCK"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "51410-14F50",
+        "description": "STEM, STEERING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "51664-12C00",
+        "description": "SEAL, LOWER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09267-30010",
+        "description": "BEARING  (30X55X17)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "51451-14FA0",
+        "description": "BOLT (8X40)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "56123-14F10",
+        "description": "SCREW, FORK UPPER (8X20)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "51311-14F10",
+        "description": "HEAD, STEERING STEM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09106-10067",
+        "description": "BOLT (10X25)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "56211-27200-291",
+        "description": "HOLDER, HANDLEBAR (BLACK)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "09106-08122",
+        "description": "BOLT (8X40)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09267-25009",
+        "description": "BEARING (25X47X15)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "51643-40502",
+        "description": "SEAL, DUST",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "53631-28000",
+        "description": "NUT, STEM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09166-26001",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "51632-02400",
+        "description": "NUT, STEM LOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig88",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "88",
+    "illustrationCode": "FIG88",
+    "title": "FRONT WHEEL",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT WHEEL",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig88.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig88.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - WHEEL, FRONT (13XMT3.00) (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SPACER, HUB (15.3X21.7X100)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - BEARING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SEAL, DUST LH (22X35X5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - AXLE, FRONT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SPACER, AXLE LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - DISC, FRONT BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT, DISC (8X20)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - TIRE, FRONT (11/90-13 55P) (BRIDGESTONE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - VALVE ASSY, WHEEL RIM (TR412)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BALANCER, WHELL (10G)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BALANCER, WHELL (20G)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig88-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BALANCER, WHELL (30G)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "54111-14F01-12R",
+        "description": "WHEEL, FRONT (13XMT3.00) (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09180-15070",
+        "description": "SPACER, HUB (15.3X21.7X100)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "08123-62027",
+        "description": "BEARING",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09284-22004",
+        "description": "SEAL, DUST LH (22X35X5)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "54711-14F00",
+        "description": "AXLE, FRONT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "54751-14F00",
+        "description": "SPACER, AXLE LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "59221-14F10",
+        "description": "DISC, FRONT BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "59421-03A10",
+        "description": "BOLT, DISC (8X20)",
+        "qty": "6",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "55110-14F10",
+        "description": "TIRE, FRONT (11/90-13 55P) (BRIDGESTONE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "43130-24A00",
+        "description": "VALVE ASSY, WHEEL RIM (TR412)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "43232-82A00",
+        "description": "BALANCER, WHELL (10G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "43234-82000",
+        "description": "BALANCER, WHELL (20G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "43236-82000",
+        "description": "BALANCER, WHELL (30G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig89",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "89",
+    "illustrationCode": "FIG89",
+    "title": "FRONT CALIPER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT CALIPER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig89.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig89.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - CALIPER ASSY, FRONT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PISTON SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SEAL SET, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - PAD SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SPRING, PAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - PIN, HANGER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BLEEDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig89-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT (8X30)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "59300-14F00",
+        "description": "CALIPER ASSY, FRONT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "59300-14850",
+        "description": "PISTON SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "69300-14820",
+        "description": "SEAL SET, PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "59300-14870",
+        "description": "PAD SET",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "59315-14F00",
+        "description": "SPRING, PAD",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "59345-00B20",
+        "description": "PIN, HANGER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "59121-01A00",
+        "description": "BLEEDER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "59122-01A00",
+        "description": "CAP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "59145-14F00",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "01550-08307",
+        "description": "BOLT (8X30)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig90",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "90",
+    "illustrationCode": "FIG90",
+    "title": "FRONT CALIPER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT CALIPER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig90.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig90.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - CALIPER ASSY, FRONT LH"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PISTON SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SEAL SET, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - PAD SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SPRING, PAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - PIN, HANGER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - BLEEDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig90-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT (8X30)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "59300-14F10",
+        "description": "CALIPER ASSY, FRONT LH",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "59300-14850",
+        "description": "PISTON SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "69300-14820",
+        "description": "SEAL SET, PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "59300-14880",
+        "description": "PAD SET",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "59315-14F00",
+        "description": "SPRING, PAD",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "59345-00B20",
+        "description": "PIN, HANGER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "59121-01A00",
+        "description": "BLEEDER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "59122-01A00",
+        "description": "CAP",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "59145-14F00",
+        "description": "BOLT",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "01550-08307",
+        "description": "BOLT (8X30)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig91",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "91",
+    "illustrationCode": "FIG91",
+    "title": "FRONT BRAKE HOSE",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT BRAKE HOSE",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig91.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig91.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - BOLT (10X1.25X22)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - WASHER (10X15X1.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - HOSE, FRONT BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - HOSE, FRONT BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - GUIDE, BRAKE HOSE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT (6X12)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - CLAMP, BRAKE HOSE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT (6X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig91-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - CLAMP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "09360-10042",
+        "description": "BOLT (10X1.25X22)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09161-10009",
+        "description": "WASHER (10X15X1.5)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "59480-14F00",
+        "description": "HOSE, FRONT BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "59480-14F10",
+        "description": "HOSE, FRONT BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "59251-14F00",
+        "description": "GUIDE, BRAKE HOSE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "01550-06123",
+        "description": "BOLT (6X12)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "59245-14F00",
+        "description": "CLAMP, BRAKE HOSE",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "01550-06107",
+        "description": "BOLT (6X10)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09407-18402",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig92",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "92",
+    "illustrationCode": "FIG92",
+    "title": "FRONT MASTER CYLINDER",
+    "subTitle": "BURGMAN AN400 Y K1 - FRONT MASTER CYLINDER",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig92.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig92.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - CYLINDER ASSY, FRONT MASTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PISTON/CUP SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - DIAPHRAGM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SEPARATOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - HOLDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig92-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "59600-14F00",
+        "description": "CYLINDER ASSY, FRONT MASTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "59600-03810",
+        "description": "PISTON/CUP SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "59666-44300",
+        "description": "BOOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "69669-24A01",
+        "description": "CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "59667-44B00",
+        "description": "DIAPHRAGM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "69689-49300",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "59748-15400",
+        "description": "SEPARATOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "59749-15400",
+        "description": "PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "59671-36500",
+        "description": "HOLDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "59675-02FA0",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig93",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "93",
+    "illustrationCode": "FIG93",
+    "title": "REAR CUSHION LEVER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR CUSHION LEVER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig93.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig93.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - LEVER SET, REAR CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BEARING (17X24X26)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER, FRONT (10X17X30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT, FRONT (10X54)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SPACER, CENTER (12X17X94)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT, CENTER (12X124)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SPACER, LOWER (10X17X30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - ROD, CUSHION LEVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BOLT, ROD (10X132)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - ABSORBER ASSY, REAR SHOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - BOLT, FRONT (10X48)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - BOLT, REAR (10X58)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - PLATE, ABSORBER UNDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOLT (5X10)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - NUT, PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - CLAMP, HOSE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig93-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - BOLT, TANK"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "62610-14810",
+        "description": "LEVER SET, REAR CUSHION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09263-17034",
+        "description": "BEARING (17X24X26)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "62684-40A10",
+        "description": "SPACER, FRONT (10X17X30)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09103-10101",
+        "description": "BOLT, FRONT (10X54)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "08319-31107",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "62626-33D00",
+        "description": "SPACER, CENTER (12X17X94)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "62621-33D00",
+        "description": "BOLT, CENTER (12X124)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09160-12080",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08319-21128",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "62684-40A10",
+        "description": "SPACER, LOWER (10X17X30)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "62640-14F10",
+        "description": "ROD, CUSHION LEVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09103-10198",
+        "description": "BOLT, ROD (10X132)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09160-10060",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09159-10027",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "62100-14F81",
+        "description": "ABSORBER ASSY, REAR SHOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09103-10126",
+        "description": "BOLT, FRONT (10X48)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09103-10026",
+        "description": "BOLT, REAR (10X58)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "08319-31107",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "62330-14F00",
+        "description": "PLATE, ABSORBER UNDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "02162-05103",
+        "description": "BOLT (5X10)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "94484-24F00",
+        "description": "NUT, PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "09407-19401",
+        "description": "CLAMP, HOSE",
+        "qty": "3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "01550-06403",
+        "description": "BOLT, TANK",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig94",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "94",
+    "illustrationCode": "FIG94",
+    "title": "REAR CUSHION LEVER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR CUSHION LEVER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig94.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig94.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - LEVER SET, REAR CUSHION"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BEARING (17X24X26)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - SPACER, FRONT (10X17X30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - BOLT, FRONT (10X54)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SPACER, CENTER (12X17X94)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT, CENTER (12X124)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SPACER, LOWER (10X17X30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - ROD, CUSHION LEVER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - BOLT, ROD (10X132)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - ABSORBER ASSY, REAR SHOCK"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - BOLT, FRONT (10X48)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - BOLT, REAR (10X58)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig94-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BOLT, TANK"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "62610-14810",
+        "description": "LEVER SET, REAR CUSHION",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09263-17034",
+        "description": "BEARING (17X24X26)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "62684-40A10",
+        "description": "SPACER, FRONT (10X17X30)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "09103-10101",
+        "description": "BOLT, FRONT (10X54)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "08319-31107",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "62626-33D00",
+        "description": "SPACER, CENTER (12X17X94)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "62621-33D00",
+        "description": "BOLT, CENTER (12X124)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09160-12080",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "08319-21128",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "62684-40A10",
+        "description": "SPACER, LOWER (10X17X30)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "62640-14F10",
+        "description": "ROD, CUSHION LEVER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09103-10198",
+        "description": "BOLT, ROD (10X132)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "09160-10060",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "09159-10027",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "62100-14F81",
+        "description": "ABSORBER ASSY, REAR SHOCK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09103-10126",
+        "description": "BOLT, FRONT (10X48)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09103-10026",
+        "description": "BOLT, REAR (10X58)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "08319-31107",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "01550-06403",
+        "description": "BOLT, TANK",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig95",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "95",
+    "illustrationCode": "FIG95",
+    "title": "REAR WHEEL  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR WHEEL  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig95.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig95.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - WHEEL, REAR (13XMT3.50) (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-33",
+        "ref": 33,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "33 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - DISC, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT, DISC (8X20)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOUSING, DISC PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - TIRE, REAR (130/70-13 63P) (BRIDGESTONE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - VALVE ASSY, WHEEL RIM (TR412)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BALANCER, WHEEL (10G)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BALANCER, WHEEL (20G)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig95-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BALANCER, WHEEL (30G)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "64110-14F01-12R",
+        "description": "WHEEL, REAR (13XMT3.50) (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09160-20076",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 33,
+        "partNumber": "09159-20005",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "69211-14F00",
+        "description": "DISC, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "59421-03A10",
+        "description": "BOLT, DISC (8X20)",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "69212-14F00",
+        "description": "HOUSING, DISC PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "65110-14F30",
+        "description": "TIRE, REAR (130/70-13 63P) (BRIDGESTONE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "43130-24A00",
+        "description": "VALVE ASSY, WHEEL RIM (TR412)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "43232-82000",
+        "description": "BALANCER, WHEEL (10G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "43232-82000",
+        "description": "BALANCER, WHEEL (20G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "43236-82000",
+        "description": "BALANCER, WHEEL (30G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig96",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "96",
+    "illustrationCode": "FIG96",
+    "title": "REAR WHEEL  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR WHEEL  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig96.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig96.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - WHEEL, REAR (13XMT350) (SILVER)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - WASHER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - DISC, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT, DISC (8X20)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOUSING, DISC PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - TIRE, REAR (130/70-13 63P) (BRIDGESTONE)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - VALVE ASSY, WHEEL RIM (TR412)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BALANCER, WHEEL (10G)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BALANCER, WHEEL (20G)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig96-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BALANCER, WHEEL (30G)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "64110-14F10-12R",
+        "description": "WHEEL, REAR (13XMT350) (SILVER)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09160-20079",
+        "description": "WASHER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09159-20005",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "69211-14F10",
+        "description": "DISC, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "59421-03A10",
+        "description": "BOLT, DISC (8X20)",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "69212-14F00",
+        "description": "HOUSING, DISC PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "65110-14F30",
+        "description": "TIRE, REAR (130/70-13 63P) (BRIDGESTONE)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "43130-24A00",
+        "description": "VALVE ASSY, WHEEL RIM (TR412)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "43232-82000",
+        "description": "BALANCER, WHEEL (10G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "43234-82000",
+        "description": "BALANCER, WHEEL (20G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "43236-82000",
+        "description": "BALANCER, WHEEL (30G)",
+        "qty": "0~3",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig97",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "97",
+    "illustrationCode": "FIG97",
+    "title": "REAR CALIPER  (MODEL Y)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR CALIPER  (MODEL Y)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig97.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig97.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - CALIPER ASSY, REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PISTON SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SEAL SET, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - PISTON SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SEAL SET, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SHAFT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - BOOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - ARM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SPARING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BRACKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - PARKING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - PACKIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - PAD SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPRING, PAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - PIN, HANGER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - BOOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - BLEEDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig97-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - BOLT (8X35)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "69100-14F00",
+        "description": "CALIPER ASSY, REAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "69100-14820",
+        "description": "PISTON SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "69100-21840",
+        "description": "SEAL SET, PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "69100-14830",
+        "description": "PISTON SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "69300-14810",
+        "description": "SEAL SET, PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "69127-14F00",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "69123-14F00",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "69124-14F00",
+        "description": "SHAFT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "69329-19A00",
+        "description": "BOOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "69125-14F00",
+        "description": "ARM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "69128-14F00",
+        "description": "SPARING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "69150-14F00",
+        "description": "BRACKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "69120-14F00",
+        "description": "PARKING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "69126-14F00",
+        "description": "PACKIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "69121-14F00",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "69100-14840",
+        "description": "PAD SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "69115-31D10",
+        "description": "SPRING, PAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "59345-13E00",
+        "description": "PIN, HANGER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "59386-13A00",
+        "description": "BOOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "59382-27C30",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "59303-14500",
+        "description": "BOOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "59305-27C00",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "59121-01A00",
+        "description": "BLEEDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "59122-01A00",
+        "description": "CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "01550-08357",
+        "description": "BOLT (8X35)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig98",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "98",
+    "illustrationCode": "FIG98",
+    "title": "REAR CALIPER  (MODEL K1)",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR CALIPER  (MODEL K1)",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig98.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig98.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - CALIPER ASSY, REAR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PISTON SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - SEAL SET, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - PISTON SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - SEAL SET, PISTON"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - NUT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - SHAFT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - O RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - ARM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - SPARING, RETURN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BRACKET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - PARKING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - PACKING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - BOLT (8X25)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - PAD SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - SPRING, PAD"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - PIN, HANGER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - BOOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - BOLT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-20",
+        "ref": 20,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "20 - BOOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-21",
+        "ref": 21,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "21 - PIN"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-22",
+        "ref": 22,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "22 - BLEEDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-23",
+        "ref": 23,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "23 - CAP, BLEEDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig98-24",
+        "ref": 24,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "24 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "69100-14F50",
+        "description": "CALIPER ASSY, REAR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "69100-14820",
+        "description": "PISTON SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "69100-21840",
+        "description": "SEAL SET, PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "69100-14870",
+        "description": "PISTON SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "69100-21840",
+        "description": "SEAL SET, PISTON",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "69127-14F40",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "69123-14F40",
+        "description": "NUT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "69124-14F40",
+        "description": "SHAFT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "69122-14F40",
+        "description": "O RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "69125-14F50",
+        "description": "ARM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "69128-14F00",
+        "description": "SPARING, RETURN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "69150-14F00",
+        "description": "BRACKET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "69120-14F40",
+        "description": "PARKING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "69126-14F40",
+        "description": "PACKING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "69121-14F00",
+        "description": "BOLT (8X25)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "69100-14860",
+        "description": "PAD SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "69115-31D10",
+        "description": "SPRING, PAD",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "59345-13E00",
+        "description": "PIN, HANGER",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "59386-13A00",
+        "description": "BOOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "59382-27C30",
+        "description": "BOLT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 20,
+        "partNumber": "59303-14500",
+        "description": "BOOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 21,
+        "partNumber": "59305-27C00",
+        "description": "PIN",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 22,
+        "partNumber": "59121-01A00",
+        "description": "BLEEDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 23,
+        "partNumber": "59122-01A00",
+        "description": "CAP, BLEEDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 24,
+        "partNumber": "01550-08357",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig99",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "99",
+    "illustrationCode": "FIG99",
+    "title": "REAR BRAKE HOSE",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR BRAKE HOSE",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig99.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig99.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HOSE, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - HOSE, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOLT (10X1.25X22)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - WASHER (10X15X1.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - VALVE ASSY, BRAKE FLUID"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - BOLT (6X30)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOSE, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - HOSE, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - BOLT (10X1.25X22)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - WASHER (10X15X1.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - PIPE, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - PIPE, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-10",
+        "ref": 10,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "10 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-11",
+        "ref": 11,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "11 - BOLT (6X16)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-12",
+        "ref": 12,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "12 - E RING"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - HOSE, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-13",
+        "ref": 13,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "13 - HOSE, REAR BRAKE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-14",
+        "ref": 14,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "14 - CLAMP, HOSE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-15",
+        "ref": 15,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "15 - BOLT (6X12)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-16",
+        "ref": 16,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "16 - BOLT (10X1.25X22)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-17",
+        "ref": 17,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "17 - WASHER (10X15X1.5)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-18",
+        "ref": 18,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "18 - CLAMP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig99-19",
+        "ref": 19,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "19 - CLAMP"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 1,
+        "partNumber": "69240-14F00",
+        "description": "HOSE, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "69240-14F10",
+        "description": "HOSE, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "09360-10042",
+        "description": "BOLT (10X1.25X22)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "09161-10009",
+        "description": "WASHER (10X15X1.5)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "55910-14F00",
+        "description": "VALVE ASSY, BRAKE FLUID",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "01550-06303",
+        "description": "BOLT (6X30)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "69260-14F00",
+        "description": "HOSE, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "69260-14F10",
+        "description": "HOSE, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "09360-10042",
+        "description": "BOLT (10X1.25X22)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "09161-10009",
+        "description": "WASHER (10X15X1.5)",
+        "qty": "4",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "69250-14F00",
+        "description": "PIPE, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "69250-14F10",
+        "description": "PIPE, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 10,
+        "partNumber": "09403-07401",
+        "description": "CLAMP",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 11,
+        "partNumber": "01547-06163",
+        "description": "BOLT (6X16)",
+        "qty": "5",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 12,
+        "partNumber": "09383-13001",
+        "description": "E RING",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "69480-14F00",
+        "description": "HOSE, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 13,
+        "partNumber": "69480-14F10",
+        "description": "HOSE, REAR BRAKE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 14,
+        "partNumber": "59268-01D10",
+        "description": "CLAMP, HOSE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 15,
+        "partNumber": "01550-06123",
+        "description": "BOLT (6X12)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 16,
+        "partNumber": "09360-10042",
+        "description": "BOLT (10X1.25X22)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 17,
+        "partNumber": "09161-10009",
+        "description": "WASHER (10X15X1.5)",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 18,
+        "partNumber": "09408-00100",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 19,
+        "partNumber": "09407-14403",
+        "description": "CLAMP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig100",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "100",
+    "illustrationCode": "FIG100",
+    "title": "REAR MASTER CYLINDER",
+    "subTitle": "BURGMAN AN400 Y K1 - REAR MASTER CYLINDER",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig100.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig100.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-0",
+        "ref": 0,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "0 - CYLINDER ASSY, REAR MASTER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-1",
+        "ref": 1,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "1 - PISTON/CUP SET"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-2",
+        "ref": 2,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "2 - BOOT"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-3",
+        "ref": 3,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "3 - CAP"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-4",
+        "ref": 4,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "4 - DIAPHRAGM"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-5",
+        "ref": 5,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "5 - SCREW"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-6",
+        "ref": 6,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "6 - SEPARATOR"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - PLATE"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-8",
+        "ref": 8,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "8 - HOLDER"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig100-9",
+        "ref": 9,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "9 - BOLT"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 0,
+        "partNumber": "69600-14F00",
+        "description": "CYLINDER ASSY, REAR MASTER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 1,
+        "partNumber": "59600-45850",
+        "description": "PISTON/CUP SET",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 2,
+        "partNumber": "59666-44300",
+        "description": "BOOT",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 3,
+        "partNumber": "69669-24A01",
+        "description": "CAP",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 4,
+        "partNumber": "59667-44B00",
+        "description": "DIAPHRAGM",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 5,
+        "partNumber": "69689-49300",
+        "description": "SCREW",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 6,
+        "partNumber": "59748-15400",
+        "description": "SEPARATOR",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "59749-15400",
+        "description": "PLATE",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 8,
+        "partNumber": "59671-36500",
+        "description": "HOLDER",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 9,
+        "partNumber": "59675-02FA0",
+        "description": "BOLT",
+        "qty": "2",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "id": "diag-suzuki_burgman_an400_y_k1-fig101",
+    "groupCode": "1",
+    "groupName": "Chassi",
+    "subgroupCode": "101",
+    "illustrationCode": "FIG101",
+    "title": "OPTIONAL",
+    "subTitle": "BURGMAN AN400 Y K1 - OPTIONAL",
+    "diagramType": "suzuki_burgman_an400_y_k1_epc",
+    "thumbnailUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig101.jpg",
+    "customImageUrl": "/catalogos/suzuki_burgman_an400_y_k1/fig101.jpg",
+    "hotspots": [
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig101-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - PAINT (SATURN BLACK METALLIC)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig101-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - PAINT (SONIC SILVER METALLIC)"
+      },
+      {
+        "id": "hs-suzuki_burgman_an400_y_k1-fig101-7",
+        "ref": 7,
+        "x": 50.0,
+        "y": 50.0,
+        "label": "7 - PAINT (DEEP RHODE MAROON METALLIC)"
+      }
+    ],
+    "parts": [
+      {
+        "ref": 7,
+        "partNumber": "99000-10209-Y7L",
+        "description": "PAINT (SATURN BLACK METALLIC)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "99000-10209-YD8",
+        "description": "PAINT (SONIC SILVER METALLIC)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      },
+      {
+        "ref": 7,
+        "partNumber": "99000-10209-YE2",
+        "description": "PAINT (DEEP RHODE MAROON METALLIC)",
+        "qty": "1",
+        "price": 100.0,
+        "stock": 10
+      }
+    ]
+  }
+];

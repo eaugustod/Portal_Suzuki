@@ -1105,41 +1105,48 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
               </div>
 
               <div>
-                <label className="text-neutral-400 font-semibold block mb-1">Período / Mês de Referência</label>
-                <input
-                  type="text"
+                <label className="text-neutral-400 font-semibold block mb-1">Período / Trimestre de Referência</label>
+                <select
                   value={editingCommitment.period}
-                  onChange={(e) => setEditingCommitment({ ...editingCommitment, period: e.target.value })}
-                  placeholder="Ex: Junho / 2026"
+                  onChange={(e) => {
+                    const selectedQ = e.target.value;
+                    let m1 = 'JANEIRO', m2 = 'FEVEREIRO', m3 = 'MARÇO';
+                    if (selectedQ.includes('2º Trimestre')) {
+                      m1 = 'ABRIL'; m2 = 'MAIO'; m3 = 'JUNHO';
+                    } else if (selectedQ.includes('3º Trimestre')) {
+                      m1 = 'JULHO'; m2 = 'AGOSTO'; m3 = 'SETEMBRO';
+                    } else if (selectedQ.includes('4º Trimestre')) {
+                      m1 = 'OUTUBRO'; m2 = 'NOVEMBRO'; m3 = 'DEZEMBRO';
+                    }
+                    setEditingCommitment({
+                      ...editingCommitment,
+                      period: selectedQ,
+                      month1Label: m1,
+                      month2Label: m2,
+                      month3Label: m3
+                    });
+                  }}
                   className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
-                />
+                >
+                  <option value="1º Trimestre (Jan / Fev / Mar)">1º Trimestre (Janeiro, Fevereiro, Março)</option>
+                  <option value="2º Trimestre (Abr / Mai / Jun)">2º Trimestre (Abril, Maio, Junho)</option>
+                  <option value="3º Trimestre (Jul / Ago / Set)">3º Trimestre (Julho, Agosto, Setembro)</option>
+                  <option value="4º Trimestre (Out / Nov / Dez)">4º Trimestre (Outubro, Novembro, Dezembro)</option>
+                </select>
               </div>
 
               <div>
-                <label className="text-neutral-400 font-semibold block mb-1">Rótulo Mês 1 (Imediato)</label>
-                <input
-                  type="text"
-                  value={editingCommitment.month1Label}
-                  onChange={(e) => setEditingCommitment({ ...editingCommitment, month1Label: e.target.value })}
-                  className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white"
-                />
-              </div>
-
-              <div>
-                <label className="text-neutral-400 font-semibold block mb-1">Rótulo Mês 2 / Mês 3</label>
-                <div className="grid grid-cols-2 gap-2">
-                  <input
-                    type="text"
-                    value={editingCommitment.month2Label}
-                    onChange={(e) => setEditingCommitment({ ...editingCommitment, month2Label: e.target.value })}
-                    className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-2.5 py-2 text-white"
-                  />
-                  <input
-                    type="text"
-                    value={editingCommitment.month3Label}
-                    onChange={(e) => setEditingCommitment({ ...editingCommitment, month3Label: e.target.value })}
-                    className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-2.5 py-2 text-white"
-                  />
+                <label className="text-neutral-400 font-semibold block mb-1">Meses do Trimestre</label>
+                <div className="grid grid-cols-3 gap-2">
+                  <div className="bg-neutral-900 border border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-blue-400">
+                    1º Mês: {editingCommitment.month1Label}
+                  </div>
+                  <div className="bg-neutral-900 border border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-amber-400">
+                    2º Mês: {editingCommitment.month2Label}
+                  </div>
+                  <div className="bg-neutral-900 border border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-purple-400">
+                    3º Mês: {editingCommitment.month3Label}
+                  </div>
                 </div>
               </div>
 

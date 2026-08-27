@@ -160,19 +160,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Motor",
         "observation": "OPT,NOT ILLUSTRATED"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig101a-11",
-        "ref": 0,
-        "partNumber": "SUZ-FIG101A-11",
-        "description": "(10.6X25.5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 558.4,
-        "msrpPrice": 809.68,
-        "stockManaus": 41,
-        "stockJundiai": 23,
-        "inStock": true,
-        "categoryGroup": "Motor"
       }
     ]
   },
@@ -806,19 +793,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig104a-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG104A-26",
-        "description": "(10.6X25.5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -1508,19 +1482,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 821.28,
         "stockManaus": 41,
         "stockJundiai": 24,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig105a-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG105A-26",
-        "description": "(10.6X25.5X1.6)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -3509,19 +3470,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig120a-17",
-        "ref": 0,
-        "partNumber": "SUZ-FIG120A-17",
-        "description": "(NT:18)",
-        "unitQuantity": 1,
-        "factoryPrice": 104.4,
-        "msrpPrice": 151.38,
-        "stockManaus": 10,
-        "stockJundiai": 44,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig120a-18",
         "ref": 12,
         "partNumber": "17451-17G00-000",
@@ -3544,19 +3492,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 740.08,
         "stockManaus": 34,
         "stockJundiai": 52,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig120a-20",
-        "ref": 0,
-        "partNumber": "SUZ-FIG120A-20",
-        "description": "(NT:34)",
-        "unitQuantity": 1,
-        "factoryPrice": 566.4,
-        "msrpPrice": 821.28,
-        "stockManaus": 42,
-        "stockJundiai": 26,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -6399,19 +6334,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig170a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG170A-4",
-        "description": "(NT:34)",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig170a-5",
         "ref": 4,
         "partNumber": "09181-10158-000",
@@ -6512,19 +6434,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 844.48,
         "stockManaus": 43,
         "stockJundiai": 30,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig170a-13",
-        "ref": 0,
-        "partNumber": "SUZ-FIG170A-13",
-        "description": "(NT:45)",
-        "unitQuantity": 1,
-        "factoryPrice": 112.4,
-        "msrpPrice": 162.98,
-        "stockManaus": 11,
-        "stockJundiai": 47,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -7492,19 +7401,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 914.08,
         "stockManaus": 11,
         "stockJundiai": 48,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig180a-17",
-        "ref": 0,
-        "partNumber": "SUZ-FIG180A-17",
-        "description": "(NT:34)",
-        "unitQuantity": 1,
-        "factoryPrice": 152.4,
-        "msrpPrice": 220.98,
-        "stockManaus": 16,
-        "stockJundiai": 13,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -9087,19 +8983,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig201a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-6",
-        "description": "(T:3.0)",
-        "unitQuantity": 1,
-        "factoryPrice": 214.4,
-        "msrpPrice": 310.88,
-        "stockManaus": 36,
-        "stockJundiai": 41,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig201a-7",
         "ref": 6,
         "partNumber": "21441-29F30-000",
@@ -9841,19 +9724,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 751.68,
         "stockManaus": 35,
         "stockJundiai": 55,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig206a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG206A-6",
-        "description": "(NT:21/24)",
-        "unitQuantity": 1,
-        "factoryPrice": 254.4,
-        "msrpPrice": 368.88,
-        "stockManaus": 41,
-        "stockJundiai": 7,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -12191,19 +12061,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 856.08,
         "stockManaus": 6,
         "stockJundiai": 33,
-        "inStock": true,
-        "categoryGroup": "Elétrica"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig312a-13",
-        "ref": 0,
-        "partNumber": "SUZ-FIG312A-13",
-        "description": "(60X60X3.0)",
-        "unitQuantity": 1,
-        "factoryPrice": 96.4,
-        "msrpPrice": 139.78,
-        "stockManaus": 9,
-        "stockJundiai": 41,
         "inStock": true,
         "categoryGroup": "Elétrica"
       },
@@ -15326,19 +15183,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig415a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG415A-2",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig415a-3",
         "ref": 2,
         "partNumber": "43520-11J00-YAP",
@@ -15348,19 +15192,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 519.68,
         "stockManaus": 16,
         "stockJundiai": 46,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig415a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG415A-4",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 254.4,
-        "msrpPrice": 368.88,
-        "stockManaus": 41,
-        "stockJundiai": 7,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -15638,19 +15469,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig415a-26",
-        "ref": 0,
-        "partNumber": "SUZ-FIG415A-26",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig415a-27",
         "ref": 24,
         "partNumber": "43820-28K00-YAP",
@@ -15660,19 +15478,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 658.88,
         "stockManaus": 28,
         "stockJundiai": 33,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig415a-28",
-        "ref": 0,
-        "partNumber": "SUZ-FIG415A-28",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 176.4,
-        "msrpPrice": 255.78,
-        "stockManaus": 19,
-        "stockJundiai": 22,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -16020,19 +15825,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "FOR YU1"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig420a-5",
-        "ref": 0,
-        "partNumber": "SUZ-FIG420A-5",
-        "description": "(BLUE/YELLOW)",
-        "unitQuantity": 1,
-        "factoryPrice": 230.4,
-        "msrpPrice": 334.08,
-        "stockManaus": 38,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_650xt_m6-fig420a-6",
@@ -19666,19 +19458,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "FOR YU1"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig485a-11",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-11",
-        "description": "(BLUE/YELLOW)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig485a-12",
         "ref": 8,
         "partNumber": "68275-28K90-CQQ",
@@ -19761,19 +19540,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "FOR YU1"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig485a-18",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-18",
-        "description": "(BLUE/YELLOW)",
-        "unitQuantity": 1,
-        "factoryPrice": 224.4,
-        "msrpPrice": 325.38,
-        "stockManaus": 25,
-        "stockJundiai": 40,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_650xt_m6-fig485a-19",
@@ -20520,19 +20286,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig521a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG521A-2",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 222.4,
-        "msrpPrice": 322.48,
-        "stockManaus": 37,
-        "stockJundiai": 44,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig521a-3",
         "ref": 2,
         "partNumber": "51131-28K00-291",
@@ -20790,19 +20543,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 1215.68,
         "stockManaus": 37,
         "stockJundiai": 28,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig521a-23",
-        "ref": 0,
-        "partNumber": "SUZ-FIG521A-23",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -21211,19 +20951,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "LOWER"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig524a-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG524A-3",
-        "description": "(30.1X56X4)",
-        "unitQuantity": 1,
-        "factoryPrice": 254.4,
-        "msrpPrice": 368.88,
-        "stockManaus": 41,
-        "stockJundiai": 7,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-vstrom_650xt_m6-fig524a-4",
@@ -21776,20 +21503,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BATTLAX ADVENTURE A40F F,"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig530a-19",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-19",
-        "description": "",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi",
-        "observation": "BRIDGESTONE"
       },
       {
         "id": "p-vstrom_650xt_m6-fig530a-20",
@@ -24085,19 +23798,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig543a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-6",
-        "description": "(12X78)",
-        "unitQuantity": 1,
-        "factoryPrice": 286.4,
-        "msrpPrice": 415.28,
-        "stockManaus": 7,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig543a-7",
         "ref": 6,
         "partNumber": "62684-12C00-000",
@@ -24107,19 +23807,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 879.28,
         "stockManaus": 8,
         "stockJundiai": 39,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig543a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-8",
-        "description": "(12X20X32)",
-        "unitQuantity": 1,
-        "factoryPrice": 302.4,
-        "msrpPrice": 438.48,
-        "stockManaus": 9,
-        "stockJundiai": 25,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -24203,19 +23890,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-vstrom_650xt_m6-fig543a-15",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-15",
-        "description": "(10X17X30)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-vstrom_650xt_m6-fig543a-16",
         "ref": 13,
         "partNumber": "62641-06G00-000",
@@ -24278,19 +23952,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 983.68,
         "stockManaus": 17,
         "stockJundiai": 17,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig543a-21",
-        "ref": 0,
-        "partNumber": "SUZ-FIG543A-21",
-        "description": "(BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 136.4,
-        "msrpPrice": 197.78,
-        "stockManaus": 14,
-        "stockJundiai": 7,
         "inStock": true,
         "categoryGroup": "Chassi"
       },
@@ -24872,20 +24533,6 @@ export const VSTROM_650XT_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BATTLAX ADVENTUREA40R F,"
-      },
-      {
-        "id": "p-vstrom_650xt_m6-fig550a-27",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550A-27",
-        "description": "",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi",
-        "observation": "BRIDGESTONE"
       },
       {
         "id": "p-vstrom_650xt_m6-fig550a-28",

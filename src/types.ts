@@ -2,6 +2,7 @@ export type NavTab =
   | 'dashboard' 
   | 'commitments' 
   | 'purchase' 
+  | 'reserve_fund'
   | 'parts_catalog' 
   | 'inventory' 
   | 'sales' 
@@ -183,14 +184,69 @@ export type DealershipFullProfile = Required<Pick<DealershipProfile,
 
 export type BrandType = 'Suzuki' | 'Haojue' | 'Zontes' | 'Hisun' | 'Kymco' | 'Quadriciclos';
 
+export type StockAvailabilityStatus = 'disponivel' | 'poucas_unidades' | 'indisponivel';
+
 export interface VehicleVariant {
   id: string;
   colorName: string;
   colorHex: string;
   colorCode?: string;
   imageUrl?: string;
-  stockStatus: 'disponivel' | 'poucas' | 'sem_estoque';
+  stockStatus: StockAvailabilityStatus | 'disponivel' | 'poucas' | 'sem_estoque';
   quantity: number;
+}
+
+export interface PaymentConditionCampaign {
+  id: string;
+  modelId?: string;
+  modelCode: string;
+  modelYear: string;
+  brand: BrandType;
+  paymentMethodName: string;
+  discountPercentage: number;
+  installments: number;
+  startDate: string;
+  endDate: string;
+  inLine: boolean;
+  description?: string;
+}
+
+export interface FreightRateEntry {
+  id: string;
+  state: string;
+  region: BrazilRegion;
+  originWarehouse: 'empresa_13_armazem' | 'manaus_le_16';
+  originWarehouseLabel: string;
+  costPerUnit: number;
+  estimatedDays: number;
+}
+
+export interface ReserveFundTransaction {
+  id: string;
+  dealershipId: DealershipScope;
+  dealershipName?: string;
+  type: 'credito' | 'debito';
+  date: string;
+  reference: string;
+  modelName?: string;
+  chassi?: string;
+  orderId?: string;
+  amount: number;
+  status: 'pendente_financeiro' | 'aprovado' | 'rejeitado';
+  brand: BrandType;
+  financialApproved: boolean;
+  observation?: string;
+}
+
+export interface BrandRegional {
+  id: string;
+  name: string;
+  brand: BrandType;
+  regionalManager: string;
+  email: string;
+  phone: string;
+  statesCovered: string[];
+  dealershipCount?: number;
 }
 
 export interface TechnicalSpecs {

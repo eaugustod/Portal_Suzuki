@@ -52,6 +52,9 @@ import {
   Settings2,
   ExternalLink
 } from 'lucide-react';
+import { INITIAL_PAYMENT_CONDITIONS } from '../data/mockPaymentConditions';
+import { calculateAutomaticFreight, getAutomaticWarehouseOrigin } from '../data/mockFreightTable';
+import { INITIAL_RESERVE_FUND_TRANSACTIONS } from '../data/mockReserveFundData';
 import { OrderApprovalDocument, DealershipFullProfile } from '../types';
 import { INITIAL_ORDER_APPROVAL_PROPOSALS } from '../data/orderApprovalData';
 import { OrderApprovalDocumentView } from './OrderApprovalDocumentView';
@@ -107,9 +110,24 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
   const [selectedBrand, setSelectedBrand] = useState<BrandType>('Suzuki');
   const [freightMode, setFreightMode] = useState<'CIF' | 'FOB'>('CIF');
   const [catalogSearchQuery, setCatalogSearchQuery] = useState('');
-  const [cardActiveColorIndex, setCardActiveColorIndex] = useState<{ [modelId: string]: number }>({});
+  // Payment Condition & Campaign Selection per Model Card
+  const [cardPaymentCondition, setCardPaymentCondition] = useState<Record<string, string>>({});
+  const [cardUseReserveFund, setCardUseReserveFund] = useState<Record<string, boolean>>({});
+  const [cardActiveColorIndex, setCardActiveColorIndex] = useState<Record<string, number>>({});
+  const [activeCostMemorial, setActiveCostMemorial] = useState<PurchaseModel | null>(null);
+  const [orderObservations, setOrderObservations] = useState<string>('');
 
-  // Modals for Technical Specs & Model Catalog Management
+  // Automatic Freight Calculation
+  const dealerState = activeProfile?.state || 'SP';
+  const autoFreightUnit = calculateAutomaticFreight(dealerState);
+  const autoOrigin = getAutomaticWarehouseOrigin(dealerState);
+
+  // Reserve Fund Available Balance
+  const reserveFundAvailableBalance = useMemo(() => {
+    const cred = INITIAL_RESERVE_FUND_TRANSACTIONS.filter(t => t.type === 'credito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
+    const deb = INITIAL_RESERVE_FUND_TRANSACTIONS.filter(t => t.type === 'debito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
+    return cred - deb;
+  }, []);
   const [selectedSpecModal, setSelectedSpecModal] = useState<PurchaseModel | null>(null);
   const [modelToEditModal, setModelToEditModal] = useState<PurchaseModel | null>(null);
   const [isModelFormOpen, setIsModelFormOpen] = useState(false);
@@ -1279,19 +1297,102 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                       </div>
                     )}
 
-                    {/* Pricing */}
-                    <div className="p-3 bg-neutral-900 rounded-2xl border border-neutral-800/80 font-tabular space-y-1">
-                      <div className="flex justify-between text-[11px]">
-                        <span className="text-neutral-400">Custo Concessionária (Fábrica):</span>
-                        <strong className="text-white">R$ {model.factoryCost.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>
+                    {/* Historical Indicators Block (Requirement 8) */}
+                    <div className="grid grid-cols-4 gap-1 text-center bg-neutral-900/90 p-2 rounded-2xl border border-neutral-800 text-[10px]">
+                      <div>
+                        <span className="text-neutral-500 block font-semibold text-[9px]">Estoque Loja</span>
+                        <strong className="text-blue-400 font-bold">{model.storeStock} un</strong>
                       </div>
-                      <div className="flex justify-between text-[11px]">
-                        <span className="text-neutral-400">PPS Sugerido (Venda):</span>
-                        <span className="text-emerald-400 font-bold">R$ {model.ppsMSRP.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                      <div>
+                        <span className="text-neutral-500 block font-semibold text-[9px]">Média 3M</span>
+                        <strong className="text-emerald-400 font-bold">{model.avgRegistration}</strong>
+                      </div>
+                      <div>
+                        <span className="text-neutral-500 block font-semibold text-[9px]">Compras Mês</span>
+                        <strong className="text-purple-400 font-bold">{model.monthlyPurchase} un</strong>
+                      </div>
+                      <div>
+                        <span className="text-neutral-500 block font-semibold text-[9px]">Compromisso</span>
+                        <strong className="text-amber-400 font-bold">{model.commitmentMonth3} un</strong>
                       </div>
                     </div>
 
-                    {/* Interactive Color Swatches with Quick Thumbnail Selector */}
+                    {/* Pricing with Memorial de Cálculo ? (Requirement 2 & 3) */}
+                    {(() => {
+                      const selectedPayId = cardPaymentCondition[model.id] || INITIAL_PAYMENT_CONDITIONS[0]?.id;
+                      const selectedPayCond = INITIAL_PAYMENT_CONDITIONS.find(p => p.id === selectedPayId) || INITIAL_PAYMENT_CONDITIONS[0];
+                      const discountPct = selectedPayCond ? selectedPayCond.discountPercentage : 0;
+                      const finalUnitCost = Math.round(model.factoryCost * (1 - discountPct / 100));
+
+                      return (
+                        <div className="p-3 bg-neutral-900 rounded-2xl border border-neutral-800 font-tabular space-y-2">
+                          <div className="flex items-center justify-between text-[11px]">
+                            <div className="flex items-center gap-1">
+                              <span className="text-neutral-400">Custo Fábrica:</span>
+                              <button
+                                type="button"
+                                onClick={() => setActiveCostMemorial(model)}
+                                className="w-4 h-4 rounded-full bg-blue-500/20 text-blue-400 hover:bg-blue-500 hover:text-white flex items-center justify-center font-bold text-[10px] transition-colors"
+                                title="Clique para ver o Memorial de Cálculo de Custo"
+                              >
+                                ?
+                              </button>
+                            </div>
+                            <div className="text-right">
+                              {discountPct > 0 ? (
+                                <div>
+                                  <span className="line-through text-neutral-500 text-[10px] mr-1.5">
+                                    R$ {model.factoryCost.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                                  </span>
+                                  <strong className="text-emerald-400 font-bold">
+                                    R$ {finalUnitCost.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                                  </strong>
+                                </div>
+                              ) : (
+                                <strong className="text-white font-bold">
+                                  R$ {model.factoryCost.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                                </strong>
+                              )}
+                            </div>
+                          </div>
+
+                          {/* Payment Condition Selector per Card (Requirement 3 & 3.1 & 5) */}
+                          <div>
+                            <label className="text-[9px] uppercase font-bold text-amber-400 block mb-1">Forma de Pagamento (Campanha)</label>
+                            <select
+                              value={selectedPayId}
+                              onChange={(e) => setCardPaymentCondition(prev => ({ ...prev, [model.id]: e.target.value }))}
+                              className="w-full bg-neutral-950 border border-amber-500/40 rounded-xl px-2 py-1.5 text-xs text-white font-semibold focus:outline-none focus:border-amber-400"
+                            >
+                              {INITIAL_PAYMENT_CONDITIONS.filter(p => p.inLine).map(p => (
+                                <option key={p.id} value={p.id}>
+                                  {p.paymentMethodName} {p.discountPercentage > 0 ? `(-${p.discountPercentage}%)` : ''}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+
+                          {/* Reserve Fund Option Toggle (Requirement 7) */}
+                          <div className="flex items-center justify-between pt-1 border-t border-neutral-800 text-[10px]">
+                            <span className="text-neutral-400">Usar Fundo de Reserva?</span>
+                            <label className="flex items-center gap-1.5 cursor-pointer">
+                              <input
+                                type="checkbox"
+                                checked={cardUseReserveFund[model.id] || false}
+                                onChange={(e) => setCardUseReserveFund(prev => ({ ...prev, [model.id]: e.target.checked }))}
+                                disabled={reserveFundAvailableBalance <= 0}
+                                className="rounded border-neutral-700 text-amber-500 focus:ring-amber-500"
+                              />
+                              <span className={cardUseReserveFund[model.id] ? 'text-amber-400 font-bold' : 'text-neutral-500'}>
+                                {cardUseReserveFund[model.id] ? 'Sim (Aplicar Abatimento)' : 'Não'}
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      );
+                    })()}
+
+                    {/* Interactive Color Swatches with Availability Badges (Requirement 4) */}
                     <div className="space-y-2">
                       <div className="flex items-center justify-between text-[10px] uppercase font-bold text-neutral-400 tracking-wider">
                         <span>Cores & Quantidades por Lote</span>
@@ -1301,6 +1402,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                       <div className="space-y-1.5">
                         {model.variants.map((v, vIdx) => {
                           const isVariantActive = activeVariantIdx === vIdx;
+                          const isUnavailable = v.stockStatus === 'sem_estoque' || (v as any).stockStatus === 'indisponivel';
 
                           return (
                             <div 
@@ -1325,11 +1427,28 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                                   style={{ backgroundColor: v.colorHex }}
                                 />
                                 <div className="min-w-0">
-                                  <span className={`text-[11px] font-medium block truncate max-w-[130px] ${
-                                    isVariantActive ? 'text-blue-300 font-bold' : 'text-white'
-                                  }`}>
-                                    {v.colorName}
-                                  </span>
+                                  <div className="flex items-center gap-1.5">
+                                    <span className={`text-[11px] font-medium truncate max-w-[110px] ${
+                                      isVariantActive ? 'text-blue-300 font-bold' : 'text-white'
+                                    }`}>
+                                      {v.colorName}
+                                    </span>
+
+                                    {/* Color Availability Badge (Requirement 4) */}
+                                    {isUnavailable ? (
+                                      <span className="text-[9px] bg-red-950 text-red-400 px-1.5 py-0.2 rounded font-bold border border-red-800">
+                                        Indisponível
+                                      </span>
+                                    ) : v.stockStatus === 'poucas' ? (
+                                      <span className="text-[9px] bg-amber-950 text-amber-400 px-1.5 py-0.2 rounded font-bold border border-amber-800">
+                                        Poucas un.
+                                      </span>
+                                    ) : (
+                                      <span className="text-[9px] bg-emerald-950 text-emerald-400 px-1.5 py-0.2 rounded font-bold border border-emerald-800">
+                                        Disponível
+                                      </span>
+                                    )}
+                                  </div>
                                   {v.colorCode && (
                                     <span className="text-[9px] text-neutral-500 font-mono">
                                       Cód. {v.colorCode}
@@ -1338,27 +1457,27 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                                 </div>
                               </button>
 
-                              {/* Quantity Controls */}
-                              <div className="flex items-center gap-1.5 shrink-0">
-                                <button
-                                  type="button"
-                                  onClick={() => onUpdateVariantQuantity(model.id, v.id, -1)}
-                                  disabled={v.quantity === 0}
-                                  className="w-6 h-6 rounded-lg bg-neutral-800 text-neutral-300 hover:bg-neutral-700 disabled:opacity-30 flex items-center justify-center transition-colors"
-                                >
-                                  <Minus className="w-3 h-3" />
-                                </button>
-                                <span className="text-[12px] font-bold text-white w-5 text-center font-tabular">
-                                  {v.quantity}
-                                </span>
-                                <button
-                                  type="button"
-                                  onClick={() => onUpdateVariantQuantity(model.id, v.id, 1)}
-                                  className="w-6 h-6 rounded-lg bg-blue-600 text-white hover:bg-blue-500 flex items-center justify-center transition-colors shadow-sm"
-                                >
-                                  <Plus className="w-3 h-3" />
-                                </button>
-                              </div>
+                              {/* Quantity Controls (Lock + if indisponivel - Requirement 4) */}
+                              <div className="flex items-center gap-1.5 shrink-0 ml-2">
+                                  <button
+                                    onClick={() => onUpdateVariantQuantity(model.id, v.id, -1)}
+                                    disabled={v.quantity === 0}
+                                    className="w-6 h-6 rounded-lg bg-neutral-800 hover:bg-neutral-700 disabled:opacity-30 disabled:hover:bg-neutral-800 text-white flex items-center justify-center font-bold text-xs transition-colors"
+                                  >
+                                    <Minus className="w-3 h-3" />
+                                  </button>
+                                  <span className="w-5 text-center font-mono font-bold text-xs text-white">
+                                    {v.quantity}
+                                  </span>
+                                  <button
+                                    onClick={() => onUpdateVariantQuantity(model.id, v.id, 1)}
+                                    disabled={isUnavailable}
+                                    title={isUnavailable ? 'Cor indisponível no estoque da fábrica' : 'Adicionar unidade ao pedido'}
+                                    className="w-6 h-6 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:opacity-30 disabled:hover:bg-blue-600 text-white flex items-center justify-center font-bold text-xs transition-colors"
+                                  >
+                                    <Plus className="w-3 h-3" />
+                                  </button>
+                                </div>
                             </div>
                           );
                         })}
@@ -1891,6 +2010,74 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
           dealershipProfile={dealerships.find(d => d.id === currentScope)}
           onNavigateToTransit={onNavigateToCommitments}
         />
+      )}
+
+      {/* Memorial de Cálculo de Composição do Custo Modal (Requirement 2) */}
+      {activeCostMemorial && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-[#18181b] border border-neutral-700 rounded-3xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
+              <h3 className="text-base font-bold text-white flex items-center gap-2">
+                <div className="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-sm">
+                  ?
+                </div>
+                <span>Memorial de Cálculo de Custo ({activeCostMemorial.modelName})</span>
+              </h3>
+              <button
+                onClick={() => setActiveCostMemorial(null)}
+                className="text-neutral-400 hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="space-y-3 text-xs">
+              <p className="text-neutral-400">
+                Composição detalhada do custo faturado pela montadora para a concessionária <strong className="text-white">{activeProfile?.name || 'Autorizada'}</strong>:
+              </p>
+
+              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-4 space-y-2 font-mono">
+                <div className="flex justify-between text-neutral-300">
+                  <span>Preço Tabela Base Fábrica:</span>
+                  <span className="font-bold text-white">R$ {(activeCostMemorial.factoryCost * 0.738).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                </div>
+                <div className="flex justify-between text-neutral-400">
+                  <span>(+) IPI (5.00%):</span>
+                  <span>R$ {(activeCostMemorial.factoryCost * 0.05).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                </div>
+                <div className="flex justify-between text-neutral-400">
+                  <span>(+) ICMS / ST (12.00%):</span>
+                  <span>R$ {(activeCostMemorial.factoryCost * 0.12).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                </div>
+                <div className="flex justify-between text-neutral-400">
+                  <span>(+) PIS / COFINS (9.25%):</span>
+                  <span>R$ {(activeCostMemorial.factoryCost * 0.0925).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                </div>
+                <div className="flex justify-between text-amber-400 border-t border-neutral-800 pt-2 font-bold">
+                  <span>(+) Frete Automático ({dealerState} - {autoOrigin.label}):</span>
+                  <span>R$ {autoFreightUnit.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                </div>
+                <div className="flex justify-between text-emerald-400 border-t border-neutral-700 pt-2 text-sm font-black">
+                  <span>(=) CUSTO FINAL FATURAMENTO:</span>
+                  <span>R$ {(activeCostMemorial.factoryCost + autoFreightUnit).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                </div>
+              </div>
+
+              <div className="bg-blue-950/40 border border-blue-800/50 rounded-xl p-3 text-[11px] text-blue-300">
+                💡 <strong>Nota fiscal:</strong> Faturamento emitido com substituição tributária (ST) recolhida na origem conforme diretrizes fiscais da fábrica.
+              </div>
+            </div>
+
+            <div className="pt-2 flex justify-end">
+              <button
+                onClick={() => setActiveCostMemorial(null)}
+                className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md"
+              >
+                Entendido
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

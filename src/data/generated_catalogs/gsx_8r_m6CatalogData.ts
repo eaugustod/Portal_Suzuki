@@ -2859,19 +2859,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-gsx_8r_m6-fig116a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG116A-8",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 270.4,
-        "msrpPrice": 392.08,
-        "stockManaus": 43,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-gsx_8r_m6-fig116a-9",
         "ref": 8,
         "partNumber": "16331-25L00-000",
@@ -4089,19 +4076,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Motor"
       },
       {
-        "id": "p-gsx_8r_m6-fig124a-5",
-        "ref": 0,
-        "partNumber": "SUZ-FIG124A-5",
-        "description": ":37)",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
         "id": "p-gsx_8r_m6-fig124a-6",
         "ref": 5,
         "partNumber": "09202-04017-000",
@@ -4176,19 +4150,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 972.08,
         "stockManaus": 16,
         "stockJundiai": 14,
-        "inStock": true,
-        "categoryGroup": "Motor"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig124a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG124A-12",
-        "description": ":37)",
-        "unitQuantity": 1,
-        "factoryPrice": 96.4,
-        "msrpPrice": 139.78,
-        "stockManaus": 9,
-        "stockJundiai": 41,
         "inStock": true,
         "categoryGroup": "Motor"
       },
@@ -9724,19 +9685,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-gsx_8r_m6-fig201a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-12",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 574.4,
-        "msrpPrice": 832.88,
-        "stockManaus": 43,
-        "stockJundiai": 29,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-gsx_8r_m6-fig201a-13",
         "ref": 12,
         "partNumber": "21442-41G20-000",
@@ -9750,19 +9698,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Geral"
       },
       {
-        "id": "p-gsx_8r_m6-fig201a-14",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-14",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 80.4,
-        "msrpPrice": 116.58,
-        "stockManaus": 7,
-        "stockJundiai": 35,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
         "id": "p-gsx_8r_m6-fig201a-15",
         "ref": 13,
         "partNumber": "21451-25L10-000",
@@ -9772,19 +9707,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 890.88,
         "stockManaus": 9,
         "stockJundiai": 42,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig201a-16",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-16",
-        "description": "6)",
-        "unitQuantity": 1,
-        "factoryPrice": 96.4,
-        "msrpPrice": 139.78,
-        "stockManaus": 9,
-        "stockJundiai": 41,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -9811,19 +9733,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 890.88,
         "stockManaus": 9,
         "stockJundiai": 42,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig201a-19",
-        "ref": 0,
-        "partNumber": "SUZ-FIG201A-19",
-        "description": "0)",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -10540,19 +10449,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "msrpPrice": 867.68,
         "stockManaus": 7,
         "stockJundiai": 36,
-        "inStock": true,
-        "categoryGroup": "Geral"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig206a-4",
-        "ref": 0,
-        "partNumber": "SUZ-FIG206A-4",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 238.4,
-        "msrpPrice": 345.68,
-        "stockManaus": 39,
-        "stockJundiai": 50,
         "inStock": true,
         "categoryGroup": "Geral"
       },
@@ -17284,19 +17180,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YKV"
       },
       {
-        "id": "p-gsx_8r_m6-fig434a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG434A-6",
-        "description": ",BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 278.4,
-        "msrpPrice": 403.68,
-        "stockManaus": 6,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig434a-7",
         "ref": 2,
         "partNumber": "68131-25L11-DDF",
@@ -17309,19 +17192,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YSF"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig434a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG434A-8",
-        "description": "VER,BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 294.4,
-        "msrpPrice": 426.88,
-        "stockManaus": 8,
-        "stockJundiai": 22,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig434a-9",
@@ -17338,19 +17208,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:QU2"
       },
       {
-        "id": "p-gsx_8r_m6-fig434a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG434A-10",
-        "description": "E,WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 112.4,
-        "msrpPrice": 162.98,
-        "stockManaus": 11,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig434a-11",
         "ref": 2,
         "partNumber": "68131-25L11-DDD",
@@ -17363,19 +17220,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:QRE"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig434a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG434A-12",
-        "description": "K,ORANGE)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig434a-13",
@@ -17448,19 +17292,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YKV"
       },
       {
-        "id": "p-gsx_8r_m6-fig434a-18",
-        "ref": 0,
-        "partNumber": "SUZ-FIG434A-18",
-        "description": ",BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 176.4,
-        "msrpPrice": 255.78,
-        "stockManaus": 19,
-        "stockJundiai": 22,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig434a-19",
         "ref": 4,
         "partNumber": "68131-25L11-DDF",
@@ -17473,19 +17304,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YSF"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig434a-20",
-        "ref": 0,
-        "partNumber": "SUZ-FIG434A-20",
-        "description": "VER,BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 120.4,
-        "msrpPrice": 174.58,
-        "stockManaus": 12,
-        "stockJundiai": 50,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig434a-21",
@@ -17502,19 +17320,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:QU2"
       },
       {
-        "id": "p-gsx_8r_m6-fig434a-22",
-        "ref": 0,
-        "partNumber": "SUZ-FIG434A-22",
-        "description": "E,WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 136.4,
-        "msrpPrice": 197.78,
-        "stockManaus": 14,
-        "stockJundiai": 7,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig434a-23",
         "ref": 4,
         "partNumber": "68131-25L11-DDD",
@@ -17527,19 +17332,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:QRE"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig434a-24",
-        "ref": 0,
-        "partNumber": "SUZ-FIG434A-24",
-        "description": "K,ORANGE)",
-        "unitQuantity": 1,
-        "factoryPrice": 152.4,
-        "msrpPrice": 220.98,
-        "stockManaus": 16,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig434a-25",
@@ -20509,19 +20301,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YKV"
       },
       {
-        "id": "p-gsx_8r_m6-fig481a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG481A-6",
-        "description": "ACK,RED,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 294.4,
-        "msrpPrice": 426.88,
-        "stockManaus": 8,
-        "stockJundiai": 22,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig481a-7",
         "ref": 2,
         "partNumber": "68271-25L21-DDF",
@@ -20534,19 +20313,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YSF"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig481a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG481A-8",
-        "description": "ACK,SILVER,BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 310.4,
-        "msrpPrice": 450.08,
-        "stockManaus": 10,
-        "stockJundiai": 28,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig481a-9",
@@ -20563,19 +20329,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:QU2"
       },
       {
-        "id": "p-gsx_8r_m6-fig481a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG481A-10",
-        "description": "ACK,BLUE,WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 128.4,
-        "msrpPrice": 186.18,
-        "stockManaus": 13,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig481a-11",
         "ref": 2,
         "partNumber": "68271-25L21-DDD",
@@ -20588,19 +20341,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:QRE"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig481a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG481A-12",
-        "description": "AY,BLACK,ORANGE)",
-        "unitQuantity": 1,
-        "factoryPrice": 144.4,
-        "msrpPrice": 209.38,
-        "stockManaus": 15,
-        "stockJundiai": 10,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig481a-13",
@@ -21774,19 +21514,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YKV"
       },
       {
-        "id": "p-gsx_8r_m6-fig485a-6",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-6",
-        "description": "D,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 326.4,
-        "msrpPrice": 473.28,
-        "stockManaus": 12,
-        "stockJundiai": 34,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig485a-7",
         "ref": 2,
         "partNumber": "68275-25L20-CBT",
@@ -21799,19 +21526,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YSF"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig485a-8",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-8",
-        "description": "LVER,BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 342.4,
-        "msrpPrice": 496.48,
-        "stockManaus": 14,
-        "stockJundiai": 40,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig485a-9",
@@ -21828,19 +21542,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:QU2"
       },
       {
-        "id": "p-gsx_8r_m6-fig485a-10",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-10",
-        "description": "UE,WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 160.4,
-        "msrpPrice": 232.58,
-        "stockManaus": 17,
-        "stockJundiai": 16,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig485a-11",
         "ref": 2,
         "partNumber": "68275-25L20-B9E",
@@ -21853,19 +21554,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:QRE"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig485a-12",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-12",
-        "description": "ANGE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 176.4,
-        "msrpPrice": 255.78,
-        "stockManaus": 19,
-        "stockJundiai": 22,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig485a-13",
@@ -21938,19 +21626,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YKV"
       },
       {
-        "id": "p-gsx_8r_m6-fig485a-18",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-18",
-        "description": "D,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 224.4,
-        "msrpPrice": 325.38,
-        "stockManaus": 25,
-        "stockJundiai": 40,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig485a-19",
         "ref": 4,
         "partNumber": "68285-25L20-CBT",
@@ -21963,19 +21638,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YSF"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig485a-20",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-20",
-        "description": "LVER,BLUE)",
-        "unitQuantity": 1,
-        "factoryPrice": 168.4,
-        "msrpPrice": 244.18,
-        "stockManaus": 18,
-        "stockJundiai": 19,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig485a-21",
@@ -21992,19 +21654,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:QU2"
       },
       {
-        "id": "p-gsx_8r_m6-fig485a-22",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-22",
-        "description": "UE,WHITE)",
-        "unitQuantity": 1,
-        "factoryPrice": 184.4,
-        "msrpPrice": 267.38,
-        "stockManaus": 20,
-        "stockJundiai": 25,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig485a-23",
         "ref": 4,
         "partNumber": "68285-25L20-B9E",
@@ -22017,19 +21666,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:QRE"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig485a-24",
-        "ref": 0,
-        "partNumber": "SUZ-FIG485A-24",
-        "description": "ANGE,BLACK)",
-        "unitQuantity": 1,
-        "factoryPrice": 200.4,
-        "msrpPrice": 290.58,
-        "stockManaus": 22,
-        "stockJundiai": 31,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig485a-25",
@@ -24348,19 +23984,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "observation": "BODY COLOR:YSF,QRE"
       },
       {
-        "id": "p-gsx_8r_m6-fig530a-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-3",
-        "description": "K)",
-        "unitQuantity": 1,
-        "factoryPrice": 230.4,
-        "msrpPrice": 334.08,
-        "stockManaus": 38,
-        "stockJundiai": 47,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig530a-4",
         "ref": 1,
         "partNumber": "54111-25L00-QZB",
@@ -24373,19 +23996,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:QU2"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig530a-5",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-5",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 246.4,
-        "msrpPrice": 357.28,
-        "stockManaus": 40,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig530a-6",
@@ -24517,19 +24127,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "SPORTMAX ROAD SPORT2 X,DUNLOP"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig530a-16",
-        "ref": 0,
-        "partNumber": "SUZ-FIG530A-16",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 136.4,
-        "msrpPrice": 197.78,
-        "stockManaus": 14,
-        "stockJundiai": 7,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig530a-17",
@@ -26547,19 +26144,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "categoryGroup": "Chassi"
       },
       {
-        "id": "p-gsx_8r_m6-fig545a-2",
-        "ref": 0,
-        "partNumber": "SUZ-FIG545A-2",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 270.4,
-        "msrpPrice": 392.08,
-        "stockManaus": 43,
-        "stockJundiai": 13,
-        "inStock": true,
-        "categoryGroup": "Chassi"
-      },
-      {
         "id": "p-gsx_8r_m6-fig545a-3",
         "ref": 2,
         "partNumber": "09103-10064-000",
@@ -26881,19 +26465,6 @@ export const GSX_8R_M6_CONVERTED_DIAGRAMS: PartsDiagramGroup[] = [
         "inStock": true,
         "categoryGroup": "Chassi",
         "observation": "BODY COLOR:YSF,QU2"
-      },
-      {
-        "id": "p-gsx_8r_m6-fig550a-3",
-        "ref": 0,
-        "partNumber": "SUZ-FIG550A-3",
-        "description": ")",
-        "unitQuantity": 1,
-        "factoryPrice": 246.4,
-        "msrpPrice": 357.28,
-        "stockManaus": 40,
-        "stockJundiai": 53,
-        "inStock": true,
-        "categoryGroup": "Chassi"
       },
       {
         "id": "p-gsx_8r_m6-fig550a-4",

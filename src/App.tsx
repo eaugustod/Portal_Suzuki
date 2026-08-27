@@ -16,7 +16,8 @@ import {
   MonthlyCommitmentPlan,
   StockScheduleItem,
   ProposalPricingItem,
-  PartsOrder
+  PartsOrder,
+  ReserveFundTransaction
 } from './types';
 import { 
   INITIAL_PURCHASE_MODELS, 
@@ -33,6 +34,7 @@ import {
 import { INITIAL_ORDER_APPROVAL_PROPOSALS } from './data/orderApprovalData';
 import { INITIAL_MONTHLY_COMMITMENTS } from './data/monthlyCommitmentsData';
 import { INITIAL_MOCK_PARTS_ORDERS } from './data/mockPartsData';
+import { INITIAL_RESERVE_FUND_TRANSACTIONS } from './data/mockReserveFundData';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { DashboardView } from './components/DashboardView';
@@ -40,6 +42,7 @@ import { MontadoraDashboardView } from './components/MontadoraDashboardView';
 import { DealershipManagementView } from './components/DealershipManagementView';
 import { MonthlyCommitmentView } from './components/MonthlyCommitmentView';
 import { PurchasePortalView } from './components/PurchasePortalView';
+import { ReserveFundView } from './components/ReserveFundView';
 import { PartsCatalogView } from './components/parts/PartsCatalogView';
 import { InventoryView } from './components/InventoryView';
 import { SalesCrmView } from './components/SalesCrmView';
@@ -91,6 +94,26 @@ export default function App() {
   const [orderProposals, setOrderProposals] = useState<OrderApprovalDocument[]>(INITIAL_ORDER_APPROVAL_PROPOSALS);
   const [monthlyCommitments, setMonthlyCommitments] = useState<MonthlyCommitmentPlan[]>(INITIAL_MONTHLY_COMMITMENTS);
   const [partsOrders, setPartsOrders] = useState<PartsOrder[]>(INITIAL_MOCK_PARTS_ORDERS);
+  const [reserveFundTransactions, setReserveFundTransactions] = useState<ReserveFundTransaction[]>(INITIAL_RESERVE_FUND_TRANSACTIONS);
+
+  // Reserve Fund handlers
+  const handleAddReserveFundTransaction = (tx: ReserveFundTransaction) => {
+    setReserveFundTransactions(prev => [tx, ...prev]);
+  };
+
+  const handleApproveReserveFundTransaction = (id: string) => {
+    setReserveFundTransactions(prev => prev.map(tx => {
+      if (tx.id === id) {
+        const updated = !tx.financialApproved;
+        return {
+          ...tx,
+          financialApproved: updated,
+          status: updated ? 'aprovado' : 'pendente_financeiro'
+        };
+      }
+      return tx;
+    }));
+  };
 
   // Spare Parts Orders handlers
   const handlePlacePartsOrder = (newOrder: PartsOrder) => {
@@ -634,6 +657,15 @@ export default function App() {
               onPlaceOrder={handlePlaceOrder}
               onUpdateFactoryOrder={handleUpdateFactoryOrder}
               onNavigateToCommitments={() => setCurrentTab('commitments')}
+            />
+          )}
+
+          {currentTab === 'reserve_fund' && (
+            <ReserveFundView
+              currentScope={currentScope}
+              transactions={reserveFundTransactions}
+              onAddTransaction={handleAddReserveFundTransaction}
+              onApproveTransaction={handleApproveReserveFundTransaction}
             />
           )}
 

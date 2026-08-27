@@ -59,18 +59,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'dealers_network' as NavTab, label: 'Rede de Concessionárias', icon: Building2 },
     { id: 'commitments' as NavTab, label: 'Compromissos da Rede', icon: CalendarCheck },
     { id: 'purchase' as NavTab, label: 'Pedidos da Rede & ERP', icon: ShoppingCart },
-    { id: 'parts_catalog' as NavTab, label: 'Catálogo EPC & Peças', icon: Package },
+    { id: 'reserve_fund' as NavTab, label: 'Fundo de Reserva', icon: BadgeDollarSign },
     { id: 'inventory' as NavTab, label: 'Estoque da Rede', icon: Boxes },
-    { id: 'sales' as NavTab, label: 'Vendas & CRM Rede', icon: BadgeDollarSign },
-    { id: 'service_order' as NavTab, label: 'Garantias & Pós-Venda', icon: Wrench, badge: activeOSCount }
   ] : [
     { id: 'dashboard' as NavTab, label: 'Dashboard', icon: LayoutDashboard },
     { id: 'commitments' as NavTab, label: 'Compromisso Mensal', icon: CalendarCheck },
     { id: 'purchase' as NavTab, label: 'Pedido de Fábrica (Motos)', icon: ShoppingCart },
-    { id: 'parts_catalog' as NavTab, label: 'Catálogo Peças (EPC)', icon: Package },
+    { id: 'reserve_fund' as NavTab, label: 'Fundo de Reserva', icon: BadgeDollarSign },
     { id: 'inventory' as NavTab, label: 'Estoque da Loja', icon: Bike },
-    { id: 'sales' as NavTab, label: 'Vendas & CRM', icon: BadgeDollarSign },
-    { id: 'service_order' as NavTab, label: 'Ordem de Serviço', icon: Wrench, badge: activeOSCount }
   ];
 
   return (

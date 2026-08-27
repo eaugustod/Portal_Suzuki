@@ -970,19 +970,19 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
                 <div className="flex items-center justify-between gap-2 border-b border-neutral-800 pb-2 mb-2">
                   <div className="flex items-center gap-1.5 font-bold font-mono text-amber-400">
                     <span className="bg-amber-400 text-black px-1.5 py-0.5 rounded text-[11px] font-black">
-                      Ref #{matchingPart.ref}
+                      Ref #{matchingPart.ref ?? '—'}
                     </span>
                     <span className="text-neutral-400">•</span>
-                    <span className="tracking-wide text-white">{matchingPart.partNumber}</span>
+                    <span className="tracking-wide text-white">{matchingPart.partNumber || (matchingPart as any).code || 'N/A'}</span>
                   </div>
                   <span className="text-[10px] text-neutral-400 font-mono bg-neutral-900 px-2 py-0.5 rounded">
-                    UN: {matchingPart.unitQuantity} un.
+                    UN: {matchingPart.unitQuantity ?? (matchingPart as any).qty ?? 1} un.
                   </span>
                 </div>
 
                 {/* Part Description */}
                 <div className="text-xs font-bold text-white truncate max-w-[260px] mb-0.5">
-                  {matchingPart.description}
+                  {matchingPart.description || (matchingPart as any).name || 'Peça Genuína'}
                 </div>
                 {matchingPart.subDescription && (
                   <div className="text-[11px] text-neutral-400 truncate max-w-[260px] mb-2.5">
@@ -991,24 +991,33 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
                 )}
 
                 {/* Pricing & Stock Card */}
-                <div className="bg-neutral-900/90 rounded-xl p-2.5 border border-neutral-800 mb-3 space-y-1">
-                  <div className="flex items-center justify-between text-[11px] font-mono">
-                    <span className="text-neutral-400">Custo Fábrica:</span>
-                    <span className="text-emerald-400 font-bold text-xs">
-                      R$ {matchingPart.factoryPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between text-[10px] font-mono text-neutral-400">
-                    <span>Preço Público (PPS):</span>
-                    <span>R$ {matchingPart.msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
-                  </div>
-                  <div className="flex items-center justify-between text-[10px] font-mono pt-1 border-t border-neutral-800 mt-1">
-                    <span className="text-neutral-400">Estoque Disponível:</span>
-                    <span className="text-emerald-400 font-bold">
-                      {matchingPart.stockJundiai} un. CD-SP / {matchingPart.stockManaus} un. Manaus
-                    </span>
-                  </div>
-                </div>
+                {(() => {
+                  const factoryPrice = matchingPart.factoryPrice ?? (matchingPart as any).price ?? 0;
+                  const msrpPrice = matchingPart.msrpPrice ?? (factoryPrice * 1.5);
+                  const stockJundiai = matchingPart.stockJundiai ?? (matchingPart as any).stock ?? 10;
+                  const stockManaus = matchingPart.stockManaus ?? 5;
+
+                  return (
+                    <div className="bg-neutral-900/90 rounded-xl p-2.5 border border-neutral-800 mb-3 space-y-1">
+                      <div className="flex items-center justify-between text-[11px] font-mono">
+                        <span className="text-neutral-400">Custo Fábrica:</span>
+                        <span className="text-emerald-400 font-bold text-xs">
+                          R$ {factoryPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between text-[10px] font-mono text-neutral-400">
+                        <span>Preço Público (PPS):</span>
+                        <span>R$ {msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-[10px] font-mono pt-1 border-t border-neutral-800 mt-1">
+                        <span className="text-neutral-400">Estoque Disponível:</span>
+                        <span className="text-emerald-400 font-bold">
+                          {stockJundiai} un. CD-SP / {stockManaus} un. Manaus
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })()}
 
                 {/* Actions: Mark for Purchase or Instant Add */}
                 <div className="flex items-center gap-2">
