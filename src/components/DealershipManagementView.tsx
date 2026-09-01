@@ -413,19 +413,19 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
   return (
     <div className="space-y-6 pb-12 animate-in fade-in duration-300">
       {/* Header Banner */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-950 via-slate-900 to-neutral-950 p-6 md:p-8 border border-blue-900/40 shadow-2xl">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-900 via-slate-900 to-neutral-950 p-6 md:p-8 border border-blue-900/40 shadow-2xl">
         <div className="absolute -right-10 -bottom-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[11px] font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-[11px] font-bold uppercase tracking-wider">
               <Building2 className="w-3.5 h-3.5" />
               <span>Gestão Central da Rede Autorizada • J. Toledo Brasil</span>
             </div>
             <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
               Cadastro e Configurações de Concessionárias
             </h1>
-            <p className="text-neutral-500 dark:text-neutral-400 text-sm max-w-2xl">
+            <p className="text-neutral-300 text-sm max-w-2xl">
               Administração completa e individualizada das concessionárias: dados cadastrais, endereços e logística, gestão de usuários e senhas de acesso, contas bancárias e concessão de limites de crédito.
             </p>
           </div>
@@ -445,81 +445,81 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
       {/* 5 Macro Executive KPI Cards (Bento) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* KPI 1: Total Rede */}
-        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 shadow-xl hover:border-blue-500/40 transition-all">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Rede Homologada</span>
-            <div className="p-2 bg-blue-950/80 border border-blue-600/30 text-blue-400 rounded-xl">
+            <div className="p-2 bg-blue-100 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-600/30 text-blue-600 dark:text-blue-400 rounded-xl">
               <Store className="w-4 h-4" />
             </div>
           </div>
-          <p className="text-2xl md:text-3xl font-extrabold text-white font-tabular">{dealerships.length} Lojas</p>
+          <p className="text-2xl md:text-3xl font-extrabold text-neutral-900 dark:text-white font-tabular">{dealerships.length} Lojas</p>
           <div className="flex items-center gap-2 mt-2 text-xs text-neutral-500 dark:text-neutral-400">
-            <span className="text-emerald-400 font-bold">{dealerships.filter(d => d.status === 'ativa').length} ativas</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-bold">{dealerships.filter(d => d.status === 'ativa').length} ativas</span>
             <span>•</span>
             <span>5 regiões do Brasil</span>
           </div>
         </div>
 
         {/* KPI 2: Limite Concedido */}
-        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 shadow-xl hover:border-blue-500/40 transition-all">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Crédito Total Homologado</span>
-            <div className="p-2 bg-indigo-950/80 border border-indigo-600/30 text-indigo-400 rounded-xl">
+            <div className="p-2 bg-indigo-100 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-600/30 text-indigo-600 dark:text-indigo-400 rounded-xl">
               <CreditCard className="w-4 h-4" />
             </div>
           </div>
-          <p className="text-2xl md:text-3xl font-extrabold text-white font-tabular">
+          <p className="text-2xl md:text-3xl font-extrabold text-neutral-900 dark:text-white font-tabular">
             R$ {(totalCreditGranted / 1000000).toFixed(1)} M
           </p>
-          <div className="flex items-center gap-2 mt-2 text-xs text-indigo-400">
+          <div className="flex items-center gap-2 mt-2 text-xs text-indigo-600 dark:text-indigo-400">
             <BadgeCheck className="w-3.5 h-3.5" />
             <span>Comitê Financeiro J. Toledo</span>
           </div>
         </div>
 
         {/* KPI 3: Crédito em Utilização */}
-        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 shadow-xl hover:border-blue-500/40 transition-all">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Crédito Utilizado</span>
-            <div className="p-2 bg-amber-950/80 border border-amber-600/30 text-amber-400 rounded-xl">
+            <div className="p-2 bg-amber-100 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-600/30 text-amber-600 dark:text-amber-400 rounded-xl">
               <DollarSign className="w-4 h-4" />
             </div>
           </div>
-          <p className="text-2xl md:text-3xl font-extrabold text-amber-400 font-tabular">
+          <p className="text-2xl md:text-3xl font-extrabold text-amber-600 dark:text-amber-400 font-tabular">
             R$ {(totalCreditUsed / 1000000).toFixed(1)} M
           </p>
           <div className="mt-2 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
             <span>Ocupação: {((totalCreditUsed / Math.max(1, totalCreditGranted)) * 100).toFixed(0)}%</span>
-            <span className="text-emerald-400">Saldo: R$ {(totalAvailableCredit / 1000000).toFixed(1)}M</span>
+            <span className="text-emerald-600 dark:text-emerald-400">Saldo: R$ {(totalAvailableCredit / 1000000).toFixed(1)}M</span>
           </div>
         </div>
 
         {/* KPI 4: Usuários Concessionárias */}
-        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 shadow-xl hover:border-blue-500/40 transition-all">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Usuários / Acessos</span>
-            <div className="p-2 bg-emerald-950/80 border border-emerald-600/30 text-emerald-400 rounded-xl">
+            <div className="p-2 bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-600/30 text-emerald-600 dark:text-emerald-400 rounded-xl">
               <Users className="w-4 h-4" />
             </div>
           </div>
-          <p className="text-2xl md:text-3xl font-extrabold text-white font-tabular">{totalUsersCount} Usuários</p>
+          <p className="text-2xl md:text-3xl font-extrabold text-neutral-900 dark:text-white font-tabular">{totalUsersCount} Usuários</p>
           <div className="flex items-center gap-1.5 mt-2 text-xs text-neutral-500 dark:text-neutral-400">
-            <KeyRound className="w-3.5 h-3.5 text-emerald-400" />
+            <KeyRound className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
             <span>Gestão individual de senhas</span>
           </div>
         </div>
 
         {/* KPI 5: Rating de Adimplência */}
-        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 shadow-xl hover:border-blue-500/40 transition-all">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Pontualidade Média</span>
-            <div className="p-2 bg-teal-950/80 border border-teal-600/30 text-teal-400 rounded-xl">
+            <div className="p-2 bg-teal-100 dark:bg-teal-950/80 border border-teal-200 dark:border-teal-600/30 text-teal-600 dark:text-teal-400 rounded-xl">
               <ShieldCheck className="w-4 h-4" />
             </div>
           </div>
-          <p className="text-2xl md:text-3xl font-extrabold text-emerald-400 font-tabular">{avgOnTimePayment}%</p>
+          <p className="text-2xl md:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular">{avgOnTimePayment}%</p>
           <div className="flex items-center gap-1.5 mt-2 text-xs text-neutral-500 dark:text-neutral-400">
-            <span className="text-emerald-400 font-bold">Risco Baixo</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-bold">Risco Baixo</span>
             <span>•</span>
             <span>Rating Médio AAA/AA</span>
           </div>
@@ -527,21 +527,21 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
       </div>
 
       {/* Search & Filters Controls Bar */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-4 md:p-5 shadow-xl flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-4 md:p-5 shadow-xl flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
         {/* Search Bar */}
         <div className="relative flex-1">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500 dark:text-neutral-400" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-400" />
           <input
             type="text"
             placeholder="Buscar por Nome Fantasia, Razão Social, CNPJ, Código SZX, Cidade ou Titular..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-[#121215] border border-[#27272a] rounded-2xl pl-10 pr-4 py-2.5 text-xs md:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-blue-500 transition-colors"
+            className="w-full bg-white dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-2xl pl-10 pr-4 py-2.5 text-xs md:text-sm text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-blue-500 transition-colors"
           />
           {searchTerm && (
             <button
               onClick={() => setSearchTerm('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-white text-xs"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-xs"
             >
               Limpar
             </button>
@@ -554,7 +554,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           <select
             value={selectedRegion}
             onChange={(e) => setSelectedRegion(e.target.value)}
-            className="bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
+            className="bg-white dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
           >
             <option value="all">Todas as Regiões</option>
             <option value="Sul">Região Sul</option>
@@ -568,7 +568,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           <select
             value={selectedTier}
             onChange={(e) => setSelectedTier(e.target.value)}
-            className="bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
+            className="bg-white dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
           >
             <option value="all">Todos os Tiers</option>
             <option value="Diamante">Tier Diamante</option>
@@ -581,7 +581,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
+            className="bg-white dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
           >
             <option value="all">Todos os Status</option>
             <option value="ativa">Ativa</option>
@@ -591,11 +591,11 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           </select>
 
           {/* View Mode Toggle */}
-          <div className="bg-[#121215] p-1 border border-[#27272a] rounded-xl flex items-center gap-1">
+          <div className="bg-neutral-100 dark:bg-[#121215] p-1 border border-neutral-300 dark:border-[#27272a] rounded-xl flex items-center gap-1">
             <button
               onClick={() => setViewMode('grid')}
               className={`p-1.5 rounded-lg transition-colors ${
-                viewMode === 'grid' ? 'bg-blue-600 text-white shadow' : 'text-neutral-500 dark:text-neutral-400 hover:text-white'
+                viewMode === 'grid' ? 'bg-blue-600 text-white shadow' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
               }`}
               title="Visualização em Cards"
             >
@@ -604,7 +604,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
             <button
               onClick={() => setViewMode('table')}
               className={`p-1.5 rounded-lg transition-colors ${
-                viewMode === 'table' ? 'bg-blue-600 text-white shadow' : 'text-neutral-500 dark:text-neutral-400 hover:text-white'
+                viewMode === 'table' ? 'bg-blue-600 text-white shadow' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
               }`}
               title="Visualização em Tabela"
             >
@@ -616,11 +616,11 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
       {/* Dealerships Listing */}
       {filteredDealerships.length === 0 ? (
-        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-12 text-center space-y-4">
-          <div className="w-16 h-16 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-500 rounded-full flex items-center justify-center mx-auto">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-12 text-center space-y-4 shadow-sm">
+          <div className="w-16 h-16 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-500 rounded-full flex items-center justify-center mx-auto">
             <Building2 className="w-8 h-8" />
           </div>
-          <h3 className="text-lg font-bold text-white">Nenhuma concessionária encontrada</h3>
+          <h3 className="text-lg font-bold text-neutral-900 dark:text-white">Nenhuma concessionária encontrada</h3>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-md mx-auto">
             Não encontramos nenhuma concessionária com os filtros selecionados. Tente ajustar os termos de busca.
           </p>
@@ -632,7 +632,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
               setSelectedTier('all');
               setSelectedCreditRating('all');
             }}
-            className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white font-bold rounded-xl text-xs"
+            className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-900 dark:text-white font-bold rounded-xl text-xs"
           >
             Redefinir Filtros
           </button>
@@ -647,7 +647,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
             return (
               <div
                 key={dealer.id}
-                className="bg-[#18181b] border border-[#27272a] hover:border-blue-500/50 rounded-3xl p-6 shadow-xl transition-all flex flex-col justify-between group relative overflow-hidden"
+                className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] hover:border-blue-500/50 rounded-3xl p-6 shadow-xl transition-all flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Top Accent Line */}
                 <div 
@@ -659,17 +659,17 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   {/* Top Bar: Code, Tier, Status */}
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs font-extrabold px-2.5 py-1 rounded-lg bg-blue-950/80 border border-blue-600/40 text-blue-400">
+                      <span className="font-mono text-xs font-extrabold px-2.5 py-1 rounded-lg bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-600/40 text-blue-700 dark:text-blue-400">
                         {dealer.dealerCode}
                       </span>
                       <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider ${
                         dealer.tier === 'Diamante'
-                          ? 'bg-blue-500/20 text-blue-300 border border-blue-400/40'
+                          ? 'bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-400/40'
                           : dealer.tier === 'Ouro'
-                          ? 'bg-amber-500/20 text-amber-300 border border-amber-400/40'
+                          ? 'bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-400/40'
                           : dealer.tier === 'Prata'
-                          ? 'bg-slate-500/20 text-slate-300 border border-slate-400/40'
-                          : 'bg-orange-500/20 text-orange-300 border border-orange-400/40'
+                          ? 'bg-slate-100 dark:bg-slate-500/20 text-slate-800 dark:text-slate-300 border border-slate-300 dark:border-slate-400/40'
+                          : 'bg-orange-100 dark:bg-orange-500/20 text-orange-800 dark:text-orange-300 border border-orange-300 dark:border-orange-400/40'
                       }`}>
                         Tier {dealer.tier}
                       </span>
@@ -677,10 +677,10 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
                     <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md uppercase ${
                       dealer.status === 'ativa'
-                        ? 'bg-emerald-950/80 text-emerald-400 border border-emerald-600/30'
+                        ? 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-600/30'
                         : dealer.status === 'homologacao'
-                        ? 'bg-blue-950/80 text-blue-400 border border-blue-600/30'
-                        : 'bg-rose-950/80 text-rose-400 border border-rose-600/30'
+                        ? 'bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-400 border border-blue-300 dark:border-blue-600/30'
+                        : 'bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-400 border border-rose-300 dark:border-rose-600/30'
                     }`}>
                       {dealer.status}
                     </span>
@@ -688,29 +688,29 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
                   {/* Dealer Name & City */}
                   <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {dealer.tradeName || dealer.name}
                     </h3>
                     <p className="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-0.5">{dealer.legalName}</p>
                     <p className="text-xs text-neutral-500 dark:text-neutral-400 flex items-center gap-1.5 mt-2 font-medium">
-                      <MapPin className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                      <MapPin className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400 shrink-0" />
                       <span>{dealer.city}/{dealer.state} • Região {dealer.region}</span>
                     </p>
                   </div>
 
                   {/* Corporate Snippet */}
-                  <div className="bg-[#121215] border border-[#27272a] rounded-2xl p-3 text-xs space-y-1.5 font-tabular">
+                  <div className="bg-neutral-50 dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-3 text-xs space-y-1.5 font-tabular">
                     <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
                       <span>CNPJ:</span>
-                      <span className="font-mono text-white font-bold">{dealer.cnpj}</span>
+                      <span className="font-mono text-neutral-900 dark:text-white font-bold">{dealer.cnpj}</span>
                     </div>
                     <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
                       <span>Titular / Gestor:</span>
-                      <span className="text-white font-medium">{dealer.manager}</span>
+                      <span className="text-neutral-900 dark:text-white font-medium">{dealer.manager}</span>
                     </div>
                     <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
                       <span>Usuários Ativos:</span>
-                      <span className="text-emerald-400 font-bold flex items-center gap-1">
+                      <span className="text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
                         <Users className="w-3 h-3" />
                         {dealer.users?.length || 0} cadastrados
                       </span>
@@ -718,17 +718,17 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   </div>
 
                   {/* Financial & Credit Progress Box */}
-                  <div className="bg-[#121215] border border-[#27272a] rounded-2xl p-3.5 space-y-2.5">
+                  <div className="bg-neutral-50 dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-3.5 space-y-2.5">
                     <div className="flex items-center justify-between text-xs">
                       <span className="text-neutral-500 dark:text-neutral-400 font-medium">Limite Homologado J. Toledo:</span>
-                      <span className="font-bold text-white font-tabular">
+                      <span className="font-bold text-neutral-900 dark:text-white font-tabular">
                         R$ {(dealer.creditLimit || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                       </span>
                     </div>
 
                     {/* Progress Bar */}
                     <div className="space-y-1">
-                      <div className="w-full bg-white dark:bg-neutral-900 rounded-full h-2 overflow-hidden border border-neutral-200 dark:border-neutral-800">
+                      <div className="w-full bg-neutral-200 dark:bg-neutral-900 rounded-full h-2 overflow-hidden border border-neutral-300 dark:border-neutral-800">
                         <div
                           className={`h-full rounded-full transition-all ${
                             creditPercent > 85 ? 'bg-rose-500' : creditPercent > 65 ? 'bg-amber-500' : 'bg-blue-500'
@@ -738,14 +738,14 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       </div>
                       <div className="flex justify-between text-[10px] text-neutral-500 dark:text-neutral-400 font-tabular font-semibold">
                         <span>Utilizado: R$ {((dealer.creditUsed || 0) / 1000).toFixed(0)}k ({creditPercent}%)</span>
-                        <span className="text-emerald-400">Saldo: R$ {(availableCredit / 1000).toFixed(0)}k</span>
+                        <span className="text-emerald-600 dark:text-emerald-400">Saldo: R$ {(availableCredit / 1000).toFixed(0)}k</span>
                       </div>
                     </div>
 
                     <div className="pt-1 flex items-center justify-between text-[11px] border-t border-neutral-200 dark:border-neutral-800/80">
                       <div className="flex items-center gap-1 text-neutral-500 dark:text-neutral-400">
                         <span>Rating:</span>
-                        <span className="font-extrabold text-blue-400 font-mono">{dealer.creditRating || 'AAA'}</span>
+                        <span className="font-extrabold text-blue-600 dark:text-blue-400 font-mono">{dealer.creditRating || 'AAA'}</span>
                       </div>
                       <span className="text-neutral-500 dark:text-neutral-400">
                         Adimplência: <strong className="text-emerald-400">{dealer.onTimePaymentRate || 98.0}%</strong>

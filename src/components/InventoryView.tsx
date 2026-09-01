@@ -155,13 +155,13 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
         <div className="flex flex-wrap items-center gap-2.5">
           {/* Seletor de Modo de Visualização (Item b) */}
-          <div className="flex items-center bg-[#18181b] border border-[#27272a] p-1 rounded-xl shadow-inner">
+          <div className="flex items-center bg-neutral-100 dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] p-1 rounded-xl shadow-inner">
             <button
               onClick={() => setViewMode('detailed')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                 viewMode === 'detailed'
                   ? 'bg-[#3b82f6] text-white shadow'
-                  : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800'
+                  : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-200 dark:hover:bg-neutral-800'
               }`}
             >
               <List className="w-3.5 h-3.5" />
@@ -172,7 +172,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                 viewMode === 'matrix'
                   ? 'bg-[#3b82f6] text-white shadow'
-                  : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800'
+                  : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-200 dark:hover:bg-neutral-800'
               }`}
             >
               <LayoutGrid className="w-3.5 h-3.5" />
@@ -182,9 +182,9 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
           <button
             onClick={exportCSV}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-[#27272a] bg-[#18181b] hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:text-white font-bold text-[12px] transition-colors"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-neutral-200 dark:border-[#27272a] bg-white dark:bg-[#18181b] hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-bold text-[12px] transition-colors"
           >
-            <FileSpreadsheet className="w-4 h-4 text-emerald-400" />
+            <FileSpreadsheet className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span>Exportar CSV</span>
           </button>
 
@@ -200,48 +200,48 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
       {/* Bento Metric Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-[#18181b] rounded-3xl p-5 border border-[#27272a] shadow-md flex flex-col justify-between">
-          <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest block mb-1">
+        <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
+          <span className="text-neutral-500 dark:text-neutral-400 text-[10px] font-bold uppercase tracking-widest block mb-1">
             Total em Estoque
           </span>
           <div className="flex items-baseline gap-2">
-            <span className="text-[26px] font-bold text-[#fafafa] font-tabular">{inventory.length}</span>
+            <span className="text-[26px] font-bold text-neutral-900 dark:text-[#fafafa] font-tabular">{inventory.length}</span>
             <span className="text-[11px] text-neutral-500 dark:text-neutral-400">veículos</span>
           </div>
         </div>
 
-        <div className="bg-[#18181b] rounded-3xl p-5 border border-[#27272a] shadow-md flex flex-col justify-between">
-          <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest block mb-1">
+        <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
+          <span className="text-neutral-500 dark:text-neutral-400 text-[10px] font-bold uppercase tracking-widest block mb-1">
             Disponíveis Pronta Entrega
           </span>
           <div className="flex items-baseline gap-2">
-            <span className="text-[26px] font-bold text-emerald-400 font-tabular">{availableCount}</span>
+            <span className="text-[26px] font-bold text-emerald-600 dark:text-emerald-400 font-tabular">{availableCount}</span>
             <span className="text-[11px] text-neutral-500 dark:text-neutral-400">unidades</span>
           </div>
         </div>
 
-        <div className="bg-[#18181b] rounded-3xl p-5 border border-[#27272a] shadow-md flex flex-col justify-between">
-          <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest block mb-1">
+        <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
+          <span className="text-neutral-500 dark:text-neutral-400 text-[10px] font-bold uppercase tracking-widest block mb-1">
             Reservadas / Proposta
           </span>
           <div className="flex items-baseline gap-2">
-            <span className="text-[26px] font-bold text-rose-400 font-tabular">{reservedCount}</span>
+            <span className="text-[26px] font-bold text-rose-600 dark:text-rose-400 font-tabular">{reservedCount}</span>
             <span className="text-[11px] text-neutral-500 dark:text-neutral-400">unidades</span>
           </div>
         </div>
 
-        <div className="bg-[#18181b] rounded-3xl p-5 border border-[#27272a] shadow-md flex flex-col justify-between">
-          <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest block mb-1">
+        <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
+          <span className="text-neutral-500 dark:text-neutral-400 text-[10px] font-bold uppercase tracking-widest block mb-1">
             Patrimônio em Pátio
           </span>
-          <span className="text-[22px] font-bold text-[#60a5fa] font-tabular">
+          <span className="text-[22px] font-bold text-blue-600 dark:text-[#60a5fa] font-tabular">
             R$ {totalStockValue.toLocaleString('pt-BR')}
           </span>
         </div>
       </div>
 
       {/* Filter Bento Bar */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-3 flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-3 flex flex-wrap items-center justify-between gap-3 shadow-sm">
         <div className="flex flex-wrap items-center gap-2.5">
           <div className="flex items-center gap-1.5 text-[12px] font-bold text-neutral-500 dark:text-neutral-400 pl-2">
             <Filter className="w-3.5 h-3.5 text-[#3b82f6]" />
@@ -461,11 +461,11 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           </div>
         </div>
       ) : (
-        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl overflow-hidden shadow-md">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl overflow-hidden shadow-md">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-[13px]">
               <thead>
-                <tr className="bg-white dark:bg-neutral-900/80 border-b border-[#27272a] text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+                <tr className="bg-neutral-100 dark:bg-neutral-900/80 border-b border-neutral-200 dark:border-[#27272a] text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
                   <th className="py-3 px-4">Motocicleta / Modelo</th>
                   <th className="py-3 px-4">Chassi (VIN)</th>
                   <th className="py-3 px-4">Cor</th>
@@ -475,7 +475,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                   <th className="py-3 px-4 text-center">Ações</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#27272a] font-tabular">
+              <tbody className="divide-y divide-neutral-200 dark:divide-[#27272a] font-tabular">
                 {filteredInventory.length === 0 ? (
                   <tr>
                     <td colSpan={7} className="py-12 text-center text-neutral-500">
@@ -486,10 +486,10 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                   filteredInventory.map((item) => (
                     <tr 
                       key={item.id} 
-                      className="hover:bg-white dark:bg-neutral-900/50 transition-colors"
+                      className="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"
                     >
                       {/* Model & Year */}
-                      <td className="py-3.5 px-4 font-medium text-[#fafafa]">
+                      <td className="py-3.5 px-4 font-medium text-neutral-900 dark:text-[#fafafa]">
                         <div className="flex items-center gap-2">
                           <Bike className="w-4 h-4 text-[#3b82f6] shrink-0" />
                           <div>

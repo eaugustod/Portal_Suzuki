@@ -840,74 +840,74 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
           {/* Top 5 KPI Metrics for Factory Orders Pipeline */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
             {/* KPI 1 */}
-            <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-4 shadow-sm">
+            <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-4 shadow-sm">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-[10px] uppercase font-bold text-neutral-500 dark:text-neutral-400">Total Pedidos Rede</span>
-                <div className="p-1.5 bg-blue-500/10 text-blue-400 rounded-lg">
+                <div className="p-1.5 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-lg">
                   <FileSpreadsheet className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-[20px] font-bold text-white font-tabular">{factoryOrders.length}</p>
+              <p className="text-[20px] font-bold text-neutral-900 dark:text-white font-tabular">{factoryOrders.length}</p>
               <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-1 font-tabular">
                 Volume: R$ {(statsTotalNetworkAmount / 1000).toLocaleString('pt-BR')}k
               </p>
             </div>
 
             {/* KPI 2: Aguardando Análise */}
-            <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-4 shadow-sm">
+            <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-4 shadow-sm">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] uppercase font-bold text-amber-400">Aguardando Análise</span>
-                <div className="p-1.5 bg-amber-500/10 text-amber-400 rounded-lg">
+                <span className="text-[10px] uppercase font-bold text-amber-600 dark:text-amber-400">Aguardando Análise</span>
+                <div className="p-1.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-lg">
                   <Clock className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-[20px] font-bold text-amber-300 font-tabular">{statsPendingAnalysis}</p>
+              <p className="text-[20px] font-bold text-amber-600 dark:text-amber-300 font-tabular">{statsPendingAnalysis}</p>
               <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-1">Novos pedidos recebidos</p>
             </div>
 
             {/* KPI 3: Em Análise de Crédito */}
-            <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-4 shadow-sm">
+            <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-4 shadow-sm">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] uppercase font-bold text-blue-400">Análise de Crédito</span>
-                <div className="p-1.5 bg-blue-500/10 text-blue-400 rounded-lg">
+                <span className="text-[10px] uppercase font-bold text-blue-600 dark:text-blue-400">Análise de Crédito</span>
+                <div className="p-1.5 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-lg">
                   <CreditCard className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-[20px] font-bold text-blue-300 font-tabular">{statsCreditReview}</p>
+              <p className="text-[20px] font-bold text-blue-600 dark:text-blue-300 font-tabular">{statsCreditReview}</p>
               <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-1">J. Toledo Finance</p>
             </div>
 
             {/* KPI 4: Prontos para Protheus */}
-            <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-4 shadow-sm">
+            <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-4 shadow-sm">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] uppercase font-bold text-purple-400">Prontos p/ Protheus</span>
-                <div className="p-1.5 bg-purple-500/10 text-purple-400 rounded-lg">
+                <span className="text-[10px] uppercase font-bold text-purple-600 dark:text-purple-400">Prontos p/ Protheus</span>
+                <div className="p-1.5 bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-lg">
                   <Database className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-[20px] font-bold text-purple-300 font-tabular">{statsReadyProtheus}</p>
+              <p className="text-[20px] font-bold text-purple-600 dark:text-purple-300 font-tabular">{statsReadyProtheus}</p>
               <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-1">Aprovados Crédito + Comercial</p>
             </div>
 
             {/* KPI 5: Integrados no Protheus */}
-            <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-4 shadow-sm">
+            <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-4 shadow-sm">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] uppercase font-bold text-emerald-400">Integrados no ERP</span>
-                <div className="p-1.5 bg-emerald-500/10 text-emerald-400 rounded-lg">
+                <span className="text-[10px] uppercase font-bold text-emerald-600 dark:text-emerald-400">Integrados no ERP</span>
+                <div className="p-1.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-lg">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-[20px] font-bold text-emerald-400 font-tabular">{statsIntegratedProtheus}</p>
+              <p className="text-[20px] font-bold text-emerald-600 dark:text-emerald-400 font-tabular">{statsIntegratedProtheus}</p>
               <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-1">Gerado SC5 Manaus</p>
             </div>
           </div>
 
           {/* Search, Filter Bar and Orders Table */}
-          <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 md:p-6 shadow-md space-y-4">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-3 border-b border-[#27272a]">
+          <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 md:p-6 shadow-md space-y-4">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-3 border-b border-neutral-200 dark:border-[#27272a]">
               <div>
-                <h3 className="text-[16px] font-bold text-white flex items-center gap-2">
-                  <FileSpreadsheet className="w-4 h-4 text-blue-400" />
+                <h3 className="text-[16px] font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+                  <FileSpreadsheet className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                   Lista Geral de Pedidos de Concessionárias ({filteredOrders.length})
                 </h3>
                 <p className="text-[11px] text-neutral-500 dark:text-neutral-400">
@@ -919,13 +919,13 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
               <div className="flex flex-wrap items-center gap-2.5">
                 {/* Search */}
                 <div className="relative min-w-[220px]">
-                  <Search className="w-3.5 h-3.5 text-neutral-500 dark:text-neutral-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Search className="w-3.5 h-3.5 text-neutral-400 absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     placeholder="Buscar pedido, loja, modelo..."
                     value={orderSearchQuery}
                     onChange={(e) => setOrderSearchQuery(e.target.value)}
-                    className="w-full bg-white dark:bg-neutral-900 text-[12px] text-neutral-200 pl-8 pr-3 py-1.5 rounded-xl border border-[#27272a] focus:outline-none focus:border-blue-500 placeholder:text-neutral-500"
+                    className="w-full bg-white dark:bg-neutral-900 text-[12px] text-neutral-900 dark:text-neutral-200 pl-8 pr-3 py-1.5 rounded-xl border border-neutral-300 dark:border-[#27272a] focus:outline-none focus:border-blue-500 placeholder:text-neutral-400 dark:placeholder:text-neutral-500"
                   />
                 </div>
 
@@ -933,7 +933,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                 <select
                   value={selectedStatusFilter}
                   onChange={(e) => setSelectedStatusFilter(e.target.value)}
-                  className="bg-white dark:bg-neutral-900 text-[12px] text-neutral-200 font-medium border border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-blue-500"
+                  className="bg-white dark:bg-neutral-900 text-[12px] text-neutral-900 dark:text-neutral-200 font-medium border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-blue-500"
                 >
                   <option value="todos">Todos os Status</option>
                   <option value="pendentes">Em Análise (Crédito / Comercial)</option>
@@ -946,7 +946,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                 <select
                   value={selectedDealerFilter}
                   onChange={(e) => setSelectedDealerFilter(e.target.value)}
-                  className="bg-white dark:bg-neutral-900 text-[12px] text-neutral-200 font-medium border border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-blue-500"
+                  className="bg-white dark:bg-neutral-900 text-[12px] text-neutral-900 dark:text-neutral-200 font-medium border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-blue-500"
                 >
                   <option value="todas">Todas as Concessionárias</option>
                   {Object.values(DEALERSHIP_PROFILES)
@@ -962,7 +962,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse text-[13px]">
                 <thead>
-                  <tr className="bg-white dark:bg-neutral-900/80 border-b border-[#27272a] text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+                  <tr className="bg-neutral-100 dark:bg-neutral-900/80 border-b border-neutral-200 dark:border-[#27272a] text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
                     <th className="py-3 px-4">Pedido / Data</th>
                     <th className="py-3 px-4">Concessionária</th>
                     <th className="py-3 px-4">Itens & Cores Solicitadas</th>
@@ -973,7 +973,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                     <th className="py-3 px-4 text-center">Ações</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#27272a] font-tabular">
+                <tbody className="divide-y divide-neutral-200 dark:divide-[#27272a] font-tabular">
                   {filteredOrders.length === 0 ? (
                     <tr>
                       <td colSpan={8} className="py-12 text-center text-neutral-500">
@@ -987,12 +987,12 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                       return (
                         <tr 
                           key={order.id}
-                          className="hover:bg-white dark:bg-neutral-900/50 transition-colors group"
+                          className="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors group"
                         >
                           {/* Order Number & Date */}
                           <td className="py-3.5 px-4 font-medium">
                             <div className="flex items-center gap-2">
-                              <span className="font-bold text-white text-[13px]">{order.orderNumber}</span>
+                              <span className="font-bold text-neutral-900 dark:text-white text-[13px]">{order.orderNumber}</span>
                               {order.freightMode === 'CIF' ? (
                                 <span className="text-[9px] bg-blue-950 text-blue-300 border border-blue-800/40 px-1 py-0.2 rounded font-bold">
                                   CIF
@@ -1136,12 +1136,12 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
         <div className="space-y-6">
           {/* Concessionária Active Orders Tracker Banner (When in Dealer Scope) */}
           {!isMontadora && (
-            <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-5 md:p-6 shadow-sm space-y-4">
+            <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 md:p-6 shadow-sm space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-200 dark:border-neutral-800/80 pb-4">
                 <div>
                   <div className="flex items-center gap-2">
-                    <Truck className="w-5 h-5 text-blue-400" />
-                    <h3 className="text-base sm:text-lg font-bold text-white">
+                    <Truck className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white">
                       Meus Pedidos de Fábrica ({filteredOrders.length})
                     </h3>
                   </div>
@@ -1337,64 +1337,64 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
           {/* Freight Mode Selector & Credit Limits */}
           {!isMontadora && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-[#18181b] rounded-3xl p-5 md:p-6 border border-[#27272a] shadow-md flex flex-col justify-between">
+              <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 md:p-6 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest block mb-1">
+                    <span className="text-neutral-500 dark:text-neutral-400 text-[10px] font-bold uppercase tracking-widest block mb-1">
                       Limite Homologado de Crédito
                     </span>
-                    <p className="text-[24px] font-bold text-[#fafafa] font-tabular">
+                    <p className="text-[24px] font-bold text-neutral-900 dark:text-[#fafafa] font-tabular">
                       R$ {creditLimitTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                     </p>
                   </div>
-                  <div className="p-2 bg-neutral-800 rounded-xl text-[#3b82f6] border border-[#27272a]">
+                  <div className="p-2 bg-blue-50 dark:bg-neutral-800 rounded-xl text-blue-600 dark:text-[#3b82f6] border border-blue-200 dark:border-[#27272a]">
                     <Building2 className="w-5 h-5" />
                   </div>
                 </div>
                 <p className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-2">Concessionária: {activeProfile?.name}</p>
               </div>
 
-              <div className="bg-[#18181b] rounded-3xl p-5 md:p-6 border border-[#27272a] shadow-md flex flex-col justify-between">
+              <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 md:p-6 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest block mb-1">
+                    <span className="text-neutral-500 dark:text-neutral-400 text-[10px] font-bold uppercase tracking-widest block mb-1">
                       Crédito Disponível Líquido
                     </span>
                     <p className={`text-[24px] font-bold font-tabular ${
-                      simulatedCreditRemaining >= 0 ? 'text-emerald-400' : 'text-rose-400'
+                      simulatedCreditRemaining >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'
                     }`}>
                       R$ {simulatedCreditRemaining.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                     </p>
                   </div>
-                  <div className="p-2 bg-neutral-800 rounded-xl text-emerald-400 border border-[#27272a]">
+                  <div className="p-2 bg-emerald-50 dark:bg-neutral-800 rounded-xl text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-[#27272a]">
                     <CreditCard className="w-5 h-5" />
                   </div>
                 </div>
-                <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden mt-3">
+                <div className="w-full bg-neutral-100 dark:bg-neutral-800 h-1.5 rounded-full overflow-hidden mt-3">
                   <div 
                     style={{ width: `${Math.min(100, ((creditLimitTotal - simulatedCreditRemaining) / creditLimitTotal) * 100)}%` }} 
-                    className="bg-[#3b82f6] h-full transition-all duration-500 rounded-full"
+                    className="bg-blue-600 dark:bg-[#3b82f6] h-full transition-all duration-500 rounded-full"
                   />
                 </div>
               </div>
 
-              <div className="bg-[#18181b] rounded-3xl p-5 md:p-6 border border-[#27272a] shadow-md flex flex-col justify-between">
+              <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 md:p-6 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest block mb-1">
+                    <span className="text-neutral-500 dark:text-neutral-400 text-[10px] font-bold uppercase tracking-widest block mb-1">
                       Total do Pedido Atual
                     </span>
-                    <p className="text-[24px] font-bold text-[#60a5fa] font-tabular">
+                    <p className="text-[24px] font-bold text-blue-600 dark:text-[#60a5fa] font-tabular">
                       R$ {totalOrderAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                     </p>
                   </div>
-                  <div className="p-2 bg-neutral-800 rounded-xl text-[#60a5fa] border border-[#27272a]">
+                  <div className="p-2 bg-blue-50 dark:bg-neutral-800 rounded-xl text-blue-600 dark:text-[#60a5fa] border border-blue-200 dark:border-[#27272a]">
                     <ShoppingCart className="w-5 h-5" />
                   </div>
                 </div>
                 <div className="flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-2 font-tabular">
                   <span>{totalOrderUnits} unidades selecionadas</span>
-                  <span className="text-neutral-500">Condição: 30/60/90</span>
+                  <span className="text-neutral-500 dark:text-neutral-400">Condição: 30/60/90</span>
                 </div>
               </div>
             </div>
