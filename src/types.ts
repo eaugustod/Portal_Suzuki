@@ -3,6 +3,10 @@ export type NavTab =
   | 'commitments' 
   | 'purchase' 
   | 'reserve_fund'
+  | 'freight_table'
+  | 'payment_conditions'
+  | 'model_matrix'
+  | 'approval_workflow'
   | 'parts_catalog' 
   | 'inventory' 
   | 'sales' 
@@ -117,6 +121,10 @@ export interface DealershipProfile {
   workshopAreaM2?: number;
   unloadingBayAvailable?: boolean;
   unloadingRestrictions?: string;
+  originWarehouse?: 'empresa_13_armazem' | 'manaus_le_16';
+  regionalId?: string;
+  regionalName?: string;
+  reserveFundBalance?: number;
 
   // Users & Access credentials
   users?: DealershipUser[];
@@ -124,6 +132,7 @@ export interface DealershipProfile {
   // Financial & Credit
   floorPlanLimit?: number;
   defaultPaymentCondition?: string;
+  authorizedPaymentConditionIds?: string[];
   creditRating?: CreditRating;
   onTimePaymentRate?: number;
   bankAccount?: DealershipBankAccount;
@@ -208,6 +217,7 @@ export interface PaymentConditionCampaign {
   startDate: string;
   endDate: string;
   inLine: boolean;
+  active?: boolean;
   description?: string;
 }
 
@@ -219,6 +229,32 @@ export interface FreightRateEntry {
   originWarehouseLabel: string;
   costPerUnit: number;
   estimatedDays: number;
+  locationType?: 'capital' | 'interior';
+}
+
+export interface CostMemorialBreakdown {
+  modelId: string;
+  modelName: string;
+  baseFactoryCost: number;
+  discountAmount: number;
+  discountPercentage: number;
+  paymentConditionName: string;
+  freightCost: number;
+  freightOrigin: string;
+  reserveFundAbatement: number;
+  otherTaxesOrFees: number;
+  finalUnitCost: number;
+}
+
+export interface ReserveFundBrandConfig {
+  id: string;
+  brand: BrandType;
+  contributionPercentage: number;
+  fixedAmountPerUnit?: number;
+  startDate: string;
+  endDate: string;
+  active: boolean;
+  notes?: string;
 }
 
 export interface ReserveFundTransaction {
@@ -226,6 +262,7 @@ export interface ReserveFundTransaction {
   dealershipId: DealershipScope;
   dealershipName?: string;
   type: 'credito' | 'debito';
+  origin?: 'montadora_credito' | 'rd_station' | 'pedido_venda' | 'ajuste_direto';
   date: string;
   reference: string;
   modelName?: string;
@@ -235,6 +272,10 @@ export interface ReserveFundTransaction {
   status: 'pendente_financeiro' | 'aprovado' | 'rejeitado';
   brand: BrandType;
   financialApproved: boolean;
+  financialApprovedBy?: string;
+  financialApprovedAt?: string;
+  userResponsible?: string;
+  runningBalance?: number;
   observation?: string;
 }
 
@@ -247,6 +288,21 @@ export interface BrandRegional {
   phone: string;
   statesCovered: string[];
   dealershipCount?: number;
+}
+
+export interface ApprovalWorkflowStep {
+  id: string;
+  stepOrder: number;
+  stepName: string;
+  department: 'Financeiro' | 'Comercial' | 'Diretoria' | 'Crédito' | 'Logística';
+  responsibleUser: string;
+  userEmail: string;
+  targetStatusOnApprove: FactoryOrderStatus | 'apto_integracao_protheus' | 'integrado_protheus';
+  autoIntegrateProtheus: boolean;
+  active: boolean;
+  notes?: string;
+  workflowType?: 'pedido' | 'fundo_reserva';
+  targetDealershipId?: string;
 }
 
 export interface TechnicalSpecs {
@@ -476,11 +532,44 @@ export interface FactoryOrderItem {
   totalItemCost: number;
   availableColors?: { colorName: string; colorHex: string; inStock: boolean }[];
   image?: string;
+  commercialStatus?: 'pendente' | 'aprovado' | 'rejeitado';
+  financialStatus?: 'pendente' | 'aprovado' | 'rejeitado';
+  dealerAcceptanceStatus?: 'aprovado' | 'pendente_aceite' | 'rejeitado';
+  modifiedByMontadora?: boolean;
+  modificationNote?: string;
+  paymentConditionId?: string;
+  paymentConditionName?: string;
+  freightMode?: 'CIF' | 'FOB';
+  freightCost?: number;
+  usedReserveFund?: boolean;
+  childOrderNumber?: string;
+  itemApprovalStatus?: 'pendente' | 'aprovado_montadora' | 'alterado_montadora' | 'aprovado_rede' | 'rejeitado_rede';
+  originalQuantity?: number;
+  originalColorName?: string;
+  originalPaymentConditionName?: string;
+  supervisorStatus?: 'pendente' | 'aprovado' | 'rejeitado';
+  supervisorNote?: string;
+  managerStatus?: 'pendente' | 'aprovado' | 'rejeitado';
+  managerNote?: string;
+  directorStatus?: 'pendente' | 'aprovado' | 'rejeitado';
+  directorNote?: string;
+  approvedQuantity?: number;
+  rejectionReason?: string;
+  rejectionAuthor?: string;
+}
+
+export interface RejectionLog {
+  id: string;
+  date: string;
+  stage: 'Crédito' | 'Supervisora' | 'Gerente' | 'Diretoria';
+  author: string;
+  reason: string;
 }
 
 export interface FactoryOrder {
   id: string;
   orderNumber: string;
+  parentOrderNumber?: string;
   dealershipId: string;
   dealershipName: string;
   dealershipCity: string;
@@ -496,6 +585,10 @@ export interface FactoryOrder {
   totalUnits: number;
   status: FactoryOrderStatus;
   notes?: string;
+  hasPendingDealerAcceptance?: boolean;
+  canDealerEdit?: boolean;
+  overallApprovalStatus?: 'em_analise' | 'aprovado_total' | 'aprovado_parcial' | 'rejeitado_credito' | 'rejeitado_comercial' | 'rejeitado_diretoria';
+  rejectionLogs?: RejectionLog[];
   
   // Credit Approval Gate
   creditApproved: boolean;
@@ -524,7 +617,7 @@ export interface FactoryOrder {
 
 export interface InventoryItem {
   id: string;
-  dealershipId: string;
+  dealershipId?: string;
   model: string;
   year: number;
   vin: string;
@@ -542,7 +635,7 @@ export interface InventoryItem {
 
 export interface PipelineCard {
   id: string;
-  dealershipId: string;
+  dealershipId?: string;
   customerName: string;
   type: 'lead' | 'proposta' | 'documentacao' | 'entrega';
   vehicleInterest: string;
@@ -571,7 +664,7 @@ export interface ServiceOrderItem {
 
 export interface ServiceOrder {
   id: string;
-  dealershipId: string;
+  dealershipId?: string;
   osNumber: string;
   createdAt?: string;
   status: 'em_aberto' | 'aguardando_pecas' | 'em_execucao' | 'finalizado' | 'cancelado';

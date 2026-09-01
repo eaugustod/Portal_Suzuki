@@ -63,29 +63,29 @@ export const INITIAL_MODELS_CATALOG: PurchaseModel[] = MOCK_PARTS_MODELS.map((pM
     variants: [
       {
         id: `${pModel.id}-cor-1`,
-        colorName: 'Cor de Lançamento Oficial',
-        colorCode: 'STD',
-        colorHex: pModel.brand === 'Suzuki' ? '#1b3b6f' : pModel.brand === 'Haojue' ? '#b91c1c' : pModel.brand === 'Zontes' ? '#d97706' : pModel.brand === 'Hisun' ? '#15803d' : '#475569',
+        colorName: 'Azul Metálico / Cor Oficial',
+        colorCode: 'YSF 4A',
+        colorHex: pModel.brand === 'Suzuki' ? '#1d4ed8' : pModel.brand === 'Haojue' ? '#b91c1c' : pModel.brand === 'Zontes' ? '#d97706' : pModel.brand === 'Hisun' ? '#15803d' : '#2563eb',
         imageUrl: pModel.image,
         stockStatus: 'disponivel',
         quantity: 0
       },
       {
         id: `${pModel.id}-cor-2`,
-        colorName: 'Preto Metálico / Blackout',
-        colorCode: 'BLK',
+        colorName: 'Preto Glass Sparkle',
+        colorCode: 'YVB 2B',
         colorHex: '#18181b',
         imageUrl: pModel.image,
-        stockStatus: 'disponivel',
+        stockStatus: 'poucas_unidades',
         quantity: 0
       },
       {
         id: `${pModel.id}-cor-3`,
-        colorName: 'Prata / Grafite Especial',
-        colorCode: 'SLV',
-        colorHex: '#71717a',
+        colorName: 'Vermelho / Edição Especial',
+        colorCode: 'RED 01',
+        colorHex: '#dc2626',
         imageUrl: pModel.image,
-        stockStatus: 'poucas',
+        stockStatus: 'indisponivel',
         quantity: 0
       }
     ]

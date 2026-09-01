@@ -19,9 +19,11 @@ import {
 import { PurchaseModel, VehicleVariant } from '../types';
 
 interface ModelTechnicalSpecsModalProps {
+  isOpen?: boolean;
   model: PurchaseModel;
   onClose: () => void;
   onEditModel?: (model: PurchaseModel) => void;
+  onOpenEdit?: (model: PurchaseModel) => void;
   canEdit?: boolean;
 }
 
@@ -59,12 +61,12 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                   {model.modelName}
                 </h2>
                 {model.yearModel && (
-                  <span className="text-xs bg-neutral-800/80 text-neutral-300 px-2 py-0.5 rounded-md font-mono border border-neutral-700">
+                  <span className="text-xs bg-neutral-800/80 text-neutral-700 dark:text-neutral-300 px-2 py-0.5 rounded-md font-mono border border-neutral-700">
                     {model.yearModel}
                   </span>
                 )}
               </div>
-              <p className="text-xs text-neutral-400 font-medium">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">
                 {model.category}
               </p>
             </div>
@@ -97,7 +99,7 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
 
             <button
               onClick={onClose}
-              className="p-2 rounded-xl bg-neutral-800/80 hover:bg-neutral-700 text-neutral-400 hover:text-white transition-colors"
+              className="p-2 rounded-xl bg-neutral-800/80 hover:bg-neutral-700 text-neutral-500 dark:text-neutral-400 hover:text-white transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -111,8 +113,8 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             
             {/* Left: Photo with Color Switcher */}
-            <div className="lg:col-span-7 bg-neutral-900/80 rounded-2xl border border-neutral-800 p-4 space-y-4">
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-neutral-950/80 border border-neutral-800/80 flex items-center justify-center group">
+            <div className="lg:col-span-7 bg-white dark:bg-neutral-900/80 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-4 space-y-4">
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950/80 border border-neutral-200 dark:border-neutral-800/80 flex items-center justify-center group">
                 <img
                   src={currentPhoto}
                   alt={`${model.modelName} - ${activeVariant?.colorName || 'Foto'}`}
@@ -121,7 +123,7 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                 />
                 
                 {/* Active Color Overlay Badge */}
-                <div className="absolute top-3 left-3 bg-neutral-900/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-neutral-700/80 flex items-center gap-2 shadow-lg">
+                <div className="absolute top-3 left-3 bg-white dark:bg-neutral-900/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-neutral-700/80 flex items-center gap-2 shadow-lg">
                   <span 
                     className="w-3.5 h-3.5 rounded-full border border-white/30 shadow-inner" 
                     style={{ backgroundColor: activeVariant?.colorHex || '#3b82f6' }}
@@ -131,7 +133,7 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                       {activeVariant?.colorName}
                     </span>
                     {activeVariant?.colorCode && (
-                      <span className="text-[10px] text-neutral-400 font-mono">
+                      <span className="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono">
                         Cód. Fábrica: {activeVariant.colorCode}
                       </span>
                     )}
@@ -139,7 +141,7 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                 </div>
 
                 {/* Stock Status Tag */}
-                <div className="absolute bottom-3 right-3 bg-neutral-900/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-neutral-700/80 text-[11px] font-bold">
+                <div className="absolute bottom-3 right-3 bg-white dark:bg-neutral-900/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-neutral-700/80 text-[11px] font-bold">
                   {activeVariant?.stockStatus === 'disponivel' ? (
                     <span className="text-emerald-400 flex items-center gap-1">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -161,7 +163,7 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
 
               {/* Color Swatches / Selector */}
               <div className="space-y-2">
-                <div className="flex items-center justify-between text-xs font-bold text-neutral-400">
+                <div className="flex items-center justify-between text-xs font-bold text-neutral-500 dark:text-neutral-400">
                   <span className="uppercase tracking-wider">Cores Oficiais Disponíveis (Clique para alternar foto):</span>
                   <span className="text-neutral-500 font-normal">{model.variants.length} opções</span>
                 </div>
@@ -176,7 +178,7 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                         className={`p-2 rounded-xl border text-left flex items-center gap-2.5 transition-all ${
                           isSelected 
                             ? 'bg-blue-600/15 border-blue-500 text-white shadow-sm shadow-blue-500/20' 
-                            : 'bg-neutral-900/60 border-neutral-800/80 hover:border-neutral-700 text-neutral-300'
+                            : 'bg-white dark:bg-neutral-900/60 border-neutral-200 dark:border-neutral-800/80 hover:border-neutral-700 text-neutral-700 dark:text-neutral-300'
                         }`}
                       >
                         <span 
@@ -190,7 +192,7 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                             {v.colorName}
                           </p>
                           {v.colorCode && (
-                            <span className="text-[9px] text-neutral-400 font-mono block">
+                            <span className="text-[9px] text-neutral-500 dark:text-neutral-400 font-mono block">
                               {v.colorCode}
                             </span>
                           )}
@@ -207,8 +209,8 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
               
               {/* Pricing Cards */}
               <div className="grid grid-cols-2 gap-3">
-                <div className="p-3.5 bg-neutral-900/90 rounded-2xl border border-neutral-800">
-                  <span className="text-[10px] uppercase font-bold text-neutral-400 tracking-wider block mb-0.5">
+                <div className="p-3.5 bg-white dark:bg-neutral-900/90 rounded-2xl border border-neutral-200 dark:border-neutral-800">
+                  <span className="text-[10px] uppercase font-bold text-neutral-500 dark:text-neutral-400 tracking-wider block mb-0.5">
                     Custo Concessionária (Fábrica)
                   </span>
                   <p className="text-lg sm:text-xl font-bold text-white font-tabular">
@@ -217,25 +219,25 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                   <span className="text-[10px] text-blue-400 font-medium">Faturamento Direto</span>
                 </div>
 
-                <div className="p-3.5 bg-neutral-900/90 rounded-2xl border border-neutral-800">
-                  <span className="text-[10px] uppercase font-bold text-neutral-400 tracking-wider block mb-0.5">
+                <div className="p-3.5 bg-white dark:bg-neutral-900/90 rounded-2xl border border-neutral-200 dark:border-neutral-800">
+                  <span className="text-[10px] uppercase font-bold text-neutral-500 dark:text-neutral-400 tracking-wider block mb-0.5">
                     PPS Sugerido (Público)
                   </span>
                   <p className="text-lg sm:text-xl font-bold text-emerald-400 font-tabular">
                     R$ {model.ppsMSRP.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                   </p>
-                  <span className="text-[10px] text-neutral-400">Margem Bruta Estimada</span>
+                  <span className="text-[10px] text-neutral-500 dark:text-neutral-400">Margem Bruta Estimada</span>
                 </div>
               </div>
 
               {/* Commercial Description */}
               {model.description && (
-                <div className="p-4 bg-neutral-900/60 rounded-2xl border border-neutral-800 space-y-1.5">
+                <div className="p-4 bg-white dark:bg-neutral-900/60 rounded-2xl border border-neutral-200 dark:border-neutral-800 space-y-1.5">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-blue-400">
                     <Info className="w-3.5 h-3.5" />
                     <span>Posicionamento & Apresentação</span>
                   </div>
-                  <p className="text-xs text-neutral-300 leading-relaxed">
+                  <p className="text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed">
                     {model.description}
                   </p>
                 </div>
@@ -249,34 +251,34 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-800">
-                    <span className="text-[10px] text-neutral-400 block">Potência Máxima</span>
+                  <div className="bg-white dark:bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800">
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 block">Potência Máxima</span>
                     <strong className="text-white font-mono text-sm">{specs?.power || 'Consulte'}</strong>
                   </div>
-                  <div className="bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-800">
-                    <span className="text-[10px] text-neutral-400 block">Torque Máximo</span>
+                  <div className="bg-white dark:bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800">
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 block">Torque Máximo</span>
                     <strong className="text-white font-mono text-sm">{specs?.torque || 'Consulte'}</strong>
                   </div>
-                  <div className="bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-800">
-                    <span className="text-[10px] text-neutral-400 block">Velocidade Máxima</span>
+                  <div className="bg-white dark:bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800">
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 block">Velocidade Máxima</span>
                     <strong className="text-emerald-400 font-mono text-sm">{specs?.topSpeed || 'N/D'}</strong>
                   </div>
-                  <div className="bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-800">
-                    <span className="text-[10px] text-neutral-400 block">Aceleração 0-100 km/h</span>
+                  <div className="bg-white dark:bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800">
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 block">Aceleração 0-100 km/h</span>
                     <strong className="text-blue-400 font-mono text-sm">{specs?.acceleration0to100 || 'N/D'}</strong>
                   </div>
-                  <div className="bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-800">
-                    <span className="text-[10px] text-neutral-400 block">Consumo Médio</span>
+                  <div className="bg-white dark:bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800">
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 block">Consumo Médio</span>
                     <strong className="text-amber-400 font-mono text-sm">{specs?.avgConsumption || 'N/D'}</strong>
                   </div>
-                  <div className="bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-800">
-                    <span className="text-[10px] text-neutral-400 block">Autonomia Estimada</span>
+                  <div className="bg-white dark:bg-neutral-900/80 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800">
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 block">Autonomia Estimada</span>
                     <strong className="text-purple-400 font-mono text-sm">{specs?.estimatedRange || 'N/D'}</strong>
                   </div>
                 </div>
 
                 {model.performanceSummary && (
-                  <p className="text-[11px] text-neutral-300 italic bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-800/80">
+                  <p className="text-[11px] text-neutral-700 dark:text-neutral-300 italic bg-neutral-50 dark:bg-neutral-950/60 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800/80">
                     "{model.performanceSummary}"
                   </p>
                 )}
@@ -287,14 +289,14 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
 
           {/* Key Technologies & Features List */}
           {model.features && model.features.length > 0 && (
-            <div className="p-4 bg-neutral-900/60 rounded-2xl border border-neutral-800 space-y-3">
+            <div className="p-4 bg-white dark:bg-neutral-900/60 rounded-2xl border border-neutral-200 dark:border-neutral-800 space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider">
                 <Sparkles className="w-4 h-4 text-amber-400" />
                 <span>Principais Tecnologias & Equipamentos de Série</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
                 {model.features.map((feat, i) => (
-                  <div key={i} className="flex items-start gap-2 p-2.5 bg-neutral-900 rounded-xl border border-neutral-800/80">
+                  <div key={i} className="flex items-start gap-2 p-2.5 bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800/80">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span className="text-xs text-neutral-200">{feat}</span>
                   </div>
@@ -317,46 +319,46 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 
                 {/* Motorização & Transmissão */}
-                <div className="bg-neutral-900/70 rounded-2xl border border-neutral-800 p-4 space-y-3">
-                  <div className="flex items-center gap-2 text-xs font-bold text-blue-400 border-b border-neutral-800 pb-2">
+                <div className="bg-white dark:bg-neutral-900/70 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-4 space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-bold text-blue-400 border-b border-neutral-200 dark:border-neutral-800 pb-2">
                     <Zap className="w-4 h-4" />
                     <span>Motorização, Injeção & Câmbio</span>
                   </div>
 
                   <div className="space-y-2 text-xs">
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Tipo do Motor:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Tipo do Motor:</span>
                       <strong className="text-white text-right max-w-[65%]">{specs.engineType}</strong>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Cilindrada:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Cilindrada:</span>
                       <strong className="text-white font-mono">{specs.displacement}</strong>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Potência Máxima:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Potência Máxima:</span>
                       <strong className="text-blue-400 font-mono">{specs.power}</strong>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Torque Máximo:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Torque Máximo:</span>
                       <strong className="text-blue-400 font-mono">{specs.torque}</strong>
                     </div>
                     {specs.compressionRatio && (
-                      <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                        <span className="text-neutral-400">Taxa de Compressão:</span>
+                      <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                        <span className="text-neutral-500 dark:text-neutral-400">Taxa de Compressão:</span>
                         <strong className="text-white font-mono">{specs.compressionRatio}</strong>
                       </div>
                     )}
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Sistema de Alimentação:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Sistema de Alimentação:</span>
                       <strong className="text-white text-right max-w-[65%]">{specs.fuelSystem}</strong>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Câmbio & Transmissão:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Câmbio & Transmissão:</span>
                       <strong className="text-white text-right max-w-[65%]">{specs.transmission}</strong>
                     </div>
                     {specs.clutch && (
                       <div className="flex justify-between py-1">
-                        <span className="text-neutral-400">Embreagem:</span>
+                        <span className="text-neutral-500 dark:text-neutral-400">Embreagem:</span>
                         <strong className="text-white text-right max-w-[65%]">{specs.clutch}</strong>
                       </div>
                     )}
@@ -364,45 +366,45 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
                 </div>
 
                 {/* Ciclística, Freios, Suspensão & Dimensões */}
-                <div className="bg-neutral-900/70 rounded-2xl border border-neutral-800 p-4 space-y-3">
-                  <div className="flex items-center gap-2 text-xs font-bold text-emerald-400 border-b border-neutral-800 pb-2">
+                <div className="bg-white dark:bg-neutral-900/70 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-4 space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-bold text-emerald-400 border-b border-neutral-200 dark:border-neutral-800 pb-2">
                     <ShieldCheck className="w-4 h-4" />
                     <span>Ciclística, Suspensão, Freios & Dimensões</span>
                   </div>
 
                   <div className="space-y-2 text-xs">
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Suspensão Dianteira:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Suspensão Dianteira:</span>
                       <strong className="text-white text-right max-w-[65%]">{specs.frontSuspension}</strong>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Suspensão Traseira:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Suspensão Traseira:</span>
                       <strong className="text-white text-right max-w-[65%]">{specs.rearSuspension}</strong>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Freio Dianteiro:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Freio Dianteiro:</span>
                       <strong className="text-white text-right max-w-[65%]">{specs.frontBrake}</strong>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Freio Traseiro:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Freio Traseiro:</span>
                       <strong className="text-white text-right max-w-[65%]">{specs.rearBrake}</strong>
                     </div>
                     {specs.absSystem && (
-                      <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                        <span className="text-neutral-400">Sistema ABS:</span>
+                      <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                        <span className="text-neutral-500 dark:text-neutral-400">Sistema ABS:</span>
                         <strong className="text-emerald-400 text-right max-w-[65%]">{specs.absSystem}</strong>
                       </div>
                     )}
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Pneu Dianteiro / Traseiro:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Pneu Dianteiro / Traseiro:</span>
                       <strong className="text-white font-mono text-right">{specs.frontTire} / {specs.rearTire}</strong>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-neutral-800/50">
-                      <span className="text-neutral-400">Capacidade do Tanque:</span>
+                    <div className="flex justify-between py-1 border-b border-neutral-200 dark:border-neutral-800/50">
+                      <span className="text-neutral-500 dark:text-neutral-400">Capacidade do Tanque:</span>
                       <strong className="text-amber-400 font-mono">{specs.fuelTank}</strong>
                     </div>
                     <div className="flex justify-between py-1">
-                      <span className="text-neutral-400">Peso em Ordem de Marcha / Assento:</span>
+                      <span className="text-neutral-500 dark:text-neutral-400">Peso em Ordem de Marcha / Assento:</span>
                       <strong className="text-white font-mono">{specs.curbWeight} / {specs.seatHeight}</strong>
                     </div>
                   </div>
@@ -410,8 +412,8 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
 
               </div>
             ) : (
-              <div className="p-6 bg-neutral-900/40 rounded-2xl border border-neutral-800 text-center space-y-2">
-                <p className="text-xs text-neutral-400">Ficha técnica detalhada em homologação.</p>
+              <div className="p-6 bg-white dark:bg-neutral-900/40 rounded-2xl border border-neutral-200 dark:border-neutral-800 text-center space-y-2">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Ficha técnica detalhada em homologação.</p>
                 {canEdit && onEditModel && (
                   <button
                     onClick={() => onEditModel(model)}
@@ -427,8 +429,8 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 border-t border-[#27272a] bg-neutral-950 flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-2 text-xs text-neutral-400">
+        <div className="p-4 border-t border-[#27272a] bg-neutral-50 dark:bg-neutral-950 flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400">
             <Calendar className="w-3.5 h-3.5" />
             <span>Ano Modelo {model.yearModel || '2026'} • Base J. Toledo</span>
           </div>

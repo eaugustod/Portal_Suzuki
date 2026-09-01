@@ -38,7 +38,7 @@ export const SupportView: React.FC = () => {
         <h2 className="text-[26px] md:text-[30px] font-bold text-[#fafafa] tracking-tight">
           Central de Suporte ao Concessionário
         </h2>
-        <p className="text-[13px] text-neutral-400">
+        <p className="text-[13px] text-neutral-500 dark:text-neutral-400">
           Canais diretos com a fábrica J. Toledo Suzuki Motos do Brasil.
         </p>
       </div>
@@ -51,7 +51,7 @@ export const SupportView: React.FC = () => {
               <PhoneCall className="w-5 h-5" />
             </div>
             <h3 className="text-[15px] font-bold text-[#fafafa]">Plantão Comercial Fábrica</h3>
-            <p className="text-[12px] text-neutral-400 mt-1 leading-relaxed">
+            <p className="text-[12px] text-neutral-500 dark:text-neutral-400 mt-1 leading-relaxed">
               Atendimento exclusivo para pedidos de lote, faturamento e concessões especiais.
             </p>
           </div>
@@ -66,7 +66,7 @@ export const SupportView: React.FC = () => {
               <LifeBuoy className="w-5 h-5" />
             </div>
             <h3 className="text-[15px] font-bold text-[#fafafa]">Engenharia & Garantia</h3>
-            <p className="text-[12px] text-neutral-400 mt-1 leading-relaxed">
+            <p className="text-[12px] text-neutral-500 dark:text-neutral-400 mt-1 leading-relaxed">
               Homologação de garantias, recalls e manuais de serviço para a oficina.
             </p>
           </div>
@@ -81,7 +81,7 @@ export const SupportView: React.FC = () => {
               <FileText className="w-5 h-5" />
             </div>
             <h3 className="text-[15px] font-bold text-[#fafafa]">Tabelas e Circulares</h3>
-            <p className="text-[12px] text-neutral-400 mt-1 leading-relaxed">
+            <p className="text-[12px] text-neutral-500 dark:text-neutral-400 mt-1 leading-relaxed">
               Catálogos oficiais 2024, tabelas de PPS e campanhas de marketing promocional.
             </p>
           </div>
@@ -94,7 +94,7 @@ export const SupportView: React.FC = () => {
       {/* Ticket Opening Form (Bento) */}
       <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-6 shadow-md">
         <h3 className="text-[18px] font-bold text-[#fafafa] mb-1">Abrir Chamado com a Montadora</h3>
-        <p className="text-[13px] text-neutral-400 mb-4">
+        <p className="text-[13px] text-neutral-500 dark:text-neutral-400 mb-4">
           Envie sua dúvida ou solicitação técnica para a equipe de pós-venda J. Toledo.
         </p>
 
@@ -108,23 +108,23 @@ export const SupportView: React.FC = () => {
           <form onSubmit={handleSubmitTicket} className="space-y-4 text-[13px]">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Assunto da Solicitação *</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Assunto da Solicitação *</label>
                 <input 
                   type="text" 
                   value={ticketSubject}
                   onChange={(e) => setTicketSubject(e.target.value)}
                   placeholder="Ex: Liberação de cota extra V-Strom 800DE"
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Departamento</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Departamento</label>
                 <select 
                   value={ticketCategory}
                   onChange={(e) => setTicketCategory(e.target.value)}
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                 >
                   <option value="Comercial">Comercial & Faturamento de Motos</option>
                   <option value="Garantia e Peças J. Toledo">Garantia e Peças J. Toledo</option>
@@ -135,12 +135,12 @@ export const SupportView: React.FC = () => {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold text-neutral-400 mb-1">Detalhes e Informações Adicionais *</label>
+              <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Detalhes e Informações Adicionais *</label>
               <textarea 
                 value={ticketDesc}
                 onChange={(e) => setTicketDesc(e.target.value)}
                 placeholder="Descreva o caso com número de chassi, cliente ou detalhe do pedido..."
-                className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-3 h-28 resize-none text-white focus:border-[#3b82f6] outline-none"
+                className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-3 h-28 resize-none text-white focus:border-[#3b82f6] outline-none"
                 required
               />
             </div>

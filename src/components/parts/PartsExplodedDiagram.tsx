@@ -935,7 +935,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
                   ? 'bg-emerald-500 text-white scale-115 ring-2 ring-emerald-400'
                   : isHovered
                   ? 'bg-blue-600 text-white scale-125 ring-3 ring-blue-400/60 z-20'
-                  : 'bg-neutral-900 border-2 border-white text-white hover:bg-amber-400 hover:text-black hover:border-amber-500 hover:scale-115'
+                  : 'bg-white dark:bg-neutral-900 border-2 border-white text-white hover:bg-amber-400 hover:text-black hover:border-amber-500 hover:scale-115'
                 }
               `}>
                 <span>{hotspot.ref}</span>
@@ -964,18 +964,18 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
             {shouldShowPopover && (
               <div 
                 onClick={(e) => e.stopPropagation()}
-                className="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 bg-neutral-950/95 border border-neutral-700 text-white text-xs rounded-2xl p-4 whitespace-nowrap shadow-2xl z-40 pointer-events-auto backdrop-blur-md animate-in fade-in zoom-in-95 duration-150 min-w-[280px]"
+                className="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 bg-neutral-50 dark:bg-neutral-950/95 border border-neutral-700 text-white text-xs rounded-2xl p-4 whitespace-nowrap shadow-2xl z-40 pointer-events-auto backdrop-blur-md animate-in fade-in zoom-in-95 duration-150 min-w-[280px]"
               >
                 {/* Popover Header */}
-                <div className="flex items-center justify-between gap-2 border-b border-neutral-800 pb-2 mb-2">
+                <div className="flex items-center justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-2 mb-2">
                   <div className="flex items-center gap-1.5 font-bold font-mono text-amber-400">
                     <span className="bg-amber-400 text-black px-1.5 py-0.5 rounded text-[11px] font-black">
                       Ref #{matchingPart.ref ?? '—'}
                     </span>
-                    <span className="text-neutral-400">•</span>
+                    <span className="text-neutral-500 dark:text-neutral-400">•</span>
                     <span className="tracking-wide text-white">{matchingPart.partNumber || (matchingPart as any).code || 'N/A'}</span>
                   </div>
-                  <span className="text-[10px] text-neutral-400 font-mono bg-neutral-900 px-2 py-0.5 rounded">
+                  <span className="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono bg-white dark:bg-neutral-900 px-2 py-0.5 rounded">
                     UN: {matchingPart.unitQuantity ?? (matchingPart as any).qty ?? 1} un.
                   </span>
                 </div>
@@ -985,7 +985,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
                   {matchingPart.description || (matchingPart as any).name || 'Peça Genuína'}
                 </div>
                 {matchingPart.subDescription && (
-                  <div className="text-[11px] text-neutral-400 truncate max-w-[260px] mb-2.5">
+                  <div className="text-[11px] text-neutral-500 dark:text-neutral-400 truncate max-w-[260px] mb-2.5">
                     {matchingPart.subDescription}
                   </div>
                 )}
@@ -998,19 +998,19 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
                   const stockManaus = matchingPart.stockManaus ?? 5;
 
                   return (
-                    <div className="bg-neutral-900/90 rounded-xl p-2.5 border border-neutral-800 mb-3 space-y-1">
+                    <div className="bg-white dark:bg-neutral-900/90 rounded-xl p-2.5 border border-neutral-200 dark:border-neutral-800 mb-3 space-y-1">
                       <div className="flex items-center justify-between text-[11px] font-mono">
-                        <span className="text-neutral-400">Custo Fábrica:</span>
+                        <span className="text-neutral-500 dark:text-neutral-400">Custo Fábrica:</span>
                         <span className="text-emerald-400 font-bold text-xs">
                           R$ {factoryPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                         </span>
                       </div>
-                      <div className="flex items-center justify-between text-[10px] font-mono text-neutral-400">
+                      <div className="flex items-center justify-between text-[10px] font-mono text-neutral-500 dark:text-neutral-400">
                         <span>Preço Público (PPS):</span>
                         <span>R$ {msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
                       </div>
-                      <div className="flex items-center justify-between text-[10px] font-mono pt-1 border-t border-neutral-800 mt-1">
-                        <span className="text-neutral-400">Estoque Disponível:</span>
+                      <div className="flex items-center justify-between text-[10px] font-mono pt-1 border-t border-neutral-200 dark:border-neutral-800 mt-1">
+                        <span className="text-neutral-500 dark:text-neutral-400">Estoque Disponível:</span>
                         <span className="text-emerald-400 font-bold">
                           {stockJundiai} un. CD-SP / {stockManaus} un. Manaus
                         </span>
@@ -1026,7 +1026,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
                     className={`px-2.5 py-1.5 rounded-xl border text-xs font-bold flex items-center gap-1 transition-colors ${
                       isMarked 
                         ? 'bg-emerald-500/20 border-emerald-500 text-emerald-400'
-                        : 'bg-neutral-900 border-neutral-700 text-neutral-300 hover:bg-neutral-800'
+                        : 'bg-white dark:bg-neutral-900 border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800'
                     }`}
                     title="Marcar para compra em lote"
                   >
@@ -1274,7 +1274,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
               <select
                 value={selectedHotspotIdForCalibration || (activeHotspots[0]?.id || '')}
                 onChange={(e) => setSelectedHotspotIdForCalibration(e.target.value)}
-                className="bg-neutral-900 text-amber-400 font-bold font-mono px-2.5 py-1 rounded-lg border border-neutral-700 outline-none cursor-pointer text-xs"
+                className="bg-white dark:bg-neutral-900 text-amber-400 font-bold font-mono px-2.5 py-1 rounded-lg border border-neutral-700 outline-none cursor-pointer text-xs"
               >
                 {activeHotspots.map((h, i) => {
                   const hKey = h.id || `hs-${h.ref}-${i}`;
@@ -1293,7 +1293,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
 
               <button
                 onClick={handleAddDuplicatePin}
-                className="px-2.5 py-1 bg-neutral-900 hover:bg-neutral-800 text-amber-400 font-bold rounded-lg transition border border-neutral-700 text-xs flex items-center gap-1"
+                className="px-2.5 py-1 bg-white dark:bg-neutral-900 hover:bg-neutral-800 text-amber-400 font-bold rounded-lg transition border border-neutral-700 text-xs flex items-center gap-1"
                 title="Adicionar outro pino para o mesmo número nesta figura"
               >
                 <Pin className="w-3.5 h-3.5" />
@@ -1331,7 +1331,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
 
               <button
                 onClick={handleCopyHotspotsJSON}
-                className="px-3 py-1 bg-neutral-900 hover:bg-neutral-800 text-white font-bold rounded-lg transition shadow flex items-center gap-1"
+                className="px-3 py-1 bg-white dark:bg-neutral-900 hover:bg-neutral-800 text-white font-bold rounded-lg transition shadow flex items-center gap-1"
               >
                 <Eye className="w-3.5 h-3.5 text-amber-400" />
                 {copiedFeedback ? 'Copiado!' : 'Copiar JSON'}
@@ -1435,7 +1435,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
         <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col p-3 sm:p-5 animate-in fade-in duration-200">
           
           {/* Modal Header */}
-          <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
+          <div className="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-neutral-800">
             <div>
               <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
                 EPC SUZUKI • {modelName}
@@ -1447,7 +1447,7 @@ export const PartsExplodedDiagram: React.FC<PartsExplodedDiagramProps> = ({
 
             <div className="flex items-center gap-2">
               {/* Zoom Buttons in Modal */}
-              <div className="flex items-center bg-neutral-900 p-0.5 rounded-xl border border-neutral-800 text-neutral-300 text-xs font-mono">
+              <div className="flex items-center bg-white dark:bg-neutral-900 p-0.5 rounded-xl border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-mono">
                 <button
                   onClick={() => handleSetZoom(1.0)}
                   className={`px-3 py-1.5 rounded-lg transition-colors font-bold ${zoom === 1.0 ? 'bg-amber-400 text-black' : 'hover:bg-neutral-800'}`}

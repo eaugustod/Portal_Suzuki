@@ -147,7 +147,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
       case 'finalizado':
         return <span className="bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Finalizado</span>;
       default:
-        return <span className="bg-neutral-800 text-neutral-400 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">{status}</span>;
+        return <span className="bg-neutral-800 text-neutral-500 dark:text-neutral-400 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">{status}</span>;
     }
   };
 
@@ -164,7 +164,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
           <h2 className="text-[26px] md:text-[30px] font-bold text-[#fafafa] tracking-tight">
             Ordem de Serviço (O.S.)
           </h2>
-          <p className="text-[13px] text-neutral-400">
+          <p className="text-[13px] text-neutral-500 dark:text-neutral-400">
             Revisões periódicas de garantia, manutenções corretivas e aplicação de peças originais.
           </p>
         </div>
@@ -188,7 +188,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-[#60a5fa] font-tabular">{inExecutionCount}</span>
-            <span className="text-[11px] text-neutral-400">motos</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">motos</span>
           </div>
         </div>
 
@@ -198,7 +198,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-amber-400 font-tabular">{waitingPartsCount}</span>
-            <span className="text-[11px] text-neutral-400">ordens</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">ordens</span>
           </div>
         </div>
 
@@ -208,7 +208,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-emerald-400 font-tabular">{finishedCount}</span>
-            <span className="text-[11px] text-neutral-400">finalizadas</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">finalizadas</span>
           </div>
         </div>
 
@@ -232,7 +232,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
               className={`px-3 py-1.5 rounded-xl text-[12px] font-bold tracking-wide transition-all ${
                 selectedStatusFilter === status
                   ? 'bg-[#3b82f6] text-white shadow-md shadow-blue-500/20'
-                  : 'bg-neutral-900 text-neutral-400 hover:text-white border border-[#27272a]'
+                  : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-[#27272a]'
               }`}
             >
               {status === 'todos' ? 'Todas as Ordens' : status.replace('_', ' ').toUpperCase()}
@@ -240,7 +240,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
           ))}
         </div>
 
-        <div className="text-[12px] text-neutral-400 font-tabular px-2">
+        <div className="text-[12px] text-neutral-500 dark:text-neutral-400 font-tabular px-2">
           {filteredOrders.length} ordens de serviço listadas
         </div>
       </div>
@@ -250,7 +250,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-[13px]">
             <thead>
-              <tr className="bg-neutral-900/80 border-b border-[#27272a] text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
+              <tr className="bg-white dark:bg-neutral-900/80 border-b border-[#27272a] text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
                 <th className="py-3 px-4">O.S. / Data</th>
                 <th className="py-3 px-4">Cliente / Contato</th>
                 <th className="py-3 px-4">Motocicleta / Placa</th>
@@ -271,24 +271,24 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
                 filteredOrders.map((order) => (
                   <tr 
                     key={order.id}
-                    className="hover:bg-neutral-900/50 transition-colors"
+                    className="hover:bg-white dark:bg-neutral-900/50 transition-colors"
                   >
                     <td className="py-3.5 px-4 font-medium text-[#fafafa]">
                       <span className="font-bold text-[#60a5fa] font-mono">{order.osNumber}</span>
                       <span className="block text-[11px] text-neutral-500">{order.createdAt}</span>
                     </td>
 
-                    <td className="py-3.5 px-4 text-neutral-300">
+                    <td className="py-3.5 px-4 text-neutral-700 dark:text-neutral-300">
                       <p className="font-bold text-[#fafafa]">{order.customerName}</p>
-                      <span className="text-[11px] text-neutral-400">{order.customerPhone}</span>
+                      <span className="text-[11px] text-neutral-500 dark:text-neutral-400">{order.customerPhone}</span>
                     </td>
 
-                    <td className="py-3.5 px-4 text-neutral-300">
+                    <td className="py-3.5 px-4 text-neutral-700 dark:text-neutral-300">
                       <p className="font-bold text-[#fafafa]">{order.vehicleModel}</p>
-                      <span className="text-[11px] text-neutral-400 font-mono">{order.vehiclePlate}</span>
+                      <span className="text-[11px] text-neutral-500 dark:text-neutral-400 font-mono">{order.vehiclePlate}</span>
                     </td>
 
-                    <td className="py-3.5 px-4 text-neutral-400">
+                    <td className="py-3.5 px-4 text-neutral-500 dark:text-neutral-400">
                       <p className="font-bold text-neutral-200">{order.vehicleKm?.toLocaleString('pt-BR')} km</p>
                       <span className="text-[11px] text-neutral-500">{order.fuelLevel}</span>
                     </td>
@@ -306,7 +306,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
                         <button
                           onClick={() => setSelectedOrder(order)}
                           title="Detalhes da O.S."
-                          className="p-1.5 hover:bg-neutral-800 text-neutral-400 hover:text-white rounded-lg transition-colors"
+                          className="p-1.5 hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-white rounded-lg transition-colors"
                         >
                           <FileText className="w-4 h-4" />
                         </button>
@@ -316,14 +316,14 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
                             setIsPrintModalOpen(true);
                           }}
                           title="Imprimir Comprovante"
-                          className="p-1.5 hover:bg-neutral-800 text-neutral-400 hover:text-[#60a5fa] rounded-lg transition-colors"
+                          className="p-1.5 hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-[#60a5fa] rounded-lg transition-colors"
                         >
                           <Printer className="w-4 h-4" />
                         </button>
                         <button
                           onClick={() => onDeleteServiceOrder(order.id)}
                           title="Excluir O.S."
-                          className="p-1.5 hover:bg-neutral-800 text-neutral-400 hover:text-rose-400 rounded-lg transition-colors"
+                          className="p-1.5 hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-rose-400 rounded-lg transition-colors"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -349,11 +349,11 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
                 <h3 className="text-[22px] font-bold text-[#fafafa]">
                   Ordem de Serviço #{selectedOrder.osNumber}
                 </h3>
-                <p className="text-[12px] text-neutral-400">Abertura: {selectedOrder.createdAt}</p>
+                <p className="text-[12px] text-neutral-500 dark:text-neutral-400">Abertura: {selectedOrder.createdAt}</p>
               </div>
               <button 
                 onClick={() => setSelectedOrder(null)}
-                className="text-neutral-400 hover:text-white font-bold"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold"
               >
                 ✕
               </button>
@@ -361,32 +361,32 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
 
             {/* Vehicle & Customer Info Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-4 text-[13px]">
-              <div className="bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+              <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
                 <span className="text-[10px] uppercase font-bold text-neutral-500 block mb-1">Dados do Cliente</span>
                 <p className="font-bold text-white">{selectedOrder.customerName}</p>
-                <p className="text-neutral-400 text-[12px] mt-0.5">{selectedOrder.customerPhone}</p>
+                <p className="text-neutral-500 dark:text-neutral-400 text-[12px] mt-0.5">{selectedOrder.customerPhone}</p>
               </div>
 
-              <div className="bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+              <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
                 <span className="text-[10px] uppercase font-bold text-neutral-500 block mb-1">Dados da Motocicleta</span>
                 <p className="font-bold text-white">{selectedOrder.vehicleModel} • {selectedOrder.vehiclePlate}</p>
-                <p className="text-neutral-400 text-[12px] mt-0.5">{selectedOrder.vehicleKm?.toLocaleString('pt-BR')} km • {selectedOrder.fuelLevel}</p>
+                <p className="text-neutral-500 dark:text-neutral-400 text-[12px] mt-0.5">{selectedOrder.vehicleKm?.toLocaleString('pt-BR')} km • {selectedOrder.fuelLevel}</p>
               </div>
             </div>
 
             {/* Diagnosis and Symptoms */}
             <div className="space-y-3 pb-4 text-[13px]">
               {selectedOrder.reportedSymptoms && (
-                <div className="bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block mb-1">Sintomas / Relato do Cliente</span>
-                  <p className="text-neutral-300 text-[12px]">{selectedOrder.reportedSymptoms}</p>
+                  <p className="text-neutral-700 dark:text-neutral-300 text-[12px]">{selectedOrder.reportedSymptoms}</p>
                 </div>
               )}
 
               {selectedOrder.technicalDiagnosis && (
-                <div className="bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block mb-1">Diagnóstico Técnico da Oficina</span>
-                  <p className="text-neutral-300 text-[12px]">{selectedOrder.technicalDiagnosis}</p>
+                  <p className="text-neutral-700 dark:text-neutral-300 text-[12px]">{selectedOrder.technicalDiagnosis}</p>
                 </div>
               )}
             </div>
@@ -394,7 +394,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
             {/* Items and Parts Table */}
             {selectedOrder.items && selectedOrder.items.length > 0 && (
               <div className="border border-[#27272a] rounded-2xl overflow-hidden mb-4">
-                <div className="bg-neutral-900 px-4 py-2 text-[10px] font-bold text-neutral-400 uppercase tracking-wider flex justify-between">
+                <div className="bg-white dark:bg-neutral-900 px-4 py-2 text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex justify-between">
                   <span>Item / Serviço / Peça Original</span>
                   <div className="flex gap-8">
                     <span>Qtd</span>
@@ -402,17 +402,17 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
                   </div>
                 </div>
 
-                <div className="divide-y divide-[#27272a] text-[12px] font-tabular bg-neutral-900/40">
+                <div className="divide-y divide-[#27272a] text-[12px] font-tabular bg-white dark:bg-neutral-900/40">
                   {selectedOrder.items.map((item, index) => (
                     <div key={index} className="p-3 flex justify-between items-center">
                       <div>
                         <span className="font-bold text-white">{item.description}</span>
-                        <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400">
+                        <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-500 dark:text-neutral-400">
                           {item.type}
                         </span>
                       </div>
                       <div className="flex items-center gap-8">
-                        <span className="text-neutral-300">{item.quantity}</span>
+                        <span className="text-neutral-700 dark:text-neutral-300">{item.quantity}</span>
                         <span className="w-24 text-right font-bold text-neutral-200">
                           R$ {item.total.toLocaleString('pt-BR')}
                         </span>
@@ -424,7 +424,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
             )}
 
             {/* Total and Actions */}
-            <div className="bg-neutral-900/90 border border-[#27272a] rounded-2xl p-4 flex justify-between items-center">
+            <div className="bg-white dark:bg-neutral-900/90 border border-[#27272a] rounded-2xl p-4 flex justify-between items-center">
               <div>
                 <span className="text-[10px] uppercase font-bold text-neutral-500 block">Status da O.S.</span>
                 <div className="mt-1">{getStatusBadge(selectedOrder.status)}</div>
@@ -471,7 +471,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
               </div>
               <button 
                 onClick={() => setIsAddModalOpen(false)}
-                className="text-neutral-400 hover:text-white font-bold"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold"
               >
                 ✕
               </button>
@@ -480,24 +480,24 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
             <form onSubmit={handleCreateOrder} className="space-y-4 py-4 text-[13px]">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Nome do Cliente *</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Nome do Cliente *</label>
                   <input 
                     type="text" 
                     value={customerName}
                     onChange={(e) => setCustomerName(e.target.value)}
                     placeholder="Ex: João da Silva"
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Telefone de Contato *</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Telefone de Contato *</label>
                   <input 
                     type="text" 
                     value={customerPhone}
                     onChange={(e) => setCustomerPhone(e.target.value)}
                     placeholder="(41) 99876-5432"
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                     required
                   />
                 </div>
@@ -505,48 +505,48 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Modelo da Moto</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Modelo da Moto</label>
                   <input 
                     type="text" 
                     value={vehicleModel}
                     onChange={(e) => setVehicleModel(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Placa do Veículo</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Placa do Veículo</label>
                   <input 
                     type="text" 
                     value={vehiclePlate}
                     onChange={(e) => setVehiclePlate(e.target.value)}
                     placeholder="ABC-1234"
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white uppercase focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white uppercase focus:border-[#3b82f6] outline-none"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Km Atual</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Km Atual</label>
                   <input 
                     type="number" 
                     value={vehicleKm}
                     onChange={(e) => setVehicleKm(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Sintomas / Queixa do Cliente</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Sintomas / Queixa do Cliente</label>
                 <textarea 
                   value={symptoms}
                   onChange={(e) => setSymptoms(e.target.value)}
                   placeholder="Descreva o barulho, revisão de garantia ou solicitação..."
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-16 resize-none focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-16 resize-none focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
               {/* Items / Parts Section in Form */}
-              <div className="border border-[#27272a] rounded-2xl p-3 bg-neutral-900/40">
-                <span className="text-[11px] font-bold text-neutral-300 block mb-2">Peças e Mão de Obra</span>
+              <div className="border border-[#27272a] rounded-2xl p-3 bg-white dark:bg-neutral-900/40">
+                <span className="text-[11px] font-bold text-neutral-700 dark:text-neutral-300 block mb-2">Peças e Mão de Obra</span>
                 
                 <div className="flex flex-wrap gap-2 mb-3">
                   <select 
@@ -602,7 +602,7 @@ export const ServiceOrderView: React.FC<ServiceOrderViewProps> = ({
                   <button
                     type="button"
                     onClick={() => setIsAddModalOpen(false)}
-                    className="px-4 py-2 rounded-xl text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
+                    className="px-4 py-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
                   >
                     Cancelar
                   </button>

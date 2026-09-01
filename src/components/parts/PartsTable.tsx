@@ -73,7 +73,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
             <span className="text-xs uppercase font-bold tracking-widest text-amber-400 font-mono">
               Ilustração {diagram.illustrationCode}
             </span>
-            <span className="text-xs text-neutral-400 font-bold">
+            <span className="text-xs text-neutral-500 dark:text-neutral-400 font-bold">
               • {diagram.parts.length} Peças Genuínas
             </span>
           </div>
@@ -84,18 +84,18 @@ export const PartsTable: React.FC<PartsTableProps> = ({
 
         {/* Quick Filter Search Input */}
         <div className="relative min-w-[200px] sm:min-w-[240px]">
-          <Search className="w-3.5 h-3.5 absolute left-3 top-2.5 text-neutral-400" />
+          <Search className="w-3.5 h-3.5 absolute left-3 top-2.5 text-neutral-500 dark:text-neutral-400" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Buscar por REF, Part Number ou nome..."
-            className="w-full bg-neutral-950/80 border border-neutral-800 rounded-xl pl-9 pr-4 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400 transition-colors"
+            className="w-full bg-neutral-50 dark:bg-neutral-950/80 border border-neutral-200 dark:border-neutral-800 rounded-xl pl-9 pr-4 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400 transition-colors"
           />
           {searchQuery && (
             <button 
               onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-2 text-neutral-400 hover:text-white text-xs"
+              className="absolute right-2.5 top-2 text-neutral-500 dark:text-neutral-400 hover:text-white text-xs"
             >
               ✕
             </button>
@@ -106,7 +106,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
       {/* Parts List Table */}
       <div className="flex-1 overflow-x-auto overflow-y-auto max-h-[520px]">
         <table className="w-full text-left text-xs font-tabular border-collapse">
-          <thead className="sticky top-0 z-10 bg-neutral-950/95 backdrop-blur-sm border-b border-neutral-800 text-[10px] uppercase font-bold text-neutral-400 tracking-wider">
+          <thead className="sticky top-0 z-10 bg-neutral-50 dark:bg-neutral-950/95 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-800 text-[10px] uppercase font-bold text-neutral-500 dark:text-neutral-400 tracking-wider">
             <tr>
               <th className="p-3 pl-4 text-center w-12">Ref</th>
               <th className="p-3 min-w-[140px]">Número da Peça</th>
@@ -120,7 +120,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
               <th className="p-3 pr-4 text-right min-w-[140px]">Comprar</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-neutral-800/60">
+          <tbody className="divide-y divide-neutral-200 dark:divide-neutral-800/60">
             {filteredParts.length === 0 ? (
               <tr>
                 <td colSpan={10} className="text-center py-10 text-neutral-500 text-xs">
@@ -171,7 +171,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                         ? 'bg-amber-500/15 border-l-4 border-amber-400'
                         : isHovered
                         ? 'bg-blue-500/10'
-                        : 'hover:bg-neutral-900/60'
+                        : 'hover:bg-white dark:bg-neutral-900/60'
                       }
                     `}
                   >
@@ -181,7 +181,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                         inline-flex items-center justify-center w-6 h-6 rounded-full font-mono font-bold text-xs
                         ${isSelected
                           ? 'bg-amber-400 text-black shadow-md shadow-amber-500/30'
-                          : 'bg-neutral-800 text-neutral-300 group-hover:bg-neutral-700'
+                          : 'bg-neutral-800 text-neutral-700 dark:text-neutral-300 group-hover:bg-neutral-700'
                         }
                       `}>
                         {part.ref ?? '—'}
@@ -206,24 +206,24 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                         {description}
                       </div>
                       {part.subDescription && (
-                        <span className="text-[10px] text-neutral-400 block line-clamp-1">
+                        <span className="text-[10px] text-neutral-500 dark:text-neutral-400 block line-clamp-1">
                           {part.subDescription}
                         </span>
                       )}
                     </td>
 
                     {/* Tempo de Montagem */}
-                    <td className="p-3 text-center hidden md:table-cell text-neutral-400 font-mono text-[11px]">
+                    <td className="p-3 text-center hidden md:table-cell text-neutral-500 dark:text-neutral-400 font-mono text-[11px]">
                       {part.assemblyTime || '—'}
                     </td>
 
                     {/* Observação / Medida */}
-                    <td className="p-3 hidden lg:table-cell text-neutral-400 text-[11px] font-mono">
+                    <td className="p-3 hidden lg:table-cell text-neutral-500 dark:text-neutral-400 text-[11px] font-mono">
                       {part.observation || '—'}
                     </td>
 
                     {/* UN (Qtd no conjunto) */}
-                    <td className="p-3 text-center text-neutral-300 font-bold">
+                    <td className="p-3 text-center text-neutral-700 dark:text-neutral-300 font-bold">
                       {unitQuantity}
                     </td>
 
@@ -239,7 +239,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                         }`}>
                           {stockJundiai > 0 ? `${stockJundiai} un. CD-SP` : 'Sob Pedido'}
                         </span>
-                        <span className="text-[9px] text-neutral-400 font-mono">
+                        <span className="text-[9px] text-neutral-500 dark:text-neutral-400 font-mono">
                           +{stockManaus} Manaus
                         </span>
                       </div>
@@ -251,7 +251,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                     </td>
 
                     {/* PPS Varejo */}
-                    <td className="p-3 text-right hidden sm:table-cell font-mono text-neutral-400 text-[11px]">
+                    <td className="p-3 text-right hidden sm:table-cell font-mono text-neutral-500 dark:text-neutral-400 text-[11px]">
                       R$ {msrpPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                     </td>
 
@@ -259,10 +259,10 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                     <td className="p-3 pr-4 text-right">
                       <div className="flex items-center justify-end gap-1.5" onClick={(e) => e.stopPropagation()}>
                         {/* Qtd Controls */}
-                        <div className="flex items-center bg-neutral-900 border border-neutral-700 rounded-lg p-0.5">
+                        <div className="flex items-center bg-white dark:bg-neutral-900 border border-neutral-700 rounded-lg p-0.5">
                           <button
                             onClick={() => handleQuantityChange(partId, -1)}
-                            className="w-5 h-5 flex items-center justify-center text-neutral-400 hover:text-white rounded hover:bg-neutral-800"
+                            className="w-5 h-5 flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-white rounded hover:bg-neutral-800"
                           >
                             <Minus className="w-3 h-3" />
                           </button>
@@ -271,7 +271,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                           </span>
                           <button
                             onClick={() => handleQuantityChange(partId, 1)}
-                            className="w-5 h-5 flex items-center justify-center text-neutral-400 hover:text-white rounded hover:bg-neutral-800"
+                            className="w-5 h-5 flex items-center justify-center text-neutral-500 dark:text-neutral-400 hover:text-white rounded hover:bg-neutral-800"
                           >
                             <Plus className="w-3 h-3" />
                           </button>

@@ -18,7 +18,9 @@ import {
   Sparkles,
   Zap,
   TrendingUp,
-  Building2
+  Building2,
+  LayoutGrid,
+  List
 } from 'lucide-react';
 
 interface InventoryViewProps {
@@ -42,6 +44,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
   const [selectedStatus, setSelectedStatus] = useState<string>('todos');
   const [selectedColor, setSelectedColor] = useState<string>('todos');
   const [selectedModelFilter, setSelectedModelFilter] = useState<string>('todos');
+  const [viewMode, setViewMode] = useState<'detailed' | 'matrix'>('detailed');
   
   // Modals
   const [specModalItem, setSpecModalItem] = useState<InventoryItem | null>(null);
@@ -145,15 +148,41 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           <h2 className="text-[26px] md:text-[30px] font-bold text-[#fafafa] tracking-tight">
             Gestão de Estoque Detalhada
           </h2>
-          <p className="text-[13px] text-neutral-400">
+          <p className="text-[13px] text-neutral-500 dark:text-neutral-400">
             Controle de chassis, preços de aquisição, margem líquida e status operacional.
           </p>
         </div>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-2.5">
+          {/* Seletor de Modo de Visualização (Item b) */}
+          <div className="flex items-center bg-[#18181b] border border-[#27272a] p-1 rounded-xl shadow-inner">
+            <button
+              onClick={() => setViewMode('detailed')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                viewMode === 'detailed'
+                  ? 'bg-[#3b82f6] text-white shadow'
+                  : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800'
+              }`}
+            >
+              <List className="w-3.5 h-3.5" />
+              <span>Lista Detalhada</span>
+            </button>
+            <button
+              onClick={() => setViewMode('matrix')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                viewMode === 'matrix'
+                  ? 'bg-[#3b82f6] text-white shadow'
+                  : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800'
+              }`}
+            >
+              <LayoutGrid className="w-3.5 h-3.5" />
+              <span>Matriz (Rede vs Modelos)</span>
+            </button>
+          </div>
+
           <button
             onClick={exportCSV}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-[#27272a] bg-[#18181b] hover:bg-neutral-800 text-neutral-300 hover:text-white font-bold text-[12px] transition-colors"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-[#27272a] bg-[#18181b] hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:text-white font-bold text-[12px] transition-colors"
           >
             <FileSpreadsheet className="w-4 h-4 text-emerald-400" />
             <span>Exportar CSV</span>
@@ -177,7 +206,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-[#fafafa] font-tabular">{inventory.length}</span>
-            <span className="text-[11px] text-neutral-400">veículos</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">veículos</span>
           </div>
         </div>
 
@@ -187,7 +216,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-emerald-400 font-tabular">{availableCount}</span>
-            <span className="text-[11px] text-neutral-400">unidades</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">unidades</span>
           </div>
         </div>
 
@@ -197,7 +226,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-rose-400 font-tabular">{reservedCount}</span>
-            <span className="text-[11px] text-neutral-400">unidades</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">unidades</span>
           </div>
         </div>
 
@@ -214,7 +243,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
       {/* Filter Bento Bar */}
       <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-3 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap items-center gap-2.5">
-          <div className="flex items-center gap-1.5 text-[12px] font-bold text-neutral-400 pl-2">
+          <div className="flex items-center gap-1.5 text-[12px] font-bold text-neutral-500 dark:text-neutral-400 pl-2">
             <Filter className="w-3.5 h-3.5 text-[#3b82f6]" />
             <span>Filtros:</span>
           </div>
@@ -236,7 +265,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           <select 
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="bg-neutral-900 text-[12px] text-neutral-200 font-medium border border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-[#3b82f6]"
+            className="bg-white dark:bg-neutral-900 text-[12px] text-neutral-200 font-medium border border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-[#3b82f6]"
           >
             <option value="todos">Todos os Status</option>
             <option value="disponivel">Disponível</option>
@@ -248,7 +277,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           <select 
             value={selectedModelFilter}
             onChange={(e) => setSelectedModelFilter(e.target.value)}
-            className="bg-neutral-900 text-[12px] text-neutral-200 font-medium border border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-[#3b82f6]"
+            className="bg-white dark:bg-neutral-900 text-[12px] text-neutral-200 font-medium border border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-[#3b82f6]"
           >
             <option value="todos">Todos os Modelos</option>
             {uniqueModels.map(m => (
@@ -260,7 +289,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           <select 
             value={selectedColor}
             onChange={(e) => setSelectedColor(e.target.value)}
-            className="bg-neutral-900 text-[12px] text-neutral-200 font-medium border border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-[#3b82f6]"
+            className="bg-white dark:bg-neutral-900 text-[12px] text-neutral-200 font-medium border border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-[#3b82f6]"
           >
             <option value="todos">Todas as Cores</option>
             {uniqueColors.map(c => (
@@ -269,131 +298,289 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           </select>
         </div>
 
-        <div className="text-[12px] text-neutral-400 font-tabular px-2">
+        <div className="text-[12px] text-neutral-500 dark:text-neutral-400 font-tabular px-2">
           Mostrando <strong className="text-white">{filteredInventory.length}</strong> de {inventory.length} motocicletas
         </div>
       </div>
 
-      {/* Inventory Table Container (Bento rounded-3xl) */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-3xl overflow-hidden shadow-md">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse text-[13px]">
-            <thead>
-              <tr className="bg-neutral-900/80 border-b border-[#27272a] text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
-                <th className="py-3 px-4">Motocicleta / Modelo</th>
-                <th className="py-3 px-4">Chassi (VIN)</th>
-                <th className="py-3 px-4">Cor</th>
-                <th className="py-3 px-4 text-right">Custo Aquisição</th>
-                <th className="py-3 px-4 text-right">Preço de Venda</th>
-                <th className="py-3 px-4 text-center">Status</th>
-                <th className="py-3 px-4 text-center">Ações</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-[#27272a] font-tabular">
-              {filteredInventory.length === 0 ? (
-                <tr>
-                  <td colSpan={7} className="py-12 text-center text-neutral-500">
-                    Nenhum veículo encontrado com os filtros selecionados.
-                  </td>
-                </tr>
-              ) : (
-                filteredInventory.map((item) => (
-                  <tr 
-                    key={item.id} 
-                    className="hover:bg-neutral-900/50 transition-colors"
-                  >
-                    {/* Model & Year */}
-                    <td className="py-3.5 px-4 font-medium text-[#fafafa]">
-                      <div className="flex items-center gap-2">
-                        <Bike className="w-4 h-4 text-[#3b82f6] shrink-0" />
-                        <div>
-                          <div className="flex items-center gap-1.5">
-                            <p className="font-bold leading-tight">{item.model}</p>
-                            {currentScope === 'jtoledo' && item.dealershipId && (
-                              <span className={`text-[9px] px-1.5 py-0.2 rounded font-bold uppercase ${
-                                item.dealershipId === 'motosul' ? 'bg-blue-950 text-blue-300 border border-blue-800/40' : 'bg-amber-950 text-amber-300 border border-amber-800/40'
-                              }`}>
-                                {item.dealershipId === 'motosul' ? 'MotoSul RS' : 'Nova Motor SP'}
-                              </span>
-                            )}
-                          </div>
-                          <span className="text-[11px] text-neutral-500">{item.year}</span>
+      {/* Inventory Container: Matriz ou Lista Detalhada (Item a) */}
+      {viewMode === 'matrix' ? (
+        <div className="bg-[#111827] border border-neutral-200 dark:border-neutral-800 rounded-3xl p-6 shadow-2xl space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-neutral-200 dark:border-neutral-800/80 pb-4">
+            <div>
+              <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                <LayoutGrid className="w-5 h-5 text-blue-400" />
+                <span>
+                  {currentScope === 'jtoledo'
+                    ? 'Matriz de Estoque da Rede (Rede vs Modelos)'
+                    : 'Matriz de Estoque da Loja (Cores vs Modelos)'}
+                </span>
+              </h3>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+                {currentScope === 'jtoledo'
+                  ? 'Consolidado do estoque por concessionária da rede e modelos (Risco de Ruptura em Vermelho).'
+                  : 'Disponibilidade detalhada de motocicletas por variação de cor e modelos na concessionária.'}
+              </p>
+            </div>
+
+            {/* Legenda */}
+            <div className="flex items-center gap-4 text-xs font-semibold">
+              <div className="flex items-center gap-1.5">
+                <span className="text-neutral-500 dark:text-neutral-400">Normal</span>
+                <div className="w-4 h-4 rounded bg-[#1e293b] border border-neutral-700"></div>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="text-amber-300">Pouco Estoque (1-4)</span>
+                <div className="w-4 h-4 rounded bg-[#9a6700] border border-amber-500"></div>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="text-rose-400">Crítico (0)</span>
+                <div className="w-4 h-4 rounded bg-[#dc2626] border border-rose-500"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tabela de Matriz */}
+          <div className="overflow-x-auto">
+            {currentScope === 'jtoledo' ? (
+              /* Visão Montadora: Rede vs Modelos */
+              <table className="w-full text-left border-separate border-spacing-y-2.5 border-spacing-x-2.5">
+                <thead>
+                  <tr className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+                    <th className="py-3 px-4 bg-white dark:bg-neutral-900/60 rounded-xl">CONCESSIONÁRIA</th>
+                    {['V-STROM 650', 'HAYABUSA', 'DR-160', 'MASTER RIDE', 'ZONTES T310', 'BURGMAN'].map(mName => (
+                      <th key={mName} className="py-3 px-4 text-center bg-white dark:bg-neutral-900/60 rounded-xl min-w-[130px]">
+                        {mName}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { id: 'novamotor', name: 'Soma Motos SP' },
+                    { id: 'rotabsb', name: 'Rota BSB' },
+                    { id: 'motosul', name: 'Motos Sul RS' },
+                    { id: 'nortemotos', name: 'Norte Motos AM' }
+                  ].map(dealer => (
+                    <tr key={dealer.id} className="hover:bg-white dark:bg-neutral-900/40 transition-colors">
+                      <td className="py-3.5 px-4 font-bold text-white bg-white dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
+                        {dealer.name}
+                      </td>
+                      {['V-STROM 650', 'HAYABUSA', 'DR-160', 'MASTER RIDE', 'ZONTES T310', 'BURGMAN'].map(mName => {
+                        const count = inventory.filter(item => {
+                          const itemDealer = item.dealershipId || 'motosul';
+                          const isDealerMatch = itemDealer === dealer.id || 
+                            (dealer.id === 'motosul' && itemDealer === 'motosul') ||
+                            (dealer.id === 'novamotor' && itemDealer === 'novamotor');
+                          
+                          const isModelMatch = item.model.toLowerCase().includes(mName.toLowerCase()) ||
+                            mName.toLowerCase().includes(item.model.toLowerCase());
+                          const isAvailable = item.status !== 'vendido';
+                          return isDealerMatch && isModelMatch && isAvailable;
+                        }).length;
+
+                        let cellBg = 'bg-[#1e293b]/60 text-neutral-700 dark:text-neutral-300 border-neutral-700/60';
+                        if (count === 0) {
+                          cellBg = 'bg-[#dc2626] text-white font-black border-rose-500 shadow-md shadow-rose-950/40';
+                        } else if (count <= 4) {
+                          cellBg = 'bg-[#9a6700] text-amber-100 font-extrabold border-amber-500/80 shadow-md shadow-amber-950/40';
+                        }
+
+                        return (
+                          <td key={mName} className="text-center p-0">
+                            <div className={`py-3.5 rounded-xl border font-mono font-bold text-base transition-transform hover:scale-105 cursor-default ${cellBg}`}>
+                              {count}
+                            </div>
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              /* Visão Concessionária: Cores vs Modelos */
+              <table className="w-full text-left border-separate border-spacing-y-2.5 border-spacing-x-2.5">
+                <thead>
+                  <tr className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+                    <th className="py-3 px-4 bg-white dark:bg-neutral-900/60 rounded-xl">COR DO VEÍCULO</th>
+                    {['V-STROM 650', 'HAYABUSA', 'DR-160', 'GSX-S1000GX', 'ZONTES T310', 'BURGMAN'].map(mName => (
+                      <th key={mName} className="py-3 px-4 text-center bg-white dark:bg-neutral-900/60 rounded-xl min-w-[130px]">
+                        {mName}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: 'Azul Metálico', hex: '#1b3b6f' },
+                    { name: 'Preto Brilhante', hex: '#18181b' },
+                    { name: 'Branco Pérola', hex: '#f8fafc' },
+                    { name: 'Vermelho Racing', hex: '#dc2626' },
+                    { name: 'Cinza Fosco', hex: '#64748b' },
+                    { name: 'Amarelo Ouro', hex: '#eab308' }
+                  ].map(colorObj => (
+                    <tr key={colorObj.name} className="hover:bg-white dark:bg-neutral-900/40 transition-colors">
+                      <td className="py-3.5 px-4 font-bold text-white bg-white dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
+                        <div className="flex items-center gap-2.5">
+                          <span 
+                            className="w-4 h-4 rounded-full border border-neutral-600 shadow-sm shrink-0" 
+                            style={{ backgroundColor: colorObj.hex }}
+                          />
+                          <span>{colorObj.name}</span>
                         </div>
-                      </div>
-                    </td>
+                      </td>
+                      {['V-STROM 650', 'HAYABUSA', 'DR-160', 'GSX-S1000GX', 'ZONTES T310', 'BURGMAN'].map(mName => {
+                        const count = inventory.filter(item => {
+                          const isDealerMatch = currentScope === 'jtoledo' || item.dealershipId === currentScope || (!item.dealershipId && currentScope === 'motosul');
+                          const isColorMatch = item.color.toLowerCase().includes(colorObj.name.toLowerCase()) || colorObj.name.toLowerCase().includes(item.color.toLowerCase());
+                          const isModelMatch = item.model.toLowerCase().includes(mName.toLowerCase()) || mName.toLowerCase().includes(item.model.toLowerCase());
+                          return isDealerMatch && isColorMatch && item.status !== 'vendido';
+                        }).length;
 
-                    {/* VIN */}
-                    <td className="py-3.5 px-4 text-neutral-300 font-mono text-[12px]">
-                      {item.vin}
-                    </td>
+                        let cellBg = 'bg-[#1e293b]/60 text-neutral-700 dark:text-neutral-300 border-neutral-700/60';
+                        if (count === 0) {
+                          cellBg = 'bg-[#dc2626] text-white font-black border-rose-500 shadow-md shadow-rose-950/40';
+                        } else if (count <= 4) {
+                          cellBg = 'bg-[#9a6700] text-amber-100 font-extrabold border-amber-500/80 shadow-md shadow-amber-950/40';
+                        }
 
-                    {/* Color Swatch */}
-                    <td className="py-3.5 px-4 text-neutral-300">
-                      <div className="flex items-center gap-2">
-                        <div 
-                          className="w-3.5 h-3.5 rounded-full border border-neutral-700 shrink-0" 
-                          style={{ backgroundColor: item.colorHex }}
-                        />
-                        <span className="text-[12px]">{item.color}</span>
-                      </div>
-                    </td>
-
-                    {/* Cost */}
-                    <td className="py-3.5 px-4 text-right text-neutral-400">
-                      R$ {item.costPrice.toLocaleString('pt-BR')}
-                    </td>
-
-                    {/* Retail Price */}
-                    <td className="py-3.5 px-4 text-right font-bold text-[#60a5fa]">
-                      R$ {item.retailPrice.toLocaleString('pt-BR')}
-                    </td>
-
-                    {/* Status Pill */}
-                    <td className="py-3.5 px-4 text-center">
-                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
-                        item.status === 'disponivel'
-                          ? 'bg-emerald-950/60 text-emerald-400 border-emerald-800/40'
-                          : item.status === 'reservado'
-                          ? 'bg-rose-950/60 text-rose-400 border-rose-800/40'
-                          : 'bg-neutral-800 text-neutral-400 border-neutral-700'
-                      }`}>
-                        {item.status}
-                      </span>
-                    </td>
-
-                    {/* Actions */}
-                    <td className="py-3.5 px-4 text-center">
-                      <div className="flex items-center justify-center gap-1.5">
-                        <button
-                          onClick={() => setSpecModalItem(item)}
-                          title="Ficha Técnica"
-                          className="p-1.5 hover:bg-neutral-800 text-neutral-400 hover:text-white rounded-lg transition-colors"
-                        >
-                          <Eye className="w-4 h-4" />
-                        </button>
-                        <button
-                          onClick={() => setEditingItem(item)}
-                          title="Editar Preço/Status"
-                          className="p-1.5 hover:bg-neutral-800 text-neutral-400 hover:text-white rounded-lg transition-colors"
-                        >
-                          <Edit3 className="w-4 h-4" />
-                        </button>
-                        <button
-                          onClick={() => onDeleteVehicle(item.id)}
-                          title="Excluir"
-                          className="p-1.5 hover:bg-neutral-800 text-neutral-400 hover:text-rose-400 rounded-lg transition-colors"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
-                      </div>
+                        return (
+                          <td key={mName} className="text-center p-0">
+                            <div className={`py-3.5 rounded-xl border font-mono font-bold text-base transition-transform hover:scale-105 cursor-default ${cellBg}`}>
+                              {count}
+                            </div>
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl overflow-hidden shadow-md">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-[13px]">
+              <thead>
+                <tr className="bg-white dark:bg-neutral-900/80 border-b border-[#27272a] text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+                  <th className="py-3 px-4">Motocicleta / Modelo</th>
+                  <th className="py-3 px-4">Chassi (VIN)</th>
+                  <th className="py-3 px-4">Cor</th>
+                  <th className="py-3 px-4 text-right">Custo Aquisição</th>
+                  <th className="py-3 px-4 text-right">Preço de Venda</th>
+                  <th className="py-3 px-4 text-center">Status</th>
+                  <th className="py-3 px-4 text-center">Ações</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#27272a] font-tabular">
+                {filteredInventory.length === 0 ? (
+                  <tr>
+                    <td colSpan={7} className="py-12 text-center text-neutral-500">
+                      Nenhum veículo encontrado com os filtros selecionados.
                     </td>
                   </tr>
-                ))
-              )}
-            </tbody>
-          </table>
+                ) : (
+                  filteredInventory.map((item) => (
+                    <tr 
+                      key={item.id} 
+                      className="hover:bg-white dark:bg-neutral-900/50 transition-colors"
+                    >
+                      {/* Model & Year */}
+                      <td className="py-3.5 px-4 font-medium text-[#fafafa]">
+                        <div className="flex items-center gap-2">
+                          <Bike className="w-4 h-4 text-[#3b82f6] shrink-0" />
+                          <div>
+                            <div className="flex items-center gap-1.5">
+                              <p className="font-bold leading-tight">{item.model}</p>
+                              {currentScope === 'jtoledo' && item.dealershipId && (
+                                <span className={`text-[9px] px-1.5 py-0.2 rounded font-bold uppercase ${
+                                  item.dealershipId === 'motosul' ? 'bg-blue-950 text-blue-300 border border-blue-800/40' : 'bg-amber-950 text-amber-300 border border-amber-800/40'
+                                }`}>
+                                  {item.dealershipId === 'motosul' ? 'MotoSul RS' : 'Nova Motor SP'}
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-[11px] text-neutral-500">{item.year}</span>
+                          </div>
+                        </div>
+                      </td>
+
+                      {/* VIN */}
+                      <td className="py-3.5 px-4 text-neutral-700 dark:text-neutral-300 font-mono text-[12px]">
+                        {item.vin}
+                      </td>
+
+                      {/* Color Swatch */}
+                      <td className="py-3.5 px-4 text-neutral-700 dark:text-neutral-300">
+                        <div className="flex items-center gap-2">
+                          <div 
+                            className="w-3.5 h-3.5 rounded-full border border-neutral-700 shrink-0" 
+                            style={{ backgroundColor: item.colorHex }}
+                          />
+                          <span className="text-[12px]">{item.color}</span>
+                        </div>
+                      </td>
+
+                      {/* Cost */}
+                      <td className="py-3.5 px-4 text-right text-neutral-500 dark:text-neutral-400">
+                        R$ {item.costPrice.toLocaleString('pt-BR')}
+                      </td>
+
+                      {/* Retail Price */}
+                      <td className="py-3.5 px-4 text-right font-bold text-[#60a5fa]">
+                        R$ {item.retailPrice.toLocaleString('pt-BR')}
+                      </td>
+
+                      {/* Status Pill */}
+                      <td className="py-3.5 px-4 text-center">
+                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
+                          item.status === 'disponivel'
+                            ? 'bg-emerald-950/60 text-emerald-400 border-emerald-800/40'
+                            : item.status === 'reservado'
+                            ? 'bg-rose-950/60 text-rose-400 border-rose-800/40'
+                            : 'bg-neutral-800 text-neutral-500 dark:text-neutral-400 border-neutral-700'
+                        }`}>
+                          {item.status}
+                        </span>
+                      </td>
+
+                      {/* Actions */}
+                      <td className="py-3.5 px-4 text-center">
+                        <div className="flex items-center justify-center gap-1.5">
+                          <button
+                            onClick={() => setSpecModalItem(item)}
+                            title="Ficha Técnica"
+                            className="p-1.5 hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-white rounded-lg transition-colors"
+                          >
+                            <Eye className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => setEditingItem(item)}
+                            title="Editar Preço/Status"
+                            className="p-1.5 hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-white rounded-lg transition-colors"
+                          >
+                            <Edit3 className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => onDeleteVehicle(item.id)}
+                            title="Excluir"
+                            className="p-1.5 hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-rose-400 rounded-lg transition-colors"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Technical Specs Modal (Bento) */}
       {specModalItem && (
@@ -406,7 +593,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
               </div>
               <button 
                 onClick={() => setSpecModalItem(null)}
-                className="text-neutral-400 hover:text-white font-bold text-lg"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold text-lg"
               >
                 ✕
               </button>
@@ -414,28 +601,28 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
             <div className="space-y-4 py-4 text-[13px]">
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">Cilindrada / Motor</span>
                   <p className="font-bold text-white mt-0.5">{specModalItem.engineDisplacement}</p>
                 </div>
-                <div className="bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">Potência Máxima</span>
                   <p className="font-bold text-white mt-0.5">{specModalItem.power}</p>
                 </div>
-                <div className="bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">VIN / Chassi</span>
-                  <p className="font-mono font-bold text-neutral-300 mt-0.5">{specModalItem.vin}</p>
+                  <p className="font-mono font-bold text-neutral-700 dark:text-neutral-300 mt-0.5">{specModalItem.vin}</p>
                 </div>
-                <div className="bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">Data de Chegada</span>
                   <p className="font-bold text-white mt-0.5">{specModalItem.arrivedDate}</p>
                 </div>
               </div>
 
               {specModalItem.notes && (
-                <div className="bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block mb-1">Observações do Pátio</span>
-                  <p className="text-neutral-300 text-[12px] leading-relaxed">{specModalItem.notes}</p>
+                  <p className="text-neutral-700 dark:text-neutral-300 text-[12px] leading-relaxed">{specModalItem.notes}</p>
                 </div>
               )}
             </div>
@@ -460,7 +647,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
               <h3 className="text-[18px] font-bold text-[#fafafa]">Editar {editingItem.model}</h3>
               <button 
                 onClick={() => setEditingItem(null)}
-                className="text-neutral-400 hover:text-white font-bold"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold"
               >
                 ✕
               </button>
@@ -468,21 +655,21 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
             <form onSubmit={handleSaveEdit} className="space-y-4 py-4 text-[13px]">
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Preço de Venda (R$)</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Preço de Venda (R$)</label>
                 <input 
                   type="number"
                   value={editingItem.retailPrice}
                   onChange={(e) => setEditingItem({ ...editingItem, retailPrice: parseFloat(e.target.value) || 0 })}
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Status Operacional</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Status Operacional</label>
                 <select 
                   value={editingItem.status}
                   onChange={(e) => setEditingItem({ ...editingItem, status: e.target.value as any })}
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                 >
                   <option value="disponivel">Disponível</option>
                   <option value="reservado">Reservado</option>
@@ -491,11 +678,11 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Observações</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Observações</label>
                 <textarea 
                   value={editingItem.notes || ''}
                   onChange={(e) => setEditingItem({ ...editingItem, notes: e.target.value })}
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-20 resize-none focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-20 resize-none focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
@@ -503,7 +690,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                 <button
                   type="button"
                   onClick={() => setEditingItem(null)}
-                  className="px-4 py-2 rounded-xl text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
+                  className="px-4 py-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
                 >
                   Cancelar
                 </button>
@@ -530,7 +717,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
               </div>
               <button 
                 onClick={() => setIsAddModalOpen(false)}
-                className="text-neutral-400 hover:text-white font-bold"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold"
               >
                 ✕
               </button>
@@ -539,54 +726,54 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
             <form onSubmit={handleCreateVehicle} className="space-y-4 py-4 text-[13px]">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Modelo *</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Modelo *</label>
                   <input 
                     type="text" 
                     value={formModel}
                     onChange={(e) => setFormModel(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Ano *</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Ano *</label>
                   <input 
                     type="number" 
                     value={formYear}
                     onChange={(e) => setFormYear(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                     required
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Número de Chassi (VIN)</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Número de Chassi (VIN)</label>
                 <input 
                   type="text" 
                   value={formVin}
                   onChange={(e) => setFormVin(e.target.value)}
                   placeholder="Ex: JS1GT79B4R3001XXX"
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white font-mono uppercase focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white font-mono uppercase focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Cor</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Cor</label>
                   <input 
                     type="text" 
                     value={formColor}
                     onChange={(e) => setFormColor(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Status</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Status</label>
                   <select 
                     value={formStatus}
                     onChange={(e) => setFormStatus(e.target.value as any)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   >
                     <option value="disponivel">Disponível</option>
                     <option value="reservado">Reservado</option>
@@ -597,32 +784,32 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Custo (R$)</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Custo (R$)</label>
                   <input 
                     type="number" 
                     value={formCost}
                     onChange={(e) => setFormCost(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Preço Venda (R$)</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Preço Venda (R$)</label>
                   <input 
                     type="number" 
                     value={formRetail}
                     onChange={(e) => setFormRetail(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Observações</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Observações</label>
                 <textarea 
                   value={formNotes}
                   onChange={(e) => setFormNotes(e.target.value)}
                   placeholder="Informações adicionais do veículo ou acessórios..."
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-16 resize-none focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-16 resize-none focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
@@ -630,7 +817,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                 <button
                   type="button"
                   onClick={() => setIsAddModalOpen(false)}
-                  className="px-4 py-2 rounded-xl text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
+                  className="px-4 py-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
                 >
                   Cancelar
                 </button>

@@ -217,7 +217,7 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
           {onBackToOrders && (
             <button
               onClick={onBackToOrders}
-              className="p-2.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white rounded-xl border border-neutral-700 transition-colors"
+              className="p-2.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 hover:text-white rounded-xl border border-neutral-700 transition-colors"
               title="Voltar para Pedidos ERP"
             >
               <ArrowLeft className="w-5 h-5" />
@@ -235,7 +235,7 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                 </span>
               </h2>
             </div>
-            <p className="text-xs text-neutral-400 mt-1">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
               Documento oficial da Montadora Grupo J. Toledo para análise de giro, compromissos trimestrais, garantias unificadas e aprovação comercial/financeira.
             </p>
           </div>
@@ -243,13 +243,13 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
 
         {/* View Mode Toggle & Action Buttons */}
         <div className="flex flex-wrap items-center gap-2.5 w-full lg:w-auto">
-          <div className="bg-neutral-900 border border-neutral-700 p-1 rounded-xl flex items-center">
+          <div className="bg-white dark:bg-neutral-900 border border-neutral-700 p-1 rounded-xl flex items-center">
             <button
               onClick={() => setViewMode('document')}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
                 viewMode === 'document' 
                   ? 'bg-blue-600 text-white shadow-md' 
-                  : 'text-neutral-400 hover:text-neutral-200'
+                  : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-200'
               }`}
             >
               <FileText className="w-3.5 h-3.5" />
@@ -260,7 +260,7 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
                 viewMode === 'interactive' 
                   ? 'bg-blue-600 text-white shadow-md' 
-                  : 'text-neutral-400 hover:text-neutral-200'
+                  : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-200'
               }`}
             >
               <SlidersHorizontal className="w-3.5 h-3.5" />
@@ -292,7 +292,7 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
       {/* Proposal Selector Strip */}
       <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0">
-          <span className="text-xs font-bold text-neutral-400 uppercase tracking-wider whitespace-nowrap mr-2">
+          <span className="text-xs font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider whitespace-nowrap mr-2">
             Propostas na Mesa:
           </span>
           {proposals.map(prop => {
@@ -304,7 +304,7 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                 className={`px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all border flex items-center gap-2 ${
                   isSelected
                     ? 'bg-blue-600 text-white border-blue-400 shadow-md shadow-blue-500/20'
-                    : 'bg-neutral-900/80 text-neutral-300 hover:bg-neutral-800 border-neutral-700'
+                    : 'bg-white dark:bg-neutral-900/80 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 border-neutral-700'
                 }`}
               >
                 <span className={`w-2 h-2 rounded-full ${
@@ -320,7 +320,7 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
         {/* Quick Status Pill */}
         {activeProposal && (
           <div className="flex items-center gap-3 w-full md:w-auto justify-end">
-            <span className="text-xs text-neutral-400">Status da Ficha:</span>
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">Status da Ficha:</span>
             <span className={`px-3 py-1 rounded-full text-xs font-bold border flex items-center gap-1.5 ${
               activeProposal.status === 'integrado_protheus'
                 ? 'bg-purple-500/10 text-purple-400 border-purple-500/30'
@@ -666,10 +666,10 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
               ))}
 
               {/* TOTAL GERAL DA PROPOSTA */}
-              <div className="bg-neutral-900 text-white p-4 rounded-xl border border-black flex items-center justify-between">
+              <div className="bg-white dark:bg-neutral-900 text-white p-4 rounded-xl border border-black flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] text-neutral-400 font-bold uppercase tracking-widest">Total Geral da Proposta</div>
-                  <div className="text-xs text-neutral-300 font-medium">({proposalTotals.totalUnits} motocicletas)</div>
+                  <div className="text-[10px] text-neutral-500 dark:text-neutral-400 font-bold uppercase tracking-widest">Total Geral da Proposta</div>
+                  <div className="text-xs text-neutral-700 dark:text-neutral-300 font-medium">({proposalTotals.totalUnits} motocicletas)</div>
                 </div>
                 <div className="text-xl font-extrabold text-emerald-400">
                   R$ {fmt(proposalTotals.totalFinalAmount)}
@@ -755,7 +755,7 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
 
               <div className="space-y-4 text-xs">
                 <div>
-                  <label className="text-neutral-400 font-semibold mb-1 block">Garantia Unificada Total (R$)</label>
+                  <label className="text-neutral-500 dark:text-neutral-400 font-semibold mb-1 block">Garantia Unificada Total (R$)</label>
                   <input
                     type="number"
                     value={activeProposal.creditAnalysis.unifiedWarrantyTotal}
@@ -769,13 +769,13 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                         }
                       });
                     }}
-                    className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3.5 py-2.5 text-white font-bold"
+                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3.5 py-2.5 text-white font-bold"
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 pt-2 border-t border-neutral-800">
+                <div className="grid grid-cols-2 gap-3 pt-2 border-t border-neutral-200 dark:border-neutral-800">
                   <div>
-                    <label className="text-neutral-400 font-semibold mb-1 block">Limite JTA Suzuki (R$)</label>
+                    <label className="text-neutral-500 dark:text-neutral-400 font-semibold mb-1 block">Limite JTA Suzuki (R$)</label>
                     <input
                       type="number"
                       value={activeProposal.creditAnalysis.jtaLimit}
@@ -789,11 +789,11 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                           }
                         });
                       }}
-                      className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                      className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
                     />
                   </div>
                   <div>
-                    <label className="text-neutral-400 font-semibold mb-1 block">Fora Limite BIN Bloq JTA (R$)</label>
+                    <label className="text-neutral-500 dark:text-neutral-400 font-semibold mb-1 block">Fora Limite BIN Bloq JTA (R$)</label>
                     <input
                       type="number"
                       value={activeProposal.creditAnalysis.jtaOutsideLimitBinBloq}
@@ -807,14 +807,14 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                           }
                         });
                       }}
-                      className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                      className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 pt-2 border-t border-neutral-800">
+                <div className="grid grid-cols-2 gap-3 pt-2 border-t border-neutral-200 dark:border-neutral-800">
                   <div>
-                    <label className="text-neutral-400 font-semibold mb-1 block">Limite JTZ Haojue/Zontes (R$)</label>
+                    <label className="text-neutral-500 dark:text-neutral-400 font-semibold mb-1 block">Limite JTZ Haojue/Zontes (R$)</label>
                     <input
                       type="number"
                       value={activeProposal.creditAnalysis.jtzLimit}
@@ -828,11 +828,11 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                           }
                         });
                       }}
-                      className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                      className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
                     />
                   </div>
                   <div>
-                    <label className="text-neutral-400 font-semibold mb-1 block">Proposta JTZ Solicitada (R$)</label>
+                    <label className="text-neutral-500 dark:text-neutral-400 font-semibold mb-1 block">Proposta JTZ Solicitada (R$)</label>
                     <input
                       type="number"
                       value={activeProposal.creditAnalysis.jtzProposalAmount}
@@ -846,14 +846,14 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                           }
                         });
                       }}
-                      className="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                      className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
                     />
                   </div>
                 </div>
 
                 {/* Real-time calculated balances */}
-                <div className="bg-neutral-900/90 border border-neutral-700 p-3.5 rounded-xl space-y-2 text-xs">
-                  <div className="flex justify-between text-neutral-300">
+                <div className="bg-white dark:bg-neutral-900/90 border border-neutral-700 p-3.5 rounded-xl space-y-2 text-xs">
+                  <div className="flex justify-between text-neutral-700 dark:text-neutral-300">
                     <span>Consumo Consolidado JTA+JTZ:</span>
                     <span className="font-bold text-white">R$ {fmt(creditCalculations.totalGeralUsando)}</span>
                   </div>
@@ -941,26 +941,26 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                   <BadgePercent className="w-5 h-5 text-amber-400" />
                   <span>Composição Tributária & Preço por Lote</span>
                 </h3>
-                <span className="text-xs text-neutral-400">
+                <span className="text-xs text-neutral-500 dark:text-neutral-400">
                   {activeProposal.pricingItems.length} lotes de modelos
                 </span>
               </div>
 
               <div className="space-y-4">
                 {activeProposal.pricingItems.map((item, idx) => (
-                  <div key={item.id || idx} className="bg-neutral-900 border border-neutral-800 rounded-xl p-4 space-y-3">
-                    <div className="flex items-center justify-between border-b border-neutral-800 pb-2">
+                  <div key={item.id || idx} className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-4 space-y-3">
+                    <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 pb-2">
                       <div className="font-bold text-sm text-white">
-                        {item.modelName} <span className="text-neutral-400 text-xs font-normal">({item.modelYear})</span>
+                        {item.modelName} <span className="text-neutral-500 dark:text-neutral-400 text-xs font-normal">({item.modelYear})</span>
                       </div>
-                      <div className="text-xs text-neutral-400">
+                      <div className="text-xs text-neutral-500 dark:text-neutral-400">
                         Cor: <span className="font-bold text-white">{item.colorCode}</span>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
                       <div>
-                        <label className="text-neutral-400 block mb-1">Quantidade</label>
+                        <label className="text-neutral-500 dark:text-neutral-400 block mb-1">Quantidade</label>
                         <input
                           type="number"
                           value={item.quantity}
@@ -980,12 +980,12 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                               pricingItems: updatedItems
                             });
                           }}
-                          className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-white font-bold"
+                          className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-white font-bold"
                         />
                       </div>
 
                       <div>
-                        <label className="text-neutral-400 block mb-1">Preço Sugerido (R$)</label>
+                        <label className="text-neutral-500 dark:text-neutral-400 block mb-1">Preço Sugerido (R$)</label>
                         <input
                           type="number"
                           value={item.suggestedMSRPUnit}
@@ -995,12 +995,12 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                             updatedItems[idx] = { ...item, suggestedMSRPUnit: val };
                             onUpdateProposal({ ...activeProposal, pricingItems: updatedItems });
                           }}
-                          className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-white font-bold"
+                          className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-white font-bold"
                         />
                       </div>
 
                       <div>
-                        <label className="text-neutral-400 block mb-1">Desconto Unit. (R$)</label>
+                        <label className="text-neutral-500 dark:text-neutral-400 block mb-1">Desconto Unit. (R$)</label>
                         <input
                           type="number"
                           value={item.discountUnit}
@@ -1019,12 +1019,12 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                             };
                             onUpdateProposal({ ...activeProposal, pricingItems: updatedItems });
                           }}
-                          className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-white font-bold"
+                          className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-white font-bold"
                         />
                       </div>
 
                       <div>
-                        <label className="text-neutral-400 block mb-1">Fundo Reserva (R$)</label>
+                        <label className="text-neutral-500 dark:text-neutral-400 block mb-1">Fundo Reserva (R$)</label>
                         <input
                           type="number"
                           value={item.reserveFundUnit}
@@ -1034,23 +1034,23 @@ export const OrderApprovalDocumentView: React.FC<OrderApprovalDocumentViewProps>
                             updatedItems[idx] = { ...item, reserveFundUnit: val };
                             onUpdateProposal({ ...activeProposal, pricingItems: updatedItems });
                           }}
-                          className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-white font-bold"
+                          className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-700 rounded-lg px-2.5 py-1.5 text-white font-bold"
                         />
                       </div>
                     </div>
 
                     {/* Tax & Final Unit values */}
-                    <div className="bg-neutral-950/70 p-3 rounded-lg border border-neutral-800 text-xs grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    <div className="bg-neutral-50 dark:bg-neutral-950/70 p-3 rounded-lg border border-neutral-200 dark:border-neutral-800 text-xs grid grid-cols-2 sm:grid-cols-3 gap-2">
                       <div>
-                        <span className="text-neutral-400 block">ICMS Unit.:</span>
+                        <span className="text-neutral-500 dark:text-neutral-400 block">ICMS Unit.:</span>
                         <span className="font-bold text-neutral-200">R$ {fmt(item.icmsUnit)}</span>
                       </div>
                       <div>
-                        <span className="text-neutral-400 block">PIS/COFINS Unit.:</span>
+                        <span className="text-neutral-500 dark:text-neutral-400 block">PIS/COFINS Unit.:</span>
                         <span className="font-bold text-neutral-200">R$ {fmt(item.pisCofinsUnit)}</span>
                       </div>
                       <div>
-                        <span className="text-neutral-400 block">Total do Lote:</span>
+                        <span className="text-neutral-500 dark:text-neutral-400 block">Total do Lote:</span>
                         <span className="font-extrabold text-blue-400 text-sm">R$ {fmt(item.totalFinalAmount)}</span>
                       </div>
                     </div>

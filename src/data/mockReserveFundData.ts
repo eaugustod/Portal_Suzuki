@@ -1,4 +1,4 @@
-import { ReserveFundTransaction, BrandType } from '../types';
+import { ReserveFundTransaction, BrandType, ReserveFundBrandConfig } from '../types';
 
 export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
   // MotoSul Moema SP (motosul)
@@ -7,6 +7,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'motosul',
     dealershipName: 'MotoSul Moema SP',
     type: 'credito',
+    origin: 'montadora_credito',
     date: '08/11/2025',
     reference: 'EMPLACAMENTO GRÁTIS',
     modelName: 'CHOPPER RH',
@@ -15,6 +16,9 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Haojue',
     financialApproved: true,
+    financialApprovedBy: 'Fabio Mesquita (Financeiro)',
+    financialApprovedAt: '08/11/2025 14:30',
+    userResponsible: 'Carlos Drummond',
     observation: 'Bônus de emplacamento concedido comercial'
   },
   {
@@ -22,6 +26,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'motosul',
     dealershipName: 'MotoSul Moema SP',
     type: 'credito',
+    origin: 'montadora_credito',
     date: '08/11/2025',
     reference: 'EMPLACAMENTO GRÁTIS',
     modelName: 'CHOPPER RH',
@@ -30,6 +35,9 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Haojue',
     financialApproved: true,
+    financialApprovedBy: 'Fabio Mesquita (Financeiro)',
+    financialApprovedAt: '08/11/2025 14:35',
+    userResponsible: 'Carlos Drummond',
     observation: 'Bônus de emplacamento concedido comercial'
   },
   {
@@ -37,6 +45,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'motosul',
     dealershipName: 'MotoSul Moema SP',
     type: 'credito',
+    origin: 'montadora_credito',
     date: '22/11/2025',
     reference: 'EMPLACAMENTO + RESTITUIÇÃO',
     modelName: 'GSX-8S',
@@ -45,6 +54,9 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Suzuki',
     financialApproved: true,
+    financialApprovedBy: 'Fabio Mesquita (Financeiro)',
+    financialApprovedAt: '22/11/2025 10:15',
+    userResponsible: 'Carlos Drummond',
     observation: 'Restituição direta comercial Suzuki'
   },
   {
@@ -52,20 +64,56 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'motosul',
     dealershipName: 'MotoSul Moema SP',
     type: 'credito',
+    origin: 'rd_station',
     date: '05/01/2026',
-    reference: 'APORTA RD STATION / MARKETING',
+    reference: 'CAMPANHA DIGITAL LEADS RD STATION',
     modelName: 'V-STROM 800DE',
     amount: 3500.00,
     status: 'aprovado',
     brand: 'Suzuki',
     financialApproved: true,
+    financialApprovedBy: 'Fabio Mesquita (Financeiro)',
+    financialApprovedAt: '05/01/2026 16:00',
+    userResponsible: 'Mariana Lima (Mkt)',
     observation: 'Inclusão Marketing RD Station aprovada pelo financeiro'
+  },
+  {
+    id: 'rf-rd-pending-01',
+    dealershipId: 'motosul',
+    dealershipName: 'MotoSul Moema SP',
+    type: 'credito',
+    origin: 'rd_station',
+    date: '28/02/2026',
+    reference: 'REEMBOLSO EVENTO REGIONAL RD STATION',
+    modelName: 'GSX-S1000GX',
+    amount: 2800.00,
+    status: 'pendente_financeiro',
+    brand: 'Suzuki',
+    financialApproved: false,
+    userResponsible: 'Mariana Lima (Marketing RD Station)',
+    observation: 'Aguardando validação de nota fiscal e aprovação do Financeiro Montadora'
+  },
+  {
+    id: 'rf-rd-pending-02',
+    dealershipId: 'novamotor',
+    dealershipName: 'Nova Motor Campinas',
+    type: 'credito',
+    origin: 'rd_station',
+    date: '01/03/2026',
+    reference: 'CO-OP MARKETING RD STATION Q1',
+    amount: 4200.00,
+    status: 'pendente_financeiro',
+    brand: 'Zontes',
+    financialApproved: false,
+    userResponsible: 'Lucas Andrade (Comercial Zontes)',
+    observation: 'Solicitação de aporte para mídia social e geração de leads RD Station'
   },
   {
     id: 'rf-d01',
     dealershipId: 'motosul',
     dealershipName: 'MotoSul Moema SP',
     type: 'debito',
+    origin: 'pedido_venda',
     date: '08/11/2025',
     reference: 'DESCONTO EM PEDIDO DE MOTO',
     orderId: 'L0017P',
@@ -73,6 +121,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Suzuki',
     financialApproved: true,
+    userResponsible: 'Roberto Motosul',
     observation: 'Utilizado no pedido L0017P'
   },
 
@@ -82,6 +131,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'novamotor',
     dealershipName: 'Nova Motor Campinas',
     type: 'credito',
+    origin: 'montadora_credito',
     date: '08/11/2025',
     reference: 'EMPLACAMENTO GRÁTIS',
     modelName: 'DK150',
@@ -90,6 +140,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Haojue',
     financialApproved: true,
+    userResponsible: 'Carlos Drummond',
     observation: 'Crédito de campanha de vendas'
   },
   {
@@ -97,6 +148,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'novamotor',
     dealershipName: 'Nova Motor Campinas',
     type: 'credito',
+    origin: 'montadora_credito',
     date: '10/02/2026',
     reference: 'CAMPANHA ZONTES SCOOTER',
     modelName: '350E',
@@ -104,6 +156,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Zontes',
     financialApproved: true,
+    userResponsible: 'Carlos Drummond',
     observation: 'Aporte de marca Zontes'
   },
   {
@@ -111,6 +164,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'novamotor',
     dealershipName: 'Nova Motor Campinas',
     type: 'debito',
+    origin: 'pedido_venda',
     date: '28/11/2025',
     reference: 'ABATIMENTO DE FATURA',
     orderId: 'L0019G',
@@ -118,6 +172,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Suzuki',
     financialApproved: true,
+    userResponsible: 'Gerência NovaMotor',
     observation: 'Abatimento aprovado financeiro'
   },
 
@@ -127,12 +182,14 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'riomotos',
     dealershipName: 'Rio Motos Barra RJ',
     type: 'credito',
+    origin: 'montadora_credito',
     date: '15/01/2026',
     reference: 'APORTA MKT REGIONAL RJ',
     amount: 5000.00,
     status: 'aprovado',
     brand: 'Suzuki',
     financialApproved: true,
+    userResponsible: 'Diretoria J. Toledo',
     observation: 'Aporte especial para feira de motos RJ'
   },
   {
@@ -140,12 +197,14 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'riomotos',
     dealershipName: 'Rio Motos Barra RJ',
     type: 'debito',
+    origin: 'pedido_venda',
     date: '15/01/2026',
     reference: 'INTEGRAÇÃO WEB MOTORS / MKT',
     amount: 199.00,
     status: 'aprovado',
     brand: 'Haojue',
     financialApproved: true,
+    userResponsible: 'Rio Motos Admin',
     observation: 'Débitos de campanha digital'
   },
 
@@ -155,6 +214,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'savassi',
     dealershipName: 'Savassi Motos BH',
     type: 'credito',
+    origin: 'montadora_credito',
     date: '20/01/2026',
     reference: 'BÔNUS COMERCIAL MONTADORA',
     modelName: 'HAYABUSA',
@@ -162,6 +222,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Suzuki',
     financialApproved: true,
+    userResponsible: 'Carlos Drummond',
     observation: 'Premiação de meta atingida Q4'
   },
   {
@@ -169,6 +230,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     dealershipId: 'savassi',
     dealershipName: 'Savassi Motos BH',
     type: 'debito',
+    origin: 'pedido_venda',
     date: '02/02/2026',
     reference: 'DESCONTO EM PEDIDO DE MOTO',
     orderId: 'PED-BH-88',
@@ -176,6 +238,7 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     status: 'aprovado',
     brand: 'Suzuki',
     financialApproved: true,
+    userResponsible: 'Savassi Admin',
     observation: 'Abatimento em pedido de showroom'
   }
 ];
@@ -188,3 +251,11 @@ export const INITIAL_BRAND_RESERVE_LIMITS: Record<BrandType, number> = {
   Kymco: 7500.00,
   Quadriciclos: 4000.00
 };
+
+export const INITIAL_RESERVE_FUND_BRAND_CONFIGS: ReserveFundBrandConfig[] = [
+  { id: 'rfc-szk', brand: 'Suzuki', contributionPercentage: 1.5, fixedAmountPerUnit: 350, startDate: '2026-01-01', endDate: '2026-12-31', active: true, notes: 'Aporte de 1.5% sobre faturamento total de motos Suzuki' },
+  { id: 'rfc-haojue', brand: 'Haojue', contributionPercentage: 1.0, fixedAmountPerUnit: 150, startDate: '2026-01-01', endDate: '2026-12-31', active: true, notes: 'Aporte fixo por unidade faturada linha Haojue' },
+  { id: 'rfc-zontes', brand: 'Zontes', contributionPercentage: 2.0, fixedAmountPerUnit: 400, startDate: '2026-01-01', endDate: '2026-12-31', active: true, notes: 'Campanha de incentivo especial para scooters Zontes' },
+  { id: 'rfc-hisun', brand: 'Hisun', contributionPercentage: 1.0, fixedAmountPerUnit: 300, startDate: '2026-01-01', endDate: '2026-12-31', active: true, notes: 'Incentivo ATV/UTV Hisun' },
+  { id: 'rfc-kymco', brand: 'Kymco', contributionPercentage: 1.5, fixedAmountPerUnit: 350, startDate: '2026-01-01', endDate: '2026-12-31', active: true, notes: 'Incentivo MaxiScooter Kymco' },
+];

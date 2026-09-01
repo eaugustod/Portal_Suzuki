@@ -11,9 +11,27 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      chunkSizeWarningLimit: 1500,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-react': ['react', 'react-dom'],
+            'vendor-icons': ['lucide-react'],
+            'vendor-motion': ['motion'],
+            'data-catalogs': [
+              './src/data/hayabusaM5CatalogData.ts',
+              './src/data/gsxS1000gtM5CatalogData.ts',
+              './src/data/gsxS1000gxM5CatalogData.ts',
+              './src/data/mockPartsModels.ts'
+            ]
+          }
+        }
+      }
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
+      // Do not modify—file watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},

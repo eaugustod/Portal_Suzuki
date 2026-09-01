@@ -285,12 +285,12 @@ export const PartsCatalogUploadModal: React.FC<PartsCatalogUploadModalProps> = (
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 overflow-y-auto">
       <div className={`relative w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden my-8 ${
-        isDarkMode ? 'bg-neutral-900 border border-neutral-800 text-white' : 'bg-white text-neutral-900'
+        isDarkMode ? 'bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-white' : 'bg-white text-neutral-900'
       }`}>
         
         {/* Header */}
         <div className={`flex items-center justify-between px-6 py-5 border-b ${
-          isDarkMode ? 'bg-neutral-950/60 border-neutral-800' : 'bg-red-50/80 border-red-100'
+          isDarkMode ? 'bg-neutral-50 dark:bg-neutral-950/60 border-neutral-200 dark:border-neutral-800' : 'bg-red-50/80 border-red-100'
         }`}>
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-xl bg-red-600 text-white shadow-md shadow-red-600/30">
@@ -298,7 +298,7 @@ export const PartsCatalogUploadModal: React.FC<PartsCatalogUploadModalProps> = (
             </div>
             <div>
               <h2 className="text-xl font-bold tracking-tight">Subir / Importar Novo Catálogo EPC</h2>
-              <p className={`text-xs ${isDarkMode ? 'text-neutral-400' : 'text-neutral-600'}`}>
+              <p className={`text-xs ${isDarkMode ? 'text-neutral-500 dark:text-neutral-400' : 'text-neutral-600'}`}>
                 Converta a estrutura em Excel (.xlsx) e figuras de peças para o sistema do Portal Suzuki
               </p>
             </div>
@@ -306,7 +306,7 @@ export const PartsCatalogUploadModal: React.FC<PartsCatalogUploadModalProps> = (
           <button 
             onClick={onClose}
             className={`p-2 rounded-lg transition-colors ${
-              isDarkMode ? 'hover:bg-neutral-800 text-neutral-400' : 'hover:bg-neutral-200 text-neutral-600'
+              isDarkMode ? 'hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400' : 'hover:bg-neutral-200 text-neutral-600'
             }`}
           >
             <X className="w-5 h-5" />
@@ -414,7 +414,7 @@ export const PartsCatalogUploadModal: React.FC<PartsCatalogUploadModalProps> = (
             </div>
           </div>
 
-          <hr className={isDarkMode ? 'border-neutral-800' : 'border-neutral-200'} />
+          <hr className={isDarkMode ? 'border-neutral-200 dark:border-neutral-800' : 'border-neutral-200'} />
 
           {/* Section 2: Files Upload */}
           <div className="space-y-4">
@@ -430,7 +430,7 @@ export const PartsCatalogUploadModal: React.FC<PartsCatalogUploadModalProps> = (
                   ? 'border-emerald-500 bg-emerald-500/5' 
                   : isDarkMode ? 'border-neutral-700 hover:border-red-500' : 'border-neutral-300 hover:border-red-500'
               }`}>
-                <FileSpreadsheet className={`w-10 h-10 mx-auto mb-2 ${excelFile ? 'text-emerald-500' : 'text-neutral-400'}`} />
+                <FileSpreadsheet className={`w-10 h-10 mx-auto mb-2 ${excelFile ? 'text-emerald-500' : 'text-neutral-500 dark:text-neutral-400'}`} />
                 <h4 className="text-sm font-semibold mb-1">Planilha do Catálogo (.xlsx)</h4>
                 <p className="text-xs opacity-70 mb-3">
                   {excelFile ? excelFile.name : 'Selecione a planilha com colunas: Figura, Grupo, Ref, PartNo, Descrição, Qtd'}
@@ -448,12 +448,12 @@ export const PartsCatalogUploadModal: React.FC<PartsCatalogUploadModalProps> = (
                   ? 'border-blue-500 bg-blue-500/5' 
                   : isDarkMode ? 'border-neutral-700 hover:border-red-500' : 'border-neutral-300 hover:border-red-500'
               }`}>
-                <ImageIcon className={`w-10 h-10 mx-auto mb-2 ${imageCount > 0 ? 'text-blue-500' : 'text-neutral-400'}`} />
+                <ImageIcon className={`w-10 h-10 mx-auto mb-2 ${imageCount > 0 ? 'text-blue-500' : 'text-neutral-500 dark:text-neutral-400'}`} />
                 <h4 className="text-sm font-semibold mb-1">Imagens dos Diagramas (.jpg / .png)</h4>
                 <p className="text-xs opacity-70 mb-3">
                   {imageCount > 0 ? `${imageCount} imagens de figuras carregadas` : 'Selecione todas as figuras da pasta Imagens/FigG'}
                 </p>
-                <label className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-lg bg-neutral-800 dark:bg-neutral-700 hover:bg-neutral-900 text-white cursor-pointer transition shadow-md">
+                <label className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-lg bg-neutral-800 dark:bg-neutral-700 hover:bg-white dark:bg-neutral-900 text-white cursor-pointer transition shadow-md">
                   <Upload className="w-3.5 h-3.5" />
                   {imageCount > 0 ? 'Adicionar Mais Imagens' : 'Selecionar Imagens'}
                   <input type="file" accept="image/*" multiple onChange={handleImagesUpload} className="hidden" />
@@ -466,7 +466,7 @@ export const PartsCatalogUploadModal: React.FC<PartsCatalogUploadModalProps> = (
           {/* Section 3: Import Preview & Summary */}
           {parsedDiagrams.length > 0 && (
             <div className={`p-4 rounded-xl border ${
-              isDarkMode ? 'bg-neutral-950/80 border-neutral-800' : 'bg-neutral-50 border-neutral-200'
+              isDarkMode ? 'bg-neutral-50 dark:bg-neutral-950/80 border-neutral-200 dark:border-neutral-800' : 'bg-neutral-50 border-neutral-200'
             }`}>
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-sm font-bold flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
@@ -502,12 +502,12 @@ export const PartsCatalogUploadModal: React.FC<PartsCatalogUploadModalProps> = (
 
         {/* Footer Actions */}
         <div className={`flex items-center justify-end gap-3 px-6 py-4 border-t ${
-          isDarkMode ? 'bg-neutral-950/60 border-neutral-800' : 'bg-neutral-50 border-neutral-200'
+          isDarkMode ? 'bg-neutral-50 dark:bg-neutral-950/60 border-neutral-200 dark:border-neutral-800' : 'bg-neutral-50 border-neutral-200'
         }`}>
           <button
             onClick={onClose}
             className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
-              isDarkMode ? 'hover:bg-neutral-800 text-neutral-300' : 'hover:bg-neutral-200 text-neutral-700'
+              isDarkMode ? 'hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300' : 'hover:bg-neutral-200 text-neutral-700'
             }`}
           >
             Cancelar

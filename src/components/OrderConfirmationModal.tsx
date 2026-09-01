@@ -72,12 +72,12 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
               <CheckCircle2 className="w-10 h-10 stroke-[2.5]" />
             </div>
             <h3 className="text-[24px] font-bold text-[#fafafa]">Pedido Transmitido com Sucesso!</h3>
-            <p className="text-[14px] text-neutral-400 max-w-md mx-auto">
+            <p className="text-[14px] text-neutral-500 dark:text-neutral-400 max-w-md mx-auto">
               O pedido de lote <strong className="text-white font-mono">{orderNumber}</strong> foi gerado e transmitido ao sistema ERP da fábrica J. Toledo Suzuki.
             </p>
-            <div className="p-4 bg-neutral-900/80 rounded-2xl border border-[#27272a] text-[13px] font-tabular max-w-sm mx-auto space-y-1">
-              <p className="text-neutral-400">Total Faturado: <strong className="text-emerald-400">R$ {totalAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong></p>
-              <p className="text-neutral-400">Previsão Embarque: <strong className="text-[#60a5fa]">Em até 5 dias úteis</strong></p>
+            <div className="p-4 bg-white dark:bg-neutral-900/80 rounded-2xl border border-[#27272a] text-[13px] font-tabular max-w-sm mx-auto space-y-1">
+              <p className="text-neutral-500 dark:text-neutral-400">Total Faturado: <strong className="text-emerald-400">R$ {totalAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong></p>
+              <p className="text-neutral-500 dark:text-neutral-400">Previsão Embarque: <strong className="text-[#60a5fa]">Em até 5 dias úteis</strong></p>
             </div>
           </div>
         ) : (
@@ -91,11 +91,11 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
                 <h3 className="text-[22px] font-bold text-[#fafafa]">
                   Confirmar Pedido de Fábrica
                 </h3>
-                <p className="text-[12px] text-neutral-400">Concessionária: MotoSul Suzuki Curitiba (SZX-4109)</p>
+                <p className="text-[12px] text-neutral-500 dark:text-neutral-400">Concessionária: MotoSul Suzuki Curitiba (SZX-4109)</p>
               </div>
               <button 
                 onClick={onClose}
-                className="text-neutral-400 hover:text-white font-bold p-1 text-lg"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold p-1 text-lg"
               >
                 ✕
               </button>
@@ -103,7 +103,7 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
 
             {/* Order Items Table (Bento) */}
             <div className="border border-[#27272a] rounded-2xl overflow-hidden shadow-inner">
-              <div className="bg-neutral-900 px-4 py-2.5 border-b border-[#27272a] text-[10px] font-bold text-neutral-400 uppercase tracking-wider flex justify-between">
+              <div className="bg-white dark:bg-neutral-900 px-4 py-2.5 border-b border-[#27272a] text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex justify-between">
                 <span>Motocicleta / Versão</span>
                 <div className="flex gap-8">
                   <span>Qtd</span>
@@ -111,17 +111,17 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
                 </div>
               </div>
 
-              <div className="divide-y divide-[#27272a] max-h-52 overflow-y-auto text-[13px] font-tabular bg-neutral-900/40">
+              <div className="divide-y divide-[#27272a] max-h-52 overflow-y-auto text-[13px] font-tabular bg-white dark:bg-neutral-900/40">
                 {selectedItems.length === 0 ? (
                   <div className="p-6 text-center text-neutral-500">
                     Nenhuma motocicleta com quantidade selecionada.
                   </div>
                 ) : (
                   selectedItems.map((item, index) => (
-                    <div key={index} className="p-3.5 flex justify-between items-center hover:bg-neutral-900/60">
+                    <div key={index} className="p-3.5 flex justify-between items-center hover:bg-white dark:bg-neutral-900/60">
                       <div>
                         <p className="font-bold text-[#fafafa]">{item.modelName}</p>
-                        <p className="text-[11px] text-neutral-400">{item.colorName}</p>
+                        <p className="text-[11px] text-neutral-500 dark:text-neutral-400">{item.colorName}</p>
                       </div>
                       <div className="flex items-center gap-8">
                         <span className="font-bold text-neutral-200">{item.qty} un.</span>
@@ -137,7 +137,7 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
 
             {/* Freight & Commercial conditions */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px]">
-              <div className="bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+              <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
                 <span className="text-[10px] font-bold text-neutral-500 uppercase block mb-1">
                   Condições de Logística
                 </span>
@@ -145,10 +145,10 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
                   <Truck className="w-4 h-4 text-[#3b82f6]" />
                   {freightMode}
                 </p>
-                <p className="text-[11px] text-neutral-400 mt-1">Entrega no pátio da concessionária em Curitiba/PR.</p>
+                <p className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">Entrega no pátio da concessionária em Curitiba/PR.</p>
               </div>
 
-              <div className="bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+              <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
                 <span className="text-[10px] font-bold text-neutral-500 uppercase block mb-1">
                   Forma de Faturamento
                 </span>
@@ -156,17 +156,17 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   Crédito Comercial J. Toledo (30/60/90 DDL)
                 </p>
-                <p className="text-[11px] text-neutral-400 mt-1">Garantia integral de fábrica e nota fiscal direta.</p>
+                <p className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">Garantia integral de fábrica e nota fiscal direta.</p>
               </div>
             </div>
 
             {/* Total Box */}
-            <div className="bg-neutral-900/90 border border-[#27272a] rounded-2xl p-4 flex justify-between items-center">
+            <div className="bg-white dark:bg-neutral-900/90 border border-[#27272a] rounded-2xl p-4 flex justify-between items-center">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#3b82f6] block">
                   Total Acumulado ({totalUnits} unidades)
                 </span>
-                <span className="text-[12px] text-neutral-400">Sem incidência de frete adicional</span>
+                <span className="text-[12px] text-neutral-500 dark:text-neutral-400">Sem incidência de frete adicional</span>
               </div>
               <span className="text-[26px] font-bold text-[#60a5fa] font-tabular">
                 R$ {totalAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
@@ -178,7 +178,7 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({
               <button 
                 type="button"
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-xl border border-[#27272a] font-bold text-neutral-300 hover:bg-neutral-800 text-[13px]"
+                className="px-5 py-2.5 rounded-xl border border-[#27272a] font-bold text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 text-[13px]"
               >
                 Voltar e Ajustar
               </button>

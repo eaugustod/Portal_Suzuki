@@ -43,6 +43,7 @@ export const INITIAL_DEALERSHIPS_FULL: Record<string, DealershipFullProfile> = {
     creditUsed: 1890000,
     floorPlanLimit: 1200000,
     defaultPaymentCondition: '30/60/90 DDL',
+    authorizedPaymentConditionIds: ['pay-001', 'pay-002', 'pay-003', 'pay-004', 'pay-005', 'pay-007', 'pay-008', 'pay-009', 'pay-010'],
     creditRating: 'AAA',
     onTimePaymentRate: 98.8,
     bankAccount: {

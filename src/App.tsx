@@ -17,7 +17,9 @@ import {
   StockScheduleItem,
   ProposalPricingItem,
   PartsOrder,
-  ReserveFundTransaction
+  ReserveFundTransaction,
+  ApprovalWorkflowStep,
+  PaymentConditionCampaign
 } from './types';
 import { 
   INITIAL_PURCHASE_MODELS, 
@@ -35,21 +37,29 @@ import { INITIAL_ORDER_APPROVAL_PROPOSALS } from './data/orderApprovalData';
 import { INITIAL_MONTHLY_COMMITMENTS } from './data/monthlyCommitmentsData';
 import { INITIAL_MOCK_PARTS_ORDERS } from './data/mockPartsData';
 import { INITIAL_RESERVE_FUND_TRANSACTIONS } from './data/mockReserveFundData';
+import { INITIAL_PAYMENT_CONDITIONS } from './data/mockPaymentConditions';
+import { INITIAL_WORKFLOW_STEPS } from './data/workflowStepsData';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
-import { DashboardView } from './components/DashboardView';
-import { MontadoraDashboardView } from './components/MontadoraDashboardView';
-import { DealershipManagementView } from './components/DealershipManagementView';
-import { MonthlyCommitmentView } from './components/MonthlyCommitmentView';
-import { PurchasePortalView } from './components/PurchasePortalView';
-import { ReserveFundView } from './components/ReserveFundView';
-import { PartsCatalogView } from './components/parts/PartsCatalogView';
-import { InventoryView } from './components/InventoryView';
-import { SalesCrmView } from './components/SalesCrmView';
-import { ServiceOrderView } from './components/ServiceOrderView';
-import { SettingsView } from './components/SettingsView';
-import { SupportView } from './components/SupportView';
 import { OrderConfirmationModal } from './components/OrderConfirmationModal';
+import { ViewSkeleton } from './components/ViewSkeleton';
+
+const DashboardView = React.lazy(() => import('./components/DashboardView').then(m => ({ default: m.DashboardView })));
+const MontadoraDashboardView = React.lazy(() => import('./components/MontadoraDashboardView').then(m => ({ default: m.MontadoraDashboardView })));
+const DealershipManagementView = React.lazy(() => import('./components/DealershipManagementView').then(m => ({ default: m.DealershipManagementView })));
+const MonthlyCommitmentView = React.lazy(() => import('./components/MonthlyCommitmentView').then(m => ({ default: m.MonthlyCommitmentView })));
+const PurchasePortalView = React.lazy(() => import('./components/PurchasePortalView').then(m => ({ default: m.PurchasePortalView })));
+const ReserveFundView = React.lazy(() => import('./components/ReserveFundView').then(m => ({ default: m.ReserveFundView })));
+const FreightManagementView = React.lazy(() => import('./components/FreightManagementView').then(m => ({ default: m.FreightManagementView })));
+const PaymentConditionsView = React.lazy(() => import('./components/PaymentConditionsView').then(m => ({ default: m.PaymentConditionsView })));
+const ModelMatrixView = React.lazy(() => import('./components/ModelMatrixView').then(m => ({ default: m.ModelMatrixView })));
+const OrderWorkflowView = React.lazy(() => import('./components/OrderWorkflowView').then(m => ({ default: m.OrderWorkflowView })));
+const PartsCatalogView = React.lazy(() => import('./components/parts/PartsCatalogView').then(m => ({ default: m.PartsCatalogView })));
+const InventoryView = React.lazy(() => import('./components/InventoryView').then(m => ({ default: m.InventoryView })));
+const SalesCrmView = React.lazy(() => import('./components/SalesCrmView').then(m => ({ default: m.SalesCrmView })));
+const ServiceOrderView = React.lazy(() => import('./components/ServiceOrderView').then(m => ({ default: m.ServiceOrderView })));
+const SettingsView = React.lazy(() => import('./components/SettingsView').then(m => ({ default: m.SettingsView })));
+const SupportView = React.lazy(() => import('./components/SupportView').then(m => ({ default: m.SupportView })));
 
 export default function App() {
   // Theme State ('dark' | 'light')
@@ -95,6 +105,60 @@ export default function App() {
   const [monthlyCommitments, setMonthlyCommitments] = useState<MonthlyCommitmentPlan[]>(INITIAL_MONTHLY_COMMITMENTS);
   const [partsOrders, setPartsOrders] = useState<PartsOrder[]>(INITIAL_MOCK_PARTS_ORDERS);
   const [reserveFundTransactions, setReserveFundTransactions] = useState<ReserveFundTransaction[]>(INITIAL_RESERVE_FUND_TRANSACTIONS);
+
+  // Persistence States for Matrix, Payment Conditions and Workflow
+  const [enabledVariantsMap, setEnabledVariantsMap] = useState<Record<string, boolean>>({});
+  const [paymentConditions, setPaymentConditions] = useState<PaymentConditionCampaign[]>(INITIAL_PAYMENT_CONDITIONS);
+  const [workflowSteps, setWorkflowSteps] = useState<ApprovalWorkflowStep[]>(INITIAL_WORKFLOW_STEPS);
+
+  // Model & Color Variant Enablement Handler
+  const handleToggleVariantEnabled = (modelId: string, variantId?: string, forceState?: boolean) => {
+    const key = variantId ? `${modelId}-${variantId}` : modelId;
+    setEnabledVariantsMap(prev => {
+      const nextState = forceState !== undefined ? forceState : !(prev[key] !== false);
+      return { ...prev, [key]: nextState };
+    });
+  };
+
+  const handleToggleAllInModel = (modelId: string, enable: boolean) => {
+    const model = purchaseModels.find(m => m.id === modelId);
+    if (!model) return;
+    const updates: Record<string, boolean> = { [modelId]: enable };
+    model.variants.forEach(v => {
+      updates[`${modelId}-${v.id}`] = enable;
+    });
+    setEnabledVariantsMap(prev => ({ ...prev, ...updates }));
+  };
+
+  // Payment Conditions Handlers
+  const handleSavePaymentCondition = (condition: PaymentConditionCampaign) => {
+    setPaymentConditions(prev => {
+      const exists = prev.some(c => c.id === condition.id);
+      if (exists) {
+        return prev.map(c => c.id === condition.id ? condition : c);
+      }
+      return [condition, ...prev];
+    });
+  };
+
+  const handleDeletePaymentCondition = (id: string) => {
+    setPaymentConditions(prev => prev.filter(c => c.id !== id));
+  };
+
+  // Approval Workflow Handlers
+  const handleSaveWorkflowStep = (step: ApprovalWorkflowStep) => {
+    setWorkflowSteps(prev => {
+      const exists = prev.some(s => s.id === step.id);
+      if (exists) {
+        return prev.map(s => s.id === step.id ? step : s);
+      }
+      return [...prev, step];
+    });
+  };
+
+  const handleDeleteWorkflowStep = (id: string) => {
+    setWorkflowSteps(prev => prev.filter(s => s.id !== id));
+  };
 
   // Reserve Fund handlers
   const handleAddReserveFundTransaction = (tx: ReserveFundTransaction) => {
@@ -408,11 +472,60 @@ export default function App() {
 
     const activeDealer = DEALERSHIP_PROFILES[currentScope] || DEALERSHIP_PROFILES['motosul'];
     const newOrderId = `fo-${Date.now()}`;
-    const newOrderNumber = `PED-2024-${Math.floor(1105 + Math.random() * 8000)}`;
+    const seqNum = Math.floor(10000 + Math.random() * 89999);
+    const newOrderNumber = `PED-${seqNum}`;
+
+    const rawItems = pendingOrderItems.length > 0 ? pendingOrderItems : [
+      {
+        id: `foi-${Date.now()}-1`,
+        modelId: 'gsx-s1000gx',
+        modelName: 'GSX-S1000GX',
+        brand: 'Suzuki' as const,
+        category: 'Sport Crossover',
+        colorName: 'Azul Metálico (YSF)',
+        colorHex: '#1b3b6f',
+        quantity: checkoutTotalUnits,
+        unitFactoryCost: checkoutTotalAmount / Math.max(1, checkoutTotalUnits),
+        unitMSRP: 98800.00,
+        totalItemCost: checkoutTotalAmount
+      }
+    ];
+
+    const expandedItems: FactoryOrderItem[] = [];
+    rawItems.forEach(item => {
+      if (item.brand !== 'Haojue' && item.quantity > 1) {
+        for (let i = 0; i < item.quantity; i++) {
+          expandedItems.push({
+            ...item,
+            id: `${item.id}-${i + 1}`,
+            quantity: 1,
+            totalItemCost: item.unitFactoryCost,
+            supervisorStatus: 'pendente',
+            managerStatus: 'pendente',
+            directorStatus: 'pendente',
+            itemApprovalStatus: 'pendente'
+          });
+        }
+      } else {
+        expandedItems.push({
+          ...item,
+          supervisorStatus: 'pendente',
+          managerStatus: 'pendente',
+          directorStatus: 'pendente',
+          itemApprovalStatus: 'pendente'
+        });
+      }
+    });
+
+    const mappedItems: FactoryOrderItem[] = expandedItems.map((item, idx) => ({
+      ...item,
+      childOrderNumber: `${seqNum}${String(idx + 1).padStart(2, '0')}`
+    }));
 
     const newFactoryOrder: FactoryOrder = {
       id: newOrderId,
       orderNumber: newOrderNumber,
+      parentOrderNumber: newOrderNumber,
       dealershipId: currentScope === 'jtoledo' ? 'motosul' : currentScope,
       dealershipName: activeDealer.name,
       dealershipCity: activeDealer.city,
@@ -432,21 +545,7 @@ export default function App() {
       protheusIntegrated: false,
       totalUnits: checkoutTotalUnits,
       totalAmount: checkoutTotalAmount,
-      items: pendingOrderItems.length > 0 ? pendingOrderItems : [
-        {
-          id: `foi-${Date.now()}-1`,
-          modelId: 'gsx-s1000gx',
-          modelName: 'GSX-S1000GX',
-          brand: 'Suzuki',
-          category: 'Sport Crossover',
-          colorName: 'Azul Metálico (YSF)',
-          colorHex: '#1b3b6f',
-          quantity: checkoutTotalUnits,
-          unitFactoryCost: checkoutTotalAmount / Math.max(1, checkoutTotalUnits),
-          unitMSRP: 98800.00,
-          totalItemCost: checkoutTotalAmount
-        }
-      ]
+      items: mappedItems
     };
 
     setFactoryOrders(prev => [newFactoryOrder, ...prev]);
@@ -541,7 +640,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#09090b] flex text-[#fafafa] font-sans antialiased selection:bg-[#3b82f6] selection:text-white">
+    <div className={`min-h-screen flex font-sans antialiased selection:bg-blue-600 selection:text-white transition-colors duration-200 ${
+      theme === 'dark' ? 'dark bg-neutral-950 text-slate-100' : 'bg-slate-50 text-slate-900'
+    }`}>
       {/* Sidebar Navigation */}
       <Sidebar
         currentTab={currentTab}
@@ -581,139 +682,172 @@ export default function App() {
 
         {/* Dynamic View Body */}
         <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
-          {/* Dashboard Rendering: Montadora vs Specific Dealership */}
-          {currentTab === 'dashboard' && currentScope === 'jtoledo' && (
-            <MontadoraDashboardView
-              inventory={inventory}
-              recentSales={recentSales}
-              serviceOrders={serviceOrders}
-              pipelineCards={pipelineCards}
-              transitOrders={transitOrders}
-              factoryOrders={factoryOrders}
-              onSelectDealership={(scope) => {
-                setCurrentScope(scope);
-              }}
-              onNavigate={(tab) => setCurrentTab(tab)}
-            />
-          )}
+          <React.Suspense fallback={<ViewSkeleton />}>
+            {/* Dashboard Rendering: Montadora vs Specific Dealership */}
+            {currentTab === 'dashboard' && currentScope === 'jtoledo' && (
+              <MontadoraDashboardView
+                inventory={inventory}
+                recentSales={recentSales}
+                serviceOrders={serviceOrders}
+                pipelineCards={pipelineCards}
+                transitOrders={transitOrders}
+                factoryOrders={factoryOrders}
+                onSelectDealership={(scope) => {
+                  setCurrentScope(scope);
+                }}
+                onNavigate={(tab) => setCurrentTab(tab)}
+              />
+            )}
 
-          {currentTab === 'dashboard' && currentScope !== 'jtoledo' && (
-            <DashboardView
-              onNavigate={(tab) => setCurrentTab(tab)}
-              onOpenNewVehicleModal={() => setCurrentTab('inventory')}
-              onOpenNewLeadModal={() => setCurrentTab('sales')}
-              inventory={scopedInventory}
-              transitOrders={scopedTransitOrders}
-              serviceOrders={scopedServiceOrders}
-              pipelineCards={scopedPipeline}
-              recentSales={scopedRecentSales}
-            />
-          )}
+            {currentTab === 'dashboard' && currentScope !== 'jtoledo' && (
+              <DashboardView
+                onNavigate={(tab) => setCurrentTab(tab)}
+                onOpenNewVehicleModal={() => setCurrentTab('inventory')}
+                onOpenNewLeadModal={() => setCurrentTab('sales')}
+                inventory={scopedInventory}
+                transitOrders={scopedTransitOrders}
+                serviceOrders={scopedServiceOrders}
+                pipelineCards={scopedPipeline}
+                recentSales={scopedRecentSales}
+              />
+            )}
 
-          {currentTab === 'dealers_network' && (
-            <DealershipManagementView
-              dealerships={dealerships}
-              onUpdateDealership={handleUpdateDealership}
-              onAddDealership={handleAddDealership}
-              onDeleteDealership={handleDeleteDealership}
-              onSelectDealership={(scope) => {
-                setCurrentScope(scope);
-              }}
-              onNavigate={(tab) => setCurrentTab(tab)}
-            />
-          )}
+            {currentTab === 'dealers_network' && (
+              <DealershipManagementView
+                dealerships={dealerships}
+                paymentConditions={paymentConditions}
+                onUpdateDealership={handleUpdateDealership}
+                onAddDealership={handleAddDealership}
+                onDeleteDealership={handleDeleteDealership}
+                onSelectDealership={(scope) => {
+                  setCurrentScope(scope);
+                }}
+                onNavigate={(tab) => setCurrentTab(tab)}
+              />
+            )}
 
-          {currentTab === 'commitments' && (
-            <MonthlyCommitmentView
-              currentScope={currentScope}
-              commitments={monthlyCommitments}
-              dealerships={dealerships}
-              orderProposals={orderProposals}
-              onSaveCommitment={handleSaveCommitment}
-              onDeleteCommitment={handleDeleteCommitment}
-              onGenerateApprovalProposal={handleGenerateApprovalProposalFromCommitment}
-              onNavigateToApprovalDoc={(proposalId) => {
-                setCurrentTab('purchase');
-              }}
-              onSelectDealershipScope={(scope) => {
-                setCurrentScope(scope);
-              }}
-            />
-          )}
+            {currentTab === 'commitments' && (
+              <MonthlyCommitmentView
+                currentScope={currentScope}
+                commitments={monthlyCommitments}
+                dealerships={dealerships}
+                orderProposals={orderProposals}
+                onSaveCommitment={handleSaveCommitment}
+                onDeleteCommitment={handleDeleteCommitment}
+                onGenerateApprovalProposal={handleGenerateApprovalProposalFromCommitment}
+                onNavigateToApprovalDoc={(proposalId) => {
+                  setCurrentTab('purchase');
+                }}
+                onSelectDealershipScope={(scope) => {
+                  setCurrentScope(scope);
+                }}
+              />
+            )}
 
-          {currentTab === 'purchase' && (
-            <PurchasePortalView
-              currentScope={currentScope}
-              purchaseModels={purchaseModels}
-              factoryOrders={factoryOrders}
-              orderProposals={orderProposals}
-              onUpdateOrderProposal={handleUpdateOrderProposal}
-              onCreateOrderProposal={handleCreateOrderProposal}
-              dealerships={dealerships}
-              onUpdateVariantQuantity={handleUpdateVariantQuantity}
-              onUpdateModelSetting={handleUpdateModelSetting}
-              onSavePurchaseModel={handleSavePurchaseModel}
-              onDeletePurchaseModel={handleDeletePurchaseModel}
-              onPlaceOrder={handlePlaceOrder}
-              onUpdateFactoryOrder={handleUpdateFactoryOrder}
-              onNavigateToCommitments={() => setCurrentTab('commitments')}
-            />
-          )}
+            {currentTab === 'purchase' && (
+              <PurchasePortalView
+                currentScope={currentScope}
+                purchaseModels={purchaseModels}
+                enabledVariantsMap={enabledVariantsMap}
+                paymentConditions={paymentConditions}
+                workflowSteps={workflowSteps}
+                factoryOrders={factoryOrders}
+                orderProposals={orderProposals}
+                onUpdateOrderProposal={handleUpdateOrderProposal}
+                onCreateOrderProposal={handleCreateOrderProposal}
+                dealerships={dealerships}
+                onUpdateVariantQuantity={handleUpdateVariantQuantity}
+                onUpdateModelSetting={handleUpdateModelSetting}
+                onSavePurchaseModel={handleSavePurchaseModel}
+                onDeletePurchaseModel={handleDeletePurchaseModel}
+                onPlaceOrder={handlePlaceOrder}
+                onUpdateFactoryOrder={handleUpdateFactoryOrder}
+                onNavigateToCommitments={() => setCurrentTab('commitments')}
+              />
+            )}
 
-          {currentTab === 'reserve_fund' && (
-            <ReserveFundView
-              currentScope={currentScope}
-              transactions={reserveFundTransactions}
-              onAddTransaction={handleAddReserveFundTransaction}
-              onApproveTransaction={handleApproveReserveFundTransaction}
-            />
-          )}
+            {currentTab === 'reserve_fund' && (
+              <ReserveFundView
+                currentScope={currentScope}
+                transactions={reserveFundTransactions}
+                onAddTransaction={handleAddReserveFundTransaction}
+                onApproveTransaction={handleApproveReserveFundTransaction}
+              />
+            )}
 
-          {currentTab === 'parts_catalog' && (
-            <PartsCatalogView
-              currentScope={currentScope}
-              dealerships={dealerships}
-              partsOrders={partsOrders}
-              onPlacePartsOrder={handlePlacePartsOrder}
-              onUpdatePartsOrder={handleUpdatePartsOrder}
-            />
-          )}
+            {currentTab === 'freight_table' && <FreightManagementView />}
 
-          {currentTab === 'inventory' && (
-            <InventoryView
-              inventory={scopedInventory}
-              onAddVehicle={handleAddVehicle}
-              onUpdateVehicle={handleUpdateVehicle}
-              onDeleteVehicle={handleDeleteVehicle}
-              searchQuery={searchQuery}
-              currentScope={currentScope}
-            />
-          )}
+            {currentTab === 'payment_conditions' && (
+              <PaymentConditionsView
+                conditions={paymentConditions}
+                onSaveCondition={handleSavePaymentCondition}
+                onDeleteCondition={handleDeletePaymentCondition}
+              />
+            )}
 
-          {currentTab === 'sales' && (
-            <SalesCrmView
-              pipelineCards={scopedPipeline}
-              onAddLead={handleAddLead}
-              onMoveCard={handleMoveCard}
-              interactions={scopedInteractions}
-              onAddInteraction={handleAddInteraction}
-              recentSales={scopedRecentSales}
-            />
-          )}
+            {currentTab === 'model_matrix' && (
+              <ModelMatrixView
+                purchaseModels={purchaseModels}
+                enabledVariantsMap={enabledVariantsMap}
+                onToggleVariantEnabled={handleToggleVariantEnabled}
+                onToggleAllInModel={handleToggleAllInModel}
+              />
+            )}
 
-          {currentTab === 'service_order' && (
-            <ServiceOrderView
-              serviceOrders={scopedServiceOrders}
-              onAddServiceOrder={handleAddServiceOrder}
-              onUpdateServiceOrder={handleUpdateServiceOrder}
-              onDeleteServiceOrder={handleDeleteServiceOrder}
-              searchQuery={searchQuery}
-            />
-          )}
+            {currentTab === 'approval_workflow' && (
+              <OrderWorkflowView
+                workflowSteps={workflowSteps}
+                onSaveWorkflowStep={handleSaveWorkflowStep}
+                onDeleteWorkflowStep={handleDeleteWorkflowStep}
+              />
+            )}
 
-          {currentTab === 'settings' && <SettingsView />}
+            {currentTab === 'parts_catalog' && (
+              <PartsCatalogView
+                currentScope={currentScope}
+                dealerships={dealerships}
+                partsOrders={partsOrders}
+                onPlacePartsOrder={handlePlacePartsOrder}
+                onUpdatePartsOrder={handleUpdatePartsOrder}
+              />
+            )}
 
-          {currentTab === 'support' && <SupportView />}
+            {currentTab === 'inventory' && (
+              <InventoryView
+                inventory={scopedInventory}
+                onAddVehicle={handleAddVehicle}
+                onUpdateVehicle={handleUpdateVehicle}
+                onDeleteVehicle={handleDeleteVehicle}
+                searchQuery={searchQuery}
+                currentScope={currentScope}
+              />
+            )}
+
+            {currentTab === 'sales' && (
+              <SalesCrmView
+                pipelineCards={scopedPipeline}
+                onAddLead={handleAddLead}
+                onMoveCard={handleMoveCard}
+                interactions={scopedInteractions}
+                onAddInteraction={handleAddInteraction}
+                recentSales={scopedRecentSales}
+              />
+            )}
+
+            {currentTab === 'service_order' && (
+              <ServiceOrderView
+                serviceOrders={scopedServiceOrders}
+                onAddServiceOrder={handleAddServiceOrder}
+                onUpdateServiceOrder={handleUpdateServiceOrder}
+                onDeleteServiceOrder={handleDeleteServiceOrder}
+                searchQuery={searchQuery}
+              />
+            )}
+
+            {currentTab === 'settings' && <SettingsView />}
+
+            {currentTab === 'support' && <SupportView />}
+          </React.Suspense>
         </main>
       </div>
 

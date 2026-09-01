@@ -108,7 +108,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
           <h2 className="text-[26px] md:text-[30px] font-bold text-[#fafafa] tracking-tight">
             Gestão de Vendas & CRM
           </h2>
-          <p className="text-[13px] text-neutral-400">
+          <p className="text-[13px] text-neutral-500 dark:text-neutral-400">
             Funil de atendimento ao cliente, simulação bancária e entregas técnicas.
           </p>
         </div>
@@ -132,7 +132,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-[#fafafa] font-tabular">{pipelineCards.length}</span>
-            <span className="text-[11px] text-neutral-400">oportunidades</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">oportunidades</span>
           </div>
         </div>
 
@@ -151,7 +151,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-emerald-400 font-tabular">28.4%</span>
-            <span className="text-[11px] text-neutral-400">média PR</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">média PR</span>
           </div>
         </div>
 
@@ -161,7 +161,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
           </span>
           <div className="flex items-baseline gap-2">
             <span className="text-[26px] font-bold text-[#fafafa] font-tabular">35</span>
-            <span className="text-[11px] text-neutral-400">motos</span>
+            <span className="text-[11px] text-neutral-500 dark:text-neutral-400">motos</span>
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
                     <div className={`w-2 h-2 rounded-full ${col.dotColor}`}></div>
                     <h3 className="text-[12px] font-bold text-[#fafafa]">{col.label}</h3>
                   </div>
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-neutral-800 text-neutral-300 font-tabular">
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-tabular">
                     {cardsInCol.length}
                   </span>
                 </div>
@@ -196,7 +196,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
                     <div
                       key={card.id}
                       onClick={() => setSelectedCard(card)}
-                      className="bg-neutral-900/80 border border-[#27272a] rounded-2xl p-3 shadow-xs hover:border-[#3b82f6]/60 hover:bg-neutral-900 transition-all cursor-pointer group"
+                      className="bg-white dark:bg-neutral-900/80 border border-[#27272a] rounded-2xl p-3 shadow-xs hover:border-[#3b82f6]/60 hover:bg-white dark:bg-neutral-900 transition-all cursor-pointer group"
                     >
                       <div className="flex justify-between items-start mb-1.5">
                         <p className="text-[13px] font-bold text-[#fafafa] group-hover:text-[#60a5fa] transition-colors">
@@ -205,7 +205,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
                         <span className="text-[10px] text-neutral-500 font-mono">{card.dateBadge}</span>
                       </div>
 
-                      <p className="text-[12px] font-semibold text-neutral-300">
+                      <p className="text-[12px] font-semibold text-neutral-700 dark:text-neutral-300">
                         {card.vehicleInterest}
                       </p>
 
@@ -219,7 +219,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
                           {col.id === 'lead' && (
                             <button 
                               onClick={(e) => { e.stopPropagation(); onMoveCard(card.id, 'proposta'); }}
-                              className="text-[10px] text-neutral-400 hover:text-white px-1.5 py-0.5 bg-neutral-800 rounded border border-neutral-700"
+                              className="text-[10px] text-neutral-500 dark:text-neutral-400 hover:text-white px-1.5 py-0.5 bg-neutral-800 rounded border border-neutral-700"
                             >
                               Proposta →
                             </button>
@@ -227,7 +227,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
                           {col.id === 'proposta' && (
                             <button 
                               onClick={(e) => { e.stopPropagation(); onMoveCard(card.id, 'documentacao'); }}
-                              className="text-[10px] text-neutral-400 hover:text-white px-1.5 py-0.5 bg-neutral-800 rounded border border-neutral-700"
+                              className="text-[10px] text-neutral-500 dark:text-neutral-400 hover:text-white px-1.5 py-0.5 bg-neutral-800 rounded border border-neutral-700"
                             >
                               Crédito →
                             </button>
@@ -235,7 +235,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
                           {col.id === 'documentacao' && (
                             <button 
                               onClick={(e) => { e.stopPropagation(); onMoveCard(card.id, 'entrega'); }}
-                              className="text-[10px] text-neutral-400 hover:text-white px-1.5 py-0.5 bg-neutral-800 rounded border border-neutral-700"
+                              className="text-[10px] text-neutral-500 dark:text-neutral-400 hover:text-white px-1.5 py-0.5 bg-neutral-800 rounded border border-neutral-700"
                             >
                               Entrega →
                             </button>
@@ -249,7 +249,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
                 {/* Column total footer */}
                 <div className="mt-3 pt-2 border-t border-[#27272a] text-[11px] text-neutral-500 font-tabular flex justify-between">
                   <span>Subtotal:</span>
-                  <span className="font-bold text-neutral-300">R$ {colTotal.toLocaleString('pt-BR')}</span>
+                  <span className="font-bold text-neutral-700 dark:text-neutral-300">R$ {colTotal.toLocaleString('pt-BR')}</span>
                 </div>
               </div>
             );
@@ -269,10 +269,10 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
 
             <div className="space-y-2.5 text-[12px] font-tabular">
               {recentSales.map((sale) => (
-                <div key={sale.id} className="p-2.5 rounded-xl bg-neutral-900/60 border border-[#27272a] flex justify-between items-center">
+                <div key={sale.id} className="p-2.5 rounded-xl bg-white dark:bg-neutral-900/60 border border-[#27272a] flex justify-between items-center">
                   <div>
                     <p className="font-bold text-[#fafafa]">{sale.model}</p>
-                    <p className="text-[11px] text-neutral-400">{sale.client} • {sale.timeAgo}</p>
+                    <p className="text-[11px] text-neutral-500 dark:text-neutral-400">{sale.client} • {sale.timeAgo}</p>
                   </div>
                   <span className="font-bold text-emerald-400">
                     R$ {sale.price.toLocaleString('pt-BR')}
@@ -290,12 +290,12 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
 
             <div className="space-y-2.5 max-h-64 overflow-y-auto pr-1 text-[12px]">
               {interactions.map((int) => (
-                <div key={int.id} className="p-2.5 rounded-xl bg-neutral-900/60 border border-[#27272a]">
+                <div key={int.id} className="p-2.5 rounded-xl bg-white dark:bg-neutral-900/60 border border-[#27272a]">
                   <div className="flex justify-between items-center text-[11px] mb-1">
                     <span className="font-bold text-[#60a5fa]">{int.title}</span>
                     <span className="text-neutral-500 font-mono">{int.time}</span>
                   </div>
-                  <p className="text-neutral-400 text-[11px] leading-relaxed">{int.description}</p>
+                  <p className="text-neutral-500 dark:text-neutral-400 text-[11px] leading-relaxed">{int.description}</p>
                 </div>
               ))}
             </div>
@@ -311,11 +311,11 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-widest text-[#3b82f6]">Oportunidade CRM</span>
                 <h3 className="text-[20px] font-bold text-[#fafafa]">{selectedCard.customerName}</h3>
-                <p className="text-[12px] text-neutral-400">Interesse: <strong className="text-white">{selectedCard.vehicleInterest}</strong></p>
+                <p className="text-[12px] text-neutral-500 dark:text-neutral-400">Interesse: <strong className="text-white">{selectedCard.vehicleInterest}</strong></p>
               </div>
               <button 
                 onClick={() => setSelectedCard(null)}
-                className="text-neutral-400 hover:text-white font-bold"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold"
               >
                 ✕
               </button>
@@ -323,33 +323,33 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
 
             <div className="space-y-3 py-4 text-[13px]">
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">Telefone / WhatsApp</span>
                   <p className="font-bold text-white mt-0.5">{selectedCard.phone || '(41) 99876-0000'}</p>
                 </div>
-                <div className="bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">Valor da Proposta</span>
                   <p className="font-bold text-[#60a5fa] mt-0.5 font-tabular">R$ {selectedCard.value.toLocaleString('pt-BR')}</p>
                 </div>
               </div>
 
               {selectedCard.notes && (
-                <div className="bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+                <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block mb-1">Notas do Vendedor</span>
-                  <p className="text-neutral-300 text-[12px] leading-relaxed">{selectedCard.notes}</p>
+                  <p className="text-neutral-700 dark:text-neutral-300 text-[12px] leading-relaxed">{selectedCard.notes}</p>
                 </div>
               )}
 
               {/* Move stage dropdown in modal */}
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Alterar Etapa do Funil</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Alterar Etapa do Funil</label>
                 <select 
                   value={selectedCard.type}
                   onChange={(e) => {
                     onMoveCard(selectedCard.id, e.target.value as any);
                     setSelectedCard({ ...selectedCard, type: e.target.value as any });
                   }}
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                 >
                   <option value="lead">1. Novos Leads</option>
                   <option value="proposta">2. Proposta / Simulação</option>
@@ -382,7 +382,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
               </div>
               <button 
                 onClick={() => setIsAddLeadModalOpen(false)}
-                className="text-neutral-400 hover:text-white font-bold"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold"
               >
                 ✕
               </button>
@@ -390,56 +390,56 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
 
             <form onSubmit={handleCreateLead} className="space-y-3.5 py-3.5 text-[13px]">
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Nome do Cliente *</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Nome do Cliente *</label>
                 <input 
                   type="text" 
                   value={leadCustomer}
                   onChange={(e) => setLeadCustomer(e.target.value)}
                   placeholder="Ex: Marcos Souza"
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   required
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Moto de Interesse</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Moto de Interesse</label>
                   <input 
                     type="text" 
                     value={leadVehicle}
                     onChange={(e) => setLeadVehicle(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-bold text-neutral-400 mb-1">Valor Estimado (R$)</label>
+                  <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Valor Estimado (R$)</label>
                   <input 
                     type="number" 
                     value={leadValue}
                     onChange={(e) => setLeadValue(e.target.value)}
-                    className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Telefone / WhatsApp</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Telefone / WhatsApp</label>
                 <input 
                   type="text" 
                   value={leadPhone}
                   onChange={(e) => setLeadPhone(e.target.value)}
                   placeholder="(41) 98888-7766"
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-neutral-400 mb-1">Observações da Negociação</label>
+                <label className="block text-[11px] font-bold text-neutral-500 dark:text-neutral-400 mb-1">Observações da Negociação</label>
                 <textarea 
                   value={leadNotes}
                   onChange={(e) => setLeadNotes(e.target.value)}
                   placeholder="Pretensão de entrada, moto usada na troca, prazo..."
-                  className="w-full bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-20 resize-none focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-20 resize-none focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
@@ -447,7 +447,7 @@ export const SalesCrmView: React.FC<SalesCrmViewProps> = ({
                 <button
                   type="button"
                   onClick={() => setIsAddLeadModalOpen(false)}
-                  className="px-4 py-2 rounded-xl text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
+                  className="px-4 py-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
                 >
                   Cancelar
                 </button>

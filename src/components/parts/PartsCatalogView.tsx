@@ -363,20 +363,20 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
             <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight">
               {isMontadora ? 'Gestão de Pedidos de Peças da Rede & ERP' : 'Catálogo Técnico & Pedido de Peças'}
             </h1>
-            <p className="text-xs sm:text-sm text-neutral-400 max-w-2xl">
+            <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 max-w-2xl">
               Selecione o modelo da moto, consulte as vistas explodidas interativas e monte seu carrinho de peças genuínas com transmissão direta para faturamento e integração ERP.
             </p>
           </div>
 
           {/* Action Tabs & Shopping Cart Button */}
           <div className="flex flex-wrap items-center gap-2.5 shrink-0">
-            <div className="bg-neutral-950/80 p-1 rounded-2xl border border-neutral-800 flex items-center">
+            <div className="bg-neutral-50 dark:bg-neutral-950/80 p-1 rounded-2xl border border-neutral-200 dark:border-neutral-800 flex items-center">
               <button
                 onClick={() => setActiveModuleTab('catalog')}
                 className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
                   activeModuleTab === 'catalog'
                     ? 'bg-amber-500 text-black shadow-md shadow-amber-500/20'
-                    : 'text-neutral-400 hover:text-white'
+                    : 'text-neutral-500 dark:text-neutral-400 hover:text-white'
                 }`}
               >
                 <Bike className="w-4 h-4" />
@@ -388,7 +388,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
                   activeModuleTab === 'orders'
                     ? 'bg-amber-500 text-black shadow-md shadow-amber-500/20'
-                    : 'text-neutral-400 hover:text-white'
+                    : 'text-neutral-500 dark:text-neutral-400 hover:text-white'
                 }`}
               >
                 <FileText className="w-4 h-4" />
@@ -406,7 +406,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
             {/* Upload New Catalog Modal Trigger */}
             <button
               onClick={() => setIsUploadModalOpen(true)}
-              className="px-3.5 py-2.5 bg-neutral-900 border border-neutral-700 hover:border-red-500 hover:bg-neutral-800 text-white font-bold text-xs rounded-2xl flex items-center gap-2 transition-all shadow-md"
+              className="px-3.5 py-2.5 bg-white dark:bg-neutral-900 border border-neutral-700 hover:border-red-500 hover:bg-neutral-800 text-white font-bold text-xs rounded-2xl flex items-center gap-2 transition-all shadow-md"
             >
               <Upload className="w-4 h-4 text-red-500" />
               <span>Subir Novo Catálogo</span>
@@ -444,7 +444,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                     <Bike className="w-5 h-5 text-amber-400" />
                     1. Escolha a Marca & Modelo da Motocicleta
                   </h3>
-                  <p className="text-xs text-neutral-400">
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
                     Clique na moto para carregar os diagramas técnicos e vistas explodidas oficiais (EPC).
                   </p>
                 </div>
@@ -454,7 +454,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 {/* Expand / Collapse Section Button */}
                 <button
                   onClick={() => setIsModelsSectionExpanded(!isModelsSectionExpanded)}
-                  className="px-3 py-1.5 bg-neutral-900 border border-neutral-700 hover:border-amber-400 text-amber-400 font-bold text-xs rounded-xl flex items-center gap-1.5 transition-all shadow-sm shrink-0"
+                  className="px-3 py-1.5 bg-white dark:bg-neutral-900 border border-neutral-700 hover:border-amber-400 text-amber-400 font-bold text-xs rounded-xl flex items-center gap-1.5 transition-all shadow-sm shrink-0"
                   title={isModelsSectionExpanded ? "Comprimir galeria de modelos" : "Expandir galeria de modelos"}
                 >
                   {isModelsSectionExpanded ? (
@@ -472,18 +472,18 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
 
                 {/* Search by Model Name or Chassis VIN */}
                 <div className="relative min-w-[200px] sm:min-w-[260px]">
-                  <Search className="w-4 h-4 absolute left-3.5 top-3 text-neutral-400" />
+                  <Search className="w-4 h-4 absolute left-3.5 top-3 text-neutral-500 dark:text-neutral-400" />
                   <input
                     type="text"
                     value={modelSearchQuery}
                     onChange={(e) => setModelSearchQuery(e.target.value)}
                     placeholder="Buscar modelo ou prefixo de chassi..."
-                    className="w-full bg-neutral-900 border border-neutral-800 rounded-2xl pl-10 pr-4 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
+                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl pl-10 pr-4 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
                   />
                   {modelSearchQuery && (
                     <button 
                       onClick={() => setModelSearchQuery('')}
-                      className="absolute right-3 top-2.5 text-neutral-400 hover:text-white text-xs"
+                      className="absolute right-3 top-2.5 text-neutral-500 dark:text-neutral-400 hover:text-white text-xs"
                     >
                       ✕
                     </button>
@@ -497,13 +497,13 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
               <div className="flex flex-col lg:flex-row gap-6 animate-in fade-in duration-200">
               
               {/* Left Brand Selector Bar (Matching the 5 uploaded images) */}
-              <div className="w-full lg:w-52 shrink-0 bg-neutral-900/90 border border-neutral-800 rounded-2xl p-3 flex lg:flex-col gap-1 overflow-x-auto">
+              <div className="w-full lg:w-52 shrink-0 bg-white dark:bg-neutral-900/90 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-3 flex lg:flex-col gap-1 overflow-x-auto">
                 <button
                   onClick={() => setSelectedBrand('Suzuki')}
                   className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
                     selectedBrand === 'Suzuki'
                       ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
-                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 hover:text-white'
                   }`}
                 >
                   <span>SUZUKI</span>
@@ -523,7 +523,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
                     selectedBrand === 'Haojue'
                       ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
-                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 hover:text-white'
                   }`}
                 >
                   <span>HAOJUE</span>
@@ -537,7 +537,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
                     selectedBrand === 'Zontes'
                       ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
-                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 hover:text-white'
                   }`}
                 >
                   <span>ZONTES</span>
@@ -551,7 +551,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
                     selectedBrand === 'Hisun'
                       ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
-                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 hover:text-white'
                   }`}
                 >
                   <span>HISUN</span>
@@ -565,7 +565,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   className={`px-4 py-2.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all text-left flex items-center justify-between ${
                     selectedBrand === 'Kymco'
                       ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/40 font-black'
-                      : 'text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 hover:text-white'
                   }`}
                 >
                   <span>KYMCO</span>
@@ -583,11 +583,11 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   className={`px-4 py-2 rounded-xl text-[11px] font-bold transition-all text-left flex items-center justify-between ${
                     selectedBrand === 'ALL'
                       ? 'bg-amber-400 text-black font-extrabold shadow-md'
-                      : 'text-neutral-400 hover:bg-neutral-800 hover:text-white'
+                      : 'text-neutral-500 dark:text-neutral-400 hover:bg-neutral-800 hover:text-white'
                   }`}
                 >
                   <span>Todas as Marcas</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-300">
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-700 dark:text-neutral-300">
                     {brandCounts['ALL'] || 0}
                   </span>
                 </button>
@@ -613,7 +613,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                           rounded-2xl border p-4 cursor-pointer transition-all duration-200 group flex flex-col justify-between relative
                           ${isSelected
                             ? 'bg-gradient-to-b from-amber-500/10 via-neutral-900 to-[#18181b] border-amber-400 ring-2 ring-amber-400/40 shadow-xl shadow-amber-950/30'
-                            : 'bg-[#18181b] border-neutral-800 hover:border-neutral-600 hover:bg-neutral-900/90 shadow-md'
+                            : 'bg-[#18181b] border-neutral-200 dark:border-neutral-800 hover:border-neutral-600 hover:bg-white dark:bg-neutral-900/90 shadow-md'
                           }
                         `}
                       >
@@ -639,7 +639,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                           </div>
 
                           {/* Photo Banner with Studio look */}
-                          <div className="aspect-[16/11] rounded-xl overflow-hidden bg-gradient-to-b from-neutral-900 to-neutral-950 relative mb-3 border border-neutral-800 group-hover:border-neutral-700 flex items-center justify-center p-2">
+                          <div className="aspect-[16/11] rounded-xl overflow-hidden bg-gradient-to-b from-neutral-900 to-neutral-950 relative mb-3 border border-neutral-200 dark:border-neutral-800 group-hover:border-neutral-700 flex items-center justify-center p-2">
                             <img
                               src={model.image}
                               alt={model.name}
@@ -656,7 +656,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
 
                           {/* Price Display Section (Exact format from uploaded images: "A PARTIR DE: R$ xx.xxx,00") */}
                           <div className="text-center space-y-0.5 mb-2">
-                            <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block">
+                            <span className="text-[10px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider block">
                               A PARTIR DE:
                             </span>
                             <div className="text-sm sm:text-base font-black text-white tracking-tight">
@@ -668,7 +668,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                         </div>
 
                         {/* Bottom Action: "SAIBA MAIS / VER CATÁLOGO" Link in blue */}
-                        <div className="pt-2 border-t border-neutral-800/80 flex items-center justify-center">
+                        <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800/80 flex items-center justify-center">
                           <span className={`text-[11px] font-black underline tracking-wide uppercase transition-colors ${
                             isSelected ? 'text-amber-400' : 'text-blue-400 hover:text-blue-300'
                           }`}>
@@ -691,7 +691,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
               {/* Selected Model Bar with Groups and Technical Details */}
               <div className="bg-[#121215] border border-[#27272a] rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3 shadow-lg">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl overflow-hidden bg-neutral-900 border border-neutral-700 shrink-0">
+                  <div className="w-10 h-10 rounded-xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-700 shrink-0">
                     <img
                       src={selectedModel.image}
                       alt={selectedModel.name}
@@ -708,7 +708,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                         {selectedModel.displacement}
                       </span>
                     </div>
-                    <span className="text-xs text-neutral-400">
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400">
                       Chassi Prefixo: <span className="font-mono text-neutral-200">{selectedModel.chassisPrefix}</span> • Motor: {selectedModel.engineType}
                     </span>
                   </div>
@@ -716,7 +716,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
 
                 {/* Quick Illustration Selector */}
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-neutral-400 hidden sm:inline">Sistema:</span>
+                  <span className="text-xs text-neutral-500 dark:text-neutral-400 hidden sm:inline">Sistema:</span>
                   <select
                     value={selectedDiagram.id}
                     onChange={(e) => {
@@ -726,7 +726,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                         setSelectedRef(null);
                       }
                     }}
-                    className="bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-1.5 text-xs text-white font-bold focus:outline-none focus:border-amber-400"
+                    className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-1.5 text-xs text-white font-bold focus:outline-none focus:border-amber-400"
                   >
                     {activeDiagrams.map(diag => (
                       <option key={diag.id} value={diag.id}>
@@ -800,7 +800,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   orderStatusFilter === 'ALL'
                     ? 'bg-amber-400 text-black font-extrabold'
-                    : 'bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800'
+                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 Todos ({partsOrders.length})
@@ -810,7 +810,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   orderStatusFilter === 'aguardando_analise'
                     ? 'bg-amber-400 text-black font-extrabold'
-                    : 'bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800'
+                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 Em Análise Fábrica
@@ -820,7 +820,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   orderStatusFilter === 'em_separacao_cd'
                     ? 'bg-amber-400 text-black font-extrabold'
-                    : 'bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800'
+                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 Separando nos CDs
@@ -830,7 +830,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   orderStatusFilter === 'integrado_protheus'
                     ? 'bg-amber-400 text-black font-extrabold'
-                    : 'bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800'
+                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 Integrados Protheus ERP
@@ -839,13 +839,13 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
 
             {/* Order Search */}
             <div className="relative min-w-[220px]">
-              <Search className="w-3.5 h-3.5 absolute left-3 top-2.5 text-neutral-400" />
+              <Search className="w-3.5 h-3.5 absolute left-3 top-2.5 text-neutral-500 dark:text-neutral-400" />
               <input
                 type="text"
                 value={orderSearchQuery}
                 onChange={(e) => setOrderSearchQuery(e.target.value)}
                 placeholder="Buscar pedido, concessionária ou peça..."
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl pl-9 pr-4 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
+                className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl pl-9 pr-4 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
               />
             </div>
           </div>
@@ -853,11 +853,11 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
           {/* Orders Cards Grid / Table */}
           {scopedOrders.length === 0 ? (
             <div className="bg-[#121215] border border-[#27272a] rounded-3xl p-12 text-center space-y-3">
-              <div className="w-14 h-14 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center mx-auto text-neutral-500">
+              <div className="w-14 h-14 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex items-center justify-center mx-auto text-neutral-500">
                 <FileText className="w-7 h-7" />
               </div>
               <h4 className="font-bold text-white text-base">Nenhum pedido de peças encontrado</h4>
-              <p className="text-xs text-neutral-400 max-w-sm mx-auto">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 max-w-sm mx-auto">
                 Utilize o Catálogo de Peças (EPC) para navegar pelas peças e transmitir pedidos oficiais à fábrica.
               </p>
             </div>
@@ -870,7 +870,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                     className="bg-[#121215] border border-[#27272a] hover:border-neutral-700 rounded-2xl p-4 sm:p-5 transition-all shadow-lg space-y-4"
                   >
                     {/* Top Row: Order ID, Type, Date, Status */}
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800 pb-3">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-3">
                       <div className="flex items-center gap-3">
                         <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-mono font-bold text-xs">
                           PEC
@@ -890,7 +890,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                               {order.orderType === 'urgente_vor' ? 'URGENTE VOR' : order.orderType === 'garantia_pos_venda' ? 'GARANTIA' : 'REPOSIÇÃO'}
                             </span>
                           </div>
-                          <span className="text-[11px] text-neutral-400">
+                          <span className="text-[11px] text-neutral-500 dark:text-neutral-400">
                             {order.dealershipName} • Emitido em {order.createdAt}
                           </span>
                         </div>
@@ -928,14 +928,14 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                     {/* Middle Row: Items Summary Chips & Financials */}
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
                       <div className="flex-1 space-y-1.5">
-                        <div className="text-[11px] text-neutral-400 font-bold uppercase tracking-wider">
+                        <div className="text-[11px] text-neutral-500 dark:text-neutral-400 font-bold uppercase tracking-wider">
                           Itens do Pedido ({order.totalPartsCount} peças):
                         </div>
                         <div className="flex flex-wrap gap-1.5">
                           {order.items.slice(0, 4).map((item) => (
                             <span
                               key={item.id}
-                              className="px-2.5 py-1 rounded-lg bg-neutral-900 border border-neutral-800 text-[11px] text-neutral-300 font-mono flex items-center gap-1.5"
+                              className="px-2.5 py-1 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-[11px] text-neutral-700 dark:text-neutral-300 font-mono flex items-center gap-1.5"
                             >
                               <span className="text-amber-400 font-bold">{item.quantity}x</span>
                               <span>{item.part.partNumber}</span>
@@ -943,7 +943,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                             </span>
                           ))}
                           {order.items.length > 4 && (
-                            <span className="px-2 py-1 rounded-lg bg-neutral-900 border border-neutral-800 text-[11px] text-neutral-400 font-bold">
+                            <span className="px-2 py-1 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-[11px] text-neutral-500 dark:text-neutral-400 font-bold">
                               +{order.items.length - 4} outros itens
                             </span>
                           )}
@@ -951,12 +951,12 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                       </div>
 
                       {/* Total & Warehouse */}
-                      <div className="text-right space-y-0.5 shrink-0 font-tabular bg-neutral-950 p-2.5 rounded-xl border border-neutral-800/80">
-                        <div className="text-[10px] text-neutral-400 uppercase font-bold">Total Faturado Fábrica</div>
+                      <div className="text-right space-y-0.5 shrink-0 font-tabular bg-neutral-50 dark:bg-neutral-950 p-2.5 rounded-xl border border-neutral-200 dark:border-neutral-800/80">
+                        <div className="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase font-bold">Total Faturado Fábrica</div>
                         <div className="text-base font-mono font-black text-amber-400">
                           R$ {order.totalAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                         </div>
-                        <div className="text-[10px] text-neutral-400 font-mono">
+                        <div className="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono">
                           {order.allocatedWarehouse || 'CD Jundiaí (SP)'} • Frete {order.freightMode}
                         </div>
                       </div>
@@ -964,9 +964,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
 
                     {/* Montadora Inline Quick Approval Tools */}
                     {isMontadora && (
-                      <div className="pt-2 border-t border-neutral-800/80 flex flex-wrap items-center justify-between gap-2">
-                        <div className="text-[11px] text-neutral-400 flex items-center gap-2">
-                          <span className="font-bold text-neutral-300">Ações Montadora J. Toledo:</span>
+                      <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800/80 flex flex-wrap items-center justify-between gap-2">
+                        <div className="text-[11px] text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
+                          <span className="font-bold text-neutral-700 dark:text-neutral-300">Ações Montadora J. Toledo:</span>
                           {order.stockVerified && <span className="text-emerald-400 font-bold">✓ Estoque CD Confirmado</span>}
                           {order.creditApproved && <span className="text-emerald-400 font-bold">✓ Crédito Aprovado</span>}
                         </div>

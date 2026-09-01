@@ -329,29 +329,48 @@ export const ReserveFundView: React.FC<ReserveFundViewProps> = ({
                       )}
 
                       <td className="py-2.5 px-3">
-                        <span className="font-bold text-neutral-900 dark:text-white block">{tx.reference}</span>
-                        <span className="text-[10px] text-amber-600 dark:text-amber-400 font-semibold">{tx.brand}</span>
+                        <div className="flex items-center gap-1.5">
+                          <span className="font-bold text-neutral-900 dark:text-white block">{tx.reference}</span>
+                          {tx.origin === 'rd_station' && (
+                            <span className="text-[9px] bg-purple-500/20 text-purple-300 border border-purple-500/30 px-1.5 py-0.2 rounded font-bold uppercase">
+                              RD Station
+                            </span>
+                          )}
+                        </div>
+                        <div className="flex items-center gap-2 mt-0.5">
+                          <span className="text-[10px] text-amber-600 dark:text-amber-400 font-semibold">{tx.brand}</span>
+                          {tx.userResponsible && (
+                            <span className="text-[10px] text-neutral-500">Resp.: {tx.userResponsible}</span>
+                          )}
+                        </div>
                       </td>
                       <td className="py-2.5 px-3 text-neutral-600 dark:text-neutral-300">
                         {tx.modelName && <div className="font-semibold text-neutral-800 dark:text-neutral-200">{tx.modelName}</div>}
                         {tx.chassi && <div className="text-[10px] text-neutral-400">Chassi: {tx.chassi}</div>}
+                        {tx.observation && <div className="text-[10px] text-neutral-500 italic truncate max-w-[150px]">{tx.observation}</div>}
                       </td>
                       <td className="py-2.5 px-3 text-right font-bold text-emerald-600 dark:text-emerald-400">
                         R$ {tx.amount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                       </td>
                       <td className="py-2.5 px-3 text-center">
                         {isMontadora ? (
-                          <button
-                            onClick={() => handleToggleApproval(tx.id)}
-                            title="Alternar aprovação financeira"
-                            className={`w-6 h-6 rounded border flex items-center justify-center mx-auto transition-colors ${
-                              tx.financialApproved 
-                                ? 'bg-emerald-500 border-emerald-600 text-white' 
-                                : 'border-neutral-400 bg-neutral-100 dark:bg-neutral-800'
-                            }`}
-                          >
-                            {tx.financialApproved && <CheckCircle2 className="w-4 h-4" />}
-                          </button>
+                          <div className="flex flex-col items-center gap-1">
+                            <button
+                              onClick={() => handleToggleApproval(tx.id)}
+                              title={tx.financialApproved ? "Aprovado pelo Financeiro (Clique para alternar)" : "Pendente de Aprovação Financeira (Clique para aprovar)"}
+                              className={`px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1 transition-all ${
+                                tx.financialApproved 
+                                  ? 'bg-emerald-600 text-white shadow-sm' 
+                                  : 'bg-amber-500 hover:bg-amber-400 text-neutral-950 animate-pulse'
+                              }`}
+                            >
+                              <CheckCircle2 className="w-3 h-3" />
+                              <span>{tx.financialApproved ? 'Aprovado' : 'Aprovar'}</span>
+                            </button>
+                            {tx.financialApprovedBy && (
+                              <span className="text-[9px] text-neutral-500 truncate max-w-[100px]">{tx.financialApprovedBy}</span>
+                            )}
+                          </div>
                         ) : (
                           <span className={`inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full ${
                             tx.financialApproved 
