@@ -410,6 +410,10 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
     ? (dealerships.reduce((acc, d) => acc + (d.onTimePaymentRate || 95), 0) / dealerships.length).toFixed(1)
     : '98.0';
 
+  // Common Input Styles for Light / Dark Mode Consistency
+  const inputClassName = "w-full bg-neutral-50 dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs font-medium text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-blue-500 transition-colors";
+  const selectClassName = "w-full bg-neutral-50 dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs font-semibold text-neutral-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors";
+
   return (
     <div className="space-y-6 pb-12 animate-in fade-in duration-300">
       {/* Header Banner */}
@@ -425,15 +429,15 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
             <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
               Cadastro e Configurações de Concessionárias
             </h1>
-            <p className="text-neutral-300 text-sm max-w-2xl">
+            <p className="text-neutral-300 text-sm max-w-2xl leading-relaxed">
               Administração completa e individualizada das concessionárias: dados cadastrais, endereços e logística, gestão de usuários e senhas de acesso, contas bancárias e concessão de limites de crédito.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
             <button
               onClick={() => setNewDealerModalOpen(true)}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-5 py-3 rounded-2xl text-sm flex items-center gap-2 transition-all shadow-lg shadow-blue-500/25 active:scale-95"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-5 py-3 rounded-2xl text-sm flex items-center gap-2 transition-all shadow-lg shadow-blue-500/25 active:scale-95 cursor-pointer"
             >
               <Plus className="w-4 h-4 stroke-[2.5]" />
               <span>Cadastrar Nova Concessionária</span>
@@ -448,7 +452,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
         <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Rede Homologada</span>
-            <div className="p-2 bg-blue-100 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-600/30 text-blue-600 dark:text-blue-400 rounded-xl">
+            <div className="p-2 bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-600/30 text-blue-600 dark:text-blue-400 rounded-xl">
               <Store className="w-4 h-4" />
             </div>
           </div>
@@ -464,14 +468,14 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
         <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Crédito Total Homologado</span>
-            <div className="p-2 bg-indigo-100 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-600/30 text-indigo-600 dark:text-indigo-400 rounded-xl">
+            <div className="p-2 bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-600/30 text-indigo-600 dark:text-indigo-400 rounded-xl">
               <CreditCard className="w-4 h-4" />
             </div>
           </div>
           <p className="text-2xl md:text-3xl font-extrabold text-neutral-900 dark:text-white font-tabular">
             R$ {(totalCreditGranted / 1000000).toFixed(1)} M
           </p>
-          <div className="flex items-center gap-2 mt-2 text-xs text-indigo-600 dark:text-indigo-400">
+          <div className="flex items-center gap-2 mt-2 text-xs text-indigo-600 dark:text-indigo-400 font-medium">
             <BadgeCheck className="w-3.5 h-3.5" />
             <span>Comitê Financeiro J. Toledo</span>
           </div>
@@ -481,7 +485,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
         <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Crédito Utilizado</span>
-            <div className="p-2 bg-amber-100 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-600/30 text-amber-600 dark:text-amber-400 rounded-xl">
+            <div className="p-2 bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-600/30 text-amber-600 dark:text-amber-400 rounded-xl">
               <DollarSign className="w-4 h-4" />
             </div>
           </div>
@@ -490,7 +494,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           </p>
           <div className="mt-2 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
             <span>Ocupação: {((totalCreditUsed / Math.max(1, totalCreditGranted)) * 100).toFixed(0)}%</span>
-            <span className="text-emerald-600 dark:text-emerald-400">Saldo: R$ {(totalAvailableCredit / 1000000).toFixed(1)}M</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-medium">Saldo: R$ {(totalAvailableCredit / 1000000).toFixed(1)}M</span>
           </div>
         </div>
 
@@ -498,7 +502,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
         <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Usuários / Acessos</span>
-            <div className="p-2 bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-600/30 text-emerald-600 dark:text-emerald-400 rounded-xl">
+            <div className="p-2 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-600/30 text-emerald-600 dark:text-emerald-400 rounded-xl">
               <Users className="w-4 h-4" />
             </div>
           </div>
@@ -513,7 +517,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
         <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 shadow-sm hover:border-blue-500/40 transition-all">
           <div className="flex justify-between items-start mb-3">
             <span className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">Pontualidade Média</span>
-            <div className="p-2 bg-teal-100 dark:bg-teal-950/80 border border-teal-200 dark:border-teal-600/30 text-teal-600 dark:text-teal-400 rounded-xl">
+            <div className="p-2 bg-teal-50 dark:bg-teal-950/80 border border-teal-200 dark:border-teal-600/30 text-teal-600 dark:text-teal-400 rounded-xl">
               <ShieldCheck className="w-4 h-4" />
             </div>
           </div>
@@ -527,7 +531,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
       </div>
 
       {/* Search & Filters Controls Bar */}
-      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-4 md:p-5 shadow-xl flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-4 md:p-5 shadow-lg flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
         {/* Search Bar */}
         <div className="relative flex-1">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-400" />
@@ -536,12 +540,12 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
             placeholder="Buscar por Nome Fantasia, Razão Social, CNPJ, Código SZX, Cidade ou Titular..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-white dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-2xl pl-10 pr-4 py-2.5 text-xs md:text-sm text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-blue-500 transition-colors"
+            className="w-full bg-neutral-50 dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-2xl pl-10 pr-10 py-2.5 text-xs md:text-sm text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-blue-500 transition-colors"
           />
           {searchTerm && (
             <button
               onClick={() => setSearchTerm('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-xs"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-xs font-semibold px-1"
             >
               Limpar
             </button>
@@ -554,7 +558,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           <select
             value={selectedRegion}
             onChange={(e) => setSelectedRegion(e.target.value)}
-            className="bg-white dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
+            className="bg-neutral-50 dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2.5 text-xs font-semibold text-neutral-900 dark:text-neutral-200 focus:outline-none focus:border-blue-500 min-w-[140px]"
           >
             <option value="all">Todas as Regiões</option>
             <option value="Sul">Região Sul</option>
@@ -568,7 +572,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           <select
             value={selectedTier}
             onChange={(e) => setSelectedTier(e.target.value)}
-            className="bg-white dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
+            className="bg-neutral-50 dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2.5 text-xs font-semibold text-neutral-900 dark:text-neutral-200 focus:outline-none focus:border-blue-500 min-w-[130px]"
           >
             <option value="all">Todos os Tiers</option>
             <option value="Diamante">Tier Diamante</option>
@@ -581,7 +585,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="bg-white dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2 text-xs font-semibold text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500"
+            className="bg-neutral-50 dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2.5 text-xs font-semibold text-neutral-900 dark:text-neutral-200 focus:outline-none focus:border-blue-500 min-w-[130px]"
           >
             <option value="all">Todos os Status</option>
             <option value="ativa">Ativa</option>
@@ -594,8 +598,8 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
           <div className="bg-neutral-100 dark:bg-[#121215] p-1 border border-neutral-300 dark:border-[#27272a] rounded-xl flex items-center gap-1">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-1.5 rounded-lg transition-colors ${
-                viewMode === 'grid' ? 'bg-blue-600 text-white shadow' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              className={`p-2 rounded-lg transition-colors ${
+                viewMode === 'grid' ? 'bg-blue-600 text-white shadow-sm' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
               }`}
               title="Visualização em Cards"
             >
@@ -603,8 +607,8 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
             </button>
             <button
               onClick={() => setViewMode('table')}
-              className={`p-1.5 rounded-lg transition-colors ${
-                viewMode === 'table' ? 'bg-blue-600 text-white shadow' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              className={`p-2 rounded-lg transition-colors ${
+                viewMode === 'table' ? 'bg-blue-600 text-white shadow-sm' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
               }`}
               title="Visualização em Tabela"
             >
@@ -632,7 +636,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
               setSelectedTier('all');
               setSelectedCreditRating('all');
             }}
-            className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-900 dark:text-white font-bold rounded-xl text-xs"
+            className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-900 dark:text-white font-bold rounded-xl text-xs transition-colors"
           >
             Redefinir Filtros
           </button>
@@ -647,7 +651,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
             return (
               <div
                 key={dealer.id}
-                className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] hover:border-blue-500/50 rounded-3xl p-6 shadow-xl transition-all flex flex-col justify-between group relative overflow-hidden"
+                className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] hover:border-blue-500/50 rounded-3xl p-6 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Top Accent Line */}
                 <div 
@@ -657,9 +661,9 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
                 <div className="space-y-4">
                   {/* Top Bar: Code, Tier, Status */}
-                  <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center justify-between gap-2 pt-1">
                     <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs font-extrabold px-2.5 py-1 rounded-lg bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-600/40 text-blue-700 dark:text-blue-400">
+                      <span className="font-mono text-xs font-extrabold px-2.5 py-1 rounded-lg bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-600/40 text-blue-700 dark:text-blue-400">
                         {dealer.dealerCode}
                       </span>
                       <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider ${
@@ -675,7 +679,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       </span>
                     </div>
 
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md uppercase ${
+                    <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-md uppercase ${
                       dealer.status === 'ativa'
                         ? 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-600/30'
                         : dealer.status === 'homologacao'
@@ -692,21 +696,21 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       {dealer.tradeName || dealer.name}
                     </h3>
                     <p className="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-0.5">{dealer.legalName}</p>
-                    <p className="text-xs text-neutral-500 dark:text-neutral-400 flex items-center gap-1.5 mt-2 font-medium">
+                    <p className="text-xs text-neutral-600 dark:text-neutral-400 flex items-center gap-1.5 mt-2 font-medium">
                       <MapPin className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400 shrink-0" />
                       <span>{dealer.city}/{dealer.state} • Região {dealer.region}</span>
                     </p>
                   </div>
 
                   {/* Corporate Snippet */}
-                  <div className="bg-neutral-50 dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-3 text-xs space-y-1.5 font-tabular">
+                  <div className="bg-neutral-50 dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-3.5 text-xs space-y-1.5 font-tabular">
                     <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
                       <span>CNPJ:</span>
                       <span className="font-mono text-neutral-900 dark:text-white font-bold">{dealer.cnpj}</span>
                     </div>
                     <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
                       <span>Titular / Gestor:</span>
-                      <span className="text-neutral-900 dark:text-white font-medium">{dealer.manager}</span>
+                      <span className="text-neutral-900 dark:text-white font-semibold">{dealer.manager}</span>
                     </div>
                     <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
                       <span>Usuários Ativos:</span>
@@ -742,23 +746,23 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       </div>
                     </div>
 
-                    <div className="pt-1 flex items-center justify-between text-[11px] border-t border-neutral-200 dark:border-neutral-800/80">
+                    <div className="pt-1.5 flex items-center justify-between text-[11px] border-t border-neutral-200 dark:border-neutral-800/80">
                       <div className="flex items-center gap-1 text-neutral-500 dark:text-neutral-400">
                         <span>Rating:</span>
                         <span className="font-extrabold text-blue-600 dark:text-blue-400 font-mono">{dealer.creditRating || 'AAA'}</span>
                       </div>
                       <span className="text-neutral-500 dark:text-neutral-400">
-                        Adimplência: <strong className="text-emerald-400">{dealer.onTimePaymentRate || 98.0}%</strong>
+                        Adimplência: <strong className="text-emerald-600 dark:text-emerald-400">{dealer.onTimePaymentRate || 98.0}%</strong>
                       </span>
                     </div>
                   </div>
                 </div>
 
                 {/* Card Action Buttons */}
-                <div className="mt-5 pt-4 border-t border-[#27272a] grid grid-cols-2 gap-2">
+                <div className="mt-5 pt-4 border-t border-neutral-200 dark:border-[#27272a] grid grid-cols-2 gap-2">
                   <button
                     onClick={() => handleOpenEditModal(dealer, 'cadastral')}
-                    className="w-full bg-neutral-800 hover:bg-neutral-700 text-white font-bold py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all"
+                    className="w-full bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-95 cursor-pointer"
                   >
                     <SlidersHorizontal className="w-3.5 h-3.5 text-blue-400" />
                     <span>Configurar Ficha</span>
@@ -769,7 +773,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       onSelectDealership(dealer.id);
                       onNavigate('dashboard');
                     }}
-                    className="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white font-bold py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all border border-blue-600/30 hover:border-transparent"
+                    className="w-full bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white border border-blue-200 dark:bg-blue-600/20 dark:hover:bg-blue-600 dark:text-blue-300 dark:hover:text-white dark:border-blue-600/30 font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all active:scale-95 cursor-pointer"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
                     <span>Visão Loja</span>
@@ -781,10 +785,10 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
         </div>
       ) : (
         /* Detailed Table View */
-        <div className="bg-[#18181b] border border-[#27272a] rounded-3xl overflow-hidden shadow-2xl">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl overflow-hidden shadow-xl">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs font-tabular">
-              <thead className="bg-[#121215] border-b border-[#27272a] text-neutral-500 dark:text-neutral-400 uppercase text-[10px] tracking-wider font-bold">
+              <thead className="bg-neutral-50 dark:bg-[#121215] border-b border-neutral-200 dark:border-[#27272a] text-neutral-500 dark:text-neutral-400 uppercase text-[10px] tracking-wider font-bold">
                 <tr>
                   <th className="py-3.5 px-4">Código / Nome</th>
                   <th className="py-3.5 px-4">CNPJ / Razão Social</th>
@@ -796,58 +800,58 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   <th className="py-3.5 px-4 text-right">Ações</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#27272a] text-neutral-200">
+              <tbody className="divide-y divide-neutral-200 dark:divide-[#27272a] text-neutral-800 dark:text-neutral-200">
                 {filteredDealerships.map((dealer) => {
                   const creditPercent = Math.min(100, Math.round(((dealer.creditUsed || 0) / Math.max(1, dealer.creditLimit || 1)) * 100));
 
                   return (
-                    <tr key={dealer.id} className="hover:bg-white dark:bg-neutral-900/60 transition-colors">
+                    <tr key={dealer.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/60 transition-colors">
                       <td className="py-3.5 px-4">
                         <div className="flex items-center gap-2">
-                          <span className="font-mono text-[11px] font-bold text-blue-400 bg-blue-950 px-2 py-0.5 rounded border border-blue-800">
+                          <span className="font-mono text-[11px] font-bold text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950 px-2 py-0.5 rounded border border-blue-200 dark:border-blue-800">
                             {dealer.dealerCode}
                           </span>
                           <div>
-                            <p className="font-bold text-white text-[13px]">{dealer.tradeName || dealer.name}</p>
+                            <p className="font-bold text-neutral-900 dark:text-white text-[13px]">{dealer.tradeName || dealer.name}</p>
                             <p className="text-[11px] text-neutral-500 dark:text-neutral-400">{dealer.phone}</p>
                           </div>
                         </div>
                       </td>
                       <td className="py-3.5 px-4">
-                        <p className="font-mono text-white">{dealer.cnpj}</p>
+                        <p className="font-mono font-semibold text-neutral-900 dark:text-white">{dealer.cnpj}</p>
                         <p className="text-[11px] text-neutral-500 dark:text-neutral-400 truncate max-w-[200px]">{dealer.legalName}</p>
                       </td>
                       <td className="py-3.5 px-4">
-                        <p className="text-white font-medium">{dealer.city}/{dealer.state}</p>
+                        <p className="text-neutral-900 dark:text-white font-medium">{dealer.city}/{dealer.state}</p>
                         <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Região {dealer.region}</p>
                       </td>
                       <td className="py-3.5 px-4">
                         <div className="flex flex-col gap-1 items-start">
-                          <span className="text-[10px] font-bold px-2 py-0.2 rounded uppercase bg-blue-500/20 text-blue-300">
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300">
                             Tier {dealer.tier}
                           </span>
-                          <span className="text-[9px] font-bold uppercase text-emerald-400">
+                          <span className="text-[9px] font-bold uppercase text-emerald-600 dark:text-emerald-400">
                             {dealer.status}
                           </span>
                         </div>
                       </td>
                       <td className="py-3.5 px-4 text-right">
-                        <p className="font-bold text-white text-[13px]">
+                        <p className="font-bold text-neutral-900 dark:text-white text-[13px]">
                           R$ {(dealer.creditLimit || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                         </p>
                         <p className="text-[11px] text-neutral-500 dark:text-neutral-400">
-                          Utilizado: <span className="text-amber-400">R$ {((dealer.creditUsed || 0) / 1000).toFixed(0)}k</span> ({creditPercent}%)
+                          Utilizado: <span className="text-amber-600 dark:text-amber-400 font-semibold">R$ {((dealer.creditUsed || 0) / 1000).toFixed(0)}k</span> ({creditPercent}%)
                         </p>
                       </td>
                       <td className="py-3.5 px-4 text-center">
-                        <span className="font-mono font-bold text-blue-400 bg-white dark:bg-neutral-900 px-2 py-1 rounded border border-neutral-200 dark:border-neutral-800">
+                        <span className="font-mono font-bold text-blue-600 dark:text-blue-400 bg-neutral-100 dark:bg-neutral-900 px-2 py-1 rounded border border-neutral-200 dark:border-neutral-800">
                           {dealer.creditRating || 'AAA'}
                         </span>
-                        <p className="text-[10px] text-emerald-400 mt-0.5">{dealer.onTimePaymentRate || 98}%</p>
+                        <p className="text-[10px] text-emerald-600 dark:text-emerald-400 mt-0.5 font-bold">{dealer.onTimePaymentRate || 98}%</p>
                       </td>
                       <td className="py-3.5 px-4 text-center">
                         <span className="inline-flex items-center gap-1 font-bold text-neutral-700 dark:text-neutral-300">
-                          <Users className="w-3.5 h-3.5 text-blue-400" />
+                          <Users className="w-3.5 h-3.5 text-blue-500" />
                           {dealer.users?.length || 0}
                         </span>
                       </td>
@@ -855,17 +859,17 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         <div className="flex items-center justify-end gap-2">
                           <button
                             onClick={() => handleOpenEditModal(dealer, 'cadastral')}
-                            className="p-1.5 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg transition-colors"
+                            className="p-2 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-700 dark:text-white rounded-lg transition-colors"
                             title="Editar Ficha e Configurações"
                           >
-                            <SlidersHorizontal className="w-4 h-4 text-blue-400" />
+                            <SlidersHorizontal className="w-4 h-4 text-blue-500" />
                           </button>
                           <button
                             onClick={() => {
                               onSelectDealership(dealer.id);
                               onNavigate('dashboard');
                             }}
-                            className="p-1.5 bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white rounded-lg transition-colors"
+                            className="p-2 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white dark:bg-blue-600/20 dark:hover:bg-blue-600 dark:text-blue-300 dark:hover:text-white rounded-lg transition-colors"
                             title="Acessar Cockpit da Loja"
                           >
                             <ExternalLink className="w-4 h-4" />
@@ -885,27 +889,27 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
       {/* COMPREHENSIVE DEALERSHIP MANAGEMENT & EDIT MODAL (5 TABS)                */}
       {/* ========================================================================= */}
       {selectedDealership && editForm && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md overflow-y-auto">
-          <div className="bg-[#18181b] rounded-3xl max-w-5xl w-full p-6 md:p-8 shadow-2xl border border-[#27272a] animate-in fade-in zoom-in-95 my-6 max-h-[92vh] flex flex-col">
+        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
+          <div className="bg-white dark:bg-[#18181b] rounded-3xl max-w-5xl w-full p-6 md:p-8 shadow-2xl border border-neutral-200 dark:border-[#27272a] animate-in fade-in zoom-in-95 my-6 max-h-[92vh] flex flex-col text-neutral-900 dark:text-white">
             
             {/* Modal Header */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between pb-5 border-b border-[#27272a] gap-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between pb-5 border-b border-neutral-200 dark:border-[#27272a] gap-4">
               <div className="flex items-center gap-3.5">
-                <div className="w-12 h-12 rounded-2xl bg-blue-950/80 border border-blue-600/40 text-blue-400 flex items-center justify-center font-bold text-lg shadow-inner">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-600/40 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-lg shadow-inner shrink-0">
                   <Building2 className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-blue-900/60 border border-blue-700 text-blue-300">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/60 border border-blue-300 dark:border-blue-700 text-blue-800 dark:text-blue-300">
                       {editForm.dealerCode}
                     </span>
-                    <h2 className="text-xl font-bold text-white">{editForm.tradeName || editForm.name}</h2>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase bg-emerald-950 text-emerald-400 border border-emerald-800">
+                    <h2 className="text-xl font-bold text-neutral-900 dark:text-white">{editForm.tradeName || editForm.name}</h2>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded uppercase bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800">
                       {editForm.status}
                     </span>
                   </div>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">
-                    {editForm.legalName} • CNPJ: <span className="font-mono font-bold text-neutral-700 dark:text-neutral-300">{editForm.cnpj}</span>
+                    {editForm.legalName} • CNPJ: <span className="font-mono font-bold text-neutral-800 dark:text-neutral-200">{editForm.cnpj}</span>
                   </p>
                 </div>
               </div>
@@ -916,15 +920,15 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     onSelectDealership(editForm.id);
                     onNavigate('dashboard');
                   }}
-                  className="bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-colors border border-neutral-700"
+                  className="bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-colors border border-neutral-300 dark:border-neutral-700 cursor-pointer"
                 >
-                  <ExternalLink className="w-3.5 h-3.5 text-blue-400" />
+                  <ExternalLink className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
                   <span>Acessar Visão Loja</span>
                 </button>
 
                 <button
                   onClick={() => setSelectedDealership(null)}
-                  className="text-neutral-500 dark:text-neutral-400 hover:text-white p-2 rounded-xl hover:bg-neutral-800 transition-colors"
+                  className="text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-2 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -933,20 +937,20 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
             {/* Notification Banner */}
             {saveNotification && (
-              <div className="mt-4 p-3 bg-emerald-950/80 border border-emerald-600/50 rounded-2xl text-emerald-300 text-xs flex items-center gap-2 animate-in fade-in">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="mt-4 p-3 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-600/50 rounded-2xl text-emerald-800 dark:text-emerald-300 text-xs flex items-center gap-2 animate-in fade-in">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <span>{saveNotification}</span>
               </div>
             )}
 
             {/* Tab Navigation */}
-            <div className="flex flex-wrap items-center gap-2 pt-4 pb-2 border-b border-[#27272a]">
+            <div className="flex items-center gap-2 pt-4 pb-3 border-b border-neutral-200 dark:border-[#27272a] overflow-x-auto no-scrollbar">
               <button
                 onClick={() => setActiveTab('cadastral')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 whitespace-nowrap transition-all cursor-pointer ${
                   activeTab === 'cadastral'
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
-                    : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-white dark:bg-neutral-900'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    : 'bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 <Briefcase className="w-3.5 h-3.5" />
@@ -955,10 +959,10 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
               <button
                 onClick={() => setActiveTab('address')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 whitespace-nowrap transition-all cursor-pointer ${
                   activeTab === 'address'
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
-                    : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-white dark:bg-neutral-900'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    : 'bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 <MapPin className="w-3.5 h-3.5" />
@@ -967,34 +971,34 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
               <button
                 onClick={() => setActiveTab('users')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 whitespace-nowrap transition-all cursor-pointer ${
                   activeTab === 'users'
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
-                    : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-white dark:bg-neutral-900'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    : 'bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 <Users className="w-3.5 h-3.5" />
-                <span>3. Usuários, Senhas & Acessos ({editForm.users?.length || 0})</span>
+                <span>3. Usuários & Acessos ({editForm.users?.length || 0})</span>
               </button>
 
               <button
                 onClick={() => setActiveTab('financial')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 whitespace-nowrap transition-all cursor-pointer ${
                   activeTab === 'financial'
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
-                    : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-white dark:bg-neutral-900'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    : 'bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 <DollarSign className="w-3.5 h-3.5" />
-                <span>4. Financeiro & Limite de Crédito</span>
+                <span>4. Financeiro & Crédito</span>
               </button>
 
               <button
                 onClick={() => setActiveTab('operations')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 whitespace-nowrap transition-all cursor-pointer ${
                   activeTab === 'operations'
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
-                    : 'text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-white dark:bg-neutral-900'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    : 'bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 <Bike className="w-3.5 h-3.5" />
@@ -1017,7 +1021,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.dealerCode}
                         onChange={(e) => setEditForm({ ...editForm, dealerCode: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs text-white font-mono font-bold focus:outline-none focus:border-blue-500"
+                        className={`${inputClassName} font-mono font-bold`}
                       />
                     </div>
 
@@ -1029,7 +1033,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.cnpj}
                         onChange={(e) => setEditForm({ ...editForm, cnpj: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs text-white font-mono font-bold focus:outline-none focus:border-blue-500"
+                        className={`${inputClassName} font-mono font-bold`}
                       />
                     </div>
 
@@ -1040,7 +1044,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       <select
                         value={editForm.status}
                         onChange={(e) => setEditForm({ ...editForm, status: e.target.value as DealershipStatus })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs text-white font-bold focus:outline-none focus:border-blue-500"
+                        className={selectClassName}
                       >
                         <option value="ativa">Ativa (Operação Normal)</option>
                         <option value="homologacao">Em Homologação / Auditoria</option>
@@ -1059,7 +1063,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.legalName}
                         onChange={(e) => setEditForm({ ...editForm, legalName: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
 
@@ -1071,7 +1075,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.tradeName}
                         onChange={(e) => setEditForm({ ...editForm, tradeName: e.target.value, name: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs text-white font-bold focus:outline-none focus:border-blue-500"
+                        className={`${inputClassName} font-bold`}
                       />
                     </div>
                   </div>
@@ -1085,7 +1089,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.stateRegistration || ''}
                         onChange={(e) => setEditForm({ ...editForm, stateRegistration: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
 
@@ -1097,7 +1101,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.municipalRegistration || ''}
                         onChange={(e) => setEditForm({ ...editForm, municipalRegistration: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
 
@@ -1108,7 +1112,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       <select
                         value={editForm.taxRegime || 'Lucro Real'}
                         onChange={(e) => setEditForm({ ...editForm, taxRegime: e.target.value as TaxRegime })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={selectClassName}
                       >
                         <option value="Lucro Real">Lucro Real</option>
                         <option value="Lucro Presumido">Lucro Presumido</option>
@@ -1125,14 +1129,14 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         value={editForm.foundedDate || ''}
                         onChange={(e) => setEditForm({ ...editForm, foundedDate: e.target.value })}
                         placeholder="DD/MM/AAAA"
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
                   </div>
 
                   {/* Contract & Tier */}
-                  <div className="bg-[#121215] border border-[#27272a] rounded-2xl p-4.5 space-y-4">
-                    <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
+                  <div className="bg-neutral-50 dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4.5 space-y-4">
+                    <h4 className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
                       <FileText className="w-4 h-4" />
                       <span>Contrato de Concessão & Classificação da Montadora</span>
                     </h4>
@@ -1146,7 +1150,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           type="text"
                           value={editForm.dealerContractNumber || ''}
                           onChange={(e) => setEditForm({ ...editForm, dealerContractNumber: e.target.value })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-blue-500"
+                          className={`${inputClassName} font-mono`}
                         />
                       </div>
 
@@ -1158,7 +1162,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           type="text"
                           value={editForm.contractValidUntil || ''}
                           onChange={(e) => setEditForm({ ...editForm, contractValidUntil: e.target.value })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                          className={inputClassName}
                         />
                       </div>
 
@@ -1169,7 +1173,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         <select
                           value={editForm.tier || 'Ouro'}
                           onChange={(e) => setEditForm({ ...editForm, tier: e.target.value as DealerTier })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-bold focus:outline-none focus:border-blue-500"
+                          className={selectClassName}
                         >
                           <option value="Diamante">Tier Diamante (Cota Máxima)</option>
                           <option value="Ouro">Tier Ouro (Cota Alta)</option>
@@ -1179,7 +1183,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       </div>
                     </div>
 
-                    {/* Brands Authorized & Regional Selection (Requirement 20) */}
+                    {/* Brands Authorized & Regional Selection */}
                     <div>
                       <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-2">
                         Marcas Homologadas & Regionais da Montadora
@@ -1188,8 +1192,8 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         {(['Suzuki', 'Zontes', 'Haojue', 'Kymco'] as BrandType[]).map((brand) => {
                           const isAuthorized = editForm.brandsAuthorized?.includes(brand);
                           return (
-                            <div key={brand} className="p-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl space-y-2">
-                              <label className="flex items-center gap-2 cursor-pointer font-bold text-xs text-white">
+                            <div key={brand} className="p-3 bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-xl space-y-2">
+                              <label className="flex items-center gap-2 cursor-pointer font-bold text-xs text-neutral-900 dark:text-white">
                                 <input
                                   type="checkbox"
                                   checked={isAuthorized}
@@ -1201,7 +1205,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                                       setEditForm({ ...editForm, brandsAuthorized: current.filter(b => b !== brand) });
                                     }
                                   }}
-                                  className="rounded border-neutral-700 text-blue-500"
+                                  className="rounded border-neutral-300 dark:border-neutral-700 text-blue-600 focus:ring-0"
                                 />
                                 <span>{brand} Motos</span>
                               </label>
@@ -1214,7 +1218,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                                   <select
                                     value={(editForm as any)[`regional_${brand.toLowerCase()}`] || `Regional ${brand} Padrão`}
                                     onChange={(e) => setEditForm({ ...editForm, [`regional_${brand.toLowerCase()}`]: e.target.value } as any)}
-                                    className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-700 rounded-lg px-2 py-1 text-[11px] text-neutral-200 focus:outline-none focus:border-blue-500"
+                                    className="w-full bg-neutral-50 dark:bg-[#121215] border border-neutral-300 dark:border-[#27272a] rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-neutral-900 dark:text-neutral-200 focus:outline-none focus:border-blue-500"
                                   >
                                     <option value={`Regional ${brand} Sul/Sudeste`}>Regional {brand} - Sul/Sudeste</option>
                                     <option value={`Regional ${brand} Norte/Nordeste`}>Regional {brand} - Norte/Nordeste</option>
@@ -1243,7 +1247,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.zipCode || ''}
                         onChange={(e) => setEditForm({ ...editForm, zipCode: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs text-white font-mono focus:outline-none focus:border-blue-500"
+                        className={`${inputClassName} font-mono`}
                       />
                     </div>
 
@@ -1255,7 +1259,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.street || ''}
                         onChange={(e) => setEditForm({ ...editForm, street: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
                   </div>
@@ -1269,7 +1273,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.number || ''}
                         onChange={(e) => setEditForm({ ...editForm, number: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
 
@@ -1281,7 +1285,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.complement || ''}
                         onChange={(e) => setEditForm({ ...editForm, complement: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
 
@@ -1293,7 +1297,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="text"
                         value={editForm.neighborhood || ''}
                         onChange={(e) => setEditForm({ ...editForm, neighborhood: e.target.value })}
-                        className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
 
@@ -1306,21 +1310,21 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           type="text"
                           value={editForm.city}
                           onChange={(e) => setEditForm({ ...editForm, city: e.target.value })}
-                          className="flex-1 bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                          className={`flex-1 ${inputClassName}`}
                         />
                         <input
                           type="text"
                           value={editForm.state}
                           onChange={(e) => setEditForm({ ...editForm, state: e.target.value })}
-                          className="w-14 bg-[#121215] border border-[#27272a] rounded-xl px-2 py-2 text-xs text-center text-white font-bold uppercase focus:outline-none focus:border-blue-500"
+                          className={`w-14 text-center font-bold uppercase ${inputClassName}`}
                         />
                       </div>
                     </div>
                   </div>
 
                   {/* Logistics Facilities */}
-                  <div className="bg-[#121215] border border-[#27272a] rounded-2xl p-4.5 space-y-4">
-                    <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
+                  <div className="bg-neutral-50 dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4.5 space-y-4">
+                    <h4 className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
                       <Truck className="w-4 h-4" />
                       <span>Estrutura Física & Logística de Descarga de Cegonhas</span>
                     </h4>
@@ -1334,7 +1338,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           type="number"
                           value={editForm.showroomAreaM2 || 0}
                           onChange={(e) => setEditForm({ ...editForm, showroomAreaM2: Number(e.target.value) })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                          className={inputClassName}
                         />
                       </div>
 
@@ -1346,7 +1350,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           type="number"
                           value={editForm.workshopAreaM2 || 0}
                           onChange={(e) => setEditForm({ ...editForm, workshopAreaM2: Number(e.target.value) })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                          className={inputClassName}
                         />
                       </div>
 
@@ -1357,7 +1361,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         <select
                           value={editForm.unloadingBayAvailable ? 'sim' : 'nao'}
                           onChange={(e) => setEditForm({ ...editForm, unloadingBayAvailable: e.target.value === 'sim' })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-bold focus:outline-none focus:border-blue-500"
+                          className={selectClassName}
                         >
                           <option value="sim">Sim (Possui Pátio Próprio)</option>
                           <option value="nao">Não (Descarga em Via Pública)</option>
@@ -1365,32 +1369,32 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       </div>
                     </div>
 
-                    <div className="p-4 bg-[#18181b] border border-amber-500/30 rounded-2xl space-y-3">
-                      <h5 className="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                    <div className="p-4 bg-amber-50 dark:bg-[#18181b] border border-amber-300 dark:border-amber-500/30 rounded-2xl space-y-3">
+                      <h5 className="text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
                         <Truck className="w-4 h-4" />
                         <span>Origem Logística & Tabela de Fretes de Compra de Motos (Regra ERP)</span>
                       </h5>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                          <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
+                          <label className="text-[11px] font-bold uppercase text-neutral-600 dark:text-neutral-400 block mb-1">
                             Armazém / Local de Estoque Faturamento
                           </label>
                           <select
                             value={(editForm as any).originWarehouse || (['Sul', 'Sudeste'].includes(editForm.region) && editForm.state !== 'ES' ? 'empresa_13_armazem' : 'manaus_le_16')}
                             onChange={(e) => setEditForm({ ...editForm, originWarehouse: e.target.value as any })}
-                            className="w-full bg-white dark:bg-neutral-900 border border-amber-500/50 rounded-xl px-3 py-2 text-xs text-white font-bold focus:outline-none"
+                            className={selectClassName}
                           >
                             <option value="empresa_13_armazem">Empresa 13 - Armazém SP (Sul e Sudeste exceto ES)</option>
                             <option value="manaus_le_16">Manaus Local de Estoque 16 - Empresa 01/10 (Norte, Nordeste, Centro-Oeste e ES)</option>
                           </select>
                         </div>
                         <div>
-                          <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
+                          <label className="text-[11px] font-bold uppercase text-neutral-600 dark:text-neutral-400 block mb-1">
                             Regra de Roteamento de Frete Ativa
                           </label>
-                          <div className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl p-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                            UF <strong className="text-white">{editForm.state}</strong> ({editForm.region}): Roteamento via{' '}
-                            <span className="text-amber-400 font-bold">
+                          <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl p-2.5 text-xs text-neutral-700 dark:text-neutral-300">
+                            UF <strong className="text-neutral-900 dark:text-white">{editForm.state}</strong> ({editForm.region}): Roteamento via{' '}
+                            <span className="text-amber-700 dark:text-amber-400 font-bold">
                               {['Sul', 'Sudeste'].includes(editForm.region) && editForm.state !== 'ES' ? 'Empresa 13 (SP)' : 'Manaus LE 16 (Emp. 01/10)'}
                             </span>
                           </div>
@@ -1406,7 +1410,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         rows={2}
                         value={editForm.unloadingRestrictions || ''}
                         onChange={(e) => setEditForm({ ...editForm, unloadingRestrictions: e.target.value })}
-                        className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-3 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                         placeholder="Ex: Horários permitidos para caminhões de grande porte, portão de acesso..."
                       />
                     </div>
@@ -1417,16 +1421,16 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
               {/* ---------------- TAB 3: USUÁRIOS, SENHAS & ACESSOS ---------------- */}
               {activeTab === 'users' && (
                 <div className="space-y-6">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
-                      <h3 className="text-sm font-bold text-white">Usuários com Acesso ao Portal J. Toledo</h3>
+                      <h3 className="text-sm font-bold text-neutral-900 dark:text-white">Usuários com Acesso ao Portal J. Toledo</h3>
                       <p className="text-xs text-neutral-500 dark:text-neutral-400">
                         Gerenciamento de credenciais, cargos, perfis e redefinição de senhas para a concessionária {editForm.tradeName}.
                       </p>
                     </div>
                     <button
                       onClick={() => setNewUserModalOpen(true)}
-                      className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all shadow"
+                      className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all shadow cursor-pointer shrink-0"
                     >
                       <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
                       <span>Cadastrar Usuário</span>
@@ -1434,9 +1438,9 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   </div>
 
                   {/* Users List Table */}
-                  <div className="border border-[#27272a] rounded-2xl overflow-hidden shadow-inner">
+                  <div className="border border-neutral-200 dark:border-[#27272a] rounded-2xl overflow-hidden shadow-inner">
                     <table className="w-full text-left text-xs font-tabular">
-                      <thead className="bg-[#121215] border-b border-[#27272a] text-neutral-500 dark:text-neutral-400 uppercase text-[10px] tracking-wider font-bold">
+                      <thead className="bg-neutral-50 dark:bg-[#121215] border-b border-neutral-200 dark:border-[#27272a] text-neutral-500 dark:text-neutral-400 uppercase text-[10px] tracking-wider font-bold">
                         <tr>
                           <th className="py-3 px-4">Nome & Contato</th>
                           <th className="py-3 px-4">Cargo / Função</th>
@@ -1446,20 +1450,20 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           <th className="py-3 px-4 text-right">Gestão de Senha & Acesso</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-[#27272a] text-neutral-200">
+                      <tbody className="divide-y divide-neutral-200 dark:divide-[#27272a] text-neutral-800 dark:text-neutral-200">
                         {editForm.users && editForm.users.length > 0 ? (
                           editForm.users.map((user) => (
-                            <tr key={user.id} className="hover:bg-white dark:bg-neutral-900/60 transition-colors">
+                            <tr key={user.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/60 transition-colors">
                               <td className="py-3.5 px-4">
-                                <p className="font-bold text-white">{user.name}</p>
+                                <p className="font-bold text-neutral-900 dark:text-white">{user.name}</p>
                                 <p className="text-[11px] text-neutral-500 dark:text-neutral-400 font-mono">{user.email}</p>
-                                {user.phone && <p className="text-[10px] text-neutral-500">{user.phone}</p>}
+                                {user.phone && <p className="text-[10px] text-neutral-400 dark:text-neutral-500">{user.phone}</p>}
                               </td>
                               <td className="py-3.5 px-4">
-                                <span className="font-semibold text-neutral-200">{user.role}</span>
+                                <span className="font-semibold text-neutral-700 dark:text-neutral-200">{user.role}</span>
                               </td>
                               <td className="py-3.5 px-4">
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-neutral-800 text-blue-400 border border-neutral-700">
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-blue-700 dark:text-blue-400 border border-neutral-200 dark:border-neutral-700">
                                   {user.accessLevel === 'admin_dealer'
                                     ? 'Administrador Master'
                                     : user.accessLevel === 'vendas'
@@ -1475,8 +1479,8 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                               <td className="py-3.5 px-4 text-center">
                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase ${
                                   user.status === 'ativo'
-                                    ? 'bg-emerald-950 text-emerald-400 border border-emerald-800'
-                                    : 'bg-rose-950 text-rose-400 border border-rose-800'
+                                    ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800'
+                                    : 'bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-400 border border-rose-300 dark:border-rose-800'
                                 }`}>
                                   {user.status}
                                 </span>
@@ -1490,7 +1494,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                                       setNewPasswordValue('');
                                       setShowPasswordText(false);
                                     }}
-                                    className="bg-neutral-800 hover:bg-neutral-700 text-amber-300 font-bold px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1 border border-amber-500/30 transition-colors"
+                                    className="bg-amber-50 hover:bg-amber-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-amber-800 dark:text-amber-300 font-bold px-2.5 py-1.5 rounded-lg text-xs flex items-center gap-1 border border-amber-200 dark:border-amber-500/30 transition-colors cursor-pointer"
                                     title="Alterar ou Redefinir Senha do Usuário"
                                   >
                                     <KeyRound className="w-3.5 h-3.5" />
@@ -1500,10 +1504,10 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                                   {/* Toggle Active/Block */}
                                   <button
                                     onClick={() => handleToggleUserStatus(user.id)}
-                                    className={`p-1.5 rounded-lg border transition-colors ${
+                                    className={`p-1.5 rounded-lg border transition-colors cursor-pointer ${
                                       user.status === 'ativo'
-                                        ? 'bg-neutral-800 border-neutral-700 text-neutral-500 dark:text-neutral-400 hover:text-rose-400'
-                                        : 'bg-emerald-950 border-emerald-800 text-emerald-400'
+                                        ? 'bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-rose-600 dark:hover:text-rose-400'
+                                        : 'bg-emerald-100 dark:bg-emerald-950 border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400'
                                     }`}
                                     title={user.status === 'ativo' ? 'Bloquear Acesso' : 'Desbloquear Acesso'}
                                   >
@@ -1513,7 +1517,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                                   {/* Delete User */}
                                   <button
                                     onClick={() => handleDeleteUser(user.id)}
-                                    className="p-1.5 bg-neutral-800 hover:bg-rose-950 border border-neutral-700 hover:border-rose-700 text-neutral-500 dark:text-neutral-400 hover:text-rose-300 rounded-lg transition-colors"
+                                    className="p-1.5 bg-neutral-100 hover:bg-rose-100 dark:bg-neutral-800 dark:hover:bg-rose-950 border border-neutral-300 dark:border-neutral-700 hover:border-rose-300 dark:hover:border-rose-700 text-neutral-600 dark:text-neutral-400 hover:text-rose-700 dark:hover:text-rose-300 rounded-lg transition-colors cursor-pointer"
                                     title="Excluir Usuário"
                                   >
                                     <Trash2 className="w-3.5 h-3.5" />
@@ -1539,13 +1543,13 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
               {activeTab === 'financial' && (
                 <div className="space-y-6">
                   {/* Credit Line Bento Box */}
-                  <div className="bg-gradient-to-br from-blue-950/40 via-neutral-900 to-indigo-950/40 border border-blue-900/50 rounded-3xl p-6 shadow-xl space-y-4">
+                  <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-blue-950/40 dark:via-neutral-900 dark:to-indigo-950/40 border border-blue-200 dark:border-blue-900/50 rounded-3xl p-6 shadow-md space-y-4">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                       <div>
-                        <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest block mb-1">
+                        <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block mb-1">
                           Comitê de Crédito J. Toledo • Linha Rotativa
                         </span>
-                        <h3 className="text-xl font-bold text-white">Disponibilidade de Crédito & Financiamento</h3>
+                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white">Disponibilidade de Crédito & Financiamento</h3>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -1553,7 +1557,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         <select
                           value={editForm.creditRating || 'AAA'}
                           onChange={(e) => setEditForm({ ...editForm, creditRating: e.target.value as CreditRating })}
-                          className="bg-white dark:bg-neutral-900 border border-blue-500/50 text-blue-300 font-mono font-bold text-xs px-3 py-1.5 rounded-xl focus:outline-none"
+                          className="bg-white dark:bg-neutral-900 border border-blue-300 dark:border-blue-500/50 text-blue-700 dark:text-blue-300 font-mono font-bold text-xs px-3 py-1.5 rounded-xl focus:outline-none"
                         >
                           <option value="AAA">Rating AAA (Excelente / Risco Zero)</option>
                           <option value="AA">Rating AA (Ótimo)</option>
@@ -1567,7 +1571,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
                     {/* Credit Inputs */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                      <div className="bg-[#121215] p-4 rounded-2xl border border-[#27272a]">
+                      <div className="bg-white dark:bg-[#121215] p-4 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                         <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
                           Limite de Crédito Total (R$) *
                         </label>
@@ -1576,12 +1580,12 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           step={50000}
                           value={editForm.creditLimit || 0}
                           onChange={(e) => setEditForm({ ...editForm, creditLimit: Number(e.target.value) })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-lg font-bold text-white font-tabular focus:outline-none focus:border-blue-500"
+                          className="w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2 text-lg font-bold text-neutral-900 dark:text-white font-tabular focus:outline-none focus:border-blue-500"
                         />
                         <span className="text-[10px] text-neutral-500 mt-1 block">Aprovado pelo Comitê Financeiro</span>
                       </div>
 
-                      <div className="bg-[#121215] p-4 rounded-2xl border border-[#27272a]">
+                      <div className="bg-white dark:bg-[#121215] p-4 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                         <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
                           Crédito em Utilização (R$)
                         </label>
@@ -1590,16 +1594,16 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           step={10000}
                           value={editForm.creditUsed || 0}
                           onChange={(e) => setEditForm({ ...editForm, creditUsed: Number(e.target.value) })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-lg font-bold text-amber-400 font-tabular focus:outline-none focus:border-blue-500"
+                          className="w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-2 text-lg font-bold text-amber-600 dark:text-amber-400 font-tabular focus:outline-none focus:border-blue-500"
                         />
                         <span className="text-[10px] text-neutral-500 mt-1 block">Pedidos em Trânsito / Faturados</span>
                       </div>
 
-                      <div className="bg-[#121215] p-4 rounded-2xl border border-[#27272a]">
+                      <div className="bg-white dark:bg-[#121215] p-4 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                         <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
                           Saldo Disponível Líquido
                         </label>
-                        <p className="text-lg font-bold text-emerald-400 font-tabular py-2">
+                        <p className="text-lg font-bold text-emerald-600 dark:text-emerald-400 font-tabular py-2">
                           R$ {((editForm.creditLimit || 0) - (editForm.creditUsed || 0)).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                         </p>
                         <span className="text-[10px] text-neutral-500 block">Livre para novos pedidos</span>
@@ -1617,7 +1621,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           step={50000}
                           value={editForm.floorPlanLimit || 0}
                           onChange={(e) => setEditForm({ ...editForm, floorPlanLimit: Number(e.target.value) })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-tabular focus:outline-none focus:border-blue-500"
+                          className={`${inputClassName} font-tabular`}
                         />
                       </div>
 
@@ -1628,7 +1632,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         <select
                           value={editForm.defaultPaymentCondition || '30/60/90 DDL'}
                           onChange={(e) => setEditForm({ ...editForm, defaultPaymentCondition: e.target.value })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-bold focus:outline-none focus:border-blue-500"
+                          className={selectClassName}
                         >
                           <option value="30/60/90 DDL">30 / 60 / 90 DDL (Sem Juros)</option>
                           <option value="28/56 DDL">28 / 56 DDL</option>
@@ -1647,14 +1651,14 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           step={0.1}
                           value={editForm.rebateBonusPercentage || 2.0}
                           onChange={(e) => setEditForm({ ...editForm, rebateBonusPercentage: Number(e.target.value) })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-tabular focus:outline-none focus:border-blue-500"
+                          className={`${inputClassName} font-tabular`}
                         />
                       </div>
                     </div>
 
                     {/* Authorized Payment Conditions Selection */}
-                    <div className="pt-3 border-t border-blue-900/40 space-y-2">
-                      <label className="text-[11px] font-bold uppercase text-blue-400 block">
+                    <div className="pt-3 border-t border-blue-200 dark:border-blue-900/40 space-y-2">
+                      <label className="text-[11px] font-bold uppercase text-blue-600 dark:text-blue-400 block">
                         Condições de Pagamento Autorizadas para esta Concessionária (Pedido de Fábrica)
                       </label>
                       <p className="text-[10px] text-neutral-500 dark:text-neutral-400">
@@ -1665,7 +1669,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           const currentAuth = editForm.authorizedPaymentConditionIds || paymentConditions.map(p => p.id);
                           const isChecked = currentAuth.includes(payCond.id);
                           return (
-                            <label key={payCond.id} className="flex items-center gap-2 p-2 bg-[#121215] border border-[#27272a] rounded-xl cursor-pointer text-xs font-semibold text-neutral-200 hover:border-blue-500/50">
+                            <label key={payCond.id} className="flex items-center gap-2 p-2 bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-xl cursor-pointer text-xs font-semibold text-neutral-800 dark:text-neutral-200 hover:border-blue-500/50">
                               <input
                                 type="checkbox"
                                 checked={isChecked}
@@ -1676,7 +1680,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                                     setEditForm({ ...editForm, authorizedPaymentConditionIds: currentAuth.filter(id => id !== payCond.id) });
                                   }
                                 }}
-                                className="rounded border-neutral-700 text-blue-500"
+                                className="rounded border-neutral-300 dark:border-neutral-700 text-blue-600 focus:ring-0"
                               />
                               <span className="truncate">{payCond.paymentMethodName} ({payCond.brand})</span>
                             </label>
@@ -1687,8 +1691,8 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   </div>
 
                   {/* Bank Account Data */}
-                  <div className="bg-[#121215] border border-[#27272a] rounded-2xl p-4.5 space-y-4">
-                    <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
+                  <div className="bg-neutral-50 dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4.5 space-y-4">
+                    <h4 className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
                       <Landmark className="w-4 h-4" />
                       <span>Dados Bancários PJ da Concessionária (Para Repasses & Bonificações)</span>
                     </h4>
@@ -1705,7 +1709,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                             ...editForm,
                             bankAccount: { ...editForm.bankAccount!, bankName: e.target.value }
                           })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500"
+                          className={inputClassName}
                         />
                       </div>
 
@@ -1720,7 +1724,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                             ...editForm,
                             bankAccount: { ...editForm.bankAccount!, agency: e.target.value }
                           })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-blue-500"
+                          className={`${inputClassName} font-mono`}
                         />
                       </div>
 
@@ -1735,7 +1739,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                             ...editForm,
                             bankAccount: { ...editForm.bankAccount!, accountNumber: e.target.value }
                           })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-blue-500"
+                          className={`${inputClassName} font-mono`}
                         />
                       </div>
                     </div>
@@ -1752,7 +1756,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                             ...editForm,
                             bankAccount: { ...editForm.bankAccount!, pixKey: e.target.value }
                           })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-blue-500"
+                          className={`${inputClassName} font-mono`}
                         />
                       </div>
 
@@ -1764,7 +1768,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                           type="email"
                           value={editForm.financialContactEmail || ''}
                           onChange={(e) => setEditForm({ ...editForm, financialContactEmail: e.target.value })}
-                          className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-blue-500"
+                          className={`${inputClassName} font-mono`}
                         />
                       </div>
                     </div>
@@ -1777,7 +1781,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         rows={2}
                         value={editForm.creditNotes || ''}
                         onChange={(e) => setEditForm({ ...editForm, creditNotes: e.target.value })}
-                        className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-3 text-xs text-white focus:outline-none focus:border-blue-500"
+                        className={inputClassName}
                       />
                     </div>
                   </div>
@@ -1788,7 +1792,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
               {activeTab === 'operations' && (
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div className="bg-[#121215] p-4 rounded-2xl border border-[#27272a]">
+                    <div className="bg-neutral-50 dark:bg-[#121215] p-4 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                       <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
                         Meta Mensal Faturamento (R$)
                       </label>
@@ -1797,11 +1801,11 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         step={50000}
                         value={editForm.monthlyTarget || 0}
                         onChange={(e) => setEditForm({ ...editForm, monthlyTarget: Number(e.target.value) })}
-                        className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-sm text-white font-tabular focus:outline-none focus:border-blue-500"
+                        className={`${inputClassName} text-sm font-tabular`}
                       />
                     </div>
 
-                    <div className="bg-[#121215] p-4 rounded-2xl border border-[#27272a]">
+                    <div className="bg-neutral-50 dark:bg-[#121215] p-4 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                       <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
                         Cota Mensal Alocada (Unidades)
                       </label>
@@ -1809,11 +1813,11 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="number"
                         value={editForm.quotaAllocated || 0}
                         onChange={(e) => setEditForm({ ...editForm, quotaAllocated: Number(e.target.value) })}
-                        className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-sm text-white font-tabular focus:outline-none focus:border-blue-500"
+                        className={`${inputClassName} text-sm font-tabular`}
                       />
                     </div>
 
-                    <div className="bg-[#121215] p-4 rounded-2xl border border-[#27272a]">
+                    <div className="bg-neutral-50 dark:bg-[#121215] p-4 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                       <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
                         Cota Encomendada Atual
                       </label>
@@ -1821,7 +1825,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         type="number"
                         value={editForm.quotaOrdered || 0}
                         onChange={(e) => setEditForm({ ...editForm, quotaOrdered: Number(e.target.value) })}
-                        className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-sm text-white font-tabular focus:outline-none focus:border-blue-500"
+                        className={`${inputClassName} text-sm font-tabular`}
                       />
                     </div>
                   </div>
@@ -1831,17 +1835,17 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
             </div>
 
             {/* Modal Footer / Action Bar */}
-            <div className="pt-4 border-t border-[#27272a] flex items-center justify-between">
+            <div className="pt-4 border-t border-neutral-200 dark:border-[#27272a] flex items-center justify-between">
               <button
                 onClick={() => setSelectedDealership(null)}
-                className="px-5 py-2.5 rounded-xl border border-[#27272a] font-bold text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 text-xs transition-colors"
+                className="px-5 py-2.5 rounded-xl border border-neutral-300 dark:border-[#27272a] font-bold text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-xs transition-colors cursor-pointer"
               >
                 Fechar sem Salvar
               </button>
 
               <button
                 onClick={handleSaveDealershipChanges}
-                className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 transition-all shadow-lg shadow-blue-500/25 active:scale-95"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 transition-all shadow-lg shadow-blue-500/25 active:scale-95 cursor-pointer"
               >
                 <Save className="w-4 h-4" />
                 <span>Salvar Configurações da Concessionária</span>
@@ -1856,19 +1860,19 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
       {/* MODAL: CADASTRAR NOVA CONCESSIONÁRIA NA REDE J. TOLEDO                    */}
       {/* ========================================================================= */}
       {newDealerModalOpen && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md overflow-y-auto">
-          <div className="bg-[#18181b] rounded-3xl max-w-4xl w-full p-6 md:p-8 shadow-2xl border border-[#27272a] animate-in fade-in zoom-in-95 my-6 max-h-[92vh] flex flex-col">
+        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
+          <div className="bg-white dark:bg-[#18181b] rounded-3xl max-w-4xl w-full p-6 md:p-8 shadow-2xl border border-neutral-200 dark:border-[#27272a] animate-in fade-in zoom-in-95 my-6 max-h-[92vh] flex flex-col text-neutral-900 dark:text-white">
             
-            <div className="flex justify-between items-start pb-4 border-b border-[#27272a]">
+            <div className="flex justify-between items-start pb-4 border-b border-neutral-200 dark:border-[#27272a]">
               <div>
-                <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest block mb-0.5">
+                <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block mb-0.5">
                   Expansão de Rede • J. Toledo Brasil
                 </span>
-                <h3 className="text-xl font-bold text-white">Cadastrar Nova Concessionária Autorizada</h3>
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white">Cadastrar Nova Concessionária Autorizada</h3>
               </div>
               <button
                 onClick={() => setNewDealerModalOpen(false)}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-white p-1"
+                className="text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-1 cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -1884,7 +1888,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     type="text"
                     value={newDealerForm.dealerCode}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, dealerCode: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono font-bold"
+                    className={`${inputClassName} font-mono font-bold`}
                   />
                 </div>
 
@@ -1897,7 +1901,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="00.000.000/0000-00"
                     value={newDealerForm.cnpj}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, cnpj: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono font-bold"
+                    className={`${inputClassName} font-mono font-bold`}
                   />
                 </div>
 
@@ -1908,7 +1912,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   <select
                     value={newDealerForm.tier}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, tier: e.target.value as DealerTier })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-bold"
+                    className={selectClassName}
                   >
                     <option value="Diamante">Diamante</option>
                     <option value="Ouro">Ouro</option>
@@ -1933,7 +1937,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       name: e.target.value,
                       shortName: e.target.value
                     })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-bold"
+                    className={`${inputClassName} font-bold`}
                   />
                 </div>
 
@@ -1946,7 +1950,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="Ex: Santos Comércio de Motocicletas Ltda."
                     value={newDealerForm.legalName}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, legalName: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white"
+                    className={inputClassName}
                   />
                 </div>
               </div>
@@ -1961,7 +1965,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="Ex: Santos"
                     value={newDealerForm.city}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, city: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white"
+                    className={inputClassName}
                   />
                 </div>
 
@@ -1974,7 +1978,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="SP"
                     value={newDealerForm.state}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, state: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white uppercase text-center"
+                    className={`${inputClassName} uppercase text-center font-bold`}
                   />
                 </div>
 
@@ -1985,7 +1989,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   <select
                     value={newDealerForm.region}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, region: e.target.value as BrazilRegion })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-bold"
+                    className={selectClassName}
                   >
                     <option value="Sul">Sul</option>
                     <option value="Sudeste">Sudeste</option>
@@ -2006,7 +2010,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="Nome completo do titular"
                     value={newDealerForm.manager}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, manager: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white"
+                    className={inputClassName}
                   />
                 </div>
 
@@ -2019,7 +2023,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="contato@santosprime.com.br"
                     value={newDealerForm.contactEmail}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, contactEmail: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono"
+                    className={`${inputClassName} font-mono`}
                   />
                 </div>
 
@@ -2032,12 +2036,12 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="(13) 3220-0000"
                     value={newDealerForm.phone}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, phone: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white"
+                    className={inputClassName}
                   />
                 </div>
               </div>
 
-              <div className="bg-[#121215] p-4 rounded-2xl border border-[#27272a] grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-neutral-50 dark:bg-[#121215] p-4 rounded-2xl border border-neutral-200 dark:border-[#27272a] grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
                     Limite de Crédito Inicial Homologado (R$)
@@ -2047,7 +2051,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     step={100000}
                     value={newDealerForm.creditLimit}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, creditLimit: Number(e.target.value) })}
-                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-sm text-white font-tabular font-bold"
+                    className={`${inputClassName} text-sm font-tabular font-bold`}
                   />
                 </div>
 
@@ -2058,7 +2062,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   <select
                     value={newDealerForm.defaultPaymentCondition}
                     onChange={(e) => setNewDealerForm({ ...newDealerForm, defaultPaymentCondition: e.target.value })}
-                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-bold"
+                    className={selectClassName}
                   >
                     <option value="30/60/90 DDL">30/60/90 DDL</option>
                     <option value="28/56 DDL">28/56 DDL</option>
@@ -2068,10 +2072,10 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#27272a] flex items-center justify-between">
+            <div className="pt-4 border-t border-neutral-200 dark:border-[#27272a] flex items-center justify-between">
               <button
                 onClick={() => setNewDealerModalOpen(false)}
-                className="px-5 py-2.5 rounded-xl border border-[#27272a] font-bold text-neutral-700 dark:text-neutral-300 hover:bg-neutral-800 text-xs"
+                className="px-5 py-2.5 rounded-xl border border-neutral-300 dark:border-[#27272a] font-bold text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-xs transition-colors cursor-pointer"
               >
                 Cancelar
               </button>
@@ -2079,7 +2083,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
               <button
                 onClick={handleSubmitNewDealership}
                 disabled={!newDealerForm.name || !newDealerForm.cnpj || !newDealerForm.city}
-                className="bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 transition-all shadow-lg"
+                className="bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 transition-all shadow-lg cursor-pointer"
               >
                 <Plus className="w-4 h-4" />
                 <span>Salvar e Homologar Concessionária</span>
@@ -2094,37 +2098,37 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
       {/* MODAL: REDEFINIÇÃO / ALTERAÇÃO DE SENHA DO USUÁRIO                       */}
       {/* ========================================================================= */}
       {passwordModalUser && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md">
-          <div className="bg-[#18181b] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-[#27272a] animate-in fade-in zoom-in-95 space-y-5">
+        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+          <div className="bg-white dark:bg-[#18181b] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-neutral-200 dark:border-[#27272a] animate-in fade-in zoom-in-95 space-y-5 text-neutral-900 dark:text-white">
             
-            <div className="flex justify-between items-start pb-3 border-b border-[#27272a]">
+            <div className="flex justify-between items-start pb-3 border-b border-neutral-200 dark:border-[#27272a]">
               <div className="flex items-center gap-2.5">
-                <div className="w-10 h-10 bg-amber-950/80 border border-amber-600/50 text-amber-400 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-600/50 text-amber-600 dark:text-amber-400 rounded-xl flex items-center justify-center shrink-0">
                   <KeyRound className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-white">Alterar Senha de Acesso</h3>
+                  <h3 className="text-base font-bold text-neutral-900 dark:text-white">Alterar Senha de Acesso</h3>
                   <p className="text-[11px] text-neutral-500 dark:text-neutral-400">{passwordModalUser.user.name}</p>
                 </div>
               </div>
               <button
                 onClick={() => setPasswordModalUser(null)}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-white p-1"
+                className="text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-1 cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
             {passwordSuccessMessage ? (
-              <div className="p-4 bg-emerald-950/80 border border-emerald-600/50 rounded-2xl text-center space-y-2">
-                <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto" />
-                <p className="text-xs font-bold text-emerald-300">{passwordSuccessMessage}</p>
+              <div className="p-4 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-600/50 rounded-2xl text-center space-y-2">
+                <CheckCircle2 className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mx-auto" />
+                <p className="text-xs font-bold text-emerald-800 dark:text-emerald-300">{passwordSuccessMessage}</p>
               </div>
             ) : (
               <div className="space-y-4">
-                <div className="bg-[#121215] p-3 rounded-xl border border-[#27272a] text-xs space-y-1">
-                  <p className="text-neutral-500 dark:text-neutral-400">Login (E-mail): <strong className="text-white font-mono">{passwordModalUser.user.email}</strong></p>
-                  <p className="text-neutral-500 dark:text-neutral-400">Concessionária: <strong className="text-blue-400">{passwordModalUser.dealer.tradeName}</strong></p>
+                <div className="bg-neutral-50 dark:bg-[#121215] p-3 rounded-xl border border-neutral-200 dark:border-[#27272a] text-xs space-y-1">
+                  <p className="text-neutral-500 dark:text-neutral-400">Login (E-mail): <strong className="text-neutral-900 dark:text-white font-mono">{passwordModalUser.user.email}</strong></p>
+                  <p className="text-neutral-500 dark:text-neutral-400">Concessionária: <strong className="text-blue-600 dark:text-blue-400">{passwordModalUser.dealer.tradeName}</strong></p>
                 </div>
 
                 <div>
@@ -2135,7 +2139,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     <button
                       type="button"
                       onClick={generateRandomPassword}
-                      className="text-[10px] text-blue-400 hover:underline flex items-center gap-1 font-bold"
+                      className="text-[10px] text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 font-bold cursor-pointer"
                     >
                       <RefreshCw className="w-2.5 h-2.5" />
                       Gerar Senha Segura
@@ -2148,12 +2152,12 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                       value={newPasswordValue}
                       onChange={(e) => setNewPasswordValue(e.target.value)}
                       placeholder="Mínimo 8 caracteres"
-                      className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2.5 text-xs text-white font-mono focus:outline-none focus:border-blue-500 pr-10"
+                      className={`${inputClassName} font-mono pr-10`}
                     />
                     <button
                       type="button"
                       onClick={() => setShowPasswordText(!showPasswordText)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 dark:text-neutral-400 hover:text-white"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white cursor-pointer"
                     >
                       {showPasswordText ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                     </button>
@@ -2165,7 +2169,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     type="checkbox"
                     checked={mustChangeNextLogin}
                     onChange={(e) => setMustChangeNextLogin(e.target.checked)}
-                    className="rounded border-neutral-700 bg-white dark:bg-neutral-900 text-blue-600 focus:ring-0"
+                    className="rounded border-neutral-300 dark:border-neutral-700 text-blue-600 focus:ring-0"
                   />
                   <span>Exigir alteração de senha no próximo login</span>
                 </label>
@@ -2173,7 +2177,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                 <div className="pt-2 flex justify-between items-center">
                   <button
                     onClick={() => setPasswordModalUser(null)}
-                    className="px-4 py-2 rounded-xl border border-[#27272a] text-xs font-bold text-neutral-500 dark:text-neutral-400 hover:bg-neutral-800"
+                    className="px-4 py-2 rounded-xl border border-neutral-300 dark:border-[#27272a] text-xs font-bold text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors cursor-pointer"
                   >
                     Cancelar
                   </button>
@@ -2181,7 +2185,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   <button
                     onClick={handleSaveNewPassword}
                     disabled={!newPasswordValue.trim()}
-                    className="bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white font-bold px-5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all shadow"
+                    className="bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white font-bold px-5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all shadow cursor-pointer"
                   >
                     <Save className="w-3.5 h-3.5" />
                     <span>Salvar Nova Senha</span>
@@ -2198,17 +2202,17 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
       {/* MODAL: NOVO USUÁRIO DA CONCESSIONÁRIA                                     */}
       {/* ========================================================================= */}
       {newUserModalOpen && editForm && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md">
-          <div className="bg-[#18181b] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-[#27272a] animate-in fade-in zoom-in-95 space-y-4">
+        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+          <div className="bg-white dark:bg-[#18181b] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-neutral-200 dark:border-[#27272a] animate-in fade-in zoom-in-95 space-y-4 text-neutral-900 dark:text-white">
             
-            <div className="flex justify-between items-start pb-3 border-b border-[#27272a]">
+            <div className="flex justify-between items-start pb-3 border-b border-neutral-200 dark:border-[#27272a]">
               <div>
-                <h3 className="text-base font-bold text-white">Adicionar Novo Usuário</h3>
+                <h3 className="text-base font-bold text-neutral-900 dark:text-white">Adicionar Novo Usuário</h3>
                 <p className="text-[11px] text-neutral-500 dark:text-neutral-400">{editForm.tradeName}</p>
               </div>
               <button
                 onClick={() => setNewUserModalOpen(false)}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-white p-1"
+                className="text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-1 cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -2224,7 +2228,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   placeholder="Nome do colaborador"
                   value={newUserForm.name}
                   onChange={(e) => setNewUserForm({ ...newUserForm, name: e.target.value })}
-                  className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white"
+                  className={inputClassName}
                 />
               </div>
 
@@ -2237,7 +2241,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   placeholder="usuario@concessionaria.com.br"
                   value={newUserForm.email}
                   onChange={(e) => setNewUserForm({ ...newUserForm, email: e.target.value })}
-                  className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono"
+                  className={`${inputClassName} font-mono`}
                 />
               </div>
 
@@ -2251,7 +2255,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="(00) 00000-0000"
                     value={newUserForm.phone}
                     onChange={(e) => setNewUserForm({ ...newUserForm, phone: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white"
+                    className={inputClassName}
                   />
                 </div>
 
@@ -2264,7 +2268,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                     placeholder="000.000.000-00"
                     value={newUserForm.cpf}
                     onChange={(e) => setNewUserForm({ ...newUserForm, cpf: e.target.value })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white font-mono"
+                    className={`${inputClassName} font-mono`}
                   />
                 </div>
               </div>
@@ -2277,7 +2281,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                   <select
                     value={newUserForm.role}
                     onChange={(e) => setNewUserForm({ ...newUserForm, role: e.target.value as DealershipUserRole })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-2.5 py-2 text-xs text-white font-semibold"
+                    className={selectClassName}
                   >
                     <option value="Diretor / Titular">Diretor / Titular</option>
                     <option value="Gerente Geral">Gerente Geral</option>
@@ -2290,44 +2294,53 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
 
                 <div>
                   <label className="text-[11px] font-bold uppercase text-neutral-500 dark:text-neutral-400 block mb-1">
-                    Nível de Acesso
+                    Perfil de Acesso
                   </label>
                   <select
                     value={newUserForm.accessLevel}
                     onChange={(e) => setNewUserForm({ ...newUserForm, accessLevel: e.target.value as DealershipAccessLevel })}
-                    className="w-full bg-[#121215] border border-[#27272a] rounded-xl px-2.5 py-2 text-xs text-white font-semibold"
+                    className={selectClassName}
                   >
-                    <option value="admin_dealer">Admin Loja Completo</option>
+                    <option value="admin_dealer">Admin Concessionária</option>
                     <option value="vendas">Vendas & Pedidos</option>
-                    <option value="pos_vendas">Pós-Venda & Oficina</option>
-                    <option value="financeiro">Financeiro</option>
+                    <option value="pos_vendas">Garantia & Oficina</option>
+                    <option value="financeiro">Financeiro & Crédito</option>
                   </select>
                 </div>
               </div>
 
-              <div className="pt-2 flex justify-between items-center">
-                <button
-                  onClick={() => setNewUserModalOpen(false)}
-                  className="px-4 py-2 rounded-xl border border-[#27272a] text-xs font-bold text-neutral-500 dark:text-neutral-400 hover:bg-neutral-800"
-                >
-                  Cancelar
-                </button>
+              <label className="flex items-center gap-2 cursor-pointer text-xs text-neutral-700 dark:text-neutral-300 pt-1">
+                <input
+                  type="checkbox"
+                  checked={newUserForm.mustChangePasswordNextLogin}
+                  onChange={(e) => setNewUserForm({ ...newUserForm, mustChangePasswordNextLogin: e.target.checked })}
+                  className="rounded border-neutral-300 dark:border-neutral-700 text-blue-600 focus:ring-0"
+                />
+                <span>Exigir criação de senha própria no primeiro login</span>
+              </label>
+            </div>
 
-                <button
-                  onClick={handleCreateNewUser}
-                  disabled={!newUserForm.name || !newUserForm.email}
-                  className="bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white font-bold px-5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all shadow"
-                >
-                  <Plus className="w-3.5 h-3.5" />
-                  <span>Cadastrar Usuário</span>
-                </button>
-              </div>
+            <div className="pt-3 border-t border-neutral-200 dark:border-[#27272a] flex justify-between items-center">
+              <button
+                onClick={() => setNewUserModalOpen(false)}
+                className="px-4 py-2 rounded-xl border border-neutral-300 dark:border-[#27272a] text-xs font-bold text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors cursor-pointer"
+              >
+                Cancelar
+              </button>
+
+              <button
+                onClick={handleCreateNewUser}
+                disabled={!newUserForm.name || !newUserForm.email}
+                className="bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white font-bold px-5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all shadow cursor-pointer"
+              >
+                <Plus className="w-3.5 h-3.5" />
+                <span>Criar Usuário</span>
+              </button>
             </div>
 
           </div>
         </div>
       )}
-
     </div>
   );
 };

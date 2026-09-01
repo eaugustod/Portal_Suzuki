@@ -1085,15 +1085,15 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
       {/* Modal: Criar Novo Compromisso Mensal */}
       {isCreateModalOpen && editingCommitment && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-          <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-6 max-w-2xl w-full space-y-4 shadow-2xl">
+          <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-6 max-w-2xl w-full space-y-4 shadow-2xl">
             <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 pb-3">
-              <h3 className="text-base font-bold text-white flex items-center gap-2">
-                <CalendarCheck className="w-5 h-5 text-blue-400" />
+              <h3 className="text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+                <CalendarCheck className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 <span>Novo Compromisso de Compra Mensal</span>
               </h3>
               <button
                 onClick={() => setIsCreateModalOpen(false)}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-white"
+                className="text-neutral-400 hover:text-neutral-600 dark:hover:text-white transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -1103,7 +1103,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
               {/* Concessionaria Selector if Montadora */}
               {isMontadora ? (
                 <div className="md:col-span-2">
-                  <label className="text-neutral-500 dark:text-neutral-400 font-semibold block mb-1">Concessionária Titular</label>
+                  <label className="text-neutral-700 dark:text-neutral-300 font-semibold block mb-1">Concessionária Titular</label>
                   <select
                     value={editingCommitment.dealershipId}
                     onChange={(e) => {
@@ -1120,35 +1120,35 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                         });
                       }
                     }}
-                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                    className="w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold focus:outline-none focus:border-blue-500"
                   >
                     {dealerships.map(d => (
-                      <option key={d.id} value={d.id}>{d.name} ({d.dealerCode})</option>
+                      <option key={d.id} value={d.id} className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">{d.name} ({d.dealerCode})</option>
                     ))}
                   </select>
                 </div>
               ) : (
-                <div className="md:col-span-2 bg-white dark:bg-neutral-900/80 p-3 rounded-xl border border-neutral-200 dark:border-neutral-800">
+                <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-900/80 p-3 rounded-xl border border-neutral-200 dark:border-neutral-800">
                   <span className="text-neutral-500 dark:text-neutral-400 block text-[11px]">Concessionária:</span>
-                  <span className="font-bold text-white text-sm">{editingCommitment.dealershipName}</span>
+                  <span className="font-bold text-neutral-900 dark:text-white text-sm">{editingCommitment.dealershipName}</span>
                 </div>
               )}
 
               <div>
-                <label className="text-neutral-500 dark:text-neutral-400 font-semibold block mb-1">Marca</label>
+                <label className="text-neutral-700 dark:text-neutral-300 font-semibold block mb-1">Marca</label>
                 <select
                   value={editingCommitment.brand}
                   onChange={(e) => setEditingCommitment({ ...editingCommitment, brand: e.target.value as BrandType })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold focus:outline-none focus:border-blue-500"
                 >
-                  <option value="Suzuki">Suzuki</option>
-                  <option value="Haojue">Haojue</option>
-                  <option value="Zontes">Zontes</option>
+                  <option value="Suzuki" className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">Suzuki</option>
+                  <option value="Haojue" className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">Haojue</option>
+                  <option value="Zontes" className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">Zontes</option>
                 </select>
               </div>
 
               <div>
-                <label className="text-neutral-500 dark:text-neutral-400 font-semibold block mb-1">Período / Trimestre de Referência</label>
+                <label className="text-neutral-700 dark:text-neutral-300 font-semibold block mb-1">Período / Trimestre de Referência</label>
                 <select
                   value={editingCommitment.period}
                   onChange={(e) => {
@@ -1169,37 +1169,37 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                       month3Label: m3
                     });
                   }}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold focus:outline-none focus:border-blue-500"
                 >
-                  <option value="1º Trimestre (Jan / Fev / Mar)">1º Trimestre (Janeiro, Fevereiro, Março)</option>
-                  <option value="2º Trimestre (Abr / Mai / Jun)">2º Trimestre (Abril, Maio, Junho)</option>
-                  <option value="3º Trimestre (Jul / Ago / Set)">3º Trimestre (Julho, Agosto, Setembro)</option>
-                  <option value="4º Trimestre (Out / Nov / Dez)">4º Trimestre (Outubro, Novembro, Dezembro)</option>
+                  <option value="1º Trimestre (Jan / Fev / Mar)" className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">1º Trimestre (Janeiro, Fevereiro, Março)</option>
+                  <option value="2º Trimestre (Abr / Mai / Jun)" className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">2º Trimestre (Abril, Maio, Junho)</option>
+                  <option value="3º Trimestre (Jul / Ago / Set)" className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">3º Trimestre (Julho, Agosto, Setembro)</option>
+                  <option value="4º Trimestre (Out / Nov / Dez)" className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">4º Trimestre (Outubro, Novembro, Dezembro)</option>
                 </select>
               </div>
 
               <div>
-                <label className="text-neutral-500 dark:text-neutral-400 font-semibold block mb-1">Meses do Trimestre</label>
+                <label className="text-neutral-700 dark:text-neutral-300 font-semibold block mb-1">Meses do Trimestre</label>
                 <div className="grid grid-cols-3 gap-2">
-                  <div className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-blue-400">
+                  <div className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-blue-600 dark:text-blue-400">
                     1º Mês: {editingCommitment.month1Label}
                   </div>
-                  <div className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-amber-400">
+                  <div className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-amber-600 dark:text-amber-400">
                     2º Mês: {editingCommitment.month2Label}
                   </div>
-                  <div className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-purple-400">
+                  <div className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl px-2 py-1.5 text-center text-xs font-bold text-purple-600 dark:text-purple-400">
                     3º Mês: {editingCommitment.month3Label}
                   </div>
                 </div>
               </div>
 
               <div className="md:col-span-2">
-                <label className="text-neutral-500 dark:text-neutral-400 font-semibold block mb-1">Observações Iniciais</label>
+                <label className="text-neutral-700 dark:text-neutral-300 font-semibold block mb-1">Observações Iniciais</label>
                 <textarea
                   rows={2}
                   value={editingCommitment.dealerNotes || ''}
                   onChange={(e) => setEditingCommitment({ ...editingCommitment, dealerNotes: e.target.value })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl p-2 text-white"
+                  className="w-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl p-2 text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:border-blue-500"
                 />
               </div>
             </div>
@@ -1207,7 +1207,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
             <div className="flex items-center justify-end gap-3 pt-4 border-t border-neutral-200 dark:border-neutral-800">
               <button
                 onClick={() => setIsCreateModalOpen(false)}
-                className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 font-bold rounded-xl text-xs border border-neutral-200 dark:border-neutral-700 transition-colors"
               >
                 Cancelar
               </button>
@@ -1218,7 +1218,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                   setIsCreateModalOpen(false);
                   showToast('Plano de compromisso criado! Agora configure os modelos e quantidades na grade.');
                 }}
-                className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs shadow-lg shadow-blue-500/20"
+                className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs shadow-lg shadow-blue-500/20 transition-all"
               >
                 Criar Grade de Compromisso
               </button>

@@ -43,10 +43,10 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="bg-[#121215] border border-[#27272a] rounded-3xl max-w-5xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden relative">
+      <div className="bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-3xl max-w-5xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden relative">
         
         {/* Modal Header */}
-        <div className="p-4 sm:p-6 border-b border-[#27272a] flex items-center justify-between gap-4 bg-gradient-to-r from-neutral-900/90 via-[#18181b] to-neutral-900/90 shrink-0">
+        <div className="p-4 sm:p-6 border-b border-neutral-200 dark:border-[#27272a] flex items-center justify-between gap-4 bg-neutral-100 dark:bg-gradient-to-r dark:from-neutral-900/90 dark:via-[#18181b] dark:to-neutral-900/90 shrink-0">
           <div className="flex items-center gap-3">
             <span className={`px-3 py-1 rounded-xl text-xs font-black uppercase tracking-wider ${
               model.brand === 'Suzuki' ? 'bg-red-600 text-white shadow-sm shadow-red-600/30' :
@@ -57,7 +57,7 @@ export const ModelTechnicalSpecsModal: React.FC<ModelTechnicalSpecsModalProps> =
             </span>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg sm:text-2xl font-black text-white tracking-tight">
+                <h2 className="text-lg sm:text-2xl font-black text-neutral-900 dark:text-white tracking-tight">
                   {model.modelName}
                 </h2>
                 {model.yearModel && (

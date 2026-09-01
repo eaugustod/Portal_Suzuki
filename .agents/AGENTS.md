@@ -23,7 +23,7 @@ Este projeto possui um **knowledge graph** gerado pelo graphify em `graphify-out
 2. Se existir, use `graphify query "<pergunta>"` para buscar contexto antes de ler arquivos raw
 3. Use `graphify path "<ComponenteA>" "<ComponenteB>"` para entender relações entre módulos
 4. Use `graphify explain "<Conceito>"` para entender um tipo, componente ou função específica
-5. Após modificar arquivos `.ts` ou `.tsx`, execute `graphify update .` para manter o grafo atualizado
+5. Após modificar arquivos `.ts` ou `.tsx`, execute `graphify update .` para manter o grafo atualizado. Se houver falha de lock (`.rebuild.lock`), remova a trava obsoleta (`rm -f graphify-out/.rebuild.lock`) e prossiga sem travar a sessão.
 
 ```bash
 # Exemplos de uso

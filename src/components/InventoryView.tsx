@@ -305,11 +305,11 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
       {/* Inventory Container: Matriz ou Lista Detalhada (Item a) */}
       {viewMode === 'matrix' ? (
-        <div className="bg-[#111827] border border-neutral-200 dark:border-neutral-800 rounded-3xl p-6 shadow-2xl space-y-6">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-6 shadow-xl space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-neutral-200 dark:border-neutral-800/80 pb-4">
             <div>
-              <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-                <LayoutGrid className="w-5 h-5 text-blue-400" />
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white tracking-tight flex items-center gap-2">
+                <LayoutGrid className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 <span>
                   {currentScope === 'jtoledo'
                     ? 'Matriz de Estoque da Rede (Rede vs Modelos)'
@@ -326,16 +326,16 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
             {/* Legenda */}
             <div className="flex items-center gap-4 text-xs font-semibold">
               <div className="flex items-center gap-1.5">
-                <span className="text-neutral-500 dark:text-neutral-400">Normal</span>
-                <div className="w-4 h-4 rounded bg-[#1e293b] border border-neutral-700"></div>
+                <span className="text-neutral-600 dark:text-neutral-400">Normal</span>
+                <div className="w-4 h-4 rounded bg-slate-200 dark:bg-[#1e293b] border border-slate-300 dark:border-neutral-700"></div>
               </div>
               <div className="flex items-center gap-1.5">
-                <span className="text-amber-300">Pouco Estoque (1-4)</span>
-                <div className="w-4 h-4 rounded bg-[#9a6700] border border-amber-500"></div>
+                <span className="text-amber-600 dark:text-amber-300">Pouco Estoque (1-4)</span>
+                <div className="w-4 h-4 rounded bg-amber-500 border border-amber-600"></div>
               </div>
               <div className="flex items-center gap-1.5">
-                <span className="text-rose-400">Crítico (0)</span>
-                <div className="w-4 h-4 rounded bg-[#dc2626] border border-rose-500"></div>
+                <span className="text-rose-600 dark:text-rose-400">Crítico (0)</span>
+                <div className="w-4 h-4 rounded bg-rose-600 border border-rose-700"></div>
               </div>
             </div>
           </div>
@@ -347,9 +347,9 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
               <table className="w-full text-left border-separate border-spacing-y-2.5 border-spacing-x-2.5">
                 <thead>
                   <tr className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
-                    <th className="py-3 px-4 bg-white dark:bg-neutral-900/60 rounded-xl">CONCESSIONÁRIA</th>
+                    <th className="py-3 px-4 bg-neutral-100 dark:bg-neutral-900/60 rounded-xl">CONCESSIONÁRIA</th>
                     {['V-STROM 650', 'HAYABUSA', 'DR-160', 'MASTER RIDE', 'ZONTES T310', 'BURGMAN'].map(mName => (
-                      <th key={mName} className="py-3 px-4 text-center bg-white dark:bg-neutral-900/60 rounded-xl min-w-[130px]">
+                      <th key={mName} className="py-3 px-4 text-center bg-neutral-100 dark:bg-neutral-900/60 rounded-xl min-w-[130px]">
                         {mName}
                       </th>
                     ))}
@@ -362,8 +362,8 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                     { id: 'motosul', name: 'Motos Sul RS' },
                     { id: 'nortemotos', name: 'Norte Motos AM' }
                   ].map(dealer => (
-                    <tr key={dealer.id} className="hover:bg-white dark:bg-neutral-900/40 transition-colors">
-                      <td className="py-3.5 px-4 font-bold text-white bg-white dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
+                    <tr key={dealer.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/40 transition-colors">
+                      <td className="py-3.5 px-4 font-bold text-neutral-900 dark:text-white bg-neutral-50 dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
                         {dealer.name}
                       </td>
                       {['V-STROM 650', 'HAYABUSA', 'DR-160', 'MASTER RIDE', 'ZONTES T310', 'BURGMAN'].map(mName => {
@@ -379,11 +379,11 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                           return isDealerMatch && isModelMatch && isAvailable;
                         }).length;
 
-                        let cellBg = 'bg-[#1e293b]/60 text-neutral-700 dark:text-neutral-300 border-neutral-700/60';
+                        let cellBg = 'bg-slate-100 dark:bg-[#1e293b]/60 text-slate-800 dark:text-neutral-300 border-slate-200 dark:border-neutral-700/60';
                         if (count === 0) {
-                          cellBg = 'bg-[#dc2626] text-white font-black border-rose-500 shadow-md shadow-rose-950/40';
+                          cellBg = 'bg-rose-600 text-white font-black border-rose-500 shadow-md shadow-rose-950/20';
                         } else if (count <= 4) {
-                          cellBg = 'bg-[#9a6700] text-amber-100 font-extrabold border-amber-500/80 shadow-md shadow-amber-950/40';
+                          cellBg = 'bg-amber-500 text-slate-950 font-extrabold border-amber-400 shadow-md shadow-amber-950/20';
                         }
 
                         return (
@@ -403,9 +403,9 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
               <table className="w-full text-left border-separate border-spacing-y-2.5 border-spacing-x-2.5">
                 <thead>
                   <tr className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
-                    <th className="py-3 px-4 bg-white dark:bg-neutral-900/60 rounded-xl">COR DO VEÍCULO</th>
+                    <th className="py-3 px-4 bg-neutral-100 dark:bg-neutral-900/60 rounded-xl">COR DO VEÍCULO</th>
                     {['V-STROM 650', 'HAYABUSA', 'DR-160', 'GSX-S1000GX', 'ZONTES T310', 'BURGMAN'].map(mName => (
-                      <th key={mName} className="py-3 px-4 text-center bg-white dark:bg-neutral-900/60 rounded-xl min-w-[130px]">
+                      <th key={mName} className="py-3 px-4 text-center bg-neutral-100 dark:bg-neutral-900/60 rounded-xl min-w-[130px]">
                         {mName}
                       </th>
                     ))}
@@ -420,11 +420,11 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                     { name: 'Cinza Fosco', hex: '#64748b' },
                     { name: 'Amarelo Ouro', hex: '#eab308' }
                   ].map(colorObj => (
-                    <tr key={colorObj.name} className="hover:bg-white dark:bg-neutral-900/40 transition-colors">
-                      <td className="py-3.5 px-4 font-bold text-white bg-white dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
+                    <tr key={colorObj.name} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/40 transition-colors">
+                      <td className="py-3.5 px-4 font-bold text-neutral-900 dark:text-white bg-neutral-50 dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
                         <div className="flex items-center gap-2.5">
                           <span 
-                            className="w-4 h-4 rounded-full border border-neutral-600 shadow-sm shrink-0" 
+                            className="w-4 h-4 rounded-full border border-neutral-400 dark:border-neutral-600 shadow-sm shrink-0" 
                             style={{ backgroundColor: colorObj.hex }}
                           />
                           <span>{colorObj.name}</span>
@@ -438,11 +438,11 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                           return isDealerMatch && isColorMatch && item.status !== 'vendido';
                         }).length;
 
-                        let cellBg = 'bg-[#1e293b]/60 text-neutral-700 dark:text-neutral-300 border-neutral-700/60';
+                        let cellBg = 'bg-slate-100 dark:bg-[#1e293b]/60 text-slate-800 dark:text-neutral-300 border-slate-200 dark:border-neutral-700/60';
                         if (count === 0) {
-                          cellBg = 'bg-[#dc2626] text-white font-black border-rose-500 shadow-md shadow-rose-950/40';
+                          cellBg = 'bg-rose-600 text-white font-black border-rose-500 shadow-md shadow-rose-950/20';
                         } else if (count <= 4) {
-                          cellBg = 'bg-[#9a6700] text-amber-100 font-extrabold border-amber-500/80 shadow-md shadow-amber-950/40';
+                          cellBg = 'bg-amber-500 text-slate-950 font-extrabold border-amber-400 shadow-md shadow-amber-950/20';
                         }
 
                         return (
