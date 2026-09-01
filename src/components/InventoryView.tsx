@@ -584,16 +584,16 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
       {/* Technical Specs Modal (Bento) */}
       {specModalItem && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md">
-          <div className="bg-[#18181b] rounded-3xl max-w-lg w-full p-6 md:p-7 shadow-2xl border border-[#27272a] animate-in fade-in zoom-in-95">
-            <div className="flex justify-between items-start pb-4 border-b border-[#27272a]">
+        <div className="fixed inset-0 bg-black/60 dark:bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md">
+          <div className="bg-white dark:bg-[#18181b] rounded-3xl max-w-lg w-full p-6 md:p-7 shadow-2xl border border-neutral-200 dark:border-[#27272a] animate-in fade-in zoom-in-95">
+            <div className="flex justify-between items-start pb-4 border-b border-neutral-200 dark:border-[#27272a]">
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-widest text-[#3b82f6]">Ficha Técnica & Homologação</span>
-                <h3 className="text-[20px] font-bold text-[#fafafa]">{specModalItem.model} ({specModalItem.year})</h3>
+                <h3 className="text-[20px] font-bold text-neutral-900 dark:text-[#fafafa]">{specModalItem.model} ({specModalItem.year})</h3>
               </div>
               <button 
                 onClick={() => setSpecModalItem(null)}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold text-lg"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white font-bold text-lg"
               >
                 ✕
               </button>
@@ -601,26 +601,26 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
             <div className="space-y-4 py-4 text-[13px]">
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-neutral-50 dark:bg-neutral-900/60 p-3 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">Cilindrada / Motor</span>
-                  <p className="font-bold text-white mt-0.5">{specModalItem.engineDisplacement}</p>
+                  <p className="font-bold text-neutral-900 dark:text-white mt-0.5">{specModalItem.engineDisplacement}</p>
                 </div>
-                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-neutral-50 dark:bg-neutral-900/60 p-3 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">Potência Máxima</span>
-                  <p className="font-bold text-white mt-0.5">{specModalItem.power}</p>
+                  <p className="font-bold text-neutral-900 dark:text-white mt-0.5">{specModalItem.power}</p>
                 </div>
-                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-neutral-50 dark:bg-neutral-900/60 p-3 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">VIN / Chassi</span>
                   <p className="font-mono font-bold text-neutral-700 dark:text-neutral-300 mt-0.5">{specModalItem.vin}</p>
                 </div>
-                <div className="bg-white dark:bg-neutral-900/60 p-3 rounded-2xl border border-[#27272a]">
+                <div className="bg-neutral-50 dark:bg-neutral-900/60 p-3 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block">Data de Chegada</span>
-                  <p className="font-bold text-white mt-0.5">{specModalItem.arrivedDate}</p>
+                  <p className="font-bold text-neutral-900 dark:text-white mt-0.5">{specModalItem.arrivedDate}</p>
                 </div>
               </div>
 
               {specModalItem.notes && (
-                <div className="bg-white dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-[#27272a]">
+                <div className="bg-neutral-50 dark:bg-neutral-900/60 p-3.5 rounded-2xl border border-neutral-200 dark:border-[#27272a]">
                   <span className="text-[10px] uppercase font-bold text-neutral-500 block mb-1">Observações do Pátio</span>
                   <p className="text-neutral-700 dark:text-neutral-300 text-[12px] leading-relaxed">{specModalItem.notes}</p>
                 </div>
@@ -641,13 +641,13 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
       {/* Edit Vehicle Modal */}
       {editingItem && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md">
-          <div className="bg-[#18181b] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-[#27272a] animate-in fade-in zoom-in-95">
-            <div className="flex justify-between items-start pb-3 border-b border-[#27272a]">
-              <h3 className="text-[18px] font-bold text-[#fafafa]">Editar {editingItem.model}</h3>
+        <div className="fixed inset-0 bg-black/60 dark:bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md">
+          <div className="bg-white dark:bg-[#18181b] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-neutral-200 dark:border-[#27272a] animate-in fade-in zoom-in-95">
+            <div className="flex justify-between items-start pb-3 border-b border-neutral-200 dark:border-[#27272a]">
+              <h3 className="text-[18px] font-bold text-neutral-900 dark:text-[#fafafa]">Editar {editingItem.model}</h3>
               <button 
                 onClick={() => setEditingItem(null)}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white font-bold"
               >
                 ✕
               </button>
@@ -660,7 +660,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                   type="number"
                   value={editingItem.retailPrice}
                   onChange={(e) => setEditingItem({ ...editingItem, retailPrice: parseFloat(e.target.value) || 0 })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
@@ -669,7 +669,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                 <select 
                   value={editingItem.status}
                   onChange={(e) => setEditingItem({ ...editingItem, status: e.target.value as any })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white focus:border-[#3b82f6] outline-none"
                 >
                   <option value="disponivel">Disponível</option>
                   <option value="reservado">Reservado</option>
@@ -682,7 +682,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                 <textarea 
                   value={editingItem.notes || ''}
                   onChange={(e) => setEditingItem({ ...editingItem, notes: e.target.value })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-20 resize-none focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white h-20 resize-none focus:border-[#3b82f6] outline-none"
                 />
               </div>
 
@@ -690,7 +690,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                 <button
                   type="button"
                   onClick={() => setEditingItem(null)}
-                  className="px-4 py-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
+                  className="px-4 py-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 text-[12px] font-bold"
                 >
                   Cancelar
                 </button>
@@ -708,16 +708,16 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
       {/* Add Vehicle Modal */}
       {isAddModalOpen && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md">
-          <div className="bg-[#18181b] rounded-3xl max-w-lg w-full p-6 md:p-7 shadow-2xl border border-[#27272a] animate-in fade-in zoom-in-95 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-start pb-3 border-b border-[#27272a]">
+        <div className="fixed inset-0 bg-black/60 dark:bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-md">
+          <div className="bg-white dark:bg-[#18181b] rounded-3xl max-w-lg w-full p-6 md:p-7 shadow-2xl border border-neutral-200 dark:border-[#27272a] animate-in fade-in zoom-in-95 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-start pb-3 border-b border-neutral-200 dark:border-[#27272a]">
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-widest text-[#3b82f6]">Entrada de Estoque</span>
-                <h3 className="text-[18px] font-bold text-[#fafafa]">Cadastrar Nova Motocicleta</h3>
+                <h3 className="text-[18px] font-bold text-neutral-900 dark:text-[#fafafa]">Cadastrar Nova Motocicleta</h3>
               </div>
               <button 
                 onClick={() => setIsAddModalOpen(false)}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-white font-bold"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white font-bold"
               >
                 ✕
               </button>
@@ -731,7 +731,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                     type="text" 
                     value={formModel}
                     onChange={(e) => setFormModel(e.target.value)}
-                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white focus:border-[#3b82f6] outline-none"
                     required
                   />
                 </div>
@@ -741,7 +741,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                     type="number" 
                     value={formYear}
                     onChange={(e) => setFormYear(e.target.value)}
-                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white focus:border-[#3b82f6] outline-none"
                     required
                   />
                 </div>
@@ -754,7 +754,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                   value={formVin}
                   onChange={(e) => setFormVin(e.target.value)}
                   placeholder="Ex: JS1GT79B4R3001XXX"
-                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white font-mono uppercase focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white font-mono uppercase focus:border-[#3b82f6] outline-none placeholder:text-neutral-400 dark:placeholder:text-neutral-500"
                 />
               </div>
 
@@ -765,7 +765,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                     type="text" 
                     value={formColor}
                     onChange={(e) => setFormColor(e.target.value)}
-                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
                 <div>
@@ -773,7 +773,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                   <select 
                     value={formStatus}
                     onChange={(e) => setFormStatus(e.target.value as any)}
-                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white focus:border-[#3b82f6] outline-none"
                   >
                     <option value="disponivel">Disponível</option>
                     <option value="reservado">Reservado</option>
@@ -789,7 +789,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                     type="number" 
                     value={formCost}
                     onChange={(e) => setFormCost(e.target.value)}
-                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
                 <div>
@@ -798,7 +798,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                     type="number" 
                     value={formRetail}
                     onChange={(e) => setFormRetail(e.target.value)}
-                    className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white focus:border-[#3b82f6] outline-none"
+                    className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white focus:border-[#3b82f6] outline-none"
                   />
                 </div>
               </div>
@@ -809,7 +809,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                   value={formNotes}
                   onChange={(e) => setFormNotes(e.target.value)}
                   placeholder="Informações adicionais do veículo ou acessórios..."
-                  className="w-full bg-white dark:bg-neutral-900 border border-[#27272a] rounded-xl p-2.5 text-white h-16 resize-none focus:border-[#3b82f6] outline-none"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-[#27272a] rounded-xl p-2.5 text-neutral-900 dark:text-white h-16 resize-none focus:border-[#3b82f6] outline-none placeholder:text-neutral-400 dark:placeholder:text-neutral-500"
                 />
               </div>
 
@@ -817,7 +817,7 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                 <button
                   type="button"
                   onClick={() => setIsAddModalOpen(false)}
-                  className="px-4 py-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-white hover:bg-neutral-800 text-[12px] font-bold"
+                  className="px-4 py-2 rounded-xl text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 text-[12px] font-bold"
                 >
                   Cancelar
                 </button>

@@ -463,22 +463,22 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
 
       {/* Scope Exclusive Access Banner */}
       {!isMontadora && currentDealerProfile && (
-        <div className="bg-gradient-to-r from-blue-950/80 via-neutral-900 to-neutral-900 border-2 border-blue-500/40 rounded-2xl p-5 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="bg-gradient-to-r from-blue-50 via-white to-white dark:from-blue-950/80 dark:via-neutral-900 dark:to-neutral-900 border-2 border-blue-300 dark:border-blue-500/40 rounded-2xl p-5 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <div className="p-3 bg-blue-500/20 text-blue-400 rounded-xl border border-blue-500/30">
+            <div className="p-3 bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-xl border border-blue-500/30">
               <Lock className="w-6 h-6" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                <span className="text-xs font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-500/30">
                   Acesso Exclusivo Concessionária
                 </span>
-                <span className="text-xs text-neutral-500 dark:text-neutral-400">Código Dealer: <strong className="text-white">{currentDealerProfile.dealerCode}</strong></span>
+                <span className="text-xs text-neutral-500 dark:text-neutral-400">Código Dealer: <strong className="text-neutral-900 dark:text-white">{currentDealerProfile.dealerCode}</strong></span>
               </div>
-              <h2 className="text-lg font-bold text-white mt-1">
+              <h2 className="text-lg font-bold text-neutral-900 dark:text-white mt-1">
                 {currentDealerProfile.name}
               </h2>
-              <p className="text-xs text-neutral-700 dark:text-neutral-300 mt-0.5">
+              <p className="text-xs text-neutral-600 dark:text-neutral-300 mt-0.5">
                 Você está visualizando e editando exclusivamente a base de compromisso mensal de compra da sua loja. Seus dados abastecem diretamente a análise de crédito e a Ficha de Aprovação da Montadora.
               </p>
             </div>
@@ -496,16 +496,16 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
 
       {/* Montadora National Overview Header */}
       {isMontadora && (
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-6 shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-6 shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2.5">
-              <div className="p-2.5 bg-amber-500/10 text-amber-400 rounded-xl border border-amber-500/20">
+              <div className="p-2.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-xl border border-amber-500/20">
                 <CalendarCheck className="w-6 h-6" />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-neutral-100 flex items-center gap-2">
+                <h2 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
                   Gestão Nacional de Compromissos de Compra
-                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold border border-amber-500/30">
+                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-700 dark:text-amber-300 font-bold border border-amber-500/30">
                     Rede Autorizada J. Toledo
                   </span>
                 </h2>
@@ -530,41 +530,41 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
 
       {/* KPI Cards Strip */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4 shadow-lg">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-lg">
           <div className="flex items-center justify-between text-neutral-500 dark:text-neutral-400 mb-2">
             <span className="text-xs font-semibold">Planos de Compromisso</span>
-            <CalendarCheck className="w-4 h-4 text-blue-400" />
+            <CalendarCheck className="w-4 h-4 text-blue-500 dark:text-blue-400" />
           </div>
-          <div className="text-2xl font-bold text-white">{kpis.totalPlans}</div>
+          <div className="text-2xl font-bold text-neutral-900 dark:text-white">{kpis.totalPlans}</div>
           <div className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1 flex items-center gap-1">
-            <span className="text-emerald-400 font-bold">{kpis.approvedCount} aprovados</span> • {kpis.pendingReviewCount} pendentes
+            <span className="text-emerald-600 dark:text-emerald-400 font-bold">{kpis.approvedCount} aprovados</span> • {kpis.pendingReviewCount} pendentes
           </div>
         </div>
 
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4 shadow-lg">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-lg">
           <div className="flex items-center justify-between text-neutral-500 dark:text-neutral-400 mb-2">
             <span className="text-xs font-semibold">Compra Solicitada (Mês 1)</span>
-            <Boxes className="w-4 h-4 text-amber-400" />
+            <Boxes className="w-4 h-4 text-amber-500 dark:text-amber-400" />
           </div>
-          <div className="text-2xl font-bold text-amber-400">{kpis.totalUnitsM1} <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400">motos</span></div>
+          <div className="text-2xl font-bold text-amber-600 dark:text-amber-400">{kpis.totalUnitsM1} <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400">motos</span></div>
           <div className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">Faturamento imediato solicitado</div>
         </div>
 
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4 shadow-lg">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-lg">
           <div className="flex items-center justify-between text-neutral-500 dark:text-neutral-400 mb-2">
             <span className="text-xs font-semibold">Projeção Trimestral Total</span>
-            <TrendingUp className="w-4 h-4 text-purple-400" />
+            <TrendingUp className="w-4 h-4 text-purple-500 dark:text-purple-400" />
           </div>
-          <div className="text-2xl font-bold text-purple-400">{kpis.totalUnitsTrimestre} <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400">motos</span></div>
+          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{kpis.totalUnitsTrimestre} <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400">motos</span></div>
           <div className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">Planejamento fabril (Mês 1+2+3)</div>
         </div>
 
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4 shadow-lg">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-lg">
           <div className="flex items-center justify-between text-neutral-500 dark:text-neutral-400 mb-2">
             <span className="text-xs font-semibold">Volume Financeiro Estimado</span>
-            <Coins className="w-4 h-4 text-emerald-400" />
+            <Coins className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
           </div>
-          <div className="text-xl font-bold text-emerald-400">R$ {fmt(kpis.totalFinancial)}</div>
+          <div className="text-xl font-bold text-emerald-600 dark:text-emerald-400">R$ {fmt(kpis.totalFinancial)}</div>
           <div className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">Total faturamento fábrica (Custo)</div>
         </div>
       </div>
@@ -574,16 +574,16 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
         
         {/* Left Side: Plans List & Filtering (4 Cols) */}
         <div className="lg:col-span-4 space-y-4">
-          <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4 shadow-xl space-y-3">
+          <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-xl space-y-3">
             <div className="flex items-center justify-between">
-              <h3 className="text-sm font-bold text-neutral-200 flex items-center gap-2">
-                <FileText className="w-4 h-4 text-blue-400" />
+              <h3 className="text-sm font-bold text-neutral-900 dark:text-neutral-200 flex items-center gap-2">
+                <FileText className="w-4 h-4 text-blue-500 dark:text-blue-400" />
                 <span>Compromissos ({displayedCommitments.length})</span>
               </h3>
               {!isMontadora && (
                 <button
                   onClick={handleOpenCreateModal}
-                  className="p-1.5 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded-lg text-xs font-bold transition-all"
+                  className="p-1.5 bg-blue-500/20 hover:bg-blue-600 text-blue-600 dark:text-blue-400 hover:text-white rounded-lg text-xs font-bold transition-all"
                   title="Novo Compromisso"
                 >
                   <Plus className="w-4 h-4" />
@@ -599,7 +599,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                 placeholder={isMontadora ? "Buscar concessionária, período..." : "Buscar por período, modelo..."}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-blue-500"
+                className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-blue-500"
               />
             </div>
 
@@ -608,7 +608,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
               <select
                 value={filterBrand}
                 onChange={(e) => setFilterBrand(e.target.value)}
-                className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-2.5 py-1.5 text-xs text-neutral-700 dark:text-neutral-300 focus:outline-none"
+                className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-2.5 py-1.5 text-xs text-neutral-900 dark:text-neutral-300 focus:outline-none"
               >
                 <option value="todas">Todas as Marcas</option>
                 <option value="Suzuki">Suzuki</option>
@@ -619,7 +619,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
               <select
                 value={filterStatus}
                 onChange={(e) => setFilterStatus(e.target.value)}
-                className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-2.5 py-1.5 text-xs text-neutral-700 dark:text-neutral-300 focus:outline-none"
+                className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-2.5 py-1.5 text-xs text-neutral-900 dark:text-neutral-300 focus:outline-none"
               >
                 <option value="todos">Todos os Status</option>
                 <option value="rascunho">Rascunho</option>
@@ -633,7 +633,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
               <select
                 value={filterDealer}
                 onChange={(e) => setFilterDealer(e.target.value)}
-                className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-2.5 py-1.5 text-xs text-neutral-700 dark:text-neutral-300 focus:outline-none"
+                className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-2.5 py-1.5 text-xs text-neutral-900 dark:text-neutral-300 focus:outline-none"
               >
                 <option value="todos">Todas as Concessionárias ({dealerships.length})</option>
                 {dealerships.map(d => (
@@ -657,23 +657,23 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                       onClick={() => setSelectedCommitmentId(plan.id)}
                       className={`p-3.5 rounded-xl border transition-all cursor-pointer text-xs space-y-2 ${
                         isSelected
-                          ? 'bg-blue-950/40 border-blue-500 shadow-md shadow-blue-500/10'
-                          : 'bg-white dark:bg-neutral-900/80 hover:bg-neutral-850 border-neutral-200 dark:border-neutral-800'
+                          ? 'bg-blue-50 dark:bg-blue-950/40 border-blue-500 shadow-md shadow-blue-500/10'
+                          : 'bg-neutral-50 dark:bg-neutral-900/80 hover:bg-neutral-100 dark:hover:bg-neutral-800 border-neutral-200 dark:border-neutral-800'
                       }`}
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <span className={`w-2 h-2 rounded-full ${
-                            plan.brand === 'Suzuki' ? 'bg-blue-400' : plan.brand === 'Haojue' ? 'bg-amber-400' : 'bg-emerald-400'
+                            plan.brand === 'Suzuki' ? 'bg-blue-500' : plan.brand === 'Haojue' ? 'bg-amber-500' : 'bg-emerald-500'
                           }`} />
-                          <span className="font-bold text-white">{plan.period}</span>
+                          <span className="font-bold text-neutral-900 dark:text-white">{plan.period}</span>
                         </div>
                         <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${
                           plan.status === 'aprovado_fabrica'
-                            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+                            ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30'
                             : plan.status === 'enviado'
-                            ? 'bg-blue-500/10 text-blue-400 border-blue-500/30'
-                            : 'bg-neutral-500/10 text-neutral-500 dark:text-neutral-400 border-neutral-700'
+                            ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30'
+                            : 'bg-neutral-500/10 text-neutral-600 dark:text-neutral-400 border-neutral-300 dark:border-neutral-700'
                         }`}>
                           {plan.status === 'aprovado_fabrica' ? 'Aprovado Fábrica' : plan.status === 'enviado' ? 'Enviado Fábrica' : 'Rascunho'}
                         </span>
@@ -684,12 +684,12 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                       </div>
 
                       <div className="flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400 border-t border-neutral-200 dark:border-neutral-800/80 pt-2">
-                        <span>Marca: <strong className="text-neutral-200">{plan.brand}</strong></span>
-                        <span>Compra Mês 1: <strong className="text-amber-300">{plan.totalUnitsMonth1} un.</strong></span>
+                        <span>Marca: <strong className="text-neutral-900 dark:text-neutral-200">{plan.brand}</strong></span>
+                        <span>Compra Mês 1: <strong className="text-amber-600 dark:text-amber-300">{plan.totalUnitsMonth1} un.</strong></span>
                       </div>
 
                       {plan.linkedApprovalProposalId && (
-                        <div className="text-[10px] text-emerald-400 font-bold flex items-center gap-1">
+                        <div className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
                           <ShieldCheck className="w-3.5 h-3.5" />
                           <span>Ficha JTA/JTZ Gerada</span>
                         </div>
@@ -705,30 +705,30 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
         {/* Right Side: Active Commitment Full Working Sheet (8 Cols) */}
         <div className="lg:col-span-8 space-y-6">
           {activeCommitment ? (
-            <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-6 shadow-xl space-y-6">
+            <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-6 shadow-xl space-y-6">
               
               {/* Top Details & Action Bar */}
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-neutral-200 dark:border-neutral-800">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                    <span className="text-xs font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-300 border border-blue-500/30">
                       {activeCommitment.brand}
                     </span>
                     <span className="text-xs text-neutral-500 dark:text-neutral-400">
-                      Período: <strong className="text-white">{activeCommitment.period}</strong>
+                      Período: <strong className="text-neutral-900 dark:text-white">{activeCommitment.period}</strong>
                     </span>
                     <span className="text-xs text-neutral-500 dark:text-neutral-400">
-                      Cód.: <strong className="text-white">{activeCommitment.dealerCode}</strong>
+                      Cód.: <strong className="text-neutral-900 dark:text-white">{activeCommitment.dealerCode}</strong>
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mt-1">
+                  <h3 className="text-lg font-bold text-neutral-900 dark:text-white mt-1">
                     {activeCommitment.dealershipName}
                   </h3>
                   <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-                    <span>Regional Com.: <strong className="text-neutral-200">{activeCommitment.regionalComercial}</strong></span>
-                    <span>Regional Fin.: <strong className="text-neutral-200">{activeCommitment.regionalFinanceira}</strong></span>
-                    <span>Média Emplacamento: <strong className="text-neutral-200">{activeCommitment.avgMonthlyRegistration} un/mês</strong></span>
-                    <span>Bikes/Nota: <strong className="text-neutral-200">{activeCommitment.bikesPerInvoice}</strong></span>
+                    <span>Regional Com.: <strong className="text-neutral-800 dark:text-neutral-200">{activeCommitment.regionalComercial}</strong></span>
+                    <span>Regional Fin.: <strong className="text-neutral-800 dark:text-neutral-200">{activeCommitment.regionalFinanceira}</strong></span>
+                    <span>Média Emplacamento: <strong className="text-neutral-800 dark:text-neutral-200">{activeCommitment.avgMonthlyRegistration} un/mês</strong></span>
+                    <span>Bikes/Nota: <strong className="text-neutral-800 dark:text-neutral-200">{activeCommitment.bikesPerInvoice}</strong></span>
                   </div>
                 </div>
 
@@ -737,17 +737,17 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                   {/* Status Badge */}
                   <div className="flex items-center gap-2">
                     {activeCommitment.status === 'aprovado_fabrica' ? (
-                      <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm">
-                        <Lock className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="px-3 py-1 bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/40 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                        <Lock className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                         <span>Aprovado pela Montadora</span>
                       </span>
                     ) : activeCommitment.status === 'enviado' || activeCommitment.status === 'em_analise' ? (
-                      <span className="px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-amber-400" />
+                      <span className="px-3 py-1 bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                         <span>Em Análise pela Montadora</span>
                       </span>
                     ) : (
-                      <span className="px-3 py-1 bg-neutral-800 text-neutral-500 dark:text-neutral-400 border border-neutral-700 rounded-xl text-xs font-bold">
+                      <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-700 rounded-xl text-xs font-bold">
                         Rascunho
                       </span>
                     )}
@@ -770,7 +770,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                       {activeCommitment.status !== 'aprovado_fabrica' && (
                         <button
                           onClick={() => handleFactoryApprove(activeCommitment)}
-                          className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 shadow-lg shadow-emerald-500/20 transition-all"
+                          className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 shadow-lg shadow-emerald-600/20 transition-all"
                         >
                           <CheckCircle2 className="w-3.5 h-3.5" />
                           <span>Aprovar Compromisso</span>
@@ -792,7 +792,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                   {activeCommitment.linkedApprovalProposalId && onNavigateToApprovalDoc && (
                     <button
                       onClick={() => onNavigateToApprovalDoc(activeCommitment.linkedApprovalProposalId)}
-                      className="px-3 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors"
+                      className="px-3 py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-500/30 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors"
                     >
                       <ShieldCheck className="w-3.5 h-3.5" />
                       <span>Ver Ficha Oficial</span>
@@ -805,21 +805,21 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Boxes className="w-4 h-4 text-blue-400" />
-                    <h4 className="text-sm font-bold text-neutral-200">
+                    <Boxes className="w-4 h-4 text-blue-500 dark:text-blue-400" />
+                    <h4 className="text-sm font-bold text-neutral-900 dark:text-neutral-200">
                       Grade de Estoque & Compromisso de Compra Trimestral
                     </h4>
                   </div>
 
                   {isCommitmentLocked ? (
-                    <div className="px-3 py-1 bg-emerald-950/80 text-emerald-400 border border-emerald-600/40 rounded-lg text-xs font-bold flex items-center gap-1.5">
+                    <div className="px-3 py-1 bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-600/40 rounded-lg text-xs font-bold flex items-center gap-1.5">
                       <Lock className="w-3.5 h-3.5" />
                       <span>Edição Bloqueada (Aprovado pela Montadora)</span>
                     </div>
                   ) : (
                     <button
                       onClick={handleAddItemToActive}
-                      className="px-2.5 py-1 bg-neutral-800 hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 hover:text-white rounded-lg text-xs font-semibold border border-neutral-700 flex items-center gap-1 transition-colors"
+                      className="px-2.5 py-1 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-300 rounded-lg text-xs font-semibold border border-neutral-300 dark:border-neutral-700 flex items-center gap-1 transition-colors"
                     >
                       <Plus className="w-3.5 h-3.5" />
                       <span>Adicionar Modelo</span>
@@ -827,41 +827,41 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                   )}
                 </div>
 
-                <div className="overflow-x-auto border border-neutral-700 rounded-xl bg-white dark:bg-neutral-900/60">
+                <div className="overflow-x-auto border border-neutral-200 dark:border-neutral-700 rounded-xl bg-white dark:bg-neutral-900/60">
                   <table className="w-full text-xs text-center border-collapse">
                     <thead>
-                      <tr className="bg-neutral-800/90 text-neutral-200 font-bold border-b border-neutral-700">
-                        <th rowSpan={2} className="p-2.5 text-left border-r border-neutral-700 min-w-[140px]">MODELO</th>
-                        <th colSpan={3} className="p-1.5 border-r border-neutral-700 bg-neutral-850">ESTOQUE ATUAL</th>
-                        <th colSpan={2} className="p-1.5 border-r border-neutral-700 bg-blue-950/40 text-blue-300">{activeCommitment.month1Label} (IMEDIATO)</th>
-                        <th colSpan={2} className="p-1.5 border-r border-neutral-700 bg-neutral-850">{activeCommitment.month2Label}</th>
-                        <th colSpan={2} className="p-1.5 border-r border-neutral-700 bg-neutral-850">{activeCommitment.month3Label}</th>
-                        <th rowSpan={2} className="p-2 text-right border-r border-neutral-700 min-w-[100px]">CUSTO UNIT.</th>
+                      <tr className="bg-neutral-100 dark:bg-neutral-800/90 text-neutral-900 dark:text-neutral-200 font-bold border-b border-neutral-200 dark:border-neutral-700">
+                        <th rowSpan={2} className="p-2.5 text-left border-r border-neutral-200 dark:border-neutral-700 min-w-[140px]">MODELO</th>
+                        <th colSpan={3} className="p-1.5 border-r border-neutral-200 dark:border-neutral-700 bg-neutral-200/60 dark:bg-neutral-850">ESTOQUE ATUAL</th>
+                        <th colSpan={2} className="p-1.5 border-r border-neutral-200 dark:border-neutral-700 bg-blue-100 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300">{activeCommitment.month1Label} (IMEDIATO)</th>
+                        <th colSpan={2} className="p-1.5 border-r border-neutral-200 dark:border-neutral-700 bg-neutral-200/60 dark:bg-neutral-850">{activeCommitment.month2Label}</th>
+                        <th colSpan={2} className="p-1.5 border-r border-neutral-200 dark:border-neutral-700 bg-neutral-200/60 dark:bg-neutral-850">{activeCommitment.month3Label}</th>
+                        <th rowSpan={2} className="p-2 text-right border-r border-neutral-200 dark:border-neutral-700 min-w-[100px]">CUSTO UNIT.</th>
                         <th rowSpan={2} className="p-2 text-center w-10"></th>
                       </tr>
-                      <tr className="bg-neutral-850 text-[11px] text-neutral-500 dark:text-neutral-400 font-semibold border-b border-neutral-700">
-                        <th className="p-1 border-r border-neutral-700">Próprio</th>
-                        <th className="p-1 border-r border-neutral-700">BIN Bloq</th>
-                        <th className="p-1 border-r border-neutral-700">BIN Lib</th>
-                        <th className="p-1 border-r border-neutral-700 text-blue-400">Comprom.</th>
-                        <th className="p-1 border-r border-neutral-700 text-amber-300 font-bold">Compra</th>
-                        <th className="p-1 border-r border-neutral-700">Comprom.</th>
-                        <th className="p-1 border-r border-neutral-700">Compra</th>
-                        <th className="p-1 border-r border-neutral-700">Comprom.</th>
-                        <th className="p-1 border-r border-neutral-700">Compra</th>
+                      <tr className="bg-neutral-50 dark:bg-neutral-850 text-[11px] text-neutral-500 dark:text-neutral-400 font-semibold border-b border-neutral-200 dark:border-neutral-700">
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700">Próprio</th>
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700">BIN Bloq</th>
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700">BIN Lib</th>
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700 text-blue-600 dark:text-blue-400">Comprom.</th>
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700 text-amber-600 dark:text-amber-300 font-bold">Compra</th>
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700">Comprom.</th>
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700">Compra</th>
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700">Comprom.</th>
+                        <th className="p-1 border-r border-neutral-200 dark:border-neutral-700">Compra</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-neutral-200 dark:divide-neutral-800">
                       {activeCommitment.items.map((item) => (
-                        <tr key={item.id} className="hover:bg-neutral-800/40 transition-colors">
+                        <tr key={item.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-800/40 transition-colors">
                           {/* Model name */}
-                          <td className="p-2 text-left font-bold text-white border-r border-neutral-700">
+                          <td className="p-2 text-left font-bold text-neutral-900 dark:text-white border-r border-neutral-200 dark:border-neutral-700">
                             <input
                               type="text"
                               disabled={isCommitmentLocked}
                               value={item.model}
                               onChange={(e) => handleUpdateItem(item.id, 'model', e.target.value)}
-                              className="bg-transparent border-b border-transparent hover:border-neutral-600 focus:border-blue-500 text-white font-bold w-full focus:outline-none disabled:opacity-75 disabled:cursor-not-allowed"
+                              className="bg-transparent border-b border-transparent hover:border-neutral-400 dark:hover:border-neutral-600 focus:border-blue-500 text-neutral-900 dark:text-white font-bold w-full focus:outline-none disabled:opacity-75 disabled:cursor-not-allowed"
                             />
                             {item.notes && (
                               <div className="text-[10px] text-neutral-500 font-normal truncate">{item.notes}</div>
@@ -869,106 +869,106 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                           </td>
 
                           {/* Estoque Atual: Próprio */}
-                          <td className="p-1 border-r border-neutral-700">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.currentStockOwn}
                               onChange={(e) => handleUpdateItem(item.id, 'currentStockOwn', Number(e.target.value))}
-                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-700 rounded px-1.5 py-1 text-center text-white focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-300 dark:border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-900 dark:text-white focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Estoque Atual: BIN Bloq */}
-                          <td className="p-1 border-r border-neutral-700">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.currentStockBinBlocked}
                               onChange={(e) => handleUpdateItem(item.id, 'currentStockBinBlocked', Number(e.target.value))}
-                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-700 rounded px-1.5 py-1 text-center text-amber-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-300 dark:border-neutral-700 rounded px-1.5 py-1 text-center text-amber-600 dark:text-amber-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Estoque Atual: BIN Lib */}
-                          <td className="p-1 border-r border-neutral-700">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.currentStockBinLiberated}
                               onChange={(e) => handleUpdateItem(item.id, 'currentStockBinLiberated', Number(e.target.value))}
-                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-700 rounded px-1.5 py-1 text-center text-emerald-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-300 dark:border-neutral-700 rounded px-1.5 py-1 text-center text-emerald-600 dark:text-emerald-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Mês 1: Compromisso */}
-                          <td className="p-1 border-r border-neutral-700 bg-blue-950/20">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700 bg-blue-50/50 dark:bg-blue-950/20">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.month1Commitment}
                               onChange={(e) => handleUpdateItem(item.id, 'month1Commitment', Number(e.target.value))}
-                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-blue-800/60 rounded px-1.5 py-1 text-center text-blue-200 font-semibold focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-blue-300 dark:border-blue-800/60 rounded px-1.5 py-1 text-center text-blue-700 dark:text-blue-200 font-semibold focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Mês 1: Compra Solicitada (Imediata) */}
-                          <td className="p-1 border-r border-neutral-700 bg-blue-950/20">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700 bg-blue-50/50 dark:bg-blue-950/20">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.month1Purchase}
                               onChange={(e) => handleUpdateItem(item.id, 'month1Purchase', Number(e.target.value))}
-                              className="w-12 bg-amber-500/20 border border-amber-500/60 rounded px-1.5 py-1 text-center text-amber-300 font-extrabold focus:outline-none focus:border-amber-400 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-amber-100 dark:bg-amber-500/20 border border-amber-400 dark:border-amber-500/60 rounded px-1.5 py-1 text-center text-amber-800 dark:text-amber-300 font-extrabold focus:outline-none focus:border-amber-400 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Mês 2: Compromisso */}
-                          <td className="p-1 border-r border-neutral-700">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.month2Commitment}
                               onChange={(e) => handleUpdateItem(item.id, 'month2Commitment', Number(e.target.value))}
-                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-700 dark:text-neutral-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-300 dark:border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Mês 2: Compra */}
-                          <td className="p-1 border-r border-neutral-700">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.month2Purchase}
                               onChange={(e) => handleUpdateItem(item.id, 'month2Purchase', Number(e.target.value))}
-                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-700 dark:text-neutral-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-300 dark:border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Mês 3: Compromisso */}
-                          <td className="p-1 border-r border-neutral-700">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.month3Commitment}
                               onChange={(e) => handleUpdateItem(item.id, 'month3Commitment', Number(e.target.value))}
-                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-700 dark:text-neutral-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-300 dark:border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Mês 3: Compra */}
-                          <td className="p-1 border-r border-neutral-700">
+                          <td className="p-1 border-r border-neutral-200 dark:border-neutral-700">
                             <input
                               type="number"
                               disabled={isCommitmentLocked}
                               value={item.month3Purchase}
                               onChange={(e) => handleUpdateItem(item.id, 'month3Purchase', Number(e.target.value))}
-                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-700 dark:text-neutral-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                              className="w-12 bg-neutral-50 dark:bg-neutral-950/70 border border-neutral-300 dark:border-neutral-700 rounded px-1.5 py-1 text-center text-neutral-900 dark:text-neutral-300 focus:outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                             />
                           </td>
 
                           {/* Custo Unitário */}
-                          <td className="p-2 text-right border-r border-neutral-700 text-neutral-700 dark:text-neutral-300 font-semibold">
+                          <td className="p-2 text-right border-r border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-neutral-300 font-semibold">
                             R$ {fmt(item.factoryCostUnit)}
                           </td>
 
@@ -977,7 +977,7 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                             {!isCommitmentLocked && (
                               <button
                                 onClick={() => handleDeleteItem(item.id)}
-                                className="p-1 text-neutral-500 hover:text-red-400 transition-colors"
+                                className="p-1 text-neutral-500 hover:text-red-500 transition-colors"
                                 title="Remover modelo"
                               >
                                 <Trash2 className="w-3.5 h-3.5" />
@@ -988,17 +988,16 @@ export const MonthlyCommitmentView: React.FC<MonthlyCommitmentViewProps> = ({
                       ))}
 
                       {/* TOTAL ROW */}
-                      <tr className="bg-neutral-800/90 font-extrabold text-white border-t-2 border-neutral-600">
-                        <td className="p-2.5 text-left border-r border-neutral-700">TOTAL:</td>
-                        <td className="p-2 border-r border-neutral-700">{activePlanTotals.ownStock}</td>
-                        <td className="p-2 border-r border-neutral-700 text-amber-300">{activePlanTotals.binBloq}</td>
-                        <td className="p-2 border-r border-neutral-700 text-emerald-300">{activePlanTotals.binLib}</td>
-                        <td className="p-2 border-r border-neutral-700 text-blue-300">{activePlanTotals.m1Comp}</td>
-                        <td className="p-2 border-r border-neutral-700 text-amber-400 text-sm font-black">{activePlanTotals.m1Pur}</td>
-                        <td className="p-2 border-r border-neutral-700">{activePlanTotals.m2Comp}</td>
-                        <td className="p-2 border-r border-neutral-700">{activePlanTotals.m2Pur}</td>
-                        <td className="p-2 border-r border-neutral-700">{activePlanTotals.m3Comp}</td>
-                        <td className="p-2 border-r border-neutral-700">{activePlanTotals.m3Pur}</td>
+                      <tr className="bg-neutral-100 dark:bg-neutral-800/90 font-extrabold text-neutral-900 dark:text-white border-t-2 border-neutral-300 dark:border-neutral-600">
+                        <td className="p-2.5 text-left border-r border-neutral-200 dark:border-neutral-700">TOTAL:</td>
+                        <td className="p-2 border-r border-neutral-200 dark:border-neutral-700">{activePlanTotals.ownStock}</td>
+                        <td className="p-2 border-r border-neutral-200 dark:border-neutral-700 text-amber-600 dark:text-amber-300">{activePlanTotals.binBloq}</td>
+                        <td className="p-2 border-r border-neutral-200 dark:border-neutral-700 text-emerald-600 dark:text-emerald-300">{activePlanTotals.binLib}</td>
+                        <td className="p-2 border-r border-neutral-200 dark:border-neutral-700 text-blue-600 dark:text-blue-300">{activePlanTotals.m1Comp}</td>
+                        <td className="p-2 border-r border-neutral-200 dark:border-neutral-700 text-amber-600 dark:text-amber-400 text-sm font-black">{activePlanTotals.m1Pur}</td>
+                        <td className="p-2 border-r border-neutral-200 dark:border-neutral-700">{activePlanTotals.m2Comp}</td>
+                        <td className="p-2 border-r border-neutral-200 dark:border-neutral-700">{activePlanTotals.m3Comp}</td>
+                        <td className="p-2 border-r border-neutral-200 dark:border-neutral-700">{activePlanTotals.m3Pur}</td>
                         <td className="p-2 text-right border-r border-neutral-700 text-emerald-400 font-black">
                           R$ {fmt(activePlanTotals.totalAmount)}
                         </td>

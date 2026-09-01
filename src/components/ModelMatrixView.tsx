@@ -68,15 +68,15 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
       )}
 
       {/* Header Banner */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-6 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-6 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center gap-3.5">
-          <div className="p-3 bg-purple-500/10 text-purple-400 rounded-2xl border border-purple-500/20">
+          <div className="p-3 bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-2xl border border-purple-500/20">
             <Layers className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl font-bold text-neutral-900 dark:text-white flex items-center gap-2">
               <span>Habilitação de Modelos, Anos & Cores de Fábrica</span>
-              <span className="text-xs font-mono font-bold bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full border border-purple-500/30">
+              <span className="text-xs font-mono font-bold bg-purple-500/20 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-full border border-purple-500/30">
                 Matriz de Liberação Gravada
               </span>
             </h2>
@@ -94,7 +94,7 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                 selectedBrand === b 
                   ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/20' 
-                  : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
+                  : 'bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800'
               }`}
             >
               {b}
@@ -104,7 +104,7 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
       </div>
 
       {/* Search Input */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4">
         <div className="relative">
           <Search className="w-4 h-4 text-neutral-500 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
@@ -112,7 +112,7 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
             placeholder="Buscar por modelo em linha..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500"
+            className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-purple-500"
           />
         </div>
       </div>
@@ -125,8 +125,8 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
           return (
             <div
               key={model.id}
-              className={`bg-[#18181b] border rounded-2xl p-5 shadow-xl space-y-4 transition-all ${
-                modelEnabled ? 'border-[#27272a]' : 'border-rose-950/60 opacity-60 bg-[#121215]'
+              className={`bg-white dark:bg-[#18181b] border rounded-2xl p-5 shadow-xl space-y-4 transition-all ${
+                modelEnabled ? 'border-neutral-200 dark:border-[#27272a]' : 'border-rose-200 dark:border-rose-950/60 opacity-60 bg-neutral-50 dark:bg-[#121215]'
               }`}
             >
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-neutral-200 dark:border-neutral-800 pb-3">
@@ -138,8 +138,8 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
                   />
                   <div>
                     <div className="flex items-center gap-2">
-                      <h3 className="text-base font-bold text-white">{model.modelName}</h3>
-                      <span className="text-xs font-mono font-bold bg-white dark:bg-neutral-900 text-purple-400 px-2 py-0.5 rounded border border-neutral-700">
+                      <h3 className="text-base font-bold text-neutral-900 dark:text-white">{model.modelName}</h3>
+                      <span className="text-xs font-mono font-bold bg-neutral-100 dark:bg-neutral-900 text-purple-600 dark:text-purple-400 px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-700">
                         Ano {model.yearModel || '2026/2026'}
                       </span>
                     </div>
@@ -152,8 +152,8 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
                     onClick={() => handleToggleModel(model.id)}
                     className={`px-3 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
                       modelEnabled
-                        ? 'bg-purple-950 text-purple-300 border border-purple-800 hover:bg-purple-900'
-                        : 'bg-rose-950 text-rose-300 border border-rose-800 hover:bg-rose-900'
+                        ? 'bg-purple-100 dark:bg-purple-950 text-purple-800 dark:text-purple-300 border border-purple-300 dark:border-purple-800 hover:bg-purple-200 dark:hover:bg-purple-900'
+                        : 'bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-800 hover:bg-rose-200 dark:hover:bg-rose-900'
                     }`}
                   >
                     {modelEnabled ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
@@ -162,13 +162,13 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
 
                   <button
                     onClick={() => handleToggleAll(model.id, true)}
-                    className="px-2.5 py-1 bg-emerald-950 hover:bg-emerald-900 text-emerald-300 border border-emerald-800 rounded-lg text-xs font-bold transition-colors"
+                    className="px-2.5 py-1 bg-emerald-100 dark:bg-emerald-950 hover:bg-emerald-200 dark:hover:bg-emerald-900 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 rounded-lg text-xs font-bold transition-colors"
                   >
                     Liberar Todas Cores
                   </button>
                   <button
                     onClick={() => handleToggleAll(model.id, false)}
-                    className="px-2.5 py-1 bg-rose-950 hover:bg-rose-900 text-rose-300 border border-rose-800 rounded-lg text-xs font-bold transition-colors"
+                    className="px-2.5 py-1 bg-rose-100 dark:bg-rose-950 hover:bg-rose-200 dark:hover:bg-rose-900 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-800 rounded-lg text-xs font-bold transition-colors"
                   >
                     Bloquear Todas Cores
                   </button>
@@ -184,13 +184,13 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
                       key={variant.id}
                       className={`p-3.5 rounded-xl border transition-all flex items-center justify-between ${
                         enabled
-                          ? 'bg-white dark:bg-neutral-900/90 border-neutral-700 text-white'
-                          : 'bg-neutral-50 dark:bg-neutral-950/60 border-rose-950 text-neutral-500 opacity-50'
+                          ? 'bg-neutral-50 dark:bg-neutral-900/90 border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white'
+                          : 'bg-neutral-100 dark:bg-neutral-950/60 border-rose-200 dark:border-rose-950 text-neutral-400 opacity-50'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
                         <span
-                          className="w-5 h-5 rounded-full border border-white/20 shrink-0 shadow-inner"
+                          className="w-5 h-5 rounded-full border border-neutral-300 dark:border-white/20 shrink-0 shadow-inner"
                           style={{ backgroundColor: variant.colorHex }}
                         />
                         <div>
@@ -203,8 +203,8 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
                         onClick={() => handleToggleVariant(model.id, variant.id)}
                         className={`px-3 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
                           enabled
-                            ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
-                            : 'bg-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-white'
+                            ? 'bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-500/30'
+                            : 'bg-rose-500/20 text-rose-700 dark:text-rose-300 hover:bg-rose-500/30'
                         }`}
                       >
                         {enabled ? (

@@ -81,15 +81,15 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
       )}
 
       {/* Header Banner */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-6 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-6 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center gap-3.5">
-          <div className="p-3 bg-blue-500/10 text-blue-400 rounded-2xl border border-blue-500/20">
+          <div className="p-3 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-2xl border border-blue-500/20">
             <CreditCard className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl font-bold text-neutral-900 dark:text-white flex items-center gap-2">
               <span>Cadastro de Condições de Pagamento & Campanhas</span>
-              <span className="text-xs font-mono font-bold bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
+              <span className="text-xs font-mono font-bold bg-blue-500/20 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">
                 Tabela Comercial Fábrica
               </span>
             </h2>
@@ -110,24 +110,24 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
 
       {/* Stats Overview */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-sm">
           <span className="text-xs text-neutral-500 dark:text-neutral-400 font-bold block mb-1">Total de Condições Ativas</span>
-          <p className="text-2xl font-black text-white font-tabular">{conditions.filter(c => c.inLine).length} Campanhas</p>
+          <p className="text-2xl font-black text-neutral-900 dark:text-white font-tabular">{conditions.filter(c => c.inLine).length} Campanhas</p>
         </div>
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-sm">
           <span className="text-xs text-neutral-500 dark:text-neutral-400 font-bold block mb-1">Maior Desconto Vigente</span>
-          <p className="text-2xl font-black text-emerald-400 font-tabular">
+          <p className="text-2xl font-black text-emerald-600 dark:text-emerald-400 font-tabular">
             {Math.max(0, ...conditions.map(c => c.discountPercentage || 0))}% à Vista
           </p>
         </div>
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-sm">
           <span className="text-xs text-neutral-500 dark:text-neutral-400 font-bold block mb-1">Marcas Mapeadas</span>
-          <p className="text-2xl font-black text-blue-400 font-tabular">Suzuki, Haojue, Zontes, Kymco</p>
+          <p className="text-2xl font-black text-blue-600 dark:text-blue-400 font-tabular">Suzuki, Haojue, Zontes, Kymco</p>
         </div>
       </div>
 
       {/* Filters Bar */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="relative flex-1 w-full">
           <Search className="w-4 h-4 text-neutral-500 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
@@ -135,14 +135,14 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
             placeholder="Buscar por Nome da Forma de Pagamento, Modelo ou Descrição..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-blue-500"
+            className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-blue-500"
           />
         </div>
 
         <select
           value={brandFilter}
           onChange={(e) => setBrandFilter(e.target.value)}
-          className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-700 dark:text-neutral-300 focus:outline-none w-full sm:w-auto"
+          className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-900 dark:text-neutral-300 focus:outline-none w-full sm:w-auto"
         >
           <option value="todas">Todas as Marcas</option>
           <option value="Suzuki">Suzuki</option>
@@ -155,40 +155,40 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
       {/* Conditions Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredConditions.map((cond) => (
-          <div key={cond.id} className="bg-[#18181b] border border-[#27272a] hover:border-blue-500/40 rounded-2xl p-5 shadow-xl transition-all space-y-3 relative">
+          <div key={cond.id} className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] hover:border-blue-500/40 rounded-2xl p-5 shadow-xl transition-all space-y-3 relative">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-md uppercase bg-blue-950 text-blue-300 border border-blue-800 font-mono">
+              <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-md uppercase bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-800 font-mono">
                 {cond.brand} • {cond.modelCode} ({cond.modelYear})
               </span>
               {cond.discountPercentage > 0 ? (
-                <span className="text-xs font-black bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1">
+                <span className="text-xs font-black bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center gap-1">
                   <Percent className="w-3 h-3" />
                   -{cond.discountPercentage}% OFF
                 </span>
               ) : (
-                <span className="text-xs font-bold text-neutral-500 dark:text-neutral-400 bg-white dark:bg-neutral-900 px-2 py-0.5 rounded-md">
+                <span className="text-xs font-bold text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-900 px-2 py-0.5 rounded-md border border-neutral-200 dark:border-neutral-800">
                   Floor Plan
                 </span>
               )}
             </div>
 
             <div>
-              <h3 className="text-sm font-bold text-white">{cond.paymentMethodName}</h3>
+              <h3 className="text-sm font-bold text-neutral-900 dark:text-white">{cond.paymentMethodName}</h3>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">{cond.description || 'Sem observações adicionais.'}</p>
             </div>
 
-            <div className="bg-white dark:bg-neutral-900 p-2.5 rounded-xl text-xs space-y-1">
-              <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
+            <div className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-2.5 rounded-xl text-xs space-y-1">
+              <div className="flex justify-between text-neutral-600 dark:text-neutral-400">
                 <span>Parcelamento:</span>
-                <span className="font-bold text-white">{cond.installments}x parcela(s)</span>
+                <span className="font-bold text-neutral-900 dark:text-white">{cond.installments}x parcela(s)</span>
               </div>
-              <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
+              <div className="flex justify-between text-neutral-600 dark:text-neutral-400">
                 <span>Vigência:</span>
-                <span className="font-semibold text-neutral-200">{cond.startDate} até {cond.endDate}</span>
+                <span className="font-semibold text-neutral-800 dark:text-neutral-200">{cond.startDate} até {cond.endDate}</span>
               </div>
-              <div className="flex justify-between text-neutral-500 dark:text-neutral-400">
+              <div className="flex justify-between text-neutral-600 dark:text-neutral-400">
                 <span>Em Linha:</span>
-                <span className={cond.inLine ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}>
+                <span className={cond.inLine ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-rose-600 dark:text-rose-400 font-bold'}>
                   {cond.inLine ? 'Sim (Ativo)' : 'Não (Inativo)'}
                 </span>
               </div>
@@ -197,14 +197,14 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
             <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-end gap-2">
               <button
                 onClick={() => handleOpenEdit(cond)}
-                className="px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 hover:text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
+                className="px-3 py-1.5 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
               >
                 <Edit3 className="w-3.5 h-3.5" />
                 <span>Editar</span>
               </button>
               <button
                 onClick={() => handleDelete(cond.id)}
-                className="px-2 py-1.5 bg-neutral-800 hover:bg-rose-950 text-neutral-500 dark:text-neutral-400 hover:text-rose-300 rounded-lg text-xs transition-colors"
+                className="px-2 py-1.5 bg-neutral-100 hover:bg-rose-100 dark:bg-neutral-800 dark:hover:bg-rose-950 text-neutral-600 hover:text-rose-600 dark:text-neutral-400 dark:hover:text-rose-300 rounded-lg text-xs transition-colors"
                 title="Excluir"
               >
                 <Trash2 className="w-3.5 h-3.5" />
@@ -216,10 +216,10 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
 
       {/* Modal: Add / Edit Condition */}
       {isModalOpen && editingCondition && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-          <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-6 max-w-lg w-full space-y-4 shadow-2xl">
-            <h3 className="text-base font-bold text-white flex items-center gap-2">
-              <CreditCard className="w-5 h-5 text-blue-400" />
+        <div className="fixed inset-0 bg-black/60 dark:bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+          <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-6 max-w-lg w-full space-y-4 shadow-2xl">
+            <h3 className="text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+              <CreditCard className="w-5 h-5 text-blue-500 dark:text-blue-400" />
               <span>{editingCondition.id.includes('pay-') ? 'Nova Condição de Pagamento' : 'Editar Condição'}</span>
             </h3>
 
@@ -229,7 +229,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
                 <select
                   value={editingCondition.brand}
                   onChange={(e) => setEditingCondition({ ...editingCondition, brand: e.target.value as BrandType })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 >
                   <option value="Suzuki">Suzuki</option>
                   <option value="Haojue">Haojue</option>
@@ -244,7 +244,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
                   type="text"
                   value={editingCondition.modelCode}
                   onChange={(e) => setEditingCondition({ ...editingCondition, modelCode: e.target.value })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 />
               </div>
 
@@ -254,7 +254,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
                   type="text"
                   value={editingCondition.paymentMethodName}
                   onChange={(e) => setEditingCondition({ ...editingCondition, paymentMethodName: e.target.value })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 />
               </div>
 
@@ -265,7 +265,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
                   step="0.5"
                   value={editingCondition.discountPercentage}
                   onChange={(e) => setEditingCondition({ ...editingCondition, discountPercentage: Number(e.target.value) })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-emerald-400 font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-emerald-600 dark:text-emerald-400 font-bold"
                 />
               </div>
 
@@ -275,7 +275,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
                   type="number"
                   value={editingCondition.installments}
                   onChange={(e) => setEditingCondition({ ...editingCondition, installments: Number(e.target.value) })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 />
               </div>
 
@@ -285,7 +285,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
                   type="date"
                   value={editingCondition.startDate}
                   onChange={(e) => setEditingCondition({ ...editingCondition, startDate: e.target.value })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 />
               </div>
 
@@ -295,7 +295,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
                   type="date"
                   value={editingCondition.endDate}
                   onChange={(e) => setEditingCondition({ ...editingCondition, endDate: e.target.value })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 />
               </div>
 
@@ -305,7 +305,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
                   rows={2}
                   value={editingCondition.description || ''}
                   onChange={(e) => setEditingCondition({ ...editingCondition, description: e.target.value })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl p-2 text-white"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl p-2 text-neutral-900 dark:text-white"
                 />
               </div>
             </div>
@@ -313,7 +313,7 @@ export const PaymentConditionsView: React.FC<PaymentConditionsViewProps> = ({
             <div className="flex items-center justify-end gap-3 pt-3 border-t border-neutral-200 dark:border-neutral-800">
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="px-4 py-2 bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 font-bold rounded-xl text-xs"
               >
                 Cancelar
               </button>

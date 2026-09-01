@@ -73,15 +73,15 @@ export const FreightManagementView: React.FC = () => {
       )}
 
       {/* Header Banner */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-6 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-6 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center gap-3.5">
-          <div className="p-3 bg-amber-500/10 text-amber-400 rounded-2xl border border-amber-500/20">
+          <div className="p-3 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-2xl border border-amber-500/20">
             <Truck className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl font-bold text-neutral-900 dark:text-white flex items-center gap-2">
               <span>Tabela & Regras Logísticas de Frete UF</span>
-              <span className="text-xs font-mono font-bold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
+              <span className="text-xs font-mono font-bold bg-amber-500/20 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
                 ERP Protheus Sync
               </span>
             </h2>
@@ -102,22 +102,22 @@ export const FreightManagementView: React.FC = () => {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-sm">
           <span className="text-xs text-neutral-500 dark:text-neutral-400 font-bold block mb-1">Total de UFs Mapeadas</span>
-          <p className="text-2xl font-black text-white font-tabular">{freightEntries.length} Estados</p>
+          <p className="text-2xl font-black text-neutral-900 dark:text-white font-tabular">{freightEntries.length} Estados</p>
         </div>
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-sm">
           <span className="text-xs text-neutral-500 dark:text-neutral-400 font-bold block mb-1">Origem Sul / Sudeste (- ES)</span>
-          <p className="text-2xl font-black text-blue-400 font-tabular">Empresa 13 - Armazém SP</p>
+          <p className="text-2xl font-black text-blue-600 dark:text-blue-400 font-tabular">Empresa 13 - Armazém SP</p>
         </div>
-        <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4">
+        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 shadow-sm">
           <span className="text-xs text-neutral-500 dark:text-neutral-400 font-bold block mb-1">Origem Norte/NE/CO & ES</span>
-          <p className="text-2xl font-black text-amber-400 font-tabular">Manaus LE 16 (Emp. 01/10)</p>
+          <p className="text-2xl font-black text-amber-600 dark:text-amber-400 font-tabular">Manaus LE 16 (Emp. 01/10)</p>
         </div>
       </div>
 
       {/* Filters Bar */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="relative flex-1 w-full">
           <Search className="w-4 h-4 text-neutral-500 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
@@ -125,7 +125,7 @@ export const FreightManagementView: React.FC = () => {
             placeholder="Buscar por Estado (UF) ou Armazém..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-500"
+            className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-amber-500"
           />
         </div>
 
@@ -133,7 +133,7 @@ export const FreightManagementView: React.FC = () => {
           <select
             value={regionFilter}
             onChange={(e) => setRegionFilter(e.target.value)}
-            className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-700 dark:text-neutral-300 focus:outline-none"
+            className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-900 dark:text-neutral-300 focus:outline-none"
           >
             <option value="all">Todas as Regiões</option>
             <option value="Sul">Sul</option>
@@ -146,7 +146,7 @@ export const FreightManagementView: React.FC = () => {
           <select
             value={warehouseFilter}
             onChange={(e) => setWarehouseFilter(e.target.value)}
-            className="bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-700 dark:text-neutral-300 focus:outline-none"
+            className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-900 dark:text-neutral-300 focus:outline-none"
           >
             <option value="all">Todos os Armazéns</option>
             <option value="empresa_13_armazem">Empresa 13 Armazém</option>
@@ -156,10 +156,10 @@ export const FreightManagementView: React.FC = () => {
       </div>
 
       {/* Freight Table */}
-      <div className="bg-[#18181b] border border-[#27272a] rounded-2xl overflow-hidden shadow-xl">
+      <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl overflow-hidden shadow-xl">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#121215] border-b border-[#27272a] text-neutral-500 dark:text-neutral-400 font-bold uppercase text-[10px]">
+            <thead className="bg-neutral-100 dark:bg-[#121215] border-b border-neutral-200 dark:border-[#27272a] text-neutral-500 dark:text-neutral-400 font-bold uppercase text-[10px]">
               <tr>
                 <th className="py-3 px-4">UF / Estado</th>
                 <th className="py-3 px-4">Região</th>
@@ -170,10 +170,10 @@ export const FreightManagementView: React.FC = () => {
                 <th className="py-3 px-4 text-right">Ações</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#27272a] text-neutral-200">
+            <tbody className="divide-y divide-neutral-200 dark:divide-[#27272a] text-neutral-800 dark:text-neutral-200">
               {filteredEntries.map((entry) => (
-                <tr key={entry.id} className="hover:bg-white dark:bg-neutral-900/60 transition-colors">
-                  <td className="py-3 px-4 font-black text-white font-mono text-sm">
+                <tr key={entry.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/60 transition-colors">
+                  <td className="py-3 px-4 font-black text-neutral-900 dark:text-white font-mono text-sm">
                     {entry.state}
                   </td>
                   <td className="py-3 px-4 font-semibold text-neutral-700 dark:text-neutral-300">
@@ -182,8 +182,8 @@ export const FreightManagementView: React.FC = () => {
                   <td className="py-3 px-4">
                     <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
                       entry.locationType === 'interior'
-                        ? 'bg-amber-950/80 text-amber-300 border-amber-800'
-                        : 'bg-purple-950/80 text-purple-300 border-purple-800'
+                        ? 'bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-800'
+                        : 'bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 border-purple-300 dark:border-purple-800'
                     }`}>
                       {entry.locationType === 'interior' ? 'Interior' : 'Capital'}
                     </span>
@@ -191,18 +191,18 @@ export const FreightManagementView: React.FC = () => {
                   <td className="py-3 px-4">
                     <span className={`px-2.5 py-1 rounded-lg text-xs font-bold ${
                       entry.originWarehouse === 'empresa_13_armazem' 
-                        ? 'bg-blue-950 text-blue-300 border border-blue-800' 
-                        : 'bg-amber-950 text-amber-300 border border-amber-800'
+                        ? 'bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-800' 
+                        : 'bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-800'
                     }`}>
                       {entry.originWarehouseLabel}
                     </span>
                   </td>
-                  <td className="py-3 px-4 text-right font-extrabold text-emerald-400 font-tabular text-sm">
+                  <td className="py-3 px-4 text-right font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular text-sm">
                     R$ {entry.costPerUnit.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                   </td>
                   <td className="py-3 px-4 text-center text-neutral-500 dark:text-neutral-400 font-medium">
-                    <span className="inline-flex items-center gap-1 bg-white dark:bg-neutral-900 px-2 py-1 rounded-md">
-                      <Clock className="w-3 h-3 text-amber-400" />
+                    <span className="inline-flex items-center gap-1 bg-neutral-100 dark:bg-neutral-900 px-2 py-1 rounded-md">
+                      <Clock className="w-3 h-3 text-amber-500 dark:text-amber-400" />
                       {entry.estimatedDays} dias úteis
                     </span>
                   </td>
@@ -210,14 +210,14 @@ export const FreightManagementView: React.FC = () => {
                     <div className="flex items-center justify-end gap-2">
                       <button
                         onClick={() => handleOpenEdit(entry)}
-                        className="p-1.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 hover:text-white rounded-lg transition-colors"
+                        className="p-1.5 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 rounded-lg transition-colors"
                         title="Editar"
                       >
                         <Edit3 className="w-3.5 h-3.5" />
                       </button>
                       <button
                         onClick={() => handleDelete(entry.id)}
-                        className="p-1.5 bg-neutral-800 hover:bg-rose-950 text-neutral-700 dark:text-neutral-300 hover:text-rose-400 rounded-lg transition-colors"
+                        className="p-1.5 bg-neutral-100 hover:bg-rose-100 dark:bg-neutral-800 dark:hover:bg-rose-950 text-neutral-700 hover:text-rose-600 dark:text-neutral-300 dark:hover:text-rose-400 rounded-lg transition-colors"
                         title="Excluir"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
@@ -233,10 +233,10 @@ export const FreightManagementView: React.FC = () => {
 
       {/* Modal: Add / Edit Freight Entry */}
       {isModalOpen && editingEntry && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-          <div className="bg-[#18181b] border border-[#27272a] rounded-2xl p-6 max-w-md w-full space-y-4 shadow-2xl">
-            <h3 className="text-base font-bold text-white flex items-center gap-2">
-              <Truck className="w-5 h-5 text-amber-400" />
+        <div className="fixed inset-0 bg-black/60 dark:bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+          <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-6 max-w-md w-full space-y-4 shadow-2xl">
+            <h3 className="text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+              <Truck className="w-5 h-5 text-amber-500 dark:text-amber-400" />
               <span>{editingEntry.id.includes('frt-') ? 'Editar Regra de Frete UF' : 'Nova Regra de Frete'}</span>
             </h3>
 
@@ -248,7 +248,7 @@ export const FreightManagementView: React.FC = () => {
                   maxLength={2}
                   value={editingEntry.state}
                   onChange={(e) => setEditingEntry({ ...editingEntry, state: e.target.value.toUpperCase() })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-mono font-bold uppercase"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-mono font-bold uppercase"
                 />
               </div>
 
@@ -257,7 +257,7 @@ export const FreightManagementView: React.FC = () => {
                 <select
                   value={editingEntry.locationType || 'capital'}
                   onChange={(e) => setEditingEntry({ ...editingEntry, locationType: e.target.value as 'capital' | 'interior' })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 >
                   <option value="capital">Capital</option>
                   <option value="interior">Interior</option>
@@ -269,7 +269,7 @@ export const FreightManagementView: React.FC = () => {
                 <select
                   value={editingEntry.region}
                   onChange={(e) => setEditingEntry({ ...editingEntry, region: e.target.value as BrazilRegion })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 >
                   <option value="Sudeste">Sudeste</option>
                   <option value="Sul">Sul</option>
@@ -288,7 +288,7 @@ export const FreightManagementView: React.FC = () => {
                     const label = wh === 'empresa_13_armazem' ? 'Empresa 13 - Armazém (SP)' : 'Manaus LE 16 - Empresa 01/10';
                     setEditingEntry({ ...editingEntry, originWarehouse: wh, originWarehouseLabel: label });
                   }}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 >
                   <option value="empresa_13_armazem">Empresa 13 - Armazém (SP)</option>
                   <option value="manaus_le_16">Manaus Local de Estoque 16 (Emp. 01/10)</option>
@@ -301,7 +301,7 @@ export const FreightManagementView: React.FC = () => {
                   type="number"
                   value={editingEntry.costPerUnit}
                   onChange={(e) => setEditingEntry({ ...editingEntry, costPerUnit: Number(e.target.value) })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-emerald-400 font-extrabold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-emerald-600 dark:text-emerald-400 font-extrabold"
                 />
               </div>
 
@@ -311,7 +311,7 @@ export const FreightManagementView: React.FC = () => {
                   type="number"
                   value={editingEntry.estimatedDays}
                   onChange={(e) => setEditingEntry({ ...editingEntry, estimatedDays: Number(e.target.value) })}
-                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-white font-bold"
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
                 />
               </div>
             </div>
@@ -319,7 +319,7 @@ export const FreightManagementView: React.FC = () => {
             <div className="flex items-center justify-end gap-3 pt-3 border-t border-neutral-200 dark:border-neutral-800">
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="px-4 py-2 bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-bold rounded-xl text-xs"
+                className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 font-bold rounded-xl text-xs"
               >
                 Cancelar
               </button>
