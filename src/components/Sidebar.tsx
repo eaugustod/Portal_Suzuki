@@ -109,11 +109,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <div className="flex flex-col gap-2.5">
             {/* High Impact Suzuki Logo Card for both Light & Dark Mode */}
             <div className="bg-slate-50 dark:bg-neutral-800/90 p-3 rounded-2xl border border-slate-200/90 dark:border-neutral-700/80 shadow-xs flex items-center gap-3 transition-all hover:border-slate-300 dark:hover:border-neutral-600">
-              <div className="bg-white p-2 rounded-xl border border-slate-200/80 shadow-2xs shrink-0 flex items-center justify-center min-w-[110px] h-10">
+              <div className="bg-white px-2.5 py-1.5 rounded-xl border border-slate-200/80 shadow-2xs shrink-0 flex items-center justify-center min-w-[135px] h-14">
                 <img 
                   src="/suzuki-logo.png" 
-                  alt="Suzuki Motos" 
-                  className="h-6 w-auto object-contain"
+                  alt="Grupo J. Toledo Suzuki Motos Brasil" 
+                  className="h-11 w-auto object-contain"
                 />
               </div>
               <div className="flex flex-col justify-center min-w-0 pr-0.5">

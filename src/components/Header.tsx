@@ -118,11 +118,11 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         {/* Suzuki Official Logo Badge */}
-        <div className="hidden sm:flex items-center gap-2 bg-white dark:bg-neutral-800 px-2.5 py-1 rounded-xl border border-slate-200/80 dark:border-neutral-700/80 shadow-2xs">
+        <div className="hidden sm:flex items-center gap-2 bg-white dark:bg-neutral-800 px-3 py-1.5 rounded-xl border border-slate-200/80 dark:border-neutral-700/80 shadow-2xs h-11">
           <img 
             src="/suzuki-logo.png" 
-            alt="Suzuki" 
-            className="h-5 w-auto object-contain"
+            alt="Grupo J. Toledo Suzuki Motos Brasil" 
+            className="h-8 md:h-9 w-auto object-contain"
           />
         </div>
 

@@ -64,7 +64,7 @@ export const SettingsView: React.FC = () => {
               <img 
                 src={DEALER_IMAGES.dealerLogo} 
                 alt="Logo Suzuki" 
-                className="h-7 w-auto object-contain"
+                className="h-9 w-auto object-contain"
               />
             </div>
             <div>
