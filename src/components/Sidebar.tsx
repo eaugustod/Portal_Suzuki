@@ -101,36 +101,40 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <div className="px-5 mb-5 flex flex-col gap-2 relative">
           <button 
             onClick={() => setMobileOpen(false)} 
-            className="lg:hidden absolute right-4 top-0 p-1 text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-lg"
+            className="lg:hidden absolute right-4 top-0 p-1 text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-neutral-800 rounded-lg transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
           
-          <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl overflow-hidden flex items-center justify-center p-1 bg-gradient-to-tr from-blue-700 to-red-600 text-white shadow-md shadow-blue-500/20">
-              {isMontadora ? (
-                <Factory className="w-6 h-6 text-white" />
-              ) : (
+          <div className="flex flex-col gap-2.5">
+            {/* High Impact Suzuki Logo Card for both Light & Dark Mode */}
+            <div className="bg-slate-50 dark:bg-neutral-800/90 p-3 rounded-2xl border border-slate-200/90 dark:border-neutral-700/80 shadow-xs flex items-center gap-3 transition-all hover:border-slate-300 dark:hover:border-neutral-600">
+              <div className="bg-white p-2 rounded-xl border border-slate-200/80 shadow-2xs shrink-0 flex items-center justify-center min-w-[110px] h-10">
                 <img 
-                  src={DEALER_IMAGES.dealerLogo} 
-                  alt="Logo Dealer" 
-                  className="w-full h-full object-cover rounded-xl"
-                  referrerPolicy="no-referrer"
+                  src="/suzuki-logo.png" 
+                  alt="Suzuki Motos" 
+                  className="h-6 w-auto object-contain"
                 />
-              )}
-            </div>
-            <div className="overflow-hidden">
-              <h1 className="text-[15px] font-bold text-slate-900 dark:text-white leading-tight tracking-tight truncate flex items-center gap-1">
-                <span>Suzuki</span>
-                <span className="text-red-600 dark:text-red-500">DealerHub</span>
-              </h1>
-              <div className="flex items-center gap-1.5 mt-0.5">
-                <span className={`text-[10px] uppercase font-bold tracking-widest ${
-                  isMontadora ? 'text-blue-600 dark:text-blue-400' : 'text-emerald-600 dark:text-emerald-400'
-                }`}>
-                  {isMontadora ? 'Montadora Oficial' : activeProfile?.shortName || 'Concessionária'}
+              </div>
+              <div className="flex flex-col justify-center min-w-0 pr-0.5">
+                <span className="text-[13px] font-black text-slate-900 dark:text-white tracking-tight leading-tight truncate">
+                  DealerHub
+                </span>
+                <span className="text-[9px] font-bold text-red-600 dark:text-red-400 tracking-wider uppercase truncate">
+                  Portal Oficial
                 </span>
               </div>
+            </div>
+
+            {/* Scope / Profile Tag */}
+            <div className="flex items-center justify-between px-1">
+              <span className={`text-[10px] uppercase font-bold tracking-widest flex items-center gap-1.5 ${
+                isMontadora ? 'text-blue-600 dark:text-blue-400' : 'text-emerald-600 dark:text-emerald-400'
+              }`}>
+                <span className={`w-2 h-2 rounded-full ${isMontadora ? 'bg-blue-600 animate-pulse' : 'bg-emerald-500'}`} />
+                {isMontadora ? 'Montadora J. Toledo' : activeProfile?.shortName || 'Concessionária'}
+              </span>
+              <span className="text-[9px] font-mono font-semibold text-slate-400 dark:text-neutral-500">v2.5</span>
             </div>
           </div>
         </div>

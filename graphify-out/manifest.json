@@ -20,33 +20,33 @@
     "semantic_hash": ""
   },
   "src/components/DealershipManagementView.tsx": {
-    "mtime": 1788273129.4343848,
-    "ast_hash": "2c373aebcb7e27b97cd57fc7f72e2e75",
+    "mtime": 1788281389.641534,
+    "ast_hash": "96da28daa6e62cf239c9818fd497895d",
     "semantic_hash": ""
   },
   "src/components/DealershipOrderDetailModal.tsx": {
-    "mtime": 1788273129.4423852,
-    "ast_hash": "6bb961a2af50fe62b6871bc7069e2810",
+    "mtime": 1788280680.9051301,
+    "ast_hash": "6aaf46b679957c53b4756b3c1022b3f4",
     "semantic_hash": ""
   },
   "src/components/Header.tsx": {
-    "mtime": 1788272061.9599326,
-    "ast_hash": "c18d9b1e55e700e24daa3222f79c3145",
+    "mtime": 1788287294.475912,
+    "ast_hash": "3e4d22d9499478711b73e05912c3d457",
     "semantic_hash": ""
   },
   "src/components/InventoryView.tsx": {
-    "mtime": 1788273129.4453852,
-    "ast_hash": "98b8e424e798a0eff7c8550f3dcfc5bb",
+    "mtime": 1788283339.2105672,
+    "ast_hash": "eea1d33b81e897dcfc5967907be1e141",
     "semantic_hash": ""
   },
   "src/components/ModelCatalogManagementModal.tsx": {
-    "mtime": 1788273129.4473853,
-    "ast_hash": "a66be3af733cb2362135b404af915c27",
+    "mtime": 1788284066.6694603,
+    "ast_hash": "72b1fbe5bdad7188cd772cbaad755882",
     "semantic_hash": ""
   },
   "src/components/ModelTechnicalSpecsModal.tsx": {
-    "mtime": 1788273129.4503853,
-    "ast_hash": "580d9c5dc501d5c8f5bbc20460265fa6",
+    "mtime": 1788279797.2717378,
+    "ast_hash": "16fdfbc9c59da6eeeb2ab3c5dc462c0b",
     "semantic_hash": ""
   },
   "src/components/MontadoraDashboardView.tsx": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "src/components/MonthlyCommitmentView.tsx": {
-    "mtime": 1788273129.4533854,
-    "ast_hash": "679aa4d5eb65fec2dcce4a693fa9fbcc",
+    "mtime": 1788283191.554886,
+    "ast_hash": "ee4ce1f2a13e6b63048b11c968422fdf",
     "semantic_hash": ""
   },
   "src/components/OrderApprovalDocumentView.tsx": {
@@ -65,13 +65,13 @@
     "semantic_hash": ""
   },
   "src/components/OrderConfirmationModal.tsx": {
-    "mtime": 1788273129.4563856,
-    "ast_hash": "5d6c05fd004b65c41d75083bd39c3f1e",
+    "mtime": 1788279713.106914,
+    "ast_hash": "322043d573e4997871c2efccc030e71d",
     "semantic_hash": ""
   },
   "src/components/PurchasePortalView.tsx": {
-    "mtime": 1788273129.4623857,
-    "ast_hash": "656db28a6b4129de11baaf3180c76996",
+    "mtime": 1788284496.2531621,
+    "ast_hash": "b916a6e3c502a61c4a7c909e2306e1fe",
     "semantic_hash": ""
   },
   "src/components/SalesCrmView.tsx": {
@@ -85,13 +85,13 @@
     "semantic_hash": ""
   },
   "src/components/SettingsView.tsx": {
-    "mtime": 1788273129.4643857,
-    "ast_hash": "a3b106e24cbbd122394c78836f831501",
+    "mtime": 1788287303.0301843,
+    "ast_hash": "fab43b9e3b64519d711d49ce41334750",
     "semantic_hash": ""
   },
   "src/components/Sidebar.tsx": {
-    "mtime": 1788272046.8507202,
-    "ast_hash": "055564e68ade58b346fee7abe303b43f",
+    "mtime": 1788287285.9236403,
+    "ast_hash": "f7f2a8916de02c23c62d707b017a01cf",
     "semantic_hash": ""
   },
   "src/components/SupportView.tsx": {
@@ -100,18 +100,18 @@
     "semantic_hash": ""
   },
   "src/components/parts/PartsCartDrawer.tsx": {
-    "mtime": 1788273129.4653857,
-    "ast_hash": "d6bfae47c74f4439283016f6c5e1f862",
+    "mtime": 1788284532.1465786,
+    "ast_hash": "0e7f7e503c925a8f64ac5e9ff59d8323",
     "semantic_hash": ""
   },
   "src/components/parts/PartsCatalogView.tsx": {
-    "mtime": 1788273129.4673858,
-    "ast_hash": "95b928e3ff623612058c25ed02aa0f9d",
+    "mtime": 1788284583.3015568,
+    "ast_hash": "0ea7eede53b0ce678aa69cbdb83fb0d3",
     "semantic_hash": ""
   },
   "src/components/parts/PartsDiagramCarousel.tsx": {
-    "mtime": 1788273129.468386,
-    "ast_hash": "d968ba94644d30088123d9fad5f85fa3",
+    "mtime": 1788284554.3737097,
+    "ast_hash": "8fd364da4eeaea8a63a0c2f68f9ddb4e",
     "semantic_hash": ""
   },
   "src/components/parts/PartsExplodedDiagram.tsx": {
@@ -120,13 +120,13 @@
     "semantic_hash": ""
   },
   "src/components/parts/PartsOrderMirrorModal.tsx": {
-    "mtime": 1788273129.472386,
-    "ast_hash": "4dda425915683d04cec3c21f9d48de42",
+    "mtime": 1788284602.3199577,
+    "ast_hash": "7ab71b6cf59fbd8b834d0cdebc0c7724",
     "semantic_hash": ""
   },
   "src/components/parts/PartsTable.tsx": {
-    "mtime": 1788273129.473386,
-    "ast_hash": "b6a155efe971232f3d81b56c44787b49",
+    "mtime": 1788284517.621443,
+    "ast_hash": "77bad2279ba176157e3e6ef7c61783f8",
     "semantic_hash": ""
   },
   "src/data/dealershipsData.ts": {
@@ -145,9 +145,9 @@
     "semantic_hash": "bcfd70213698073fb34b1d083ffc6c0b"
   },
   "src/data/mockData.ts": {
-    "mtime": 1787226015.2459915,
-    "ast_hash": "9a573a0e2dd035507570a442fc39df1d",
-    "semantic_hash": "9a573a0e2dd035507570a442fc39df1d"
+    "mtime": 1788287276.928354,
+    "ast_hash": "94a969941b5ac7cff363c6d8f3ea0bee",
+    "semantic_hash": ""
   },
   "src/data/mockPartsData.ts": {
     "mtime": 1788177491.4825323,
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1787325567.2996535,
-    "ast_hash": "6d6eb166e7cfc7e6d347a81437441e40",
+    "mtime": 1788282175.4472578,
+    "ast_hash": "250ad2b2498a2fcd7a1558d64871d928",
     "semantic_hash": ""
   },
   ".agents/skills/portal-suzuki-epc/SKILL.md": {
@@ -39090,23 +39090,23 @@
     "semantic_hash": ""
   },
   "src/components/FreightManagementView.tsx": {
-    "mtime": 1788273129.4433851,
-    "ast_hash": "c66fdeecb2ddce94aeab570ef0010d1e",
+    "mtime": 1788275069.041624,
+    "ast_hash": "23cea7753161cb1904921a0fafb58964",
     "semantic_hash": ""
   },
   "src/components/ModelMatrixView.tsx": {
-    "mtime": 1788273129.4483852,
-    "ast_hash": "5b122abfc4e161181f6cd17964b01941",
+    "mtime": 1788275132.34302,
+    "ast_hash": "47efaaca01213822a7120342e619a0b5",
     "semantic_hash": ""
   },
   "src/components/OrderWorkflowView.tsx": {
-    "mtime": 1788273129.4573855,
-    "ast_hash": "f4820bcdca12dd96b1484805dd3cecf5",
+    "mtime": 1788275004.9651852,
+    "ast_hash": "3e1baa7027745352de0dab6b7a339458",
     "semantic_hash": ""
   },
   "src/components/PaymentConditionsView.tsx": {
-    "mtime": 1788273129.4573855,
-    "ast_hash": "54c6ead2158e09d0d25d6dd36deb8d68",
+    "mtime": 1788275090.1640925,
+    "ast_hash": "2740504a0fe0d58f2e129e953bcaa067",
     "semantic_hash": ""
   },
   "src/data/workflowStepsData.ts": {
@@ -39117,6 +39117,11 @@
   "Melhorias/GUIA_SISTEMA_CORES_LIGHT_DARK.md": {
     "mtime": 1788271841.6361876,
     "ast_hash": "36d9af54073371ce31444f53c418ee10",
+    "semantic_hash": ""
+  },
+  "public/suzuki-logo.png": {
+    "mtime": 1788287245.66536,
+    "ast_hash": "741b1161e64afd3099dc54bd9c3e9f1d",
     "semantic_hash": ""
   }
 }

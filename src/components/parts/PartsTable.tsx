@@ -64,20 +64,20 @@ export const PartsTable: React.FC<PartsTableProps> = ({
   });
 
   return (
-    <div className="flex flex-col h-full bg-[#121215] border border-[#27272a] rounded-2xl overflow-hidden shadow-xl">
+    <div className="flex flex-col h-full bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl overflow-hidden shadow-xl">
       
       {/* Table Header & Search Filter */}
-      <div className="p-3.5 sm:p-4 bg-gradient-to-r from-neutral-900 via-[#18181b] to-neutral-900 border-b border-[#27272a] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+      <div className="p-3.5 sm:p-4 bg-slate-50 dark:bg-neutral-900 border-b border-neutral-200 dark:border-[#27272a] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-xs uppercase font-bold tracking-widest text-amber-400 font-mono">
+            <span className="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-400 font-mono">
               Ilustração {diagram.illustrationCode}
             </span>
             <span className="text-xs text-neutral-500 dark:text-neutral-400 font-bold">
               • {diagram.parts.length} Peças Genuínas
             </span>
           </div>
-          <h3 className="text-sm sm:text-base font-bold text-white tracking-tight mt-0.5">
+          <h3 className="text-sm sm:text-base font-bold text-neutral-900 dark:text-white tracking-tight mt-0.5">
             {diagram.title}
           </h3>
         </div>
@@ -90,12 +90,12 @@ export const PartsTable: React.FC<PartsTableProps> = ({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Buscar por REF, Part Number ou nome..."
-            className="w-full bg-neutral-50 dark:bg-neutral-950/80 border border-neutral-200 dark:border-neutral-800 rounded-xl pl-9 pr-4 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400 transition-colors"
+            className="w-full bg-white dark:bg-neutral-950/80 border border-neutral-200 dark:border-neutral-800 rounded-xl pl-9 pr-4 py-1.5 text-xs text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-amber-400 transition-colors"
           />
           {searchQuery && (
             <button 
               onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-2 text-neutral-500 dark:text-neutral-400 hover:text-white text-xs"
+              className="absolute right-2.5 top-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white text-xs"
             >
               ✕
             </button>
@@ -181,7 +181,7 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                         inline-flex items-center justify-center w-6 h-6 rounded-full font-mono font-bold text-xs
                         ${isSelected
                           ? 'bg-amber-400 text-black shadow-md shadow-amber-500/30'
-                          : 'bg-neutral-800 text-neutral-700 dark:text-neutral-300 group-hover:bg-neutral-700'
+                          : 'bg-slate-100 dark:bg-neutral-800 text-slate-700 dark:text-neutral-300 group-hover:bg-slate-200 dark:group-hover:bg-neutral-700'
                         }
                       `}>
                         {part.ref ?? '—'}
@@ -189,20 +189,20 @@ export const PartsTable: React.FC<PartsTableProps> = ({
                     </td>
 
                     {/* Part Number */}
-                    <td className="p-3 font-mono font-bold text-white text-xs whitespace-nowrap">
+                    <td className="p-3 font-mono font-bold text-neutral-900 dark:text-white text-xs whitespace-nowrap">
                       <div className="flex items-center gap-1.5">
-                        <span className="group-hover:text-amber-300 transition-colors">
+                        <span className="group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
                           {partNumber}
                         </span>
                         {part.isEssentialMaintenance && (
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" title="Item de Giro Essencial" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400" title="Item de Giro Essencial" />
                         )}
                       </div>
                     </td>
 
                     {/* Denominação / Descrição */}
                     <td className="p-3">
-                      <div className="font-bold text-neutral-200 group-hover:text-white line-clamp-1">
+                      <div className="font-bold text-neutral-800 dark:text-neutral-200 group-hover:text-blue-600 dark:group-hover:text-white line-clamp-1">
                         {description}
                       </div>
                       {part.subDescription && (

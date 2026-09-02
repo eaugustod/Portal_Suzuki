@@ -60,12 +60,11 @@ export const SettingsView: React.FC = () => {
         {/* Dealership Profile Card (Bento) */}
         <div className="bg-[#18181b] border border-[#27272a] rounded-3xl p-6 shadow-md space-y-4">
           <div className="flex items-center gap-3 pb-3 border-b border-[#27272a]">
-            <div className="w-12 h-12 rounded-2xl overflow-hidden border border-[#27272a] p-1 bg-white dark:bg-neutral-900 shadow-inner">
+            <div className="h-12 px-3 rounded-2xl border border-[#27272a] bg-white flex items-center justify-center shadow-inner">
               <img 
                 src={DEALER_IMAGES.dealerLogo} 
-                alt="Logo" 
-                className="w-full h-full object-cover rounded-xl"
-                referrerPolicy="no-referrer"
+                alt="Logo Suzuki" 
+                className="h-7 w-auto object-contain"
               />
             </div>
             <div>

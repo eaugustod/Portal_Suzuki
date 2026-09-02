@@ -86,17 +86,17 @@ export const PartsOrderMirrorModal: React.FC<PartsOrderMirrorModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200">
-      <div className="bg-[#121215] border border-[#27272a] rounded-2xl w-full max-w-4xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div className="bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl w-full max-w-4xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh] text-neutral-900 dark:text-white">
         
         {/* Modal Top Bar */}
-        <div className="p-4 sm:p-5 bg-[#18181b] border-b border-[#27272a] flex items-center justify-between gap-3 shrink-0 print:hidden">
+        <div className="p-4 sm:p-5 bg-slate-50 dark:bg-[#18181b] border-b border-neutral-200 dark:border-[#27272a] flex items-center justify-between gap-3 shrink-0 print:hidden">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400">
               <FileText className="w-5 h-5" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-white text-base sm:text-lg font-mono">
+                <h3 className="font-bold text-neutral-900 dark:text-white text-base sm:text-lg font-mono">
                   {order.orderNumber}
                 </h3>
                 <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold border flex items-center gap-1.5 ${statusInfo.bg}`}>
@@ -113,14 +113,14 @@ export const PartsOrderMirrorModal: React.FC<PartsOrderMirrorModalProps> = ({
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="px-3 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors border border-neutral-700"
+              className="px-3 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-slate-800 dark:text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-colors border border-slate-200 dark:border-neutral-700"
             >
-              <Printer className="w-4 h-4 text-neutral-700 dark:text-neutral-300" />
+              <Printer className="w-4 h-4 text-slate-700 dark:text-neutral-300" />
               <span className="hidden sm:inline">Imprimir / Salvar PDF</span>
             </button>
             <button
               onClick={onClose}
-              className="w-9 h-9 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-500 dark:text-neutral-400 hover:text-white flex items-center justify-center transition-colors"
+              className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white flex items-center justify-center transition-colors border border-slate-200 dark:border-neutral-700"
             >
               <X className="w-5 h-5" />
             </button>

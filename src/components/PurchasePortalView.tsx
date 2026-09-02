@@ -1216,7 +1216,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                     <button
                       onClick={() => setDealerOrdersFilter('todos')}
                       className={`px-3 py-1 rounded-lg font-bold transition-colors ${
-                        dealerOrdersFilter === 'todos' ? 'bg-blue-600 text-white' : 'text-neutral-500 dark:text-neutral-400 hover:text-white'
+                        dealerOrdersFilter === 'todos' ? 'bg-blue-600 text-white' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
                       }`}
                     >
                       Todos ({filteredOrders.length})
@@ -1224,7 +1224,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                     <button
                       onClick={() => setDealerOrdersFilter('analise')}
                       className={`px-3 py-1 rounded-lg font-bold transition-colors ${
-                        dealerOrdersFilter === 'analise' ? 'bg-amber-600 text-white' : 'text-neutral-500 dark:text-neutral-400 hover:text-white'
+                        dealerOrdersFilter === 'analise' ? 'bg-amber-600 text-white' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
                       }`}
                     >
                       Em Análise ({filteredOrders.filter(o => !o.creditApproved || !o.commercialApproved).length})
@@ -1232,7 +1232,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                     <button
                       onClick={() => setDealerOrdersFilter('aprovados')}
                       className={`px-3 py-1 rounded-lg font-bold transition-colors ${
-                        dealerOrdersFilter === 'aprovados' ? 'bg-purple-600 text-white' : 'text-neutral-500 dark:text-neutral-400 hover:text-white'
+                        dealerOrdersFilter === 'aprovados' ? 'bg-purple-600 text-white' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
                       }`}
                     >
                       Aprovados ({filteredOrders.filter(o => o.creditApproved && o.commercialApproved && !o.protheusIntegrated).length})
@@ -1240,7 +1240,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                     <button
                       onClick={() => setDealerOrdersFilter('integrados')}
                       className={`px-3 py-1 rounded-lg font-bold transition-colors ${
-                        dealerOrdersFilter === 'integrados' ? 'bg-emerald-600 text-white' : 'text-neutral-500 dark:text-neutral-400 hover:text-white'
+                        dealerOrdersFilter === 'integrados' ? 'bg-emerald-600 text-white' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
                       }`}
                     >
                       ERP ({filteredOrders.filter(o => o.protheusIntegrated).length})
@@ -1262,7 +1262,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                   {dealerOrdersSearch && (
                     <button
                       onClick={() => setDealerOrdersSearch('')}
-                      className="absolute right-3 top-2.5 text-xs text-neutral-500 dark:text-neutral-400 hover:text-white"
+                      className="absolute right-3 top-2.5 text-xs text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
                     >
                       ✕
                     </button>
@@ -1313,17 +1313,17 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div className="space-y-2 flex-1 min-w-0">
                           <div className="flex flex-wrap items-center gap-2">
-                            <span className="font-mono font-bold text-white text-sm group-hover:text-blue-400 transition-colors">
+                            <span className="font-mono font-bold text-neutral-900 dark:text-white text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                               {ord.orderNumber}
                             </span>
                           <span className="text-[11px] text-neutral-500 dark:text-neutral-400 font-mono flex items-center gap-1">
                             <Clock className="w-3 h-3 text-neutral-500" />
                             {ord.createdAt}
                           </span>
-                          <span className="text-[10px] bg-neutral-800 text-neutral-700 dark:text-neutral-300 px-2 py-0.5 rounded font-bold border border-neutral-700">
+                          <span className="text-[10px] bg-slate-100 dark:bg-neutral-800 text-slate-700 dark:text-neutral-300 px-2 py-0.5 rounded font-bold border border-slate-200 dark:border-neutral-700">
                             {ord.freightMode === 'CIF' ? 'Frete CIF (Incluso)' : 'Frete FOB'}
                           </span>
-                          <span className="text-[10px] bg-neutral-800 text-neutral-700 dark:text-neutral-300 px-2 py-0.5 rounded font-bold border border-neutral-700">
+                          <span className="text-[10px] bg-slate-100 dark:bg-neutral-800 text-slate-700 dark:text-neutral-300 px-2 py-0.5 rounded font-bold border border-slate-200 dark:border-neutral-700">
                             {ord.paymentMethod}
                           </span>
                         </div>
@@ -1331,12 +1331,12 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                         {/* Items list with color indicators */}
                         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-neutral-700 dark:text-neutral-300">
                           {ord.items.map((item, iIdx) => (
-                            <div key={item.id || iIdx} className="flex items-center gap-1.5 bg-neutral-50 dark:bg-neutral-950/60 px-2.5 py-1 rounded-lg border border-neutral-200 dark:border-neutral-800">
+                            <div key={item.id || iIdx} className="flex items-center gap-1.5 bg-neutral-100 dark:bg-neutral-950/60 px-2.5 py-1 rounded-lg border border-neutral-200 dark:border-neutral-800">
                               <span 
-                                className="w-2.5 h-2.5 rounded-full border border-white/20 shrink-0" 
+                                className="w-2.5 h-2.5 rounded-full border border-neutral-300 dark:border-white/20 shrink-0" 
                                 style={{ backgroundColor: item.colorHex || '#3b82f6' }}
                               />
-                              <span className="font-bold text-white">{item.quantity}x</span>
+                              <span className="font-bold text-neutral-900 dark:text-white">{item.quantity}x</span>
                               <span>{item.modelName}</span>
                               <span className="text-neutral-500 text-[10px]">({item.colorName})</span>
                             </div>
@@ -1347,7 +1347,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                       {/* Right side: Amount and Status + Action Button */}
                       <div className="flex flex-wrap sm:flex-nowrap items-center justify-between sm:justify-end gap-3 text-xs shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-neutral-200 dark:border-neutral-800">
                         <div className="text-left sm:text-right font-tabular">
-                          <span className="text-white font-black text-sm block">
+                          <span className="text-neutral-900 dark:text-white font-black text-sm block">
                             R$ {ord.totalAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                           </span>
                           <span className="text-[11px] text-neutral-500 dark:text-neutral-400">
@@ -1357,17 +1357,17 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
 
                         <div className="flex items-center gap-2">
                           {ord.protheusIntegrated ? (
-                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-800/80 px-3 py-1.5 rounded-xl">
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-800/80 px-3 py-1.5 rounded-xl">
                               <CheckCircle2 className="w-3.5 h-3.5" />
                               ERP: {ord.protheusOrderNumber}
                             </span>
                           ) : ord.creditApproved && ord.commercialApproved ? (
-                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-purple-300 bg-purple-950/80 border border-purple-800/80 px-3 py-1.5 rounded-xl">
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/80 border border-purple-200 dark:border-purple-800/80 px-3 py-1.5 rounded-xl">
                               <Database className="w-3.5 h-3.5" />
                               Aprovado Fábrica
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-300 bg-amber-950/80 border border-amber-800/80 px-3 py-1.5 rounded-xl">
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800/80 px-3 py-1.5 rounded-xl">
                               <Clock className="w-3.5 h-3.5" />
                               Em Análise Fábrica
                             </span>
@@ -1378,7 +1378,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                               e.stopPropagation();
                               setViewingDealerOrder(ord);
                             }}
-                            className="px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded-xl text-xs font-bold border border-blue-500/30 hover:border-blue-600 flex items-center gap-1.5 transition-all shadow-sm"
+                            className="px-3 py-1.5 bg-blue-50 dark:bg-blue-600/20 hover:bg-blue-600 text-blue-600 dark:text-blue-400 hover:text-white dark:hover:text-white rounded-xl text-xs font-bold border border-blue-200 dark:border-blue-500/30 hover:border-blue-600 flex items-center gap-1.5 transition-all shadow-sm"
                             title="Visualizar espelho completo do pedido"
                           >
                             <Eye className="w-3.5 h-3.5" />

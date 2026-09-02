@@ -92,16 +92,16 @@ export const PartsCartDrawer: React.FC<PartsCartDrawerProps> = ({
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-xl bg-[#121215] border-l border-[#27272a] shadow-2xl flex flex-col relative text-neutral-200">
+        <div className="w-screen max-w-xl bg-white dark:bg-[#121215] border-l border-neutral-200 dark:border-[#27272a] shadow-2xl flex flex-col relative text-neutral-900 dark:text-neutral-200">
           
           {/* Drawer Header */}
-          <div className="p-5 border-b border-[#27272a] bg-gradient-to-r from-neutral-900 via-[#18181b] to-neutral-900 flex items-center justify-between gap-3 shrink-0">
+          <div className="p-5 border-b border-neutral-200 dark:border-[#27272a] bg-slate-50 dark:bg-neutral-900 flex items-center justify-between gap-3 shrink-0">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400">
                 <ShoppingCart className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-white text-base sm:text-lg flex items-center gap-2">
+                <h3 className="font-bold text-neutral-900 dark:text-white text-base sm:text-lg flex items-center gap-2">
                   Carrinho de Peças Genuínas
                 </h3>
                 <span className="text-xs text-neutral-500 dark:text-neutral-400">
@@ -114,7 +114,7 @@ export const PartsCartDrawer: React.FC<PartsCartDrawerProps> = ({
               {items.length > 0 && (
                 <button
                   onClick={onClearCart}
-                  className="text-neutral-500 dark:text-neutral-400 hover:text-red-400 text-xs p-1.5 rounded-lg hover:bg-neutral-800 transition-colors flex items-center gap-1"
+                  className="text-neutral-500 dark:text-neutral-400 hover:text-red-500 text-xs p-1.5 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors flex items-center gap-1"
                   title="Esvaziar Carrinho"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
@@ -123,7 +123,7 @@ export const PartsCartDrawer: React.FC<PartsCartDrawerProps> = ({
               )}
               <button
                 onClick={onClose}
-                className="w-9 h-9 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-500 dark:text-neutral-400 hover:text-white flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white flex items-center justify-center transition-colors border border-slate-200 dark:border-neutral-700"
               >
                 <X className="w-5 h-5" />
               </button>

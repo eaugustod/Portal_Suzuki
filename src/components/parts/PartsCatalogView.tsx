@@ -436,12 +436,12 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
         <div className="space-y-6">
           
           {/* STEP 1: BRAND SELECTOR & MOTORCYCLE MODELS GALLERY */}
-          <div className="bg-[#121215] border border-[#27272a] rounded-3xl p-5 sm:p-6 shadow-xl space-y-4">
+          <div className="bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-5 sm:p-6 shadow-xl space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="flex items-center justify-between w-full sm:w-auto">
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight flex items-center gap-2">
-                    <Bike className="w-5 h-5 text-amber-400" />
+                  <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight flex items-center gap-2">
+                    <Bike className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                     1. Escolha a Marca & Modelo da Motocicleta
                   </h3>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400">
@@ -689,9 +689,9 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
             <div className="space-y-4">
               
               {/* Selected Model Bar with Groups and Technical Details */}
-              <div className="bg-[#121215] border border-[#27272a] rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3 shadow-lg">
+              <div className="bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3 shadow-lg">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-700 shrink-0">
+                  <div className="w-10 h-10 rounded-xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 shrink-0">
                     <img
                       src={selectedModel.image}
                       alt={selectedModel.name}
@@ -701,7 +701,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <h3 className="font-black text-white text-base sm:text-lg">
+                      <h3 className="font-black text-neutral-900 dark:text-white text-base sm:text-lg">
                         {selectedModel.name}
                       </h3>
                       <span className="px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-mono font-bold">
@@ -793,14 +793,14 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
         <div className="space-y-4">
           
           {/* Filter Bar */}
-          <div className="bg-[#121215] border border-[#27272a] rounded-2xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shadow-lg">
+          <div className="bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shadow-lg">
             <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
               <button
                 onClick={() => setOrderStatusFilter('ALL')}
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   orderStatusFilter === 'ALL'
                     ? 'bg-amber-400 text-black font-extrabold'
-                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
+                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 Todos ({partsOrders.length})
@@ -810,7 +810,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   orderStatusFilter === 'aguardando_analise'
                     ? 'bg-amber-400 text-black font-extrabold'
-                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
+                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 Em Análise Fábrica
@@ -820,7 +820,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   orderStatusFilter === 'em_separacao_cd'
                     ? 'bg-amber-400 text-black font-extrabold'
-                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
+                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 Separando nos CDs
@@ -830,7 +830,7 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
                   orderStatusFilter === 'integrado_protheus'
                     ? 'bg-amber-400 text-black font-extrabold'
-                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-white border border-neutral-200 dark:border-neutral-800'
+                    : 'bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 Integrados Protheus ERP
@@ -845,18 +845,18 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 value={orderSearchQuery}
                 onChange={(e) => setOrderSearchQuery(e.target.value)}
                 placeholder="Buscar pedido, concessionária ou peça..."
-                className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl pl-9 pr-4 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"
+                className="w-full bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl pl-9 pr-4 py-1.5 text-xs text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-amber-400"
               />
             </div>
           </div>
 
           {/* Orders Cards Grid / Table */}
           {scopedOrders.length === 0 ? (
-            <div className="bg-[#121215] border border-[#27272a] rounded-3xl p-12 text-center space-y-3">
+            <div className="bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-12 text-center space-y-3">
               <div className="w-14 h-14 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex items-center justify-center mx-auto text-neutral-500">
                 <FileText className="w-7 h-7" />
               </div>
-              <h4 className="font-bold text-white text-base">Nenhum pedido de peças encontrado</h4>
+              <h4 className="font-bold text-neutral-900 dark:text-white text-base">Nenhum pedido de peças encontrado</h4>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 max-w-sm mx-auto">
                 Utilize o Catálogo de Peças (EPC) para navegar pelas peças e transmitir pedidos oficiais à fábrica.
               </p>
@@ -867,17 +867,17 @@ export const PartsCatalogView: React.FC<PartsCatalogViewProps> = ({
                 return (
                   <div
                     key={order.id}
-                    className="bg-[#121215] border border-[#27272a] hover:border-neutral-700 rounded-2xl p-4 sm:p-5 transition-all shadow-lg space-y-4"
+                    className="bg-white dark:bg-[#121215] border border-neutral-200 dark:border-[#27272a] hover:border-neutral-300 dark:hover:border-neutral-700 rounded-2xl p-4 sm:p-5 transition-all shadow-lg space-y-4"
                   >
                     {/* Top Row: Order ID, Type, Date, Status */}
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-3">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-mono font-bold text-xs">
+                        <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400 font-mono font-bold text-xs">
                           PEC
                         </div>
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className="font-mono font-black text-white text-sm sm:text-base">
+                            <span className="font-mono font-black text-neutral-900 dark:text-white text-sm sm:text-base">
                               {order.orderNumber}
                             </span>
                             <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold uppercase font-mono ${

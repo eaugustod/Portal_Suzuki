@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="flex justify-between items-center w-full px-4 md:px-6 h-16 bg-white dark:bg-neutral-900 border-b border-slate-200 dark:border-neutral-800 sticky top-0 z-20 shrink-0 transition-colors">
-      {/* Left: Mobile Menu & Tab Title */}
+      {/* Left: Mobile Menu & Tab Title with Official Suzuki Branding */}
       <div className="flex items-center gap-3">
         <button 
           onClick={onOpenMobileNav}
@@ -116,6 +116,15 @@ export const Header: React.FC<HeaderProps> = ({
         >
           <Menu className="w-5 h-5" />
         </button>
+
+        {/* Suzuki Official Logo Badge */}
+        <div className="hidden sm:flex items-center gap-2 bg-white dark:bg-neutral-800 px-2.5 py-1 rounded-xl border border-slate-200/80 dark:border-neutral-700/80 shadow-2xs">
+          <img 
+            src="/suzuki-logo.png" 
+            alt="Suzuki" 
+            className="h-5 w-auto object-contain"
+          />
+        </div>
 
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
