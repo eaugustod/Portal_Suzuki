@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
   PurchaseModel, 
   BrandType, 
@@ -57,11 +57,8 @@ import {
   Settings2,
   ExternalLink
 } from 'lucide-react';
-import { INITIAL_PAYMENT_CONDITIONS } from '../data/mockPaymentConditions';
-import { calculateAutomaticFreight, getAutomaticWarehouseOrigin } from '../data/mockFreightTable';
-import { INITIAL_RESERVE_FUND_TRANSACTIONS } from '../data/mockReserveFundData';
-import { OrderApprovalDocument, DealershipFullProfile } from '../types';
-import { INITIAL_ORDER_APPROVAL_PROPOSALS } from '../data/orderApprovalData';
+import { api } from '../services/api';
+import { OrderApprovalDocument, DealershipFullProfile, FreightRateEntry, ReserveFundTransaction } from '../types';
 import { OrderApprovalDocumentView } from './OrderApprovalDocumentView';
 import { ModelTechnicalSpecsModal } from './ModelTechnicalSpecsModal';
 import { ModelCatalogManagementModal } from './ModelCatalogManagementModal';
@@ -74,7 +71,8 @@ interface PurchasePortalViewProps {
   paymentConditions?: PaymentConditionCampaign[];
   workflowSteps?: ApprovalWorkflowStep[];
   factoryOrders: FactoryOrder[];
-  orderProposals?: OrderApprovalDocument[];
+  orderProposals: OrderApprovalDocument[];
+  reserveFundTransactions: ReserveFundTransaction[];
   onUpdateOrderProposal?: (updated: OrderApprovalDocument) => void;
   onCreateOrderProposal?: (newProposal: OrderApprovalDocument) => void;
   dealerships?: DealershipFullProfile[];
@@ -94,7 +92,8 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
   paymentConditions = [],
   workflowSteps = [],
   factoryOrders,
-  orderProposals = INITIAL_ORDER_APPROVAL_PROPOSALS,
+  orderProposals,
+  reserveFundTransactions,
   onUpdateOrderProposal,
   onCreateOrderProposal,
   dealerships = [],
@@ -131,7 +130,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
 
   // Active Payment Conditions
   const activePaymentConditions = useMemo(() => {
-    return paymentConditions.length > 0 ? paymentConditions : INITIAL_PAYMENT_CONDITIONS;
+    return paymentConditions;
   }, [paymentConditions]);
 
   // Filters for Montadora Orders Table
@@ -150,15 +149,40 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
   const [activeCostMemorial, setActiveCostMemorial] = useState<PurchaseModel | null>(null);
   const [orderObservations, setOrderObservations] = useState<string>('');
 
-  // Automatic Freight Calculation
+  // Automatic Freight Calculation — tabela persistida em dbo.TarifasFrete (via API)
+  const [freightRates, setFreightRates] = useState<FreightRateEntry[]>([]);
+  useEffect(() => {
+    let active = true;
+    api.getFreightTable()
+      .then((rates: FreightRateEntry[]) => { if (active) setFreightRates(Array.isArray(rates) ? rates : []); })
+      .catch(() => { if (active) setFreightRates([]); });
+    return () => { active = false; };
+  }, []);
+
   const dealerState = activeProfile?.state || 'SP';
-  const autoFreightUnit = calculateAutomaticFreight(dealerState);
-  const autoOrigin = getAutomaticWarehouseOrigin(dealerState);
+
+  const autoOrigin = useMemo(() => {
+    const southOrSoutheastExceptEs = ['SP', 'RJ', 'MG', 'PR', 'SC', 'RS'];
+    if (southOrSoutheastExceptEs.includes(dealerState.toUpperCase())) {
+      return { originWarehouse: 'empresa_13_armazem' as const, label: 'Empresa 13 - Armazém (SP)' };
+    }
+    return { originWarehouse: 'manaus_le_16' as const, label: 'Manaus Local de Estoque 16 (Empresa 01 / 10)' };
+  }, [dealerState]);
+
+  const autoFreightUnit = useMemo(() => {
+    const uf = dealerState.toUpperCase();
+    const capital = freightRates.find(f => f.state.toUpperCase() === uf && (f.locationType || 'capital') === 'capital');
+    if (capital) return capital.costPerUnit;
+    const any = freightRates.find(f => f.state.toUpperCase() === uf);
+    if (any) return any.costPerUnit;
+    // Fallback apenas enquanto a tabela padrao nao estiver semeada no banco
+    return autoOrigin.originWarehouse === 'empresa_13_armazem' ? 850 : 1300;
+  }, [freightRates, dealerState, autoOrigin]);
 
   // Reserve Fund Available Balance
   const reserveFundAvailableBalance = useMemo(() => {
-    const cred = INITIAL_RESERVE_FUND_TRANSACTIONS.filter(t => t.type === 'credito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
-    const deb = INITIAL_RESERVE_FUND_TRANSACTIONS.filter(t => t.type === 'debito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
+    const cred = reserveFundTransactions.filter(t => t.type === 'credito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
+    const deb = reserveFundTransactions.filter(t => t.type === 'debito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
     return cred - deb;
   }, []);
   const [selectedSpecModal, setSelectedSpecModal] = useState<PurchaseModel | null>(null);
@@ -953,7 +977,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                   className="bg-white dark:bg-neutral-900 text-[12px] text-neutral-900 dark:text-neutral-200 font-medium border border-neutral-300 dark:border-[#27272a] rounded-xl px-3 py-1.5 focus:outline-none focus:border-blue-500"
                 >
                   <option value="todas">Todas as Concessionárias</option>
-                  {Object.values(DEALERSHIP_PROFILES)
+                  {dealerships
                     .filter(p => p.type === 'concessionaria')
                     .map(p => (
                       <option key={p.id} value={p.id}>{p.name} ({p.state})</option>

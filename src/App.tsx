@@ -1020,6 +1020,7 @@ export default function App() {
                 workflowSteps={workflowSteps}
                 factoryOrders={factoryOrders}
                 orderProposals={orderProposals}
+                reserveFundTransactions={reserveFundTransactions}
                 onUpdateOrderProposal={handleUpdateOrderProposal}
                 onCreateOrderProposal={handleCreateOrderProposal}
                 dealerships={dealerships}
