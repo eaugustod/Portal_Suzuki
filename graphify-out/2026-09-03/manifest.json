@@ -5,13 +5,13 @@
     "semantic_hash": "5c10c61efa0c0fe2d1637a404b99b467"
   },
   "package.json": {
-    "mtime": 1788372983.8076909,
-    "ast_hash": "5b792c71ef3da19828271f3d0b257884",
+    "mtime": 1788445364.4394927,
+    "ast_hash": "240056ec2081ab878cac54650e6ab247",
     "semantic_hash": ""
   },
   "src/App.tsx": {
-    "mtime": 1788380635.3169553,
-    "ast_hash": "838c0debd1b60bdfa8be2ad075758f6c",
+    "mtime": 1788443304.9395287,
+    "ast_hash": "13cefa7ff57c6f4843bb4fba62419875",
     "semantic_hash": ""
   },
   "src/components/DashboardView.tsx": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1788282175.4472578,
-    "ast_hash": "250ad2b2498a2fcd7a1558d64871d928",
+    "mtime": 1788436739.2676017,
+    "ast_hash": "6f111d6e29861f5ef59b5302d462b2e8",
     "semantic_hash": ""
   },
   ".agents/skills/portal-suzuki-epc/SKILL.md": {
@@ -355,13 +355,13 @@
     "semantic_hash": ""
   },
   "server/db.js": {
-    "mtime": 1787657364.9584777,
-    "ast_hash": "899d6bb3065be1f6ff715351c1abd3cb",
+    "mtime": 1788443382.422111,
+    "ast_hash": "cc72437ccf13eb3d82572e1b483b9c85",
     "semantic_hash": ""
   },
   "server/index.js": {
-    "mtime": 1788375147.1443481,
-    "ast_hash": "009c08ae3ec4c604a41fd7c212f7b883",
+    "mtime": 1788442415.8045163,
+    "ast_hash": "a250c168c003d0ee8285c382294e4d3a",
     "semantic_hash": ""
   },
   "scripts/ftp_integration_checkpoint.json": {
@@ -1380,8 +1380,8 @@
     "semantic_hash": ""
   },
   "src/services/api.ts": {
-    "mtime": 1788375158.990538,
-    "ast_hash": "06d845481cf8ef55bf1c53e1230ba35a",
+    "mtime": 1788442930.5260348,
+    "ast_hash": "601301216b8f1ea964f04b1d29a3dc26",
     "semantic_hash": ""
   },
   "Melhorias/Portal_Suzuki_Especificacao_Implementacoes.md": {
@@ -1425,8 +1425,8 @@
     "semantic_hash": ""
   },
   "server/controllers/commitmentController.js": {
-    "mtime": 1788372194.4688559,
-    "ast_hash": "f0e5c495eef5faec9285da5d3ae6b35e",
+    "mtime": 1788442309.0557592,
+    "ast_hash": "adf7bd5d7c6a3c0e861137b55c2d417e",
     "semantic_hash": ""
   },
   "server/controllers/dealershipController.js": {
@@ -1435,18 +1435,18 @@
     "semantic_hash": ""
   },
   "server/controllers/purchaseController.js": {
-    "mtime": 1788378676.2657285,
-    "ast_hash": "3d0f7d17b422d2d2ac2956f4f44fbe60",
+    "mtime": 1788440804.1086435,
+    "ast_hash": "bbed79a8d680a5cebc02d6a7abbacf84",
     "semantic_hash": ""
   },
   "server/controllers/reserveFundController.js": {
-    "mtime": 1788372186.088725,
-    "ast_hash": "d7c68f27483f1fbf67f18af25199df03",
+    "mtime": 1788440441.9097166,
+    "ast_hash": "f5ca822de22407e632f7ece4b41c24d7",
     "semantic_hash": ""
   },
   "server/middleware/authMiddleware.js": {
-    "mtime": 1788372145.4860923,
-    "ast_hash": "e6458d1692171a37462e544573f5445e",
+    "mtime": 1788444474.8139474,
+    "ast_hash": "dbec2deb19f79d680a4a568455b0f606",
     "semantic_hash": ""
   },
   "server/seed/init_programmability.sql": {
@@ -1460,13 +1460,13 @@
     "semantic_hash": ""
   },
   "server/seed/run_schema_migration.js": {
-    "mtime": 1788371967.5363312,
-    "ast_hash": "e6fddaf08bebd7c0e2c242f3091db669",
+    "mtime": 1788441018.6903653,
+    "ast_hash": "1c5786dcfcacf7c8061534487d378a23",
     "semantic_hash": ""
   },
   "server/seed/seed_database.js": {
-    "mtime": 1788372027.3732572,
-    "ast_hash": "617dd5600e23b8d0fa39dda07bae74ee",
+    "mtime": 1788445276.3339765,
+    "ast_hash": "a2577292945aa488a9a688533747532c",
     "semantic_hash": ""
   },
   "src/components/LoginModal.tsx": {
@@ -1475,8 +1475,8 @@
     "semantic_hash": ""
   },
   "server/controllers/userController.js": {
-    "mtime": 1788373882.602004,
-    "ast_hash": "12b0b76cbb1d402308e1ec07bdc10e0c",
+    "mtime": 1788440443.6767461,
+    "ast_hash": "5df7fa1896a25957680d8aa507fa97cb",
     "semantic_hash": ""
   },
   "src/components/UserManagementView.tsx": {
@@ -1487,6 +1487,61 @@
   "src/components/NationalPriceMatrixView.tsx": {
     "mtime": 1788376587.4359329,
     "ast_hash": "487c06f4ea18fe69051bade3a962cf42",
+    "semantic_hash": ""
+  },
+  "server/controllers/inventoryController.js": {
+    "mtime": 1788445120.8192928,
+    "ast_hash": "8043de6dcba8cc6a4f5fad0e6eb46284",
+    "semantic_hash": ""
+  },
+  "server/controllers/modelMatrixController.js": {
+    "mtime": 1788441610.6552708,
+    "ast_hash": "036fe3e6d75362b796a974c41f94b98d",
+    "semantic_hash": ""
+  },
+  "server/controllers/partsController.js": {
+    "mtime": 1788441474.826998,
+    "ast_hash": "ebc97318e0a30e313d98fa19d5dffefa",
+    "semantic_hash": ""
+  },
+  "server/controllers/paymentConditionController.js": {
+    "mtime": 1788441523.6848154,
+    "ast_hash": "e14c19e89716dee80aad513b47f1a1a2",
+    "semantic_hash": ""
+  },
+  "server/controllers/proposalController.js": {
+    "mtime": 1788441669.870262,
+    "ast_hash": "2df6be49ac717826bd96a892c6f9d189",
+    "semantic_hash": ""
+  },
+  "server/controllers/salesController.js": {
+    "mtime": 1788441239.7060635,
+    "ast_hash": "b7f0a8d48e2958fafd2e34d900a11abe",
+    "semantic_hash": ""
+  },
+  "server/controllers/serviceOrderController.js": {
+    "mtime": 1788441343.2877967,
+    "ast_hash": "9386d137d0b47c0d83841dd4a9a6ed05",
+    "semantic_hash": ""
+  },
+  "server/controllers/transitController.js": {
+    "mtime": 1788441376.5773537,
+    "ast_hash": "9534fba5139cb591bf52d7706f35dad4",
+    "semantic_hash": ""
+  },
+  "server/controllers/workflowController.js": {
+    "mtime": 1788441582.0797927,
+    "ast_hash": "32a30b20e3459ea05c722cece44ef8bc",
+    "semantic_hash": ""
+  },
+  "server/seed/init_extra_tables.sql": {
+    "mtime": 1788441045.331811,
+    "ast_hash": "46e6cac55f345cebe4821a176a7abf26",
+    "semantic_hash": ""
+  },
+  "server/tests/api-integration-test.mjs": {
+    "mtime": 1788445186.700431,
+    "ast_hash": "b674baed7d3c4aca49640fd95c8a86a6",
     "semantic_hash": ""
   }
 }

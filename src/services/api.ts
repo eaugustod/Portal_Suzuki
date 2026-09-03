@@ -157,12 +157,6 @@ export const api = {
     return res.json();
   },
 
-  async getFreightTable() {
-    const res = await fetch('/api/purchase/freight', { headers: getHeaders() });
-    if (!res.ok) throw new Error('Erro ao carregar fretes.');
-    return res.json();
-  },
-
   async getFactoryOrders() {
     const res = await fetch('/api/purchase/orders', { headers: getHeaders() });
     if (!res.ok) throw new Error('Erro ao carregar pedidos.');
@@ -181,6 +175,44 @@ export const api = {
   },
 
   // 4. Fundo de Reserva
+  async getFreightTable() {
+    const res = await fetch('/api/freight', { headers: getHeaders() });
+    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || 'Erro ao carregar tarifas de frete');
+    return res.json();
+  },
+
+  async createFreightRate(payload: any) {
+    const res = await fetch('/api/freight', {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'Erro ao criar regra de frete');
+    return data;
+  },
+
+  async updateFreightRate(id: string, payload: any) {
+    const res = await fetch(`/api/freight/${encodeURIComponent(id)}`, {
+      method: 'PUT',
+      headers: getHeaders(),
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'Erro ao atualizar regra de frete');
+    return data;
+  },
+
+  async deleteFreightRate(id: string) {
+    const res = await fetch(`/api/freight/${encodeURIComponent(id)}`, {
+      method: 'DELETE',
+      headers: getHeaders()
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'Erro ao remover regra de frete');
+    return data;
+  },
+
   async getReserveFundStatement(dealershipId?: string) {
     const url = dealershipId ? `/api/reserve-fund/statement?dealershipId=${dealershipId}` : '/api/reserve-fund/statement';
     const res = await fetch(url, { headers: getHeaders() });

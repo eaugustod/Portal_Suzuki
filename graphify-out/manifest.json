@@ -360,8 +360,8 @@
     "semantic_hash": ""
   },
   "server/index.js": {
-    "mtime": 1788442415.8045163,
-    "ast_hash": "a250c168c003d0ee8285c382294e4d3a",
+    "mtime": 1788446108.1317093,
+    "ast_hash": "12931b95d4c7f0e19936797383754e45",
     "semantic_hash": ""
   },
   "scripts/ftp_integration_checkpoint.json": {
@@ -1380,8 +1380,8 @@
     "semantic_hash": ""
   },
   "src/services/api.ts": {
-    "mtime": 1788442930.5260348,
-    "ast_hash": "601301216b8f1ea964f04b1d29a3dc26",
+    "mtime": 1788446246.1064012,
+    "ast_hash": "8ffbdfd1a88963eefa0e0770b977c925",
     "semantic_hash": ""
   },
   "Melhorias/Portal_Suzuki_Especificacao_Implementacoes.md": {
@@ -1390,8 +1390,8 @@
     "semantic_hash": ""
   },
   "src/components/FreightManagementView.tsx": {
-    "mtime": 1788275069.041624,
-    "ast_hash": "23cea7753161cb1904921a0fafb58964",
+    "mtime": 1788446369.6157575,
+    "ast_hash": "99e294b03cb743baa85eaaba8ce99973",
     "semantic_hash": ""
   },
   "src/components/ModelMatrixView.tsx": {
@@ -1540,8 +1540,13 @@
     "semantic_hash": ""
   },
   "server/tests/api-integration-test.mjs": {
-    "mtime": 1788445186.700431,
-    "ast_hash": "b674baed7d3c4aca49640fd95c8a86a6",
+    "mtime": 1788446486.726955,
+    "ast_hash": "6616cf8164f55bc46bf303fb4cba1a2f",
+    "semantic_hash": ""
+  },
+  "server/controllers/freightController.js": {
+    "mtime": 1788446597.045999,
+    "ast_hash": "10ac60eda38c36a63e0aed99b1d44f86",
     "semantic_hash": ""
   }
 }

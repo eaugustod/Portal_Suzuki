@@ -1,23 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { FreightRateEntry, BrazilRegion } from '../types';
-import { INITIAL_FREIGHT_TABLE } from '../data/mockFreightTable';
-import { Truck, Plus, Search, Filter, Edit3, Trash2, CheckCircle2, Building2, MapPin, DollarSign, Clock } from 'lucide-react';
+import { api } from '../services/api';
+import { Truck, Plus, Search, Filter, Edit3, Trash2, CheckCircle2, Building2, MapPin, DollarSign, Clock, AlertTriangle } from 'lucide-react';
+
+const emptyEntry = (): FreightRateEntry => ({
+  id: `frt-${Date.now()}`,
+  state: 'SP',
+  region: 'Sudeste',
+  originWarehouse: 'empresa_13_armazem',
+  originWarehouseLabel: 'Empresa 13 - Armazém (SP)',
+  costPerUnit: 750,
+  estimatedDays: 3,
+  locationType: 'capital'
+});
 
 export const FreightManagementView: React.FC = () => {
-  const [freightEntries, setFreightEntries] = useState<FreightRateEntry[]>(INITIAL_FREIGHT_TABLE);
+  const [freightEntries, setFreightEntries] = useState<FreightRateEntry[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [isNewEntry, setIsNewEntry] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [regionFilter, setRegionFilter] = useState<string>('all');
   const [warehouseFilter, setWarehouseFilter] = useState<string>('all');
-  
+
   // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingEntry, setEditingEntry] = useState<FreightRateEntry | null>(null);
 
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const showToast = (msg: string) => {
+  const [toastType, setToastType] = useState<'success' | 'error'>('success');
+  const showToast = (msg: string, type: 'success' | 'error' = 'success') => {
+    setToastType(type);
     setToastMessage(msg);
-    setTimeout(() => setToastMessage(null), 3000);
+    setTimeout(() => setToastMessage(null), 3500);
   };
+
+  const loadEntries = useCallback(async () => {
+    setIsLoading(true);
+    setLoadError(null);
+    try {
+      const data = await api.getFreightTable();
+      setFreightEntries(data);
+    } catch (err: any) {
+      setLoadError(err.message || 'Erro ao carregar tarifas de frete.');
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => { loadEntries(); }, [loadEntries]);
 
   const filteredEntries = freightEntries.filter(entry => {
     const matchSearch = entry.state.toLowerCase().includes(searchTerm.toLowerCase()) || entry.originWarehouseLabel.toLowerCase().includes(searchTerm.toLowerCase());
@@ -27,47 +59,54 @@ export const FreightManagementView: React.FC = () => {
   });
 
   const handleOpenAdd = () => {
-    setEditingEntry({
-      id: `frt-${Date.now()}`,
-      state: 'SP',
-      region: 'Sudeste',
-      originWarehouse: 'empresa_13_armazem',
-      originWarehouseLabel: 'Empresa 13 - Armazém (SP)',
-      costPerUnit: 750,
-      estimatedDays: 3
-    });
+    setIsNewEntry(true);
+    setEditingEntry(emptyEntry());
     setIsModalOpen(true);
   };
 
   const handleOpenEdit = (entry: FreightRateEntry) => {
+    setIsNewEntry(false);
     setEditingEntry({ ...entry });
     setIsModalOpen(true);
   };
 
-  const handleSave = () => {
-    if (!editingEntry) return;
-    setFreightEntries(prev => {
-      const exists = prev.some(e => e.id === editingEntry.id);
-      if (exists) {
-        return prev.map(e => e.id === editingEntry.id ? editingEntry : e);
+  const handleSave = async () => {
+    if (!editingEntry || isSaving) return;
+    setIsSaving(true);
+    try {
+      if (isNewEntry) {
+        await api.createFreightRate(editingEntry);
+        showToast('Regra de frete criada com sucesso!');
+      } else {
+        await api.updateFreightRate(editingEntry.id, editingEntry);
+        showToast('Regra de frete atualizada com sucesso!');
       }
-      return [...prev, editingEntry];
-    });
-    setIsModalOpen(false);
-    showToast('Regra de frete salva com sucesso!');
+      setIsModalOpen(false);
+      setEditingEntry(null);
+      await loadEntries();
+    } catch (err: any) {
+      showToast(err.message || 'Erro ao salvar regra de frete.', 'error');
+    } finally {
+      setIsSaving(false);
+    }
   };
 
-  const handleDelete = (id: string) => {
-    setFreightEntries(prev => prev.filter(e => e.id !== id));
-    showToast('Regra de frete removida.');
+  const handleDelete = async (id: string) => {
+    try {
+      await api.deleteFreightRate(id);
+      showToast('Regra de frete removida.');
+      await loadEntries();
+    } catch (err: any) {
+      showToast(err.message || 'Erro ao remover regra de frete.', 'error');
+    }
   };
 
   return (
     <div className="space-y-6">
       {/* Toast Feedback */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-2xl font-bold text-xs flex items-center gap-2">
-          <CheckCircle2 className="w-4 h-4" />
+        <div className={`fixed bottom-6 right-6 z-50 text-white px-5 py-3 rounded-xl shadow-2xl font-bold text-xs flex items-center gap-2 ${toastType === 'success' ? 'bg-emerald-600' : 'bg-rose-600'}`}>
+          {toastType === 'success' ? <CheckCircle2 className="w-4 h-4" /> : <AlertTriangle className="w-4 h-4" />}
           <span>{toastMessage}</span>
         </div>
       )}
@@ -157,6 +196,19 @@ export const FreightManagementView: React.FC = () => {
 
       {/* Freight Table */}
       <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl overflow-hidden shadow-xl">
+        {isLoading ? (
+          <div className="p-10 text-center text-xs text-neutral-500 dark:text-neutral-400 font-bold">Carregando tarifas de frete...</div>
+        ) : loadError ? (
+          <div className="p-10 text-center space-y-3">
+            <p className="text-xs text-rose-600 dark:text-rose-400 font-bold flex items-center justify-center gap-2">
+              <AlertTriangle className="w-4 h-4" />
+              {loadError}
+            </p>
+            <button onClick={loadEntries} className="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl text-xs">
+              Tentar novamente
+            </button>
+          </div>
+        ) : (
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead className="bg-neutral-100 dark:bg-[#121215] border-b border-neutral-200 dark:border-[#27272a] text-neutral-500 dark:text-neutral-400 font-bold uppercase text-[10px]">
@@ -229,6 +281,7 @@ export const FreightManagementView: React.FC = () => {
             </tbody>
           </table>
         </div>
+        )}
       </div>
 
       {/* Modal: Add / Edit Freight Entry */}
@@ -237,7 +290,7 @@ export const FreightManagementView: React.FC = () => {
           <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-2xl p-6 max-w-md w-full space-y-4 shadow-2xl">
             <h3 className="text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
               <Truck className="w-5 h-5 text-amber-500 dark:text-amber-400" />
-              <span>{editingEntry.id.includes('frt-') ? 'Editar Regra de Frete UF' : 'Nova Regra de Frete'}</span>
+              <span>{isNewEntry ? 'Nova Regra de Frete' : 'Editar Regra de Frete UF'}</span>
             </h3>
 
             <div className="space-y-3 text-xs">
@@ -325,9 +378,10 @@ export const FreightManagementView: React.FC = () => {
               </button>
               <button
                 onClick={handleSave}
-                className="px-5 py-2 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl text-xs shadow-lg shadow-amber-500/20"
+                disabled={isSaving}
+                className="px-5 py-2 bg-amber-500 hover:bg-amber-400 disabled:opacity-50 disabled:cursor-not-allowed text-black font-bold rounded-xl text-xs shadow-lg shadow-amber-500/20"
               >
-                Salvar Regra
+                {isSaving ? 'Salvando...' : 'Salvar Regra'}
               </button>
             </div>
           </div>

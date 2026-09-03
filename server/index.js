@@ -12,6 +12,7 @@ import { authMiddleware, requireMontadora } from './middleware/authMiddleware.js
 import authController from './controllers/authController.js';
 import dealershipController from './controllers/dealershipController.js';
 import purchaseController from './controllers/purchaseController.js';
+import freightController from './controllers/freightController.js';
 import reserveFundController from './controllers/reserveFundController.js';
 import commitmentController from './controllers/commitmentController.js';
 import userController from './controllers/userController.js';
@@ -92,6 +93,12 @@ app.get('/api/purchase/models', authMiddleware, purchaseController.getPurchaseMo
 app.put('/api/purchase/models/:id', authMiddleware, requireMontadora, purchaseController.updatePurchaseModel);
 app.get('/api/purchase/payment-conditions', authMiddleware, purchaseController.getPaymentConditions);
 app.get('/api/purchase/freight', authMiddleware, purchaseController.getFreightTable);
+
+// Tabela de fretes — CRUD persistido em dbo.TarifasFrete
+app.get('/api/freight', authMiddleware, freightController.getFreightRates);
+app.post('/api/freight', authMiddleware, requireMontadora, freightController.createFreightRate);
+app.put('/api/freight/:id', authMiddleware, requireMontadora, freightController.updateFreightRate);
+app.delete('/api/freight/:id', authMiddleware, requireMontadora, freightController.deleteFreightRate);
 app.get('/api/purchase/orders', authMiddleware, purchaseController.getFactoryOrders);
 app.post('/api/purchase/orders', authMiddleware, purchaseController.createFactoryOrder);
   app.patch('/api/purchase/orders/:id', authMiddleware, purchaseController.updateFactoryOrder);

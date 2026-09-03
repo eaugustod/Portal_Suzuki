@@ -207,6 +207,40 @@ log('Read condition', !!condFound, 'nao encontrada');
 const condDel = await request('/api/payment-conditions/' + condPayload.id, 'DELETE');
 log('Delete condition', condDel.status === 200, 'status=' + condDel.status);
 
+// 8.1 TABELA DE FRETES (CRUD persistido em dbo.TarifasFrete)
+console.log('\n--- Tabela de Fretes ---');
+const frtPayload = {
+  id: 'frt-test-' + Date.now(),
+  state: 'ZZ',
+  region: 'Sul',
+  originWarehouse: 'empresa_13_armazem',
+  originWarehouseLabel: 'Empresa 13 - Armazém (SP)',
+  costPerUnit: 999.9,
+  estimatedDays: 5,
+  locationType: 'interior'
+};
+const frtCreate = await request('/api/freight', 'POST', frtPayload);
+log('Create freight rate', frtCreate.status === 201, 'status=' + frtCreate.status);
+const frtList1 = await request('/api/freight');
+const frtFound1 = Array.isArray(frtList1.data) && frtList1.data.find(f => f.id === frtPayload.id);
+log('Read freight rate', !!frtFound1 && frtFound1.costPerUnit === 999.9, 'nao encontrada ou custo errado');
+const frtUpdate = await request('/api/freight/' + frtPayload.id, 'PUT', { ...frtPayload, costPerUnit: 1234.56, estimatedDays: 7 });
+log('Update freight rate', frtUpdate.status === 200, 'status=' + frtUpdate.status);
+const frtList2 = await request('/api/freight');
+const frtFound2 = Array.isArray(frtList2.data) && frtList2.data.find(f => f.id === frtPayload.id);
+log('Re-read freight rate (valor atualizado)', !!frtFound2 && frtFound2.costPerUnit === 1234.56 && frtFound2.estimatedDays === 7, 'valor nao persistiu');
+const frtDel = await request('/api/freight/' + frtPayload.id, 'DELETE');
+log('Delete freight rate (soft)', frtDel.status === 200, 'status=' + frtDel.status);
+const frtList3 = await request('/api/freight');
+const frtFound3 = Array.isArray(frtList3.data) && frtList3.data.find(f => f.id === frtPayload.id);
+log('Freight rate removida da listagem', !frtFound3, 'ainda aparece apos delete');
+const frtUp404 = await request('/api/freight/inexistente-404', 'PUT', frtPayload);
+log('Update frete inexistente (404)', frtUp404.status === 404, 'status=' + frtUp404.status);
+const frtDel404 = await request('/api/freight/inexistente-404', 'DELETE');
+log('Delete frete inexistente (404)', frtDel404.status === 404, 'status=' + frtDel404.status);
+const frtBad = await request('/api/freight', 'POST', { ...frtPayload, state: 'X', costPerUnit: -5 });
+log('Create frete invalido (400)', frtBad.status === 400, 'status=' + frtBad.status);
+
 // 9. WORKFLOW
 console.log('\n--- Workflow ---');
 const wfPayload = {
