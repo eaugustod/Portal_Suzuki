@@ -832,63 +832,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
         />
       )}
 
-      {/* =========================================================================
-          VIEW MODE 2: CATÁLOGO & TABELA OFICIAL DE PREÇOS FÁBRICA (J. TOLEDO)
-         ========================================================================= */}
-      {isMontadora && montadoraTab === 'catalog' && (
-        <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-3xl p-6 shadow-md space-y-6">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-200 dark:border-[#27272a] pb-4">
-            <div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white flex items-center gap-2">
-                <Bike className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                Matriz Nacional de Preços & Cores de Fábrica
-              </h3>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                Gerencie catálogo oficial, disponibilize novas cores, ajuste preços PPS (Preço Público Sugerido) e de faturamento da concessionária.
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setModelToEditModal(purchaseModels[0] || null)}
-                className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-md shadow-blue-500/20"
-              >
-                <SlidersHorizontal className="w-4 h-4" />
-                Gerenciar Modelos & Vigência
-              </button>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {purchaseModels.map(model => (
-              <div key={model.id} className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-4 space-y-3 hover:border-blue-500/50 transition-colors">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] uppercase font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded-full border border-blue-500/20">
-                    {model.brand}
-                  </span>
-                  <span className="text-[10px] text-neutral-500 font-bold">{model.category}</span>
-                </div>
-                <div className="aspect-video bg-white dark:bg-neutral-950 rounded-xl overflow-hidden flex items-center justify-center p-2 border border-neutral-200 dark:border-neutral-800">
-                  <img src={model.image} alt={model.modelName} className="h-full object-contain" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-neutral-900 dark:text-white text-sm">{model.modelName}</h4>
-                  <p className="text-[11px] text-neutral-500">Modelo {model.yearModel || '2024'}</p>
-                </div>
-                <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between text-xs">
-                  <div>
-                    <span className="text-[10px] text-neutral-500 block">Preço Fábrica:</span>
-                    <span className="font-bold text-neutral-900 dark:text-white font-tabular">R$ {model.factoryCost?.toLocaleString('pt-BR')}</span>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-[10px] text-neutral-500 block">PPS Sugerido:</span>
-                    <span className="font-bold text-emerald-600 dark:text-emerald-400 font-tabular">R$ {model.ppsMSRP?.toLocaleString('pt-BR')}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* =========================================================================
           MAIN ORDERS DASHBOARD (LISTA DE PEDIDOS + FILTROS + AÇÕES)

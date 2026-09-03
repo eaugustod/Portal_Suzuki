@@ -1,0 +1,23 @@
+# Graphify Ignore rules for Portal Suzuki
+node_modules/
+dist/
+build/
+coverage/
+.git/
+.venv/
+scratch/
+public/catalogos/
+Catalogos/
+pin_locator/
+scripts/public/
+scripts/scripts/
+scripts/src/
+*.pdf
+*.eps
+*.jpg
+*.png
+*.jpeg
+*.svg
+*.zip
+*.tar.gz
+*.json.bak

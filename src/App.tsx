@@ -43,16 +43,20 @@ import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { OrderConfirmationModal } from './components/OrderConfirmationModal';
 import { ViewSkeleton } from './components/ViewSkeleton';
+import { LoginModal } from './components/LoginModal';
+import api from './services/api';
 
 const DashboardView = React.lazy(() => import('./components/DashboardView').then(m => ({ default: m.DashboardView })));
 const MontadoraDashboardView = React.lazy(() => import('./components/MontadoraDashboardView').then(m => ({ default: m.MontadoraDashboardView })));
 const DealershipManagementView = React.lazy(() => import('./components/DealershipManagementView').then(m => ({ default: m.DealershipManagementView })));
+const UserManagementView = React.lazy(() => import('./components/UserManagementView').then(m => ({ default: m.UserManagementView })));
 const MonthlyCommitmentView = React.lazy(() => import('./components/MonthlyCommitmentView').then(m => ({ default: m.MonthlyCommitmentView })));
 const PurchasePortalView = React.lazy(() => import('./components/PurchasePortalView').then(m => ({ default: m.PurchasePortalView })));
 const ReserveFundView = React.lazy(() => import('./components/ReserveFundView').then(m => ({ default: m.ReserveFundView })));
 const FreightManagementView = React.lazy(() => import('./components/FreightManagementView').then(m => ({ default: m.FreightManagementView })));
 const PaymentConditionsView = React.lazy(() => import('./components/PaymentConditionsView').then(m => ({ default: m.PaymentConditionsView })));
 const ModelMatrixView = React.lazy(() => import('./components/ModelMatrixView').then(m => ({ default: m.ModelMatrixView })));
+const NationalPriceMatrixView = React.lazy(() => import('./components/NationalPriceMatrixView').then(m => ({ default: m.NationalPriceMatrixView })));
 const OrderWorkflowView = React.lazy(() => import('./components/OrderWorkflowView').then(m => ({ default: m.OrderWorkflowView })));
 const PartsCatalogView = React.lazy(() => import('./components/parts/PartsCatalogView').then(m => ({ default: m.PartsCatalogView })));
 const InventoryView = React.lazy(() => import('./components/InventoryView').then(m => ({ default: m.InventoryView })));
@@ -83,8 +87,155 @@ export default function App() {
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
   };
 
+  // Authentication & Session State
+  const [currentUser, setCurrentUser] = useState<any>(() => {
+    const saved = localStorage.getItem('portal_suzuki_user');
+    return saved ? JSON.parse(saved) : null;
+  });
+  const [loginModalOpen, setLoginModalOpen] = useState(!currentUser);
+
   // Dealership / Montadora Scope ('jtoledo' = Montadora, 'motosul' = MotoSul RS, 'novamotor' = Nova Motor SP)
-  const [currentScope, setCurrentScope] = useState<DealershipScope>('jtoledo');
+  const [currentScope, setCurrentScope] = useState<DealershipScope>(() => {
+    return currentUser?.scopeType === 'concessionaria' && currentUser?.dealershipId 
+      ? currentUser.dealershipId 
+      : 'jtoledo';
+  });
+
+  const handleLoginSuccess = (user: any, token: string) => {
+    setCurrentUser(user);
+    setLoginModalOpen(false);
+    if (user.scopeType === 'concessionaria' && user.dealershipId) {
+      setCurrentScope(user.dealershipId);
+    } else {
+      setCurrentScope('jtoledo');
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('portal_suzuki_token');
+    localStorage.removeItem('portal_suzuki_user');
+    setCurrentUser(null);
+    setLoginModalOpen(true);
+  };
+
+  // Carregamento dinâmico de dados do SQL Server via API
+  React.useEffect(() => {
+    if (!currentUser) return;
+
+    // 1. Carrega Concessionárias do SQL Server
+    api.getDealerships()
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) setDealerships(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock dealerships:', err.message));
+
+    // 2. Carrega Modelos do SQL Server
+    api.getPurchaseModels()
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          const sanitizedModels = data.map((m: PurchaseModel) => ({
+            ...m,
+            variants: (m.variants || []).map(v => ({
+              ...v,
+              quantity: 0
+            }))
+          }));
+          setPurchaseModels(sanitizedModels);
+        }
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock models:', err.message));
+
+    // 3. Carrega Condições de Pagamento do SQL Server
+    api.getPaymentConditions()
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) setPaymentConditions(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock payment conditions:', err.message));
+
+    // 4. Carrega Pedidos do SQL Server
+    api.getFactoryOrders()
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) setFactoryOrders(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock orders:', err.message));
+
+    // 5. Carrega Extrato do Fundo de Reserva do SQL Server
+    api.getReserveFundStatement()
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) setReserveFundTransactions(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock reserve fund:', err.message));
+
+    // 6. Carrega Compromissos Trimestrais do SQL Server
+    api.getCommitments()
+      .then(data => {
+        if (Array.isArray(data)) setMonthlyCommitments(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock commitments:', err.message));
+
+    // 7. Carrega Estoque de Veículos do SQL Server
+    api.getInventory()
+      .then(data => {
+        if (Array.isArray(data)) setInventory(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock inventory:', err.message));
+
+    // 8. Carrega Pipeline de Vendas do SQL Server
+    api.getPipeline()
+      .then(data => {
+        if (Array.isArray(data)) setPipelineCards(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock pipeline:', err.message));
+
+    // 9. Carrega Interações do CRM do SQL Server
+    api.getInteractions()
+      .then(data => {
+        if (Array.isArray(data)) setInteractions(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock interactions:', err.message));
+
+    // 10. Carrega Ordens de Serviço do SQL Server
+    api.getServiceOrders()
+      .then(data => {
+        if (Array.isArray(data)) setServiceOrders(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock service orders:', err.message));
+
+    // 11. Carrega Lotes em Trânsito do SQL Server
+    api.getTransitOrders()
+      .then(data => {
+        if (Array.isArray(data)) setTransitOrders(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock transit:', err.message));
+
+    // 12. Carrega Pedidos de Peças do SQL Server
+    api.getPartsOrders()
+      .then(data => {
+        if (Array.isArray(data)) setPartsOrders(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock parts orders:', err.message));
+
+    // 13. Carrega Workflow de Aprovações do SQL Server
+    api.getWorkflowSteps()
+      .then(data => {
+        if (Array.isArray(data)) setWorkflowSteps(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock workflow steps:', err.message));
+
+    // 14. Carrega Matriz de Habilitação de Modelos do SQL Server
+    api.getModelMatrix()
+      .then(data => {
+        if (data && typeof data.enabledMap === 'object') setEnabledVariantsMap(data.enabledMap);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock model matrix:', err.message));
+
+    // 15. Carrega Propostas de Aprovação do SQL Server
+    api.getProposals()
+      .then(data => {
+        if (Array.isArray(data)) setOrderProposals(data);
+      })
+      .catch(err => console.warn('[SQL Server] Fallback mock proposals:', err.message));
+  }, [currentUser, currentScope]);
 
   // Navigation State
   const [currentTab, setCurrentTab] = useState<NavTab>('dashboard');
@@ -111,12 +262,15 @@ export default function App() {
   const [paymentConditions, setPaymentConditions] = useState<PaymentConditionCampaign[]>(INITIAL_PAYMENT_CONDITIONS);
   const [workflowSteps, setWorkflowSteps] = useState<ApprovalWorkflowStep[]>(INITIAL_WORKFLOW_STEPS);
 
-  // Model & Color Variant Enablement Handler
+  // Model & Color Variant Enablement Handler (persistencia na MatrizHabilitacaoModelos)
   const handleToggleVariantEnabled = (modelId: string, variantId?: string, forceState?: boolean) => {
     const key = variantId ? `${modelId}-${variantId}` : modelId;
     setEnabledVariantsMap(prev => {
       const nextState = forceState !== undefined ? forceState : !(prev[key] !== false);
-      return { ...prev, [key]: nextState };
+      const nextMap = { ...prev, [key]: nextState };
+      api.saveModelMatrix({ dealershipId: currentScope === 'jtoledo' ? undefined : currentScope, enabledMap: nextMap })
+        .catch(err => console.warn('[SQL Server] Erro ao salvar matriz:', err.message));
+      return nextMap;
     });
   };
 
@@ -127,48 +281,80 @@ export default function App() {
     model.variants.forEach(v => {
       updates[`${modelId}-${v.id}`] = enable;
     });
-    setEnabledVariantsMap(prev => ({ ...prev, ...updates }));
+    setEnabledVariantsMap(prev => {
+      const nextMap = { ...prev, ...updates };
+      api.saveModelMatrix({ dealershipId: currentScope === 'jtoledo' ? undefined : currentScope, enabledMap: nextMap })
+        .catch(err => console.warn('[SQL Server] Erro ao salvar matriz:', err.message));
+      return nextMap;
+    });
   };
 
-  // Payment Conditions Handlers
+  // Payment Conditions Handlers (CRUD via SQL Server)
   const handleSavePaymentCondition = (condition: PaymentConditionCampaign) => {
     setPaymentConditions(prev => {
       const exists = prev.some(c => c.id === condition.id);
       if (exists) {
+        api.updatePaymentCondition(condition.id, condition)
+          .catch(err => console.warn('[SQL Server] Erro ao atualizar condição:', err.message));
         return prev.map(c => c.id === condition.id ? condition : c);
       }
+      api.createPaymentCondition(condition)
+        .then((res: any) => {
+          if (res?.id && res.id !== condition.id) {
+            setPaymentConditions(p => p.map(c => c.id === condition.id ? { ...condition, id: res.id } : c));
+          }
+        })
+        .catch(err => console.warn('[SQL Server] Erro ao criar condição:', err.message));
       return [condition, ...prev];
     });
   };
 
   const handleDeletePaymentCondition = (id: string) => {
     setPaymentConditions(prev => prev.filter(c => c.id !== id));
+    api.deletePaymentCondition(id)
+      .catch(err => console.warn('[SQL Server] Erro ao excluir condição:', err.message));
   };
 
-  // Approval Workflow Handlers
+  // Approval Workflow Handlers (CRUD via SQL Server)
   const handleSaveWorkflowStep = (step: ApprovalWorkflowStep) => {
     setWorkflowSteps(prev => {
       const exists = prev.some(s => s.id === step.id);
       if (exists) {
+        api.updateWorkflowStep(step.id, step)
+          .catch(err => console.warn('[SQL Server] Erro ao atualizar etapa:', err.message));
         return prev.map(s => s.id === step.id ? step : s);
       }
+      api.createWorkflowStep(step)
+        .catch(err => console.warn('[SQL Server] Erro ao criar etapa:', err.message));
       return [...prev, step];
     });
   };
 
   const handleDeleteWorkflowStep = (id: string) => {
     setWorkflowSteps(prev => prev.filter(s => s.id !== id));
+    api.deleteWorkflowStep(id)
+      .catch(err => console.warn('[SQL Server] Erro ao excluir etapa:', err.message));
   };
 
   // Reserve Fund handlers
   const handleAddReserveFundTransaction = (tx: ReserveFundTransaction) => {
     setReserveFundTransactions(prev => [tx, ...prev]);
+    api.createReserveFundCredit({
+      dealershipId: tx.dealershipId,
+      amount: tx.amount,
+      brand: tx.brand,
+      reference: tx.reference,
+      origin: tx.origin || 'montadora_credito',
+      observation: tx.observation
+    }).catch(err => console.warn('[SQL Server] Erro ao lançar crédito:', err.message));
   };
 
   const handleApproveReserveFundTransaction = (id: string) => {
     setReserveFundTransactions(prev => prev.map(tx => {
       if (tx.id === id) {
         const updated = !tx.financialApproved;
+        api.approveReserveFundTransaction(id)
+          .catch(err => console.warn('[SQL Server] Erro ao aprovar lançamento:', err.message));
         return {
           ...tx,
           financialApproved: updated,
@@ -179,18 +365,24 @@ export default function App() {
     }));
   };
 
-  // Spare Parts Orders handlers
+  // Spare Parts Orders handlers (Persistencia via SQL Server)
   const handlePlacePartsOrder = (newOrder: PartsOrder) => {
     setPartsOrders(prev => [newOrder, ...prev]);
+    api.createPartsOrder(newOrder)
+      .catch(err => console.warn('[SQL Server] Erro ao transmitir pedido de peças:', err.message));
   };
 
   const handleUpdatePartsOrder = (updatedOrder: PartsOrder) => {
     setPartsOrders(prev => prev.map(o => o.id === updatedOrder.id ? updatedOrder : o));
+    api.updatePartsOrder(updatedOrder.id, updatedOrder)
+      .catch(err => console.warn('[SQL Server] Erro ao atualizar pedido de peças:', err.message));
   };
 
   // Dealerships CRUD handlers
   const handleUpdateDealership = (updated: DealershipFullProfile) => {
     setDealerships(prev => prev.map(d => d.id === updated.id ? updated : d));
+    api.updateDealership(updated.id, updated)
+      .catch(err => console.warn('[SQL Server] Erro ao atualizar concessionária:', err.message));
   };
 
   const handleAddDealership = (newDealer: DealershipFullProfile) => {
@@ -201,28 +393,38 @@ export default function App() {
     setDealerships(prev => prev.filter(d => d.id !== dealerId));
   };
 
-  // Order Approval Proposals handlers
+  // Order Approval Proposals handlers (Persistencia via SQL Server)
   const handleUpdateOrderProposal = (updated: OrderApprovalDocument) => {
     setOrderProposals(prev => prev.map(p => p.id === updated.id ? updated : p));
+    api.updateProposal(updated.id, updated)
+      .catch(err => console.warn('[SQL Server] Erro ao atualizar proposta:', err.message));
   };
 
   const handleCreateOrderProposal = (newProposal: OrderApprovalDocument) => {
     setOrderProposals(prev => [newProposal, ...prev]);
+    api.createProposal(newProposal)
+      .catch(err => console.warn('[SQL Server] Erro ao criar proposta:', err.message));
   };
 
-  // Monthly Purchase Commitments handlers
+  // Monthly Purchase Commitments handlers (CRUD via SQL Server)
   const handleSaveCommitment = (commitment: MonthlyCommitmentPlan) => {
     setMonthlyCommitments(prev => {
       const exists = prev.some(c => c.id === commitment.id);
       if (exists) {
+        api.updateCommitment(commitment.id, commitment)
+          .catch(err => console.warn('[SQL Server] Erro ao atualizar compromisso:', err.message));
         return prev.map(c => c.id === commitment.id ? commitment : c);
       }
+      api.createCommitment(commitment)
+        .catch(err => console.warn('[SQL Server] Erro ao criar compromisso:', err.message));
       return [commitment, ...prev];
     });
   };
 
   const handleDeleteCommitment = (id: string) => {
     setMonthlyCommitments(prev => prev.filter(c => c.id !== id));
+    api.deleteCommitment(id)
+      .catch(err => console.warn('[SQL Server] Erro ao excluir compromisso:', err.message));
   };
 
   // Generate / Sync Order Approval Document (Ficha JTA+JTZ) from Monthly Commitment
@@ -385,7 +587,7 @@ export default function App() {
     : interactions.filter(int => !int.dealershipId || int.dealershipId === currentScope || int.dealershipId === 'jtoledo');
 
   // Purchase Portal Handlers
-  const handleSavePurchaseModel = (savedModel: PurchaseModel) => {
+  const handleSavePurchaseModel = async (savedModel: PurchaseModel) => {
     setPurchaseModels(prev => {
       const idx = prev.findIndex(m => m.id === savedModel.id);
       if (idx >= 0) {
@@ -394,6 +596,12 @@ export default function App() {
         return [savedModel, ...prev];
       }
     });
+
+    try {
+      await api.updatePurchaseModel(savedModel.id, savedModel);
+    } catch (err) {
+      console.warn('[Purchase] Erro ao sincronizar modelo com o backend SQL:', err);
+    }
   };
 
   const handleDeletePurchaseModel = (modelId: string) => {
@@ -432,6 +640,21 @@ export default function App() {
   const handleUpdateFactoryOrder = (updatedOrder: FactoryOrder) => {
     setFactoryOrders(prev => prev.map(o => o.id === updatedOrder.id ? updatedOrder : o));
 
+    // Persiste decisões da montadora e aceite da concessionária no SQL Server
+    api.updateFactoryOrder(updatedOrder.id, {
+      status: updatedOrder.status !== 'aguardando_analise' ? updatedOrder.status : undefined,
+      creditApproved: updatedOrder.creditApproved,
+      commercialApproved: updatedOrder.commercialApproved,
+      protheusIntegrated: updatedOrder.protheusIntegrated,
+      protheusOrderNumber: updatedOrder.protheusOrderNumber,
+      notes: updatedOrder.notes,
+      items: updatedOrder.items?.map(it => ({
+        id: it.id,
+        dealerAcceptanceStatus: it.dealerAcceptanceStatus,
+        itemApprovalStatus: it.itemApprovalStatus
+      }))
+    }).catch(err => console.warn('[SQL Server] Erro ao atualizar pedido de fábrica:', err.message));
+
     // If order was just integrated into Protheus, automatically create an in-transit dispatch entry
     if (updatedOrder.protheusIntegrated) {
       const existingTransit = transitOrders.find(t => t.id === `to-${updatedOrder.id}`);
@@ -447,18 +670,20 @@ export default function App() {
           value: updatedOrder.totalAmount
         };
         setTransitOrders(prev => [newTransit, ...prev]);
+        api.createTransitOrder(newTransit)
+          .catch(err => console.warn('[SQL Server] Erro ao registrar lote em trânsito:', err.message));
 
-        setInteractions(prev => [
-          {
-            id: `log-${Date.now()}`,
-            dealershipId: updatedOrder.dealershipId,
-            type: 'lead',
-            title: `Pedido ${updatedOrder.orderNumber} Integrado no ERP Protheus (${updatedOrder.protheusOrderNumber})`,
-            time: 'Agora',
-            description: `Aprovado Crédito e Comercial. Chassi e faturamento gerados no Armazém 01 Manaus.`
-          },
-          ...prev
-        ]);
+        const newInteraction = {
+          id: `log-${Date.now()}`,
+          dealershipId: updatedOrder.dealershipId,
+          type: 'lead' as const,
+          title: `Pedido ${updatedOrder.orderNumber} Integrado no ERP Protheus (${updatedOrder.protheusOrderNumber})`,
+          time: 'Agora',
+          description: `Aprovado Crédito e Comercial. Chassi e faturamento gerados no Armazém 01 Manaus.`
+        };
+        setInteractions(prev => [newInteraction, ...prev]);
+        api.createInteraction(newInteraction)
+          .catch(err => console.warn('[SQL Server] Erro ao registrar interação:', err.message));
       }
     }
   };
@@ -550,6 +775,21 @@ export default function App() {
 
     setFactoryOrders(prev => [newFactoryOrder, ...prev]);
 
+    // Persistência em tempo real no banco SQL Server
+    api.createFactoryOrder({
+      id: newOrderId,
+      orderNumber: newOrderNumber,
+      dealershipId: currentScope === 'jtoledo' ? 'motosul' : currentScope,
+      freightMode: selectedFreightMode.includes('CIF') ? 'CIF' : 'FOB',
+      paymentMethod: 'A Prazo (30/60/90)',
+      totalUnits: checkoutTotalUnits,
+      totalAmount: checkoutTotalAmount,
+      notes: 'Pedido transmitido via Portal B2B Concessionária.',
+      usedReserveFund: false,
+      reserveFundAmount: 0,
+      items: mappedItems
+    }).catch(err => console.warn('[SQL Server] Erro ao gravar pedido no banco:', err.message));
+
     // Add interaction log
     setInteractions(prev => [
       {
@@ -572,14 +812,20 @@ export default function App() {
       dealershipId: vehicle.dealershipId || (currentScope === 'jtoledo' ? 'motosul' : currentScope)
     };
     setInventory(prev => [newItem, ...prev]);
+    api.createInventoryItem(newItem)
+      .catch(err => console.warn('[SQL Server] Erro ao adicionar veículo ao estoque:', err.message));
   };
 
   const handleUpdateVehicle = (vehicle: InventoryItem) => {
     setInventory(prev => prev.map(item => item.id === vehicle.id ? vehicle : item));
+    api.updateInventoryItem(vehicle.id, vehicle)
+      .catch(err => console.warn('[SQL Server] Erro ao atualizar veículo:', err.message));
   };
 
   const handleDeleteVehicle = (id: string) => {
     setInventory(prev => prev.filter(item => item.id !== id));
+    api.deleteInventoryItem(id)
+      .catch(err => console.warn('[SQL Server] Erro ao excluir veículo:', err.message));
   };
 
   // Sales CRM Handlers
@@ -590,19 +836,21 @@ export default function App() {
       dealershipId: lead.dealershipId || (currentScope === 'jtoledo' ? 'motosul' : currentScope)
     };
     setPipelineCards(prev => [newCard, ...prev]);
+    api.createPipelineLead(newCard)
+      .catch(err => console.warn('[SQL Server] Erro ao cadastrar lead:', err.message));
 
     // Log interaction
-    setInteractions(prev => [
-      {
-        id: `log-${Date.now()}`,
-        dealershipId: currentScope,
-        type: 'whatsapp',
-        title: `Novo Lead: ${lead.customerName}`,
-        time: 'Agora',
-        description: `Lead cadastrado com interesse em ${lead.vehicleInterest} (R$ ${lead.value.toLocaleString('pt-BR')}).`
-      },
-      ...prev
-    ]);
+    const newLog = {
+      id: `log-${Date.now()}`,
+      dealershipId: currentScope,
+      type: 'whatsapp' as const,
+      title: `Novo Lead: ${lead.customerName}`,
+      time: 'Agora',
+      description: `Lead cadastrado com interesse em ${lead.vehicleInterest} (R$ ${lead.value.toLocaleString('pt-BR')}).`
+    };
+    setInteractions(prev => [newLog, ...prev]);
+    api.createInteraction(newLog)
+      .catch(err => console.warn('[SQL Server] Erro ao registrar interação:', err.message));
   };
 
   const handleMoveCard = (cardId: string, targetType: PipelineCard['type']) => {
@@ -610,6 +858,8 @@ export default function App() {
       if (c.id !== cardId) return c;
       return { ...c, type: targetType };
     }));
+    api.movePipelineLead(cardId, targetType)
+      .catch(err => console.warn('[SQL Server] Erro ao mover lead:', err.message));
   };
 
   const handleAddInteraction = (interaction: Omit<InteractionLog, 'id'>) => {
@@ -619,6 +869,8 @@ export default function App() {
       dealershipId: interaction.dealershipId || currentScope
     };
     setInteractions(prev => [newLog, ...prev]);
+    api.createInteraction(newLog)
+      .catch(err => console.warn('[SQL Server] Erro ao registrar interação:', err.message));
   };
 
   // Service Order Handlers
@@ -629,14 +881,20 @@ export default function App() {
       dealershipId: os.dealershipId || (currentScope === 'jtoledo' ? 'motosul' : currentScope)
     };
     setServiceOrders(prev => [newOS, ...prev]);
+    api.createServiceOrder(newOS)
+      .catch(err => console.warn('[SQL Server] Erro ao criar ordem de serviço:', err.message));
   };
 
   const handleUpdateServiceOrder = (os: ServiceOrder) => {
     setServiceOrders(prev => prev.map(item => item.id === os.id ? os : item));
+    api.updateServiceOrder(os.id, os)
+      .catch(err => console.warn('[SQL Server] Erro ao atualizar OS:', err.message));
   };
 
   const handleDeleteServiceOrder = (id: string) => {
     setServiceOrders(prev => prev.filter(item => item.id !== id));
+    api.deleteServiceOrder(id)
+      .catch(err => console.warn('[SQL Server] Erro ao excluir OS:', err.message));
   };
 
   return (
@@ -678,6 +936,8 @@ export default function App() {
           setSearchQuery={setSearchQuery}
           theme={theme}
           onToggleTheme={toggleTheme}
+          currentUser={currentUser}
+          onLogout={handleLogout}
         />
 
         {/* Dynamic View Body */}
@@ -726,6 +986,13 @@ export default function App() {
               />
             )}
 
+            {currentTab === 'user_management' && (
+              <UserManagementView 
+                currentScope={currentScope}
+                activeDealership={dealerships.find(d => d.id === currentScope) || DEALERSHIP_PROFILES[currentScope]}
+              />
+            )}
+
             {currentTab === 'commitments' && (
               <MonthlyCommitmentView
                 currentScope={currentScope}
@@ -763,6 +1030,14 @@ export default function App() {
                 onPlaceOrder={handlePlaceOrder}
                 onUpdateFactoryOrder={handleUpdateFactoryOrder}
                 onNavigateToCommitments={() => setCurrentTab('commitments')}
+              />
+            )}
+
+            {currentTab === 'national_price_matrix' && (
+              <NationalPriceMatrixView
+                purchaseModels={purchaseModels}
+                onSavePurchaseModel={handleSavePurchaseModel}
+                onDeletePurchaseModel={handleDeletePurchaseModel}
               />
             )}
 
@@ -860,6 +1135,12 @@ export default function App() {
         totalAmount={checkoutTotalAmount}
         totalUnits={checkoutTotalUnits}
         onConfirmSuccess={handleOrderConfirmed}
+      />
+
+      {/* Login Modal & First Access Password Reset */}
+      <LoginModal
+        isOpen={loginModalOpen}
+        onLoginSuccess={handleLoginSuccess}
       />
     </div>
   );

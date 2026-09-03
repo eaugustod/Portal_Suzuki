@@ -41,6 +41,8 @@ export const getDbPool = async () => {
   return poolPromise;
 };
 
+export { sql };
+
 export default {
   getDbPool,
   sql,

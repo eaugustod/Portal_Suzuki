@@ -28,6 +28,8 @@ interface HeaderProps {
   setSearchQuery: (q: string) => void;
   theme?: 'dark' | 'light';
   onToggleTheme?: () => void;
+  currentUser?: any;
+  onLogout?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -39,7 +41,9 @@ export const Header: React.FC<HeaderProps> = ({
   searchQuery,
   setSearchQuery,
   theme = 'dark',
-  onToggleTheme
+  onToggleTheme,
+  currentUser,
+  onLogout
 }) => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -52,12 +56,14 @@ export const Header: React.FC<HeaderProps> = ({
       switch (tab) {
         case 'dashboard': return 'Cockpit Geral da Montadora';
         case 'commitments': return 'Gestão Nacional de Compromissos de Compra';
-        case 'purchase': return 'Catálogo Nacional & Pedidos de Fábrica';
+        case 'purchase': return 'Central de Pedidos da Rede & Integração Protheus';
+        case 'national_price_matrix': return 'Matriz Nacional de Preços & Cores de Fábrica';
         case 'parts_catalog': return 'Catálogo de Peças Genuínas (EPC) & ERP';
         case 'inventory': return 'Estoque Consolidado da Rede';
         case 'sales': return 'Consolidado Comercial & CRM Rede';
         case 'service_order': return 'Garantias & Pós-Venda Nacional';
         case 'dealers_network': return 'Gestão da Rede de Concessionárias';
+        case 'user_management': return 'Gestão de Usuários & Controle de Acesso (RBAC)';
         case 'settings': return 'Diretrizes & Parâmetros Montadora';
         case 'support': return 'Central de Suporte à Rede';
         default: return 'Grupo J. Toledo Brasil';
@@ -68,6 +74,7 @@ export const Header: React.FC<HeaderProps> = ({
       case 'dashboard': return 'Dashboard Executivo';
       case 'commitments': return 'Compromisso de Compra Mensal & Estoque';
       case 'purchase': return 'Pedido de Fábrica (Motos 0km)';
+      case 'user_management': return 'Gestão de Equipe & Usuários da Concessionária';
       case 'parts_catalog': return 'Catálogo Eletrônico de Peças (EPC)';
       case 'inventory': return 'Gestão de Estoque do Pátio';
       case 'sales': return 'Gestão de Vendas & CRM';
@@ -387,36 +394,54 @@ export const Header: React.FC<HeaderProps> = ({
                   referrerPolicy="no-referrer"
                 />
                 <div>
-                  <p className="text-[13px] font-bold text-slate-900 dark:text-white">Eduardo Donato</p>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                    {currentScope === 'jtoledo' ? 'Diretor Nacional de Rede' : 'Gerente Geral Dealer'}
+                  <p className="text-[13px] font-bold text-slate-900 dark:text-white truncate">
+                    {currentUser?.name || 'Eduardo Donato'}
                   </p>
-                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">● Online</span>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
+                    {currentUser?.department || (currentScope === 'jtoledo' ? 'Diretoria de Operações' : 'Concessionária')}
+                  </p>
+                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium flex items-center gap-1 mt-0.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    {currentUser?.role || 'Online'}
+                  </span>
                 </div>
               </div>
 
               <div className="py-2.5 text-[12px] space-y-1.5">
                 <div className="flex justify-between px-1 text-slate-600 dark:text-slate-400">
-                  <span>Entidade Ativa:</span>
+                  <span>E-mail:</span>
+                  <span className="font-semibold text-slate-900 dark:text-white truncate max-w-[170px]">
+                    {currentUser?.email || 'admin@jtoledo.com.br'}
+                  </span>
+                </div>
+                <div className="flex justify-between px-1 text-slate-600 dark:text-slate-400">
+                  <span>Entidade:</span>
                   <span className="font-semibold text-slate-900 dark:text-white">{activeProfile?.shortName}</span>
                 </div>
                 <div className="flex justify-between px-1 text-slate-600 dark:text-slate-400">
-                  <span>Local:</span>
-                  <span className="font-semibold text-slate-900 dark:text-white">{activeProfile?.city} ({activeProfile?.state})</span>
-                </div>
-                <div className="flex justify-between px-1 text-slate-600 dark:text-slate-400">
-                  <span>CNPJ:</span>
-                  <span className="font-semibold text-slate-700 dark:text-neutral-300 font-mono text-[11px]">{activeProfile?.cnpj}</span>
+                  <span>Origem Logística:</span>
+                  <span className="font-semibold text-slate-900 dark:text-white">{activeProfile?.originWarehouse === 'manaus_le_16' ? 'Manaus LE 16' : 'CD Jundiaí (13)'}</span>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-slate-200 dark:border-neutral-800">
+              <div className="pt-2 border-t border-slate-200 dark:border-neutral-800 flex gap-2">
                 <button 
                   onClick={() => setShowUserMenu(false)}
-                  className="w-full text-center py-2 text-[11px] font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors"
+                  className="flex-1 text-center py-2 text-[11px] font-bold bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-slate-700 dark:text-slate-200 rounded-xl transition-colors"
                 >
-                  Perfil Executivo
+                  Fechar
                 </button>
+                {onLogout && (
+                  <button 
+                    onClick={() => {
+                      setShowUserMenu(false);
+                      onLogout();
+                    }}
+                    className="flex-1 text-center py-2 text-[11px] font-bold bg-red-600 hover:bg-red-700 text-white rounded-xl transition-colors shadow-xs"
+                  >
+                    Sair da Conta
+                  </button>
+                )}
               </div>
             </div>
           )}

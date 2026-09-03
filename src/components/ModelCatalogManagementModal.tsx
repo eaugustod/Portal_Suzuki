@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   X, 
   Plus, 
@@ -28,12 +28,14 @@ interface ModelCatalogManagementModalProps {
 export const ModelCatalogManagementModal: React.FC<ModelCatalogManagementModalProps> = ({
   modelToEdit,
   onSave,
+  onSaveModel,
+  onDeleteModel,
   onClose
 }) => {
   const isEditing = !!modelToEdit;
 
   // Basic Information
-  const [id] = useState(modelToEdit?.id || `model-${Date.now()}`);
+  const [id, setId] = useState(modelToEdit?.id || `model-${Date.now()}`);
   const [brand, setBrand] = useState<BrandType>(modelToEdit?.brand || 'Suzuki');
   const [modelName, setModelName] = useState(modelToEdit?.modelName || '');
   const [yearModel, setYearModel] = useState(modelToEdit?.yearModel || '2026/2026');
@@ -97,6 +99,73 @@ export const ModelCatalogManagementModal: React.FC<ModelCatalogManagementModalPr
   const [acceleration0to100, setAcceleration0to100] = useState(initialSpecs.acceleration0to100 || '3.2 segundos');
   const [avgConsumption, setAvgConsumption] = useState(initialSpecs.avgConsumption || '16.5 km/L');
   const [estimatedRange, setEstimatedRange] = useState(initialSpecs.estimatedRange || '310 km');
+
+  // Sincroniza formulário sempre que o modelToEdit mudar
+  useEffect(() => {
+    if (modelToEdit) {
+      setId(modelToEdit.id);
+      setBrand(modelToEdit.brand || 'Suzuki');
+      setModelName(modelToEdit.modelName || '');
+      setYearModel(modelToEdit.yearModel || '2026/2026');
+      setCategory(modelToEdit.category || 'Sport Crossover');
+      setFactoryCost(modelToEdit.factoryCost || 50000);
+      setPpsMSRP(modelToEdit.ppsMSRP || 62500);
+      setOfficialWebUrl(modelToEdit.officialWebUrl || 'https://suzukimotos.com.br/');
+      setDescription(modelToEdit.description || '');
+      setPerformanceSummary(modelToEdit.performanceSummary || '');
+      setFeaturesText(modelToEdit.features ? modelToEdit.features.join('\n') : '');
+      setVariants(modelToEdit.variants && modelToEdit.variants.length > 0
+        ? JSON.parse(JSON.stringify(modelToEdit.variants))
+        : []
+      );
+      const specs = modelToEdit.technicalSpecs || {} as TechnicalSpecs;
+      setEngineType(specs.engineType || '');
+      setDisplacement(specs.displacement || '');
+      setPower(specs.power || '');
+      setTorque(specs.torque || '');
+      setCompressionRatio(specs.compressionRatio || '');
+      setFuelSystem(specs.fuelSystem || '');
+      setTransmission(specs.transmission || '');
+      setClutch(specs.clutch || '');
+      setFrontSuspension(specs.frontSuspension || '');
+      setRearSuspension(specs.rearSuspension || '');
+      setFrontBrake(specs.frontBrake || '');
+      setRearBrake(specs.rearBrake || '');
+      setAbsSystem(specs.absSystem || '');
+      setFrontTire(specs.frontTire || '');
+      setRearTire(specs.rearTire || '');
+      setFuelTank(specs.fuelTank || '');
+      setCurbWeight(specs.curbWeight || '');
+      setSeatHeight(specs.seatHeight || '');
+      setTopSpeed(specs.topSpeed || '');
+      setAcceleration0to100(specs.acceleration0to100 || '');
+      setAvgConsumption(specs.avgConsumption || '');
+      setEstimatedRange(specs.estimatedRange || '');
+    } else {
+      setId(`model-${Date.now()}`);
+      setBrand('Suzuki');
+      setModelName('');
+      setYearModel('2026/2026');
+      setCategory('Sport Crossover');
+      setFactoryCost(50000);
+      setPpsMSRP(62500);
+      setOfficialWebUrl('https://suzukimotos.com.br/');
+      setDescription('');
+      setPerformanceSummary('');
+      setFeaturesText('Suspensão Invertida\nQuickshifter Bi-direcional\nPainel TFT Colorido\nFreios ABS');
+      setVariants([
+        {
+          id: `var-${Date.now()}-1`,
+          colorName: 'Azul Metálico (YSF)',
+          colorCode: 'YSF',
+          colorHex: '#1b3b6f',
+          imageUrl: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=80',
+          stockStatus: 'disponivel',
+          quantity: 0
+        }
+      ]);
+    }
+  }, [modelToEdit]);
 
   // Active Tab
   const [activeFormTab, setActiveFormTab] = useState<'basic' | 'colors' | 'specs' | 'performance'>('basic');
@@ -190,7 +259,10 @@ export const ModelCatalogManagementModal: React.FC<ModelCatalogManagementModalPr
       variants
     };
 
-    onSave(savedModel);
+    const saveFn = onSaveModel || onSave;
+    if (saveFn) {
+      saveFn(savedModel);
+    }
   };
 
   return (

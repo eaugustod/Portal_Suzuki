@@ -22,6 +22,7 @@ import {
   Globe2,
   CalendarCheck,
   Package,
+  Users,
   Sun,
   Moon
 } from 'lucide-react';
@@ -68,16 +69,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'dealers_network' as NavTab, label: 'Gestão da Rede (Dealers)', icon: Building2 },
     { id: 'commitments' as NavTab, label: 'Compromissos da Rede', icon: CalendarCheck },
     { id: 'purchase' as NavTab, label: 'Pedidos da Rede & ERP', icon: ShoppingCart, badge: pendingOrdersCount },
+    { id: 'national_price_matrix' as NavTab, label: 'Matriz Preços & Cores', icon: Bike },
     { id: 'freight_table' as NavTab, label: 'Gestão de Fretes & UF', icon: Truck },
     { id: 'payment_conditions' as NavTab, label: 'Condições de Pagamento', icon: CreditCard },
     { id: 'model_matrix' as NavTab, label: 'Habilitação Modelos/Cores', icon: Layers },
     { id: 'approval_workflow' as NavTab, label: 'Workflow de Aprovação', icon: ShieldCheck },
+    { id: 'user_management' as NavTab, label: 'Gestão de Usuários (Login)', icon: Users },
     { id: 'reserve_fund' as NavTab, label: 'Fundo de Reserva', icon: BadgeDollarSign },
     { id: 'inventory' as NavTab, label: 'Estoque da Rede', icon: Boxes },
   ] : [
     { id: 'dashboard' as NavTab, label: 'Dashboard', icon: LayoutDashboard },
     { id: 'commitments' as NavTab, label: 'Compromisso Mensal', icon: CalendarCheck },
     { id: 'purchase' as NavTab, label: 'Pedido de Fábrica (Motos)', icon: ShoppingCart, badge: pendingOrdersCount },
+    { id: 'user_management' as NavTab, label: 'Equipe & Usuários', icon: Users },
     { id: 'reserve_fund' as NavTab, label: 'Fundo de Reserva', icon: BadgeDollarSign },
     { id: 'inventory' as NavTab, label: 'Estoque da Loja', icon: Bike },
   ];
@@ -107,23 +111,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </button>
           
           <div className="flex flex-col gap-2.5">
-            {/* High Impact Suzuki Logo Card for both Light & Dark Mode */}
-            <div className="bg-slate-50 dark:bg-neutral-800/90 p-3 rounded-2xl border border-slate-200/90 dark:border-neutral-700/80 shadow-xs flex items-center gap-3 transition-all hover:border-slate-300 dark:hover:border-neutral-600">
-              <div className="bg-white px-2.5 py-1.5 rounded-xl border border-slate-200/80 shadow-2xs shrink-0 flex items-center justify-center min-w-[135px] h-14">
-                <img 
-                  src="/suzuki-logo.png" 
-                  alt="Grupo J. Toledo Suzuki Motos Brasil" 
-                  className="h-11 w-auto object-contain"
-                />
-              </div>
-              <div className="flex flex-col justify-center min-w-0 pr-0.5">
-                <span className="text-[13px] font-black text-slate-900 dark:text-white tracking-tight leading-tight truncate">
-                  DealerHub
-                </span>
-                <span className="text-[9px] font-bold text-red-600 dark:text-red-400 tracking-wider uppercase truncate">
-                  Portal Oficial
-                </span>
-              </div>
+            {/* High Impact Suzuki Logo Card - Preenchendo todo o retângulo arredondado */}
+            <div className="bg-white rounded-2xl border border-slate-200 dark:border-neutral-700 shadow-sm overflow-hidden flex items-center justify-center transition-all hover:shadow-md p-2">
+              <img 
+                src="/suzuki-logo.png" 
+                alt="Grupo J. Toledo Suzuki Motos Brasil" 
+                className="w-full h-auto max-h-20 object-contain rounded-xl"
+              />
             </div>
 
             {/* Scope / Profile Tag */}

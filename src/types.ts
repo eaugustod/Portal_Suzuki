@@ -2,6 +2,7 @@ export type NavTab =
   | 'dashboard' 
   | 'commitments' 
   | 'purchase' 
+  | 'national_price_matrix'
   | 'reserve_fund'
   | 'freight_table'
   | 'payment_conditions'
@@ -12,6 +13,7 @@ export type NavTab =
   | 'sales' 
   | 'service_order' 
   | 'dealers_network' 
+  | 'user_management'
   | 'settings' 
   | 'support';
 
@@ -202,6 +204,7 @@ export interface VehicleVariant {
   colorCode?: string;
   imageUrl?: string;
   stockStatus: StockAvailabilityStatus | 'disponivel' | 'poucas' | 'sem_estoque';
+  factoryStock?: number;
   quantity: number;
 }
 
