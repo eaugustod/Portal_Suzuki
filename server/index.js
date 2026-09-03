@@ -84,7 +84,9 @@ app.patch('/api/users/:id/status', authMiddleware, userController.toggleStatus);
 // 4. CONCESSIONÁRIAS E GESTÃO DA REDE
 // ==========================================
 app.get('/api/dealerships', authMiddleware, dealershipController.getDealerships);
+app.post('/api/dealerships', authMiddleware, requireMontadora, dealershipController.createDealership);
 app.put('/api/dealerships/:id', authMiddleware, requireMontadora, dealershipController.updateDealership);
+app.delete('/api/dealerships/:id', authMiddleware, requireMontadora, dealershipController.deleteDealership);
 
 // ==========================================
 // 4. PORTAL DE COMPRAS, MODELOS E PEDIDOS

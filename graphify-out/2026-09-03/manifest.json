@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "src/App.tsx": {
-    "mtime": 1788443304.9395287,
-    "ast_hash": "13cefa7ff57c6f4843bb4fba62419875",
+    "mtime": 1788447235.9505436,
+    "ast_hash": "c28e4fa835f3ed4a94bb1bd4ead22777",
     "semantic_hash": ""
   },
   "src/components/DashboardView.tsx": {
@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "src/components/PurchasePortalView.tsx": {
-    "mtime": 1788376849.6770523,
-    "ast_hash": "c5631b30f9b98bbe059beba43ef57166",
+    "mtime": 1788447234.172111,
+    "ast_hash": "e4d1239bc526b9270d286b0d9e253f40",
     "semantic_hash": ""
   },
   "src/components/SalesCrmView.tsx": {
@@ -1357,11 +1357,6 @@
   "src/data/generated_catalogs/suzuki_vstrom650_l7_xtCatalogData.ts": {
     "mtime": 1787686658.8359163,
     "ast_hash": "e073e2581ea5917fcd360c481d3a4473",
-    "semantic_hash": ""
-  },
-  "src/data/mockFreightTable.ts": {
-    "mtime": 1788189146.5387204,
-    "ast_hash": "788aa51516c8097a5bedd6929dc354d7",
     "semantic_hash": ""
   },
   "src/data/mockPaymentConditions.ts": {

@@ -340,8 +340,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_jsonwebtoken",
-      "community": 69,
-      "community_name": "22. SEGURAN\u00c7A E PERMISS\u00d5ES",
+      "community": 3,
+      "community_name": "Runtime Dependencies & Packages",
       "norm_label": "jsonwebtoken"
     },
     {
@@ -351,8 +351,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "jsonwebtoken",
-      "community": 69,
-      "community_name": "22. SEGURAN\u00c7A E PERMISS\u00d5ES",
+      "community": 3,
+      "community_name": "Runtime Dependencies & Packages",
       "norm_label": "jsonwebtoken"
     },
     {
@@ -384,8 +384,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_motion",
-      "community": 73,
-      "community_name": "@types/cors",
+      "community": 3,
+      "community_name": "Runtime Dependencies & Packages",
       "norm_label": "motion"
     },
     {
@@ -395,8 +395,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "motion",
-      "community": 73,
-      "community_name": "@types/cors",
+      "community": 3,
+      "community_name": "Runtime Dependencies & Packages",
       "norm_label": "motion"
     },
     {
@@ -406,8 +406,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_mssql",
-      "community": 3,
-      "community_name": "Runtime Dependencies & Packages",
+      "community": 82,
+      "community_name": "tsx",
       "norm_label": "mssql"
     },
     {
@@ -417,8 +417,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "mssql",
-      "community": 3,
-      "community_name": "Runtime Dependencies & Packages",
+      "community": 82,
+      "community_name": "tsx",
       "norm_label": "mssql"
     },
     {
@@ -428,8 +428,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies_react",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 80,
+      "community_name": "typescript",
       "norm_label": "react"
     },
     {
@@ -439,8 +439,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "react",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 80,
+      "community_name": "typescript",
       "norm_label": "react"
     },
     {
@@ -527,8 +527,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "package_devdependencies_types_bcryptjs",
-      "community": 80,
-      "community_name": "typescript",
+      "community": 2,
+      "community_name": "Build Config & Dev Dependencies",
       "norm_label": "@types/bcryptjs"
     },
     {
@@ -538,8 +538,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "types_bcryptjs",
-      "community": 80,
-      "community_name": "typescript",
+      "community": 2,
+      "community_name": "Build Config & Dev Dependencies",
       "norm_label": "@types/bcryptjs"
     },
     {
@@ -747,8 +747,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
-      "community": 2,
-      "community_name": "Build Config & Dev Dependencies",
+      "community": 91,
+      "community_name": "PartsCatalogView.tsx",
       "norm_label": "tailwindcss"
     },
     {
@@ -758,8 +758,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tailwindcss",
-      "community": 2,
-      "community_name": "Build Config & Dev Dependencies",
+      "community": 91,
+      "community_name": "PartsCatalogView.tsx",
       "norm_label": "tailwindcss"
     },
     {
@@ -769,8 +769,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "package_devdependencies_tsx",
-      "community": 82,
-      "community_name": "tsx",
+      "community": 2,
+      "community_name": "Build Config & Dev Dependencies",
       "norm_label": "tsx"
     },
     {
@@ -780,8 +780,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "tsx",
-      "community": 82,
-      "community_name": "tsx",
+      "community": 2,
+      "community_name": "Build Config & Dev Dependencies",
       "norm_label": "tsx"
     },
     {
@@ -2782,8 +2782,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_app_app",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 80,
+      "community_name": "typescript",
       "norm_label": "app()"
     },
     {
@@ -2837,8 +2837,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_components_dealershipmanagementview_dealershipmanagementviewprops",
-      "community": 41,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 85,
+      "community_name": "DealershipManagementView.tsx",
       "norm_label": "dealershipmanagementviewprops"
     },
     {
@@ -2859,8 +2859,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_dealershiporderdetailmodal",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "dealershiporderdetailmodal.tsx"
     },
     {
@@ -2870,8 +2870,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_components_dealershiporderdetailmodal_dealershiporderdetailmodalprops",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "dealershiporderdetailmodalprops"
     },
     {
@@ -2881,8 +2881,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_components_dealershiporderdetailmodal_dealershiporderdetailmodal",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "dealershiporderdetailmodal()"
     },
     {
@@ -3068,8 +3068,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_inventoryview",
-      "community": 0,
-      "community_name": "App Shell & Navigation",
+      "community": 41,
+      "community_name": "PartsCatalogView.tsx",
       "norm_label": "inventoryview.tsx"
     },
     {
@@ -3079,8 +3079,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_components_inventoryview_inventoryviewprops",
-      "community": 0,
-      "community_name": "App Shell & Navigation",
+      "community": 41,
+      "community_name": "PartsCatalogView.tsx",
       "norm_label": "inventoryviewprops"
     },
     {
@@ -3090,8 +3090,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_components_inventoryview_inventoryview",
-      "community": 0,
-      "community_name": "App Shell & Navigation",
+      "community": 41,
+      "community_name": "PartsCatalogView.tsx",
       "norm_label": "inventoryview()"
     },
     {
@@ -3200,8 +3200,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_modeltechnicalspecsmodal",
-      "community": 1,
-      "community_name": "Dealer Management & Modals",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "modeltechnicalspecsmodal.tsx"
     },
     {
@@ -3222,8 +3222,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_components_modeltechnicalspecsmodal_modeltechnicalspecsmodal",
-      "community": 1,
-      "community_name": "Dealer Management & Modals",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "modeltechnicalspecsmodal()"
     },
     {
@@ -3431,8 +3431,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_paymentconditionsview",
-      "community": 41,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 85,
+      "community_name": "DealershipManagementView.tsx",
       "norm_label": "paymentconditionsview.tsx"
     },
     {
@@ -3442,8 +3442,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_paymentconditionsview_paymentconditionsviewprops",
-      "community": 41,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 85,
+      "community_name": "DealershipManagementView.tsx",
       "norm_label": "paymentconditionsviewprops"
     },
     {
@@ -3453,8 +3453,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_paymentconditionsview_paymentconditionsview",
-      "community": 41,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 85,
+      "community_name": "DealershipManagementView.tsx",
       "norm_label": "paymentconditionsview()"
     },
     {
@@ -3464,30 +3464,30 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_purchaseportalview",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "purchaseportalview.tsx"
     },
     {
       "label": "PurchasePortalViewProps",
       "file_type": "code",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L70",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "src_components_purchaseportalview_purchaseportalviewprops",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "purchaseportalviewprops"
     },
     {
       "label": "PurchasePortalView()",
       "file_type": "code",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L90",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "src_components_purchaseportalview_purchaseportalview",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "purchaseportalview()"
     },
     {
@@ -3563,8 +3563,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_serviceorderview",
-      "community": 0,
-      "community_name": "App Shell & Navigation",
+      "community": 69,
+      "community_name": "22. SEGURAN\u00c7A E PERMISS\u00d5ES",
       "norm_label": "serviceorderview.tsx"
     },
     {
@@ -3574,8 +3574,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_components_serviceorderview_serviceorderviewprops",
-      "community": 0,
-      "community_name": "App Shell & Navigation",
+      "community": 69,
+      "community_name": "22. SEGURAN\u00c7A E PERMISS\u00d5ES",
       "norm_label": "serviceorderviewprops"
     },
     {
@@ -3585,8 +3585,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_components_serviceorderview_serviceorderview",
-      "community": 0,
-      "community_name": "App Shell & Navigation",
+      "community": 69,
+      "community_name": "22. SEGURAN\u00c7A E PERMISS\u00d5ES",
       "norm_label": "serviceorderview()"
     },
     {
@@ -3673,8 +3673,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_usermanagementview",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 67,
+      "community_name": "OrderWorkflowView.tsx",
       "norm_label": "usermanagementview.tsx"
     },
     {
@@ -3684,8 +3684,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_components_usermanagementview_useritem",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 67,
+      "community_name": "OrderWorkflowView.tsx",
       "norm_label": "useritem"
     },
     {
@@ -3695,8 +3695,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_components_usermanagementview_metadataoption",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 67,
+      "community_name": "OrderWorkflowView.tsx",
       "norm_label": "metadataoption"
     },
     {
@@ -3706,8 +3706,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "src_components_usermanagementview_usermanagementviewprops",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 67,
+      "community_name": "OrderWorkflowView.tsx",
       "norm_label": "usermanagementviewprops"
     },
     {
@@ -3717,8 +3717,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "src_components_usermanagementview_usermanagementview",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 67,
+      "community_name": "OrderWorkflowView.tsx",
       "norm_label": "usermanagementview()"
     },
     {
@@ -3750,8 +3750,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_parts_partscartdrawer",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscartdrawer.tsx"
     },
     {
@@ -3761,8 +3761,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_components_parts_partscartdrawer_partscartdrawerprops",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscartdrawerprops"
     },
     {
@@ -3772,8 +3772,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_components_parts_partscartdrawer_partscartdrawer",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscartdrawer()"
     },
     {
@@ -3783,8 +3783,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_parts_partscataloguploadmodal",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscataloguploadmodal.tsx"
     },
     {
@@ -3794,8 +3794,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_parts_partscataloguploadmodal_partscataloguploadmodalprops",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscataloguploadmodalprops"
     },
     {
@@ -3805,8 +3805,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_components_parts_partscataloguploadmodal_partscataloguploadmodal",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscataloguploadmodal()"
     },
     {
@@ -3816,8 +3816,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_parts_partscatalogview",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscatalogview.tsx"
     },
     {
@@ -3827,8 +3827,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "src_components_parts_partscatalogview_partscatalogviewprops",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 41,
+      "community_name": "PartsCatalogView.tsx",
       "norm_label": "partscatalogviewprops"
     },
     {
@@ -3838,8 +3838,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "src_components_parts_partscatalogview_partscatalogview",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscatalogview()"
     },
     {
@@ -3849,8 +3849,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_parts_partsdiagramcarousel",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsdiagramcarousel.tsx"
     },
     {
@@ -3860,8 +3860,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_parts_partsdiagramcarousel_partsdiagramcarouselprops",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsdiagramcarouselprops"
     },
     {
@@ -3871,8 +3871,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_parts_partsdiagramcarousel_partsdiagramcarousel",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsdiagramcarousel()"
     },
     {
@@ -3882,8 +3882,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_parts_partsexplodeddiagram",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsexplodeddiagram.tsx"
     },
     {
@@ -3893,8 +3893,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "src_components_parts_partsexplodeddiagram_partsexplodeddiagramprops",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsexplodeddiagramprops"
     },
     {
@@ -3904,8 +3904,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_components_parts_partsexplodeddiagram_partsexplodeddiagram",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsexplodeddiagram()"
     },
     {
@@ -3915,8 +3915,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_parts_partsordermirrormodal",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsordermirrormodal.tsx"
     },
     {
@@ -3926,8 +3926,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_components_parts_partsordermirrormodal_partsordermirrormodalprops",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsordermirrormodalprops"
     },
     {
@@ -3937,8 +3937,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_components_parts_partsordermirrormodal_partsordermirrormodal",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsordermirrormodal()"
     },
     {
@@ -3948,8 +3948,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_parts_partstable",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partstable.tsx"
     },
     {
@@ -3959,8 +3959,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_components_parts_partstable_partstableprops",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partstableprops"
     },
     {
@@ -3970,8 +3970,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_components_parts_partstable_partstable",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partstable()"
     },
     {
@@ -4168,8 +4168,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_haojue_agility200icatalogdata",
-      "community": 12,
-      "community_name": "mockPartsData.ts",
+      "community": 96,
+      "community_name": "DealershipFullProfile",
       "norm_label": "haojue_agility200icatalogdata.ts"
     },
     {
@@ -4179,8 +4179,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_haojue_agility200icatalogdata_haojue_agility200i_converted_diagrams",
-      "community": 12,
-      "community_name": "mockPartsData.ts",
+      "community": 96,
+      "community_name": "DealershipFullProfile",
       "norm_label": "haojue_agility200i_converted_diagrams"
     },
     {
@@ -5400,8 +5400,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_boulevard_m800_l4_l5catalogdata",
-      "community": 322,
-      "community_name": "src/data/generated_catalogs/suzuki_boulevard_m800_l4_l5CatalogData.ts",
+      "community": 12,
+      "community_name": "mockPartsData.ts",
       "norm_label": "suzuki_boulevard_m800_l4_l5catalogdata.ts"
     },
     {
@@ -5411,8 +5411,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_boulevard_m800_l4_l5catalogdata_suzuki_boulevard_m800_l4_l5_converted_diagrams",
-      "community": 322,
-      "community_name": "src/data/generated_catalogs/suzuki_boulevard_m800_l4_l5CatalogData.ts",
+      "community": 12,
+      "community_name": "mockPartsData.ts",
       "norm_label": "suzuki_boulevard_m800_l4_l5_converted_diagrams"
     },
     {
@@ -5510,8 +5510,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_burgman_an400_k9catalogdata",
-      "community": 327,
-      "community_name": "src/data/generated_catalogs/suzuki_burgman_an400_k9CatalogData.ts",
+      "community": 12,
+      "community_name": "mockPartsData.ts",
       "norm_label": "suzuki_burgman_an400_k9catalogdata.ts"
     },
     {
@@ -5521,8 +5521,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_burgman_an400_k9catalogdata_suzuki_burgman_an400_k9_converted_diagrams",
-      "community": 327,
-      "community_name": "src/data/generated_catalogs/suzuki_burgman_an400_k9CatalogData.ts",
+      "community": 12,
+      "community_name": "mockPartsData.ts",
       "norm_label": "suzuki_burgman_an400_k9_converted_diagrams"
     },
     {
@@ -6060,8 +6060,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_gsr_125_scatalogdata",
-      "community": 352,
-      "community_name": "src/data/generated_catalogs/suzuki_gsr_125_sCatalogData.ts",
+      "community": 12,
+      "community_name": "mockPartsData.ts",
       "norm_label": "suzuki_gsr_125_scatalogdata.ts"
     },
     {
@@ -6071,8 +6071,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_gsr_125_scatalogdata_suzuki_gsr_125_s_converted_diagrams",
-      "community": 352,
-      "community_name": "src/data/generated_catalogs/suzuki_gsr_125_sCatalogData.ts",
+      "community": 12,
+      "community_name": "mockPartsData.ts",
       "norm_label": "suzuki_gsr_125_s_converted_diagrams"
     },
     {
@@ -7798,8 +7798,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_sv650a_l7catalogdata",
-      "community": 12,
-      "community_name": "mockPartsData.ts",
+      "community": 105,
+      "community_name": "suzuki_sv650a_l7CatalogData.ts",
       "norm_label": "suzuki_sv650a_l7catalogdata.ts"
     },
     {
@@ -7809,8 +7809,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_sv650a_l7catalogdata_suzuki_sv650a_l7_converted_diagrams",
-      "community": 12,
-      "community_name": "mockPartsData.ts",
+      "community": 105,
+      "community_name": "suzuki_sv650a_l7CatalogData.ts",
       "norm_label": "suzuki_sv650a_l7_converted_diagrams"
     },
     {
@@ -8018,8 +8018,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_v_strom_1000_l8catalogdata",
-      "community": 12,
-      "community_name": "mockPartsData.ts",
+      "community": 112,
+      "community_name": "suzuki_v_strom_1000_l8CatalogData.ts",
       "norm_label": "suzuki_v_strom_1000_l8catalogdata.ts"
     },
     {
@@ -8029,8 +8029,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_data_generated_catalogs_suzuki_v_strom_1000_l8catalogdata_suzuki_v_strom_1000_l8_converted_diagrams",
-      "community": 12,
-      "community_name": "mockPartsData.ts",
+      "community": 112,
+      "community_name": "suzuki_v_strom_1000_l8CatalogData.ts",
       "norm_label": "suzuki_v_strom_1000_l8_converted_diagrams"
     },
     {
@@ -8876,8 +8876,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_data_mockdata_dealership_profiles",
-      "community": 59,
-      "community_name": "11. VIS\u00c3O MONTADORA \u2014 FORMA DE PAGAMENTO E DESCONTO",
+      "community": 41,
+      "community_name": "PartsCatalogView.tsx",
       "norm_label": "dealership_profiles"
     },
     {
@@ -8956,50 +8956,6 @@
       "community": 68,
       "community_name": "api.ts",
       "norm_label": "initial_factory_orders"
-    },
-    {
-      "label": "mockFreightTable.ts",
-      "file_type": "code",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_data_mockfreighttable",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
-      "norm_label": "mockfreighttable.ts"
-    },
-    {
-      "label": "INITIAL_FREIGHT_TABLE",
-      "file_type": "code",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "src_data_mockfreighttable_initial_freight_table",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
-      "norm_label": "initial_freight_table"
-    },
-    {
-      "label": "getAutomaticWarehouseOrigin()",
-      "file_type": "code",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "src_data_mockfreighttable_getautomaticwarehouseorigin",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
-      "norm_label": "getautomaticwarehouseorigin()"
-    },
-    {
-      "label": "calculateAutomaticFreight()",
-      "file_type": "code",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "src_data_mockfreighttable_calculateautomaticfreight",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
-      "norm_label": "calculateautomaticfreight()"
     },
     {
       "label": "mockPartsData.ts",
@@ -9173,8 +9129,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_data_modelscatalogdata_initial_models_catalog",
-      "community": 4,
-      "community_name": "Hayabusa EPC Diagrams Data",
+      "community": 68,
+      "community_name": "api.ts",
       "norm_label": "initial_models_catalog"
     },
     {
@@ -9206,8 +9162,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_orderapprovaldata",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "orderapprovaldata.ts"
     },
     {
@@ -9217,8 +9173,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_data_orderapprovaldata_initial_order_approval_proposals",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "initial_order_approval_proposals"
     },
     {
@@ -9228,8 +9184,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_workflowstepsdata",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 68,
+      "community_name": "api.ts",
       "norm_label": "workflowstepsdata.ts"
     },
     {
@@ -9239,8 +9195,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_data_workflowstepsdata_initial_workflow_steps",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 68,
+      "community_name": "api.ts",
       "norm_label": "initial_workflow_steps"
     },
     {
@@ -9305,8 +9261,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_types",
-      "community": 85,
-      "community_name": "DealershipManagementView.tsx",
+      "community": 7,
+      "community_name": "Exploded Diagram Components",
       "norm_label": "types.ts"
     },
     {
@@ -9316,8 +9272,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_types_navtab",
-      "community": 41,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 0,
+      "community_name": "App Shell & Navigation",
       "norm_label": "navtab"
     },
     {
@@ -9426,8 +9382,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_types_dealershipbankaccount",
-      "community": 85,
-      "community_name": "DealershipManagementView.tsx",
+      "community": 7,
+      "community_name": "Exploded Diagram Components",
       "norm_label": "dealershipbankaccount"
     },
     {
@@ -9437,8 +9393,8 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "src_types_dealershipprofile",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 67,
+      "community_name": "OrderWorkflowView.tsx",
       "norm_label": "dealershipprofile"
     },
     {
@@ -9448,8 +9404,8 @@
       "source_location": "L149",
       "_origin": "ast",
       "id": "src_types_dealershipfullprofile",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "dealershipfullprofile"
     },
     {
@@ -9470,8 +9426,8 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "src_types_stockavailabilitystatus",
-      "community": 85,
-      "community_name": "DealershipManagementView.tsx",
+      "community": 7,
+      "community_name": "Exploded Diagram Components",
       "norm_label": "stockavailabilitystatus"
     },
     {
@@ -9481,8 +9437,8 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "src_types_vehiclevariant",
-      "community": 1,
-      "community_name": "Dealer Management & Modals",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "vehiclevariant"
     },
     {
@@ -9492,8 +9448,8 @@
       "source_location": "L211",
       "_origin": "ast",
       "id": "src_types_paymentconditioncampaign",
-      "community": 41,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 85,
+      "community_name": "DealershipManagementView.tsx",
       "norm_label": "paymentconditioncampaign"
     },
     {
@@ -9514,8 +9470,8 @@
       "source_location": "L238",
       "_origin": "ast",
       "id": "src_types_costmemorialbreakdown",
-      "community": 85,
-      "community_name": "DealershipManagementView.tsx",
+      "community": 7,
+      "community_name": "Exploded Diagram Components",
       "norm_label": "costmemorialbreakdown"
     },
     {
@@ -9613,8 +9569,8 @@
       "source_location": "L388",
       "_origin": "ast",
       "id": "src_types_monthlycommitmentstatus",
-      "community": 85,
-      "community_name": "DealershipManagementView.tsx",
+      "community": 7,
+      "community_name": "Exploded Diagram Components",
       "norm_label": "monthlycommitmentstatus"
     },
     {
@@ -9657,8 +9613,8 @@
       "source_location": "L471",
       "_origin": "ast",
       "id": "src_types_creditanalysisjtajtz",
-      "community": 85,
-      "community_name": "DealershipManagementView.tsx",
+      "community": 7,
+      "community_name": "Exploded Diagram Components",
       "norm_label": "creditanalysisjtajtz"
     },
     {
@@ -9679,8 +9635,8 @@
       "source_location": "L524",
       "_origin": "ast",
       "id": "src_types_factoryorderitem",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "factoryorderitem"
     },
     {
@@ -9690,8 +9646,8 @@
       "source_location": "L564",
       "_origin": "ast",
       "id": "src_types_rejectionlog",
-      "community": 85,
-      "community_name": "DealershipManagementView.tsx",
+      "community": 7,
+      "community_name": "Exploded Diagram Components",
       "norm_label": "rejectionlog"
     },
     {
@@ -9701,8 +9657,8 @@
       "source_location": "L572",
       "_origin": "ast",
       "id": "src_types_factoryorder",
-      "community": 86,
-      "community_name": "PurchasePortalView.tsx",
+      "community": 89,
+      "community_name": "MonthlyCommitmentView.tsx",
       "norm_label": "factoryorder"
     },
     {
@@ -9734,8 +9690,8 @@
       "source_location": "L659",
       "_origin": "ast",
       "id": "src_types_serviceorderitem",
-      "community": 0,
-      "community_name": "App Shell & Navigation",
+      "community": 69,
+      "community_name": "22. SEGURAN\u00c7A E PERMISS\u00d5ES",
       "norm_label": "serviceorderitem"
     },
     {
@@ -9789,8 +9745,8 @@
       "source_location": "L729",
       "_origin": "ast",
       "id": "src_types_partsbrand",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsbrand"
     },
     {
@@ -9800,8 +9756,8 @@
       "source_location": "L731",
       "_origin": "ast",
       "id": "src_types_partsmodelsummary",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsmodelsummary"
     },
     {
@@ -9811,8 +9767,8 @@
       "source_location": "L749",
       "_origin": "ast",
       "id": "src_types_partspinhotspot",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partspinhotspot"
     },
     {
@@ -9833,8 +9789,8 @@
       "source_location": "L759",
       "_origin": "ast",
       "id": "src_types_partsitem",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsitem"
     },
     {
@@ -9855,8 +9811,8 @@
       "source_location": "L792",
       "_origin": "ast",
       "id": "src_types_partscartitem",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partscartitem"
     },
     {
@@ -9866,8 +9822,8 @@
       "source_location": "L805",
       "_origin": "ast",
       "id": "src_types_partsordertype",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsordertype"
     },
     {
@@ -9877,8 +9833,8 @@
       "source_location": "L806",
       "_origin": "ast",
       "id": "src_types_partsorderstatus",
-      "community": 85,
-      "community_name": "DealershipManagementView.tsx",
+      "community": 7,
+      "community_name": "Exploded Diagram Components",
       "norm_label": "partsorderstatus"
     },
     {
@@ -9888,8 +9844,8 @@
       "source_location": "L816",
       "_origin": "ast",
       "id": "src_types_partsorder",
-      "community": 96,
-      "community_name": "DealershipFullProfile",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "partsorder"
     },
     {
@@ -9899,8 +9855,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_autonumberdetector",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "autonumberdetector.ts"
     },
     {
@@ -9910,8 +9866,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_utils_autonumberdetector_generatefallbackhotspots",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "generatefallbackhotspots()"
     },
     {
@@ -9921,8 +9877,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_utils_autonumberdetector_autodetecthotspotsfromimage",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "autodetecthotspotsfromimage()"
     },
     {
@@ -9932,8 +9888,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_imagestorage",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "imagestorage.ts"
     },
     {
@@ -9943,8 +9899,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_utils_imagestorage_opendb",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "opendb()"
     },
     {
@@ -9954,8 +9910,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_utils_imagestorage_savediagramimage",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "savediagramimage()"
     },
     {
@@ -9965,8 +9921,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_utils_imagestorage_getdiagramimage",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "getdiagramimage()"
     },
     {
@@ -9976,8 +9932,8 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "src_utils_imagestorage_deletediagramimage",
-      "community": 7,
-      "community_name": "Exploded Diagram Components",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "deletediagramimage()"
     },
     {
@@ -12055,8 +12011,8 @@
       "source_location": "L691",
       "_origin": "ast",
       "id": "melhorias_portal_suzuki_especificacao_implementacoes_22_seguran\u00e7a_e_permiss\u00f5es",
-      "community": 16,
-      "community_name": "Portal_Suzuki_Especificacao_Implementacoes.md",
+      "community": 73,
+      "community_name": "@types/cors",
       "norm_label": "22. seguranca e permissoes"
     },
     {
@@ -12066,8 +12022,8 @@
       "source_location": "L697",
       "_origin": "ast",
       "id": "melhorias_portal_suzuki_especificacao_implementacoes_concession\u00e1rio",
-      "community": 16,
-      "community_name": "Portal_Suzuki_Especificacao_Implementacoes.md",
+      "community": 73,
+      "community_name": "@types/cors",
       "norm_label": "concessionario"
     },
     {
@@ -12077,8 +12033,8 @@
       "source_location": "L717",
       "_origin": "ast",
       "id": "melhorias_portal_suzuki_especificacao_implementacoes_montadora",
-      "community": 16,
-      "community_name": "Portal_Suzuki_Especificacao_Implementacoes.md",
+      "community": 73,
+      "community_name": "@types/cors",
       "norm_label": "montadora"
     },
     {
@@ -12594,8 +12550,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_data_mockpartsdata_mock_hayabusa_diagrams",
-      "community": 91,
-      "community_name": "PartsCatalogView.tsx",
+      "community": 4,
+      "community_name": "Hayabusa EPC Diagrams Data",
       "norm_label": "mock_hayabusa_diagrams"
     },
     {
@@ -18575,7 +18531,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L68",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -18611,7 +18567,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L68",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -19204,7 +19160,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L67",
+      "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -19240,7 +19196,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L67",
+      "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -19380,7 +19336,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L66",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -19404,7 +19360,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L66",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -20056,7 +20012,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L65",
+      "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -20104,7 +20060,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L65",
+      "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -20337,7 +20293,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L90",
+      "source_location": "L88",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -20348,7 +20304,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L70",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -20384,47 +20340,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_purchaseportalview",
-      "target": "src_data_mockfreighttable",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_purchaseportalview",
-      "target": "src_data_mockfreighttable_calculateautomaticfreight",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_purchaseportalview",
-      "target": "src_data_mockfreighttable_getautomaticwarehouseorigin",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/PurchasePortalView.tsx",
       "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
-      "target": "src_data_mockpaymentconditions",
+      "target": "src_services_api",
       "confidence_score": 1.0
     },
     {
@@ -20436,7 +20356,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
-      "target": "src_data_mockpaymentconditions_initial_payment_conditions",
+      "target": "src_services_api_api",
       "confidence_score": 1.0
     },
     {
@@ -20444,55 +20364,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L62",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_purchaseportalview",
-      "target": "src_data_mockreservefunddata",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L62",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_purchaseportalview",
-      "target": "src_data_mockreservefunddata_initial_reserve_fund_transactions",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L64",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_purchaseportalview",
-      "target": "src_data_orderapprovaldata",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L64",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_purchaseportalview",
-      "target": "src_data_orderapprovaldata_initial_order_approval_proposals",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L63",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -20528,7 +20400,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L63",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -20612,7 +20484,19 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L63",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_purchaseportalview",
+      "target": "src_types_freightrateentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/PurchasePortalView.tsx",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
@@ -20641,6 +20525,18 @@
       "_origin": "ast",
       "source": "src_components_purchaseportalview",
       "target": "src_types_purchasemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/PurchasePortalView.tsx",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_purchaseportalview",
+      "target": "src_types_reservefundtransaction",
       "confidence_score": 1.0
     },
     {
@@ -20660,7 +20556,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L75",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview_purchaseportalviewprops",
@@ -20672,7 +20568,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L80",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview_purchaseportalviewprops",
@@ -20684,7 +20580,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L71",
+      "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview_purchaseportalviewprops",
@@ -20696,7 +20592,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L76",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview_purchaseportalviewprops",
@@ -20708,7 +20604,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L85",
+      "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview_purchaseportalviewprops",
@@ -20720,7 +20616,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L77",
+      "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview_purchaseportalviewprops",
@@ -20732,7 +20628,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L74",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview_purchaseportalviewprops",
@@ -20744,7 +20640,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L72",
+      "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_purchaseportalview_purchaseportalviewprops",
@@ -20752,28 +20648,16 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "references",
+      "context": "field",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L155",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_purchaseportalview_purchaseportalview",
-      "target": "src_data_mockfreighttable_calculateautomaticfreight"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/PurchasePortalView.tsx",
-      "source_location": "L156",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_purchaseportalview_purchaseportalview",
-      "target": "src_data_mockfreighttable_getautomaticwarehouseorigin"
+      "source": "src_components_purchaseportalview_purchaseportalviewprops",
+      "target": "src_types_reservefundtransaction",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30642,87 +30526,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L37",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_data_mockfreighttable",
-      "target": "src_data_mockfreighttable_calculateautomaticfreight",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L29",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_data_mockfreighttable",
-      "target": "src_data_mockfreighttable_getautomaticwarehouseorigin",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_data_mockfreighttable",
-      "target": "src_data_mockfreighttable_initial_freight_table",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_data_mockfreighttable",
-      "target": "src_types",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_data_mockfreighttable",
-      "target": "src_types_freightrateentry",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L38",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_data_mockfreighttable_calculateautomaticfreight",
-      "target": "src_data_mockfreighttable_initial_freight_table"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/data/mockFreightTable.ts",
-      "source_location": "L42",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_data_mockfreighttable_calculateautomaticfreight",
-      "target": "src_data_mockfreighttable_getautomaticwarehouseorigin",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/data/mockPartsData.ts",
       "source_location": "L36",
       "weight": 1.0,
@@ -34299,5 +34102,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "81473fe0fce49fdf5b3d27d3f2ec6cd9a681b570"
+  "built_at_commit": "c240af0beb7ec5721c4b1d9b7015a1ae2c93cb49"
 }

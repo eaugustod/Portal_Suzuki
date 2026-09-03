@@ -385,12 +385,28 @@ export default function App() {
       .catch(err => console.warn('[SQL Server] Erro ao atualizar concessionária:', err.message));
   };
 
-  const handleAddDealership = (newDealer: DealershipFullProfile) => {
-    setDealerships(prev => [newDealer, ...prev]);
+  const handleAddDealership = async (newDealer: DealershipFullProfile) => {
+    setDealerships(prev => [newDealer, ...prev]); // exibição otimista
+    try {
+      await api.createDealership(newDealer);
+      const data = await api.getDealerships();
+      if (Array.isArray(data) && data.length > 0) setDealerships(data); // fonte da verdade: banco
+    } catch (err: any) {
+      // reverte estado otimista — sem mensagem falsa de sucesso
+      setDealerships(prev => prev.filter(d => d.id !== newDealer.id));
+      console.error('[SQL Server] Erro ao cadastrar concessionária:', err.message);
+      alert(err.message || 'Erro ao cadastrar concessionária.');
+    }
   };
 
-  const handleDeleteDealership = (dealerId: string) => {
-    setDealerships(prev => prev.filter(d => d.id !== dealerId));
+  const handleDeleteDealership = async (dealerId: string) => {
+    try {
+      await api.deleteDealership(dealerId);
+      setDealerships(prev => prev.filter(d => d.id !== dealerId));
+    } catch (err: any) {
+      console.error('[SQL Server] Erro ao excluir concessionária:', err.message);
+      alert(err.message || 'Erro ao excluir concessionária.');
+    }
   };
 
   // Order Approval Proposals handlers (Persistencia via SQL Server)

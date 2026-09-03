@@ -1,16 +1,16 @@
 # Graph Report - Portal Suzuki  (2026-09-03)
 
 ## Corpus Check
-- 308 files · ~12,240,360 words
+- 308 files · ~12,241,864 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1142 nodes · 1854 edges · 299 communities (64 shown, 235 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 74 edges (avg confidence: 0.5)
+- 1156 nodes · 1869 edges · 299 communities (65 shown, 234 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 76 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c240af0b`
+- Built from commit: `000425ad`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -127,6 +127,9 @@
 - suzuki_gsx_r1000a_l7CatalogData.ts
 - suzuki_gsx_r1000a_l8CatalogData.ts
 - suzuki_v_strom_1000_l8CatalogData.ts
+- suzuki_boulevard_m800_l4_l5CatalogData.ts
+- suzuki_burgman_an400_k9CatalogData.ts
+- suzuki_gsr_125_sCatalogData.ts
 - gsx_8s_m5CatalogData.ts
 - gsx_s1000_m5CatalogData.ts
 - gsx_s1000_m6CatalogData.ts
@@ -186,7 +189,6 @@
 - src/data/generated_catalogs/suzuki_burgman_125_j8_j9CatalogData.ts
 - src/data/generated_catalogs/suzuki_burgman_an400_k3_k5_k6CatalogData.ts
 - src/data/generated_catalogs/suzuki_burgman_an400_k7_k8CatalogData.ts
-- src/data/generated_catalogs/suzuki_burgman_an400_l1CatalogData.ts
 - src/data/generated_catalogs/suzuki_burgman_an400_y_k1CatalogData.ts
 - src/data/generated_catalogs/suzuki_burgman_executive_l5CatalogData.ts
 - src/data/generated_catalogs/suzuki_burgman_iCatalogData.ts
@@ -226,7 +228,6 @@
 - src/data/generated_catalogs/suzuki_gsx_r750_k8_k9CatalogData.ts
 - src/data/generated_catalogs/suzuki_gsx_r750_l0CatalogData.ts
 - src/data/generated_catalogs/suzuki_gsx_r750_y_k1_k2_k3CatalogData.ts
-- src/data/generated_catalogs/suzuki_gsx_r750w_n_p_r_sCatalogData.ts
 - src/data/generated_catalogs/suzuki_gsx_s1000_gtCatalogData.ts
 - src/data/generated_catalogs/suzuki_gsx_s1000_m3CatalogData.ts
 - src/data/generated_catalogs/suzuki_gsx_s1000a_l6CatalogData.ts
@@ -269,7 +270,6 @@
 - src/data/generated_catalogs/suzuki_rm250_p_r_sCatalogData.ts
 - src/data/generated_catalogs/suzuki_rm250_t_v_w_xCatalogData.ts
 - src/data/generated_catalogs/suzuki_rm80_t_vCatalogData.ts
-- src/data/generated_catalogs/suzuki_rmx250_k_l_m_n_s_tCatalogData.ts
 - src/data/generated_catalogs/suzuki_rmx250_v_w_xCatalogData.ts
 - src/data/generated_catalogs/suzuki_s_350CatalogData.ts
 - src/data/generated_catalogs/suzuki_t_350_xCatalogData.ts
@@ -315,7 +315,7 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `PartsDiagramGroup` - 227 edges
-2. `getDbPool()` - 86 edges
+2. `getDbPool()` - 88 edges
 3. `DealershipScope` - 25 edges
 4. `DealershipFullProfile` - 22 edges
 5. `PurchaseModel` - 16 edges
@@ -340,15 +340,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (299 total, 235 thin omitted)
+## Communities (299 total, 234 thin omitted)
 
 ### Community 0 - "App Shell & Navigation"
-Cohesion: 0.30
-Nodes (10): DashboardViewProps, MontadoraDashboardViewProps, SalesCrmViewProps, InteractionLog, InventoryItem, NavTab, PipelineCard, RecentSale (+2 more)
+Cohesion: 0.22
+Nodes (12): DashboardViewProps, MontadoraDashboardViewProps, SalesCrmViewProps, ServiceOrderViewProps, InteractionLog, InventoryItem, NavTab, PipelineCard (+4 more)
 
 ### Community 1 - "Dealer Management & Modals"
-Cohesion: 0.19
-Nodes (10): ModelCatalogManagementModal(), ModelCatalogManagementModalProps, ModelMatrixViewProps, ModelTechnicalSpecsModalProps, NationalPriceMatrixViewProps, OrderConfirmationModal(), OrderConfirmationModalProps, BrandType (+2 more)
+Cohesion: 0.16
+Nodes (11): ModelCatalogManagementModal(), ModelCatalogManagementModalProps, ModelMatrixViewProps, ModelTechnicalSpecsModal(), ModelTechnicalSpecsModalProps, NationalPriceMatrixViewProps, OrderConfirmationModal(), OrderConfirmationModalProps (+3 more)
 
 ### Community 2 - "Build Config & Dev Dependencies"
 Cohesion: 0.08
@@ -359,8 +359,8 @@ Cohesion: 0.08
 Nodes (25): bcryptjs, cors, dotenv, express, @google/genai, jsonwebtoken, lucide-react, motion (+17 more)
 
 ### Community 4 - "Hayabusa EPC Diagrams Data"
-Cohesion: 0.06
-Nodes (43): PartsCartDrawer(), PartsCartDrawerProps, PartsCatalogUploadModal(), PartsCatalogUploadModalProps, PartsDiagramCarousel(), PartsDiagramCarouselProps, PartsExplodedDiagram(), PartsExplodedDiagramProps (+35 more)
+Cohesion: 0.10
+Nodes (17): GSX_S1000GT_M5_CONVERTED_DIAGRAMS, GSX_S1000GX_M5_CONVERTED_DIAGRAMS, DIAGRAM_401A_FRAME, DIAGRAM_406A_HOLDER, DIAGRAM_407A_STAND, DIAGRAM_412A_CARRIER, DIAGRAM_415A_FOOTREST, DIAGRAM_417A_PILLION (+9 more)
 
 ### Community 5 - "TypeScript Config & DOM Types"
 Cohesion: 0.08
@@ -378,21 +378,17 @@ Nodes (7): CostMemorialBreakdown, CreditAnalysisJTAJTZ, DealershipBankAccount, M
 Cohesion: 0.50
 Nodes (3): Estrutura dos Componentes EPC, Regras de Negócio e Hotspots, Skill: Catálogo EPC & Peças Genuínas (Portal Suzuki)
 
-### Community 12 - "mockPartsData.ts"
-Cohesion: 0.22
-Nodes (5): GSX_8R_M6_CONVERTED_DIAGRAMS, SUZUKI_BOULEVARD_M800_L4_L5_CONVERTED_DIAGRAMS, SUZUKI_BURGMAN_AN400_K9_CONVERTED_DIAGRAMS, SUZUKI_GSR_125_S_CONVERTED_DIAGRAMS, PartsDiagramGroup
-
 ### Community 13 - "scripts"
-Cohesion: 0.36
+Cohesion: 0.31
 Nodes (8): createFreightRate(), deleteFreightRate(), getFreightRates(), REGIONS_ALLOWED, rowToFreightRate(), updateFreightRate(), validateFreightPayload(), WAREHOUSES_ALLOWED
 
 ### Community 14 - "package.json"
 Cohesion: 0.16
-Nodes (19): getDealerships(), updateDealership(), createFactoryOrder(), getFactoryOrders(), getFreightTable(), getPaymentConditions(), getPurchaseModels(), updateFactoryOrder() (+11 more)
+Nodes (19): getModelMatrix(), saveModelMatrix(), createFactoryOrder(), getFactoryOrders(), getFreightTable(), getPaymentConditions(), getPurchaseModels(), updateFactoryOrder() (+11 more)
 
 ### Community 16 - "Portal_Suzuki_Especificacao_Implementacoes.md"
-Cohesion: 0.11
-Nodes (17): 12. TABELA DE FRETE, 15. CADASTRO DE FUNDO DE RESERVA, 17. PEDIDO DE MOTO — MODELO / ANO, 18. ALTERAÇÕES FEITAS PELA MONTADORA, 23. VIGÊNCIA, 24. CÁLCULO DE VALORES, 25. LOG E AUDITORIA, 29. REGRA FINAL PARA A IA (+9 more)
+Cohesion: 0.10
+Nodes (20): 12. TABELA DE FRETE, 15. CADASTRO DE FUNDO DE RESERVA, 17. PEDIDO DE MOTO — MODELO / ANO, 18. ALTERAÇÕES FEITAS PELA MONTADORA, 22. SEGURANÇA E PERMISSÕES, 23. VIGÊNCIA, 24. CÁLCULO DE VALORES, 25. LOG E AUDITORIA (+12 more)
 
 ### Community 37 - "types.ts"
 Cohesion: 0.67
@@ -407,8 +403,8 @@ Cohesion: 0.20
 Nodes (3): ErrorBoundary, Props, State
 
 ### Community 41 - "PartsCatalogView.tsx"
-Cohesion: 0.19
-Nodes (9): Header(), HeaderProps, InventoryViewProps, PartsCatalogViewProps, Sidebar(), SidebarProps, DEALER_IMAGES, DEALERSHIP_PROFILES (+1 more)
+Cohesion: 0.12
+Nodes (14): Header(), HeaderProps, InventoryViewProps, Sidebar(), SidebarProps, INITIAL_DEALERSHIPS_FULL, INITIAL_DEALERSHIPS_LIST, DEALER_IMAGES (+6 more)
 
 ### Community 42 - "27. ORDEM RECOMENDADA DE IMPLEMENTAÇÃO"
 Cohesion: 0.22
@@ -467,8 +463,8 @@ Cohesion: 0.67
 Nodes (3): 10. FLUXO DE APROVAÇÃO DO COMPROMISSO, Estados sugeridos, Regra de bloqueio
 
 ### Community 59 - "11. VISÃO MONTADORA — FORMA DE PAGAMENTO E DESCONTO"
-Cohesion: 0.31
-Nodes (6): ReserveFundViewProps, INITIAL_BRAND_RESERVE_LIMITS, INITIAL_RESERVE_FUND_BRAND_CONFIGS, INITIAL_RESERVE_FUND_TRANSACTIONS, ReserveFundBrandConfig, ReserveFundTransaction
+Cohesion: 0.21
+Nodes (12): DealershipOrderDetailModal(), DealershipOrderDetailModalProps, PartsCartDrawer(), PartsCartDrawerProps, PartsCatalogViewProps, PartsOrderMirrorModal(), PartsOrderMirrorModalProps, DealershipFullProfile (+4 more)
 
 ### Community 60 - "14. FUNDO DE RESERVA"
 Cohesion: 0.67
@@ -500,15 +496,19 @@ Nodes (13): emptyEntry(), FreightManagementView(), LoginModal(), LoginModalProps
 
 ### Community 68 - "api.ts"
 Cohesion: 0.08
-Nodes (34): seedData(), DashboardView, DealershipManagementView, FreightManagementView, InventoryView, ModelMatrixView, MontadoraDashboardView, MonthlyCommitmentView (+26 more)
+Nodes (28): seedData(), DashboardView, DealershipManagementView, FreightManagementView, InventoryView, ModelMatrixView, MontadoraDashboardView, MonthlyCommitmentView (+20 more)
+
+### Community 69 - "22. SEGURANÇA E PERMISSÕES"
+Cohesion: 0.22
+Nodes (10): PartsCatalogUploadModal(), PartsCatalogUploadModalProps, PartsDiagramCarousel(), PartsDiagramCarouselProps, PartsTable(), PartsTableProps, MOCK_HAYABUSA_DIAGRAMS, PartsBrand (+2 more)
 
 ### Community 73 - "@types/cors"
-Cohesion: 0.67
-Nodes (3): 22. SEGURANÇA E PERMISSÕES, Concessionário, Montadora
+Cohesion: 0.35
+Nodes (9): PartsExplodedDiagram(), PartsExplodedDiagramProps, PartsPinHotspot, autoDetectHotspotsFromImage(), generateFallbackHotspots(), deleteDiagramImage(), getDiagramImage(), openDB() (+1 more)
 
 ### Community 74 - "api-integration-test.mjs"
-Cohesion: 0.12
-Nodes (13): compPayload, condPayload, dupPayload, failures, frtPayload, interPayload, invPayload, leadPayload (+5 more)
+Cohesion: 0.09
+Nodes (19): compPayload, condPayload, createdDealer, dupPayload, failures, frtPayload, interPayload, invPayload (+11 more)
 
 ### Community 78 - "@types/react"
 Cohesion: 0.67
@@ -527,8 +527,8 @@ Cohesion: 0.16
 Nodes (10): DealershipManagementViewProps, PaymentConditionsViewProps, CreditRating, DealershipAccessLevel, DealershipStatus, DealershipUser, DealershipUserRole, DealerTier (+2 more)
 
 ### Community 86 - "PurchasePortalView.tsx"
-Cohesion: 0.50
-Nodes (3): OrderWorkflowViewProps, ApprovalWorkflowStep, FactoryOrderStatus
+Cohesion: 0.43
+Nodes (4): OrderWorkflowViewProps, INITIAL_WORKFLOW_STEPS, ApprovalWorkflowStep, FactoryOrderStatus
 
 ### Community 87 - "47. RELATÓRIO FINAL OBRIGATÓRIO"
 Cohesion: 0.18
@@ -539,12 +539,12 @@ Cohesion: 0.25
 Nodes (10): createInteraction(), createPipelineLead(), deletePipelineLead(), ESTAGIOS, getInteractions(), getPipeline(), movePipelineLead(), rowToPipelineCard() (+2 more)
 
 ### Community 89 - "MonthlyCommitmentView.tsx"
-Cohesion: 0.15
-Nodes (17): DealershipOrderDetailModal(), DealershipOrderDetailModalProps, ModelTechnicalSpecsModal(), MonthlyCommitmentViewProps, OrderApprovalDocumentView(), OrderApprovalDocumentViewProps, PurchasePortalViewProps, INITIAL_ORDER_APPROVAL_PROPOSALS (+9 more)
+Cohesion: 0.16
+Nodes (17): MonthlyCommitmentViewProps, OrderApprovalDocumentView(), OrderApprovalDocumentViewProps, PurchasePortalViewProps, ReserveFundViewProps, INITIAL_BRAND_RESERVE_LIMITS, INITIAL_RESERVE_FUND_BRAND_CONFIGS, INITIAL_RESERVE_FUND_TRANSACTIONS (+9 more)
 
 ### Community 90 - "db.js"
-Cohesion: 0.17
-Nodes (7): changePassword(), forgotPassword(), login(), createPaymentCondition(), deletePaymentCondition(), updatePaymentCondition(), dbConfig
+Cohesion: 0.18
+Nodes (8): changePassword(), forgotPassword(), login(), dbConfig, __dirname, __filename, main(), runSqlFile()
 
 ### Community 92 - "commitmentController.js"
 Cohesion: 0.28
@@ -563,8 +563,8 @@ Cohesion: 0.33
 Nodes (8): createServiceOrder(), deleteServiceOrder(), formatKm(), getServiceOrders(), PRIORITIES, rowToServiceOrder(), STATUS_ALLOWED, updateServiceOrder()
 
 ### Community 97 - "index.js"
-Cohesion: 0.22
-Nodes (8): getModelMatrix(), saveModelMatrix(), app, __dirname, distPath, __filename, authMiddleware(), requireMontadora()
+Cohesion: 0.18
+Nodes (9): createPaymentCondition(), deletePaymentCondition(), updatePaymentCondition(), app, __dirname, distPath, __filename, authMiddleware() (+1 more)
 
 ### Community 98 - "proposalController.js"
 Cohesion: 0.40
@@ -583,32 +583,36 @@ Cohesion: 0.40
 Nodes (5): 15. TESTE DE PERSISTÊNCIA, CREATE, DELETE, READ, UPDATE
 
 ### Community 103 - "run_schema_migration.js"
-Cohesion: 0.50
-Nodes (4): __dirname, __filename, main(), runSqlFile()
+Cohesion: 0.20
+Nodes (9): createDealership(), deleteDealership(), getDealerships(), insertDealership(), REGIONS_ALLOWED, STATUS_ALLOWED, TIERS_ALLOWED, updateDealership() (+1 more)
 
 ### Community 106 - "4. REGRA ABSOLUTA SOBRE MOCKS"
 Cohesion: 0.67
 Nodes (3): 4. REGRA ABSOLUTA SOBRE MOCKS, A. Dados estáticos legítimos, B. Dados operacionais
 
+### Community 293 - "src/data/generated_catalogs/haojue_vr150CatalogData.ts"
+Cohesion: 0.22
+Nodes (5): HAOJUE_VR150_CONVERTED_DIAGRAMS, SUZUKI_BURGMAN_AN400_L1_CONVERTED_DIAGRAMS, SUZUKI_GSX_R750W_N_P_R_S_CONVERTED_DIAGRAMS, SUZUKI_RMX250_K_L_M_N_S_T_CONVERTED_DIAGRAMS, PartsDiagramGroup
+
 ## Knowledge Gaps
-- **505 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+500 more)
+- **517 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+512 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **235 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **234 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `getDbPool()` connect `package.json` to `index.js`, `proposalController.js`, `transitController.js`, `workflowController.js`, `api.ts`, `run_schema_migration.js`, `scripts`, `salesController.js`, `db.js`, `commitmentController.js`, `inventoryController.js`, `partsController.js`, `serviceOrderController.js`?**
-  _High betweenness centrality (0.146) - this node is a cross-community bridge._
-- **Why does `PartsDiagramGroup` connect `mockPartsData.ts` to `Hayabusa EPC Diagrams Data`, `Exploded Diagram Components`, `App.tsx`, `DealershipScope`, `ReserveFundView.tsx`, `src/data/generated_catalogs/haojue_dk150_cbsCatalogData.ts`, `MonthlyCommitmentView.tsx`, `20. CADASTRO DE REGIONAIS POR MARCA`, `typescript`, `motion`, `@tailwindcss/vite`, `suzuki_gs500e_k_l_m_n_o_p_r_s_tCatalogData.ts`, `suzuki_gs500e_v_w_x_yCatalogData.ts`, `suzuki_vs1400glp_h_j_l_m_n_p_r_sCatalogData.ts`, `suzuki_gsx650f_l2CatalogData.ts`, `suzuki_drz400e_k7CatalogData.ts`, `suzuki_gsr750zaCatalogData.ts`, `DealershipFullProfile`, `paymentConditionController.js`, `PartsCartDrawer.tsx`, `suzuki_sv650a_l7CatalogData.ts`, `suzuki_gsx650f_l2CatalogData.ts`, `suzuki_gsx_r1000a_l7CatalogData.ts`, `suzuki_gsx_r1000a_l8CatalogData.ts`, `suzuki_v_strom_1000_l8CatalogData.ts`, `gsx_8s_m5CatalogData.ts`, `gsx_s1000_m5CatalogData.ts`, `gsx_s1000_m6CatalogData.ts`, `gsx_s1000gt_m5CatalogData.ts`, `gsx_s1000gx_m5CatalogData.ts`, `src/data/generated_catalogs/haojue_ak550CatalogData.ts`, `src/data/generated_catalogs/haojue_chopper_cbsCatalogData.ts`, `src/data/generated_catalogs/haojue_chopper_roadCatalogData.ts`, `src/data/generated_catalogs/haojue_dk150_cbs_m2CatalogData.ts`, `src/data/generated_catalogs/haojue_dk150_fiCatalogData.ts`, `src/data/generated_catalogs/haojue_dk150CatalogData.ts`, `src/data/generated_catalogs/haojue_dk150s_fi_m2CatalogData.ts`, `src/data/generated_catalogs/haojue_dk160CatalogData.ts`, `haojue_dl160CatalogData.ts`, `src/data/generated_catalogs/haojue_downtown_300iCatalogData.ts`, `src/data/generated_catalogs/haojue_dr160_fiCatalogData.ts`, `src/data/generated_catalogs/haojue_dr160CatalogData.ts`, `src/data/generated_catalogs/haojue_forge_400iCatalogData.ts`, `src/data/generated_catalogs/haojue_lindy_125_cbs_m2CatalogData.ts`, `src/data/generated_catalogs/haojue_lindy_125_cbsCatalogData.ts`, `src/data/generated_catalogs/haojue_master_ride_p5CatalogData.ts`, `src/data/generated_catalogs/haojue_nex_115CatalogData.ts`, `src/data/generated_catalogs/haojue_nk150CatalogData.ts`, `src/data/generated_catalogs/haojue_people_gt_300iCatalogData.ts`, `src/data/generated_catalogs/haojue_ppvCatalogData.ts`, `src/data/generated_catalogs/haojue_r_310CatalogData.ts`, `src/data/generated_catalogs/haojue_t_310CatalogData.ts`, `src/data/generated_catalogs/haojue_t_350_xCatalogData.ts`, `src/data/generated_catalogs/haojue_vr150CatalogData.ts`, `hayabusa_m5CatalogData.ts`, `hayabusa_m6CatalogData.ts`, `master_ride_p5CatalogData.ts`, `src/data/generated_catalogs/suzuki_an650_k6_k7_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_an650_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_az50_lets_iiCatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit650s_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit650s_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_1250s_k7_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_1250s_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_1250s_l1CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_n1200_s1200_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_n600_s_t_v_w_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_n600_y_k1_k2_k3_k4CatalogData.ts`, `src/data/generated_catalogs/suzuki_bking_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_c1500_k5_k6_k7CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_c1500_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_c1500_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_c1500_w_x_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800r_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800r_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800r_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800rbz_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800rbz_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800rz_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m800_l1CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m800z_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_125_j8_j9CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_an400_k3_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_an400_k7_k8CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_an400_l1CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_an400_y_k1CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_executive_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_iCatalogData.ts`, `src/data/generated_catalogs/suzuki_drz400e_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_drz400e_streetCatalogData.ts`, `src/data/generated_catalogs/suzuki_drz400e_y_k1_k2_k3_k4CatalogData.ts`, `src/data/generated_catalogs/suzuki_e_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_en125_yes_cargoCatalogData.ts`, `src/data/generated_catalogs/suzuki_en125_yes_j5_j6_j7CatalogData.ts`, `src/data/generated_catalogs/suzuki_en125_yes_j8_j9_ja_jbCatalogData.ts`, `src/data/generated_catalogs/suzuki_freewind_v_w_x_y_k1CatalogData.ts`, `src/data/generated_catalogs/suzuki_gk_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_gladius_l2_l3_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_gs120CatalogData.ts`, `src/data/generated_catalogs/suzuki_gs500e_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsr750a_l2_l3_l4_l5_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx1300_ra_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx1300ra_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx1300rrq_m2CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx650f_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx750f_k4_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx750f_w_x_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_1300razbCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_k1_k2CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_k7_k8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_l2_l3_l4_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_l2_l3CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000a_l7_rCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000a_l7_rzCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000ra_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000raz_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000raz_m1CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1100w_p_r_s_t_v_wCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750_k6_k7CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750w_n_p_r_sCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000_gtCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000_m3CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000a_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000a_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000a_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000a_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000fa_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000fa_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000fa_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000ya_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000ya_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000za_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750a_l7CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750a_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750a_m1CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750za_l7CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750za_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750za_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750za_m1CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_25_anosCatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_k4_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_m4CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_ra_l3_l4_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_x_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_inazuma_250CatalogData.ts`, `src/data/generated_catalogs/suzuki_intruder_125_jcCatalogData.ts`, `src/data/generated_catalogs/suzuki_intruder_250_t_et_w_ewCatalogData.ts`, `src/data/generated_catalogs/suzuki_lt50_l_x_y_k1_k2CatalogData.ts`, `src/data/generated_catalogs/suzuki_lt80_t_v_w_x_y_k1CatalogData.ts`, `src/data/generated_catalogs/suzuki_ltf160_k3_k4_k5_k6_k7CatalogData.ts`, `src/data/generated_catalogs/suzuki_ltf160_l_m_n_p_r_s_tCatalogData.ts`, `src/data/generated_catalogs/suzuki_ltf160_v_w_x_y_k1CatalogData.ts`, `src/data/generated_catalogs/suzuki_marauder_k4CatalogData.ts`, `src/data/generated_catalogs/suzuki_marauder_v_w_x_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_r_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_rf_900r_r_s_s2_t_v_wCatalogData.ts`, `src/data/generated_catalogs/suzuki_rm250_p_r_sCatalogData.ts`, `src/data/generated_catalogs/suzuki_rm250_t_v_w_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_rm80_t_vCatalogData.ts`, `src/data/generated_catalogs/suzuki_rmx250_k_l_m_n_s_tCatalogData.ts`, `src/data/generated_catalogs/suzuki_rmx250_v_w_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_s_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_t_350_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_t_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_tl1000s_v_wCatalogData.ts`, `src/data/generated_catalogs/suzuki_v_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_a_l4_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_a_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_k2_k3_k4_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_k7CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_xt_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_xt_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1050_m3CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1050rc_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_k8_k9CatalogData.ts`, `gsx_s1000_m6CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_l9_xtCatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_m2_xtCatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650a_l2_l3_l4_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650a_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650xt_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650xt_m1CatalogData.ts`, `src/data/generated_catalogs/suzuki_vs1400glp_t_v_w_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_vs_800_gl_n_p_r_s_t_vCatalogData.ts`, `src/data/generated_catalogs/suzuki_vstrom650_l1CatalogData.ts`, `src/data/generated_catalogs/suzuki_vstrom650_l6_xtCatalogData.ts`, `src/data/generated_catalogs/suzuki_vstrom650_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_vstrom650_l7_xtCatalogData.ts`, `vstrom_1050_m5CatalogData.ts`, `vstrom_1050_m6CatalogData.ts`, `vstrom_650xt_m5CatalogData.ts`, `vstrom_650xt_m6CatalogData.ts`, `vstrom_800_m5CatalogData.ts`, `vstrom_800de_m6CatalogData.ts`, `zontes_368gCatalogData.ts`, `zontes_t501CatalogData.ts`, `src/data/generated_catalogs/suzuki_bking_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000za_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_l7CatalogData.ts`?**
-  _High betweenness centrality (0.109) - this node is a cross-community bridge._
+  _High betweenness centrality (0.144) - this node is a cross-community bridge._
+- **Why does `PartsDiagramGroup` connect `src/data/generated_catalogs/haojue_vr150CatalogData.ts` to `Hayabusa EPC Diagrams Data`, `Exploded Diagram Components`, `mockPartsData.ts`, `App.tsx`, `DealershipScope`, `ReserveFundView.tsx`, `src/data/generated_catalogs/haojue_dk150_cbsCatalogData.ts`, `MonthlyCommitmentView.tsx`, `20. CADASTRO DE REGIONAIS POR MARCA`, `22. SEGURANÇA E PERMISSÕES`, `typescript`, `motion`, `@tailwindcss/vite`, `@types/cors`, `suzuki_gs500e_k_l_m_n_o_p_r_s_tCatalogData.ts`, `suzuki_gs500e_v_w_x_yCatalogData.ts`, `suzuki_vs1400glp_h_j_l_m_n_p_r_sCatalogData.ts`, `suzuki_gsx650f_l2CatalogData.ts`, `suzuki_drz400e_k7CatalogData.ts`, `suzuki_gsr750zaCatalogData.ts`, `DealershipFullProfile`, `paymentConditionController.js`, `PartsCartDrawer.tsx`, `suzuki_sv650a_l7CatalogData.ts`, `suzuki_gsx650f_l2CatalogData.ts`, `suzuki_gsx_r1000a_l7CatalogData.ts`, `suzuki_gsx_r1000a_l8CatalogData.ts`, `suzuki_v_strom_1000_l8CatalogData.ts`, `suzuki_boulevard_m800_l4_l5CatalogData.ts`, `suzuki_burgman_an400_k9CatalogData.ts`, `suzuki_gsr_125_sCatalogData.ts`, `gsx_8s_m5CatalogData.ts`, `gsx_s1000_m5CatalogData.ts`, `gsx_s1000_m6CatalogData.ts`, `gsx_s1000gt_m5CatalogData.ts`, `gsx_s1000gx_m5CatalogData.ts`, `src/data/generated_catalogs/haojue_ak550CatalogData.ts`, `src/data/generated_catalogs/haojue_chopper_cbsCatalogData.ts`, `src/data/generated_catalogs/haojue_chopper_roadCatalogData.ts`, `src/data/generated_catalogs/haojue_dk150_cbs_m2CatalogData.ts`, `src/data/generated_catalogs/haojue_dk150_fiCatalogData.ts`, `src/data/generated_catalogs/haojue_dk150CatalogData.ts`, `src/data/generated_catalogs/haojue_dk150s_fi_m2CatalogData.ts`, `src/data/generated_catalogs/haojue_dk160CatalogData.ts`, `haojue_dl160CatalogData.ts`, `src/data/generated_catalogs/haojue_downtown_300iCatalogData.ts`, `src/data/generated_catalogs/haojue_dr160_fiCatalogData.ts`, `src/data/generated_catalogs/haojue_dr160CatalogData.ts`, `src/data/generated_catalogs/haojue_forge_400iCatalogData.ts`, `src/data/generated_catalogs/haojue_lindy_125_cbs_m2CatalogData.ts`, `src/data/generated_catalogs/haojue_lindy_125_cbsCatalogData.ts`, `src/data/generated_catalogs/haojue_master_ride_p5CatalogData.ts`, `src/data/generated_catalogs/haojue_nex_115CatalogData.ts`, `src/data/generated_catalogs/haojue_nk150CatalogData.ts`, `src/data/generated_catalogs/haojue_people_gt_300iCatalogData.ts`, `src/data/generated_catalogs/haojue_ppvCatalogData.ts`, `src/data/generated_catalogs/haojue_r_310CatalogData.ts`, `src/data/generated_catalogs/haojue_t_310CatalogData.ts`, `src/data/generated_catalogs/haojue_t_350_xCatalogData.ts`, `hayabusa_m5CatalogData.ts`, `hayabusa_m6CatalogData.ts`, `master_ride_p5CatalogData.ts`, `src/data/generated_catalogs/suzuki_an650_k6_k7_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_an650_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_az50_lets_iiCatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit650s_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit650s_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_1250s_k7_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_1250s_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_1250s_l1CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_n1200_s1200_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_n600_s_t_v_w_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_bandit_n600_y_k1_k2_k3_k4CatalogData.ts`, `src/data/generated_catalogs/suzuki_bking_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_c1500_k5_k6_k7CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_c1500_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_c1500_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_c1500_w_x_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800r_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800r_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800r_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800rbz_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800rbz_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m1800rz_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m800_l1CatalogData.ts`, `src/data/generated_catalogs/suzuki_boulevard_m800z_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_125_j8_j9CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_an400_k3_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_an400_k7_k8CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_an400_y_k1CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_executive_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_burgman_iCatalogData.ts`, `src/data/generated_catalogs/suzuki_drz400e_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_drz400e_streetCatalogData.ts`, `src/data/generated_catalogs/suzuki_drz400e_y_k1_k2_k3_k4CatalogData.ts`, `src/data/generated_catalogs/suzuki_e_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_en125_yes_cargoCatalogData.ts`, `src/data/generated_catalogs/suzuki_en125_yes_j5_j6_j7CatalogData.ts`, `src/data/generated_catalogs/suzuki_en125_yes_j8_j9_ja_jbCatalogData.ts`, `src/data/generated_catalogs/suzuki_freewind_v_w_x_y_k1CatalogData.ts`, `src/data/generated_catalogs/suzuki_gk_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_gladius_l2_l3_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_gs120CatalogData.ts`, `src/data/generated_catalogs/suzuki_gs500e_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsr750a_l2_l3_l4_l5_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx1300_ra_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx1300ra_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx1300rrq_m2CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx650f_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx750f_k4_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx750f_w_x_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_1300razbCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_k1_k2CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_k7_k8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_l2_l3_l4_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_l2_l3CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000a_l7_rCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000a_l7_rzCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000ra_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000raz_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000raz_m1CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1100w_p_r_s_t_v_wCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750_k6_k7CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r750_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000_gtCatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000_m3CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000a_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000a_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000a_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000a_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000fa_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000fa_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000fa_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000ya_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000ya_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000za_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750a_l7CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750a_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750a_m1CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750za_l7CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750za_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750za_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s750za_m1CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_25_anosCatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_k4_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_k8_k9CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_m4CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_ra_l3_l4_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_hayabusa_x_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_inazuma_250CatalogData.ts`, `src/data/generated_catalogs/suzuki_intruder_125_jcCatalogData.ts`, `src/data/generated_catalogs/suzuki_intruder_250_t_et_w_ewCatalogData.ts`, `src/data/generated_catalogs/suzuki_lt50_l_x_y_k1_k2CatalogData.ts`, `src/data/generated_catalogs/suzuki_lt80_t_v_w_x_y_k1CatalogData.ts`, `src/data/generated_catalogs/suzuki_ltf160_k3_k4_k5_k6_k7CatalogData.ts`, `src/data/generated_catalogs/suzuki_ltf160_l_m_n_p_r_s_tCatalogData.ts`, `src/data/generated_catalogs/suzuki_ltf160_v_w_x_y_k1CatalogData.ts`, `src/data/generated_catalogs/suzuki_marauder_k4CatalogData.ts`, `src/data/generated_catalogs/suzuki_marauder_v_w_x_y_k1_k2_k3CatalogData.ts`, `src/data/generated_catalogs/suzuki_r_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_rf_900r_r_s_s2_t_v_wCatalogData.ts`, `src/data/generated_catalogs/suzuki_rm250_p_r_sCatalogData.ts`, `src/data/generated_catalogs/suzuki_rm250_t_v_w_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_rm80_t_vCatalogData.ts`, `src/data/generated_catalogs/suzuki_rmx250_v_w_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_s_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_t_350_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_t_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_tl1000s_v_wCatalogData.ts`, `src/data/generated_catalogs/suzuki_v_350CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_a_l4_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_a_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_k2_k3_k4_k5_k6CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_k7CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_xt_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1000_xt_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1050_m3CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_1050rc_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_k8_k9CatalogData.ts`, `gsx_s1000_m6CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_l9_xtCatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_m2_xtCatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650a_l2_l3_l4_l5CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650a_l9CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650xt_m0CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650xt_m1CatalogData.ts`, `src/data/generated_catalogs/suzuki_vs1400glp_t_v_w_xCatalogData.ts`, `src/data/generated_catalogs/suzuki_vs_800_gl_n_p_r_s_t_vCatalogData.ts`, `src/data/generated_catalogs/suzuki_vstrom650_l1CatalogData.ts`, `src/data/generated_catalogs/suzuki_vstrom650_l6_xtCatalogData.ts`, `src/data/generated_catalogs/suzuki_vstrom650_l6CatalogData.ts`, `src/data/generated_catalogs/suzuki_vstrom650_l7_xtCatalogData.ts`, `vstrom_1050_m5CatalogData.ts`, `vstrom_1050_m6CatalogData.ts`, `vstrom_650xt_m5CatalogData.ts`, `vstrom_650xt_m6CatalogData.ts`, `vstrom_800_m5CatalogData.ts`, `vstrom_800de_m6CatalogData.ts`, `zontes_368gCatalogData.ts`, `zontes_t501CatalogData.ts`, `src/data/generated_catalogs/suzuki_bking_l0CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_r1000_l4CatalogData.ts`, `src/data/generated_catalogs/suzuki_gsx_s1000za_l8CatalogData.ts`, `src/data/generated_catalogs/suzuki_v_strom_650_l7CatalogData.ts`?**
+  _High betweenness centrality (0.103) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `Runtime Dependencies & Packages` to `typescript`, `tsx`, `package.json`, `cors`?**
-  _High betweenness centrality (0.083) - this node is a cross-community bridge._
+  _High betweenness centrality (0.082) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _505 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _517 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Build Config & Dev Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `Runtime Dependencies & Packages` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `Hayabusa EPC Diagrams Data` be split into smaller, more focused modules?**
-  _Cohesion score 0.060285563194077206 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10333333333333333 - nodes in this community are weakly interconnected._

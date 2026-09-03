@@ -417,6 +417,78 @@ if (dealerData?.token) {
   log('Dealer le estoque (200)', dealerInvRes.status === 200, 'status=' + dealerInvRes.status);
 }
 
+// 14. CONCESSIONÁRIAS — CREATE/DELETE persistidos
+console.log('\\n--- Concessionarias ---');
+const uniqCnpj = `${String(Date.now()).slice(-11)}${String(Date.now()).slice(-1)}0001`.slice(0, 14);
+const newDealerPayload = {
+  id: `dealer-test-${Date.now()}`,
+  dealerCode: `SZX-T${String(Date.now()).slice(-6)}`,
+  name: 'Concessionaria Teste Portal',
+  shortName: 'Teste Portal',
+  legalName: 'Concessionaria Teste Portal LTDA',
+  cnpj: uniqCnpj,
+  type: 'concessionaria',
+  status: 'homologacao',
+  tier: 'Bronze',
+  city: 'Jundiai',
+  state: 'SP',
+  region: 'Sudeste',
+  phone: '(11) 99999-0000',
+  contactEmail: 'teste.portal@dealer.com.br',
+  manager: 'Gerente Teste',
+  monthlyTarget: 100000,
+  creditLimit: 500000
+};
+
+const dealerCreate = await request('/api/dealerships', 'POST', newDealerPayload);
+log('Create concessionaria (201)', dealerCreate.status === 201, 'status=' + dealerCreate.status);
+
+const dealerList = await request('/api/dealerships');
+const createdDealer = (dealerList.data || []).find(d => d.id === newDealerPayload.id);
+log('Read concessionaria criada na listagem', !!createdDealer && createdDealer.name === newDealerPayload.name, createdDealer ? 'ok' : 'nao encontrada');
+log('Read concessionaria — campos persistidos (tier/status/cidade)', !!createdDealer && createdDealer.tier === 'Bronze' && createdDealer.status === 'homologacao' && createdDealer.city === 'Jundiai');
+
+// UPDATE via PUT existente
+const dealerUpdate = await request(`/api/dealerships/${newDealerPayload.id}`, 'PUT', {
+  monthlyTarget: 250000, creditLimit: 750000, tier: 'Prata', status: 'ativa', phone: '(11) 99999-0000'
+});
+log('Update concessionaria (200)', dealerUpdate.status === 200, 'status=' + dealerUpdate.status);
+const dealerList2 = await request('/api/dealerships');
+const updatedDealer = (dealerList2.data || []).find(d => d.id === newDealerPayload.id);
+log('Re-read concessionaria apos update', !!updatedDealer && Number(updatedDealer.monthlyTarget) === 250000 && updatedDealer.tier === 'Prata', updatedDealer ? `meta=${updatedDealer.monthlyTarget}` : 'nao encontrada');
+
+// Duplicidade de CNPJ
+const dealerDup = await request('/api/dealerships', 'POST', { ...newDealerPayload, id: `dealer-dup-${Date.now()}`, dealerCode: `SZX-D${String(Date.now()).slice(-6)}` });
+log('Create concessionaria CNPJ duplicado (409)', dealerDup.status === 409, 'status=' + dealerDup.status);
+
+// Validação: campo obrigatório ausente
+const dealerInvalid = await request('/api/dealerships', 'POST', { ...newDealerPayload, id: `dealer-inv-${Date.now()}`, dealerCode: `SZX-I${String(Date.now()).slice(-6)}`, name: '' });
+log('Create concessionaria sem nome (400)', dealerInvalid.status === 400, 'status=' + dealerInvalid.status);
+
+// Exclusão da concessionária de teste (sem dependências)
+const dealerDelete = await request(`/api/dealerships/${newDealerPayload.id}`, 'DELETE');
+log('Delete concessionaria sem vinculos (200)', dealerDelete.status === 200, 'status=' + dealerDelete.status);
+const dealerList3 = await request('/api/dealerships');
+log('Re-read apos delete — removida da listagem', !(dealerList3.data || []).some(d => d.id === newDealerPayload.id));
+
+// Delete de concessionária inexistente
+const dealerDelete404 = await request('/api/dealerships/nao-existe-xyz', 'DELETE');
+log('Delete concessionaria inexistente (404)', dealerDelete404.status === 404, 'status=' + dealerDelete404.status);
+
+// Montadora não pode ser excluída (proteção de negócio)
+const jtoledo = (dealerList3.data || []).find(d => d.tipo === 'montadora');
+if (jtoledo) {
+  const montadoraDelete = await request(`/api/dealerships/${jtoledo.id}`, 'DELETE');
+  log('Delete montadora bloqueado (400)', montadoraDelete.status === 400, 'status=' + montadoraDelete.status);
+}
+
+// Concessionária com vínculos (motosul tem veículos/usuários) deve ser bloqueada
+const motosul = (dealerList3.data || []).find(d => d.id === 'motosul');
+if (motosul) {
+  const linkedDelete = await request('/api/dealerships/motosul', 'DELETE');
+  log('Delete concessionaria com vinculos bloqueado (409)', linkedDelete.status === 409, 'status=' + linkedDelete.status);
+}
+
 // RESUMO FINAL
 console.log('\n=== RESUMO: ' + passed + ' passou | ' + failed + ' falhou ===');
 if (failures.length) {

@@ -133,6 +133,28 @@ export const api = {
     return res.json();
   },
 
+  async createDealership(payload: any) {
+    const res = await fetch('/api/dealerships', {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      throw new Error(body.error || 'Erro ao cadastrar concessionária.');
+    }
+    return res.json();
+  },
+
+  async deleteDealership(id: string) {
+    const res = await fetch(`/api/dealerships/${id}`, { method: 'DELETE', headers: getHeaders() });
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      throw new Error(body.error || 'Erro ao excluir concessionária.');
+    }
+    return res.json();
+  },
+
   // 3. Catálogo de Compra de Motos e Pedidos
   async getPurchaseModels() {
     const res = await fetch('/api/purchase/models', { headers: getHeaders() });

@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "src/App.tsx": {
-    "mtime": 1788447235.9505436,
-    "ast_hash": "c28e4fa835f3ed4a94bb1bd4ead22777",
+    "mtime": 1788448072.347934,
+    "ast_hash": "88a631bb9ff1f64051f31176f706d6a4",
     "semantic_hash": ""
   },
   "src/components/DashboardView.tsx": {
@@ -360,8 +360,8 @@
     "semantic_hash": ""
   },
   "server/index.js": {
-    "mtime": 1788446108.1317093,
-    "ast_hash": "12931b95d4c7f0e19936797383754e45",
+    "mtime": 1788448055.1385028,
+    "ast_hash": "b62bccf545cb2b6c034be933b3bd2e65",
     "semantic_hash": ""
   },
   "scripts/ftp_integration_checkpoint.json": {
@@ -1375,8 +1375,8 @@
     "semantic_hash": ""
   },
   "src/services/api.ts": {
-    "mtime": 1788446246.1064012,
-    "ast_hash": "8ffbdfd1a88963eefa0e0770b977c925",
+    "mtime": 1788448057.259556,
+    "ast_hash": "643cbd9422da2d7945eb51af1995cfbe",
     "semantic_hash": ""
   },
   "Melhorias/Portal_Suzuki_Especificacao_Implementacoes.md": {
@@ -1425,8 +1425,8 @@
     "semantic_hash": ""
   },
   "server/controllers/dealershipController.js": {
-    "mtime": 1788372163.7773771,
-    "ast_hash": "b1346d77b2caf49a26786e13166ba348",
+    "mtime": 1788449088.8595965,
+    "ast_hash": "d99e16b22ed84b7bc75ba48e9d22b047",
     "semantic_hash": ""
   },
   "server/controllers/purchaseController.js": {
@@ -1535,8 +1535,8 @@
     "semantic_hash": ""
   },
   "server/tests/api-integration-test.mjs": {
-    "mtime": 1788446486.726955,
-    "ast_hash": "6616cf8164f55bc46bf303fb4cba1a2f",
+    "mtime": 1788449463.512768,
+    "ast_hash": "5c9cc071d8dd7499ab3de8991870527a",
     "semantic_hash": ""
   },
   "server/controllers/freightController.js": {
