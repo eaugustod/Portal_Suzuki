@@ -104,6 +104,8 @@ export default function App() {
   const handleLoginSuccess = (user: any, token: string) => {
     setCurrentUser(user);
     setLoginModalOpen(false);
+    setSessionValidated(true);
+    setSessionNotice(null);
     if (user.scopeType === 'concessionaria' && user.dealershipId) {
       setCurrentScope(user.dealershipId);
     } else {
@@ -118,9 +120,54 @@ export default function App() {
     setLoginModalOpen(true);
   };
 
+  // Sessão expirada (token ausente/expirado detectado pela camada de API):
+  // limpa credenciais e força re-login — nunca cair silenciosamente em dados mock.
+  const [sessionNotice, setSessionNotice] = useState<string | null>(null);
+  // Falso quando há sessão restaurada do localStorage: exige validação via /api/auth/me
+  const [sessionValidated, setSessionValidated] = useState(() => !localStorage.getItem('portal_suzuki_user'));
+  const handleSessionExpired = React.useCallback((message?: string) => {
+    localStorage.removeItem('portal_suzuki_token');
+    localStorage.removeItem('portal_suzuki_user');
+    setCurrentUser(null);
+    setLoginModalOpen(true);
+    if (message) setSessionNotice(message);
+  }, []);
+
+  React.useEffect(() => {
+    const onSessionExpired = () => handleSessionExpired('Sua sessão expirou. Faça login novamente.');
+    window.addEventListener('portal:session-expired', onSessionExpired);
+    return () => window.removeEventListener('portal:session-expired', onSessionExpired);
+  }, [handleSessionExpired]);
+
+  // Valida o token restaurado do localStorage antes de confiar na sessão
+  React.useEffect(() => {
+    const saved = localStorage.getItem('portal_suzuki_user');
+    if (!saved) return;
+    let cancelled = false;
+    api.getMe()
+      .then(({ user }) => {
+        if (cancelled) return;
+        setSessionValidated(true);
+        if (user) {
+          const next = JSON.stringify(user);
+          if (saved !== next) {
+            // Sincroniza o usuário local com o payload atual do token
+            localStorage.setItem('portal_suzuki_user', next);
+            setCurrentUser(user);
+          }
+        }
+      })
+      .catch(() => {
+        // Token inválido/expirado: a camada de API já limpou o localStorage;
+        // aqui garantimos o estado local coerente e abrimos o login.
+        if (!cancelled) handleSessionExpired('Sua sessão expirou. Faça login novamente.');
+      });
+    return () => { cancelled = true; };
+  }, [handleSessionExpired]);
+
   // Carregamento dinâmico de dados do SQL Server via API
   React.useEffect(() => {
-    if (!currentUser) return;
+    if (!currentUser || !sessionValidated) return;
 
     // 1. Carrega Concessionárias do SQL Server
     api.getDealerships()
@@ -235,7 +282,7 @@ export default function App() {
         if (Array.isArray(data)) setOrderProposals(data);
       })
       .catch(err => console.warn('[SQL Server] Fallback mock proposals:', err.message));
-  }, [currentUser, currentScope]);
+  }, [currentUser, currentScope, sessionValidated]);
 
   // Navigation State
   const [currentTab, setCurrentTab] = useState<NavTab>('dashboard');
@@ -1158,6 +1205,7 @@ export default function App() {
       <LoginModal
         isOpen={loginModalOpen}
         onLoginSuccess={handleLoginSuccess}
+        notice={sessionNotice || undefined}
       />
     </div>
   );

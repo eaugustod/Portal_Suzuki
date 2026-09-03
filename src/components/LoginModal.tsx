@@ -14,9 +14,11 @@ import api from '../services/api';
 interface LoginModalProps {
   isOpen: boolean;
   onLoginSuccess: (user: any, token: string) => void;
+  /** Aviso exibido no topo (ex.: sessão expirada) */
+  notice?: string;
 }
 
-export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onLoginSuccess }) => {
+export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onLoginSuccess, notice }) => {
   const [email, setEmail] = useState('eduardo.donato@jtoledo.com.br');
   const [password, setPassword] = useState('Suzuki@2026');
   const [loading, setLoading] = useState(false);
@@ -115,6 +117,14 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onLoginSuccess }
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
       <div className="w-full max-w-md bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-3xl shadow-2xl overflow-hidden p-6 md:p-8">
         
+        {/* Aviso de sessão expirada / mensagem do sistema */}
+        {notice && (
+          <div className="mb-4 px-4 py-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400 text-xs font-bold flex items-center gap-2">
+            <KeyRound className="w-4 h-4 shrink-0" />
+            <span>{notice}</span>
+          </div>
+        )}
+
         {/* Header do Modal com Logo Suzuki Oficial */}
         <div className="flex flex-col items-center text-center mb-6">
           <div className="bg-slate-50 dark:bg-neutral-800 p-3.5 rounded-2xl border border-slate-200/80 dark:border-neutral-700 shadow-xs mb-4">
