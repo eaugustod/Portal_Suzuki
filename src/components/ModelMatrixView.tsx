@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PurchaseModel, BrandType } from '../types';
+import { DEFAULT_BRAND_NAMES } from '../data/mockBrandsData';
 import { Layers, Check, X, Search, Filter, CheckCircle2, ShieldCheck, ToggleLeft, ToggleRight, Eye, EyeOff } from 'lucide-react';
 
 interface ModelMatrixViewProps {
@@ -87,7 +88,7 @@ export const ModelMatrixView: React.FC<ModelMatrixViewProps> = ({
         </div>
 
         <div className="flex items-center gap-2">
-          {(['Suzuki', 'Haojue', 'Zontes', 'Kymco'] as BrandType[]).map(b => (
+          {DEFAULT_BRAND_NAMES.map(b => (
             <button
               key={b}
               onClick={() => setSelectedBrand(b)}

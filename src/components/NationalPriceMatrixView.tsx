@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PurchaseModel, BrandType } from '../types';
+import { DEFAULT_BRAND_NAMES } from '../data/mockBrandsData';
 import { Bike, SlidersHorizontal, Edit3, Search, Filter } from 'lucide-react';
 import { ModelCatalogManagementModal } from './ModelCatalogManagementModal';
 
@@ -33,7 +34,7 @@ export const NationalPriceMatrixView: React.FC<NationalPriceMatrixViewProps> = (
     return matchBrand && matchSearch;
   });
 
-  const brands: (BrandType | 'Todas')[] = ['Todas', 'Suzuki', 'Haojue', 'Zontes', 'Kymco', 'Hisun'];
+  const brands: (BrandType | 'Todas')[] = ['Todas', ...DEFAULT_BRAND_NAMES as BrandType[]];
 
   return (
     <div className="space-y-6">

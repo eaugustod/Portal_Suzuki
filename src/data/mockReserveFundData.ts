@@ -240,7 +240,47 @@ export const INITIAL_RESERVE_FUND_TRANSACTIONS: ReserveFundTransaction[] = [
     financialApproved: true,
     userResponsible: 'Savassi Admin',
     observation: 'Abatimento em pedido de showroom'
-  }
+  },
+  {
+    id: 'rf-req-motosul-01',
+    dealershipId: 'motosul',
+    dealershipName: 'MotoSul Moema SP',
+    type: 'credito',
+    origin: 'solicitacao_concessionaria',
+    date: '02/03/2026',
+    reference: 'SOLICITAÇÃO APORTE CAMPANHA REGIONAL',
+    modelName: 'GSX-8S',
+    amount: 2500.00,
+    status: 'aguardando_aprovacao',
+    brand: 'Suzuki',
+    financialApproved: false,
+    requestedBy: 'Carlos Drummond (MotoSul)',
+    workflowSubmittedAt: '02/03/2026 09:12',
+    workflowStepIndex: 0,
+    approvedWorkflowStepIds: [],
+    userResponsible: 'Carlos Drummond (MotoSul)',
+    observation: 'Solicitação de aporte para campanha regional Sudeste. Aguardando fluxo de aprovação da Montadora.'
+  },
+  {
+    id: 'rf-req-novamotor-01',
+    dealershipId: 'novamotor',
+    dealershipName: 'Nova Motor Campinas',
+    type: 'credito',
+    origin: 'solicitacao_concessionaria',
+    date: '03/03/2026',
+    reference: 'SOLICITAÇÃO REEMBOLSO EVENTO DE LANÇAMENTO',
+    modelName: 'DL160',
+    amount: 1800.00,
+    status: 'aguardando_aprovacao',
+    brand: 'Haojue',
+    financialApproved: false,
+    requestedBy: 'Lucas Andrade (Nova Motor)',
+    workflowSubmittedAt: '03/03/2026 14:05',
+    workflowStepIndex: 0,
+    approvedWorkflowStepIds: [],
+    userResponsible: 'Lucas Andrade (Nova Motor)',
+    observation: 'Reembolso de evento de lançamento Haojue. Enviado para aprovação da Montadora.'
+  },
 ];
 
 export const INITIAL_BRAND_RESERVE_LIMITS: Record<BrandType, number> = {

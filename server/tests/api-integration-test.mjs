@@ -211,6 +211,7 @@ log('Delete condition', condDel.status === 200, 'status=' + condDel.status);
 console.log('\n--- Tabela de Fretes ---');
 const frtPayload = {
   id: 'frt-test-' + Date.now(),
+  brand: 'Suzuki',
   state: 'ZZ',
   region: 'Sul',
   originWarehouse: 'empresa_13_armazem',
@@ -223,12 +224,12 @@ const frtCreate = await request('/api/freight', 'POST', frtPayload);
 log('Create freight rate', frtCreate.status === 201, 'status=' + frtCreate.status);
 const frtList1 = await request('/api/freight');
 const frtFound1 = Array.isArray(frtList1.data) && frtList1.data.find(f => f.id === frtPayload.id);
-log('Read freight rate', !!frtFound1 && frtFound1.costPerUnit === 999.9, 'nao encontrada ou custo errado');
-const frtUpdate = await request('/api/freight/' + frtPayload.id, 'PUT', { ...frtPayload, costPerUnit: 1234.56, estimatedDays: 7 });
+log('Read freight rate', !!frtFound1 && frtFound1.costPerUnit === 999.9 && frtFound1.brand === 'Suzuki', 'nao encontrada, custo ou marca errada');
+const frtUpdate = await request('/api/freight/' + frtPayload.id, 'PUT', { ...frtPayload, brand: 'Haojue', costPerUnit: 1234.56, estimatedDays: 7 });
 log('Update freight rate', frtUpdate.status === 200, 'status=' + frtUpdate.status);
 const frtList2 = await request('/api/freight');
 const frtFound2 = Array.isArray(frtList2.data) && frtList2.data.find(f => f.id === frtPayload.id);
-log('Re-read freight rate (valor atualizado)', !!frtFound2 && frtFound2.costPerUnit === 1234.56 && frtFound2.estimatedDays === 7, 'valor nao persistiu');
+log('Re-read freight rate (valor atualizado)', !!frtFound2 && frtFound2.costPerUnit === 1234.56 && frtFound2.estimatedDays === 7 && frtFound2.brand === 'Haojue', 'valor ou marca nao persistiu');
 const frtDel = await request('/api/freight/' + frtPayload.id, 'DELETE');
 log('Delete freight rate (soft)', frtDel.status === 200, 'status=' + frtDel.status);
 const frtList3 = await request('/api/freight');
@@ -488,6 +489,78 @@ if (motosul) {
   const linkedDelete = await request('/api/dealerships/motosul', 'DELETE');
   log('Delete concessionaria com vinculos bloqueado (409)', linkedDelete.status === 409, 'status=' + linkedDelete.status);
 }
+
+// --- Fundo de Reserva — fluxo completo de solicitação da concessionária ---
+console.log('\n--- Fundo de Reserva (solicitacao_concessionaria) ---');
+
+// 1. Criar solicitação de fundo de reserva (origin = solicitacao_concessionaria)
+const rfReq = await request('/api/reserve-fund/request', 'POST', {
+  dealershipId: 'motosul',
+  amount: 8888,
+  brand: 'Suzuki',
+  reference: 'SOLICITAÇÃO-FUNDO-TESTE-INTEGRACAO',
+  modelName: 'GSX-8R',
+  origin: 'solicitacao_concessionaria',
+  observation: 'Solicitação de teste de integração.'
+});
+log('Create solicitacao de fundo de reserva (201)', rfReq.status === 201 || rfReq.status === 200, 'status=' + rfReq.status);
+const rfReqId = rfReq.data?.id;
+log('Solicitacao possui id', !!rfReqId, 'id=' + rfReqId);
+
+// 2. Ler extrato e confirmar mapping (origin -> solicitacao_concessionaria, status -> aguardando_aprovacao)
+const rfStatement = await request('/api/reserve-fund/statement?dealershipId=motosul');
+const rfFound = (rfStatement.data || []).find(t => t.id === rfReqId);
+log('Solicitacao encontrada no extrato', !!rfFound);
+log('Origin mapeado p/ solicitacao_concessionaria', rfFound?.origin === 'solicitacao_concessionaria', 'origin=' + rfFound?.origin);
+log('Status mapeado p/ aguardando_aprovacao', rfFound?.status === 'aguardando_aprovacao', 'status=' + rfFound?.status);
+log('FinancialApproved = false (pendente)', rfFound?.financialApproved === false, 'finApproved=' + rfFound?.financialApproved);
+
+// 3. Aprovar a solicitação pela Montadora
+if (rfFound) {
+  const rfApprove = await request(`/api/reserve-fund/${rfReqId}/approve`, 'PATCH');
+  log('Approve solicitacao (200)', rfApprove.status === 200, 'status=' + rfApprove.status);
+
+  // 4. Re-ler e confirmar status = aprovado e financeiro aprovado
+  const rfStatement2 = await request('/api/reserve-fund/statement?dealershipId=motosul');
+  const rfFound2 = (rfStatement2.data || []).find(t => t.id === rfReqId);
+  log('Status apos approve = aprovado', rfFound2?.status === 'aprovado', 'status=' + rfFound2?.status);
+  log('FinancialApproved apos approve = true', rfFound2?.financialApproved === true, 'finApproved=' + rfFound2?.financialApproved);
+  log('RunningBalance atualizado (maior que 0)', Number(rfFound2?.runningBalance) > 0, 'balance=' + rfFound2?.runningBalance);
+}
+
+// 5. Teste de rejeição
+const rfReq2 = await request('/api/reserve-fund/request', 'POST', {
+  dealershipId: 'motosul',
+  amount: 1234,
+  brand: 'Suzuki',
+  reference: 'REJEICAO-TESTE',
+  modelName: 'V-Strom 650',
+  origin: 'solicitacao_concessionaria',
+  observation: 'Solicitação para teste de rejeição.'
+});
+const rfReq2Id = rfReq2.data?.id;
+if (rfReq2Id) {
+  const rfReject = await request(`/api/reserve-fund/${rfReq2Id}/reject`, 'PATCH', { reason: 'Motivo do teste.' });
+  log('Reject solicitacao (200)', rfReject.status === 200, 'status=' + rfReject.status);
+  const rfStatement3 = await request('/api/reserve-fund/statement?dealershipId=motosul');
+  const rfFound3 = (rfStatement3.data || []).find(t => t.id === rfReq2Id);
+  log('Status apos reject = rejeitado', rfFound3?.status === 'rejeitado', 'status=' + rfFound3?.status);
+}
+
+// 6. Validação: valor obrigatório
+const rfInvalid = await request('/api/reserve-fund/request', 'POST', {
+  dealershipId: 'motosul',
+  brand: 'Suzuki'
+});
+log('Create solicitacao sem valor rejeitado (400)', rfInvalid.status === 400, 'status=' + rfInvalid.status);
+
+// 7. Concessionária inexistente
+const rfNoDealer = await request('/api/reserve-fund/request', 'POST', {
+  dealershipId: 'nao-existe',
+  amount: 100,
+  brand: 'Suzuki'
+});
+log('Create solicitacao concessionaria inexistente (404)', rfNoDealer.status === 404, 'status=' + rfNoDealer.status);
 
 // RESUMO FINAL
 console.log('\n=== RESUMO: ' + passed + ' passou | ' + failed + ' falhou ===');

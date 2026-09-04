@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ReserveFundTransaction, BrandType, DealershipScope } from '../types';
+import { ReserveFundTransaction, BrandType, DealershipScope, ApprovalWorkflowStep } from '../types';
 import { INITIAL_RESERVE_FUND_TRANSACTIONS } from '../data/mockReserveFundData';
+import { INITIAL_WORKFLOW_STEPS } from '../data/workflowStepsData';
+import { DEFAULT_BRAND_NAMES } from '../data/mockBrandsData';
 import { DEALERSHIP_PROFILES } from '../data/mockData';
 import { 
   BadgeDollarSign, 
@@ -13,21 +15,31 @@ import {
   Building2, 
   Info, 
   X,
-  Store
+  Store,
+  Send,
+  ShieldCheck,
+  ThumbsDown,
+  FileClock
 } from 'lucide-react';
 
 interface ReserveFundViewProps {
   currentScope: DealershipScope;
   transactions?: ReserveFundTransaction[];
+  workflowSteps?: ApprovalWorkflowStep[];
   onAddTransaction?: (tx: ReserveFundTransaction) => void;
   onApproveTransaction?: (id: string) => void;
+  onAddRequest?: (tx: ReserveFundTransaction) => void;
+  onRejectRequest?: (id: string, reason: string) => void;
 }
 
 export const ReserveFundView: React.FC<ReserveFundViewProps> = ({
   currentScope,
   transactions = INITIAL_RESERVE_FUND_TRANSACTIONS,
+  workflowSteps = INITIAL_WORKFLOW_STEPS,
   onAddTransaction,
-  onApproveTransaction
+  onApproveTransaction,
+  onAddRequest,
+  onRejectRequest
 }) => {
   const isMontadora = currentScope === 'jtoledo';
   const activeProfile = DEALERSHIP_PROFILES[currentScope];
@@ -54,6 +66,32 @@ export const ReserveFundView: React.FC<ReserveFundViewProps> = ({
   const [newChassi, setNewChassi] = useState('');
   const [newAmount, setNewAmount] = useState<number>(1000);
   const [newObs, setNewObs] = useState('');
+
+  // Solicitação de Fundo de Reserva (Concessionária -> Aprovação Montadora)
+  const [isRequestModalOpen, setIsRequestModalOpen] = useState(false);
+  const [reqAmount, setReqAmount] = useState<number>(1000);
+  const [reqBrand, setReqBrand] = useState<BrandType>('Suzuki');
+  const [reqModel, setReqModel] = useState('');
+  const [reqChassi, setReqChassi] = useState('');
+  const [reqReference, setReqReference] = useState('SOLICITAÇÃO FUNDO DE RESERVA');
+  const [reqObs, setReqObs] = useState('');
+
+  // Rejeição de solicitação (Montadora)
+  const [rejectTarget, setRejectTarget] = useState<ReserveFundTransaction | null>(null);
+  const [rejectReason, setRejectReason] = useState('');
+
+  // Etapas do workflow de Fundo de Reserva configuradas no menu Workflow
+  const reserveWorkflowSteps = workflowSteps
+    .filter(s => (s.workflowType || 'pedido') === 'fundo_reserva')
+    .filter(s => s.active !== false)
+    .sort((a, b) => a.stepOrder - b.stepOrder);
+
+  // Solicitações da Concessionária pendentes de aprovação (visão Montadora)
+  const pendingRequests = txList.filter(t =>
+    t.origin === 'solicitacao_concessionaria' &&
+    !t.financialApproved &&
+    t.status !== 'rejeitado'
+  );
 
   // 1. Filter by Dealership Scope first
   const scopeFilteredTransactions = txList.filter(t => {
@@ -142,6 +180,80 @@ export const ReserveFundView: React.FC<ReserveFundViewProps> = ({
     }));
   };
 
+  // Solicitação de Fundo de Reserva (Concessionária) -> Aprovação Montadora
+  const handleSubmitRequest = (e: React.FormEvent) => {
+    e.preventDefault();
+    const destProto = DEALERSHIP_PROFILES[currentScope];
+    const newTx: ReserveFundTransaction = {
+      id: `rf-req-${Date.now()}`,
+      dealershipId: currentScope,
+      dealershipName: destProto ? destProto.name : currentScope,
+      type: 'credito',
+      origin: 'solicitacao_concessionaria',
+      date: new Date().toLocaleDateString('pt-BR'),
+      reference: reqReference,
+      modelName: reqModel || undefined,
+      chassi: reqChassi || undefined,
+      amount: Number(reqAmount),
+      status: 'aguardando_aprovacao',
+      brand: reqBrand,
+      financialApproved: false,
+      requestedBy: destProto ? `${destProto.manager || destProto.name}` : currentScope,
+      workflowSubmittedAt: new Date().toLocaleString('pt-BR'),
+      workflowStepIndex: 0,
+      approvedWorkflowStepIds: [],
+      userResponsible: destProto ? destProto.manager : currentScope,
+      observation: reqObs || 'Solicitação de Fundo de Reserva enviada para aprovação da Montadora.'
+    };
+
+    if (onAddRequest) onAddRequest(newTx);
+    setTxList(prev => [newTx, ...prev]);
+    setIsRequestModalOpen(false);
+    setReqModel('');
+    setReqChassi('');
+    setReqObs('');
+    setReqAmount(1000);
+  };
+
+  // Avança a solicitação no workflow fundo_reserva (Montadora). Na última etapa, aprova e libera o saldo.
+  const handleAdvanceWorkflow = (tx: ReserveFundTransaction) => {
+    const totalSteps = reserveWorkflowSteps.length || 1;
+    const currentIndex = tx.workflowStepIndex ?? 0;
+    const nextIndex = currentIndex + 1;
+    const currentStep = reserveWorkflowSteps[Math.min(currentIndex, totalSteps - 1)];
+
+    if (nextIndex >= totalSteps || totalSteps === 0) {
+      // Última etapa aprovada -> libera o fundo para uso
+      setTxList(prev => prev.map(t => t.id === tx.id ? { ...t, workflowStepIndex: totalSteps, status: 'aprovado', financialApproved: true } : t));
+      if (onApproveTransaction) onApproveTransaction(tx.id);
+    } else {
+      setTxList(prev => prev.map(t => t.id === tx.id
+        ? {
+            ...t,
+            workflowStepIndex: nextIndex,
+            approvedWorkflowStepIds: [...(t.approvedWorkflowStepIds || []), currentStep?.id || ''],
+            status: 'em_analise'
+          }
+        : t));
+    }
+  };
+
+  const handleOpenReject = (tx: ReserveFundTransaction) => {
+    setRejectTarget(tx);
+    setRejectReason('');
+  };
+
+  const handleConfirmReject = () => {
+    if (!rejectTarget) return;
+    const reason = rejectReason || 'Solicitação reprovada pela Montadora.';
+    setTxList(prev => prev.map(t => t.id === rejectTarget.id
+      ? { ...t, status: 'rejeitado', financialApproved: false, rejectionReason: reason }
+      : t));
+    if (onRejectRequest) onRejectRequest(rejectTarget.id, reason);
+    setRejectTarget(null);
+    setRejectReason('');
+  };
+
   // Get active dealership list for dropdowns (excluding montadora holding scope)
   const dealershipOptions = Object.entries(DEALERSHIP_PROFILES).filter(
     ([key]) => key !== 'jtoledo'
@@ -198,13 +310,30 @@ export const ReserveFundView: React.FC<ReserveFundViewProps> = ({
               </span>
             </div>
 
-            {isMontadora && (
+            {isMontadora ? (
+              <div className="flex flex-col md:flex-row items-stretch md:items-center gap-2 w-full md:w-auto">
+                <button
+                  onClick={() => setIsRequestModalOpen(true)}
+                  className="flex-1 md:flex-none bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-4 py-2 rounded-lg shadow-lg flex items-center justify-center gap-2 text-xs transition-all"
+                >
+                  <Send className="w-4 h-4" />
+                  Solicitações ({pendingRequests.length})
+                </button>
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="flex-1 md:flex-none bg-amber-400 hover:bg-amber-300 text-neutral-900 font-bold px-4 py-2 rounded-lg shadow-lg flex items-center justify-center gap-2 text-xs transition-all"
+                >
+                  <Plus className="w-4 h-4 stroke-[3]" />
+                  Lançar Crédito/Débito
+                </button>
+              </div>
+            ) : (
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => setIsRequestModalOpen(true)}
                 className="ml-2 bg-amber-400 hover:bg-amber-300 text-neutral-900 font-bold px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 text-xs transition-all"
               >
-                <Plus className="w-4 h-4 stroke-[3]" />
-                Lançar Crédito/Débito
+                <Send className="w-4 h-4 stroke-[2.5]" />
+                Solicitar Fundo de Reserva
               </button>
             )}
           </div>
@@ -220,6 +349,103 @@ export const ReserveFundView: React.FC<ReserveFundViewProps> = ({
             <p className="text-neutral-600 dark:text-neutral-300">
               Este extrato exibe exclusivamente os lançamentos de bônus, reembolsos e abatimentos vinculados à <strong>{activeProfile?.name}</strong>. Os créditos e débitos são geridos e auditados pelo departamento financeiro da fábrica (JToledo).
             </p>
+          </div>
+        </div>
+      )}
+
+      {/* Montadora: Solicitações de Fundo de Reserva Pendentes (Workflow de Aprovação) */}
+      {isMontadora && (
+        <div className="bg-white dark:bg-[#18181b] rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-sm overflow-hidden">
+          <div className="p-4 bg-indigo-50 dark:bg-indigo-950/30 border-b border-indigo-200 dark:border-indigo-900/50 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <FileClock className="w-5 h-5 text-indigo-500" />
+              <h2 className="font-bold text-neutral-900 dark:text-indigo-100 text-sm">
+                Solicitações da Concessionária — Workflow de Aprovação
+              </h2>
+            </div>
+            <span className="text-xs bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold px-2.5 py-0.5 rounded-full border border-indigo-500/20">
+              {pendingRequests.length} Pendente(s)
+            </span>
+          </div>
+
+          <div className="p-4 space-y-4">
+            {pendingRequests.length === 0 ? (
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center py-6">
+                Nenhuma solicitação de Fundo de Reserva aguardando aprovação. Quando uma concessionária enviar uma solicitação, ela aparecerá aqui para ser analisada pelo fluxo do menu <strong>Workflow</strong>.
+              </p>
+            ) : (
+              pendingRequests.map(tx => {
+                const totalSteps = reserveWorkflowSteps.length || 1;
+                const currentIdx = tx.workflowStepIndex ?? 0;
+                const isLastApproved = currentIdx >= totalSteps;
+                const currentStep = reserveWorkflowSteps[Math.min(currentIdx, totalSteps - 1)];
+                return (
+                  <div key={tx.id} className="rounded-xl border border-neutral-200 dark:border-neutral-700 p-4 space-y-3">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <Building2 className="w-4 h-4 text-amber-500" />
+                          <span className="font-bold text-neutral-900 dark:text-white text-sm">{tx.dealershipName || tx.dealershipId}</span>
+                          <span className="text-[10px] text-neutral-500">{tx.workflowSubmittedAt || tx.date}</span>
+                        </div>
+                        <p className="text-xs text-neutral-600 dark:text-neutral-300 mt-1">{tx.reference}</p>
+                        {tx.modelName && <p className="text-[11px] text-neutral-500">Modelo: {tx.modelName} {tx.chassi ? `· Chassi ${tx.chassi}` : ''}</p>}
+                      </div>
+                      <div className="text-right">
+                        <span className="block text-lg font-black text-amber-600 dark:text-amber-400">
+                          R$ {tx.amount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                        </span>
+                        <span className="text-[10px] font-bold text-neutral-500">{tx.brand}</span>
+                      </div>
+                    </div>
+                    {/* Workflow Steps */}
+                    <div className="space-y-1.5">
+                      {reserveWorkflowSteps.map((step, i) => {
+                        const done = i < currentIdx;
+                        const isCurrent = i === currentIdx;
+                        return (
+                          <div key={step.id} className="flex items-center gap-2 text-[11px]">
+                            <div className={`w-4 h-4 rounded-full flex items-center justify-center border shrink-0 ${
+                              done
+                                ? 'bg-emerald-500 border-emerald-600 text-white'
+                                : isCurrent
+                                  ? 'bg-amber-500 border-amber-600 text-white'
+                                  : 'border-neutral-400 dark:border-neutral-600 text-neutral-400'
+                            }`}>
+                              {done ? <CheckCircle2 className="w-3 h-3" /> : <span className="text-[9px]">{i + 1}</span>}
+                            </div>
+                            <span className={`${done ? 'text-neutral-500 dark:text-neutral-400' : isCurrent ? 'font-bold text-neutral-900 dark:text-white' : 'text-neutral-400 dark:text-neutral-500'}`}>
+                              {step.stepName}
+                            </span>
+                            {isCurrent && <span className="text-[9px] text-amber-600 dark:text-amber-400 font-bold bg-amber-500/10 px-1.5 py-0.5 rounded-full">ETAPA ATUAL</span>}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Actions */}
+                    <div className="flex flex-wrap items-center gap-2 pt-1 border-t border-neutral-100 dark:border-neutral-800">
+                      <button
+                        onClick={() => handleAdvanceWorkflow(tx)}
+                        disabled={isLastApproved}
+                        className="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-400 disabled:opacity-40 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors"
+                        title={currentStep ? `Aprovar etapa: ${currentStep.stepName}` : 'Etapas concluídas'}
+                      >
+                        <ShieldCheck className="w-3.5 h-3.5" />
+                        {isLastApproved ? 'Fundo Liberado' : `Aprovar: ${currentStep?.stepName || 'Próxima etapa'}`}
+                      </button>
+                      <button
+                        onClick={() => handleOpenReject(tx)}
+                        className="inline-flex items-center gap-1.5 bg-red-500/10 hover:bg-red-500/20 text-red-600 dark:text-red-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-red-500/20 transition-colors"
+                      >
+                        <ThumbsDown className="w-3.5 h-3.5" />
+                        Rejeitar
+                      </button>
+                    </div>
+                  </div>
+                );
+              })
+            )}
           </div>
         </div>
       )}
@@ -253,7 +479,7 @@ export const ReserveFundView: React.FC<ReserveFundViewProps> = ({
             <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 flex items-center gap-1 mr-1">
               <Filter className="w-3.5 h-3.5" /> Marca:
             </span>
-            {(['todas', 'Suzuki', 'Haojue', 'Zontes', 'Hisun', 'Kymco'] as const).map(b => (
+            {(['todas', ...DEFAULT_BRAND_NAMES] as const).map(b => (
               <button
                 key={b}
                 onClick={() => setSelectedBrandFilter(b as any)}
@@ -634,6 +860,161 @@ export const ReserveFundView: React.FC<ReserveFundViewProps> = ({
           </div>
         </div>
       )}
+      {/* Modal: Solicitar Fundo de Reserva (Concessionária) */}
+      {isRequestModalOpen && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-neutral-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-neutral-800">
+              <h3 className="text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+                <Send className="w-5 h-5 text-amber-500" />
+                Solicitar Fundo de Reserva
+              </h3>
+              <button onClick={() => setIsRequestModalOpen(false)} className="text-neutral-400 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900/60 rounded-lg p-3 text-[11px] text-indigo-900 dark:text-indigo-200 flex items-start gap-2">
+              <ShieldCheck className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
+              <span>
+                Sua solicitação será submetida ao fluxo de aprovação da Montadora configurado no menu <strong>Workflow</strong> ({reserveWorkflowSteps.length} etapa(s)). Após a aprovação, o valor ficará disponível no seu saldo para uso no <strong>Pedido de Fábrica</strong>.
+              </span>
+            </div>
+
+            <form onSubmit={handleSubmitRequest} className="space-y-3">
+              <div>
+                <label className="block text-xs font-semibold text-neutral-600 dark:text-neutral-400 mb-1">Concessionária (meu escopo)</label>
+                <input
+                  type="text"
+                  value={activeProfile?.name || currentScope}
+                  disabled
+                  className="w-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg p-2 text-xs text-neutral-900 dark:text-white font-bold"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-semibold text-neutral-600 dark:text-neutral-400 mb-1">Marca</label>
+                  <select
+                    value={reqBrand}
+                    onChange={(e) => setReqBrand(e.target.value as BrandType)}
+                    className="w-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg p-2 text-xs text-neutral-900 dark:text-white"
+                  >
+                    {DEFAULT_BRAND_NAMES.map(b => <option key={b} value={b}>{b}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-neutral-600 dark:text-neutral-400 mb-1">Valor (R$) *</label>
+                  <input
+                    type="number"
+                    min="0.01"
+                    step="0.01"
+                    value={reqAmount}
+                    onChange={(e) => setReqAmount(parseFloat(e.target.value))}
+                    className="w-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg p-2 text-xs text-neutral-900 dark:text-white font-bold"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-neutral-600 dark:text-neutral-400 mb-1">Modelo (Opcional)</label>
+                <input
+                  type="text"
+                  value={reqModel}
+                  onChange={(e) => setReqModel(e.target.value)}
+                  placeholder="Ex: GSX-8S"
+                  className="w-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg p-2 text-xs text-neutral-900 dark:text-white"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-neutral-600 dark:text-neutral-400 mb-1">Referência</label>
+                <input
+                  type="text"
+                  value={reqReference}
+                  onChange={(e) => setReqReference(e.target.value)}
+                  placeholder="Ex: SOLICITAÇÃO APORTE CAMPANHA REGIONAL"
+                  className="w-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg p-2 text-xs text-neutral-900 dark:text-white"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-neutral-600 dark:text-neutral-400 mb-1">Justificativa / Observação</label>
+                <textarea
+                  value={reqObs}
+                  onChange={(e) => setReqObs(e.target.value)}
+                  placeholder="Descreva o motivo da solicitação..."
+                  rows={2}
+                  className="w-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg p-2 text-xs text-neutral-900 dark:text-white"
+                />
+              </div>
+
+              <div className="pt-2 flex items-center justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsRequestModalOpen(false)}
+                  className="px-4 py-2 rounded-lg text-xs font-bold text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  className="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-lg text-xs font-bold shadow-md flex items-center gap-1.5"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  Enviar para Aprovação
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Modal: Rejeitar Solicitação (Montadora) */}
+      {rejectTarget && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-neutral-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-neutral-800">
+              <h3 className="text-base font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+                <ThumbsDown className="w-5 h-5 text-red-500" />
+                Rejeitar Solicitação
+              </h3>
+              <button onClick={() => setRejectTarget(null)} className="text-neutral-400 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <p className="text-xs text-neutral-600 dark:text-neutral-300">
+              <strong>{rejectTarget.dealershipName}</strong> — R$ {rejectTarget.amount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+            </p>
+            <div>
+              <label className="block text-xs font-semibold text-neutral-600 dark:text-neutral-400 mb-1">Motivo da rejeição</label>
+              <textarea
+                value={rejectReason}
+                onChange={(e) => setRejectReason(e.target.value)}
+                placeholder="Informe o motivo..."
+                rows={3}
+                className="w-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg p-2 text-xs text-neutral-900 dark:text-white"
+              />
+            </div>
+            <div className="pt-2 flex items-center justify-end gap-2">
+              <button
+                onClick={() => setRejectTarget(null)}
+                className="px-4 py-2 rounded-lg text-xs font-bold text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              >
+                Cancelar
+              </button>
+              <button
+                onClick={handleConfirmReject}
+                className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg text-xs font-bold shadow-md"
+              >
+                Confirmar Rejeição
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

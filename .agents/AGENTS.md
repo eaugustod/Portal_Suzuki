@@ -1,1376 +1,1324 @@
-# AGENTS.md — PORTAL SUZUKI
+# AGENTS.md
 
-## 1. OBJETIVO PRINCIPAL DO PROJETO
+# PORTAL SUZUKI — EXECUÇÃO AUTÔNOMA, QA COMPLETO E CORREÇÃO CONTÍNUA
 
-O objetivo principal deste projeto é transformar o Portal Suzuki de uma aplicação parcialmente baseada em dados mockados em uma aplicação **real, funcional, persistente e testada**, utilizando **SQL Server como banco de dados operacional**.
+## 1. MISSÃO PRINCIPAL
 
-O agente deve trabalhar para entregar o sistema funcionando de ponta a ponta:
+Você é o agente responsável por transformar o Portal Suzuki em um sistema **100% funcional, testado, consistente e pronto para uso real**.
 
-Frontend
-   ↓
-API / Backend / Services
-   ↓
-Regras de negócio
-   ↓
-SQL Server
-   ↓
-Persistência real
-   ↓
-Consultas
-   ↓
-API / Backend
-   ↓
-Frontend
+Sua responsabilidade NÃO termina quando o código compila.
 
-O projeto NÃO deve ser considerado concluído enquanto funcionalidades que deveriam persistir dados continuarem dependendo de:
+Sua responsabilidade somente termina quando:
 
-* arrays em memória;
-* dados mockados;
-* `localStorage`;
-* respostas falsas;
-* stubs;
-* endpoints simulados;
-* dados hardcoded;
-* mensagens de sucesso sem persistência real.
+* o projeto inicia corretamente;
+* todas as telas funcionam;
+* todos os fluxos principais funcionam;
+* todos os botões e ações funcionam;
+* todos os formulários funcionam;
+* todas as validações funcionam;
+* frontend, backend e banco estão integrados;
+* o SQL Server funciona de verdade;
+* dados são realmente gravados no banco;
+* dados gravados podem ser consultados posteriormente;
+* alterações são persistidas;
+* exclusões funcionam corretamente;
+* erros são tratados adequadamente;
+* não existem mocks operacionais substituindo funcionalidades reais;
+* não existem erros conhecidos;
+* testes automatizados passam;
+* testes de integração passam;
+* testes de banco passam;
+* testes E2E passam;
+* build de produção passa;
+* typecheck passa;
+* lint passa;
+* o sistema foi revisado tela por tela;
+* os principais fluxos foram executados do início ao fim.
 
----
+NÃO considere o trabalho concluído simplesmente porque:
 
-# 2. MISSÃO DO AGENTE
+* `npm run build` passou;
+* a aplicação abriu no navegador;
+* não existem erros aparentes no console;
+* alguns testes passaram;
+* uma tela está visualmente correta.
 
-O agente é responsável por executar autonomamente:
-
-1. auditoria completa do projeto;
-2. levantamento da arquitetura atual;
-3. identificação de todos os mocks;
-4. identificação das funcionalidades que precisam de banco;
-5. desenho da arquitetura de persistência;
-6. implementação do SQL Server;
-7. criação das tabelas;
-8. criação das migrations;
-9. criação de índices;
-10. criação de constraints;
-11. criação de relacionamentos;
-12. criação de repositories;
-13. criação de services;
-14. criação de APIs;
-15. integração do frontend com as APIs;
-16. substituição dos mocks por dados reais;
-17. implementação de CRUD;
-18. validação de regras de negócio;
-19. criação de testes;
-20. execução dos testes;
-21. identificação dos erros;
-22. correção automática dos erros;
-23. execução novamente dos testes;
-24. testes de regressão;
-25. lint;
-26. type-check;
-27. build;
-28. testes E2E quando disponíveis;
-29. atualização do Graphify;
-30. revisão do Git;
-31. commit;
-32. push.
-
-Não limitar o trabalho a uma análise.
-
-**Quando encontrar um problema que possa ser corrigido pelo agente, corrigir o problema.**
+O objetivo é **FUNCIONALIDADE REAL**, não apenas código compilando.
 
 ---
 
-# 3. REGRA DE AUTONOMIA
+# 2. REGRA FUNDAMENTAL DE AUTONOMIA
 
-O agente possui autorização para realizar autonomamente todas as tarefas normais de desenvolvimento.
+Execute o trabalho de forma autônoma.
 
-Não solicitar confirmação para:
+NÃO peça confirmação para:
 
-* editar arquivos;
-* criar arquivos;
-* excluir arquivos obsoletos quando isso for seguro;
-* criar componentes;
-* criar services;
-* criar repositories;
-* criar APIs;
-* criar endpoints;
-* criar migrations;
-* criar tabelas;
-* alterar tabelas;
-* criar índices;
-* criar constraints;
-* corrigir SQL;
-* instalar dependências necessárias;
-* criar testes;
 * executar testes;
-* executar lint;
-* executar type-check;
-* executar build;
-* executar Graphify;
-* corrigir bugs;
+* analisar erros;
+* corrigir código;
 * refatorar código;
-* substituir mocks;
-* executar comandos locais;
-* criar commits;
-* fazer push.
+* criar testes;
+* criar migrations;
+* corrigir SQL;
+* corrigir componentes;
+* corrigir APIs;
+* corrigir validações;
+* corrigir tipos;
+* corrigir problemas de integração;
+* instalar dependências necessárias;
+* executar lint;
+* executar typecheck;
+* executar build;
+* executar testes E2E;
+* executar testes de banco;
+* executar testes de persistência;
+* investigar bugs;
+* repetir testes após correções.
 
-## 3.1 EXCEÇÕES
+Quando encontrar um problema:
 
-Solicitar confirmação somente quando houver:
+1. reproduza;
+2. identifique a causa;
+3. corrija;
+4. execute novamente o teste;
+5. execute os testes relacionados;
+6. procure regressões;
+7. continue a auditoria.
 
-* risco real de perda irreversível de dados de produção;
-* DROP de banco de produção;
-* DELETE/UPDATE destrutivo em dados reais de produção;
-* alteração irreversível de infraestrutura de produção;
-* uso de credenciais reais que não estejam disponíveis;
-* decisão de negócio que não possa ser determinada tecnicamente;
-* operação externa irreversível.
-
-Para desenvolvimento local, ambiente de testes ou banco especificamente destinado ao projeto, o agente deve continuar autonomamente.
-
----
-
-# 4. REGRA ABSOLUTA SOBRE MOCKS
-
-Os dados mockados existentes são considerados **dados de desenvolvimento**, não persistência definitiva.
-
-O agente deve auditar todos os arquivos de:
-
-
-src/data/
-
-
-e identificar quais dados são:
-
-### A. Dados estáticos legítimos
-
-Exemplos:
-
-* informações puramente visuais;
-* configurações;
-* catálogos estáticos;
-* informações que não precisam ser alteradas pelo usuário.
-
-Esses dados podem permanecer estáticos quando tecnicamente justificável.
-
-### B. Dados operacionais
-
-Exemplos:
-
-* concessionárias;
-* usuários;
-* pedidos;
-* pedidos de fábrica;
-* pedidos de peças;
-* estoque;
-* compromissos;
-* vendas;
-* CRM;
-* informações transacionais;
-* registros criados pelo usuário.
-
-Esses dados devem ser migrados para persistência real.
+Não pare após a primeira correção.
 
 ---
 
-# 5. PROIBIÇÃO DE "FAKE PERSISTENCE"
+# 3. CICLO OBRIGATÓRIO DE CORREÇÃO
 
-Não considerar como persistência:
+Todo erro deve seguir este ciclo:
 
-
-useState()
-useReducer()
-arrays
-objetos JavaScript
-localStorage
-sessionStorage
-mock API
-setTimeout()
-Promise.resolve()
-
-
-quando a funcionalidade exigir banco de dados.
-
-Exemplo proibido:
-
-ts
-setOrders([...orders, newOrder]);
-
-
-como única implementação de criação de pedido.
-
-O correto é:
-
-
-Frontend
+```text
+DETECTAR
    ↓
-POST /api/orders
+REPRODUZIR
    ↓
-Service
+ANALISAR
    ↓
-Repository
+IDENTIFICAR CAUSA RAIZ
    ↓
-SQL Server
+CORRIGIR
    ↓
-INSERT
+TESTAR NOVAMENTE
    ↓
-Resposta
+TESTAR REGRESSÃO
    ↓
-Frontend
+AUDITAR FLUXOS RELACIONADOS
+   ↓
+CONTINUAR
+```
 
+Nunca simplesmente esconda um erro.
+
+Nunca faça uma alteração apenas para fazer o teste passar sem corrigir a causa real.
 
 ---
 
-# 6. SQL SERVER É O BANCO OPERACIONAL
+# 4. PRIMEIRA ETAPA — AUDITORIA COMPLETA DO PROJETO
 
-O banco operacional do Portal Suzuki deve ser SQL Server.
+Antes de alterar funcionalidades, faça uma auditoria completa.
 
-A arquitetura deve permitir:
+Analise:
 
-
-Portal Suzuki
-       ↓
-API
-       ↓
-SQL Server Portal
-       ↓
-Integrações
-       ↓
-TOTVS Protheus
-
-
-Não conectar diretamente React ao SQL Server.
-
-O frontend deve acessar o backend/API.
-
----
-
-# 7. PROTHEUS
-
-O Portal Suzuki possui necessidade futura de integração com TOTVS Protheus.
-
-Essa integração deve ser separada do banco operacional do Portal.
-
-O Protheus não deve ser copiado indiscriminadamente para o banco do Portal.
-
-Quando necessário, utilizar:
-
-* views;
-* queries;
-* procedures quando justificadas;
-* integrações controladas;
-* serviços específicos.
-
-Estrutura planejada:
-
-
-portal.Concessionarias
-portal.PedidosFabrica
-portal.PedidosPecas
-portal.EstoqueRede
-
-
-Views de integração planejadas:
-
-
-vw_ClientesProtheus
-vw_ProdutosProtheus
-vw_PedidosProtheus
-
-
-Antes de criar qualquer objeto:
-
-1. verificar se já existe;
-2. verificar migrations;
-3. verificar código;
-4. verificar dependências;
-5. evitar duplicação.
-
----
-
-# 8. AUDITORIA INICIAL OBRIGATÓRIA
-
-Antes de implementar a migração, executar uma auditoria completa.
-
-Examinar:
-
-
-package.json
-package-lock.json
-src/
-public/
-configurações
-backend
-API
-services
-repositories
-database
-migrations
-tests
-e2e
-.env.example
-AGENTS.md
-graphify-out/
-
-
-Identificar:
-
-* arquitetura;
+* estrutura de diretórios;
+* package.json;
+* scripts;
+* dependências;
+* configuração do Vite;
+* TypeScript;
+* Tailwind;
 * frontend;
 * backend;
-* APIs;
-* serviços;
-* banco existente;
-* ORM/query builder, se houver;
+* API;
+* banco de dados;
+* migrations;
+* seeds;
+* variáveis de ambiente;
 * autenticação;
 * autorização;
-* modelos;
-* tipos;
-* mocks;
-* endpoints;
-* testes.
+* serviços;
+* repositories;
+* hooks;
+* componentes;
+* páginas;
+* rotas;
+* imagens;
+* dados mockados;
+* testes existentes;
+* configuração de testes;
+* configuração E2E;
+* Docker;
+* arquivos de configuração;
+* documentação;
+* AGENTS.md;
+* Graphify.
 
-Não criar uma nova arquitetura sem antes entender a arquitetura existente.
+Procure também:
 
----
-
-# 9. INVENTÁRIO DE FUNCIONALIDADES
-
-Criar internamente um inventário de todas as funcionalidades existentes.
-
-Entre outras:
-
-* Login/autenticação;
-* Dashboard;
-* Dashboard da montadora;
-* Concessionárias;
-* Compras;
-* Pedidos de fábrica;
-* Pedidos de peças;
-* Catálogo de peças;
-* EPC;
-* Estoque;
-* Compromisso mensal;
-* CRM;
-* vendas;
-* perfis;
-* permissões;
-* filtros;
-* pesquisas;
-* formulários;
-* relatórios;
-* consultas;
-* alterações;
-* exclusões.
-
-Para cada funcionalidade, identificar:
-
-
-Frontend
-API
-Service
-Banco
-Persistência
-Testes
-Status
-
-
-Classificar:
-
-
-FUNCIONANDO
-PARCIAL
+```text
+TODO
+FIXME
+HACK
+TEMP
 MOCK
-QUEBRADO
-NÃO IMPLEMENTADO
+MOCK_DATA
+FAKE
+STUB
+PLACEHOLDER
+DUMMY
+HARDCODED
+console.log
+console.error
+throw new Error
+```
 
+Analise cada ocorrência e determine se ela representa:
 
----
+* comportamento legítimo;
+* código de desenvolvimento;
+* código temporário;
+* mock operacional;
+* código incompleto;
+* erro;
+* dívida técnica;
+* funcionalidade não implementada.
 
-# 10. MIGRAÇÃO DOS DADOS
-
-Para cada entidade operacional:
-
-1. identificar o modelo atual;
-2. identificar onde o mock é utilizado;
-3. criar modelo de banco;
-4. criar tabela;
-5. criar migration;
-6. criar constraints;
-7. criar índices;
-8. criar repository;
-9. criar service;
-10. criar endpoint;
-11. conectar frontend;
-12. remover dependência do mock;
-13. criar testes;
-14. testar persistência.
-
----
-
-# 11. MODELAGEM DO BANCO
-
-As tabelas devem possuir:
-
-* chave primária;
-* tipos corretos;
-* campos obrigatórios;
-* `NOT NULL` quando apropriado;
-* `NULL` somente quando necessário;
-* índices;
-* foreign keys;
-* constraints;
-* campos de auditoria quando apropriado.
-
-Evitar tabelas sem relacionamento quando existe relação de negócio.
-
-Evitar duplicação desnecessária.
-
-Evitar armazenar informação derivável sem necessidade.
+Corrija tudo que impedir o funcionamento real do sistema.
 
 ---
 
-# 12. MIGRATIONS
+# 5. INVENTÁRIO COMPLETO DO SISTEMA
 
-Toda alteração estrutural do banco deve ser versionada.
+Crie mentalmente e/ou em documentação interna uma matriz de funcionalidades.
 
-Não depender de alterações manuais impossíveis de reproduzir.
+Para cada tela identifique:
 
-Migrations devem permitir:
+* rota;
+* componente;
+* finalidade;
+* dados utilizados;
+* API utilizada;
+* tabelas utilizadas;
+* ações disponíveis;
+* formulários;
+* filtros;
+* buscas;
+* paginação;
+* ordenação;
+* botões;
+* modais;
+* menus;
+* navegação;
+* estados vazios;
+* estados de carregamento;
+* estados de erro;
+* permissões;
+* persistência.
 
+Cada funcionalidade deverá ser classificada como:
 
-banco vazio
-   ↓
-migrations
-   ↓
-banco completo
+```text
+[ ] Funcionando
+[ ] Funcionando parcialmente
+[ ] Com erro
+[ ] Mockada
+[ ] Não implementada
+[ ] Não testada
+```
 
-
-Quando possível, também permitir rollback seguro em ambiente de desenvolvimento.
-
----
-
-# 13. DADOS DE SEED
-
-Quando necessário, criar seeds para:
-
-* desenvolvimento;
-* testes;
-* dados iniciais;
-* usuários de teste;
-* dados mínimos necessários.
-
-Seeds não devem substituir persistência.
-
-Não utilizar seeds como solução para dados operacionais.
-
----
-
-# 14. CRUD REAL
-
-Toda entidade operacional deve ter operações reais quando aplicáveis:
-
-
-CREATE
-READ
-UPDATE
-DELETE
-
-
-Cada operação deve:
-
-1. receber dados;
-2. validar;
-3. executar regra de negócio;
-4. acessar SQL Server;
-5. confirmar resultado;
-6. retornar resposta correta.
+Nenhuma funcionalidade deve permanecer sem validação.
 
 ---
 
-# 15. TESTE DE PERSISTÊNCIA
+# 6. TESTE TELA POR TELA
 
-Para cada entidade importante:
+Faça uma auditoria individual de TODAS as telas.
+
+Para cada tela:
+
+## 6.1 Carregamento
+
+Verifique:
+
+* a rota abre;
+* não ocorre crash;
+* não ocorre tela branca;
+* não existem erros no console;
+* não existem requests quebrados;
+* loading funciona;
+* tratamento de erro funciona;
+* dados são carregados corretamente.
+
+## 6.2 Elementos visuais
+
+Verifique:
+
+* títulos;
+* textos;
+* cards;
+* tabelas;
+* botões;
+* ícones;
+* menus;
+* dropdowns;
+* modais;
+* inputs;
+* selects;
+* filtros;
+* paginação;
+* responsividade;
+* modo claro;
+* modo escuro.
+
+## 6.3 Interações
+
+Clique/teste cada ação relevante.
+
+Verifique:
+
+* botão abre o que deveria;
+* botão salva;
+* botão edita;
+* botão exclui;
+* botão cancela;
+* botão volta;
+* filtros funcionam;
+* pesquisa funciona;
+* ordenação funciona;
+* paginação funciona;
+* modal abre;
+* modal fecha;
+* formulário valida;
+* mensagens aparecem;
+* estados são atualizados.
+
+NÃO assuma que um botão funciona apenas porque existe no JSX.
+
+---
+
+# 7. TESTE PROCESSO POR PROCESSO
+
+Teste os processos completos, e não apenas componentes isolados.
+
+Exemplos:
+
+```text
+Login
+↓
+Dashboard
+↓
+Consulta
+↓
+Seleção
+↓
+Edição
+↓
+Salvamento
+↓
+Confirmação
+↓
+Consulta novamente
+```
+
+O teste deve comprovar que o dado realmente percorreu todo o fluxo.
+
+Outro exemplo:
+
+```text
+Criar pedido
+↓
+Validar dados
+↓
+Salvar
+↓
+Persistir no SQL Server
+↓
+Consultar pedido
+↓
+Editar pedido
+↓
+Salvar novamente
+↓
+Consultar novamente
+↓
+Excluir/cancelar
+↓
+Confirmar estado final
+```
+
+---
+
+# 8. SQL SERVER — FUNCIONAMENTO REAL
+
+O SQL Server é a fonte operacional real do Portal Suzuki.
+
+Não utilize mock para substituir:
+
+* cadastro;
+* consulta;
+* alteração;
+* exclusão;
+* pedidos;
+* estoque;
+* concessionárias;
+* usuários;
+* relacionamentos;
+* histórico;
+* qualquer outro dado operacional.
+
+Se existir uma funcionalidade que atualmente utiliza dados mockados, substitua por implementação real quando fizer parte do funcionamento do sistema.
+
+---
+
+# 9. TESTE REAL DE PERSISTÊNCIA
+
+Para cada CRUD relevante, obrigatoriamente teste:
 
 ### CREATE
 
-
-Criar
-↓
-Receber sucesso
-↓
-Consultar diretamente pela aplicação
-↓
-Confirmar existência
-
+1. criar registro;
+2. confirmar resposta;
+3. consultar diretamente ou através da API;
+4. confirmar que o registro existe no SQL Server.
 
 ### READ
 
-
-Consultar
-↓
-Confirmar dados corretos
-
+1. consultar registro;
+2. verificar dados;
+3. verificar relacionamentos;
+4. verificar filtros;
+5. verificar paginação.
 
 ### UPDATE
 
-
-Alterar
-↓
-Consultar novamente
-↓
-Confirmar alteração persistida
-
+1. alterar registro;
+2. salvar;
+3. consultar novamente;
+4. confirmar alteração no SQL Server.
 
 ### DELETE
 
+1. excluir/cancelar;
+2. confirmar operação;
+3. consultar novamente;
+4. confirmar comportamento esperado.
 
-Excluir
-↓
-Consultar novamente
-↓
-Confirmar comportamento esperado
+Não considere persistência válida apenas porque a interface exibiu uma mensagem de sucesso.
 
+---
 
-Também testar:
+# 10. TESTES DE BANCO DE DADOS
 
-* ID inexistente;
-* dados inválidos;
-* campos obrigatórios;
-* duplicidade;
-* foreign key inválida;
-* constraint;
-* erro de conexão;
-* timeout;
+Teste:
+
+* conexão;
+* autenticação;
+* migrations;
+* tabelas;
+* constraints;
+* foreign keys;
+* índices;
+* tipos;
+* nullable;
+* defaults;
+* transações;
 * rollback;
-* concorrência quando relevante.
+* concorrência quando relevante;
+* integridade referencial;
+* queries;
+* procedures, se existirem;
+* views, se existirem;
+* tratamento de erros;
+* timeouts;
+* reconexão.
+
+Procure:
+
+* SQL inválido;
+* nomes incorretos;
+* colunas inexistentes;
+* joins incorretos;
+* conversões inválidas;
+* problemas de encoding;
+* problemas de timezone;
+* problemas de decimal;
+* problemas de NULL;
+* problemas de identidade/sequence;
+* queries N+1;
+* ausência de índices;
+* conexões não encerradas.
 
 ---
 
-# 16. SQL SEGURO
+# 11. API / BACKEND
 
-Nunca concatenar valores recebidos do usuário diretamente em SQL.
+Teste todos os endpoints.
 
-Proibido:
+Para cada endpoint valide:
 
-ts
-const sql = `SELECT * FROM pedidos WHERE id = ${id}`;
+* método HTTP;
+* parâmetros;
+* body;
+* headers;
+* autenticação;
+* autorização;
+* validação;
+* status HTTP;
+* resposta;
+* tratamento de erro;
+* persistência;
+* transação;
+* rollback;
+* performance básica.
 
+Teste também:
 
-Utilizar parâmetros.
-
-Sempre proteger contra SQL Injection.
-
----
-
-# 17. TRANSAÇÕES
-
-Utilizar transações quando uma operação envolver múltiplas alterações que precisam ser atômicas.
-
-Exemplo:
-
-
-Criar pedido
-+
-Criar itens
-+
-Atualizar estoque
-
-
-Se uma etapa falhar, a operação deve ser revertida quando a regra de negócio exigir atomicidade.
-
----
-
-# 18. ESTOQUE
-
-Operações de estoque devem receber atenção especial.
-
-Nunca permitir que a interface simplesmente altere o número mostrado sem persistir no banco.
-
-Validar:
-
-* quantidade;
-* produto;
-* concessionária;
-* disponibilidade;
-* movimentação;
-* concorrência;
-* consistência.
-
-Sempre que houver movimentação de estoque, investigar se é necessário registrar histórico.
+* dados ausentes;
+* dados inválidos;
+* IDs inexistentes;
+* registros duplicados;
+* valores extremos;
+* requisições simultâneas quando relevante;
+* erros do banco;
+* timeout;
+* indisponibilidade do banco.
 
 ---
 
-# 19. PEDIDOS
+# 12. FRONTEND ↔ API ↔ SQL SERVER
 
-Pedidos devem possuir persistência real.
+Teste a cadeia completa:
 
-Quando aplicável:
-
-
-Pedido
+```text
+INTERFACE
    ↓
-Itens
+FRONTEND
    ↓
-Produto/Peça
+API
    ↓
-Quantidade
+SERVICE
    ↓
-Concessionária
+REPOSITORY
    ↓
-Status
-   ↓
-Datas
+SQL SERVER
+```
 
+E o retorno:
 
-Validar relacionamento entre pedido e itens.
+```text
+SQL SERVER
+   ↓
+REPOSITORY
+   ↓
+SERVICE
+   ↓
+API
+   ↓
+FRONTEND
+   ↓
+INTERFACE
+```
 
-Não permitir itens órfãos.
+Verifique se nenhum ponto está utilizando dados falsos ou estado local para simular persistência.
 
 ---
 
-# 20. CONCESSIONÁRIAS
+# 13. TESTES E2E
 
-Concessionárias devem possuir persistência real quando utilizadas como entidades operacionais.
+Execute testes End-to-End sempre que possível.
 
-Considerar:
+Os testes devem simular um usuário real.
 
-* identificação;
-* dados cadastrais;
-* status;
-* marca;
-* usuários relacionados;
-* permissões;
-* escopo;
-* dados necessários ao negócio.
+Inclua:
+
+* abertura do sistema;
+* login;
+* navegação;
+* consulta;
+* filtros;
+* criação;
+* edição;
+* salvamento;
+* confirmação;
+* exclusão/cancelamento;
+* navegação entre telas;
+* retorno;
+* logout.
+
+Teste também cenários negativos.
+
+---
+
+# 14. TESTES DE ERRO
+
+Não teste somente o caminho feliz.
+
+Teste:
+
+* campo obrigatório vazio;
+* formato inválido;
+* valor inválido;
+* registro inexistente;
+* duplicidade;
+* banco indisponível;
+* API indisponível;
+* timeout;
+* erro 400;
+* erro 401;
+* erro 403;
+* erro 404;
+* erro 409;
+* erro 500;
+* sessão expirada;
+* usuário sem permissão.
+
+O sistema deve apresentar comportamento controlado e mensagens adequadas.
+
+---
+
+# 15. TESTES DE REGRESSÃO
+
+Após cada correção:
+
+1. execute o teste que falhou;
+2. execute os testes da funcionalidade;
+3. execute os testes das funcionalidades relacionadas;
+4. execute a suíte geral.
+
+Uma correção não pode quebrar outra parte do sistema.
+
+---
+
+# 16. TESTES AUTOMATIZADOS
+
+Execute todos os testes disponíveis.
+
+Identifique automaticamente os scripts existentes no `package.json`.
+
+Execute, quando disponíveis:
+
+```bash
+npm test
+npm run test
+npm run test:unit
+npm run test:integration
+npm run test:e2e
+npm run lint
+npm run typecheck
+npm run build
+```
+
+Não execute cegamente scripts que não existem.
+
+Primeiro descubra os scripts disponíveis.
+
+Se não existirem testes suficientes, crie os testes necessários para validar as funcionalidades críticas.
+
+---
+
+# 17. TESTE DE BUILD
+
+O projeto deve obrigatoriamente passar pelo build.
+
+Verifique:
+
+* TypeScript;
+* imports;
+* exports;
+* assets;
+* environment variables;
+* aliases;
+* bundling;
+* dependências;
+* warnings relevantes.
+
+Warnings relevantes devem ser investigados.
+
+Não ignore erro de build.
+
+---
+
+# 18. TYPESCRIPT
+
+Não deixe:
+
+* `any` desnecessário;
+* casts perigosos;
+* tipos inconsistentes;
+* propriedades inexistentes;
+* parâmetros incompatíveis;
+* promises não tratadas;
+* possíveis `undefined`;
+* possíveis `null`;
+* interfaces divergentes.
+
+Corrija a origem do problema.
+
+---
+
+# 19. CONSOLE E LOGS
+
+Investigue:
+
+```text
+console.error
+console.warn
+Unhandled Promise Rejection
+Uncaught Error
+Network Error
+Failed to fetch
+404
+500
+CORS
+TypeError
+ReferenceError
+```
+
+Não esconda erros simplesmente removendo logs.
+
+Determine a causa.
+
+---
+
+# 20. DADOS MOCKADOS
+
+Dados mockados podem existir somente quando forem claramente utilizados para:
+
+* testes automatizados;
+* desenvolvimento controlado;
+* demonstração explicitamente separada;
+* fixtures.
+
+Dados mockados NÃO podem permanecer como mecanismo operacional de:
+
+* salvar;
+* editar;
+* excluir;
+* consultar;
+* movimentar estoque;
+* registrar pedidos;
+* administrar concessionárias;
+* autenticar usuários.
+
+Se uma funcionalidade real ainda depender de mock, ela deve ser identificada e migrada.
 
 ---
 
 # 21. AUTENTICAÇÃO E AUTORIZAÇÃO
 
-Se já existir autenticação:
+Teste:
 
-* preservar arquitetura existente quando adequada;
-* corrigir falhas;
-* testar login;
-* testar sessão;
-* testar logout;
-* testar permissões;
-* testar acesso indevido.
+* login;
+* logout;
+* sessão;
+* usuário inválido;
+* senha inválida;
+* sessão expirada;
+* acesso sem autenticação;
+* permissões;
+* acesso indevido;
+* proteção de endpoints;
+* proteção de telas.
 
-Esconder botão no frontend não é autorização.
-
-A autorização deve ser validada no backend.
-
----
-
-# 22. FRONTEND
-
-O frontend deve:
-
-* consumir APIs reais;
-* exibir loading;
-* exibir erros;
-* exibir estados vazios;
-* atualizar dados após operações;
-* invalidar/refazer consultas quando necessário;
-* não manter estado falso de sucesso.
-
-Depois de criar/editar/excluir:
-
-
-API
-↓
-Banco
-↓
-Nova consulta
-↓
-Frontend atualizado
-
+Nunca deixe credenciais reais dentro do código.
 
 ---
 
-# 23. COMPONENTES ATUAIS
+# 22. VALIDAÇÃO E SEGURANÇA
 
-Views conhecidas:
+Verifique:
 
-* DashboardView
-* MontadoraDashboardView
-* PurchasePortalView
-* DealershipManagementView
-* PartsCatalogView
-* InventoryView
-* MonthlyCommitmentView
-* SalesCrmView
+* SQL Injection;
+* inputs não validados;
+* comandos SQL concatenados;
+* exposição de secrets;
+* tokens no frontend;
+* dados sensíveis em logs;
+* endpoints sem autorização;
+* CORS;
+* validação server-side;
+* validação client-side.
 
-Componentes EPC conhecidos:
+Use queries parametrizadas.
 
-* PartsCatalogView
-* PartsExplodedDiagram
-* PartsTable
-* PartsCartDrawer
-* PartsDiagramCarousel
-
-Antes de alterar componentes centrais, verificar todos os usos.
+Nunca concatene entrada do usuário diretamente em SQL.
 
 ---
 
-# 24. EPC
+# 23. TRANSAÇÕES
 
-Os hotspots devem possuir:
+Quando uma operação envolver múltiplas alterações relacionadas:
+
+```text
+BEGIN TRANSACTION
+    operação 1
+    operação 2
+    operação 3
+COMMIT
+```
+
+Em caso de erro:
+
+```text
+ROLLBACK
+```
+
+Não deixe o banco em estado parcialmente atualizado.
+
+---
+
+# 24. INTERFACE E UX
+
+Durante a auditoria, procure também:
+
+* botões sem ação;
+* links quebrados;
+* textos cortados;
+* componentes sobrepostos;
+* modais impossíveis de fechar;
+* scroll quebrado;
+* loading infinito;
+* estado vazio incorreto;
+* mensagens de erro ausentes;
+* dados incorretos;
+* labels inconsistentes;
+* problemas de responsividade;
+* problemas de modo escuro.
+
+Corrija problemas reais encontrados.
+
+Não faça alterações cosméticas desnecessárias.
+
+---
+
+# 25. FLUXOS CRÍTICOS
+
+Teste especialmente todos os fluxos de negócio.
+
+No mínimo:
+
+## Concessionárias
+
+* listar;
+* pesquisar;
+* filtrar;
+* visualizar;
+* cadastrar;
+* editar;
+* salvar;
+* consultar novamente.
+
+## Pedidos
+
+* criar;
+* adicionar itens;
+* remover itens;
+* alterar quantidade;
+* calcular valores;
+* salvar;
+* consultar;
+* editar;
+* cancelar;
+* confirmar persistência.
+
+## Peças
+
+* catálogo;
+* pesquisa;
+* filtros;
+* modelo;
+* diagrama;
+* hotspot;
+* peça;
+* quantidade;
+* carrinho;
+* pedido.
+
+## Estoque
+
+* consulta;
+* filtros;
+* disponibilidade;
+* movimentação quando aplicável;
+* atualização;
+* persistência.
+
+## Dashboard
+
+* carregamento;
+* indicadores;
+* filtros;
+* dados reais;
+* atualização.
+
+---
+
+# 26. EPC / CATÁLOGO DE PEÇAS
+
+Preservar as regras existentes do projeto.
+
+Hotspots devem possuir:
 
 * `id` único;
-* `ref` correspondente.
+* `ref` correspondente;
+* possibilidade de múltiplos hotspots com o mesmo `ref`.
 
-O mesmo `ref` pode aparecer em mais de um hotspot.
+O estado visual deve utilizar o identificador único do hotspot.
 
-Para hover, utilizar:
+Não substituir a lógica por `hoveredRef` quando houver hotspots duplicados.
 
+Preservar:
 
-hoveredHotspotId
+* imagens oficiais existentes;
+* `BASE_IMG`;
+* diagramas;
+* hotspots;
+* referências;
+* peças;
+* relacionamento entre diagrama e peça.
 
-
-Não utilizar:
-
-
-hoveredRef
-
-
-como identificador único de hover.
-
-Preservar essa regra.
-
----
-
-# 25. IMAGENS
-
-Utilizar a estrutura existente:
-
-
-BASE_IMG
-
-
-em:
-
-
-src/data/mockPartsModels.ts
-
-
-Não adicionar imagens genéricas ou fontes externas sem necessidade.
+Não substituir imagens existentes por imagens genéricas.
 
 ---
 
-# 26. TESTES COMPLETOS
+# 27. GRAPHIFY
 
-Executar todos os testes disponíveis.
+Antes de alterações arquiteturais ou relacionais:
 
-Se não houver testes suficientes, criar.
+1. verificar `graphify-out/graph.json`;
+2. utilizar `graphify query`;
+3. utilizar `graphify path` quando necessário;
+4. utilizar `graphify explain` quando necessário.
 
-Prioridade:
+Após modificar `.ts` ou `.tsx`:
 
-1. banco;
-2. repositories;
-3. services;
-4. APIs;
-5. autenticação;
-6. autorização;
-7. pedidos;
-8. estoque;
-9. concessionárias;
-10. catálogo;
-11. EPC;
-12. CRM;
-13. componentes críticos;
-14. E2E.
+```bash
+graphify update .
+```
 
----
+Se existir lock obsoleto:
 
-# 27. TESTES DE BANCO
+```bash
+rm -f graphify-out/.rebuild.lock
+```
 
-Os testes de banco devem validar o comportamento real sempre que possível.
-
-Não criar somente testes que mockam o repository para fingir que o SQL funciona.
-
-Quando o objetivo for validar persistência, executar contra um SQL Server de teste/desenvolvimento configurado para isso.
-
-Validar:
-
-* conexão;
-* migration;
-* schema;
-* INSERT;
-* SELECT;
-* UPDATE;
-* DELETE;
-* FK;
-* constraints;
-* índices quando relevante;
-* transações;
-* rollback;
-* erros.
+e continue.
 
 ---
 
-# 28. TESTES DE API
+# 28. DETECÇÃO PROATIVA DE BUGS
 
-Validar:
+Não espere que um teste encontre todos os problemas.
 
-* status HTTP;
-* payload;
-* validação;
-* autenticação;
-* autorização;
-* erros;
-* banco;
-* persistência;
-* respostas vazias;
-* registros inexistentes.
+Procure ativamente:
 
----
-
-# 29. TESTES E2E
-
-Quando a infraestrutura permitir, testar fluxos reais:
-
-
-Login
-↓
-Dashboard
-↓
-Concessionária
-↓
-Pedido
-↓
-Persistência
-↓
-Consulta
-↓
-Alteração
-↓
-Atualização da interface
-
-
-Também testar os principais fluxos do catálogo, estoque e CRM.
+* race conditions;
+* estados inconsistentes;
+* chamadas duplicadas;
+* memory leaks;
+* listeners não removidos;
+* promises sem tratamento;
+* estados impossíveis;
+* dados desatualizados;
+* cache incorreto;
+* problemas de concorrência;
+* erros de paginação;
+* problemas de timezone;
+* problemas de arredondamento;
+* problemas de ordenação;
+* problemas de filtros;
+* inconsistência entre frontend e banco;
+* inconsistência entre telas.
 
 ---
 
-# 30. CICLO AUTOMÁTICO DE CORREÇÃO
+# 29. REGRA DE CAUSA RAIZ
 
-Este ciclo é obrigatório:
+Para cada erro encontrado, responda internamente:
 
+1. O que aconteceu?
+2. Onde aconteceu?
+3. Por que aconteceu?
+4. Qual é a causa raiz?
+5. A correção resolve somente o sintoma ou a causa?
+6. Que outras funcionalidades podem possuir o mesmo problema?
+7. Qual teste impedirá que isso volte a acontecer?
 
+Sempre que possível, adicione ou melhore um teste de regressão.
+
+---
+
+# 30. LOOP AUTÔNOMO
+
+Continue executando:
+
+```text
 AUDITAR
-↓
-IMPLEMENTAR
 ↓
 TESTAR
 ↓
-ENCONTRAR ERRO
-↓
-ANALISAR CAUSA RAIZ
+ENCONTRAR ERROS
 ↓
 CORRIGIR
 ↓
-TESTAR NOVAMENTE
+TESTAR
 ↓
-TESTAR REGRESSÃO
+ENCONTRAR NOVOS ERROS
 ↓
-CONTINUAR AUDITORIA
+CORRIGIR
 ↓
-REPETIR
+TESTAR
+↓
+REGRESSÃO
+↓
+AUDITAR NOVAMENTE
+```
 
+Repita até atingir todos os critérios de aceite.
 
-O agente não deve parar após encontrar o primeiro resultado positivo.
+NÃO pare porque:
 
----
-
-# 31. PROCURAR BUGS PROATIVAMENTE
-
-Pesquisar por:
-
-
-TODO
-FIXME
-HACK
-XXX
-mock
-stub
-placeholder
-fake
-dummy
-temporary
-console.log
-any
-@ts-ignore
-eslint-disable
-localStorage
-sessionStorage
-
-
-Também procurar:
-
-* funções vazias;
-* promises sem tratamento;
-* endpoints quebrados;
-* endpoints inexistentes;
-* imports incorretos;
-* tipos incorretos;
-* estados inconsistentes;
-* componentes mortos;
-* código duplicado;
-* dados hardcoded;
-* respostas simuladas;
-* mensagens falsas de sucesso;
-* erros silenciosos.
-
-Não corrigir cegamente.
-
-Determinar o propósito de cada ocorrência.
+* o primeiro erro foi corrigido;
+* o build passou;
+* os testes unitários passaram;
+* uma tela passou;
+* o sistema abriu.
 
 ---
 
-# 32. NÃO ESCONDER ERROS
+# 31. DEFINIÇÃO DE "100% FUNCIONAL"
 
-Não utilizar:
+Considere o projeto aprovado somente quando:
 
+### Código
 
-any
-@ts-ignore
-eslint-disable
-test.skip
-describe.skip
-it.skip
-catch vazio
+* [ ] TypeScript sem erros
+* [ ] lint sem erros
+* [ ] build funcionando
+* [ ] imports corretos
+* [ ] dependências corretas
 
+### Frontend
 
-para esconder problemas.
+* [ ] todas as rotas funcionando
+* [ ] todas as telas carregando
+* [ ] botões funcionando
+* [ ] formulários funcionando
+* [ ] filtros funcionando
+* [ ] pesquisas funcionando
+* [ ] modais funcionando
+* [ ] navegação funcionando
+* [ ] tratamento de erro funcionando
 
-Só utilizar uma exceção quando houver justificativa técnica documentada.
+### Backend
 
----
+* [ ] API funcionando
+* [ ] endpoints funcionando
+* [ ] validações funcionando
+* [ ] autenticação funcionando
+* [ ] autorização funcionando
+* [ ] tratamento de erros funcionando
 
-# 33. TYPESCRIPT
+### Banco
 
-Manter TypeScript estrito quando já configurado.
+* [ ] SQL Server conectado
+* [ ] migrations funcionando
+* [ ] tabelas corretas
+* [ ] relacionamentos corretos
+* [ ] constraints funcionando
+* [ ] CRUD funcionando
+* [ ] transações funcionando
+* [ ] persistência comprovada
 
-Não utilizar `any` indiscriminadamente.
+### Integração
 
-Corrigir erros de tipo na origem.
+* [ ] Frontend → API funcionando
+* [ ] API → SQL Server funcionando
+* [ ] SQL Server → API funcionando
+* [ ] API → Frontend funcionando
 
----
+### Testes
 
-# 34. TRATAMENTO DE ERROS
-
-Todas as operações assíncronas devem possuir tratamento apropriado.
-
-Não retornar sucesso quando uma operação falhou.
-
-O frontend deve conseguir distinguir:
-
-
-loading
-success
-error
-empty
-
-
----
-
-# 35. SEGURANÇA
-
-Nunca commitar:
-
-* senhas;
-* tokens;
-* API keys;
-* secrets;
-* certificados;
-* credenciais SQL Server.
-
-Utilizar:
-
-
-.env
-.env.local
-.env.example
-
-
-conforme a arquitetura existente.
-
-Nunca colocar senha do banco diretamente no código.
+* [ ] testes unitários
+* [ ] testes de integração
+* [ ] testes de API
+* [ ] testes de banco
+* [ ] testes E2E
+* [ ] testes de regressão
+* [ ] build
+* [ ] lint
+* [ ] typecheck
 
 ---
 
-# 36. VARIÁVEIS SQL SERVER
+# 32. CRITÉRIO ESPECIAL DE PERSISTÊNCIA
 
-Identificar as variáveis necessárias para conexão.
+Para considerar uma funcionalidade como funcionando:
 
-Exemplo conceitual:
+> O dado precisa sobreviver ao encerramento/reabertura da aplicação.
 
+Exemplo:
 
-DB_HOST
-DB_PORT
-DB_NAME
-DB_USER
-DB_PASSWORD
+```text
+Cadastrar concessionária
+↓
+Salvar
+↓
+Confirmar no SQL Server
+↓
+Fechar aplicação
+↓
+Abrir aplicação novamente
+↓
+Pesquisar concessionária
+↓
+Registro continua existindo
+```
 
-
-Os nomes reais devem respeitar a arquitetura existente.
-
-Documentar variáveis necessárias no `.env.example`.
-
----
-
-# 37. CONEXÃO COM SQL SERVER
-
-A conexão deve possuir:
-
-* pool quando apropriado;
-* timeout;
-* tratamento de erro;
-* fechamento correto;
-* reutilização da conexão/pool;
-* configuração por ambiente.
-
-Não abrir uma conexão nova indiscriminadamente para cada consulta se a biblioteca utilizada suportar pooling.
+Se isso não ocorrer, a funcionalidade NÃO está funcionando.
 
 ---
 
-# 38. OBSERVABILIDADE
+# 33. NÃO UTILIZAR HACKS
 
-Adicionar logs úteis para:
+É proibido:
 
-* erro de API;
-* erro de banco;
-* falha de integração;
-* operações importantes.
+* comentar código quebrado;
+* remover funcionalidade para eliminar erro;
+* esconder exceções;
+* ignorar testes;
+* marcar teste como skip sem justificativa;
+* usar `any` para esconder erro;
+* usar valores fixos para simular resposta;
+* retornar sucesso falso;
+* criar mocks para mascarar problemas;
+* capturar exceção e ignorar;
+* remover validação para fazer teste passar.
 
-Não registrar:
-
-* senhas;
-* tokens;
-* secrets;
-* dados sensíveis desnecessários.
-
----
-
-# 39. PERFORMANCE
-
-Depois de implementar a persistência, verificar:
-
-* queries N+1;
-* consultas sem filtros;
-* SELECT desnecessário;
-* índices ausentes;
-* consultas duplicadas;
-* chamadas repetidas da API;
-* grandes volumes carregados no frontend.
-
-Não fazer otimização prematura.
-
-Primeiro garantir correção.
+A solução deve corrigir o problema real.
 
 ---
 
-# 40. GRAPHIFY
+# 34. DOCUMENTAÇÃO DOS PROBLEMAS
 
-Existe:
+Mantenha registro dos problemas encontrados durante a execução.
 
+Para cada problema:
 
-graphify-out/graph.json
+```text
+Problema:
+Causa:
+Arquivo:
+Correção:
+Teste utilizado:
+Resultado:
+```
 
-
-Antes de alterações arquiteturais importantes:
-
-
-graphify query "<pergunta>"
-
-
-Para relacionamentos:
-
-
-graphify path "<ComponentA>" "<ComponentB>"
-
-
-Para conceitos:
-
-
-graphify explain "<Conceito>"
-
-
-Após alterações em:
-
-
-.ts
-.tsx
-
-
-executar:
-
-
-graphify update .
-
-
-Se existir lock stale:
-
-
-rm -f graphify-out/.rebuild.lock
-
-
-e continuar.
+Ao final, não devem existir problemas conhecidos sem tratamento, exceto bloqueios externos explicitamente documentados.
 
 ---
 
-# 41. GIT
+# 35. BLOQUEIOS EXTERNOS
 
-Repositório:
+Se um teste não puder ser executado por depender de algo externo:
 
+* identifique exatamente o bloqueio;
+* não invente resultado;
+* não marque como aprovado;
+* tente todas as alternativas seguras disponíveis;
+* documente o bloqueio.
 
-github.com/eaugustod/Portal_Suzuki
+Exemplos:
 
+* SQL Server inacessível;
+* credencial inexistente;
+* serviço externo indisponível;
+* infraestrutura inexistente.
 
-Branch principal:
+Não simule aprovação.
 
+---
 
-main
+# 36. SQL SERVER E CREDENCIAIS
 
+Nunca invente credenciais.
 
-Após alterações significativas e validação:
+Nunca commite:
 
+* senha;
+* token;
+* secret;
+* connection string com credencial real;
+* chave privada.
 
+Utilize variáveis de ambiente.
+
+Exemplo:
+
+```env
+DB_HOST=
+DB_PORT=
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+```
+
+Se as variáveis forem necessárias e não estiverem disponíveis, identifique o bloqueio claramente.
+
+---
+
+# 37. GIT
+
+Após alterações significativas:
+
+```bash
 git status
 git diff
+```
+
+Revise as alterações.
+
+Depois:
+
+```bash
 git add -A
-git commit -m "mensagem descritiva"
+git commit -m "fix: complete system audit and corrections"
 git push
+```
 
+Não faça commit de:
 
-Nunca adicionar secrets.
-
----
-
-# 42. BUILD
-
-O agente deve descobrir os scripts existentes no `package.json`.
-
-Executar os comandos apropriados para:
-
-* testes;
-* lint;
-* type-check;
-* build;
-* E2E;
-* migrations;
-* Graphify.
-
-Não inventar comandos se o projeto já possuir scripts específicos.
+* secrets;
+* `.env`;
+* arquivos temporários;
+* logs;
+* artefatos desnecessários;
+* credenciais.
 
 ---
 
-# 43. DEFINIÇÃO DE "SEM ERROS"
+# 38. CHECKPOINTS
 
-O projeto deve ser considerado estabilizado quando:
+Após grandes blocos de trabalho:
 
-* testes existentes passam;
-* novos testes críticos passam;
-* type-check passa;
-* lint passa quando configurado;
-* build passa;
-* migrations funcionam;
-* conexão com SQL Server funciona;
-* CRUD crítico funciona;
-* persistência funciona;
-* consultas funcionam;
-* erros são tratados;
-* frontend utiliza dados reais;
-* mocks operacionais foram removidos;
-* não existem bugs críticos conhecidos.
-
-Não declarar "sem erros" se houver falhas conhecidas.
-
-Nesse caso, corrigir primeiro.
+1. salvar alterações;
+2. executar testes;
+3. verificar diff;
+4. confirmar que não houve regressão;
+5. continuar.
 
 ---
 
-# 44. CRITÉRIO DE ACEITE DO BANCO
+# 39. ORDEM DE EXECUÇÃO OBRIGATÓRIA
 
-Antes de considerar o projeto concluído, comprovar:
+Execute nesta ordem:
 
+## FASE 1 — AUDITORIA
 
-[ ] SQL Server conecta
-[ ] Banco existe
-[ ] Schema existe
-[ ] Migrations executam
-[ ] Tabelas existem
-[ ] Constraints existem
-[ ] Foreign keys funcionam
-[ ] Índices necessários existem
-[ ] INSERT funciona
-[ ] SELECT funciona
-[ ] UPDATE funciona
-[ ] DELETE funciona quando aplicável
-[ ] Transações funcionam quando aplicáveis
-[ ] Erros são tratados
-[ ] Frontend utiliza dados persistidos
-[ ] Dados sobrevivem ao reload da aplicação
-[ ] Dados sobrevivem à nova consulta
-[ ] Dados não dependem de mock
+* analisar arquitetura;
+* analisar código;
+* analisar telas;
+* analisar banco;
+* analisar APIs;
+* analisar mocks;
+* analisar testes.
 
+## FASE 2 — INFRAESTRUTURA
 
----
+* garantir configuração;
+* garantir SQL Server;
+* garantir migrations;
+* garantir API;
+* garantir conexão.
 
-# 45. CRITÉRIO DE ACEITE DO PORTAL
+## FASE 3 — FUNCIONALIDADES
 
-Verificar as funcionalidades existentes e classificá-las:
+* corrigir backend;
+* corrigir banco;
+* corrigir frontend;
+* remover mocks operacionais;
+* implementar persistência real.
 
+## FASE 4 — TESTES
 
-FUNCIONANDO COM BANCO
-FUNCIONANDO SEM NECESSIDADE DE BANCO
-IMPLEMENTADO E TESTADO
-CORRIGIDO
-PENDENTE POR DEPENDÊNCIA EXTERNA
+Executar:
 
+```text
+TypeScript
+↓
+Lint
+↓
+Unit
+↓
+API
+↓
+Integration
+↓
+Database
+↓
+E2E
+↓
+Build
+```
 
-Não classificar como funcionando algo que depende de mock quando deveria utilizar banco.
+## FASE 5 — AUDITORIA VISUAL/INTERATIVA
 
----
+Tela por tela.
 
-# 46. REGRA PARA DADOS DO PROTHEUS
+Processo por processo.
 
-Quando a funcionalidade depender de dados que pertencem ao Protheus:
+Botão por botão.
 
-1. identificar a origem;
-2. verificar se já existe integração;
-3. verificar views/queries;
-4. não duplicar dados sem necessidade;
-5. implementar camada de integração apropriada;
-6. tratar indisponibilidade;
-7. testar a integração.
+## FASE 6 — CORREÇÕES
 
-Não inventar dados do Protheus.
+Para cada problema:
 
----
+```text
+Encontrar
+→ reproduzir
+→ analisar
+→ corrigir
+→ testar
+→ regressão
+```
 
-# 47. RELATÓRIO FINAL OBRIGATÓRIO
+## FASE 7 — TESTE FINAL
 
-Ao finalizar a execução, apresentar:
+Executar novamente toda a suíte.
 
-## 1. RESUMO
+## FASE 8 — ENTREGA
 
-O que foi feito.
-
-## 2. MOCKS REMOVIDOS
-
-Listar os mocks substituídos por persistência real.
-
-## 3. BANCO SQL SERVER
-
-Listar:
-
-* database;
-* schema;
-* tabelas;
-* migrations;
-* views;
-* índices;
-* constraints;
-* relacionamentos.
-
-## 4. API
-
-Listar endpoints criados ou corrigidos.
-
-## 5. FRONTEND
-
-Listar telas conectadas ao banco.
-
-## 6. TESTES
-
-Informar:
-
-* testes unitários;
-* integração;
-* API;
-* banco;
-* E2E.
-
-## 7. VALIDAÇÕES
-
-Informar:
-
-
-Tests: PASS/FAIL
-Lint: PASS/FAIL
-Type-check: PASS/FAIL
-Build: PASS/FAIL
-Database: PASS/FAIL
-E2E: PASS/FAIL
-Graphify: UPDATED/NOT APPLICABLE
-
-
-## 8. BUGS CORRIGIDOS
-
-Listar os principais.
-
-## 9. GIT
-
-Informar:
-
-* commit;
-* branch;
-* push.
-
-## 10. PENDÊNCIAS
-
-Somente pendências reais que dependam de algo externo ou de decisão que o agente não possa tomar.
+Somente finalizar quando os critérios de aceite forem atendidos.
 
 ---
 
-# 48. REGRA FINAL
+# 40. REGRA FINAL
 
-O objetivo deste projeto não é criar uma demonstração.
+Você não está aqui apenas para escrever código.
 
-O objetivo é entregar um **Portal Suzuki funcional e persistente**.
+Você está aqui para:
 
-Portanto:
+> **AUDITAR → TESTAR → ENCONTRAR → ENTENDER → CORRIGIR → VALIDAR → REPETIR**
 
-**Não simule persistência.**
+até que o Portal Suzuki esteja realmente funcional.
 
-**Não esconda erros.**
+Não declare sucesso antecipadamente.
 
-**Não pare no primeiro teste positivo.**
+Não considere "sem erros aparentes" como "100% funcional".
 
-**Não considere o frontend funcional se o backend estiver quebrado.**
+A conclusão deve ser baseada em evidências de testes.
 
-**Não considere o backend funcional se o banco não persistir.**
+Se encontrar um problema, corrija.
 
-**Não considere o banco funcional se as migrations não forem reproduzíveis.**
+Se a correção gerar outro problema, corrija.
 
-**Não considere uma funcionalidade pronta se os testes críticos não passarem.**
+Se um teste revelar outro problema, corrija.
 
-**Não remova testes para fazer o projeto passar.**
+Continue até que:
 
-**Não peça confirmação para correções normais.**
-
-Execute o ciclo completo:
-
-
-AUDITORIA
-→ ARQUITETURA
-→ SQL SERVER
-→ MIGRATIONS
-→ PERSISTÊNCIA
-→ API
-→ FRONTEND
-→ TESTES
-→ BUGS
-→ CORREÇÕES
-→ REGRESSÃO
-→ LINT
-→ TYPE-CHECK
-→ BUILD
-→ E2E
-→ GRAPHIFY
-→ GIT
-→ VALIDAÇÃO FINAL
-
-
-Continue até atingir o máximo de estabilidade possível dentro do ambiente disponível.
+**O SISTEMA ESTEJA FUNCIONAL, PERSISTENTE, TESTADO E SEM ERROS CONHECIDOS.**

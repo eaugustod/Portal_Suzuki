@@ -23,6 +23,7 @@ import {
   CalendarCheck,
   Package,
   Users,
+  Tag,
   Sun,
   Moon
 } from 'lucide-react';
@@ -72,6 +73,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'national_price_matrix' as NavTab, label: 'Matriz Preços & Cores', icon: Bike },
     { id: 'freight_table' as NavTab, label: 'Gestão de Fretes & UF', icon: Truck },
     { id: 'payment_conditions' as NavTab, label: 'Condições de Pagamento', icon: CreditCard },
+    { id: 'brand_management' as NavTab, label: 'Cadastro de Marcas', icon: Tag },
     { id: 'model_matrix' as NavTab, label: 'Habilitação Modelos/Cores', icon: Layers },
     { id: 'approval_workflow' as NavTab, label: 'Workflow de Aprovação', icon: ShieldCheck },
     { id: 'user_management' as NavTab, label: 'Gestão de Usuários (Login)', icon: Users },

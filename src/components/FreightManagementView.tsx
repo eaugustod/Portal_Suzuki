@@ -1,10 +1,32 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { FreightRateEntry, BrazilRegion } from '../types';
+import { FreightRateEntry, BrazilRegion, BrandType } from '../types';
+import { DEFAULT_BRAND_NAMES } from '../data/mockBrandsData';
 import { api } from '../services/api';
-import { Truck, Plus, Search, Filter, Edit3, Trash2, CheckCircle2, Building2, MapPin, DollarSign, Clock, AlertTriangle } from 'lucide-react';
+import { Truck, Plus, Search, Filter, Edit3, Trash2, CheckCircle2, Building2, MapPin, DollarSign, Clock, AlertTriangle, Tag } from 'lucide-react';
+
+const getBrandBadge = (brand?: BrandType) => {
+  const b = brand || 'Suzuki';
+  switch (b) {
+    case 'Suzuki':
+      return 'bg-red-100 dark:bg-red-950/80 text-red-700 dark:text-red-300 border-red-300 dark:border-red-800';
+    case 'Haojue':
+      return 'bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-800';
+    case 'Zontes':
+      return 'bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-800';
+    case 'Kymco':
+      return 'bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border-purple-300 dark:border-purple-800';
+    case 'Hisun':
+      return 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800';
+    case 'Quadriciclos':
+      return 'bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border-indigo-300 dark:border-indigo-800';
+    default:
+      return 'bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-300 dark:border-neutral-700';
+  }
+};
 
 const emptyEntry = (): FreightRateEntry => ({
   id: `frt-${Date.now()}`,
+  brand: 'Suzuki',
   state: 'SP',
   region: 'Sudeste',
   originWarehouse: 'empresa_13_armazem',
@@ -21,6 +43,7 @@ export const FreightManagementView: React.FC = () => {
   const [isNewEntry, setIsNewEntry] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+  const [brandFilter, setBrandFilter] = useState<string>('all');
   const [regionFilter, setRegionFilter] = useState<string>('all');
   const [warehouseFilter, setWarehouseFilter] = useState<string>('all');
 
@@ -52,10 +75,16 @@ export const FreightManagementView: React.FC = () => {
   useEffect(() => { loadEntries(); }, [loadEntries]);
 
   const filteredEntries = freightEntries.filter(entry => {
-    const matchSearch = entry.state.toLowerCase().includes(searchTerm.toLowerCase()) || entry.originWarehouseLabel.toLowerCase().includes(searchTerm.toLowerCase());
+    const brandVal = entry.brand || 'Suzuki';
+    const matchSearch =
+      brandVal.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      entry.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      entry.originWarehouseLabel.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      entry.region.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchBrand = brandFilter === 'all' || brandVal === brandFilter;
     const matchRegion = regionFilter === 'all' || entry.region === regionFilter;
     const matchWarehouse = warehouseFilter === 'all' || entry.originWarehouse === warehouseFilter;
-    return matchSearch && matchRegion && matchWarehouse;
+    return matchSearch && matchBrand && matchRegion && matchWarehouse;
   });
 
   const handleOpenAdd = () => {
@@ -161,14 +190,25 @@ export const FreightManagementView: React.FC = () => {
           <Search className="w-4 h-4 text-neutral-500 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
-            placeholder="Buscar por Estado (UF) ou Armazém..."
+            placeholder="Buscar por Marca, Estado (UF) ou Armazém..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl pl-9 pr-3 py-2 text-xs text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-amber-500"
           />
         </div>
 
-        <div className="flex items-center gap-2 w-full sm:w-auto">
+        <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+          <select
+            value={brandFilter}
+            onChange={(e) => setBrandFilter(e.target.value)}
+            className="bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-900 dark:text-neutral-300 focus:outline-none"
+          >
+            <option value="all">Todas as Marcas</option>
+            {DEFAULT_BRAND_NAMES.map((b) => (
+              <option key={b} value={b}>{b}</option>
+            ))}
+          </select>
+
           <select
             value={regionFilter}
             onChange={(e) => setRegionFilter(e.target.value)}
@@ -213,6 +253,7 @@ export const FreightManagementView: React.FC = () => {
           <table className="w-full text-left text-xs">
             <thead className="bg-neutral-100 dark:bg-[#121215] border-b border-neutral-200 dark:border-[#27272a] text-neutral-500 dark:text-neutral-400 font-bold uppercase text-[10px]">
               <tr>
+                <th className="py-3 px-4">Marca</th>
                 <th className="py-3 px-4">UF / Estado</th>
                 <th className="py-3 px-4">Região</th>
                 <th className="py-3 px-4">Tipo Localização</th>
@@ -225,6 +266,11 @@ export const FreightManagementView: React.FC = () => {
             <tbody className="divide-y divide-neutral-200 dark:divide-[#27272a] text-neutral-800 dark:text-neutral-200">
               {filteredEntries.map((entry) => (
                 <tr key={entry.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/60 transition-colors">
+                  <td className="py-3 px-4">
+                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider border ${getBrandBadge(entry.brand)}`}>
+                      {entry.brand || 'Suzuki'}
+                    </span>
+                  </td>
                   <td className="py-3 px-4 font-black text-neutral-900 dark:text-white font-mono text-sm">
                     {entry.state}
                   </td>
@@ -295,7 +341,21 @@ export const FreightManagementView: React.FC = () => {
 
             <div className="space-y-3 text-xs">
               <div>
-                <label className="text-neutral-500 dark:text-neutral-400 font-semibold block mb-1">Estado (UF)</label>
+                <label className="text-neutral-500 dark:text-neutral-400 font-semibold block mb-1">Marca *</label>
+                <select
+                  value={editingEntry.brand || 'Suzuki'}
+                  onChange={(e) => setEditingEntry({ ...editingEntry, brand: e.target.value as BrandType })}
+                  className="w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl px-3 py-2 text-neutral-900 dark:text-white font-bold"
+                >
+                  <option value="Suzuki">Suzuki</option>
+                  {DEFAULT_BRAND_NAMES.filter(b => b !== 'Suzuki').map((b) => (
+                    <option key={b} value={b}>{b}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="text-neutral-500 dark:text-neutral-400 font-semibold block mb-1">Estado (UF) *</label>
                 <input
                   type="text"
                   maxLength={2}

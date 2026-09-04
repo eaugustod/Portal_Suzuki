@@ -91,6 +91,14 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
 
   const uniqueModels = Array.from(new Set(inventory.map(i => i.model)));
   const uniqueColors = Array.from(new Set(inventory.map(i => i.color)));
+  // Dinâmico: lista de concessionárias com estoque (para a visão montadora)
+  const uniqueDealers = Array.from(new Set(inventory.map(i => i.dealershipId || 'motosul')));
+  const dealerOptions = uniqueDealers
+    .map(id => ({
+      id,
+      name: (DEALERSHIP_PROFILES[id]?.shortName || DEALERSHIP_PROFILES[id]?.name || id).replace('Suzuki ', '').replace(' Suzuki', '')
+    }))
+    .filter(d => d.id !== 'jtoledo');
 
   const handleCreateVehicle = (e: React.FormEvent) => {
     e.preventDefault();
@@ -343,12 +351,12 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
           {/* Tabela de Matriz */}
           <div className="overflow-x-auto">
             {currentScope === 'jtoledo' ? (
-              /* Visão Montadora: Rede vs Modelos */
+              /* Visão Montadora: Rede vs Modelos (dinâmico) */
               <table className="w-full text-left border-separate border-spacing-y-2.5 border-spacing-x-2.5">
                 <thead>
                   <tr className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
                     <th className="py-3 px-4 bg-neutral-100 dark:bg-neutral-900/60 rounded-xl">CONCESSIONÁRIA</th>
-                    {['V-STROM 650', 'HAYABUSA', 'DR-160', 'MASTER RIDE', 'ZONTES T310', 'BURGMAN'].map(mName => (
+                    {uniqueModels.map(mName => (
                       <th key={mName} className="py-3 px-4 text-center bg-neutral-100 dark:bg-neutral-900/60 rounded-xl min-w-[130px]">
                         {mName}
                       </th>
@@ -356,25 +364,16 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                   </tr>
                 </thead>
                 <tbody>
-                  {[
-                    { id: 'novamotor', name: 'Soma Motos SP' },
-                    { id: 'rotabsb', name: 'Rota BSB' },
-                    { id: 'motosul', name: 'Motos Sul RS' },
-                    { id: 'nortemotos', name: 'Norte Motos AM' }
-                  ].map(dealer => (
+                  {dealerOptions.map(dealer => (
                     <tr key={dealer.id} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/40 transition-colors">
                       <td className="py-3.5 px-4 font-bold text-neutral-900 dark:text-white bg-neutral-50 dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
                         {dealer.name}
                       </td>
-                      {['V-STROM 650', 'HAYABUSA', 'DR-160', 'MASTER RIDE', 'ZONTES T310', 'BURGMAN'].map(mName => {
+                      {uniqueModels.map(mName => {
                         const count = inventory.filter(item => {
                           const itemDealer = item.dealershipId || 'motosul';
-                          const isDealerMatch = itemDealer === dealer.id || 
-                            (dealer.id === 'motosul' && itemDealer === 'motosul') ||
-                            (dealer.id === 'novamotor' && itemDealer === 'novamotor');
-                          
-                          const isModelMatch = item.model.toLowerCase().includes(mName.toLowerCase()) ||
-                            mName.toLowerCase().includes(item.model.toLowerCase());
+                          const isDealerMatch = itemDealer === dealer.id;
+                          const isModelMatch = item.model.toLowerCase() === mName.toLowerCase();
                           const isAvailable = item.status !== 'vendido';
                           return isDealerMatch && isModelMatch && isAvailable;
                         }).length;
@@ -399,12 +398,12 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                 </tbody>
               </table>
             ) : (
-              /* Visão Concessionária: Cores vs Modelos */
+              /* Visão Concessionária: Cores vs Modelos (dinâmico) */
               <table className="w-full text-left border-separate border-spacing-y-2.5 border-spacing-x-2.5">
                 <thead>
                   <tr className="text-[11px] font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
                     <th className="py-3 px-4 bg-neutral-100 dark:bg-neutral-900/60 rounded-xl">COR DO VEÍCULO</th>
-                    {['V-STROM 650', 'HAYABUSA', 'DR-160', 'GSX-S1000GX', 'ZONTES T310', 'BURGMAN'].map(mName => (
+                    {uniqueModels.map(mName => (
                       <th key={mName} className="py-3 px-4 text-center bg-neutral-100 dark:bg-neutral-900/60 rounded-xl min-w-[130px]">
                         {mName}
                       </th>
@@ -412,49 +411,45 @@ export const InventoryView: React.FC<InventoryViewProps> = ({
                   </tr>
                 </thead>
                 <tbody>
-                  {[
-                    { name: 'Azul Metálico', hex: '#1b3b6f' },
-                    { name: 'Preto Brilhante', hex: '#18181b' },
-                    { name: 'Branco Pérola', hex: '#f8fafc' },
-                    { name: 'Vermelho Racing', hex: '#dc2626' },
-                    { name: 'Cinza Fosco', hex: '#64748b' },
-                    { name: 'Amarelo Ouro', hex: '#eab308' }
-                  ].map(colorObj => (
-                    <tr key={colorObj.name} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/40 transition-colors">
-                      <td className="py-3.5 px-4 font-bold text-neutral-900 dark:text-white bg-neutral-50 dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
-                        <div className="flex items-center gap-2.5">
-                          <span 
-                            className="w-4 h-4 rounded-full border border-neutral-400 dark:border-neutral-600 shadow-sm shrink-0" 
-                            style={{ backgroundColor: colorObj.hex }}
-                          />
-                          <span>{colorObj.name}</span>
-                        </div>
-                      </td>
-                      {['V-STROM 650', 'HAYABUSA', 'DR-160', 'GSX-S1000GX', 'ZONTES T310', 'BURGMAN'].map(mName => {
-                        const count = inventory.filter(item => {
-                          const isDealerMatch = currentScope === 'jtoledo' || item.dealershipId === currentScope || (!item.dealershipId && currentScope === 'motosul');
-                          const isColorMatch = item.color.toLowerCase().includes(colorObj.name.toLowerCase()) || colorObj.name.toLowerCase().includes(item.color.toLowerCase());
-                          const isModelMatch = item.model.toLowerCase().includes(mName.toLowerCase()) || mName.toLowerCase().includes(item.model.toLowerCase());
-                          return isDealerMatch && isColorMatch && item.status !== 'vendido';
-                        }).length;
+                  {uniqueColors.map(colorName => {
+                    const colorHex = inventory.find(i => i.color === colorName)?.colorHex || '#64748b';
+                    return (
+                      <tr key={colorName} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/40 transition-colors">
+                        <td className="py-3.5 px-4 font-bold text-neutral-900 dark:text-white bg-neutral-50 dark:bg-neutral-900/90 rounded-xl text-sm border border-neutral-200 dark:border-neutral-800/80 shadow-sm">
+                          <div className="flex items-center gap-2.5">
+                            <span
+                              className="w-4 h-4 rounded-full border border-neutral-400 dark:border-neutral-600 shadow-sm shrink-0"
+                              style={{ backgroundColor: colorHex }}
+                            />
+                            <span>{colorName}</span>
+                          </div>
+                        </td>
+                        {uniqueModels.map(mName => {
+                          const count = inventory.filter(item => {
+                            const isDealerMatch = currentScope === 'jtoledo' || item.dealershipId === currentScope || (!item.dealershipId && currentScope === 'motosul');
+                            const isColorMatch = item.color.toLowerCase() === colorName.toLowerCase();
+                            const isModelMatch = item.model.toLowerCase() === mName.toLowerCase();
+                            return isDealerMatch && isColorMatch && isModelMatch && item.status !== 'vendido';
+                          }).length;
 
-                        let cellBg = 'bg-slate-100 dark:bg-[#1e293b]/60 text-slate-800 dark:text-neutral-300 border-slate-200 dark:border-neutral-700/60';
-                        if (count === 0) {
-                          cellBg = 'bg-rose-600 text-white font-black border-rose-500 shadow-md shadow-rose-950/20';
-                        } else if (count <= 4) {
-                          cellBg = 'bg-amber-500 text-slate-950 font-extrabold border-amber-400 shadow-md shadow-amber-950/20';
-                        }
+                          let cellBg = 'bg-slate-100 dark:bg-[#1e293b]/60 text-slate-800 dark:text-neutral-300 border-slate-200 dark:border-neutral-700/60';
+                          if (count === 0) {
+                            cellBg = 'bg-rose-600 text-white font-black border-rose-500 shadow-md shadow-rose-950/20';
+                          } else if (count <= 4) {
+                            cellBg = 'bg-amber-500 text-slate-950 font-extrabold border-amber-400 shadow-md shadow-amber-950/20';
+                          }
 
-                        return (
-                          <td key={mName} className="text-center p-0">
-                            <div className={`py-3.5 rounded-xl border font-mono font-bold text-base transition-transform hover:scale-105 cursor-default ${cellBg}`}>
-                              {count}
-                            </div>
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
+                          return (
+                            <td key={mName} className="text-center p-0">
+                              <div className={`py-3.5 rounded-xl border font-mono font-bold text-base transition-transform hover:scale-105 cursor-default ${cellBg}`}>
+                                {count}
+                              </div>
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             )}

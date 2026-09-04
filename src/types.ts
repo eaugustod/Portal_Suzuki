@@ -7,6 +7,7 @@ export type NavTab =
   | 'freight_table'
   | 'payment_conditions'
   | 'model_matrix'
+  | 'brand_management'
   | 'approval_workflow'
   | 'parts_catalog' 
   | 'inventory' 
@@ -193,7 +194,27 @@ export type DealershipFullProfile = Required<Pick<DealershipProfile,
   | 'financialContactPhone'
 >> & DealershipProfile;
 
-export type BrandType = 'Suzuki' | 'Haojue' | 'Zontes' | 'Hisun' | 'Kymco' | 'Quadriciclos';
+export interface Brand {
+  id: string;
+  nome: string;
+  codigo: string;
+  razaoSocial?: string;
+  cnpj?: string;
+  corPrimaria: string;
+  corSecundaria?: string;
+  logoUrl?: string;
+  siteOficial?: string;
+  descricao?: string;
+  paisOrigem?: string;
+  ativo: boolean;
+  ordemExibicao: number;
+  criadoEm?: string;
+  atualizadoEm?: string;
+  modelsCount?: number;
+  dealersCount?: number;
+}
+
+export type BrandType = 'Suzuki' | 'Haojue' | 'Zontes' | 'Hisun' | 'Kymco' | 'Quadriciclos' | (string & {});
 
 export type StockAvailabilityStatus = 'disponivel' | 'poucas_unidades' | 'indisponivel';
 
@@ -226,6 +247,7 @@ export interface PaymentConditionCampaign {
 
 export interface FreightRateEntry {
   id: string;
+  brand?: BrandType;
   state: string;
   region: BrazilRegion;
   originWarehouse: 'empresa_13_armazem' | 'manaus_le_16';
@@ -265,14 +287,14 @@ export interface ReserveFundTransaction {
   dealershipId: DealershipScope;
   dealershipName?: string;
   type: 'credito' | 'debito';
-  origin?: 'montadora_credito' | 'rd_station' | 'pedido_venda' | 'ajuste_direto';
+  origin?: 'montadora_credito' | 'rd_station' | 'pedido_venda' | 'ajuste_direto' | 'solicitacao_concessionaria';
   date: string;
   reference: string;
   modelName?: string;
   chassi?: string;
   orderId?: string;
   amount: number;
-  status: 'pendente_financeiro' | 'aprovado' | 'rejeitado';
+  status: 'pendente_financeiro' | 'aguardando_aprovacao' | 'em_analise' | 'aprovado' | 'rejeitado';
   brand: BrandType;
   financialApproved: boolean;
   financialApprovedBy?: string;
@@ -280,6 +302,13 @@ export interface ReserveFundTransaction {
   userResponsible?: string;
   runningBalance?: number;
   observation?: string;
+
+  // Fluxo de Solicitacao da Concessionaria -> Aprovacao da Montadora
+  requestedBy?: string;                 // Usuario da concessionaria que solicitou
+  workflowSubmittedAt?: string;         // Data de envio da solicitacao
+  workflowStepIndex?: number;           // Etapa atual do workflow fundo_reserva
+  approvedWorkflowStepIds?: string[];   // Ids das etapas ja aprovadas
+  rejectionReason?: string;             // Motivo de rejeicao (quando aplicavel)
 }
 
 export interface BrandRegional {
@@ -726,7 +755,7 @@ export interface TransitOrder {
 // ELECTRONIC PARTS CATALOG (EPC) & SPARE PARTS
 // ==========================================
 
-export type PartsBrand = 'Suzuki' | 'Haojue' | 'Zontes' | 'Hisun' | 'Kymco' | 'Quadriciclos';
+export type PartsBrand = 'Suzuki' | 'Haojue' | 'Zontes' | 'Hisun' | 'Kymco' | 'Quadriciclos' | (string & {});
 
 export interface PartsModelSummary {
   id: string;

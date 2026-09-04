@@ -64,6 +64,7 @@ export const Header: React.FC<HeaderProps> = ({
         case 'service_order': return 'Garantias & Pós-Venda Nacional';
         case 'dealers_network': return 'Gestão da Rede de Concessionárias';
         case 'user_management': return 'Gestão de Usuários & Controle de Acesso (RBAC)';
+        case 'brand_management': return 'Cadastro & Gestão de Marcas';
         case 'settings': return 'Diretrizes & Parâmetros Montadora';
         case 'support': return 'Central de Suporte à Rede';
         default: return 'Grupo J. Toledo Brasil';

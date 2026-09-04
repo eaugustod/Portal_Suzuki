@@ -4,6 +4,7 @@ import { getDbPool } from '../db.js';
 
 // Importa dados mockados do projeto
 import { INITIAL_DEALERSHIPS_FULL } from '../../src/data/dealershipsData.js';
+import { INITIAL_BRANDS } from '../../src/data/mockBrandsData.js';
 import { INITIAL_PURCHASE_MODELS } from '../../src/data/mockData.js';
 import { INITIAL_PAYMENT_CONDITIONS } from '../../src/data/mockPaymentConditions.js';
 import { INITIAL_WORKFLOW_STEPS } from '../../src/data/workflowStepsData.js';
@@ -17,6 +18,39 @@ dotenv.config();
 async function seedData() {
   const pool = await getDbPool();
   console.log('[Seed] Iniciando população de dados no SQL Server...');
+
+  // ==========================================
+  // 0. Marcas (Cadastro Centralizado de Marcas)
+  // ==========================================
+  console.log('[Seed] Inserindo Marcas...');
+  for (const b of INITIAL_BRANDS) {
+    await pool.request()
+      .input('id', b.id)
+      .input('nome', b.nome)
+      .input('codigo', b.codigo)
+      .input('razao', b.razaoSocial || b.nome)
+      .input('cnpj', b.cnpj || null)
+      .input('cor_pri', b.corPrimaria || '#00428c')
+      .input('cor_sec', b.corSecundaria || '#ffffff')
+      .input('logo', b.logoUrl || null)
+      .input('site', b.siteOficial || null)
+      .input('desc', b.descricao || null)
+      .input('pais', b.paisOrigem || 'Brasil')
+      .input('ordem', b.ordemExibicao || 0)
+      .query(`
+        IF NOT EXISTS (SELECT 1 FROM dbo.Marcas WHERE id_marca = @id OR nome = @nome)
+        BEGIN
+          INSERT INTO dbo.Marcas (
+            id_marca, nome, codigo, razao_social, cnpj, cor_primaria, cor_secundaria,
+            logo_url, site_oficial, descricao, pais_origem, ativo, ordem_exibicao
+          ) VALUES (
+            @id, @nome, @codigo, @razao, @cnpj, @cor_pri, @cor_sec,
+            @logo, @site, @desc, @pais, 1, @ordem
+          )
+        END
+      `);
+  }
+
 
   // ==========================================
   // 1. Departamentos
@@ -397,26 +431,27 @@ async function seedData() {
   }
 
   // ==========================================
-  // 8. Tarifas de Frete Padrão por Região
+  // 8. Tarifas de Frete Padrão por Região e Marca
   // ==========================================
   console.log('[Seed] Inserindo Tarifas de Frete Padrão...');
   const fretes = [
-    { id: 'frt-sp-13', uf: 'SP', regiao: 'Sudeste', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 650.00, dias: 2 },
-    { id: 'frt-rj-13', uf: 'RJ', regiao: 'Sudeste', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 780.00, dias: 3 },
-    { id: 'frt-mg-13', uf: 'MG', regiao: 'Sudeste', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 820.00, dias: 4 },
-    { id: 'frt-rs-13', uf: 'RS', regiao: 'Sul', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 950.00, dias: 5 },
-    { id: 'frt-pr-13', uf: 'PR', regiao: 'Sul', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 880.00, dias: 4 },
-    { id: 'frt-sc-13', uf: 'SC', regiao: 'Sul', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 900.00, dias: 4 },
-    { id: 'frt-df-16', uf: 'DF', regiao: 'Centro-Oeste', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 1150.00, dias: 8 },
-    { id: 'frt-go-16', uf: 'GO', regiao: 'Centro-Oeste', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 1200.00, dias: 8 },
-    { id: 'frt-ba-16', uf: 'BA', regiao: 'Nordeste', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 1350.00, dias: 10 },
-    { id: 'frt-pe-16', uf: 'PE', regiao: 'Nordeste', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 1400.00, dias: 12 },
-    { id: 'frt-am-16', uf: 'AM', regiao: 'Norte', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 350.00, dias: 1 }
+    { id: 'frt-sp-13', marca: 'Suzuki', uf: 'SP', regiao: 'Sudeste', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 650.00, dias: 2 },
+    { id: 'frt-rj-13', marca: 'Suzuki', uf: 'RJ', regiao: 'Sudeste', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 780.00, dias: 3 },
+    { id: 'frt-mg-13', marca: 'Suzuki', uf: 'MG', regiao: 'Sudeste', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 820.00, dias: 4 },
+    { id: 'frt-rs-13', marca: 'Suzuki', uf: 'RS', regiao: 'Sul', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 950.00, dias: 5 },
+    { id: 'frt-pr-13', marca: 'Suzuki', uf: 'PR', regiao: 'Sul', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 880.00, dias: 4 },
+    { id: 'frt-sc-13', marca: 'Suzuki', uf: 'SC', regiao: 'Sul', armazem: 'empresa_13_armazem', desc: 'CD Jundiaí (SP)', custo: 900.00, dias: 4 },
+    { id: 'frt-df-16', marca: 'Suzuki', uf: 'DF', regiao: 'Centro-Oeste', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 1150.00, dias: 8 },
+    { id: 'frt-go-16', marca: 'Suzuki', uf: 'GO', regiao: 'Centro-Oeste', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 1200.00, dias: 8 },
+    { id: 'frt-ba-16', marca: 'Suzuki', uf: 'BA', regiao: 'Nordeste', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 1350.00, dias: 10 },
+    { id: 'frt-pe-16', marca: 'Suzuki', uf: 'PE', regiao: 'Nordeste', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 1400.00, dias: 12 },
+    { id: 'frt-am-16', marca: 'Suzuki', uf: 'AM', regiao: 'Norte', armazem: 'manaus_le_16', desc: 'Manaus (AM) LE 16', custo: 350.00, dias: 1 }
   ];
 
   for (const f of fretes) {
     await pool.request()
       .input('id', f.id)
+      .input('marca', f.marca || 'Suzuki')
       .input('uf', f.uf)
       .input('regiao', f.regiao)
       .input('armazem', f.armazem)
@@ -426,8 +461,8 @@ async function seedData() {
       .query(`
         IF NOT EXISTS (SELECT 1 FROM dbo.TarifasFrete WHERE id_tarifa = @id)
         BEGIN
-          INSERT INTO dbo.TarifasFrete (id_tarifa, uf, regiao_brasil, armazem_origem, descricao_origem, custo_por_unidade, prazo_estimado_dias)
-          VALUES (@id, @uf, @regiao, @armazem, @desc, @custo, @dias)
+          INSERT INTO dbo.TarifasFrete (id_tarifa, marca, uf, regiao_brasil, armazem_origem, descricao_origem, custo_por_unidade, prazo_estimado_dias)
+          VALUES (@id, @marca, @uf, @regiao, @armazem, @desc, @custo, @dias)
         END
       `);
   }
@@ -581,6 +616,45 @@ async function seedData() {
       }
     }
   }
+
+  // ==========================================
+  // Estoque de Veículos (Inventário concedido)
+  // Mesmo conjunto de dados exibido na visão da concessionária
+  // ==========================================
+  console.log('[Seed] Inserindo Estoque de Veículos / Inventário...');
+  for (const item of INITIAL_INVENTORY) {
+    await pool.request()
+      .input('id', item.id)
+      .input('dealer', item.dealershipId || 'motosul')
+      .input('modelo', String(item.model).substring(0, 100))
+      .input('ano', Number(item.year))
+      .input('vin', String(item.vin).substring(0, 30))
+      .input('cor', String(item.color).substring(0, 60))
+      .input('hex', String(item.colorHex || '#000000').substring(0, 10))
+      .input('custo', Number(item.costPrice) || 0)
+      .input('venda', Number(item.retailPrice) || 0)
+      .input('status', item.status)
+      .input('placa', item.plate || null)
+      .input('cil', String(item.engineDisplacement || '').substring(0, 20) || null)
+      .input('pot', String(item.power || '').substring(0, 50) || null)
+      .input('data', String(item.arrivedDate || '01/01/2024').replace(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/, '$3-$2-$1'))
+      .input('notas', item.notes || null)
+      .query(`
+        IF NOT EXISTS (SELECT 1 FROM dbo.EstoqueVeiculos WHERE id_veiculo = @id)
+        BEGIN
+          INSERT INTO dbo.EstoqueVeiculos (
+            id_veiculo, id_concessionaria, modelo, ano_fabricacao_modelo, chassi_vin,
+            cor, codigo_hex, preco_custo, preco_venda_loja, status, placa, cilindrada,
+            potencia, data_chegada, notas
+          ) VALUES (
+            @id, @dealer, @modelo, @ano, @vin,
+            @cor, @hex, @custo, @venda, @status, @placa, @cil,
+            @pot, @data, @notas
+          )
+        END
+      `);
+  }
+  console.log(`[Seed] ${INITIAL_INVENTORY.length} veículo(s) de estoque inserido(s).`);
 
   // ==========================================
   // Garantia de credenciais padrão (idempotente)

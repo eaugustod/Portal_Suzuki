@@ -162,8 +162,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
       </div>
 
-      {/* Dynamic Primary Bento KPI Cards (4 Pillars) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* Dynamic Primary Bento KPI Cards (3 Pillars) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         
         {/* KPI 1: Patrimônio em Estoque (Inventory Value) */}
         <div 
@@ -278,58 +278,6 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </span>
             <span className="text-slate-500 dark:text-slate-400 text-[11px] flex items-center gap-1 group-hover:text-blue-600 dark:group-hover:text-white transition-colors">
               Abrir CRM <ArrowRight className="w-3 h-3 text-blue-600 dark:text-blue-400" />
-            </span>
-          </div>
-        </div>
-
-        {/* KPI 4: Eficiência da Oficina / Pós-Venda (Service Efficiency) */}
-        <div 
-          onClick={() => onNavigate('inventory')}
-          className="bg-white dark:bg-neutral-900 rounded-3xl p-5 md:p-6 border border-slate-200 dark:border-neutral-800 relative overflow-hidden group hover:border-blue-500 transition-all shadow-sm cursor-pointer flex flex-col justify-between"
-        >
-          <div className="absolute -right-8 -top-8 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all pointer-events-none" />
-          
-          <div>
-            <div className="flex justify-between items-start mb-3 relative z-10">
-              <span className="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest block">
-                Eficiência da Oficina (O.S.)
-              </span>
-              <div className="p-2 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-2xl border border-amber-200 dark:border-amber-900/40 group-hover:scale-105 transition-transform">
-                <Wrench className="w-4 h-4" />
-              </div>
-            </div>
-
-            <div className="flex items-baseline gap-2">
-              <h3 className="text-[24px] xl:text-[26px] font-bold text-slate-900 dark:text-white tracking-tight font-tabular">
-                {serviceResolutionEfficiency}%
-              </h3>
-              <span className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">resolução</span>
-            </div>
-
-            <div className="mt-2 space-y-1">
-              <div className="flex justify-between text-[10px] text-slate-500 dark:text-slate-400 font-tabular">
-                <span>Receita O.S.: R$ {totalWorkshopRevenue.toLocaleString('pt-BR')}</span>
-                <span className="text-indigo-600 dark:text-indigo-400 font-bold">{inExecutionOrdersCount} em box</span>
-              </div>
-              <div className="w-full bg-slate-100 dark:bg-neutral-800 h-1.5 rounded-full overflow-hidden">
-                <div 
-                  className="bg-emerald-500 h-full rounded-full transition-all duration-500" 
-                  style={{ width: `${serviceResolutionEfficiency}%` }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="pt-3 mt-3 border-t border-slate-100 dark:border-neutral-800 flex items-center justify-between relative z-10 text-[11px]">
-            <span className="text-slate-500 dark:text-slate-400">
-              {waitingPartsOrdersCount > 0 ? (
-                <span className="text-amber-600 dark:text-amber-400 font-semibold">{waitingPartsOrdersCount} aguardando peças</span>
-              ) : (
-                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Peças todas em dia</span>
-              )}
-            </span>
-            <span className="text-slate-700 dark:text-slate-300 font-bold font-tabular">
-              {totalServiceOrdersCount} O.S. total
             </span>
           </div>
         </div>

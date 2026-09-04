@@ -164,11 +164,33 @@ BEGIN
     );
 END;
 
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Marcas')
+BEGIN
+    CREATE TABLE dbo.Marcas (
+        id_marca VARCHAR(50) PRIMARY KEY,
+        nome VARCHAR(50) NOT NULL UNIQUE,
+        codigo VARCHAR(20) NOT NULL UNIQUE,
+        razao_social VARCHAR(150) NULL,
+        cnpj VARCHAR(20) NULL,
+        cor_primaria VARCHAR(30) NOT NULL DEFAULT '#00428c',
+        cor_secundaria VARCHAR(30) NULL DEFAULT '#ffffff',
+        logo_url VARCHAR(500) NULL,
+        site_oficial VARCHAR(255) NULL,
+        descricao VARCHAR(500) NULL,
+        pais_origem VARCHAR(50) DEFAULT 'Brasil',
+        ativo BIT NOT NULL DEFAULT 1,
+        ordem_exibicao INT NOT NULL DEFAULT 0,
+        criado_em DATETIME2 DEFAULT SYSUTCDATETIME(),
+        atualizado_em DATETIME2 DEFAULT SYSUTCDATETIME()
+    );
+    CREATE INDEX IX_Marcas_Ativo ON dbo.Marcas(ativo, ordem_exibicao);
+END;
+
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'ConcessionariaMarcas')
 BEGIN
     CREATE TABLE dbo.ConcessionariaMarcas (
         id_concessionaria VARCHAR(50) NOT NULL FOREIGN KEY REFERENCES dbo.Concessionarias(id_concessionaria) ON DELETE CASCADE,
-        marca VARCHAR(30) NOT NULL CHECK (marca IN ('Suzuki', 'Haojue', 'Zontes', 'Hisun', 'Kymco', 'Quadriciclos')),
+        marca VARCHAR(50) NOT NULL,
         PRIMARY KEY (id_concessionaria, marca)
     );
 END;
@@ -280,6 +302,7 @@ IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'TarifasFrete')
 BEGIN
     CREATE TABLE dbo.TarifasFrete (
         id_tarifa VARCHAR(50) PRIMARY KEY,
+        marca VARCHAR(30) NOT NULL DEFAULT 'Suzuki',
         uf CHAR(2) NOT NULL,
         regiao_brasil VARCHAR(30) NOT NULL,
         armazem_origem VARCHAR(50) NOT NULL,
@@ -290,7 +313,7 @@ BEGIN
         ativo BIT NOT NULL DEFAULT 1,
         atualizado_em DATETIME2 DEFAULT SYSUTCDATETIME()
     );
-    CREATE INDEX IX_TarifasFrete_UF ON dbo.TarifasFrete(uf, armazem_origem);
+    CREATE INDEX IX_TarifasFrete_UF ON dbo.TarifasFrete(marca, uf, armazem_origem);
 END;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'ParametrosMemorialCalculo')

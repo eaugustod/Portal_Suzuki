@@ -13,6 +13,7 @@ import {
   PaymentConditionCampaign
 } from '../types';
 import { DEALERSHIP_PROFILES } from '../data/mockData';
+import { DEFAULT_BRAND_NAMES } from '../data/mockBrandsData';
 import { 
   Building2, 
   CreditCard, 
@@ -179,12 +180,18 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
     return autoOrigin.originWarehouse === 'empresa_13_armazem' ? 850 : 1300;
   }, [freightRates, dealerState, autoOrigin]);
 
-  // Reserve Fund Available Balance
+  // Reserve Fund Available Balance (scoped by Dealership)
   const reserveFundAvailableBalance = useMemo(() => {
-    const cred = reserveFundTransactions.filter(t => t.type === 'credito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
-    const deb = reserveFundTransactions.filter(t => t.type === 'debito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
-    return cred - deb;
-  }, []);
+    const relevantTxs = reserveFundTransactions.filter(t => {
+      if (!isMontadora) {
+        return t.dealershipId === currentScope;
+      }
+      return true;
+    });
+    const cred = relevantTxs.filter(t => t.type === 'credito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
+    const deb = relevantTxs.filter(t => t.type === 'debito' && t.financialApproved).reduce((s, t) => s + t.amount, 0);
+    return Math.max(0, cred - deb);
+  }, [reserveFundTransactions, isMontadora, currentScope]);
   const [selectedSpecModal, setSelectedSpecModal] = useState<PurchaseModel | null>(null);
   const [modelToEditModal, setModelToEditModal] = useState<PurchaseModel | null>(null);
   const [isModelFormOpen, setIsModelFormOpen] = useState(false);
@@ -218,13 +225,10 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
     setTimeout(() => setToastMessage(null), 3500);
   };
 
-  const brands: { id: BrandType; name: string }[] = [
-    { id: 'Suzuki', name: 'Suzuki Motos' },
-    { id: 'Haojue', name: 'Haojue Motos' },
-    { id: 'Zontes', name: 'Zontes Motos' },
-    { id: 'Hisun', name: 'Hisun (ATVs)' },
-    { id: 'Kymco', name: 'Kymco Scooters' }
-  ];
+  const brands: { id: BrandType; name: string }[] = DEFAULT_BRAND_NAMES.map((id) => ({
+    id: id as BrandType,
+    name: `${id} Motos`
+  }));
 
   const filteredCatalogModels = visiblePurchaseModels.filter(m => m.brand === selectedBrand);
 
@@ -279,8 +283,11 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
 
       m.variants.forEach(v => {
         if (v.quantity > 0) {
+          // Gera ID compacto: evita repetição do model.id dentro do variant.id
+          // v.id geralmente já contém o m.id como prefixo (ex: "suzuki-gsx-8s-cor-1")
+          const compactId = v.id.startsWith(m.id) ? `item-${v.id}` : `item-${m.id}-${v.id}`;
           items.push({
-            id: `item-${m.id}-${v.id}`,
+            id: compactId.substring(0, 50),
             modelId: m.id,
             modelName: m.modelName,
             brand: m.brand,
@@ -380,7 +387,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
         for (let i = 0; i < item.quantity; i++) {
           expandedItems.push({
             ...item,
-            id: `${item.id}-${i + 1}`,
+            id: `${item.id}-${i + 1}`.substring(0, 50),
             quantity: 1,
             totalItemCost: item.unitFactoryCost,
             childOrderNumber: item.childOrderNumber ? `${item.childOrderNumber.slice(0, Math.max(0, item.childOrderNumber.length - 2))}${String(expandedItems.length + 1).padStart(2, '0')}` : undefined
@@ -1364,7 +1371,7 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
 
           {/* Freight Mode Selector & Credit Limits */}
           {!isMontadora && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 md:p-6 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
                 <div className="flex justify-between items-start">
                   <div>
@@ -1403,6 +1410,27 @@ export const PurchasePortalView: React.FC<PurchasePortalViewProps> = ({
                     style={{ width: `${Math.min(100, ((creditLimitTotal - simulatedCreditRemaining) / creditLimitTotal) * 100)}%` }} 
                     className="bg-blue-600 dark:bg-[#3b82f6] h-full transition-all duration-500 rounded-full"
                   />
+                </div>
+              </div>
+
+              {/* Fundo de Reserva Card */}
+              <div className="bg-white dark:bg-[#18181b] rounded-3xl p-5 md:p-6 border border-neutral-200 dark:border-[#27272a] shadow-md flex flex-col justify-between">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <span className="text-neutral-500 dark:text-neutral-400 text-[10px] font-bold uppercase tracking-widest block mb-1">
+                      Saldo Fundo de Reserva
+                    </span>
+                    <p className="text-[24px] font-bold text-amber-600 dark:text-amber-400 font-tabular">
+                      R$ {reserveFundAvailableBalance.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                    </p>
+                  </div>
+                  <div className="p-2 bg-amber-50 dark:bg-neutral-800 rounded-xl text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-[#27272a]">
+                    <DollarSign className="w-5 h-5" />
+                  </div>
+                </div>
+                <div className="flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400 mt-2 font-tabular">
+                  <span>Disponível para abater</span>
+                  <span className="text-emerald-600 dark:text-emerald-400 font-bold">Ativo</span>
                 </div>
               </div>
 

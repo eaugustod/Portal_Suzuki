@@ -2,9 +2,11 @@ import { getDbPool } from '../db.js';
 
 const WAREHOUSES_ALLOWED = ['empresa_13_armazem', 'manaus_le_16'];
 const REGIONS_ALLOWED = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'];
+const BRANDS_ALLOWED = ['Suzuki', 'Haojue', 'Zontes', 'Hisun', 'Kymco', 'Quadriciclos'];
 
 const rowToFreightRate = (r) => ({
   id: r.id,
+  brand: r.brand || 'Suzuki',
   state: r.state,
   region: r.region,
   originWarehouse: r.originWarehouse,
@@ -21,6 +23,7 @@ export const getFreightRates = async (req, res) => {
     const result = await pool.request().query(`
       SELECT
         id_tarifa AS id,
+        marca AS brand,
         uf AS state,
         regiao_brasil AS region,
         armazem_origem AS originWarehouse,
@@ -30,7 +33,7 @@ export const getFreightRates = async (req, res) => {
         tipo_localidade AS locationType
       FROM dbo.TarifasFrete
       WHERE ativo = 1
-      ORDER BY regiao_brasil, uf
+      ORDER BY marca, regiao_brasil, uf
     `);
     res.json(result.recordset.map(rowToFreightRate));
   } catch (err) {
@@ -40,7 +43,8 @@ export const getFreightRates = async (req, res) => {
 };
 
 const validateFreightPayload = (body) => {
-  const { state, region, originWarehouse, originWarehouseLabel, costPerUnit, estimatedDays } = body;
+  const { brand, state, region, originWarehouse, originWarehouseLabel, costPerUnit, estimatedDays } = body;
+  if (brand && !BRANDS_ALLOWED.includes(brand)) return 'Marca inválida.';
   if (!state || String(state).trim().length !== 2) return 'UF inválida (use a sigla com 2 letras, ex.: SP).';
   if (!region || !REGIONS_ALLOWED.includes(region)) return 'Região inválida.';
   if (!originWarehouse || !WAREHOUSES_ALLOWED.includes(originWarehouse)) return 'Armazém de origem inválido.';
@@ -52,7 +56,7 @@ const validateFreightPayload = (body) => {
 
 // POST /api/freight
 export const createFreightRate = async (req, res) => {
-  const { state, region, originWarehouse, originWarehouseLabel, costPerUnit, estimatedDays, locationType } = req.body;
+  const { brand, state, region, originWarehouse, originWarehouseLabel, costPerUnit, estimatedDays, locationType } = req.body;
 
   const validationError = validateFreightPayload(req.body);
   if (validationError) return res.status(400).json({ error: validationError });
@@ -63,6 +67,7 @@ export const createFreightRate = async (req, res) => {
 
     await pool.request()
       .input('id', id)
+      .input('marca', brand || 'Suzuki')
       .input('uf', String(state).trim().toUpperCase())
       .input('regiao', region)
       .input('armazem', originWarehouse)
@@ -72,10 +77,10 @@ export const createFreightRate = async (req, res) => {
       .input('localidade', locationType || 'capital')
       .query(`
         INSERT INTO dbo.TarifasFrete (
-          id_tarifa, uf, regiao_brasil, armazem_origem, descricao_origem,
+          id_tarifa, marca, uf, regiao_brasil, armazem_origem, descricao_origem,
           custo_por_unidade, prazo_estimado_dias, tipo_localidade, ativo
         ) VALUES (
-          @id, @uf, @regiao, @armazem, @desc, @custo, @dias, @localidade, 1
+          @id, @marca, @uf, @regiao, @armazem, @desc, @custo, @dias, @localidade, 1
         )
       `);
     res.status(201).json({ success: true, message: 'Regra de frete criada com sucesso!', id });
@@ -91,7 +96,7 @@ export const createFreightRate = async (req, res) => {
 // PUT /api/freight/:id
 export const updateFreightRate = async (req, res) => {
   const { id } = req.params;
-  const { state, region, originWarehouse, originWarehouseLabel, costPerUnit, estimatedDays, locationType } = req.body;
+  const { brand, state, region, originWarehouse, originWarehouseLabel, costPerUnit, estimatedDays, locationType } = req.body;
 
   const validationError = validateFreightPayload(req.body);
   if (validationError) return res.status(400).json({ error: validationError });
@@ -100,6 +105,7 @@ export const updateFreightRate = async (req, res) => {
     const pool = await getDbPool();
     const result = await pool.request()
       .input('id', id)
+      .input('marca', brand || 'Suzuki')
       .input('uf', String(state).trim().toUpperCase())
       .input('regiao', region)
       .input('armazem', originWarehouse)
@@ -109,7 +115,8 @@ export const updateFreightRate = async (req, res) => {
       .input('localidade', locationType || 'capital')
       .query(`
         UPDATE dbo.TarifasFrete
-        SET uf = @uf,
+        SET marca = @marca,
+            uf = @uf,
             regiao_brasil = @regiao,
             armazem_origem = @armazem,
             descricao_origem = @desc,

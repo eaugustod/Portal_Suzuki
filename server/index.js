@@ -24,6 +24,7 @@ import partsController from './controllers/partsController.js';
 import paymentConditionController from './controllers/paymentConditionController.js';
 import workflowController from './controllers/workflowController.js';
 import modelMatrixController from './controllers/modelMatrixController.js';
+import brandController from './controllers/brandController.js';
 import proposalController from './controllers/proposalController.js';
 
 dotenv.config();
@@ -176,12 +177,25 @@ app.post('/api/purchase/orders', authMiddleware, purchaseController.createFactor
   app.put('/api/proposals/:id', authMiddleware, proposalController.updateProposal);
   app.delete('/api/proposals/:id', authMiddleware, proposalController.deleteProposal);
 
+  // ==========================================
+  // 4.10 CADASTRAGEM DE MARCAS
+  // ==========================================
+  app.get('/api/brands', authMiddleware, brandController.getBrands);
+  app.get('/api/brands/:id', authMiddleware, brandController.getBrandById);
+  app.post('/api/brands', authMiddleware, requireMontadora, brandController.createBrand);
+  app.put('/api/brands/:id', authMiddleware, requireMontadora, brandController.updateBrand);
+  app.delete('/api/brands/:id', authMiddleware, requireMontadora, brandController.deleteBrand);
+
+
 // ==========================================
 // 5. FUNDO DE RESERVA (CONTA CORRENTE)
 // ==========================================
 app.get('/api/reserve-fund/statement', authMiddleware, reserveFundController.getStatement);
 app.post('/api/reserve-fund/credit', authMiddleware, requireMontadora, reserveFundController.createCredit);
+app.post('/api/reserve-fund/request', authMiddleware, reserveFundController.createRequest);
+app.patch('/api/reserve-fund/:id/workflow', authMiddleware, requireMontadora, reserveFundController.updateWorkflow);
 app.patch('/api/reserve-fund/:id/approve', authMiddleware, requireMontadora, reserveFundController.approveTransaction);
+app.patch('/api/reserve-fund/:id/reject', authMiddleware, requireMontadora, reserveFundController.rejectTransaction);
 
 // ==========================================
 // 6. COMPROMISSOS TRIMESTRAIS

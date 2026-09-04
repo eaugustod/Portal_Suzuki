@@ -258,7 +258,52 @@ export const api = {
       headers: getHeaders()
     });
     const data = await res.json().catch(() => ({}));
-    if (!res.ok) throw new Error(data.error || 'Erro ao remover regra de frete');
+    if (!res.ok) throw new Error(data.error || 'Erro ao excluir regra de frete');
+    return data;
+  },
+
+  // Marcas
+  async getBrands() {
+    const res = await fetchWithAuth('/api/brands', { headers: getHeaders() });
+    if (!res.ok) throw new Error('Erro ao carregar marcas.');
+    return res.json();
+  },
+
+  async getBrandById(id: string) {
+    const res = await fetchWithAuth(`/api/brands/${encodeURIComponent(id)}`, { headers: getHeaders() });
+    if (!res.ok) throw new Error('Erro ao carregar marca.');
+    return res.json();
+  },
+
+  async createBrand(payload: any) {
+    const res = await fetchWithAuth('/api/brands', {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Erro ao criar marca.');
+    return data;
+  },
+
+  async updateBrand(id: string, payload: any) {
+    const res = await fetchWithAuth(`/api/brands/${encodeURIComponent(id)}`, {
+      method: 'PUT',
+      headers: getHeaders(),
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Erro ao atualizar marca.');
+    return data;
+  },
+
+  async deleteBrand(id: string) {
+    const res = await fetchWithAuth(`/api/brands/${encodeURIComponent(id)}`, {
+      method: 'DELETE',
+      headers: getHeaders()
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Erro ao excluir marca.');
     return data;
   },
 
@@ -284,6 +329,37 @@ export const api = {
     const res = await fetchWithAuth(`/api/reserve-fund/${id}/approve`, {
       method: 'PATCH',
       headers: getHeaders()
+    });
+    return res.json();
+  },
+
+  // Solicitação de Fundo de Reserva pela Concessionária (fluxo de aprovação)
+  // Obs.: a concessionária submete a solicitação; a Montadora aprova via workflow fundo_reserva.
+  async createReserveFundRequest(payload: any) {
+    const res = await fetchWithAuth('/api/reserve-fund/request', {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Erro ao enviar solicitação de fundo de reserva.');
+    return data;
+  },
+
+  async updateReserveFundWorkflow(id: string, payload: any) {
+    const res = await fetchWithAuth(`/api/reserve-fund/${id}/workflow`, {
+      method: 'PATCH',
+      headers: getHeaders(),
+      body: JSON.stringify(payload)
+    });
+    return res.json();
+  },
+
+  async rejectReserveFundTransaction(id: string, reason?: string) {
+    const res = await fetchWithAuth(`/api/reserve-fund/${id}/reject`, {
+      method: 'PATCH',
+      headers: getHeaders(),
+      body: JSON.stringify({ reason })
     });
     return res.json();
   },

@@ -115,6 +115,7 @@ export const getFreightTable = async (req, res) => {
     const result = await pool.request().query(`
       SELECT 
         id_tarifa AS id,
+        marca AS brand,
         uf AS state,
         regiao_brasil AS region,
         armazem_origem AS originWarehouse,
@@ -124,7 +125,7 @@ export const getFreightTable = async (req, res) => {
         tipo_localidade AS locationType
       FROM dbo.TarifasFrete
       WHERE ativo = 1
-      ORDER BY regiao_brasil, uf
+      ORDER BY marca, regiao_brasil, uf
     `);
     res.json(result.recordset);
   } catch (err) {
@@ -290,7 +291,8 @@ export const createFactoryOrder = async (req, res) => {
 
     // 2. Insere itens na MESMA transação (rollback automático em caso de falha em qualquer item)
     for (const it of items) {
-      const itemId = it.id || `item-${orderId}-${items.indexOf(it) + 1}`;
+      const rawItemId = it.id || `item-${orderId}-${items.indexOf(it) + 1}`;
+      const itemId = String(rawItemId).substring(0, 50);
       await transaction.request()
         .input('id_item', itemId)
         .input('id_pedido', orderId)

@@ -64,6 +64,7 @@ const SalesCrmView = React.lazy(() => import('./components/SalesCrmView').then(m
 const ServiceOrderView = React.lazy(() => import('./components/ServiceOrderView').then(m => ({ default: m.ServiceOrderView })));
 const SettingsView = React.lazy(() => import('./components/SettingsView').then(m => ({ default: m.SettingsView })));
 const SupportView = React.lazy(() => import('./components/SupportView').then(m => ({ default: m.SupportView })));
+const BrandManagementView = React.lazy(() => import('./components/BrandManagementView').then(m => ({ default: m.BrandManagementView })));
 
 export default function App() {
   // Theme State ('dark' | 'light')
@@ -410,6 +411,31 @@ export default function App() {
       }
       return tx;
     }));
+  };
+
+  // Solicitação de Fundo de Reserva pela Concessionária -> Aprovação Montadora
+  const handleAddReserveFundRequest = (tx: ReserveFundTransaction) => {
+    setReserveFundTransactions(prev => [tx, ...prev]);
+    api.createReserveFundRequest({
+      dealershipId: tx.dealershipId,
+      amount: tx.amount,
+      brand: tx.brand,
+      reference: tx.reference,
+      modelName: tx.modelName,
+      chassi: tx.chassi,
+      observation: tx.observation
+    }).catch(err => console.warn('[SQL Server] Erro ao enviar solicitação de fundo de reserva:', err.message));
+  };
+
+  const handleRejectReserveFundRequest = (id: string, reason: string) => {
+    setReserveFundTransactions(prev => prev.map(tx => {
+      if (tx.id === id) {
+        return { ...tx, status: 'rejeitado', financialApproved: false, rejectionReason: reason };
+      }
+      return tx;
+    }));
+    api.rejectReserveFundTransaction(id, reason)
+      .catch(err => console.warn('[SQL Server] Erro ao rejeitar solicitação:', err.message));
   };
 
   // Spare Parts Orders handlers (Persistencia via SQL Server)
@@ -785,7 +811,7 @@ export default function App() {
         for (let i = 0; i < item.quantity; i++) {
           expandedItems.push({
             ...item,
-            id: `${item.id}-${i + 1}`,
+            id: `${item.id}-${i + 1}`.substring(0, 50),
             quantity: 1,
             totalItemCost: item.unitFactoryCost,
             supervisorStatus: 'pendente',
@@ -1109,8 +1135,11 @@ export default function App() {
               <ReserveFundView
                 currentScope={currentScope}
                 transactions={reserveFundTransactions}
+                workflowSteps={workflowSteps}
                 onAddTransaction={handleAddReserveFundTransaction}
                 onApproveTransaction={handleApproveReserveFundTransaction}
+                onAddRequest={handleAddReserveFundRequest}
+                onRejectRequest={handleRejectReserveFundRequest}
               />
             )}
 
@@ -1131,6 +1160,10 @@ export default function App() {
                 onToggleVariantEnabled={handleToggleVariantEnabled}
                 onToggleAllInModel={handleToggleAllInModel}
               />
+            )}
+
+            {currentTab === 'brand_management' && (
+              <BrandManagementView />
             )}
 
             {currentTab === 'approval_workflow' && (

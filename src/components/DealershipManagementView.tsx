@@ -14,6 +14,7 @@ import {
   NavTab,
   PaymentConditionCampaign
 } from '../types';
+import { DEFAULT_BRAND_NAMES } from '../data/mockBrandsData';
 import { 
   Building2, 
   Store, 
@@ -1189,7 +1190,7 @@ export const DealershipManagementView: React.FC<DealershipManagementViewProps> =
                         Marcas Homologadas & Regionais da Montadora
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {(['Suzuki', 'Zontes', 'Haojue', 'Kymco'] as BrandType[]).map((brand) => {
+                        {DEFAULT_BRAND_NAMES.map((brand) => {
                           const isAuthorized = editForm.brandsAuthorized?.includes(brand);
                           return (
                             <div key={brand} className="p-3 bg-white dark:bg-[#18181b] border border-neutral-200 dark:border-[#27272a] rounded-xl space-y-2">
